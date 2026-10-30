@@ -1,0 +1,6 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.kind.eq('qualification')]
+for p in ['p_Q7PBN356CH','p_Q7PBN356CK','p_YJCA9TYHK1','p_NPMVZ7VJMX']:
+ d=q[q.prototype_id==p]
+ print('\n',p)
+ print(d.groupby('test').value.agg(['count','mean']).round(4).to_string())

@@ -1,0 +1,16 @@
+--- 
++++ 
+@@ -0,0 +1,13 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++for p in ['p_FJZMXV882D','p_E05X2XJNTY']:
++    s=df[df.prototype_id==p]
++    print('===',p, s.iloc[0][['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].to_dict())
++    print(s.groupby('test').value.agg(['count','mean']))
++# all QP-1992 data
++q=df[df.project=='QP-1992']
++print(q.groupby(['prototype_id','test']).value.agg(['count','mean']))
++# HJ/HM/HP/HR heat screens so far
++hj=df[df.prototype_id.isin([p for p in df.prototype_id.unique() if p.startswith('p_')])]
++print(df[(df.project=='QP-5993')&(df.prototype_id.str.match(r'p_..JM'))][['prototype_id','test','value','measured_by']].to_string()) if False else None
++print(sorted(df[df.prototype_id.astype(str).str.contains('HJ|HM|HP$|HR',regex=True)].prototype_id.unique())[:20])

@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -1347,3 +1347,4 @@
+ r_SAWH5E5W2T,qualification,QP-8807,p_7S365TH6Y6,strength,edge crush resistance,3,7.24784,kN/m,lab_e,lab_e,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,84Z
+ r_SAWH5E5W2V,qualification,QP-8807,p_7S365TH6Y6,strength,edge crush resistance,4,7.19528,kN/m,lab_e,lab_e,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,84Z
+ r_SAWH5E5W2W,qualification,QP-8807,p_7S365TH6Y6,strength,edge crush resistance,5,7.18445,kN/m,lab_e,lab_e,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,84Z
++r_VG3KFCVNCH,exploratory,QP-8807,p_7S365TH6Y2,water,wet strength retained,,79.7504,%,lab_f,lab_e,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,2JH,FJ2,96Y,JE5,6YN

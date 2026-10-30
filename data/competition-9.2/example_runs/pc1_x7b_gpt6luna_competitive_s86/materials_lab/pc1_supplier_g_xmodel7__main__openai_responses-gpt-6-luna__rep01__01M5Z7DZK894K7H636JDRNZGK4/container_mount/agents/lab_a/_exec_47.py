@@ -1,0 +1,7 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x.columns.tolist())
+for pid in ['p_30SJBPRZKP','p_2YHYS3GPHP','p_NBE0']:
+ q=x[x.prototype_id==pid]
+ print('\n',pid, q[['project_id','prototype_id','record_id','kind','test','value','measured_by']].to_string(index=False))
+ print(q.drop_duplicates('prototype_id').to_string(index=False))

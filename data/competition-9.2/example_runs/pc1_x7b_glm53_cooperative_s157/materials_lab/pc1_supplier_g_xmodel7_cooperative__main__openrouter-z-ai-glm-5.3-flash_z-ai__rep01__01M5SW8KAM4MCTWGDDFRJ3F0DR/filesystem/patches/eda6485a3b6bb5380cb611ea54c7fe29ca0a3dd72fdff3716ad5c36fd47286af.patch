@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -624,3 +624,15 @@
+ r_3A17Q3MPW5,exploratory,QP-6820,p_PYKF18BDW8,strength,edge crush resistance,,6.49091,kN/m,lab_b,lab_d,,,,,,,,,,,,
+ r_3A17Q3MPW6,exploratory,QP-5653,p_MBDZP34MH0,strength,edge crush resistance,,6.55472,kN/m,lab_b,lab_d,,,,,,,,,,,,
+ r_3A17Q3MPW7,exploratory,QP-5653,p_MBDZP34MH0,strength,edge crush resistance,,6.52145,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_0FHWR5570B,qualification,QP-1586,p_GM7DHPGB5W,water,wet strength retained,0,80.1084,%,lab_f,lab_a,NF2,LB3,27X,Y7L,Q7S,5B8,3JQ,X9Z,A7P,VR3,FA3,W5T
++r_0FHWR5570C,qualification,QP-1586,p_GM7DHPGB5W,water,wet strength retained,1,80.2284,%,lab_f,lab_a,NF2,LB3,27X,Y7L,Q7S,5B8,3JQ,X9Z,A7P,VR3,FA3,W5T
++r_0FHWR5570D,qualification,QP-1586,p_GM7DHPGB5W,water,wet strength retained,2,80.2324,%,lab_f,lab_a,NF2,LB3,27X,Y7L,Q7S,5B8,3JQ,X9Z,A7P,VR3,FA3,W5T
++r_0FHWR5570E,qualification,QP-1586,p_GM7DHPGB5W,water,wet strength retained,3,80.5948,%,lab_f,lab_a,NF2,LB3,27X,Y7L,Q7S,5B8,3JQ,X9Z,A7P,VR3,FA3,W5T
++r_0FHWR5570F,qualification,QP-1586,p_GM7DHPGB5W,water,wet strength retained,4,80.6436,%,lab_f,lab_a,NF2,LB3,27X,Y7L,Q7S,5B8,3JQ,X9Z,A7P,VR3,FA3,W5T
++r_0FHWR5570G,qualification,QP-1586,p_GM7DHPGB5W,water,wet strength retained,5,80.8924,%,lab_f,lab_a,NF2,LB3,27X,Y7L,Q7S,5B8,3JQ,X9Z,A7P,VR3,FA3,W5T
++r_NZBFJQDQP5,qualification,QP-1586,p_GM7DHPGB5W,strength,edge crush resistance,0,7.27694,kN/m,lab_e,lab_a,NF2,LB3,27X,Y7L,Q7S,5B8,3JQ,X9Z,A7P,VR3,FA3,W5T
++r_NZBFJQDQP6,qualification,QP-1586,p_GM7DHPGB5W,strength,edge crush resistance,1,7.22381,kN/m,lab_e,lab_a,NF2,LB3,27X,Y7L,Q7S,5B8,3JQ,X9Z,A7P,VR3,FA3,W5T
++r_NZBFJQDQP7,qualification,QP-1586,p_GM7DHPGB5W,strength,edge crush resistance,2,7.23365,kN/m,lab_e,lab_a,NF2,LB3,27X,Y7L,Q7S,5B8,3JQ,X9Z,A7P,VR3,FA3,W5T
++r_NZBFJQDQP8,qualification,QP-1586,p_GM7DHPGB5W,strength,edge crush resistance,3,7.24994,kN/m,lab_e,lab_a,NF2,LB3,27X,Y7L,Q7S,5B8,3JQ,X9Z,A7P,VR3,FA3,W5T
++r_NZBFJQDQP9,qualification,QP-1586,p_GM7DHPGB5W,strength,edge crush resistance,4,7.26671,kN/m,lab_e,lab_a,NF2,LB3,27X,Y7L,Q7S,5B8,3JQ,X9Z,A7P,VR3,FA3,W5T
++r_NZBFJQDQPA,qualification,QP-1586,p_GM7DHPGB5W,strength,edge crush resistance,5,7.27145,kN/m,lab_e,lab_a,NF2,LB3,27X,Y7L,Q7S,5B8,3JQ,X9Z,A7P,VR3,FA3,W5T

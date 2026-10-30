@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++print(x.columns.tolist())
++ids=['p_1XF9VFBVYF','p_SNNF91F2XB','p_SNNF91F2XD','p_H6M64FVH7B','p_CD8N0FCXDN','p_CD8N0FCXD5']
++q=x[x.prototype_id.isin(ids)]
++cols=[c for c in ['prototype_id','project_id','test','kind','value','measured_by','receipt_id'] if c in q.columns]
++print(q[cols].groupby(['prototype_id','test','kind']).value.agg(['count','mean']).to_string())
++print(q.drop_duplicates('prototype_id')[['prototype_id']+[c for c in x.columns if c in ['project_id']]].to_string(index=False))

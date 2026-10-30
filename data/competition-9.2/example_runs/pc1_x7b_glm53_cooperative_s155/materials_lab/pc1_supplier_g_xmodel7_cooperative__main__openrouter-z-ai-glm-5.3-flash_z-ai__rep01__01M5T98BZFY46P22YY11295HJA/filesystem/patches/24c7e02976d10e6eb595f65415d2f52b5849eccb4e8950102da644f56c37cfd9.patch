@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++d=df[df.prototype_id.isin(['p_PSG59ZNNC0','p_WDXM16QHCD','p_2XSDC22S4J'])]
++print(d[['prototype_id','project','test','value','measured_by','requester']].to_string())
++# 79Y recipe water panel holder check
++print(df[(df.project=='QP-1454')&(df.value>79.6)&(df.test=='wet strength retained')][['prototype_id','value','kind','measured_by']].to_string())

@@ -1,0 +1,14 @@
+--- 
++++ 
+@@ -0,0 +1,11 @@
++
++import pandas as pd
++pd.set_option('display.max_columns', None)
++pd.set_option('display.max_rows', None)
++pd.set_option('display.width', 200)
++
++df = pd.read_csv('records.csv')
++print("Columns:", df.columns.tolist())
++print("\nShape:", df.shape)
++print("\nFirst few rows:")
++print(df.head(3))

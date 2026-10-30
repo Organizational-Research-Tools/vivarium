@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import howto %}
+{% from "_story_item.html" import story_css %}
+{% block title %}live — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / live</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "live") }}
+
+{% call howto() %}
+  <p>This page reads the run's event streams every few seconds while the run is being written, and stops once a terminal event appears. It shows only what has been recorded so far: an agent's state is its last recorded lifecycle event (working, waiting, between turns, retired), not what its model is doing between events, and the time beside it is the time since its last recorded event.</p>
+  <p>Groups come from the organization preset's declared role settings: the attention scope or the role packet, as the library holds the preset now. The platform has no separate workgroup declaration, so a group here is a reading aid, not a treatment the run assigned. With automatic grouping, the first setting that splits the organization into several groups, one with more than one member, is used; otherwise everyone is one group. "Between groups" counts directed acts (notes, handoffs, and the task's registered exchanges); board posts go to everyone and are not counted there. A count says nothing about reading or understanding.</p>
+  <p><strong>Lanes</strong> puts the groups side by side, or the agents when there are no groups, with a lane for the board. Each row is one item in its author's lane; a connector runs to the lanes it reached, each marked where it arrived, and a post runs from its author to the board. A lane's green stripe means at least one of its agents had a model or tool call open at that position, so stripes in several lanes at once are work going on in parallel; the hover gives the count. Rows follow the writer's order and are not to scale: the left column is the time since the run's first event, and a separator marks a new logical day or a pause of more than a minute between shown items. <strong>Feed</strong> shows the same items as one column.</p>
+  <p>The feed is the Story view's items in writer order, newest at the bottom. It follows new items only while you are at the end; if you scroll up, new items wait behind a marker. Choosing a group keeps items by its members or addressed to them, and a directed item is tagged with the groups it crossed. The feed starts from the last {{ feed_first }} items; the Story view has the whole run.</p>
+{% endcall %}
+
+{{ story_css() }}
+<style>
+  .lgroup { margin: 0.6rem 0 0.2rem; font-weight: 650; }
+  .lgroup a.on { text-decoration: underline; }
+  table.lagents td { padding: 0.25rem 0.5rem; }
+  .lstate { font-size: 12px; padding: 0 0.45rem; border-radius: 999px; border: 1px solid var(--hairline); }
+  .lstate-working { border-color: var(--good); color: var(--good); }
+  .lstate-waiting, .lstate-paused { border-color: var(--warning); }
+  .lstate-retired, .lstate-failed, .lstate-not-started { color: var(--ink-muted); }
+  .lstate-failed { border-color: var(--critical); }
+  #lfeed { max-height: 70vh; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px; padding: 0 0.8rem; }
+  #lnew { position: sticky; bottom: 0.4rem; display: none; margin: 0 auto; cursor: pointer; }
+  .lpulse { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--good); margin-right: 0.35rem; }
+  .lpulse.off { background: var(--ink-muted); }
+  .lopts { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; margin: 0; }
+  .lopts fieldset { border: 1px solid var(--hairline); border-radius: 8px; padding: 0.2rem 0.6rem 0.35rem; margin: 0; }
+  .lopts legend { font-size: 11px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.04em; padding: 0 0.3rem; }
+  .lopts label { display: inline-flex; align-items: center; gap: 0.25rem; margin-right: 0.6rem; font-size: 13px; cursor: pointer; color: var(--ink-2); }
+  .lopts label.on { color: var(--ink); font-weight: 650; }
+</style>
+{% include "_lanes_css.html" %}
+
+<div class="card">
+  <p style="margin:0 0 0.5rem"><span id="lstatus"><span class="lpulse"></span>following</span>
+    {% if group %}<span class="dim">· only group <strong>{{ group }}</strong> (<a href="?view={{ view }}&depth={{ depth }}&by={{ by }}">show everyone</a>)</span>{% endif %}</p>
+  <form method="get" class="lopts">
+    <fieldset><legend>view</legend>
+      {% for v, label in (("lanes", "lanes, side by side"), ("feed", "one feed")) %}
+      <label class="{{ 'on' if v == view }}"><input type="radio" name="view" value="{{ v }}" {% if v == view %}checked{% endif %} onchange="this.form.submit()"> {{ label }}</label>
+      {% endfor %}
+    </fieldset>
+    <fieldset><legend>detail</legend>
+      {% for d in depths %}
+      <label class="{{ 'on' if d == depth }}"><input type="radio" name="depth" value="{{ d }}" {% if d == depth %}checked{% endif %} onchange="this.form.submit()"> {{ depth_label(d, s.can_post) }}</label>
+      {% endfor %}
+    </fieldset>
+    <fieldset><legend>group by</legend>
+      {% for b in group_bys %}
+      <label class="{{ 'on' if b == by }}"><input type="radio" name="by" value="{{ b }}" {% if b == by %}checked{% endif %} onchange="this.form.submit()"> {{ {"auto": "automatic", "packet": "role packet", "attention": "attention scope", "none": "no groups"}[b] }}</label>
+      {% endfor %}
+    </fieldset>
+    {% if group %}<input type="hidden" name="group" value="{{ group }}">{% endif %}
+    <noscript><button type="submit">apply</button></noscript>
+  </form>
+</div>
+
+<div id="lpanels">{% include "_live_panels.html" %}</div>
+
+<div class="card">
+  <h2>What is happening <span class="dim" style="font-weight:400">· <a href="/run/{{ run_ref }}/story?depth={{ depth }}">the whole story</a></span></h2>
+  {% if view == "lanes" %}
+  <div id="lfeed" class="story llanes" style="--lanes: {{ lanes|length }}">
+    <div class="lrow lhead"><div class="ltime dim">time</div>{% for l in lanes %}<div class="lcell" style="grid-column: {{ loop.index + 1 }}">{% if l.name == "board" %}<strong>board</strong> <span class="dim">· everyone</span>{% else %}{% if l.members|length == 1 %}<span class="adot-{{ aslot.get(l.members[0], -1) }}"></span>{% endif %}<strong>{{ l.name }}</strong>{% if l.members|length > 1 %} <span class="dim" title="{{ l.members|join(', ') }}">· {{ l.members|length }} agents</span>{% elif l.members and l.members[0] != l.name %} <span class="dim">· {{ l.members[0] }}</span>{% endif %}{% endif %}</div>{% endfor %}</div>
+    {{ feed_html|safe }}<button id="lnew" type="button">new items ↓</button></div>
+  {% else %}
+  <div id="lfeed" class="story">{{ feed_html|safe }}<button id="lnew" type="button">new items ↓</button></div>
+  {% endif %}
+</div>
+
+<script>
+(function () {
+  var feed = document.getElementById("lfeed"), panels = document.getElementById("lpanels");
+  var more = document.getElementById("lnew"), status = document.getElementById("lstatus");
+  var after = {{ last_seq|tojson }}, ended = {{ (s.ended is not none)|tojson }};
+  var base = {{ ("/run/" ~ run_ref ~ "/live.json")|tojson }};
+  var params = {{ {"depth": depth, "group": group, "by": by, "view": view}|tojson }};
+  var lanesKey = {{ (lanes_key or none)|tojson }};
+  var waiting = 0, busy = false;
+  function atEnd() { return feed.scrollHeight - feed.scrollTop - feed.clientHeight < 60; }
+  function toEnd() { feed.scrollTop = feed.scrollHeight; waiting = 0; more.style.display = "none"; }
+  toEnd();
+  feed.addEventListener("scroll", function () { if (atEnd()) { waiting = 0; more.style.display = "none"; } });
+  more.addEventListener("click", toEnd);
+  function mark(text, on) { status.innerHTML = '<span class="lpulse' + (on ? '' : ' off') + '"></span>' + text; }
+  if (ended) mark("the run has ended; nothing more to follow", false);
+  function poll() {
+    if (ended || busy || document.hidden) return;
+    busy = true;
+    var q = new URLSearchParams(params); q.set("after", after);
+    fetch(base + "?" + q.toString()).then(function (r) { return r.json(); }).then(function (d) {
+      if (lanesKey && d.lanes_key && d.lanes_key !== lanesKey) { location.reload(); return; }  // a lane appeared
+      var follow = atEnd();
+      panels.innerHTML = d.panels_html;  // panels hold no expandable items
+      if (d.n_new) {
+        // appended; open items stay open. A folded burst that grew comes back with the
+        // same position: it replaces its earlier row instead of adding a second one.
+        var box = document.createElement("div"); box.innerHTML = d.feed_html;
+        Array.prototype.slice.call(box.children).forEach(function (el) {
+          var seq = el.getAttribute("data-seq"), cls = el.classList.contains("lsep") ? ".lsep" : (el.classList.contains("lrow") ? ".lrow" : ".litem");
+          var old = seq !== null ? feed.querySelector(cls + '[data-seq="' + seq + '"]') : null;
+          if (old) old.replaceWith(el); else feed.insertBefore(el, more);
+        });
+        if (follow) toEnd(); else { waiting += d.n_new; more.textContent = waiting + " new item" + (waiting === 1 ? "" : "s") + " ↓"; more.style.display = "block"; }
+      }
+      after = d.last_seq;
+      if (d.ended) { ended = true; mark("the run has ended; nothing more to follow", false); }
+      else mark("following · checked " + new Date().toLocaleTimeString(), true);
+    }).catch(function () { mark("could not reach the dashboard; retrying", false); })
+      .finally(function () { busy = false; });
+  }
+  setInterval(poll, {{ interval_ms }});
+  document.addEventListener("visibilitychange", poll);
+})();
+</script>
+{% endblock %}

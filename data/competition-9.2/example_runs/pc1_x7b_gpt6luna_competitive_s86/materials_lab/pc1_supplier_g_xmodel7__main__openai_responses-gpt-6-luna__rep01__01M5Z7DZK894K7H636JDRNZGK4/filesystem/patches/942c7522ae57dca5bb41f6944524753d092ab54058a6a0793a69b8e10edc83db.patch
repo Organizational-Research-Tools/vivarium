@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -0,0 +1,4 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); q=x[x.kind=='qualification']; g=q.groupby(['project','prototype_id','test']).agg(n=('value','size'),mean=('value','mean'),owner=('measured_by','first')).reset_index(); p=g.pivot(index=['project','prototype_id'],columns='test',values='mean'); ns=g.pivot(index=['project','prototype_id'],columns='test',values='n'); p=p.fillna(float('nan')); thresholds={'seal hold temperature':78.625,'edge crush resistance':7.235,'wet strength retained':79.8}; print('complete/all threshold',p.dropna()[[ *thresholds]].loc[lambda a: (a.ge(pd.Series(thresholds))).all(axis=1)].to_string());
++for proj in q.project.unique():
++ gg=g[g.project==proj]; print('\n',proj); print(gg.to_string(index=False))

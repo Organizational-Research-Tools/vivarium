@@ -1,0 +1,4 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+m=df[(df.prototype_id=='p_F2DF03FPJR')]
+print(m[['record_id','test','value']].to_string())

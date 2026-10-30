@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -320,3 +320,4 @@
+ r_R56BGWYX15,qualification,QP-3068,p_2V1CHF70SD,water,wet strength retained,3,73.3592,%,lab_c,lab_a,,,,,,,,,,,,
+ r_R56BGWYX16,qualification,QP-3068,p_2V1CHF70SD,water,wet strength retained,4,73.4136,%,lab_c,lab_a,,,,,,,,,,,,
+ r_R56BGWYX17,qualification,QP-3068,p_2V1CHF70SD,water,wet strength retained,5,73.7432,%,lab_c,lab_a,,,,,,,,,,,,
++r_ZK438HCGMA,exploratory,QP-5066,p_4GDGQG6XPF,heat,seal hold temperature,,77.44000,°C,lab_a,lab_c,ZY6,N2L,KX7,X2P,RB3,8P4,RF3,LR4,A7P,BX9,FA3,3DC

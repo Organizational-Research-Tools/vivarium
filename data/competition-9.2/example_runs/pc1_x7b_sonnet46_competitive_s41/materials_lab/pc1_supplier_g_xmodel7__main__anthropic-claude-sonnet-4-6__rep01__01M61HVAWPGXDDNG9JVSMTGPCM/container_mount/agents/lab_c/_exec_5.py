@@ -1,0 +1,30 @@
+
+import pandas as pd
+
+df = pd.read_csv('records.csv')
+
+# Analyze compositions vs performance for insights
+comp_cols = ['base_sheet', 'secondary_sheet', 'binder_system', 'additive_package_1',
+             'additive_package_2', 'additive_package_3', 'process_profile_1', 'process_profile_2',
+             'process_profile_3', 'surface_treatment', 'joint_system', 'conditioning_step']
+
+comps = df.dropna(subset=['base_sheet']).drop_duplicates('prototype_id')[['prototype_id', 'project'] + comp_cols]
+panels = df[df['kind'] == 'qualification'].groupby(['project', 'prototype_id', 'test'])['value'].agg('mean').reset_index()
+
+heat = panels[panels['test'] == 'seal hold temperature'].rename(columns={'value': 'heat'})
+strength = panels[panels['test'] == 'edge crush resistance'].rename(columns={'value': 'strength'})
+water = panels[panels['test'] == 'wet strength retained'].rename(columns={'value': 'water'})
+
+s = comps.merge(heat[['prototype_id', 'heat']], on='prototype_id', how='left')
+s = s.merge(strength[['prototype_id', 'strength']], on='prototype_id', how='left')
+s = s.merge(water[['prototype_id', 'water']], on='prototype_id', how='left')
+
+# Show key patterns
+print("=== BINDER vs HEAT ===")
+print(s[['prototype_id','binder_system','heat']].dropna(subset=['heat']).sort_values('heat', ascending=False))
+
+print("\n=== PROCESS PROFILE 3 vs HEAT ===")
+print(s[['prototype_id','process_profile_3','heat']].dropna(subset=['heat']).sort_values('heat', ascending=False))
+
+print("\n=== AP2, AP3, JOINT vs WATER ===")
+print(s[['prototype_id','additive_package_2','additive_package_3','joint_system','water']].dropna(subset=['water']).sort_values('water', ascending=False))

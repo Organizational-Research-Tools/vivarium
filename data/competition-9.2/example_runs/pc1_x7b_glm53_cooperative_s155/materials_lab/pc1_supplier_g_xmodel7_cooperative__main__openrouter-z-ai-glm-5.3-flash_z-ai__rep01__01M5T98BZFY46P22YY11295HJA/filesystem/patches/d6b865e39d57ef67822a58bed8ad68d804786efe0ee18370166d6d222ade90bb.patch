@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++# heat panels I know: compute margins under revision B for candidate recipes
++# base thresholds: heat 77.5, strength 7.10, water 78.0 (since targets 78.25/7.19/79.2 = base+3 steps)
++print(df.columns.tolist())

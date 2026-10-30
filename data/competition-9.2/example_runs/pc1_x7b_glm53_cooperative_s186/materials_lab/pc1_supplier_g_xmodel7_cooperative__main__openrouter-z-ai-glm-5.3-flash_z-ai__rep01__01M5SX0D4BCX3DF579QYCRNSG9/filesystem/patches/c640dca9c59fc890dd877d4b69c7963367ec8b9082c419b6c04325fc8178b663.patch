@@ -1,0 +1,21 @@
+--- 
++++ 
+@@ -502,3 +502,18 @@
+ r_A0SQXY4GVX,exploratory,QP-8476,p_V3NY0Z65SK,strength,edge crush resistance,,6.94802,kN/m,lab_e,lab_e,L7A,38J,HD9,TE2,2Y6,2CK,5JK,2FG,V7P,84H,3Y7,G5Y
+ r_A0SQXY4GVY,exploratory,QP-8476,p_V3NY0Z65SN,strength,edge crush resistance,,6.39869,kN/m,lab_e,lab_e,L7A,38J,HD9,TE2,2Y6,Z2E,5JK,2FG,X9S,84H,3Y7,G5Y
+ r_JVAGS440CE,exploratory,QP-8476,p_V3NY0Z65SN,strength,edge crush resistance,,6.33068,kN/m,lab_e,lab_e,L7A,38J,HD9,TE2,2Y6,Z2E,5JK,2FG,X9S,84H,3Y7,G5Y
++r_DMPF74MG54,exploratory,QP-8476,p_Z8ZZAVJZEG,strength,edge crush resistance,,6.94052,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_AVSJ0TR2DH,exploratory,QP-8476,p_Z8ZZAVJZEG,strength,edge crush resistance,,6.88118,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_AVSJ0TR2DJ,exploratory,QP-8476,p_Z8ZZAVJZEG,strength,edge crush resistance,,6.97040,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_AVSJ0TR2DK,exploratory,QP-8476,p_Z8ZZAVJZEJ,strength,edge crush resistance,,6.91493,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_AVSJ0TR2DM,exploratory,QP-8476,p_Z8ZZAVJZEJ,strength,edge crush resistance,,6.96854,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_AVSJ0TR2DN,exploratory,QP-8476,p_Z8ZZAVJZEJ,strength,edge crush resistance,,6.89357,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_AVSJ0TR2DP,exploratory,QP-8476,p_XY5HKCBSQP,strength,edge crush resistance,,6.89540,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_BKB4BSW3WS,exploratory,QP-8476,p_XY5HKCBSQP,strength,edge crush resistance,,6.92108,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_BKB4BSW3WT,exploratory,QP-8476,p_XY5HKCBSQP,strength,edge crush resistance,,6.90152,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_BKB4BSW3WV,exploratory,QP-8476,p_XMP314C3B0,strength,edge crush resistance,,6.30386,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_BKB4BSW3WW,exploratory,QP-8476,p_XMP314C3B0,strength,edge crush resistance,,6.35744,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_BKB4BSW3WX,exploratory,QP-8476,p_XMP314C3B0,strength,edge crush resistance,,6.33182,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_BKB4BSW3WY,exploratory,QP-8476,p_XY5HKCBSQM,strength,edge crush resistance,,6.92477,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XBQ73KD5JA,exploratory,QP-8476,p_XY5HKCBSQM,strength,edge crush resistance,,6.98777,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XBQ73KD5JB,exploratory,QP-8476,p_XY5HKCBSQM,strength,edge crush resistance,,6.99887,kN/m,lab_e,lab_c,,,,,,,,,,,,

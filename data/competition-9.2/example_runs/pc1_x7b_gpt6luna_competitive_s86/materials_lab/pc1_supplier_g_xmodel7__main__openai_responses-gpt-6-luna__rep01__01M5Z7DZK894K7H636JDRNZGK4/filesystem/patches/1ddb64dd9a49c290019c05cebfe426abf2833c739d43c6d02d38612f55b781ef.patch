@@ -1,0 +1,25 @@
+--- 
++++ 
+@@ -1,4 +1,22 @@
+ record_id,kind,project,prototype_id,instrument,test,specimen,value,unit,measured_by,requester,base_sheet,secondary_sheet,binder_system,additive_package_1,additive_package_2,additive_package_3,process_profile_1,process_profile_2,process_profile_3,surface_treatment,joint_system,conditioning_step
++r_2K7NQTDBCK,qualification,QP-3617,p_2K7NQTDBCH,heat,seal hold temperature,0,78.60500,°C,lab_a,lab_a,,,,,,,,,,,,
++r_2K7NQTDBCM,qualification,QP-3617,p_2K7NQTDBCH,heat,seal hold temperature,1,78.71225,°C,lab_a,lab_a,,,,,,,,,,,,
++r_2K7NQTDBCN,qualification,QP-3617,p_2K7NQTDBCH,heat,seal hold temperature,2,78.89375,°C,lab_a,lab_a,,,,,,,,,,,,
++r_2K7NQTDBCP,qualification,QP-3617,p_2K7NQTDBCH,heat,seal hold temperature,3,78.90075,°C,lab_a,lab_a,,,,,,,,,,,,
++r_2K7NQTDBCQ,qualification,QP-3617,p_2K7NQTDBCH,heat,seal hold temperature,4,78.99550,°C,lab_a,lab_a,,,,,,,,,,,,
++r_2K7NQTDBCR,qualification,QP-3617,p_2K7NQTDBCH,heat,seal hold temperature,5,78.56975,°C,lab_a,lab_a,,,,,,,,,,,,
++r_31ZWZP4Z87,qualification,QP-3617,p_2K7NQTDBCW,strength,edge crush resistance,0,7.30460,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_31ZWZP4Z88,qualification,QP-3617,p_2K7NQTDBCW,strength,edge crush resistance,1,7.32383,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_31ZWZP4Z89,qualification,QP-3617,p_2K7NQTDBCW,strength,edge crush resistance,2,7.32407,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_31ZWZP4Z8A,qualification,QP-3617,p_2K7NQTDBCW,strength,edge crush resistance,3,7.33412,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_31ZWZP4Z8B,qualification,QP-3617,p_2K7NQTDBCW,strength,edge crush resistance,4,7.29398,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_31ZWZP4Z8C,qualification,QP-3617,p_2K7NQTDBCW,strength,edge crush resistance,5,7.30064,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_31ZWZP4Z8J,qualification,QP-3617,p_31ZWZP4Z8G,water,wet strength retained,0,80.0804,%,lab_c,lab_c,,,,,,,,,,,,
++r_31ZWZP4Z8K,qualification,QP-3617,p_31ZWZP4Z8G,water,wet strength retained,1,80.3644,%,lab_c,lab_c,,,,,,,,,,,,
++r_31ZWZP4Z8M,qualification,QP-3617,p_31ZWZP4Z8G,water,wet strength retained,2,80.4792,%,lab_c,lab_c,,,,,,,,,,,,
++r_31ZWZP4Z8N,qualification,QP-3617,p_31ZWZP4Z8G,water,wet strength retained,3,79.5812,%,lab_c,lab_c,,,,,,,,,,,,
++r_ZFC88N6EWQ,qualification,QP-3617,p_31ZWZP4Z8G,water,wet strength retained,4,79.7984,%,lab_c,lab_c,,,,,,,,,,,,
++r_ZFC88N6EWR,qualification,QP-3617,p_31ZWZP4Z8G,water,wet strength retained,5,79.9796,%,lab_c,lab_c,,,,,,,,,,,,
+ r_ZFC88N6EWY,qualification,QP-9259,p_ZFC88N6EWW,heat,seal hold temperature,0,79.15325,°C,lab_d,lab_d,,,,,,,,,,,,
+ r_ZFC88N6EWZ,qualification,QP-9259,p_ZFC88N6EWW,heat,seal hold temperature,1,79.16600,°C,lab_d,lab_d,,,,,,,,,,,,
+ r_ZFC88N6EX0,qualification,QP-9259,p_ZFC88N6EWW,heat,seal hold temperature,2,78.93350,°C,lab_d,lab_d,,,,,,,,,,,,

@@ -1,0 +1,1 @@
+{% from "_story_item.html" import story_item %}{% for it in items %}<div class="litem" data-seq="{{ it.seq }}">{{ story_item(it, run_ref, aslot) }}</div>{% endfor %}

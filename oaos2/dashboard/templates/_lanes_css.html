@@ -1,0 +1,25 @@
+{# Lane layout styles, shared by the live view and the replay. #}
+<style>
+  .llanes { padding: 0; overflow-x: auto; }
+  .llanes .lrow { display: grid; grid-template-columns: 3rem repeat(var(--lanes), minmax(6.5rem, 1fr)); position: relative; }
+  .llanes .lrow > * { grid-row: 1; }
+  .llanes .lhead { position: sticky; top: 0; z-index: 3; background: var(--surface); border-bottom: 1px solid var(--border); font-size: 12px; }
+  .llanes .lhead .lcell { padding: 0.4rem 0.5rem; }
+  .llanes .ltime { font-size: 11px; padding: 0.35rem 0.4rem; text-align: right; font-variant-numeric: tabular-nums; }
+  .llanes .lcell { border-left: 1px solid var(--hairline); padding: 0.2rem 0.35rem; min-width: 0; z-index: 1; font-size: 12px; }
+  .llanes .lcell.lbusy { border-left: 3px solid var(--good); padding-left: calc(0.35rem - 2px); }
+  .llanes .lconn { align-self: start; margin-top: 0.75rem; height: 0; border-top: 1.5px dashed var(--serious); z-index: 0; margin-left: 0.8rem; margin-right: 0.8rem; }
+  .llanes .li { background: var(--surface); border: 1px solid var(--hairline); border-radius: 6px; padding: 0.25rem 0.45rem; margin: 0.15rem 0; overflow-wrap: anywhere; }
+  .llanes .li .lt { color: var(--ink-2); white-space: pre-wrap; }
+  .llanes .li-note { border-left: 3px solid var(--s5, #4a3aa7); }
+  .llanes .li-notice { border-left: 3px solid var(--s3, #eda100); }
+  .llanes .li-handoff { border-left: 3px solid var(--s1, #2a78d6); }
+  .llanes .li-exchange { border-left: 3px solid var(--serious); }
+  .llanes .li-post { border-left: 3px solid var(--ink-2); }
+  .llanes .li-milestone { border-radius: 6px; background: color-mix(in srgb, var(--ink) 4%, var(--surface)); }
+  .llanes .li-problem { border-left: 3px solid var(--critical); }
+  .llanes .li-minor { border: none; background: transparent; color: var(--ink-2); padding: 0 0.2rem; font-size: 11.5px; }
+  .llanes .li-said { border: none; background: transparent; padding: 0 0.2rem; }
+  .llanes .lin { font-size: 11px; color: var(--serious); margin-top: 0.35rem; background: var(--surface); display: inline-block; padding: 0 0.3rem; overflow-wrap: anywhere; }
+  .llanes .lsep { text-align: center; font-size: 11px; color: var(--ink-muted); border-top: 1px solid var(--border); margin: 0.3rem 0 0; padding-top: 0.15rem; }
+</style>

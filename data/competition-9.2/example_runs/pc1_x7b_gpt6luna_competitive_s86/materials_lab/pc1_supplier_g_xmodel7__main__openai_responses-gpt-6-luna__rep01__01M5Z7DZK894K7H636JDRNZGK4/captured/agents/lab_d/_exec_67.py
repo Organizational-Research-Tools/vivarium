@@ -1,0 +1,15 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x.shape, x.columns.tolist())
+# dataset candidates QP3617, every unique recipe, panel means by property and exploratory means
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+d=x[x.project=='QP-3617'].copy()
+for m in mods: d[m]=d[m].fillna('')
+for rec,g in d.groupby(mods,dropna=False):
+  vals={}
+  for inst in ['heat','strength','water']:
+   z=g[(g.instrument==inst)&(g.kind=='qualification')]
+   e=g[(g.instrument==inst)&(g.kind=='exploratory')]
+   vals[inst]=z.value.mean() if len(z)>=6 else (e.value.mean() if len(e) else None)
+  if vals['strength'] and vals['water'] and vals['strength']>=7.19 and vals['water']>=79.2:
+   print(g.prototype_id.iloc[0], vals, 'panels',[(i,len(g[(g.instrument==i)&(g.kind=='qualification')])) for i in ['heat','strength','water']], rec)

@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -462,3 +462,15 @@
+ r_T12T3W9RZT,exploratory,QP-1466,p_3YB90AXZQB,heat,seal hold temperature,,62.60575,°C,lab_d,lab_e,,,,,,,,,,,,
+ r_T12T3W9RZV,exploratory,QP-1826,p_Q2F0PV3ZWN,heat,seal hold temperature,,70.26950,°C,lab_d,lab_e,,,,,,,,,,,,
+ r_T12T3W9RZW,exploratory,QP-1826,p_Q2F0PV3ZWQ,heat,seal hold temperature,,53.84175,°C,lab_d,lab_e,,,,,,,,,,,,
++r_NYWZQT3QTT,exploratory,QP-1466,p_ZJ5ZVDETM3,heat,seal hold temperature,,72.89275,°C,lab_d,lab_d,3F4,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,LW5
++r_NYWZQT3QTV,exploratory,QP-1466,p_ZJ5ZVDETM5,heat,seal hold temperature,,61.48450,°C,lab_d,lab_d,H6K,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,LW5
++r_J6QWXCFFCH,exploratory,QP-1466,p_ZJ5ZVDETM7,heat,seal hold temperature,,72.96000,°C,lab_d,lab_d,73S,9AF,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,LW5
++r_J6QWXCFFCJ,exploratory,QP-1466,p_ZJ5ZVDETM9,heat,seal hold temperature,,72.68475,°C,lab_d,lab_d,73S,HJ7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,LW5
++r_J6QWXCFFCK,exploratory,QP-1466,p_ZJ5ZVDETMB,heat,seal hold temperature,,78.58200,°C,lab_d,lab_d,73S,3S7,6ZC,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,LW5
++r_J6QWXCFFCM,exploratory,QP-1466,p_ZJ5ZVDETMD,heat,seal hold temperature,,78.32200,°C,lab_d,lab_d,73S,3S7,3VE,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,LW5
++r_J6QWXCFFCN,exploratory,QP-1466,p_ZJ5ZVDETMF,heat,seal hold temperature,,72.66050,°C,lab_d,lab_d,73S,3S7,E5L,M5L,NS4,S3J,3RB,GL8,49R,RQ5,8K5,LW5
++r_J6QWXCFFCP,exploratory,QP-1466,p_ZJ5ZVDETMH,heat,seal hold temperature,,78.62600,°C,lab_d,lab_d,73S,3S7,E5L,V5J,Y6H,S3J,3RB,GL8,49R,RQ5,8K5,LW5
++r_J6QWXCFFCQ,exploratory,QP-1466,p_731SRFSBZ2,heat,seal hold temperature,,73.08375,°C,lab_d,lab_d,73S,3S7,E5L,V5J,4C2,S3J,3RB,GL8,49R,RQ5,8K5,LW5
++r_YBW932AZ0V,exploratory,QP-1466,p_731SRFSBZ4,heat,seal hold temperature,,61.42175,°C,lab_d,lab_d,73S,3S7,E5L,V5J,NS4,J3Y,3RB,GL8,49R,RQ5,8K5,LW5
++r_YBW932AZ0W,exploratory,QP-1466,p_731SRFSBZ6,heat,seal hold temperature,,72.83475,°C,lab_d,lab_d,73S,3S7,E5L,V5J,NS4,92P,3RB,GL8,49R,RQ5,8K5,LW5
++r_YBW932AZ0X,exploratory,QP-1466,p_731SRFSBZ8,heat,seal hold temperature,,66.81100,°C,lab_d,lab_d,73S,3S7,E5L,V5J,NS4,S3J,3RB,F9B,49R,RQ5,8K5,LW5

@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++sub=df[df.prototype_id.isin(['p_9JS2853ERS','p_9JS2853ERZ','p_9JS2853ES3','p_9JS2853ESQ','p_9JS2853ESH','p_9JS2853ESK','p_9JS2853ESD','p_9JS2853ERV'])]
++print(sub.groupby(['prototype_id','project','test']).value.agg(['mean','count']).to_string())
++print(sub[['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].drop_duplicates().to_string())

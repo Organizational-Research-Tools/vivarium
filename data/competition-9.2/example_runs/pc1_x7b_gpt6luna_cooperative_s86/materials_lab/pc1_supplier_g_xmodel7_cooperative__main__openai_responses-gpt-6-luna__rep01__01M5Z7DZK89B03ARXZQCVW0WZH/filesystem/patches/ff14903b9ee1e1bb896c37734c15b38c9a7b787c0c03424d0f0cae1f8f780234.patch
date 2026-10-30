@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -923,3 +923,15 @@
+ r_1V8X50MN73,qualification,QP-3617,p_KBABVTJCX0,heat,seal hold temperature,3,79.92125,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
+ r_1V8X50MN74,qualification,QP-3617,p_KBABVTJCX0,heat,seal hold temperature,4,79.86850,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
+ r_1V8X50MN75,qualification,QP-3617,p_KBABVTJCX0,heat,seal hold temperature,5,80.08100,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_6NTF3BXX2M,qualification,QP-3617,p_KBABVTJCWW,water,wet strength retained,0,78.7740,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_6NTF3BXX2N,qualification,QP-3617,p_KBABVTJCWW,water,wet strength retained,1,78.9420,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_6NTF3BXX2P,qualification,QP-3617,p_KBABVTJCWW,water,wet strength retained,2,79.0672,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_6NTF3BXX2Q,qualification,QP-3617,p_KBABVTJCWW,water,wet strength retained,3,79.1756,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_6NTF3BXX2R,qualification,QP-3617,p_KBABVTJCWW,water,wet strength retained,4,79.6100,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_6NTF3BXX2S,qualification,QP-3617,p_KBABVTJCWW,water,wet strength retained,5,79.5160,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_6NTF3BXX2T,qualification,QP-3617,p_KBABVTJCX0,water,wet strength retained,0,78.9912,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_6NTF3BXX2V,qualification,QP-3617,p_KBABVTJCX0,water,wet strength retained,1,79.2868,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_6NTF3BXX2W,qualification,QP-3617,p_KBABVTJCX0,water,wet strength retained,2,79.5592,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_6NTF3BXX2X,qualification,QP-3617,p_KBABVTJCX0,water,wet strength retained,3,79.4872,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_6NTF3BXX2Y,qualification,QP-3617,p_KBABVTJCX0,water,wet strength retained,4,78.9684,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_6NTF3BXX2Z,qualification,QP-3617,p_KBABVTJCX0,water,wet strength retained,5,79.1544,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2

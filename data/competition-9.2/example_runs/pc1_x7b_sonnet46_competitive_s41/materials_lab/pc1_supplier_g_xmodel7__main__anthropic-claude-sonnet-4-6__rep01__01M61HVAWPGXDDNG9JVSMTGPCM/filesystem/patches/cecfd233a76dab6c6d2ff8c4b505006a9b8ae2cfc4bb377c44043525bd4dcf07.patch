@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -586,3 +586,9 @@
+ r_TBCFCZSN6T,exploratory,QP-3089,p_57M2N73XBJ,strength,edge crush resistance,,7.33541,kN/m,lab_b,lab_d,,,,,,,,,,,,
+ r_TBCFCZSN6V,exploratory,QP-3089,p_57M2N73XBM,strength,edge crush resistance,,6.63275,kN/m,lab_b,lab_d,,,,,,,,,,,,
+ r_TBCFCZSN6W,exploratory,QP-3089,p_57M2N73XBP,strength,edge crush resistance,,6.65798,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_JGGN384X2N,qualification,QP-3473,p_P68BNAVWAQ,strength,edge crush resistance,0,7.20890,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_JGGN384X2P,qualification,QP-3473,p_P68BNAVWAQ,strength,edge crush resistance,1,7.21532,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_JGGN384X2Q,qualification,QP-3473,p_P68BNAVWAQ,strength,edge crush resistance,2,7.23761,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_HSW46FW1MD,qualification,QP-3473,p_P68BNAVWAQ,strength,edge crush resistance,3,7.17893,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_HSW46FW1ME,qualification,QP-3473,p_P68BNAVWAQ,strength,edge crush resistance,4,7.18490,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_HSW46FW1MF,qualification,QP-3473,p_P68BNAVWAQ,strength,edge crush resistance,5,7.20236,kN/m,lab_b,lab_f,,,,,,,,,,,,

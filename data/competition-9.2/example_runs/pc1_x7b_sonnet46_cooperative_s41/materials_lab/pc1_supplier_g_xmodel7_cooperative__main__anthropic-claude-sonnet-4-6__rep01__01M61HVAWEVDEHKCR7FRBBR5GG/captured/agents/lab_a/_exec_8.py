@@ -1,0 +1,83 @@
+
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('records.csv')
+
+recipe_cols = ['prototype_id', 'base_sheet', 'secondary_sheet', 'binder_system',
+               'additive_package_1', 'additive_package_2', 'additive_package_3',
+               'process_profile_1', 'process_profile_2', 'process_profile_3',
+               'surface_treatment', 'joint_system', 'conditioning_step']
+module_order = ['base_sheet', 'secondary_sheet', 'binder_system', 'additive_package_1',
+                'additive_package_2', 'additive_package_3', 'process_profile_1', 
+                'process_profile_2', 'process_profile_3', 'surface_treatment',
+                'joint_system', 'conditioning_step']
+recipes = df[recipe_cols].dropna(subset=['base_sheet']).drop_duplicates('prototype_id')
+recipes_dict = recipes.set_index('prototype_id').to_dict('index')
+
+# Define complete panel results from my_records filing status
+panel_results = {
+    'p_PXAKTW39C3': {'project':'QP-4476','heat':78.779,'strength':7.254,'water':81.647,'gg7':True},
+    'p_0TR8JD149R': {'project':'QP-4476','heat':74.063,'strength':7.170,'water':78.935,'gg7':False},
+    'p_PF0D437ZF5': {'project':'QP-4476','heat':74.240,'strength':7.191,'water':79.217,'gg7':False},
+    'p_NP95G3B8R6': {'project':'QP-4476','heat':78.368,'strength':6.695,'water':78.588,'gg7':False},
+    'p_E0DS70E4AF': {'project':'QP-4476','heat':78.338,'strength':6.691,'water':78.540,'gg7':False},
+    'p_ED8BM3M16K': {'project':'QP-6843','heat':74.499,'strength':7.174,'water':78.980,'gg7':False},
+    'p_KTBQ5A8DND': {'project':'QP-7212','heat':78.266,'strength':7.192,'water':73.560,'gg7':False},
+    'p_BPWVSBWDE3': {'project':'QP-3473','heat':78.066,'strength':7.168,'water':73.053,'gg7':False},
+    'p_8ZZDCC8E8N': {'project':'QP-3089','heat':78.127,'strength':7.205,'water':73.057,'gg7':False},
+    'p_EN88W8AJMM': {'project':'QP-8265','heat':74.242,'strength':7.201,'water':79.348,'gg7':False},
+}
+
+print("=== KEY OBSERVATIONS ===\n")
+print("WATER PATTERN:")
+print("Recipes with GOOD water (≥78%):")
+for pid, r in panel_results.items():
+    if r['water'] >= 78.0 and not r['gg7']:
+        recipe = [recipes_dict[pid][m] for m in module_order] if pid in recipes_dict else ['?']*12
+        print(f"  {pid}: water={r['water']:.2f}% | pp1={recipe[6]}, pp2={recipe[7]}, pp3={recipe[8]}, ap3={recipe[5]}")
+
+print("\nRecipes with BAD water (<78%):")
+for pid, r in panel_results.items():
+    if r['water'] < 78.0 and not r['gg7']:
+        recipe = [recipes_dict[pid][m] for m in module_order] if pid in recipes_dict else ['?']*12
+        print(f"  {pid}: water={r['water']:.2f}% | pp1={recipe[6]}, pp2={recipe[7]}, pp3={recipe[8]}, ap3={recipe[5]}")
+
+print("\nHEAT PATTERN:")
+print("Recipes with GOOD heat (≥77.5°C):")
+for pid, r in panel_results.items():
+    if r['heat'] >= 77.5 and not r['gg7']:
+        recipe = [recipes_dict[pid][m] for m in module_order] if pid in recipes_dict else ['?']*12
+        print(f"  {pid}: heat={r['heat']:.2f}°C | binder={recipe[2]}, ap1={recipe[3]}, pp2={recipe[7]}, pp3={recipe[8]}")
+
+print("\nRecipes with BAD heat (<77.5°C):")
+for pid, r in panel_results.items():
+    if r['heat'] < 77.5 and not r['gg7']:
+        recipe = [recipes_dict[pid][m] for m in module_order] if pid in recipes_dict else ['?']*12
+        print(f"  {pid}: heat={r['heat']:.2f}°C | binder={recipe[2]}, ap1={recipe[3]}, pp2={recipe[7]}, pp3={recipe[8]}")
+
+print("\n=== CRITICAL FINDINGS ===")
+print("Water passes (non-GG7): H3F(pp3) OR 44B(ap3)+DL8(joint)+6FA(ap2) combo")
+print("Water fails: N7N/X9F(pp3) with 4PE/QJ4(ap3)")
+print("Heat passes: C5Q/VA8/2BR(pp2) + M2P/NN7(binder) + 57T/QJ2(ap1)")
+print("Heat fails: H3F(pp3) kills heat despite good pp2")
+
+print("\n=== GG7-FREE TARGET RECIPE ===")
+gg7_recipe = ['JA8', 'GG7', 'M2P', 'QJ2', '6FA', '44B', '62D', '2BR', 'N4L', '7KL', 'DL8', '3N8']
+free_recipe = ['JA8', '3HW', 'M2P', 'QJ2', '6FA', '44B', '62D', '2BR', 'N4L', '7KL', 'DL8', '3N8']
+print(f"GG7 recipe: {gg7_recipe}")
+print(f"GG7-free:   {free_recipe}")
+print(f"Expected (GG7 adds ~2 steps = 0.5°C heat, 0.06 kN/m strength, 0.8% water):")
+print(f"  Heat: 78.78 - 0.50 = {78.78-0.50:.2f}°C (threshold 77.5, margin {(78.28-77.5)/0.25:.1f} steps)")
+print(f"  Strength: 7.25 - 0.06 = {7.25-0.06:.2f} kN/m (threshold 7.1, margin {(7.19-7.1)/0.03:.1f} steps)")
+print(f"  Water: 81.65 - 0.80 = {81.65-0.80:.2f}% (threshold 78.0, margin {(80.85-78.0)/0.4:.1f} steps)")
+print(f"  Weakest margin: {min((78.28-77.5)/0.25, (7.19-7.1)/0.03, (80.85-78.0)/0.4):.1f} steps → SHOULD QUALIFY!")
+
+print("\n=== PL-98 STRATEGY: BOOST HEAT FOR QP-8265 ===")
+base_8265 = ['U8H', 'YX8', 'M2P', 'R5N', 'LD3', 'L6C', 'WB3', 'VA8', 'H3F', '7KL', '9FU', 'YV2']
+boosted = ['U8H', 'YX8', 'M2P', 'R5N', 'LD3', 'L6C', 'WB3', 'C5Q', 'H3F', '7KL', '9FU', 'YV2']
+print(f"QP-8265 passing str+water: {base_8265}")
+print(f"  heat=74.24°C (fails), strength=7.20✅, water=79.35✅")
+print(f"Boost heat by VA8→C5Q: {boosted}")
+print(f"  Expected heat: ~74.24 + (77.76-65.75) = ??? complex due to interactions")
+print(f"  But C5Q alone from base gave 77.76, so should be above 77.5 if interactions are favorable")

@@ -1,0 +1,6 @@
+--- 
++++ 
+@@ -0,0 +1,3 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); y=x[(x.project=='QP-7092')&(x.test=='edge crush resistance')].groupby('prototype_id').value.mean().sort_values(ascending=False)
++print(y.head(30).to_string())

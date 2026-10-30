@@ -1,0 +1,8 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+for pid in ['p_JY7N4A7XJ4','p_QDP2930TBG','p_QDP2930TBE','p_F08ZZEE267','p_SZSJBBP8DH','p_FYHSR9Y1B5']:
+    sub=df[df.prototype_id==pid]
+    print(pid, sub.project.unique(), sub.kind.unique())
+    print(sub[['test','kind','value','measured_by']].groupby(['test','kind']).value.agg(['mean','count']).to_string())
+    cols=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+    print(sub[cols].dropna().drop_duplicates().to_string())

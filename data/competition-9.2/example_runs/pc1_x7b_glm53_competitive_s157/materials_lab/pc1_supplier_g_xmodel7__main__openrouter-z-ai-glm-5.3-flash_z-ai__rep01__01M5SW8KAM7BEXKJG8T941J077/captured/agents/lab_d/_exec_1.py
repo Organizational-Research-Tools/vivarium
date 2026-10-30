@@ -1,0 +1,7 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+recs = ['p_C9N9H45C3W','p_C9N9H45C42','p_B45PPFWV3C','p_GKYT9SC1F0','p_GKYT9SC1ET','p_2NQTN03YPS']
+cols = [c for c in df.columns if c.startswith('module') or 'recipe' in c.lower()]
+print(df.columns.tolist()[:40])
+sub = df[df['prototype_id'].isin(recs)]
+print(sub.to_string())

@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -1036,3 +1036,15 @@
+ r_F2KGB6MGMJ,exploratory,QP-9259,p_FF5QPYJ1FJ,heat,seal hold temperature,,78.88975,°C,lab_a,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,QE8,3XM,T6A,YX4,SU2
+ r_F2KGB6MGMK,exploratory,QP-9259,p_FF5QPYJ1FM,heat,seal hold temperature,,79.12850,°C,lab_a,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,YX4,SU2
+ r_F2KGB6MGMM,exploratory,QP-9259,p_FF5QPYJ1FP,heat,seal hold temperature,,79.47975,°C,lab_a,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,2JH,3XM,T6A,YX4,SU2
++r_M2J9569M07,qualification,QP-9219,p_453X3X5YYZ,heat,seal hold temperature,0,77.99500,°C,lab_a,lab_e,SQ8,RK7,YC8,S7U,EB7,4CW,H9M,8KZ,3XM,UX3,JE5,SU2
++r_M2J9569M08,qualification,QP-9219,p_453X3X5YYZ,heat,seal hold temperature,1,78.03100,°C,lab_a,lab_e,SQ8,RK7,YC8,S7U,EB7,4CW,H9M,8KZ,3XM,UX3,JE5,SU2
++r_M2J9569M09,qualification,QP-9219,p_453X3X5YYZ,heat,seal hold temperature,2,77.93900,°C,lab_a,lab_e,SQ8,RK7,YC8,S7U,EB7,4CW,H9M,8KZ,3XM,UX3,JE5,SU2
++r_M2J9569M0A,qualification,QP-9219,p_453X3X5YYZ,heat,seal hold temperature,3,77.52625,°C,lab_a,lab_e,SQ8,RK7,YC8,S7U,EB7,4CW,H9M,8KZ,3XM,UX3,JE5,SU2
++r_M2J9569M0B,qualification,QP-9219,p_453X3X5YYZ,heat,seal hold temperature,4,77.70750,°C,lab_a,lab_e,SQ8,RK7,YC8,S7U,EB7,4CW,H9M,8KZ,3XM,UX3,JE5,SU2
++r_M2J9569M0C,qualification,QP-9219,p_453X3X5YYZ,heat,seal hold temperature,5,77.79625,°C,lab_a,lab_e,SQ8,RK7,YC8,S7U,EB7,4CW,H9M,8KZ,3XM,UX3,JE5,SU2
++r_M2J9569M0D,qualification,QP-9219,p_453X3X5YZ1,heat,seal hold temperature,0,77.90575,°C,lab_a,lab_e,,,,,,,,,,,,
++r_M2J9569M0E,qualification,QP-9219,p_453X3X5YZ1,heat,seal hold temperature,1,78.06225,°C,lab_a,lab_e,,,,,,,,,,,,
++r_M2J9569M0F,qualification,QP-9219,p_453X3X5YZ1,heat,seal hold temperature,2,78.02575,°C,lab_a,lab_e,,,,,,,,,,,,
++r_M2J9569M0G,qualification,QP-9219,p_453X3X5YZ1,heat,seal hold temperature,3,77.52725,°C,lab_a,lab_e,,,,,,,,,,,,
++r_M2J9569M0H,qualification,QP-9219,p_453X3X5YZ1,heat,seal hold temperature,4,77.59750,°C,lab_a,lab_e,,,,,,,,,,,,
++r_M2J9569M0J,qualification,QP-9219,p_453X3X5YZ1,heat,seal hold temperature,5,77.74600,°C,lab_a,lab_e,,,,,,,,,,,,

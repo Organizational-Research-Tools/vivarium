@@ -1,0 +1,21 @@
+--- 
++++ 
+@@ -619,6 +619,18 @@
+ r_EJ9E99VHTA,exploratory,QP-1992,p_PRQGQX3F7D,water,wet strength retained,,77.4980,%,lab_c,lab_c,HP9,2YJ,J9B,Q3H,42D,2CK,5JK,9AH,V7P,84H,YS6,V8F
+ r_EJ9E99VHTB,exploratory,QP-1992,p_PRQGQX3F7D,water,wet strength retained,,76.9700,%,lab_c,lab_c,HP9,2YJ,J9B,Q3H,42D,2CK,5JK,9AH,V7P,84H,YS6,V8F
+ r_E28NMM59ZP,exploratory,QP-1992,p_PRQGQX3F7D,water,wet strength retained,,77.8816,%,lab_c,lab_c,HP9,2YJ,J9B,Q3H,42D,2CK,5JK,9AH,V7P,84H,YS6,V8F
++r_D3MEGXPSQG,qualification,QP-1992,p_E16M0W72XW,water,wet strength retained,0,78.9632,%,lab_f,lab_e,,,,,,,,,,,,
++r_D3MEGXPSQH,qualification,QP-1992,p_E16M0W72XW,water,wet strength retained,1,79.3512,%,lab_f,lab_e,,,,,,,,,,,,
++r_3ZZ7ZMSHWQ,qualification,QP-1992,p_E16M0W72XW,water,wet strength retained,2,79.2532,%,lab_f,lab_e,,,,,,,,,,,,
++r_3ZZ7ZMSHWR,qualification,QP-1992,p_E16M0W72XW,water,wet strength retained,3,79.4768,%,lab_f,lab_e,,,,,,,,,,,,
++r_3ZZ7ZMSHWS,qualification,QP-1992,p_E16M0W72XW,water,wet strength retained,4,79.4632,%,lab_f,lab_e,,,,,,,,,,,,
++r_3ZZ7ZMSHWT,qualification,QP-1992,p_E16M0W72XW,water,wet strength retained,5,79.9788,%,lab_f,lab_e,,,,,,,,,,,,
++r_BK522F504G,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,0,78.37075,°C,lab_a,lab_e,,,,,,,,,,,,
++r_BK522F504H,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,1,78.38225,°C,lab_a,lab_e,,,,,,,,,,,,
++r_BK522F504J,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,2,77.85075,°C,lab_a,lab_e,,,,,,,,,,,,
++r_BK522F504K,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,3,77.94000,°C,lab_a,lab_e,,,,,,,,,,,,
++r_BK522F504M,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,4,78.14050,°C,lab_a,lab_e,,,,,,,,,,,,
++r_BK522F504N,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,5,78.11975,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_FGRKMKYC0A,exploratory,QP-1992,p_Q188GWPX9G,water,wet strength retained,,78.1088,%,lab_c,lab_c,HP9,2YJ,J9B,Q3H,42D,2CK,5JK,9AH,V7P,84H,3Y7,9DA
+ r_FGRKMKYC0B,exploratory,QP-1992,p_Q188GWPX9G,water,wet strength retained,,78.3516,%,lab_c,lab_c,HP9,2YJ,J9B,Q3H,42D,2CK,5JK,9AH,V7P,84H,3Y7,9DA
+ r_FGRKMKYC0C,exploratory,QP-1992,p_Q188GWPX9G,water,wet strength retained,,78.2328,%,lab_c,lab_c,HP9,2YJ,J9B,Q3H,42D,2CK,5JK,9AH,V7P,84H,3Y7,9DA

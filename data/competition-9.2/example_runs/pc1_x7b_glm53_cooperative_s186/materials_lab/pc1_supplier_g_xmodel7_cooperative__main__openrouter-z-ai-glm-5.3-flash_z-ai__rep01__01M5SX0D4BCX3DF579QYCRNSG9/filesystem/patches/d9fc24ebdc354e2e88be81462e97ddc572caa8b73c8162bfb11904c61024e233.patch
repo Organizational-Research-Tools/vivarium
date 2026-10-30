@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -0,0 +1,9 @@
++import pandas as pd
++d = pd.read_csv("records.csv")
++tmap = {"seal hold temperature":"heat","edge crush resistance":"strength","wet strength retained":"water"}
++d["t"]=d.test.map(tmap)
++e = d[d.kind=="exploratory"]
++ids = ["p_HM0GYQGX10","p_1MPK0W998K","p_6KEZMCMXNC","p_6KEZMCMXNR","p_E16M0W72XW","p_1MPK0W998S","p_1MPK0W9993","p_SGZ2NKV5K4","p_P5WACE5V1Z","p_795Q00MQ7M","p_795Q00MQ7P","p_JBFVJG99H5","p_SQZS81JT7Y"]
++for i in ids:
++    g = e[e.prototype_id==i]
++    print(i, {t:(round(g[g.t==t].value.mean(),2), g[g.t==t].shape[0]) for t in ["heat","strength","water"] if g[g.t==t].shape[0]})

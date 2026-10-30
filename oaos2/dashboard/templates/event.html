@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import help, gh, howto %}
+{% block title %}event {{ e.sequence_number }} — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / <a href="/run/{{ run_ref }}/trace">trace</a> / {{ e.sequence_number }}</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "trace") }}
+
+{% call howto() %}
+  {% if raw_digest %}<p><strong>Raw payload.</strong> The retained provider response behind the rendered text. Its presence does not establish that the response is correct or reveals all internal computation.</p>{% endif %}
+{% endcall %}
+
+<div class="pager">
+  {% if prev_e %}<a href="/run/{{ run_ref }}/event/{{ prev_e.event_id }}" title="{{ prev_e.event_class }}">← [{{ prev_e.sequence_number }}]</a>{% endif %}
+  <h1 style="font-size:18px; margin:0.25rem 0">
+    <code>{{ e.event_class }}</code> <span class="dim">seq {{ e.sequence_number }}</span>
+  </h1>
+  {% if next_e %}<a href="/run/{{ run_ref }}/event/{{ next_e.event_id }}" title="{{ next_e.event_class }}">[{{ next_e.sequence_number }}] →</a>{% endif %}
+</div>
+<p style="margin:0 0 0.5rem" class="dim">{{ summary or "" }}</p>
+
+<div class="card" style="padding:0.5rem 1rem">
+  <div style="display:flex; flex-wrap:wrap; gap:0.5rem 1rem; align-items:baseline">
+    <code id="cite" style="overflow-wrap:anywhere">{{ citation }}</code>
+    <button type="button" data-copy="#cite" title="copy the citation line — resolvable later with scripts/cite.py, no server needed">copy citation</button>
+    <a href="/run/{{ run_ref }}/cite/{{ e.event_id }}" title="the citation as plain text">txt</a>
+    {% if day is not none %}<span class="dim">day {{ day }}</span>{% endif %}
+    <span class="dim">{{ cell }}</span>
+  </div>
+  <details style="margin-top:0.35rem">
+    <summary class="dim">export excerpt (quote + citation, markdown)</summary>
+    <form method="get" action="/run/{{ run_ref }}/cite/{{ e.event_id }}" class="filters" style="margin-top:0.4rem" target="_blank">
+      <textarea name="quote" rows="3" style="width:100%" placeholder="paste the passage you are quoting (verbatim — the checker verifies it against the archive)">{{ (notable[0][1] if notable else "")[:600] }}</textarea>
+      <input type="text" name="note" placeholder="your note (never key text)" size="50">
+      <button type="submit">excerpt →</button>
+    </form>
+  </details>
+</div>
+
+{% for label, text in notable %}
+<div class="card">
+  <h2>{{ label }}</h2>
+  <div style="white-space:pre-wrap">{{ text }}</div>
+</div>
+{% endfor %}
+
+<div class="grid">
+  <div class="card">
+    <h2>{{ help("Envelope", "The bookkeeping every event carries: who, when (by order), which stage, who could see it") }}</h2>
+    <dl class="kv">
+      <dt>{{ help("event_id", "The event's permanent unique id — the citable anchor; this page's address uses it") }}</dt><dd><code>{{ e.event_id }}</code></dd>
+      <dt>{{ gh("seq", "sequence") }}</dt><dd>{{ e.sequence_number }}</dd>
+      <dt>{{ gh("agents", "agent") }}</dt><dd>{{ e.agent_id or "—" }}</dd>
+      <dt>{{ help("role", "The organizational role this agent was playing (e.g. analyst_health, orchestrator)") }}</dt><dd>{{ e.role_id or "—" }}</dd>
+      <dt>{{ help("turn", "One agent work cycle: the agent looks at its situation, thinks, and acts. Click to see every event of this turn.") }}</dt><dd>{% if e.turn_id %}<a href="/run/{{ run_ref }}/trace?view=full&turn={{ e.turn_id }}">{{ e.turn_id }}</a>{% else %}—{% endif %}</dd>
+      <dt>{{ help("session", "The agent's continuous working session; a new session starts if the agent is resumed") }}</dt><dd>{{ e.session_id or "—" }}</dd>
+      <dt>{{ help("model_call", "Ties this event to the specific model request that produced it") }}</dt><dd>{{ e.model_call_id or "—" }}</dd>
+      <dt>{{ help("phase", "Which stage of the run this happened in: setup, execution (the actual work), closure (scoring/teardown), or infrastructure") }}</dt><dd>{{ e.phase_class }} / {{ e.phase_name }}</dd>
+      <dt>{{ gh("audience") }}</dt><dd>{{ e.audience }}</dd>
+      <dt>{{ gh("channel") }}</dt><dd>{{ e.channel }}</dd>
+      <dt>timestamp</dt><dd>{{ e.timestamp }} <span class="dim">(advisory — order is sequence)</span></dd>
+      <dt>{{ gh("schema") }}</dt><dd>{{ e.schema_version }}</dd>
+      {% if raw_digest %}<dt>raw payload</dt><dd><a href="/run/{{ run_ref }}/rawpayload/{{ raw_digest }}"><code>{{ raw_digest[:16] }}…</code></a></dd>{% endif %}
+    </dl>
+  </div>
+
+  <div class="card" style="min-width:0; overflow-x:auto">
+    <h2>{{ gh("causality", "Recorded event links") }}</h2>
+    <dl class="kv">
+      <dt>caused by</dt>
+      <dd>{% if parents %}{% for p, s in parents %}
+        <div><a href="/run/{{ run_ref }}/event/{{ p.event_id }}">[{{ p.sequence_number }}] <code>{{ p.event_class }}</code></a> <span class="dim">{{ s }}</span></div>
+      {% endfor %}{% else %}—{% endif %}</dd>
+      <dt>children</dt>
+      <dd>{% if children %}{% for c, s in children %}
+        <div><a href="/run/{{ run_ref }}/event/{{ c.event_id }}">[{{ c.sequence_number }}] <code>{{ c.event_class }}</code></a> <span class="dim">{{ s }}</span></div>
+      {% endfor %}{% if n_children > children|length %}<div class="dim">… {{ n_children - children|length }} more</div>{% endif %}{% else %}—{% endif %}</dd>
+    </dl>
+    {% if ancestry %}
+    <details style="margin-top:0.5rem">
+      <summary>recorded predecessors ({{ ancestry|length }} events{% if ancestry|length == 200 %}, truncated{% endif %})</summary>
+      {% for depth, a, s in ancestry %}
+      {# A chain can be hundreds of steps deep: the indent stops growing and the step number carries the depth. #}
+      <div style="padding-left:{{ [depth, 8]|min * 0.6 }}rem; overflow-wrap:anywhere">
+        <span class="dim" title="steps back from this event">{{ depth }}</span>
+        <a href="/run/{{ run_ref }}/event/{{ a.event_id }}">[{{ a.sequence_number }}] <code>{{ a.event_class }}</code></a> <span class="dim">{{ s }}</span>
+      </div>
+      {% endfor %}
+    </details>
+    {% endif %}
+  </div>
+</div>
+
+<div class="card">
+  <h2>{{ help("Payload", "The event's recorded data, exactly as written at the time — nothing added, nothing removed") }}</h2>
+  <pre>{{ payload_json }}</pre>
+</div>
+
+<div class="card">
+  <h2>{{ gh("annotations", "Annotations") }}</h2>
+  {% for link in links %}
+  <p style="margin:0.2rem 0"><code>{{ link.namespace }}</code> / {{ link.label_schema_ref }}
+    {% if link.label and link.label.note %}— {{ link.label.note }}{% endif %}
+    {% if link.event_ids|length > 1 %}<span class="dim">(spans {{ link.event_ids|length }} events)</span>{% endif %}</p>
+  {% endfor %}
+  {% if schemas %}
+  <form method="post" action="/run/{{ run_ref }}/annotate" class="filters" style="margin-top:0.5rem">
+    <select name="label_schema_ref">
+      {% for s in schemas %}<option value="{{ s.label_schema_ref }}">{{ s.namespace }} / {{ s.label_schema_ref }} ({{ s.arity }})</option>{% endfor %}
+    </select>
+    <input type="text" name="event_ids" value="{{ e.event_id }}" size="30"
+           title="comma-separated event ids; a relational lens needs ≥2">
+    <input type="text" name="note" placeholder="note…" size="40">
+    <button type="submit">Code it</button>
+  </form>
+  {% else %}
+  <p class="dim">no label schemas defined yet — <a href="/annotations">create a lens</a> to start coding</p>
+  {% endif %}
+</div>
+
+{% endblock %}

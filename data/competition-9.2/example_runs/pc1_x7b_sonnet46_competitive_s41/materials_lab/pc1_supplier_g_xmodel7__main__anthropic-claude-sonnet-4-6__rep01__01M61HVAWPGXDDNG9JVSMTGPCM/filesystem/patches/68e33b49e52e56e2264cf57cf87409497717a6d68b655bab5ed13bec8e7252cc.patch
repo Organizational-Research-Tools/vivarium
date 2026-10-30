@@ -1,0 +1,60 @@
+--- 
++++ 
+@@ -0,0 +1,57 @@
++
++# Lab_e's recipe: P2G/GG7/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8
++# They claim heat=79.53, str=7.25 with GG7 → replacing GG7 with YX8/3HW gives heat~79.03, str~7.19, water~80.05
++
++# My QP-3473 data: p_YWF2FP1GRJ has P2G,GG7,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8 → water=80.85% 
++# This IS lab_e's recipe! And I have the water panel.
++# lab_e's heat/strength are from other labs.
++
++# Key differences between lab_e's proposal and mine:
++# lab_e: P2G/[non-GG7]/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8
++# My QP-3089 design: P2G/3HW/NN7/57T/LD3/L6C/WB3/P8G/H3F/ZW3/9FU/YV2
++
++# Lab_e says 8BB with X9F in QP-3473-A gives heat=79.53 WITH GG7
++# Without GG7: heat~79.03, well above threshold
++# So lab_e's base recipe would work!
++
++# BUT: I notice my QP-6843 data also uses 8BB but with H3F → heat=74.5 (bad)
++# Lab_e's recipe uses 8BB + X9F → heat 79.03 (good per their data)
++# This means PP3 (X9F vs H3F) matters A LOT for heat, not just binder!
++
++# Let me also check water: Lab_e's recipe uses DL8 joint + 4PE (AP3) + S2J (AP2)
++# p_YWF2FP1GRJ: S2J/4PE/DL8 → water 80.85% with GG7 → ~80.05% without GG7 (passes!)
++
++# CONCLUSION: Lab_e's recipe (non-GG7 version) should work!
++# But so should my targeted recipes.
++
++# Let me also verify my QP-7212 design is an improvement:
++# Current failing: P2G/YX8/NN7/5FE/S2J/4PE/4QB/VA8/N7N/ZW3/57U/G8Q → water=73.49 (57U bad)
++# My design:       P2G/YX8/NN7/5FE/S2J/4PE/4QB/VA8/N7N/ZW3/9FU/G8Q → change 57U→9FU
++# Expected water: ~79% based on analogous recipes with 9FU
++
++# CRITICAL INSIGHT: Lab_e's universal recipe could work for ALL projects!
++# Non-GG7 version: P2G/3HW/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8
++# Expected margins: heat~(79.03-77.50)/0.25=6.12 steps, str~5, water~(80.05-78.0)/0.4=5.12 steps
++# Weakest margin: ~5 steps! That's excellent.
++
++# I already HAVE water data for QP-3473 with this recipe (p_YWF2FP1GRJ, water=80.85%)
++# If lab_e/lab_b share heat/strength panels with me for QP-3473, I can submit that report!
++# OR: I focus on registering non-GG7 variants for the OTHER product lines where I don't have data
++
++# My 3 own designs remain valid for QP-3089, QP-7212, QP-6843
++# But lab_e's universal recipe (non-GG7) could ALSO work for those projects
++
++print("Lab_e's QP-3473-A recipe (non-GG7) expected performance:")
++print("  heat: ~79.03°C (threshold 77.50) → +6.1 steps ✓")
++print("  strength: ~7.19 kN/m (threshold 7.10) → +3.0 steps ✓") 
++print("  water: ~80.05% (threshold 78.0) → +5.1 steps ✓")
++print("  weakest margin: ~3.0 steps (very safe)")
++print()
++print("My QP-3089 design (P2G/3HW/NN7/57T/LD3/L6C/WB3/P8G/H3F/ZW3/9FU/YV2) expected:")
++print("  heat: ~78.78°C → +5.1 steps ✓")
++print("  strength: ~7.19 kN/m → +3.0 steps ✓") 
++print("  water: ~79.25% → +3.1 steps ✓")
++print("  weakest margin: ~3.1 steps")
++print()
++print("Both approaches viable. Lab_e's universal recipe has better margins overall.")
++print("I already have water panel p_YWF2FP1GRJ for QP-3473 with lab_e's recipe.")

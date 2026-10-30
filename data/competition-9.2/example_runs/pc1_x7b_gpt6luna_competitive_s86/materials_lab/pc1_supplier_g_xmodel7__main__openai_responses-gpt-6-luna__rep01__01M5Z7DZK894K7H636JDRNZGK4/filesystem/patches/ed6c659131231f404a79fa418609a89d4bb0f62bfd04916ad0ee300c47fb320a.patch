@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -0,0 +1,4 @@
++import pandas as pd
++r=pd.read_csv('records.csv')
++pid='p_8E0645AKSJ'; x=r[r.prototype_id.eq(pid)]
++print(x[['project','test','kind','value','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].head(1).to_dict('records'))

@@ -1,0 +1,114 @@
+{
+  "experiment_id": "pc1_x7b_glm53_competitive_s157",
+  "extensions": {
+    "apparatus_sha256": "sha256:0b48625ebf21d4ba11e6693e764e40bc627e8a2685d41af9d032892daf0235d6",
+    "cache_breakpoints": [
+      "system",
+      "tools",
+      "initial_user",
+      "conversation_tail"
+    ],
+    "cache_policy_fingerprint": "dfd8d9228b9fd1159de8fe57d5f83a9c00f0fa6a55036d221a92c4a80d7af94b:c28dc33c84961b3b9f489f306bb512a8693dcbb86c089726829ce9ea720eaec4",
+    "cache_ttl_overrides": {
+      "initial_user": "1h",
+      "system": "1h",
+      "tools": "1h"
+    },
+    "cap_output_tokens": null,
+    "cap_usd": 7.0,
+    "clock_spec": null,
+    "contract_profile": "six_contest",
+    "decomposed_contract": false,
+    "deliberation_cache_breakpoints": [
+      "system",
+      "transcript_tail"
+    ],
+    "deliberation_cache_ttl_overrides": {
+      "system": "1h"
+    },
+    "design_ref": null,
+    "design_sha256": null,
+    "difficulty": "main",
+    "environment_driver": null,
+    "environment_schedule_sha256": null,
+    "environment_schedule_variant": null,
+    "evaluator_source_sha256s": {
+      "materials_lab.credit_score": "sha256:b9449382a4ed76e181b6db74cb3e0d53f902ffb354a9e81ff46bae0b6d903b29"
+    },
+    "final_reserve_tokens": 0,
+    "hidden_reference_sha256s": {},
+    "integrator_role": null,
+    "missing_optional_refs": [],
+    "model_heterogeneous": false,
+    "model_ref": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "n_agents": 6,
+    "organization_ref": "library/organizations/pc1_supplier_g_xmodel7.yaml",
+    "organization_sha256": "sha256:6a067e53bbabda1f878402abafe22c0b32904bc0ccfa454bb60841ead9bb0eeb",
+    "parity_basis": "usd",
+    "parity_regime": null,
+    "preregistration_ref": "docs/experiments/pc1_prereg_9_2.md",
+    "preregistration_sha256": "sha256:0ab8a4c997edcab69d7e3a547bbc58e9a1f2482cdee8c12c998adff73c6b8c80",
+    "pricing_table_hash": "ac5e263e885de0bfe1ef94bcb1173f4d3f200c166a07d8b44484e670328f917d",
+    "realized_reasoning_kind": {
+      "lab_a": "summary",
+      "lab_b": "summary",
+      "lab_c": "summary",
+      "lab_d": "summary",
+      "lab_e": "summary",
+      "lab_f": "summary"
+    },
+    "reasoning_interleaved": true,
+    "reasoning_kind": "thinking",
+    "reference_sha256": null,
+    "research_setup_sha256": "sha256:8ed1df57ddcbe90346e686efac8451b370ae5d7dd466f263f2389b6f72427ce2",
+    "resolved_sweep_ref": null,
+    "resolved_sweep_sha256": null,
+    "retention_policy": {
+      "agent_view_snapshots": "full",
+      "extensions": {},
+      "file_changes": "full_patch",
+      "raw_payload_sample_rate": null,
+      "raw_provider_payloads": "keep_all",
+      "reasoning_content": "full"
+    },
+    "role_model_refs": {
+      "lab_a": "openrouter/z-ai/glm-5.3-flash@z-ai",
+      "lab_b": "openrouter/z-ai/glm-5.3-flash@z-ai",
+      "lab_c": "openrouter/z-ai/glm-5.3-flash@z-ai",
+      "lab_d": "openrouter/z-ai/glm-5.3-flash@z-ai",
+      "lab_e": "openrouter/z-ai/glm-5.3-flash@z-ai",
+      "lab_f": "openrouter/z-ai/glm-5.3-flash@z-ai"
+    },
+    "role_prompt_sha256s": {
+      "executor": "sha256:a37df0e9ac3cb05ac7ca430f0c68b316fccd8ad4ff9a1176cc570368dd79de70",
+      "lab": "sha256:32968d971cccb5acb8684dcdadd833145b54336eb26399ed7834a495be36201e",
+      "lab_association": "sha256:8ee7486c32f392f764f824f41687ce1cdd60177dbadbce38d5b3e3dd5c9788db",
+      "lab_association_x4": "sha256:e68ee288fb60dc7f62f851f889ad936eb8dddd30558ab8525224f13d8b2a3e92",
+      "lab_client": "sha256:fb23f319ecb628ce6c84524e190443be1db63ed1865004810a934cca1cab82fe",
+      "lab_contest": "sha256:83e241bf664945c1773239f0e4a63cd4ea995361471dd40bc12935a8e1946b1d",
+      "lab_institution": "sha256:aa352affc9163dcba30512bf1cf0c15313c61397c3d1ba4484c967f4d4961c3b",
+      "lab_program": "sha256:9d394f95c01247747c4ebd5ac65dd8e33e873721b0cc6e741f38fedcc3add088",
+      "lab_regulator": "sha256:593f4fef72640daf1463888c7b23271b3befc9393d20b1812f527099629fa434",
+      "lab_supplier": "sha256:304177fc7fc9ae7d4590914e9b508561dafd4f51396092e866b1f796b46134f7"
+    },
+    "source_code_sha256": "sha256:1f5692ad32c9386e7139d461e24405b7521ff5c072c5dc268b3361d21143d9c2",
+    "source_commit": "03ec1521f6f99e33b06c117fc60630edeec61b44",
+    "source_dirty": false,
+    "source_worktree_sha256": null,
+    "task_manifest_ref": "library/tasks/materials_lab/manifest.yaml",
+    "task_manifest_sha256": "sha256:7ee773e956f605790aa069539ce6e3277a1f2bcfd37ecdf7c143b966ec0b444b",
+    "visible_material_sha256s": {
+      "README.md": "sha256:4ba84920a87a45618e3da51295c43607093c2f6c2e50c6e26fb31da6ed8fe6bf"
+    }
+  },
+  "image_digest": "sha256:cd2be6b47a68354f8ce242d900e27b6b20ef53b17b8d53dc4f1f7a8ba6f0d15c",
+  "image_ref": "oaos2-science:py311",
+  "mode": "pilot",
+  "organization_id": "pc1_supplier_g_xmodel7",
+  "policy_hash": "906d405f31111b71802edd958bae926e1e4035438c60ed7f4ebade33f8713f4c",
+  "pricing_table_version": "2026-10-13",
+  "retention_policy_hash": "sha256:2fe460e6bf6cd7541a18c4c7ca2bcf22c237211eeb03074ec240066390f75521",
+  "run_id": "pc1_supplier_g_xmodel7__main__openrouter-z-ai-glm-5.3-flash_z-ai__rep01__01M5SW8KAM7BEXKJG8T941J077",
+  "schema_version": "2026-06-01.v1",
+  "task_pack_id": "materials_lab"
+}

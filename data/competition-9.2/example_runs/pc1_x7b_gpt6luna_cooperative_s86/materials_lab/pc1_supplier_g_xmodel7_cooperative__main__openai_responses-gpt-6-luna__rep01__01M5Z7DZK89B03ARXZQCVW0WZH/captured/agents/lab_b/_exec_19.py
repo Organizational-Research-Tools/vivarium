@@ -1,0 +1,6 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); z=x[(x.project=='QP-7092') & (x.instrument=='strength')].groupby('prototype_id').value.agg(['mean','count']).sort_values('mean',ascending=False)
+print(z.head(15).to_string()); print('\nAll high candidates compositions:')
+cols=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+for id in z.head(5).index:
+ r=x[x.prototype_id==id].iloc[0]; print(id,round(z.loc[id,'mean'],5),r[cols].tolist())

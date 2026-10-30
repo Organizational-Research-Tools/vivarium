@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); ids=['p_Q7PBN356CH','p_Q7PBN356CK','p_B2ZPADFHNT','p_B2ZPADFHNW','p_B2ZPADFHNY']
+for pid in ids:
+ z=x[x.prototype_id==pid]; print('\n',pid,z[['project','instrument','test','kind','value','measured_by']].to_string(index=False));

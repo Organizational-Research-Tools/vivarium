@@ -1,0 +1,4 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+prot=[p for p in df['prototype_id'].dropna().unique() if p.startswith('p_CWYD')]
+print(prot)

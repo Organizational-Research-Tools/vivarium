@@ -1,0 +1,5 @@
+
+vals = [81.0072, 81.0700, 80.1368, 80.3176, 80.2712, 80.7708]
+mean = sum(vals)/len(vals)
+margin = (mean - 78.0) / 0.4
+print(f"p_WHE7SQ87ZZ water mean: {mean:.4f}% — margin {margin:.2f} steps — {'PASSES' if mean >= 79.80 else 'FAILS'}")

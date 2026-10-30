@@ -1,0 +1,8 @@
+import pandas as pd
+d = pd.read_csv("records.csv")
+print(d.test.unique(), d.kind.unique())
+e = d[d.kind=="exploratory"]
+for proj,g in e.groupby("project"):
+    s = g.pivot_table(index="prototype_id", columns="test", values="value", aggfunc="max")
+    print(proj)
+    print(s.round(2).sort_values(["heat","strength","water"]).tail(8))

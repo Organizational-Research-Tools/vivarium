@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++print(df.columns.tolist())
++print(df[df['prototype_id'].isin(['p_VE7','p_VE9','p_CWYDQPVE7','p_CWYDQPVE9'])])
++# find columns for project
++for c in ['project','project_id','proj']:
++    if c in df.columns: print(c)
++print(df.head(2).to_string())

@@ -1,0 +1,26 @@
+--- 
++++ 
+@@ -0,0 +1,23 @@
++Q = {'TL4':1,'TU4':2,'YH6':3,'Y9V':1,'KX7':2,'27X':3,'X2P':2,'QE3':1,'6DD':3,'6UD':2,
++     'RB3':3,'8P4':3,'3JQ':1,'RF3':2,'X9Z':2,'3CV':3,'2WG':1,'5UV':2,'LR4':3,'A7P':2,'9B8':1,'BX9':2,
++     'P4U':2,'FA3':3,'G7L':1,'7MP':2,'W5T':3}
++names=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2',
++       'additive_package_3','process_profile_1','process_profile_2','process_profile_3',
++       'surface_treatment','joint_system','conditioning_step']
++
++def matches(A,B):  # full recipes (12 modules) equal?
++    return A==B
++
++# report triplets
++R = {
++ 'rep_ZPVV5PPJGX (QP-8864 lab_c)': ('p_5XVCC7PF44', ['r_MHY7FMXPRP_heat','?','?']),
++ 'rep_4MP142212W (QP-6820 lab_d)': ('p_7JX0SVYP0A', None),
++ 'rep_265R5WKPWX (QP-5653 lab_f)': ('p_J6ANSK2QP0', None),
++ 'rep_7GVATX9XPC (QP-1586 lab_c)': ('p_55NSKA6RFT', None),
++}
++print("steps: substitute per Q map; report-level margins recomputed with base thresholds")
++print("mean thresholds: heat 78.25? check lab_info; strength 7.2; water 78.0")
++# QP-8864 full recipes: need lab_d heat panel recipe vs lab_b strength panel recipe
++# lab_d heat receipt on p_5XVCC7PF44 -> same prototype => same recipe as lab_b's
++# lab_b strength on p_5XVCC7PF44 exists (r_MHY7FMXPRP, 7.27184 exploratory? and panel 7.21736)
++# So rep_ZPVV5PPJGX: all three panels on p_5XVCC7PF44? standing recipe by lab_c. Check.

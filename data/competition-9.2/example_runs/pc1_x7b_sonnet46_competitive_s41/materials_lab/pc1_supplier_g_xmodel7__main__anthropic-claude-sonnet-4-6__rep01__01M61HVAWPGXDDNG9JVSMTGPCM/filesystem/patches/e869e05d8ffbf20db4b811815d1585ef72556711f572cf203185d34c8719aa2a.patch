@@ -1,0 +1,24 @@
+--- 
++++ 
+@@ -0,0 +1,21 @@
++
++# Compute water panel means for just-measured prototypes
++import numpy as np
++
++results = {
++    'p_57M2N73XBG (QP-3089)': [79.5524, 79.7984, 78.9960, 78.9612, 79.1140, 79.2532],
++    'p_57M2N73XBJ (QP-3089)': [78.9764, 79.0436, 79.2768, 79.5544, 79.4044, 78.6852],
++    'p_93QRAZJ8FY (QP-7212)': [64.0884, 63.4052, 63.6752, 63.8796, 64.0432, 64.1524],
++    'p_93QRAZJ8G0 (QP-7212)': [63.6996, 63.9892, 64.2368, 64.1744, 63.6160, 63.5376],
++    'p_02A6NY9WNP (QP-3473)': [80.5232, 80.9856, 80.0120, 80.0996, 80.2540, 80.3744],
++    'p_02A6NY9WNR (QP-3473)': [80.2344, 80.6748, 79.6280, 80.1396, 80.0048, 80.2448],
++    'p_BZB62TCK52 (QP-7212)': [80.8480, 80.0164, 80.0832, 80.2576, 80.4476, 80.8384],
++}
++
++threshold = 79.80
++print("Water panel means vs revision C threshold (79.80%):")
++for name, vals in results.items():
++    mean = np.mean(vals)
++    margin = (mean - 78.0) / 0.4  # water margin in steps
++    status = "✓ PASSES" if mean >= threshold else "✗ FAILS"
++    print(f"  {name}: mean={mean:.4f}%  margin={margin:.2f} steps  {status}")

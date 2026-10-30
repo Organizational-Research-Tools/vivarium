@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++print(df.columns.tolist())
++d = df[df.iloc[:,0].astype(str).str.startswith(('r_38KSBY','r_FKJPYF','r_G1E375'))]
++print(d.to_string())

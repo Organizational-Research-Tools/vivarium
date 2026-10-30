@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "oaos2"
+version = "0.1.0"
+description = "Vivarium: a platform for studying AI organizations"
+requires-python = ">=3.11"
+readme = "README.md"
+license = { text = "MIT (code); CC-BY-4.0 (documentation, materials and data)" }
+authors = [{ name = "The Vivarium authors" }]
+dependencies = [
+    "pydantic>=2.6",
+    "pyyaml>=6",  # declarative config (task/org/experiment manifests in library/)
+    "numpy>=2.0",  # imported by the materials-lab task (landscape, records, pool); undeclared until October 10, 2026
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "httpx>=0.27,<1",  # FastAPI/Starlette TestClient used by dashboard tests
+]
+# Real provider runs (paper_replication etc.). The core foundation imports without these.
+live = [
+    "anthropic>=0.40",
+    "python-dotenv>=1.0",
+    "openai>=3.33",
+]
+# The local read-side dashboard (docs/DASHBOARD.md). store/cache import without these.
+dashboard = [
+    "fastapi>=0.110",
+    "jinja2>=3.1",
+    "python-multipart>=0.0.9",  # starlette request.form() (annotate/launch posts)
+    "uvicorn>=0.29",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["oaos2"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

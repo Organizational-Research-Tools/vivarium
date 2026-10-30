@@ -1,0 +1,543 @@
+# File-lineage transcript
+
+## <unknown>
+[  446] lab_f      file.write             —→—
+[  456] lab_e      file.write             —→—
+[  468] lab_b      file.write             —→—
+[  476] lab_a      file.write             —→—
+[  486] lab_d      file.write             —→—
+[  496] lab_c      file.write             —→—
+[  506] lab_d      file.write             —→—
+[  517] lab_c      file.write             —→—
+[  519] lab_c      file.write             —→—
+[  609] lab_b      file.write             —→—
+[  611] lab_b      file.write             —→—
+[  625] lab_e      file.write             —→—
+[  688] lab_b      file.write             —→—
+[  699] lab_a      file.write             —→—
+[  710] lab_c      file.write             —→—
+[  804] lab_d      file.write             —→—
+[  815] lab_c      file.write             —→—
+[  835] lab_e      file.write             —→—
+[  845] lab_d      file.write             —→—
+[  913] lab_b      file.write             —→—
+[  932] lab_a      file.write             —→—
+[  942] lab_d      file.write             —→—
+[  963] lab_b      file.write             —→—
+[ 1033] lab_b      file.write             —→—
+[ 1043] lab_d      file.write             —→—
+[ 1054] lab_d      file.write             —→—
+[ 1105] lab_d      file.write             —→—
+[ 1125] lab_f      file.write             —→—
+[ 1129] lab_f      file.write             —→—
+[ 1139] lab_c      file.write             —→—
+[ 1162] lab_a      file.write             —→—
+[ 1185] lab_c      file.write             —→—
+[ 1197] lab_f      file.write             —→—
+[ 1261] lab_b      file.write             —→—
+[ 1272] lab_d      file.write             —→—
+[ 1286] lab_a      file.write             —→—
+[ 1296] lab_c      file.write             —→—
+[ 1356] lab_c      file.write             —→—
+[ 1414] lab_d      file.write             —→—
+[ 1433] lab_e      file.write             —→—
+[ 1444] lab_a      file.write             —→—
+[ 1458] lab_e      file.write             —→—
+[ 1483] lab_e      file.write             —→—
+[ 1512] lab_d      file.write             —→—
+[ 1523] lab_e      file.write             —→—
+[ 1579] lab_e      file.write             —→—
+[ 1616] lab_a      file.write             —→—
+[ 1637] lab_f      file.write             —→—
+[ 1697] lab_b      file.write             —→—
+[ 1826] lab_c      file.write             —→—
+[ 1837] lab_e      file.write             —→—
+[ 1865] lab_b      file.write             —→—
+[ 1889] lab_a      file.write             —→—
+[ 1946] lab_a      file.write             —→—
+[ 1962] lab_c      file.write             —→—
+[ 1990] lab_e      file.write             —→—
+[ 2004] lab_f      file.write             —→—
+[ 2005] lab_f      file.write             —→—
+[ 2074] lab_c      file.write             —→—
+[ 2130] lab_d      file.write             —→—
+[ 2150] lab_f      file.write             —→—
+[ 2208] lab_b      file.write             —→—
+[ 2218] lab_f      file.write             —→—
+[ 2224] lab_d      file.write             —→—
+[ 2241] lab_b      file.write             —→—
+[ 2251] lab_a      file.write             —→—
+[ 2296] lab_e      file.write             —→—
+[ 2307] lab_b      file.write             —→—
+[ 2352] lab_c      file.write             —→—
+[ 2363] lab_e      file.write             —→—
+[ 2407] lab_d      file.write             —→—
+[ 2450] lab_c      file.write             —→—
+[ 2572] lab_d      file.write             —→—
+[ 2577] lab_c      file.write             —→—
+[ 2605] lab_f      file.write             —→—
+[ 2624] lab_a      file.write             —→—
+[ 2635] lab_f      file.write             —→—
+[ 2723] lab_a      file.write             —→—
+[ 2737] lab_c      file.write             —→—
+[ 2772] lab_e      file.write             —→—
+[ 2796] lab_f      file.write             —→—
+[ 2817] lab_a      file.write             —→—
+[ 2837] lab_c      file.write             —→—
+[ 2865] lab_f      file.write             —→—
+[ 2884] lab_b      file.write             —→—
+[ 2894] lab_a      file.write             —→—
+[ 2961] lab_d      file.write             —→—
+[ 3172] lab_e      file.write             —→—
+[ 3199] lab_b      file.write             —→—
+[ 3203] lab_b      file.write             —→—
+[ 3214] lab_d      file.write             —→—
+[ 3223] lab_b      file.write             —→—
+[ 3234] lab_b      file.write             —→—
+[ 3254] lab_b      file.write             —→—
+[ 3341] lab_c      file.write             —→—
+[ 3387] lab_a      file.write             —→—
+[ 3422] lab_e      file.write             —→—
+[ 3459] lab_d      file.write             —→—
+[ 3503] lab_c      file.write             —→—
+[ 3534] lab_b      file.write             —→—
+[ 3547] lab_a      file.write             —→—
+[ 3636] lab_c      file.write             —→—
+[ 3647] lab_b      file.write             —→—
+[ 3710] lab_e      file.write             —→—
+[ 3745] lab_e      file.write             —→—
+[ 3755] lab_e      file.write             —→—
+[ 3816] lab_e      file.write             —→—
+[ 3831] lab_e      file.write             —→—
+[ 3842] lab_e      file.write             —→—
+[ 3853] lab_e      file.write             —→—
+[ 3865] lab_f      file.write             —→—
+[ 3891] lab_e      file.write             —→—
+[ 3957] lab_b      file.write             —→—
+[ 4045] lab_d      file.write             —→—
+[ 4056] lab_d      file.write             —→—
+[ 4092] lab_e      file.write             —→—
+[ 4102] lab_e      file.write             —→—
+[ 4113] lab_e      file.write             —→—
+[ 4148] lab_e      file.write             —→—
+[ 4159] lab_e      file.write             —→—
+[ 4230] lab_b      file.write             —→—
+[ 4243] lab_c      file.write             —→—
+[ 4256] lab_f      file.write             —→—
+[ 4269] lab_a      file.write             —→—
+[ 4289] lab_b      file.write             —→—
+[ 4306] lab_a      file.write             —→—
+[ 4324] lab_b      file.write             —→—
+[ 4358] lab_e      file.write             —→—
+[ 4378] lab_a      file.write             —→—
+[ 4410] lab_d      file.write             —→—
+[ 4422] lab_b      file.write             —→—
+[ 4441] lab_a      file.write             —→—
+[ 4478] lab_a      file.write             —→—
+[ 4479] lab_a      file.write             —→—
+[ 4510] lab_c      file.write             —→—
+[ 4538] lab_d      file.write             —→—
+[ 4539] lab_d      file.write             —→—
+[ 4554] lab_e      file.write             —→—
+[ 4579] lab_d      file.write             —→—
+[ 4602] lab_b      file.write             —→—
+[ 4613] lab_b      file.write             —→—
+[ 4624] lab_b      file.write             —→—
+[ 4653] lab_c      file.write             —→—
+[ 4671] lab_d      file.write             —→—
+[ 4736] lab_a      file.write             —→—
+[ 4746] lab_f      file.write             —→—
+[ 4757] lab_a      file.write             —→—
+[ 4822] lab_b      file.write             —→—
+[ 4870] lab_d      file.write             —→—
+[ 4930] lab_c      file.write             —→—
+[ 4951] lab_d      file.write             —→—
+[ 5001] lab_a      file.write             —→—
+[ 5023] lab_e      file.write             —→—
+[ 5066] lab_f      file.write             —→—
+[ 5117] lab_a      file.write             —→—
+[ 5128] lab_a      file.write             —→—
+[ 5142] lab_e      file.write             —→—
+[ 5168] lab_b      file.write             —→—
+[ 5226] lab_c      file.write             —→—
+[ 5267] lab_d      file.write             —→—
+[ 5304] lab_c      file.write             —→—
+[ 5342] lab_e      file.write             —→—
+[ 5403] lab_c      file.write             —→—
+[ 5443] lab_d      file.write             —→—
+[ 5474] lab_b      file.write             —→—
+[ 5495] lab_a      file.write             —→—
+[ 5507] lab_b      file.write             —→—
+[ 5518] lab_a      file.write             —→—
+[ 5540] lab_f      file.write             —→—
+[ 5608] lab_d      file.write             —→—
+[ 5619] lab_b      file.write             —→—
+[ 5662] lab_b      file.write             —→—
+[ 5673] lab_f      file.write             —→—
+[ 5682] lab_c      file.write             —→—
+[ 5691] lab_a      file.write             —→—
+[ 5702] lab_a      file.write             —→—
+[ 5738] lab_d      file.write             —→—
+[ 5767] lab_f      file.write             —→—
+[ 5796] lab_d      file.write             —→—
+[ 5905] lab_c      file.write             —→—
+[ 5999] lab_f      file.write             —→—
+[ 6093] lab_f      file.write             —→—
+[ 6169] lab_b      file.write             —→—
+[ 6296] lab_d      file.write             —→—
+[ 6305] lab_c      file.write             —→—
+[ 6314] lab_f      file.write             —→—
+[ 6323] lab_a      file.write             —→—
+[ 6334] lab_a      file.write             —→—
+[ 6396] lab_b      file.write             —→—
+[ 6419] lab_c      file.write             —→—
+[ 6448] lab_b      file.write             —→—
+[ 6467] lab_c      file.write             —→—
+[ 6477] lab_e      file.write             —→—
+[ 6489] lab_d      file.write             —→—
+[ 6515] lab_b      file.write             —→—
+[ 6574] lab_f      file.write             —→—
+[ 6647] lab_f      file.write             —→—
+[ 6674] lab_b      file.write             —→—
+[ 6685] lab_a      file.write             —→—
+[ 6696] lab_b      file.write             —→—
+[ 6732] lab_b      file.write             —→—
+[ 6751] lab_c      file.write             —→—
+[ 6760] lab_f      file.write             —→—
+[ 6778] lab_b      file.write             —→—
+[ 6789] lab_b      file.write             —→—
+[ 6800] lab_b      file.write             —→—
+[ 6834] lab_b      file.write             —→—
+[ 6853] lab_f      file.write             —→—
+[ 6900] lab_b      file.write             —→—
+[ 6943] lab_b      file.write             —→—
+[ 6954] lab_f      file.write             —→—
+[ 6973] lab_b      file.write             —→—
+[ 6984] lab_b      file.write             —→—
+[ 6995] lab_b      file.write             —→—
+[ 7006] lab_b      file.write             —→—
+[ 7019] lab_b      file.write             —→—
+[ 7030] lab_b      file.write             —→—
+[ 7041] lab_b      file.write             —→—
+[ 7052] lab_b      file.write             —→—
+[ 7063] lab_b      file.write             —→—
+[ 7074] lab_b      file.write             —→—
+[ 7085] lab_b      file.write             —→—
+[ 7096] lab_b      file.write             —→—
+[ 7107] lab_b      file.write             —→—
+[ 7118] lab_b      file.write             —→—
+[ 7129] lab_b      file.write             —→—
+[ 7140] lab_b      file.write             —→—
+[ 7151] lab_b      file.write             —→—
+[ 7162] lab_b      file.write             —→—
+[ 7173] lab_b      file.write             —→—
+[ 7184] lab_b      file.write             —→—
+[ 7195] lab_b      file.write             —→—
+[ 7206] lab_b      file.write             —→—
+[ 7217] lab_b      file.write             —→—
+[ 7228] lab_b      file.write             —→—
+[ 7239] lab_b      file.write             —→—
+[ 7250] lab_b      file.write             —→—
+[ 7261] lab_b      file.write             —→—
+[ 7272] lab_b      file.write             —→—
+[ 7283] lab_b      file.write             —→—
+[ 7294] lab_b      file.write             —→—
+[ 7305] lab_b      file.write             —→—
+[ 7316] lab_b      file.write             —→—
+[ 7327] lab_b      file.write             —→—
+[ 7338] lab_b      file.write             —→—
+[ 7349] lab_b      file.write             —→—
+[ 7360] lab_b      file.write             —→—
+[ 7371] lab_b      file.write             —→—
+[ 7382] lab_b      file.write             —→—
+[ 7393] lab_b      file.write             —→—
+[ 7404] lab_b      file.write             —→—
+[ 7415] lab_b      file.write             —→—
+[ 7426] lab_b      file.write             —→—
+[ 7437] lab_b      file.write             —→—
+[ 7448] lab_b      file.write             —→—
+[ 7459] lab_b      file.write             —→—
+[ 7470] lab_b      file.write             —→—
+[ 7481] lab_b      file.write             —→—
+[ 7492] lab_b      file.write             —→—
+[ 7503] lab_b      file.write             —→—
+[ 7514] lab_b      file.write             —→—
+[ 7525] lab_b      file.write             —→—
+[ 7536] lab_b      file.write             —→—
+[ 7547] lab_b      file.write             —→—
+[ 7558] lab_b      file.write             —→—
+[ 7569] lab_b      file.write             —→—
+[ 7580] lab_b      file.write             —→—
+[ 7591] lab_b      file.write             —→—
+[ 7602] lab_b      file.write             —→—
+[ 7613] lab_b      file.write             —→—
+[ 7624] lab_b      file.write             —→—
+[ 7635] lab_b      file.write             —→—
+[ 7646] lab_b      file.write             —→—
+[ 7657] lab_b      file.write             —→—
+[ 7668] lab_b      file.write             —→—
+[ 7679] lab_b      file.write             —→—
+[ 7690] lab_b      file.write             —→—
+[ 7701] lab_b      file.write             —→—
+[ 7712] lab_b      file.write             —→—
+[ 7723] lab_b      file.write             —→—
+[ 7734] lab_b      file.write             —→—
+[ 7745] lab_b      file.write             —→—
+[ 7756] lab_b      file.write             —→—
+[ 7767] lab_b      file.write             —→—
+[ 7778] lab_b      file.write             —→—
+[ 7789] lab_b      file.write             —→—
+[ 7800] lab_b      file.write             —→—
+[ 7811] lab_b      file.write             —→—
+[ 7822] lab_b      file.write             —→—
+[ 7833] lab_b      file.write             —→—
+[ 7844] lab_b      file.write             —→—
+[ 7859] lab_b      file.write             —→—
+[ 7870] lab_b      file.write             —→—
+[ 7887] lab_f      file.write             —→—
+[ 7927] lab_d      file.write             —→—
+[ 7928] lab_d      file.write             —→—
+[ 7939] lab_d      file.write             —→—
+[ 8064] lab_f      file.write             —→—
+[ 8087] lab_c      file.write             —→—
+[ 8095] lab_e      file.write             —→—
+[ 8122] lab_d      file.write             —→—
+[ 8142] lab_b      file.write             —→—
+[ 8200] lab_d      file.write             —→—
+[ 8211] lab_c      file.write             —→—
+[ 8271] lab_a      file.write             —→—
+[ 8282] lab_e      file.write             —→—
+[ 8335] lab_c      file.write             —→—
+[ 8348] lab_f      file.write             —→—
+[ 8357] lab_d      file.write             —→—
+[ 8368] lab_e      file.write             —→—
+[ 8378] lab_e      file.write             —→—
+[ 8467] lab_f      file.write             —→—
+[ 8502] lab_c      file.write             —→—
+[ 8547] lab_f      file.write             —→—
+[ 8574] lab_e      file.write             —→—
+[ 8581] lab_d      file.write             —→—
+[ 8600] lab_a      file.write             —→—
+[ 8619] lab_b      file.write             —→—
+[ 8623] lab_b      file.write             —→—
+[ 8695] lab_b      file.write             —→—
+[ 8794] lab_a      file.write             —→—
+[ 8805] lab_a      file.write             —→—
+[ 8865] lab_c      file.write             —→—
+[ 8880] lab_f      file.write             —→—
+[ 8896] lab_a      file.write             —→—
+[ 8936] lab_e      file.write             —→—
+[ 8950] lab_d      file.write             —→—
+[ 8961] lab_f      file.write             —→—
+[ 8972] lab_a      file.write             —→—
+[ 8994] lab_e      file.write             —→—
+[ 9005] lab_f      file.write             —→—
+[ 9191] lab_d      file.write             —→—
+[ 9202] lab_f      file.write             —→—
+[ 9213] lab_c      file.write             —→—
+[ 9236] lab_d      file.write             —→—
+[ 9266] lab_a      file.write             —→—
+[ 9277] lab_b      file.write             —→—
+[ 9324] lab_b      file.write             —→—
+[ 9337] lab_c      file.write             —→—
+[ 9349] lab_a      file.write             —→—
+[ 9360] lab_e      file.write             —→—
+[ 9371] lab_f      file.write             —→—
+[ 9382] lab_e      file.write             —→—
+[ 9415] lab_d      file.write             —→—
+[ 9426] lab_b      file.write             —→—
+[ 9471] lab_f      file.write             —→—
+[ 9506] lab_d      file.write             —→—
+[ 9517] lab_a      file.write             —→—
+[ 9554] lab_e      file.write             —→—
+[ 9597] lab_a      file.write             —→—
+[ 9608] lab_b      file.write             —→—
+[ 9691] lab_d      file.write             —→—
+[ 9716] lab_f      file.write             —→—
+[ 9726] lab_a      file.write             —→—
+[ 9752] lab_d      file.write             —→—
+[ 9785] lab_c      file.write             —→—
+[ 9902] lab_a      file.write             —→—
+[ 9928] lab_e      file.write             —→—
+[ 9950] lab_f      file.write             —→—
+[ 9964] lab_a      file.write             —→—
+[ 9975] lab_a      file.write             —→—
+[10025] lab_b      file.write             —→—
+[10054] lab_d      file.write             —→—
+[10080] lab_e      file.write             —→—
+[10129] lab_a      file.write             —→—
+[10159] lab_f      file.write             —→—
+[10170] lab_e      file.write             —→—
+[10181] lab_e      file.write             —→—
+[10192] lab_d      file.write             —→—
+[10203] lab_f      file.write             —→—
+[10220] lab_e      file.write             —→—
+[10231] lab_f      file.write             —→—
+[10274] lab_b      file.write             —→—
+[10284] lab_b      file.write             —→—
+[10310] lab_d      file.write             —→—
+[10360] lab_c      file.write             —→—
+[10377] lab_d      file.write             —→—
+[10400] lab_e      file.write             —→—
+[10411] lab_c      file.write             —→—
+[10429] lab_b      file.write             —→—
+[10455] lab_b      file.write             —→—
+[10518] lab_b      file.write             —→—
+[10565] lab_a      file.write             —→—
+[10585] lab_b      file.write             —→—
+[10597] lab_a      file.write             —→—
+[10647] lab_d      file.write             —→—
+[10706] lab_d      file.write             —→—
+[10726] lab_b      file.write             —→—
+[10796] lab_a      file.write             —→—
+[10807] lab_d      file.write             —→—
+[10859] lab_b      file.write             —→—
+[10873] lab_f      file.write             —→—
+[10886] lab_a      file.write             —→—
+[10909] lab_e      file.write             —→—
+[10940] lab_f      file.write             —→—
+[10950] lab_d      file.write             —→—
+[10951] lab_d      file.write             —→—
+[10963] lab_b      file.write             —→—
+[10973] lab_d      file.write             —→—
+[10985] lab_e      file.write             —→—
+[11009] lab_c      file.write             —→—
+[11050] lab_b      file.write             —→—
+[11111] lab_a      file.write             —→—
+[11126] lab_c      file.write             —→—
+[11151] lab_d      file.write             —→—
+[11157] lab_f      file.write             —→—
+[11184] lab_a      file.write             —→—
+[11198] lab_b      file.write             —→—
+[11277] lab_e      file.write             —→—
+[11308] lab_a      file.write             —→—
+[11319] lab_b      file.write             —→—
+[11332] lab_a      file.write             —→—
+[11344] lab_b      file.write             —→—
+[11424] lab_c      file.write             —→—
+[11511] lab_d      file.write             —→—
+[11539] lab_b      file.write             —→—
+[11643] lab_b      file.write             —→—
+[11681] lab_d      file.write             —→—
+[11682] lab_d      file.write             —→—
+[11702] lab_d      file.write             —→—
+[11760] lab_a      file.write             —→—
+[11771] lab_c      file.write             —→—
+[11782] lab_f      file.write             —→—
+[11793] lab_a      file.write             —→—
+[11803] lab_d      file.write             —→—
+[11871] lab_b      file.write             —→—
+[11891] lab_d      file.write             —→—
+[11929] lab_a      file.write             —→—
+[11970] lab_a      file.write             —→—
+[11974] lab_a      file.write             —→—
+[11985] lab_b      file.write             —→—
+[12027] lab_d      file.write             —→—
+[12153] lab_d      file.write             —→—
+[12209] lab_a      file.write             —→—
+[12219] lab_d      file.write             —→—
+[12243] lab_a      file.write             —→—
+[12362] lab_d      file.write             —→—
+[12531] lab_a      file.write             —→—
+[12591] lab_e      file.write             —→—
+[12605] lab_a      file.write             —→—
+[12628] lab_b      file.write             —→—
+[12690] lab_f      file.write             —→—
+[12739] lab_a      file.write             —→—
+[12783] lab_a      file.write             —→—
+[12794] lab_d      file.write             —→—
+[12831] lab_c      file.write             —→—
+[12880] lab_e      file.write             —→—
+[12933] lab_d      file.write             —→—
+[12942] lab_a      file.write             —→—
+[13012] lab_c      file.write             —→—
+[13060] lab_c      file.write             —→—
+[13073] lab_a      file.write             —→—
+[13115] lab_f      file.write             —→—
+[13159] lab_e      file.write             —→—
+[13170] lab_b      file.write             —→—
+[13181] lab_d      file.write             —→—
+[13194] lab_f      file.write             —→—
+[13218] lab_a      file.write             —→—
+[13312] lab_e      file.write             —→—
+[13323] lab_c      file.write             —→—
+[13357] lab_b      file.write             —→—
+[13376] lab_a      file.write             —→—
+[13541] lab_c      file.write             —→—
+[13542] lab_c      file.write             —→—
+[13595] lab_c      file.write             —→—
+[13618] lab_b      file.write             —→—
+[13662] lab_a      file.write             —→—
+[13663] lab_a      file.write             —→—
+[13674] lab_b      file.write             —→—
+[13675] lab_b      file.write             —→—
+[13707] lab_e      file.write             —→—
+[13719] lab_e      file.write             —→—
+[13724] lab_b      file.write             —→—
+[13741] lab_e      file.write             —→—
+[13770] lab_e      file.write             —→—
+[13781] lab_b      file.write             —→—
+[13815] lab_b      file.write             —→—
+[13850] lab_f      file.write             —→—
+[13883] lab_d      file.write             —→—
+[13974] lab_e      file.write             —→—
+[13995] lab_a      file.write             —→—
+[14046] lab_e      file.write             —→—
+[14059] lab_c      file.write             —→—
+[14070] lab_a      file.write             —→—
+[14096] lab_b      file.write             —→—
+[14138] lab_d      file.write             —→—
+[14161] lab_a      file.write             —→—
+[14162] lab_a      file.write             —→—
+[14195] lab_f      file.write             —→—
+[14211] lab_a      file.write             —→—
+[14235] lab_d      file.write             —→—
+[14236] lab_d      file.write             —→—
+[14248] lab_b      file.write             —→—
+[14305] lab_a      file.write             —→—
+[14316] lab_b      file.write             —→—
+[14327] lab_f      file.write             —→—
+[14338] lab_d      file.write             —→—
+[14359] lab_e      file.write             —→—
+[14390] lab_a      file.write             —→—
+[14450] lab_b      file.write             —→—
+[14473] lab_a      file.write             —→—
+[14486] lab_c      file.write             —→—
+[14574] lab_a      file.write             —→—
+[14661] lab_d      file.write             —→—
+[14694] lab_a      file.write             —→—
+[14714] lab_c      file.write             —→—
+[14727] lab_f      file.write             —→—
+[14739] lab_d      file.write             —→—
+[14780] lab_c      file.write             —→—
+[14801] lab_a      file.write             —→—
+[14820] lab_b      file.write             —→—
+[14846] lab_b      file.write             —→—
+[14890] lab_a      file.write             —→—
+[14899] lab_e      file.write             —→—
+[14917] lab_b      file.write             —→—
+[14987] lab_a      file.write             —→—
+[15023] lab_c      file.write             —→—
+[15232] lab_f      file.write             —→—
+[15280] lab_c      file.write             —→—
+[15289] lab_e      file.write             —→—
+[15312] lab_d      file.write             —→—
+[15349] lab_c      file.write             —→—
+[15549] lab_b      file.write             —→—
+[15560] lab_c      file.write             —→—
+[15564] lab_c      file.write             —→—
+[15583] lab_b      file.write             —→—
+[15596] lab_f      file.write             —→—
+[15626] lab_a      file.write             —→—
+[15642] lab_c      file.write             —→—
+[15653] lab_d      file.write             —→—
+[15668] lab_e      file.write             —→—
+[15680] lab_a      file.write             —→—
+[15692] lab_d      file.write             —→—
+[15885] lab_b      file.write             —→—
+[15950] lab_a      file.write             —→—
+[16116] lab_c      file.write             —→—
+[16134] lab_f      file.write             —→—
+[16152] lab_a      file.write             —→—
+[16437] lab_d      file.write             —→—
+

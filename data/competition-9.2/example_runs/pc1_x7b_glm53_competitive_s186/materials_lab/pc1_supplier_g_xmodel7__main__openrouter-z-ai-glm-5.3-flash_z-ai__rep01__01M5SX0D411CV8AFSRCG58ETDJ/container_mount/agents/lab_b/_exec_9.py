@@ -1,0 +1,5 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+for pid, mb in [('p_CWRMK2CFRP',None)]:
+    s = df[df.prototype_id==pid]
+    print(s[['record_id','test','kind','value','measured_by']].to_string())

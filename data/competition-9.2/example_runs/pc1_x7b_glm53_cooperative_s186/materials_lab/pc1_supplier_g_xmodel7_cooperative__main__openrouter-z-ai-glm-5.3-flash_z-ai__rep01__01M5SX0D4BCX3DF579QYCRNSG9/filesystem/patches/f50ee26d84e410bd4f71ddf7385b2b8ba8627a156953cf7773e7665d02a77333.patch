@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++heat=[78.1225,78.06625,78.3115,78.502,78.46275,78.029]
++strr=[7.209,7.198,7.232,7.239,7.173,7.193]
++water=[79.672,79.844,80.154,79.194,79.305,79.421]
++for name,v,step,bar in [("heat",heat,0.25,78.25),("strength",strr,0.03,7.19),("water",water,0.4,79.2)]:
++    m=sum(v)/6
++    print(name, round(m,5), "margin vs revision bar:", round(m-bar,5), "steps:", round((m-bar)/step,3))

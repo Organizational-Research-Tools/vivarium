@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import chip, prov_chip, sev_chip, help, gh, howto, elig_chip, outcome %}
+{% from "_swimlane.html" import swimlane %}
+{% block title %}{{ d.record.run_id }} — oaos2{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "overview") }}
+
+{% set ext = (d.manifest or {}).get("extensions") or {} %}
+{% set clock = ext.get("clock_spec") or ext.get("clock") or {} %}
+{% set ts = (d.task_report or {}).get("summary") or {} %}
+{% set rmeta = d.task_report_meta or {} %}
+{% set clock_report = ts.get("clock") or {} %}
+{% set delivery = ts.get("delivery_outcomes") or {} %}
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem"><code>{{ d.record.run_id }}</code></h1>
+<p style="margin:0 0 0.5rem">
+  {{ chip(d.record.status, d.record.irregular) }} {{ elig_chip(d.record.eligibility) }}{% if d.record.eligibility and d.record.eligibility.reasons %} <span class="dim" style="font-size:12px">{{ d.record.eligibility.reasons|join("; ") }}</span>{% endif %}
+  {% if d.record.outcome %}<br><span class="dim">outcome:</span> <strong>{{ outcome(d.record.outcome) }}</strong>{% if d.record.outcome.detail %} <span class="dim">· {{ d.record.outcome.detail }}</span>{% endif %}{% endif %}
+  <span class="dim">{% if started_label %}· ran {{ started_label }} {% endif %}· {{ d.record.experiment_id or "—" }} · {{ d.record.organization_id or "—" }}
+    · {{ d.metrics.task_pack_id or "—" }} · mode: {{ d.metrics.mode or "—" }}
+    {%- if d.disposition.terminal_reason %} · terminal reason: {{ d.disposition.terminal_reason }}{% endif %}</span>
+</p>
+{% if dead %}
+<p class="card" style="padding:0.5rem 0.8rem; margin:0 0 0.5rem">
+  <strong>Dead run:</strong> {{ dead }}.
+  {% if dead_protected %}<span class="dim">It stays in the archive: {{ dead_protected }}.</span>
+  {% else %}<form method="post" action="/cleanup/remove" style="display:inline; margin:0"
+        onsubmit="return confirm('Move this run to runs/.removed/? It can be restored from the clean-up page.')">
+    <input type="hidden" name="run_ref" value="{{ run_ref }}"><button type="submit">Remove this run</button></form>
+  <a href="/cleanup" class="dim">all dead runs →</a>{% endif %}
+</p>
+{% endif %}
+{% call howto() %}
+  <p><strong>Task report.</strong> The task pack's registered report for this run, reduced to its scannable columns. It is calculated from the saved trace by the pack's own analysis code; the study's analysis rules decide what any of it means.</p>
+  <p><strong>How the run unfolded.</strong> The whole run at a glance: one lane per agent, time left to right. Soft bands = active turns; colored ticks = work; vertical lines = communication; diamonds = submissions; red dots = problems. Click anything, or open the Communication tab for the full-size view.</p>
+{% endcall %}
+{% if findings_n %}
+<p style="margin:0 0 0.5rem">
+  <a href="/run/{{ run_ref }}/audit">{{ findings_n }} diagnostic finding{{ "s" if findings_n != 1 }}{% if findings_worst %} — worst: {{ sev_chip(findings_worst.severity) }} {{ findings_worst.title }}{% endif %} →</a>
+  {% if n_annotations %} · <a href="/run/{{ run_ref }}/annotations">{{ n_annotations }} annotation{{ "s" if n_annotations != 1 }}</a>{% endif %}
+</p>
+{% endif %}
+
+{% if reading.conditions or reading.report.kind == "error" %}
+<p class="reading-line">
+  {% for c in reading.conditions %}<span class="sev sev-{{ c.severity }} help" title="{{ c.text }}">{{ c.label }}</span> {% endfor %}
+  {% if reading.report.kind == "error" %}<span class="sev sev-critical help" title="{{ reading.report.text }}">report error</span> <span class="dim">{{ reading.report.error }}</span>{% endif %}
+  {% if reading.conditions %}<span class="dim">· recorded in this run; they change how its result may be read · <a href="/run/{{ run_ref }}/audit">audit</a></span>{% endif %}
+</p>
+{% endif %}
+{% if reading.notes or prov.tags %}
+<p class="dim reading-line">
+  About the archive: {% for n in reading.notes %}<span class="help" title="{{ n.text }}">{{ n.label }}</span>{% if not loop.last %} · {% endif %}{% endfor %}
+  {%- for t in prov.tags %}{% if reading.notes or not loop.first %} · {% endif %}<span class="help" title="{{ PROVENANCE_HELP.get(t, '') }}">{{ t }}</span>{% endfor %}
+  · <a href="/run/{{ run_ref }}/record#archive-notes">details in Record</a>
+</p>
+{% endif %}
+<div class="tiles">
+  {% if ts %}<div class="tile"><div class="v">{{ "%.1f%%"|format(ts.get("retained_fraction") * 100) if ts.get("retained_fraction") is not none else "—" }}</div><div class="k">{{ gh("retained fraction") }}{% if rmeta.source in ("rendered", "store") %} <span class="dim" title="re-rendered at HEAD · analysis {{ rmeta.identity }}">*</span>{% endif %}</div></div>{% endif %}
+  <div class="tile"><div class="v">{{ d.record.partial_score|score if d.record.partial_score is not none else ("○" if d.record.status == "unscored" else ("✓" if d.record.passed else ("✕" if d.record.passed is false else "—"))) }}</div><div class="k">{{ gh("v0 plan score") if ts else "task scorer" }}{% if d.record.scorer_label %} · {{ d.record.scorer_label }}{% endif %}{% set vn = verdict_note((d.manifest or {}).get("task_pack_id")) %}{% if vn %} <span class="help" title="{{ vn }}">ⓘ</span>{% endif %}</div></div>
+  <div class="tile"><div class="v"{% if d.record.n_unknown_usage %} title="{{ d.record.n_unknown_usage }} model call{{ 's' if d.record.n_unknown_usage != 1 }} ended with unknown usage; the cost is a lower bound"{% endif %}>{{ (d.record.cost_usd if d.record.cost_usd is not none else d.metrics.total_cost_usd)|usd_lb(d.record.n_unknown_usage) }}</div><div class="k">{{ gh("cost") }}{% if d.record.n_unknown_usage %} · {{ d.record.n_unknown_usage }} call{{ "s" if d.record.n_unknown_usage != 1 }} with unknown usage{% endif %}</div></div>
+  <div class="tile"><div class="v">{{ d.metrics.n_agents }}</div><div class="k">{{ gh("agents") }}</div></div>
+  <div class="tile"><div class="v">{{ d.metrics.event_count }}</div><div class="k">{{ gh("events") }}</div></div>
+  <div class="tile"><div class="v">{{ d.metrics.n_model_calls }}</div><div class="k">{{ gh("model calls") }}</div></div>
+  <div class="tile"><div class="v">{{ d.metrics.input_tokens }} / {{ d.metrics.output_tokens }}</div><div class="k">{{ gh("tokens", "tokens in / out") }}</div></div>
+</div>
+
+{% if clock %}
+<div class="grid">
+  <div class="card">
+    <h2>{{ gh("logical clock", "Clock & capacity") }}</h2>
+    <dl class="kv">
+      <dt>{{ gh("clock label") }}</dt><dd><code>{{ d.record.clock_label or ext.get("environment_schedule_variant") or clock.get("schedule_variant") or "—" }}</code></dd>
+      <dt>clock progress</dt><dd>observed day {{ clock_report.get("final_round", d.metrics.final_round) or "—" }} · planned horizon {{ clock.get("rounds_total") or d.record.rounds_total or "—" }}</dd>
+      <dt>calls per role / day</dt><dd>{{ clock.get("calls_per_day") or "—" }}</dd>
+      <dt>{{ gh("megabatch") }}</dt><dd>{{ clock.get("megabatch") }}</dd>
+      <dt>{{ gh("deadline lapses") }}</dt><dd>{{ clock_report.get("n_fuse_lapses", d.metrics.n_deadline_lapses) or 0 }}</dd>
+      <dt>late repairs</dt><dd>{{ clock_report.get("n_late_repairs") or 0 }}</dd>
+      <dt>slot ceilings</dt><dd>{{ d.metrics.n_slot_ceilings or 0 }}</dd>
+      <dt>agent failures</dt><dd>{{ clock_report.get("n_agent_failures", d.metrics.n_agent_failures) or 0 }}</dd>
+    </dl>
+  </div>
+  {% if ts %}
+  <div class="card">
+    <h2>Dynamic budget outcomes</h2>
+    {% if rmeta.source in ("rendered", "store") %}
+    <p class="dim" style="margin:0 0 0.4rem">Report <strong>re-rendered at HEAD</strong> from the frozen archive and pinned assets · analysis <code>{{ rmeta.identity }}</code>{% if frozen %} · saved evidence dataset ({{ frozen._evidence_file }}): retained {{ "%.4f"|format(frozen.retained_fraction) if frozen.retained_fraction is not none else "—" }}{% if frozen_mismatch %} <span class="sev sev-serious">≠ rendered {{ "%.4f"|format(ts.get("retained_fraction")) }}</span>{% else %} <span class="sev sev-info">= rendered</span>{% endif %}{% endif %}</p>
+    {% elif rmeta.source == "file" %}
+    <p class="dim" style="margin:0 0 0.4rem">Saved report from <code>derived/{{ rmeta.filename }}</code> (not checked against the current renderer){% if frozen %} · saved evidence dataset ({{ frozen._evidence_file }}): retained {{ "%.4f"|format(frozen.retained_fraction) if frozen.retained_fraction is not none else "—" }}{% if frozen_mismatch %} <span class="sev sev-serious">≠ file</span>{% endif %}{% endif %}</p>
+    {% endif %}
+    <dl class="kv">
+      <dt>{{ gh("retained fraction") }}</dt><dd>{{ "%.1f%%"|format(ts.get("retained_fraction") * 100) if ts.get("retained_fraction") is not none else "—" }}</dd>
+      <dt>benefit retained / baseline</dt><dd>{{ "%.3f"|format(ts.get("retained_benefit")) if ts.get("retained_benefit") is not none else "—" }} / {{ "%.3f"|format(ts.get("baseline_benefit")) if ts.get("baseline_benefit") is not none else "—" }}</dd>
+      <dt>exceptions repaired</dt><dd>{{ delivery.get("exception_repaired") or 0 }}</dd>
+      <dt>exceptions unresolved</dt><dd>{{ delivery.get("exception_unresolved") or 0 }}</dd>
+      <dt>wrong / undetermined choices</dt><dd>{{ ts.get("n_choice_wrong") or 0 }} / {{ ts.get("n_choice_undetermined") or 0 }}</dd>
+      <dt>covered but unhandled</dt><dd>{{ delivery.get("covered_unhandled") or 0 }}</dd>
+      <dt>plans valid</dt><dd>{{ ts.get("all_plans_valid") }}</dd>
+      <dt>maximum pending queue</dt><dd>{{ ts.get("max_pending") if ts.get("max_pending") is not none else "—" }}</dd>
+    </dl>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+
+{% if report_summary and not ts %}
+<div class="card">
+  <h2>Task report
+    {% if rmeta.filename %}<a href="/run/{{ run_ref }}/derived/{{ rmeta.filename }}" style="font-weight:400">full report ↗</a>{% endif %}</h2>
+  {% if rmeta.source in ("rendered", "store") %}<p class="dim" style="margin:0 0 0.4rem">Report <strong>re-rendered at HEAD</strong> from the saved archive · analysis <code>{{ rmeta.identity }}</code>{% if rmeta.superseded_file %} · the saved <code>derived/{{ rmeta.superseded_file }}</code> predates {{ rmeta.stale_keys|join(", ") }} and is left as it is{% endif %}</p>
+  {% elif rmeta.source == "file" %}<p class="dim" style="margin:0 0 0.4rem">Saved report from <code>derived/{{ rmeta.filename }}</code> (not checked against the current renderer){% if rmeta.stale_keys %} · <span class="sev sev-warning">it predates {{ rmeta.stale_keys|join(", ") }}, which could not be rendered from this run's materials</span>{% endif %}</p>{% endif %}
+  <dl class="kv">
+    {% for k, v in report_summary.items() %}<dt><code>{{ k }}</code></dt><dd>{{ v if v is not none else "—" }}</dd>{% endfor %}
+  </dl>
+</div>
+{% endif %}
+
+{% if svg.lanes %}
+<div class="card">
+  <h2>How the run unfolded
+    <a href="/run/{{ run_ref }}/comms" style="font-weight:400">open ↗</a></h2>
+  {{ swimlane(svg, run_ref) }}
+</div>
+{% endif %}
+
+<div class="grid">
+
+  <div class="card">
+    <h2>Outcome &amp; score</h2>
+    <dl class="kv">
+      <dt>{{ gh("disposition") }}</dt><dd>{{ d.disposition.disposition }}{% if d.disposition.agent_failed %} <span class="flag">agent.failed</span>{% endif %}</dd>
+      <dt>{{ gh("outcome closed") }}</dt><dd>{{ "yes" if d.disposition.outcome_closed else "no" }}</dd>
+      {% if d.run_status %}
+      <dt>{{ gh("scored") }}</dt><dd>{{ d.run_status.get("scored") if d.run_status.get("scored") is not none else "legacy / inferred" }}</dd>
+      {% if d.run_status.get("scorer_label") %}<dt>scorer label</dt><dd>{{ d.run_status.get("scorer_label") }}</dd>{% endif %}
+      <dt>passed</dt><dd>{{ d.run_status.get("passed") if d.run_status.get("scored") is not false else "— (unscored)" }}</dd>
+      <dt>{{ gh("partial score") }}</dt><dd>{{ d.run_status.get("partial_score")|score if d.run_status.get("partial_score") is not none else "—" }}</dd>
+      <dt>{{ gh("label") }}</dt><dd>{{ d.run_status.get("label") or "—" }}</dd>
+      <dt>{{ gh("archive valid") }}</dt><dd>{{ d.run_status.get("archive_valid") }}</dd>
+      <dt>{{ gh("parity regime") }}</dt><dd>{{ d.run_status.get("parity_regime") or "—" }}</dd>
+      <dt>{{ gh("exposure confounded") }}</dt><dd>{{ d.run_status.get("exposure_confounded") }}</dd>
+      <dt>{{ gh("context budget") }}</dt><dd>{{ d.run_status.get("context_budget") if d.run_status.get("context_budget") is not none else "—" }}</dd>
+      {% else %}
+      <dt>run_status.json</dt><dd class="dim">absent — no saved status file; inspect the terminal and evaluation events</dd>
+      {% endif %}
+      <dt>{{ gh("commitments") }}</dt><dd>{{ d.metrics.n_commitments }}</dd>
+      <dt>{{ gh("handoffs") }}</dt><dd>{{ d.metrics.n_handoffs }}</dd>
+      <dt>{{ gh("conversations") }}</dt><dd>{{ d.metrics.n_conversations }}</dd>
+      <dt>{{ gh("board posts") }}</dt><dd>{{ d.metrics.n_board_posts or 0 }} <span class="dim">· read {{ d.metrics.n_board_reads or 0 }}×</span></dd>
+      <dt>{{ gh("notes") }}</dt><dd>{{ d.metrics.n_notes or 0 }} <span class="dim">· read {{ d.metrics.n_note_reads or 0 }}×</span></dd>
+      <dt>{{ gh("agents") }}</dt><dd>{{ d.metrics.agents|join(", ") or "—" }}</dd>
+    </dl>
+  </div>
+
+  <div class="card">
+    <h2>Read on</h2>
+    <p style="margin:0 0 0.3rem"><a href="/run/{{ run_ref }}/story"><strong>Story →</strong></a> <span class="dim">{% if has_board %}the board and what each agent said{% else %}filings, handoffs, notices and what each agent said{% endif %}, in order</span></p>
+    <p style="margin:0 0 0.3rem"><a href="/run/{{ run_ref }}/organization"><strong>Organization →</strong></a> <span class="dim">who may do what, and who dealt with whom</span></p>
+    <p style="margin:0 0 0.3rem"><a href="/run/{{ run_ref }}/agents"><strong>Agents →</strong></a> <span class="dim">one profile per role</span></p>
+    <p style="margin:0 0 0.3rem"><a href="{{ run_tabs(run_ref).work.href }}"><strong>{{ run_tabs(run_ref).work.label }} →</strong></a> <span class="dim">what the run worked on, in the task's own terms</span></p>
+    <p style="margin:0"><a href="/run/{{ run_ref }}/record"><strong>Record →</strong></a> <span class="dim">pins and checks · <a href="/run/{{ run_ref }}/trace">every event</a> · <a href="/run/{{ run_ref }}/files">files</a> · <a href="/run/{{ run_ref }}/audit">audit</a></span></p>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+--- 
++++ 
+@@ -0,0 +1,50 @@
++
++import pandas as pd
++import numpy as np
++
++df = pd.read_csv('records.csv')
++
++# New thresholds under revision B
++NEW = {'heat': 78.25, 'strength': 7.19, 'water': 79.2}
++STEP = {'heat': 0.25, 'strength': 0.03, 'water': 0.4}
++
++print("=== REVISION B IMPACT ON ALL PL-57 DATA ===")
++pl57 = ['QP-6572','QP-6843','QP-4476']
++qual = df[df['kind']=='qualification']
++pivot = qual.groupby(['project','prototype_id','instrument'])['value'].mean().unstack('instrument')
++pivot = pivot.reset_index()
++
++modules = ['base_sheet','secondary_sheet','binder_system','process_profile_1',
++           'process_profile_2','process_profile_3']
++recipe_info = df.drop_duplicates('prototype_id')[['prototype_id','project'] + modules]
++pivot = pivot.merge(recipe_info, on=['prototype_id','project'], how='left')
++pl57_data = pivot[pivot['project'].isin(pl57)].copy()
++
++for _, row in pl57_data.iterrows():
++    results = []
++    for inst in ['heat','strength','water']:
++        val = row.get(inst)
++        if pd.notna(val):
++            margin = (val - NEW[inst]) / STEP[inst]
++            status = f"{val:.2f} margin={margin:+.1f}st {'✓' if margin>=0 else '✗'}"
++        else:
++            status = "not measured"
++        results.append(f"{inst}:{status}")
++    recipe = f"{row['base_sheet']}/{row['secondary_sheet']}/{row['binder_system']}/{row['process_profile_1']}/{row['process_profile_2']}/{row['process_profile_3']}"
++    print(f"{row['project']} {row['prototype_id'][-6:]}: {recipe}")
++    print(f"  {' | '.join(results)}")
++
++print()
++print("=== KEY INSIGHT: Revision B thresholds ===")
++print(f"Heat: {NEW['heat']}°C (was 77.5), Strength: {NEW['strength']} kN/m (was 7.1), Water: {NEW['water']}% (was 78.0)")
++print()
++print("=== BEST CANDIDATES FOR NEW RECIPES ===")
++print("P2G/3HW/8BB: strength 7.17-7.19 (BORDERLINE), water 79.22 (barely), heat 74°C (FAILS -17 steps!)")
++print("DA9/3HW/M2P: heat 78.37 (passes), strength 6.69 (FAILS -17 steps), water ~78.6 (FAILS)")
++print("JA8/YX8/M2P: heat 78.19 (FAILS -0.24°C!), strength 6.55 (FAILS), water 80.70 (passes)")
++print()
++print("UNTESTED hypothesis: JA8/3HW/8BB or DA9/3HW/8BB")
++print("  - JA8 base may give heat ~78.4+ (above 78.25 threshold)")
++print("  - 3HW+8BB combination gives strength 7.17-7.19 on P2G base")
++print("  - H3F process profile 3 needed for water on PL-57 (lab_e confirmed)")
++print("  - Would need: heat≥78.25, strength≥7.19, water≥79.2 all with ≥3 step margins")

@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++for p in ['p_YQ5AFZNXV6','p_YQ5AFZNXTR','p_YQ5AFZNXTY']:
++ d=x[x.prototype_id.eq(p)]
++ print('\n',p,d.shape)
++ print(d.groupby(['test','measured_by']).value.agg(['mean','count']))
++ if len(d): print(d.iloc[0,10:].to_dict())

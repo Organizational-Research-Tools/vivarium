@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -943,3 +943,15 @@
+ r_6B2E8V1N8Y,exploratory,QP-3617,p_ZG7GNCT5AW,water,wet strength retained,,79.7452,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,96Y,4ZD,SU2
+ r_6B2E8V1N8Z,exploratory,QP-3617,p_ZG7GNCT5AY,water,wet strength retained,,71.6640,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,T6A,4ZD,SU2
+ r_6B2E8V1N90,exploratory,QP-3617,p_ZG7GNCT5B0,water,wet strength retained,,80.0296,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,L2J,4ZD,SU2
++r_HPXX1VMPGH,qualification,QP-3617,p_H6M64FVH6S,heat,seal hold temperature,0,72.93150,°C,lab_d,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
++r_HPXX1VMPGJ,qualification,QP-3617,p_H6M64FVH6S,heat,seal hold temperature,1,72.89775,°C,lab_d,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
++r_HPXX1VMPGK,qualification,QP-3617,p_H6M64FVH6S,heat,seal hold temperature,2,73.12275,°C,lab_d,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
++r_HPXX1VMPGM,qualification,QP-3617,p_H6M64FVH6S,heat,seal hold temperature,3,73.19900,°C,lab_d,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
++r_HPXX1VMPGN,qualification,QP-3617,p_H6M64FVH6S,heat,seal hold temperature,4,73.31900,°C,lab_d,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
++r_HPXX1VMPGP,qualification,QP-3617,p_H6M64FVH6S,heat,seal hold temperature,5,73.29500,°C,lab_d,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
++r_VNRKJ7EZNY,qualification,QP-3617,p_ZG7GNCT5AT,water,wet strength retained,0,79.9836,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,4ZD,SU2
++r_VNRKJ7EZNZ,qualification,QP-3617,p_ZG7GNCT5AT,water,wet strength retained,1,80.5436,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,4ZD,SU2
++r_VNRKJ7EZP0,qualification,QP-3617,p_ZG7GNCT5AT,water,wet strength retained,2,80.6456,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,4ZD,SU2
++r_VNRKJ7EZP1,qualification,QP-3617,p_ZG7GNCT5AT,water,wet strength retained,3,80.6580,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,4ZD,SU2
++r_VNRKJ7EZP2,qualification,QP-3617,p_ZG7GNCT5AT,water,wet strength retained,4,80.8080,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,4ZD,SU2
++r_VNRKJ7EZP3,qualification,QP-3617,p_ZG7GNCT5AT,water,wet strength retained,5,79.9628,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,4ZD,SU2

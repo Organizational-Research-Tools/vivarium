@@ -1,0 +1,4 @@
+import pandas as pd
+r=pd.read_csv('records.csv')
+cols=['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step','test','value']
+print(r[r.project=='QP-9980'][cols].groupby(cols[:-1],dropna=False).value.mean().reset_index().to_string(index=False))

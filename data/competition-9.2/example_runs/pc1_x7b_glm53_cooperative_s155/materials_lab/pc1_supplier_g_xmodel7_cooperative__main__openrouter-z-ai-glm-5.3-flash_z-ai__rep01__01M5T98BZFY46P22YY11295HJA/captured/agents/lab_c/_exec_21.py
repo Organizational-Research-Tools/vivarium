@@ -1,0 +1,19 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+rec=[]
+for p,d in df.dropna(subset=['base_sheet']).groupby('prototype_id'):
+    r={'proto':p,'project':d.project.iloc[0]}
+    for t,th in [('seal hold temperature',78.25),('edge crush resistance',7.19),('wet strength retained',79.2)]:
+        x=d[d.test==t].value
+        r[t[:5]]=round(x.mean(),2) if len(x) else None
+        r[t[:5]+'n']=len(x)
+    mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+    r['recipe']=tuple(d[mods].iloc[0]) if d[mods].notna().all().all() else None
+    rec.append(r)
+R=pd.DataFrame(rec)
+# candidates: water>=78.8, heat>=77.5, strength>=7.0
+c=R[(R['wet s']>=78.8)&(R['seal ']>=77.5)&(R['edge ']>=7.0)]
+print(c[['proto','project','seal ','edge ','wet s','seal n','edge n','wet n','recipe']].to_string())
+print('---- best water with heat known ----')
+c2=R[(R['wet s']>=79.0)&(R['seal '].notna())].sort_values('wet s',ascending=False)
+print(c2[['proto','project','seal ','edge ','wet s','recipe']].head(25).to_string())

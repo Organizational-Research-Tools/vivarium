@@ -1,0 +1,39 @@
+--- 
++++ 
+@@ -0,0 +1,36 @@
++
++import numpy as np
++
++# Heat results just measured
++p_KY = [78.446, 78.62275, 78.0005, 78.204, 78.18625, 78.3045]
++p_TE = [78.5335, 78.59775, 78.13425, 78.08075, 78.2365, 78.47375]
++p_QM = [72.48675, 72.728, 72.73475, 72.9195, 72.3665, 72.414]
++p_TG = [61.08625, 61.162, 61.264, 60.77125, 60.91725, 61.15625]
++
++for name, data in [("p_8NVJHKV1KY (4QB+YV2)", p_KY), 
++                    ("p_3BN21AR8TE (5FE add1+4QB+YV2)", p_TE),
++                    ("p_QRXYJCY4QM (9FU joint)", p_QM),
++                    ("p_3BN21AR8TG (5TZ surface)", p_TG)]:
++    mean = np.mean(data)
++    gap = mean - 78.625
++    steps = gap / 0.25
++    status = "✓ PASSES" if mean >= 78.625 else f"✗ FAILS by {-gap:.3f}°C ({-steps:.2f} steps)"
++    print(f"{name}: mean={mean:.3f}°C  {status}")
++
++print()
++print("KEY FINDINGS:")
++print("- 5TZ surface: KILLS HEAT (61.06°C, −30 steps) AND kills water — DEAD")
++print("- 9FU joint: KILLS HEAT (72.61°C, −24 steps) AND kills water — DEAD")
++print("- 5FE add1: does NOT help heat (78.34°C, −1.13 steps still fails Rev C)")
++print("- 4QB+YV2 recipe: does NOT help heat enough (78.29°C, −1.32 steps fails Rev C)")
++print()
++print("CRITICAL: PL-57 already qualified via lab_d's GG7 report.")
++print("REMAINING: PL-95 and PL-98 need qualification.")
++print()
++print("For PL-95/98 strength gap (0.011-0.017 kN/m only!):")
++print("  YV2 cond change gave +0.641 kN/m on QP-4476 → might close gap")
++print("  But water risk: YV2 costs ~0.63% water; PL-95/98 water was ~80.4%")
++print("  → would land at ~79.8%, right at threshold — very tight")
++print()
++print("Lab_f's UP5 pp1 and 5BU secondary: completely untested,")
++print("  NOT in water interactions → could safely boost strength")

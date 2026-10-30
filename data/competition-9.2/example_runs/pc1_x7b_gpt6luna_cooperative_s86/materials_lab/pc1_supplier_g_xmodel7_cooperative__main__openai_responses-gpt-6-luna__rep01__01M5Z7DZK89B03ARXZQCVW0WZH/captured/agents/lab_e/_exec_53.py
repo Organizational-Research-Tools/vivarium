@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.kind=='qualification']; g=q.groupby(['project','prototype_id','test']).value.mean().unstack(); print(g.loc['QP-9980'].to_string()); print('QP-9259'); print(g.loc['QP-9259'].to_string())

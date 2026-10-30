@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.kind=='qualification']; g=q.groupby(['project','prototype_id','test']).agg(n=('value','count'),mean=('value','mean'),owner=('measured_by','first')).reset_index(); w=g.pivot(index=['project','prototype_id'],columns='test',values=['n','mean','owner']); w.columns=['_'.join(c).strip('_') for c in w.columns];
+for p in ['QP-6879','QP-3617','QP-9273']:
+ z=w.loc[p].copy(); print('\n'+p); print(z.to_string())

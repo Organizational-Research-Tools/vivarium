@@ -1,0 +1,5 @@
+import pandas as pd
+p=pd.read_csv('records.csv')
+print(p.shape)
+print(p.columns.tolist())
+print(p.groupby(['project_id','kind','property']).size().to_string())

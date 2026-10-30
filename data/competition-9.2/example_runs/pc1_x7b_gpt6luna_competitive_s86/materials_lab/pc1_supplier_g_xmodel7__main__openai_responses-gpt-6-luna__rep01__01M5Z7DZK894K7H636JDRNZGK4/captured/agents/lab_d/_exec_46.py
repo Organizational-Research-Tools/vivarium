@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x.tail(30)[['record_id','project','prototype_id','instrument','test','value','measured_by','requester','kind']].to_string(index=False));

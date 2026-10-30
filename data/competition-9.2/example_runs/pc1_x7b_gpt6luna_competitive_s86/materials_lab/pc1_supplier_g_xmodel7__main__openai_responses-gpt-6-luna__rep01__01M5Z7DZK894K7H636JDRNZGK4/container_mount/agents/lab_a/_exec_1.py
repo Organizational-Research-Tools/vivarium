@@ -1,0 +1,11 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x.shape)
+mods=list(x.columns[11:])
+print(mods)
+for (pr,proto),g in x.groupby(['project','prototype_id']):
+    means=g.groupby('instrument').value.mean()
+    if len(means)==3:
+      t=[means.get(k,float('nan')) for k in ['heat','strength','water']]
+      if t[0]>=77.5 and t[1]>=7.1 and t[2]>=78 and g.base_sheet.iloc[0]!='H8Z': print('PASS',pr,proto,t,g.base_sheet.iloc[0])
+    print(pr,proto, g.base_sheet.iloc[0],dict(means.round(3)))

@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++x=pd.read_csv('records.csv');
++for p,g in x.groupby('project'):
++ print('\n',p,'records',len(g),'protos',g.prototype_id.nunique())
++ print(g.groupby(['prototype_id','test']).value.agg(['count','mean']).to_string())

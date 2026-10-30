@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -833,3 +833,9 @@
+ r_ZP59E5VVG7,exploratory,QP-5993,p_CWRMK2CFRR,heat,seal hold temperature,,61.92100,°C,lab_d,lab_c,HP9,2YJ,PU3,8BE,9KR,2CK,5JK,2FG,V7P,84H,YS6,G5Y
+ r_ZP59E5VVG8,exploratory,QP-5993,p_CWRMK2CFRR,heat,seal hold temperature,,62.51550,°C,lab_d,lab_c,HP9,2YJ,PU3,8BE,9KR,2CK,5JK,2FG,V7P,84H,YS6,G5Y
+ r_PGVBR8C3QS,exploratory,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,,78.15000,°C,lab_a,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_GF8RZMSBXD,exploratory,QP-5993,p_XG0BYRA5W2,water,wet strength retained,,80.4304,%,lab_c,lab_a,,,,,,,,,,,,
++r_C5EG5QC799,exploratory,QP-5993,p_XG0BYRA5W2,water,wet strength retained,,79.4120,%,lab_c,lab_a,,,,,,,,,,,,
++r_C5EG5QC79A,exploratory,QP-5993,p_XG0BYRA5W2,water,wet strength retained,,80.0888,%,lab_c,lab_a,,,,,,,,,,,,
++r_C5EG5QC79B,exploratory,QP-5993,p_CWRMK2CFRP,water,wet strength retained,,80.4644,%,lab_c,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_C5EG5QC79C,exploratory,QP-5993,p_CWRMK2CFRP,water,wet strength retained,,79.2432,%,lab_c,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_C5EG5QC79D,exploratory,QP-5993,p_CWRMK2CFRP,water,wet strength retained,,80.3680,%,lab_c,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y

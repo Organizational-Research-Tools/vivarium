@@ -1,0 +1,10 @@
+import pandas as pd
+d=pd.read_csv('records.csv'); d=d[d.kind=='qualification']; m=d.groupby(['project','prototype_id','test']).value.mean().unstack();
+for proj in ['QP-9259','QP-9980','QP-9219','QP-3617','QP-6879']:
+  print('\n',proj)
+  if proj not in m.index.get_level_values(0): continue
+  for pid,row in m.loc[proj].iterrows():
+    h=row.get('seal hold temperature'); s=row.get('edge crush resistance'); w=row.get('wet strength retained')
+    if any(pd.notna(v) for v in [h,s,w]):
+      if (pd.notna(h) and h>=78.25) or (pd.notna(s) and s>=7.19) or (pd.notna(w) and w>=79.2):
+        print(pid,tuple(round(v,5) if pd.notna(v) else None for v in (h,s,w)))

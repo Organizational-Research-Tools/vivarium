@@ -1,0 +1,10 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+# who holds which QP-2342 panels? check prototypes list
+d=df[(df['project']=='QP-2342')&(df['kind']=='qualification')]
+print(d[['prototype_id','test','value','owner','authoring_lab']].drop_duplicates('prototype_id').to_string() if 'owner' in d else d.columns.tolist())
+print(df.columns.tolist())
+print(d[['prototype_id','test','value','originating_lab']].drop_duplicates('prototype_id').to_string() if 'originating_lab' in df.columns else '')
+# exploratory strength on QP-2342
+e=df[(df['project']=='QP-2342')&(df['test']=='edge crush resistance')&(df['kind']=='exploratory')]
+print(e[['prototype_id','value','originating_lab']].groupby('prototype_id').value.agg(['mean','count']).sort_values('mean').to_string())

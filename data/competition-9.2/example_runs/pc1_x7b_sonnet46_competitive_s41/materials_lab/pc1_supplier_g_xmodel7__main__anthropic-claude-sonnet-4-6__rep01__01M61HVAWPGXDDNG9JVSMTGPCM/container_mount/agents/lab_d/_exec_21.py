@@ -1,0 +1,27 @@
+
+import numpy as np
+
+# p_8NVJHKV1KY heat panel
+p8N = [78.52175, 78.44875, 78.00550, 78.16050, 78.21375, 78.41375]
+m8N = np.mean(p8N)
+
+# p_3BN21AR8TE heat panel (5FE add1)
+p3B_TE = [78.39525, 78.67425, 78.08475, 78.23950, 78.30975, 78.35300]
+m3B_TE = np.mean(p3B_TE)
+
+# p_QRXYJCY4QM heat panel (9FU joint)
+pQ = [72.59300, 72.69175, 72.74225, 72.80800, 72.36000, 72.45450]
+mQ = np.mean(pQ)
+
+# p_3BN21AR8TG heat panel (5TZ surface)
+p3B_TG = [61.07675, 61.28300, 61.26250, 60.89050, 60.86175, 60.98250]
+m3B_TG = np.mean(p3B_TG)
+
+heat_base = 77.50; heat_step = 0.25; rev_c_heat = 78.625
+
+for name, m in [("p_8NVJHKV1KY (4QB+YV2)", m8N), ("p_3BN21AR8TE (5FE add1)", m3B_TE), 
+                ("p_QRXYJCY4QM (9FU joint)", mQ), ("p_3BN21AR8TG (5TZ surface)", m3B_TG)]:
+    margin = (m - heat_base) / heat_step
+    gap = rev_c_heat - m
+    status = "PASS" if m >= rev_c_heat else f"FAILS (gap {gap:.3f}°C = {gap/heat_step:.2f} steps)"
+    print(f"{name}: mean={m:.3f}°C, {margin:.2f} steps, {status}")

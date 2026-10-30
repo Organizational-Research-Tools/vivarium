@@ -1,0 +1,31 @@
+
+# Compile all 36 granted prototype IDs from lab_b
+lab_b_protos = {
+    'QP-6572': ['p_GCXZZ91WJ2', 'p_GCXZZ91WJ4', 'p_GCXZZ91WJ6', 'p_GCXZZ91WJ8'],
+    'QP-6843': ['p_6PWNP7BFEY', 'p_6PWNP7BFF0', 'p_6PWNP7BFF2', 'p_6PWNP7BFF4'],
+    'QP-4476': ['p_S1D13AXSXR', 'p_S1D13AXSXT', 'p_S1D13AXSXW', 'p_S1D13AXSXY'],
+    'QP-7212': ['p_SVC8TYAQGJ', 'p_SVC8TYAQGM', 'p_SVC8TYAQGP', 'p_SVC8TYAQGR'],
+    'QP-3473': ['p_FR3ZSZWV0T', 'p_FR3ZSZWV0W', 'p_FR3ZSZWV0Y', 'p_FR3ZSZWV10'],
+    'QP-8607': ['p_3VTYM9QYDF', 'p_3VTYM9QYDH', 'p_3VTYM9QYDK', 'p_3VTYM9QYDN'],
+    'QP-3089': ['p_5ZPYV6MTWB', 'p_853B4YQGHJ', 'p_853B4YQGHM', 'p_853B4YQGHP'],
+    'QP-8265': ['p_X8JBQTDZJM', 'p_X8JBQTDZJP', 'p_X8JBQTDZJR', 'p_X8JBQTDZJT'],
+    'QP-7604': ['p_XJS8WRQQBA', 'p_XJS8WRQQBC', 'p_XJS8WRQQBE', 'p_XJS8WRQQBG'],
+}
+all_lab_b = [pid for pids in lab_b_protos.values() for pid in pids]
+print(f"Total lab_b prototypes to measure: {len(all_lab_b)}")
+
+# Key ones to highlight
+print("\nKEY: p_853B4YQGHM (QP-3089) — lab_b reports strength ~7.21 kN/m PASSES!")
+print("  If heat also passes, this could qualify PL-98!")
+
+# My new recipe — GG7-free version of the proven recipe
+# Original: JA8, GG7, M2P, QJ2, 6FA, 44B, 62D, 2BR, N4L, 7KL, DL8, 3N8
+# GG7→3HW: JA8, 3HW, M2P, QJ2, 6FA, 44B, 62D, 2BR, N4L, 7KL, DL8, 3N8
+good_recipe = ['JA8', '3HW', 'M2P', 'QJ2', '6FA', '44B', '62D', '2BR', 'N4L', '7KL', 'DL8', '3N8']
+print(f"\nGood recipe (GG7→3HW): {good_recipe}")
+print("Expected: heat~78.28°C(✓), strength~7.19 kN/m(✓), water~80.85%(✓)")
+print()
+print("Projects to create with this recipe:")
+projects = ['QP-4476','QP-6572','QP-6843','QP-7212','QP-3473','QP-8607','QP-3089','QP-8265','QP-7604']
+for p in projects:
+    print(f"  {p}")

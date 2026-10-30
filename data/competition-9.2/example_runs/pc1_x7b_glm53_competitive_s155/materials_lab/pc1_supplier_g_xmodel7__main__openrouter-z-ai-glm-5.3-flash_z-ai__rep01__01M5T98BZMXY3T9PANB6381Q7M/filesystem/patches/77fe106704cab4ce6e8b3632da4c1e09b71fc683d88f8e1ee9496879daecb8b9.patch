@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -620,3 +620,27 @@
+ r_F08HCTNTKJ,qualification,QP-1454,p_9V90B1NZP7,strength,edge crush resistance,3,7.29053,kN/m,lab_e,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,4YT
+ r_F08HCTNTKK,qualification,QP-1454,p_9V90B1NZP7,strength,edge crush resistance,4,7.22927,kN/m,lab_e,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,4YT
+ r_F08HCTNTKM,qualification,QP-1454,p_9V90B1NZP7,strength,edge crush resistance,5,7.24145,kN/m,lab_e,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,4YT
++r_NT76CVV72X,qualification,QP-1454,p_9V90B1NZP7,water,wet strength retained,0,79.2920,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,4YT
++r_NT76CVV72Y,qualification,QP-1454,p_9V90B1NZP7,water,wet strength retained,1,79.5840,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,4YT
++r_NT76CVV72Z,qualification,QP-1454,p_9V90B1NZP7,water,wet strength retained,2,79.7356,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,4YT
++r_NT76CVV730,qualification,QP-1454,p_9V90B1NZP7,water,wet strength retained,3,78.9260,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,4YT
++r_NT76CVV731,qualification,QP-1454,p_9V90B1NZP7,water,wet strength retained,4,79.0784,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,4YT
++r_NT76CVV732,qualification,QP-1454,p_9V90B1NZP7,water,wet strength retained,5,79.4024,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,4YT
++r_NT76CVV733,qualification,QP-1454,p_9V90B1NZP9,water,wet strength retained,0,79.5404,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,LW5
++r_NT76CVV734,qualification,QP-1454,p_9V90B1NZP9,water,wet strength retained,1,79.5764,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,LW5
++r_NT76CVV735,qualification,QP-1454,p_9V90B1NZP9,water,wet strength retained,2,79.7952,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,LW5
++r_NT76CVV736,qualification,QP-1454,p_9V90B1NZP9,water,wet strength retained,3,79.0188,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,LW5
++r_NT76CVV737,qualification,QP-1454,p_9V90B1NZP9,water,wet strength retained,4,79.0188,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,LW5
++r_NT76CVV738,qualification,QP-1454,p_9V90B1NZP9,water,wet strength retained,5,79.1696,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,LW5
++r_NT76CVV739,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,0,79.4272,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,23Y
++r_NT76CVV73A,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,1,79.7392,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,23Y
++r_NT76CVV73B,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,2,79.8500,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,23Y
++r_NT76CVV73C,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,3,78.9684,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,23Y
++r_NT76CVV73D,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,4,79.2100,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,23Y
++r_NT76CVV73E,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,5,79.2532,%,lab_f,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,23Y
++r_1RAWJ1AYRS,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,0,79.5148,%,lab_c,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,23Y
++r_1RAWJ1AYRT,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,1,79.5044,%,lab_c,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,23Y
++r_1RAWJ1AYRV,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,2,79.7496,%,lab_c,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,23Y
++r_1RAWJ1AYRW,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,3,78.8872,%,lab_c,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,23Y
++r_1RAWJ1AYRX,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,4,79.3700,%,lab_c,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,23Y
++r_1RAWJ1AYRY,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,5,79.4220,%,lab_c,lab_e,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,23Y

@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++q=x[x.kind=='qualification'].groupby(['project','prototype_id','test']).value.agg(['mean','size']).reset_index()
++print(q.test.value_counts())
++print(q.groupby('test').size())
++print(q.groupby('project').size())

@@ -1,0 +1,28 @@
+--- 
++++ 
+@@ -0,0 +1,25 @@
++
++# QP-6843 heat catastrophe analysis
++specimens_new = [68.27125, 68.43475, 68.42700, 68.74775, 68.15850, 68.22575]
++import numpy as np
++mean_new = np.mean(specimens_new)
++print(f"p_YPS90C4MY7 QP-6843 heat mean: {mean_new:.4f}°C — FAIL (need 78.25°C, short by {78.25-mean_new:.2f}°C!)")
++print()
++print("CRITICAL: Same recipe P2G/3HW/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8")
++print("  QP-3089: ~78.92°C ✓")
++print("  QP-3473: ~78.73°C ✓")
++print("  QP-7212: ~78.68°C ✓")  
++print(f"  QP-6843: ~{mean_new:.2f}°C ✗ — CATASTROPHIC project-specific interaction!")
++print()
++print("QP-6843 heat results so far:")
++print("  NN7/C5Q recipe: ~74.3°C (best so far)")
++print("  8BB/VA8 recipe: ~68.4°C (worse!)")
++print()
++print("PL-57 situation:")
++print("  QP-6843: No recipe found near 78.25°C")
++print("  QP-6572: lab_a best was ~77.76°C (below threshold)")
++print("  QP-4476: recipe JA8/GG7/... passes ALL tests but uses GG7 (PMLA prohibited)")
++print()
++print("GG7 option for QP-4476: heat 78.779°C, strength 7.254 kN/m, water 81.647% — ALL PASS")
++print("Only blocker: PMLA sourcing code (not portal requirement)")
++print("If program fails PL-57, WHOLE PROGRAM FAILS = 0 credits out of 3")

@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -0,0 +1,2 @@
++import pandas as pd
++r=pd.read_csv('records.csv'); q=r[(r.project.isin(['QP-6879','QP-3617','QP-9273']))]; cols=['prototype_id']+r.columns[11:23].tolist(); print(q[cols].drop_duplicates('prototype_id').to_string(index=False))

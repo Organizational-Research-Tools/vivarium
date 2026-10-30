@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++h=df[df['test']=='seal hold temperature']
++print(h.groupby(['project','prototype_id'])['value'].agg(['mean','count']).sort_values('mean',ascending=False).head(12))
++# What recipes passed heat? look at module values for top scorers
++top=h.groupby('prototype_id')['value'].mean().sort_values(ascending=False).head(6).index
++print(df[df.prototype_id.isin(top)].groupby('prototype_id')[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].first())

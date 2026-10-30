@@ -1,0 +1,10 @@
+
+# Analyze the state of each project
+import pandas as pd
+
+# Load records
+df = pd.read_csv('records.csv')
+print(df.columns.tolist())
+print(f"\nTotal records: {len(df)}")
+print("\nProjects covered:")
+print(df['project_id'].value_counts())

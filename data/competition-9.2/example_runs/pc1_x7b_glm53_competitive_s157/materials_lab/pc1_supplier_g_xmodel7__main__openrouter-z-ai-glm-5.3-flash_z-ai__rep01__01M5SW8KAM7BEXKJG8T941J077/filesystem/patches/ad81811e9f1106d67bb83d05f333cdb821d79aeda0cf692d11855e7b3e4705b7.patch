@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++print(df.columns.tolist())
++d = df[(df.project=='QP-3068')&(df.prototype.str.startswith('p_PPNKRW75EN'))]
++print(d.groupby(['prototype','kind','test'])['value'].agg(['mean','count']).to_string())

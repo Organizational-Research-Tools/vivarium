@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% from "_chip.html" import chip, howto %}
+{% block title %}clean up — oaos2{% endblock %}
+{% block crumb %}<span class="root">clean up dead runs</span>{% endblock %}
+{% block content %}
+
+{% call howto() %}
+  <p>A <strong>dead run</strong> produced no usable record of work: it failed, stalled, recorded nothing, has an invalid archive, collapsed (an agent crashed), or stopped without finishing and has written nothing for {{ quiet_minutes }} minutes. Removing one moves its folder, unchanged, to <code>runs/{{ removed_dir }}/</code>; it then leaves every page, and it can be restored below. Nothing is deleted. To free the space for good, empty <code>runs/{{ removed_dir }}/</code> yourself.</p>
+  <p>Confirmatory runs and runs in a frozen analysis dataset are listed but cannot be removed here: whether they are excluded or replaced is the study's decision under its registered rules.</p>
+{% endcall %}
+
+{% if msg %}<p class="card" style="padding:0.5rem 0.8rem">{{ msg }}.</p>{% endif %}
+
+<div class="card">
+  <h2>Dead runs <span class="dim" style="font-weight:400">· {{ can|length }}</span></h2>
+  {% if can %}
+  <form method="post" action="/cleanup/remove"
+        onsubmit="var n=this.querySelectorAll('input[name=run_ref]:checked').length; return n>0 && confirm('Move '+n+' run'+(n==1?'':'s')+' to runs/{{ removed_dir }}/? They can be restored from this page.')">
+  <table>
+    <thead><tr>
+      <th><input type="checkbox" title="select all" onclick="for (const b of this.form.querySelectorAll('input[name=run_ref]')) b.checked=this.checked"></th>
+      <th>run</th><th>lineage</th><th>status</th><th>why it is dead</th><th>ran</th><th class="num">cost</th>
+    </tr></thead>
+    <tbody>{% for r in can %}
+    <tr>
+      <td><input type="checkbox" name="run_ref" value="{{ r.run_ref }}"></td>
+      <td><a href="/run/{{ r.run_ref }}">{{ r.run_id|shortid(48) }}</a></td>
+      <td class="dim">{{ r.lineage|wbr }}</td>
+      <td>{{ chip(r.status, r.irregular) }}</td>
+      <td>{{ r.dead_reason }}</td>
+      <td class="dim">{{ r.started_label or "—" }}</td>
+      <td class="num">{{ r.cost_usd|usd if r.cost_usd is not none else "—" }}</td>
+    </tr>{% endfor %}
+    </tbody>
+  </table>
+  <p style="margin:0.6rem 0 0"><button type="submit">Remove selected runs</button></p>
+  </form>
+  {% else %}
+  <p class="dim">No dead runs can be removed.</p>
+  {% endif %}
+</div>
+
+{% if kept %}
+<div class="card">
+  <h2>Dead but kept <span class="dim" style="font-weight:400">· {{ kept|length }}</span></h2>
+  <table>
+    <thead><tr><th>run</th><th>lineage</th><th>status</th><th>why it is dead</th><th>why it stays</th></tr></thead>
+    <tbody>{% for r in kept %}
+    <tr>
+      <td><a href="/run/{{ r.run_ref }}">{{ r.run_id|shortid(48) }}</a></td>
+      <td class="dim">{{ r.lineage|wbr }}</td>
+      <td>{{ chip(r.status, r.irregular) }}</td>
+      <td>{{ r.dead_reason }}</td>
+      <td class="dim">{{ r.protected_reason }}</td>
+    </tr>{% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
+<div class="card">
+  <h2>Removed runs <span class="dim" style="font-weight:400">· {{ removed|length }}</span></h2>
+  {% if removed %}
+  <table>
+    <thead><tr><th>run</th><th>lineage</th><th>status</th><th>why it was removed</th><th>removed</th><th></th></tr></thead>
+    <tbody>{% for r in removed %}
+    <tr>
+      <td><code>{{ r.run_ref.rsplit("/", 1)[-1]|shortid(48) }}</code></td>
+      <td class="dim">{{ r.lineage|wbr }}</td>
+      <td class="dim">{{ r.status or "—" }}</td>
+      <td>{{ r.reason or "—" }}</td>
+      <td class="dim">{{ r.at_label or "—" }}</td>
+      <td><form method="post" action="/cleanup/restore" style="margin:0">
+        <input type="hidden" name="run_ref" value="{{ r.run_ref }}"><button type="submit">Restore</button></form></td>
+    </tr>{% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="dim">Nothing has been removed.</p>
+  {% endif %}
+</div>
+{% endblock %}

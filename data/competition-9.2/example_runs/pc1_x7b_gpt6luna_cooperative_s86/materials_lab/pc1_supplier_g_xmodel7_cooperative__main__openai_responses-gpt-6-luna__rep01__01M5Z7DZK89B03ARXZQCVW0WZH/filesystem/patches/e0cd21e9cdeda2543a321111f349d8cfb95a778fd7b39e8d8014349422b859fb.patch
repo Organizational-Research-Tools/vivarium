@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -0,0 +1,2 @@
++import pandas as pd
++x=pd.read_csv('records.csv');q=x[x.project=='QP-3617'];print(q.groupby(['prototype_id','test']).agg(n=('value','size'),mean=('value','mean'),owner=('measured_by','first')).to_string()); print(q[['record_id','prototype_id','test','value','measured_by']].tail(30).to_string(index=False))

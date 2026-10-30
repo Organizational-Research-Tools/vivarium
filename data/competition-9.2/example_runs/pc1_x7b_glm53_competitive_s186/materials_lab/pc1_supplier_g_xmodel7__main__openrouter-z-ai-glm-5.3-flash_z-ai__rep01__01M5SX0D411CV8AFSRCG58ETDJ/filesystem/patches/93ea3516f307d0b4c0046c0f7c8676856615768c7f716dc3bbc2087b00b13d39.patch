@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++s=df[df.prototype_id=='p_VBVTDFNR72'].sort_values('specimen')
++print(s[['record_id','test','specimen','measured_by','requester']].to_string())
++w=df[df.prototype_id=='p_VBVTDFNR7D'].sort_values('specimen')
++print(w[['record_id','test','specimen','measured_by','requester']].to_string())

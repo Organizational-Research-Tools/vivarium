@@ -1,0 +1,10 @@
+import itertools,random
+surfs=['96Y','T6A','UX3','L2J']; p1s=['9VQ','2A4','RZ8','H9M']; binders=['VQ6','T5L','YC8','P8G']
+recipes=[]
+for s,p,b in itertools.product(surfs,p1s,binders):
+ r=['QG7','RK7',b,'QG6','K3K','P2E',p,'2JH','FJ2',s,'YX4','YT2']
+ if r != ['QG7','RK7','P8G','QG6','K3K','P2E','2A4','2JH','FJ2','UX3','YX4','YT2']:
+  recipes.append(r)
+# Keep first 48 (all levels balanced? order has many sequence). random balanced shuffle
+random.seed(1); random.shuffle(recipes)
+print('n',len(recipes)); print('FIRST48=',repr(recipes[:48])); print('LAST15=',repr(recipes[48:]))

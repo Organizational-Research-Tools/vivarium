@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -763,3 +763,8 @@
+ r_MVZ4TQE9AY,qualification,QP-3617,p_4XMQ85H4SX,heat,seal hold temperature,4,78.15000,°C,lab_a,lab_a,8GP,D5U,VQ6,7TW,K3K,XD8,RZ8,9HJ,3XM,UX3,YX4,SU2
+ r_MVZ4TQE9AZ,qualification,QP-3617,p_4XMQ85H4SX,heat,seal hold temperature,5,78.27900,°C,lab_a,lab_a,8GP,D5U,VQ6,7TW,K3K,XD8,RZ8,9HJ,3XM,UX3,YX4,SU2
+ r_HKFPJ5SHV0,exploratory,QP-3617,p_V6SWCFNZDS,strength,edge crush resistance,,7.15610,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_N0G7SM8PE9,exploratory,QP-3617,p_V6SWCFNZDS,strength,edge crush resistance,,7.24001,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_N0G7SM8PEA,exploratory,QP-3617,p_V6SWCFNZDS,strength,edge crush resistance,,7.22264,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_N0G7SM8PEB,exploratory,QP-3617,p_V6SWCFNZDS,strength,edge crush resistance,,7.18124,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_N0G7SM8PEC,exploratory,QP-3617,p_V6SWCFNZDS,strength,edge crush resistance,,7.20845,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_N0G7SM8PED,exploratory,QP-3617,p_V6SWCFNZDS,strength,edge crush resistance,,7.16999,kN/m,lab_b,lab_d,,,,,,,,,,,,

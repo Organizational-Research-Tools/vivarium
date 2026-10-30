@@ -1,0 +1,39 @@
+
+# Analysis: What is the only working recipe neighborhood for PL-57 water?
+# p_4V8BTTYF7C: JA8/YX8/M2P/QJ2/6FA/44B/62D/2BR/N4L/7KL/DL8/3N8 → water 80.70% ✓
+# Changing pp1: 62D → 4QB should NOT affect water (pp1 not in any water interaction)
+# So JA8/YX8/M2P/QJ2/6FA/44B/4QB/2BR/N4L/7KL/DL8/3N8 should also give ~80.70% water ✓
+
+# Strength: lab_b estimates 4QB gives ~0.70 kN/m more than WB3 
+# Original strength: 6.554 kN/m with pp1=62D (unknown 62D vs WB3 difference)
+# lab_b estimates pp1=4QB would give ~7.254 kN/m → PASSES revision B ≥7.19 ✓
+
+# Heat: 78.19°C with pp1=62D, surface=7KL, pp3=N4L
+# Interaction: surface × pp1 × pp3 = 7KL × {62D→4QB} × N4L
+# Direction unknown — this is the critical uncertainty
+
+# Decision: register my own prototype to secure water receipts
+# Recipe: JA8/YX8/M2P/QJ2/6FA/44B/4QB/2BR/N4L/7KL/DL8/3N8
+modules = ["JA8", "YX8", "M2P", "QJ2", "6FA", "44B", "4QB", "2BR", "N4L", "7KL", "DL8", "3N8"]
+print("My proposed prototype (pp1=4QB, all else same as p_4V8BTTYF7C):")
+print(" / ".join(modules))
+print()
+print("Water interactions - pp1 (process_profile_1) NOT involved:")
+print("  add2 × joint × add3: 6FA × DL8 × 44B (unchanged)")
+print("  add3 × base × pp3: 44B × JA8 × N4L (unchanged)")  
+print("  conditioning × pp3 × add1: 3N8 × N4L × QJ2 (unchanged)")
+print("  pp3 × binder × base: N4L × M2P × JA8 (unchanged)")
+print("Expected water: ~80.70% ✓ (same neighborhood as p_4V8BTTYF7C)")
+print()
+print("Heat interactions that CHANGE with pp1=4QB:")
+print("  surface × pp1 × pp3: 7KL × {62D→4QB} × N4L — DIRECTION UNKNOWN")
+print("  (all other heat interactions unchanged)")
+print()
+print("Strength interactions that CHANGE with pp1=4QB:")
+print("  pp1 × add2 × add3: {62D→4QB} × 6FA × 44B — expected +0.70 kN/m per lab_b")
+print("  Expected strength: ~7.25 kN/m ✓")
+print()
+print("Also trying pp2 variant for heat improvement:")
+print("  Changing pp2: 2BR → VA8 (different surface×binder×pp2 interaction)")
+print("  surface × binder × pp2: 7KL × M2P × {2BR→VA8} → heat effect unknown")
+print("  add1 × pp2 × conditioning: QJ2 × {2BR→VA8} × 3N8 → heat effect unknown")

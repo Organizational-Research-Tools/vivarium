@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -783,3 +783,15 @@
+ r_F00BES1QC8,exploratory,QP-5993,p_0FBSJM80HR,water,wet strength retained,,79.2048,%,lab_c,lab_c,HP9,38J,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XS,YS6,G5Y
+ r_F00BES1QC9,exploratory,QP-5993,p_0FBSJM80HT,water,wet strength retained,,80.1760,%,lab_c,lab_c,HP9,38J,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,A6U,G5Y
+ r_F00BES1QCA,exploratory,QP-5993,p_0FBSJM80HW,water,wet strength retained,,79.0944,%,lab_c,lab_c,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,A6U,G5Y
++r_7RYE8AD3K7,exploratory,QP-5993,p_0FBSJM80HT,strength,edge crush resistance,,6.69101,kN/m,lab_e,lab_c,HP9,38J,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,A6U,G5Y
++r_7RYE8AD3K8,exploratory,QP-5993,p_0FBSJM80HT,strength,edge crush resistance,,6.65138,kN/m,lab_e,lab_c,HP9,38J,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,A6U,G5Y
++r_7RYE8AD3K9,exploratory,QP-5993,p_0FBSJM80HT,strength,edge crush resistance,,6.71978,kN/m,lab_e,lab_c,HP9,38J,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,A6U,G5Y
++r_F3VFF985N3,exploratory,QP-5993,p_MB5K3M1454,strength,edge crush resistance,,6.65339,kN/m,lab_e,lab_c,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XS,A6U,G5Y
++r_F3VFF985N4,exploratory,QP-5993,p_MB5K3M1454,strength,edge crush resistance,,6.57251,kN/m,lab_e,lab_c,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XS,A6U,G5Y
++r_F3VFF985N5,exploratory,QP-5993,p_MB5K3M1454,strength,edge crush resistance,,6.62495,kN/m,lab_e,lab_c,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XS,A6U,G5Y
++r_F3VFF985N6,exploratory,QP-5993,p_2JBYNWQ23C,strength,edge crush resistance,,6.65795,kN/m,lab_e,lab_c,HP9,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,V7P,6XS,YS6,G5Y
++r_F3VFF985N7,exploratory,QP-5993,p_2JBYNWQ23C,strength,edge crush resistance,,6.61787,kN/m,lab_e,lab_c,HP9,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,V7P,6XS,YS6,G5Y
++r_F3VFF985N8,exploratory,QP-5993,p_2JBYNWQ23C,strength,edge crush resistance,,6.55742,kN/m,lab_e,lab_c,HP9,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,V7P,6XS,YS6,G5Y
++r_7BZPZDFBYK,exploratory,QP-5993,p_5JM803X0WS,water,wet strength retained,,79.0372,%,lab_c,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,7UX,G5Y
++r_7BZPZDFBYM,exploratory,QP-5993,p_5JM803X0WS,water,wet strength retained,,79.4396,%,lab_c,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,7UX,G5Y
++r_7BZPZDFBYN,exploratory,QP-5993,p_5JM803X0WS,water,wet strength retained,,79.6436,%,lab_c,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,7UX,G5Y

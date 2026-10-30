@@ -1,0 +1,8 @@
+base=['SQ8','RK7','YC8','S7U','EB7','4CW','RZ8','9HJ','3XM','UX3','JE5','SU2']
+variants=[['H8Z','8GP','SQ8','QG7'],['5AC','D5U','6TX','RK7'],['VQ6','T5L','YC8','P8G'],['S7U','57Y','QG6','7TW'],['74N','F8Y','EB7','K3K'],['XD8','7BD','P2E','4CW'],['9VQ','2A4','RZ8','H9M'],['QE8','9HJ','2JH','8KZ'],['3XM','E3W','79B','FJ2'],['96Y','T6A','UX3','L2J'],['62B','JE5','YX4','4ZD'],['SU2','6YN','84Z','YT2']]
+recipes=[]
+for i,vs in enumerate(variants):
+ for v in vs:
+  if v==base[i] or (i==0 and v=='H8Z'): continue
+  r=base.copy();r[i]=v;recipes.append(r)
+print(len(recipes)); open('/tmp/candidates.txt','w').write(repr(recipes)); print(recipes)

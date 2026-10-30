@@ -1,0 +1,21 @@
+--- 
++++ 
+@@ -652,6 +652,18 @@
+ r_Q06F37QRWT,qualification,QP-5993,p_HM0GYQGX10,heat,seal hold temperature,3,78.17000,°C,lab_d,lab_e,HP9,38J,PU3,8BE,9KR,Z2E,5JK,4AL,V7P,6XN,A6U,G5Y
+ r_Q06F37QRWV,qualification,QP-5993,p_HM0GYQGX10,heat,seal hold temperature,4,78.38075,°C,lab_d,lab_e,HP9,38J,PU3,8BE,9KR,Z2E,5JK,4AL,V7P,6XN,A6U,G5Y
+ r_Q06F37QRWW,qualification,QP-5993,p_HM0GYQGX10,heat,seal hold temperature,5,78.45350,°C,lab_d,lab_e,HP9,38J,PU3,8BE,9KR,Z2E,5JK,4AL,V7P,6XN,A6U,G5Y
++r_36ENPZEFDV,qualification,QP-4069,p_D1SCJCXSMK,heat,seal hold temperature,0,78.22525,°C,lab_a,lab_b,,,,,,,,,,,,
++r_36ENPZEFDW,qualification,QP-4069,p_D1SCJCXSMK,heat,seal hold temperature,1,78.28575,°C,lab_a,lab_b,,,,,,,,,,,,
++r_36ENPZEFDX,qualification,QP-4069,p_D1SCJCXSMK,heat,seal hold temperature,2,78.52325,°C,lab_a,lab_b,,,,,,,,,,,,
++r_36ENPZEFDY,qualification,QP-4069,p_D1SCJCXSMK,heat,seal hold temperature,3,78.68825,°C,lab_a,lab_b,,,,,,,,,,,,
++r_36ENPZEFDZ,qualification,QP-4069,p_D1SCJCXSMK,heat,seal hold temperature,4,78.71050,°C,lab_a,lab_b,,,,,,,,,,,,
++r_36ENPZEFE0,qualification,QP-4069,p_D1SCJCXSMK,heat,seal hold temperature,5,78.87900,°C,lab_a,lab_b,,,,,,,,,,,,
++r_H8RA0ZR8YF,qualification,QP-1992,p_8QV6JFVW6M,water,wet strength retained,0,79.3872,%,lab_f,lab_b,,,,,,,,,,,,
++r_H8RA0ZR8YG,qualification,QP-1992,p_8QV6JFVW6M,water,wet strength retained,1,79.5780,%,lab_f,lab_b,,,,,,,,,,,,
++r_H8RA0ZR8YH,qualification,QP-1992,p_8QV6JFVW6M,water,wet strength retained,2,79.6552,%,lab_f,lab_b,,,,,,,,,,,,
++r_H8RA0ZR8YJ,qualification,QP-1992,p_8QV6JFVW6M,water,wet strength retained,3,80.1512,%,lab_f,lab_b,,,,,,,,,,,,
++r_H8RA0ZR8YK,qualification,QP-1992,p_8QV6JFVW6M,water,wet strength retained,4,79.2068,%,lab_f,lab_b,,,,,,,,,,,,
++r_H8RA0ZR8YM,qualification,QP-1992,p_8QV6JFVW6M,water,wet strength retained,5,79.2904,%,lab_f,lab_b,,,,,,,,,,,,
+ r_VR5MJFA4BV,exploratory,QP-1992,p_E16M0W72XT,strength,edge crush resistance,,7.22057,kN/m,lab_e,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,G5Y
+ r_VR5MJFA4BW,exploratory,QP-1992,p_E16M0W72XT,strength,edge crush resistance,,7.26983,kN/m,lab_e,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,G5Y
+ r_VR5MJFA4BX,exploratory,QP-1992,p_E16M0W72XW,strength,edge crush resistance,,7.25378,kN/m,lab_e,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,V8F

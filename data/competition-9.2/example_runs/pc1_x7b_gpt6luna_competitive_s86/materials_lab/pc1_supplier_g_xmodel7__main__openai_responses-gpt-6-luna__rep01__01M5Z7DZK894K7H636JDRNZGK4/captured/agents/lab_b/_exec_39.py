@@ -1,0 +1,8 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for p in ['p_SNNF91F2XB','p_H6M64FVH7B','p_S5W8G1Y5NY']:
+ q=x[x.prototype_id.eq(p)]
+ if len(q):
+  r=q.iloc[0]
+  print(p,r.project, [r[c] for c in x.columns[10:22]])
+  for t,g in q.groupby(['test','kind']):print(t,len(g),g.value.mean())

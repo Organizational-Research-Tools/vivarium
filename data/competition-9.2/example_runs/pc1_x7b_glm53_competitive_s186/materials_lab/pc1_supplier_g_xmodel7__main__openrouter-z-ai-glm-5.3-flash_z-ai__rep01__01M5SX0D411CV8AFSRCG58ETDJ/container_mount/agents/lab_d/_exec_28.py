@@ -1,0 +1,6 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+q=df[df.project=='QP-4757']
+h=q[q.test=='seal hold temperature'].groupby('prototype_id').value.mean()
+print(h.sort_values(ascending=False).head(12))
+print(df[df.prototype_id=='p_021YJYEVY6'].groupby('test').value.agg(['count','mean']))

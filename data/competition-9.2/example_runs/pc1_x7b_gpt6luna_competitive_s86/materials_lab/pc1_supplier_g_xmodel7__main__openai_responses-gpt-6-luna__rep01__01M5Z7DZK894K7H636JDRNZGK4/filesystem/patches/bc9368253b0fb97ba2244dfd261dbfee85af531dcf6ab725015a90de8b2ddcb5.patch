@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++D=pd.read_csv('records.csv')
++print(D.columns.tolist())
++for p in ['p_2M4216T3YK','p_2M4216T3YW','p_2M4216T3Z5']:
++ g=D[D.prototype_id==p]
++ print('\n',p, g[['project','kind','test','value','owner']].head(1).to_dict('records'))
++ print(g[[c for c in D.columns if c.startswith('module_') or c in ['project']]].head(1).to_dict('records'))
++ print(g.iloc[0].to_dict())

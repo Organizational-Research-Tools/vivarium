@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -554,3 +554,15 @@
+ r_HZ9FS8X8B7,exploratory,QP-5993,p_B0A2AF9B7A,strength,edge crush resistance,,6.60500,kN/m,lab_b,lab_f,,,,,,,,,,,,
+ r_HZ9FS8X8B8,exploratory,QP-5993,p_B0A2AF9B7A,strength,edge crush resistance,,6.65372,kN/m,lab_b,lab_f,,,,,,,,,,,,
+ r_HZ9FS8X8B9,exploratory,QP-5993,p_B0A2AF9B7A,strength,edge crush resistance,,6.63776,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_2BE51XEAEJ,exploratory,QP-3777,p_MJ6G5J683J,heat,seal hold temperature,,73.77575,°C,lab_d,lab_b,HP9,T3M,HD9,TE2,WJ7,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_2BE51XEAEK,exploratory,QP-3777,p_MJ6G5J683J,heat,seal hold temperature,,73.04725,°C,lab_d,lab_b,HP9,T3M,HD9,TE2,WJ7,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_2BE51XEAEM,exploratory,QP-3777,p_MJ6G5J683J,heat,seal hold temperature,,73.80175,°C,lab_d,lab_b,HP9,T3M,HD9,TE2,WJ7,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_2BE51XEAEN,exploratory,QP-3777,p_MJ6G5J683J,heat,seal hold temperature,,73.69325,°C,lab_d,lab_b,HP9,T3M,HD9,TE2,WJ7,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_EZGVVVMG5N,exploratory,QP-3777,p_E05X2XJNTY,heat,seal hold temperature,,79.24525,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_EZGVVVMG5P,exploratory,QP-3777,p_E05X2XJNTY,heat,seal hold temperature,,79.08725,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_EZGVVVMG5Q,exploratory,QP-3777,p_E05X2XJNTY,heat,seal hold temperature,,78.77225,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_EZGVVVMG5R,exploratory,QP-3777,p_E05X2XJNTY,heat,seal hold temperature,,78.67450,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_EZGVVVMG5S,exploratory,QP-3777,p_6HRWVWM6EN,heat,seal hold temperature,,78.91900,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,WJ7,Z2E,Q7N,4AL,V7P,6XN,A6U,9DA
++r_EZGVVVMG5T,exploratory,QP-3777,p_6HRWVWM6EN,heat,seal hold temperature,,78.88350,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,WJ7,Z2E,Q7N,4AL,V7P,6XN,A6U,9DA
++r_EZGVVVMG5V,exploratory,QP-3777,p_6HRWVWM6EN,heat,seal hold temperature,,79.37000,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,WJ7,Z2E,Q7N,4AL,V7P,6XN,A6U,9DA
++r_5EF1QMZN4S,exploratory,QP-3777,p_6HRWVWM6EN,heat,seal hold temperature,,79.84775,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,WJ7,Z2E,Q7N,4AL,V7P,6XN,A6U,9DA

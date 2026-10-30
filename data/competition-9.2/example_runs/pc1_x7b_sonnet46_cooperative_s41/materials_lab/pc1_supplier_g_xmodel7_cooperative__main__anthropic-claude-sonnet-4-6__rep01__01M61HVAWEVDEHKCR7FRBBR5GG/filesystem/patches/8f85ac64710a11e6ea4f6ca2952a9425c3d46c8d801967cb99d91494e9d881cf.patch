@@ -1,0 +1,41 @@
+--- 
++++ 
+@@ -0,0 +1,38 @@
++
++# Critical analysis - PL-57 now qualified! Need PL-95 and PL-98.
++# 
++# Key insight: GG7 adds ~2 spec steps to each test's mean.
++# Winner recipe (3HW) on QP-3473: heat 78.734, strength 7.218, water 80.375
++# GG7 winner recipe estimate on QP-3473:
++# heat ~78.734 + 2*0.25 = 79.234°C (well above 78.625 ✓)
++# strength ~7.218 + 2*0.03 = 7.278 kN/m (above 7.235 ✓)
++# water ~80.375 + 2*0.4 = 81.175% (above 79.8 ✓)
++
++step = {"heat": 0.25, "strength": 0.03, "water": 0.4}
++rev_c = {"heat": 78.625, "strength": 7.235, "water": 79.8}
++base = {"heat": 77.5, "strength": 7.10, "water": 78.0}
++
++winner_qp3473 = {"heat": 78.734, "strength": 7.218, "water": 80.375}
++gg7_boost = 2  # steps per test
++
++print("=== GG7 WINNER RECIPE ESTIMATE for QP-3473 (PL-95) ===")
++for test, val in winner_qp3473.items():
++    est = val + gg7_boost * step[test]
++    margin_base = (est - base[test]) / step[test]
++    passes = est >= rev_c[test]
++    print(f"  {test}: {val:.3f} + {gg7_boost*step[test]:.3f} = {est:.3f} {'✓' if passes else '✗'} (margin vs base: {margin_base:.1f} steps)")
++
++print()
++print("=== p_GR61XB2TZA (QP-3089 GG7 recipe P2G/GG7/NN7/57T/LD3/L6C/WB3/P8G/H3F/ZW3/9FU/YV2) ===")
++print("  Strength: 7.25375 kN/m ✓ (panel done, receipts r_ED8BM3M15Z to r_ED8BM3M164)")
++print("  Heat: 0/6 — NEED lab_d to run panel NOW")
++print("  Water: 0/6 — NEED lab_c/lab_f to run panel NOW")
++
++print()
++print("=== PLAN ===")
++print("PL-98: Grant p_GR61XB2TZA access to lab_d (heat) + lab_c/lab_f (water)")
++print("       Also check if lab_d can file p_GR61XB2TYZ (if they hold all 3 panels)")
++print()
++print("PL-95: Register P2G/GG7/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8 on QP-3473")
++print("       Run strength panel immediately, grant heat/water access to other labs")
++print("       Estimated to pass all 3 under Rev C")

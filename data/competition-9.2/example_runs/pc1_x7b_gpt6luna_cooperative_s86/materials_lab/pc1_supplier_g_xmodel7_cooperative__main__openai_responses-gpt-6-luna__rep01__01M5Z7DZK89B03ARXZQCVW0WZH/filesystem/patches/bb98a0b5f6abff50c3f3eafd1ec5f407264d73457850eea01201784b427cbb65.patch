@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -957,3 +957,27 @@
+ r_J9YSWH4YFH,exploratory,QP-5174,p_DEXW5M9VTD,heat,seal hold temperature,,71.56650,°C,lab_a,lab_a,QG7,RK7,VQ6,QG6,K3K,P2E,9VQ,2JH,FJ2,96Y,YX4,YT2
+ r_J9YSWH4YFJ,exploratory,QP-5174,p_DEXW5M9VTF,heat,seal hold temperature,,71.38825,°C,lab_a,lab_a,QG7,RK7,T5L,QG6,K3K,P2E,H9M,2JH,FJ2,L2J,YX4,YT2
+ r_J9YSWH4YFK,exploratory,QP-5174,p_DEXW5M9VTH,heat,seal hold temperature,,77.44300,°C,lab_a,lab_a,QG7,RK7,YC8,QG6,K3K,P2E,2A4,2JH,FJ2,96Y,YX4,YT2
++r_43VQ1QHEBV,qualification,QP-5174,p_YQ5AFZNXV8,heat,seal hold temperature,0,78.25350,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,T6A,YX4,YT2
++r_43VQ1QHEBW,qualification,QP-5174,p_YQ5AFZNXV8,heat,seal hold temperature,1,79.35800,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,T6A,YX4,YT2
++r_43VQ1QHEBX,qualification,QP-5174,p_YQ5AFZNXV8,heat,seal hold temperature,2,80.41250,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,T6A,YX4,YT2
++r_43VQ1QHEBY,qualification,QP-5174,p_YQ5AFZNXV8,heat,seal hold temperature,3,74.44850,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,T6A,YX4,YT2
++r_43VQ1QHEBZ,qualification,QP-5174,p_YQ5AFZNXV8,heat,seal hold temperature,4,75.24775,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,T6A,YX4,YT2
++r_43VQ1QHEC0,qualification,QP-5174,p_YQ5AFZNXV8,heat,seal hold temperature,5,76.43675,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,T6A,YX4,YT2
++r_43VQ1QHEC1,qualification,QP-5174,p_YQ5AFZNXV6,heat,seal hold temperature,0,79.65100,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,UX3,YX4,YT2
++r_43VQ1QHEC2,qualification,QP-5174,p_YQ5AFZNXV6,heat,seal hold temperature,1,80.76775,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,UX3,YX4,YT2
++r_43VQ1QHEC3,qualification,QP-5174,p_YQ5AFZNXV6,heat,seal hold temperature,2,74.61300,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,UX3,YX4,YT2
++r_43VQ1QHEC4,qualification,QP-5174,p_YQ5AFZNXV6,heat,seal hold temperature,3,75.61125,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,UX3,YX4,YT2
++r_43VQ1QHEC5,qualification,QP-5174,p_YQ5AFZNXV6,heat,seal hold temperature,4,76.67525,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,UX3,YX4,YT2
++r_43VQ1QHEC6,qualification,QP-5174,p_YQ5AFZNXV6,heat,seal hold temperature,5,78.60275,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,UX3,YX4,YT2
++r_43VQ1QHEC7,qualification,QP-5174,p_YQ5AFZNXTR,heat,seal hold temperature,0,76.92625,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,RZ8,2JH,FJ2,96Y,YX4,YT2
++r_43VQ1QHEC8,qualification,QP-5174,p_YQ5AFZNXTR,heat,seal hold temperature,1,78.68525,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,RZ8,2JH,FJ2,96Y,YX4,YT2
++r_43VQ1QHEC9,qualification,QP-5174,p_YQ5AFZNXTR,heat,seal hold temperature,2,79.86275,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,RZ8,2JH,FJ2,96Y,YX4,YT2
++r_43VQ1QHECA,qualification,QP-5174,p_YQ5AFZNXTR,heat,seal hold temperature,3,80.70950,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,RZ8,2JH,FJ2,96Y,YX4,YT2
++r_43VQ1QHECB,qualification,QP-5174,p_YQ5AFZNXTR,heat,seal hold temperature,4,74.73200,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,RZ8,2JH,FJ2,96Y,YX4,YT2
++r_43VQ1QHECC,qualification,QP-5174,p_YQ5AFZNXTR,heat,seal hold temperature,5,75.80625,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,RZ8,2JH,FJ2,96Y,YX4,YT2
++r_43VQ1QHECD,qualification,QP-5174,p_YQ5AFZNXTY,heat,seal hold temperature,0,76.66350,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,96Y,YX4,YT2
++r_43VQ1QHECE,qualification,QP-5174,p_YQ5AFZNXTY,heat,seal hold temperature,1,78.70550,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,96Y,YX4,YT2
++r_43VQ1QHECF,qualification,QP-5174,p_YQ5AFZNXTY,heat,seal hold temperature,2,79.70150,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,96Y,YX4,YT2
++r_43VQ1QHECG,qualification,QP-5174,p_YQ5AFZNXTY,heat,seal hold temperature,3,80.66750,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,96Y,YX4,YT2
++r_43VQ1QHECH,qualification,QP-5174,p_YQ5AFZNXTY,heat,seal hold temperature,4,74.65825,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,96Y,YX4,YT2
++r_43VQ1QHECJ,qualification,QP-5174,p_YQ5AFZNXTY,heat,seal hold temperature,5,75.73175,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,96Y,YX4,YT2

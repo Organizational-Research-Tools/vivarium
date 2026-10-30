@@ -1,0 +1,8 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+# means for recent eligible records and top prospect by test grouped across project
+z=x.groupby(['project','prototype_id','test','kind']).value.mean().unstack(['test','kind'])
+for p in ['QP-9273','QP-6879','QP-3617']:
+ print('\n',p)
+ s=z.loc[p] if p in z.index.get_level_values(0) else None
+ if s is not None: print(s.to_string())

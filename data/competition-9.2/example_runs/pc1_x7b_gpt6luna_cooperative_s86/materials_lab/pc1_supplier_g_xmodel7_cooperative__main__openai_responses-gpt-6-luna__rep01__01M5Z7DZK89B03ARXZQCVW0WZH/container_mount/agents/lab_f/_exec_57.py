@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x.columns.tolist());
+for proj in ['QP-6879','QP-3617','QP-9259']:
+ d=x[x.project==proj].drop_duplicates('prototype_id'); print('\n',proj); print(d[['prototype_id']+[c for c in d.columns if c.startswith('module')][:12]].to_string(index=False))

@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -1074,3 +1074,15 @@
+ r_6AGW7CH97V,qualification,QP-9219,p_HNZGFD3XEX,strength,edge crush resistance,3,6.55943,kN/m,lab_b,lab_a,8GP,RK7,YC8,S7U,EB7,XD8,RZ8,9HJ,3XM,96Y,4ZD,SU2
+ r_6AGW7CH97W,qualification,QP-9219,p_HNZGFD3XEX,strength,edge crush resistance,4,6.56033,kN/m,lab_b,lab_a,8GP,RK7,YC8,S7U,EB7,XD8,RZ8,9HJ,3XM,96Y,4ZD,SU2
+ r_6AGW7CH97X,qualification,QP-9219,p_HNZGFD3XEX,strength,edge crush resistance,5,6.58880,kN/m,lab_b,lab_a,8GP,RK7,YC8,S7U,EB7,XD8,RZ8,9HJ,3XM,96Y,4ZD,SU2
++r_SAWH5E5W2B,qualification,QP-8807,p_7S365TH6Y2,strength,edge crush resistance,0,7.23740,kN/m,lab_e,lab_e,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,2JH,FJ2,96Y,JE5,6YN
++r_SAWH5E5W2C,qualification,QP-8807,p_7S365TH6Y2,strength,edge crush resistance,1,7.24640,kN/m,lab_e,lab_e,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,2JH,FJ2,96Y,JE5,6YN
++r_SAWH5E5W2D,qualification,QP-8807,p_7S365TH6Y2,strength,edge crush resistance,2,7.27364,kN/m,lab_e,lab_e,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,2JH,FJ2,96Y,JE5,6YN
++r_SAWH5E5W2E,qualification,QP-8807,p_7S365TH6Y2,strength,edge crush resistance,3,7.27988,kN/m,lab_e,lab_e,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,2JH,FJ2,96Y,JE5,6YN
++r_SAWH5E5W2F,qualification,QP-8807,p_7S365TH6Y2,strength,edge crush resistance,4,7.20836,kN/m,lab_e,lab_e,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,2JH,FJ2,96Y,JE5,6YN
++r_SAWH5E5W2G,qualification,QP-8807,p_7S365TH6Y2,strength,edge crush resistance,5,7.22120,kN/m,lab_e,lab_e,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,2JH,FJ2,96Y,JE5,6YN
++r_2DCWTSSQMV,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,0,78.31650,°C,lab_a,lab_b,,,,,,,,,,,,
++r_2DCWTSSQMW,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,1,78.49525,°C,lab_a,lab_b,,,,,,,,,,,,
++r_2DCWTSSQMX,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,2,78.56725,°C,lab_a,lab_b,,,,,,,,,,,,
++r_2DCWTSSQMY,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,3,78.59025,°C,lab_a,lab_b,,,,,,,,,,,,
++r_2DCWTSSQMZ,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,4,78.65175,°C,lab_a,lab_b,,,,,,,,,,,,
++r_2DCWTSSQN0,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,5,78.16600,°C,lab_a,lab_b,,,,,,,,,,,,

@@ -1,0 +1,10 @@
+import pandas as pd
+d=pd.read_csv('records.csv')
+print(list(d.columns))
+ids=['p_2GM4Y6E0QT','p_E16M0W72XT','p_FBXNM8CX45','p_DJC2S9XNAS','p_YVP9748KDV','p_270D437D6S','p_1Z1DHPD5XB','p_FV6AK1FW56','p_XJPZECBH9Q','p_Y5EPMGMRXE']
+mods=[c for c in d.columns if c not in ('record_id','prototype_id','project','test','value','kind','owner','source','reading')]
+for i in ids:
+    r=d[d.prototype_id==i]
+    if len(r)==0: print(i,'none'); continue
+    print(i, r.project.iloc[0], r.kind.iloc[0], r.groupby('test').value.mean().round(3).to_dict())
+    print('  ', [str(r[c].iloc[0]) for c in mods])

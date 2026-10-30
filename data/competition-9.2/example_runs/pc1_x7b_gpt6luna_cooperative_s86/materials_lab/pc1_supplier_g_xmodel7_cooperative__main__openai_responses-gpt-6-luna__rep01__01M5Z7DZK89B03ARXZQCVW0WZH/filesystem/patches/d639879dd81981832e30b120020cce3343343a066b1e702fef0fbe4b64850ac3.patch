@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -377,3 +377,27 @@
+ r_33HS8ZXAF5,qualification,QP-9980,p_EZR46XFBAH,heat,seal hold temperature,3,78.29400,°C,lab_d,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,62B,YT2
+ r_33HS8ZXAF6,qualification,QP-9980,p_EZR46XFBAH,heat,seal hold temperature,4,77.85675,°C,lab_d,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,62B,YT2
+ r_33HS8ZXAF7,qualification,QP-9980,p_EZR46XFBAH,heat,seal hold temperature,5,77.97850,°C,lab_d,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,62B,YT2
++r_P4KHV039K2,qualification,QP-9259,p_9YW85TNK93,heat,seal hold temperature,0,79.02725,°C,lab_a,lab_e,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_P4KHV039K3,qualification,QP-9259,p_9YW85TNK93,heat,seal hold temperature,1,79.12025,°C,lab_a,lab_e,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_P4KHV039K4,qualification,QP-9259,p_9YW85TNK93,heat,seal hold temperature,2,78.60075,°C,lab_a,lab_e,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_P4KHV039K5,qualification,QP-9259,p_9YW85TNK93,heat,seal hold temperature,3,78.72700,°C,lab_a,lab_e,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_P4KHV039K6,qualification,QP-9259,p_9YW85TNK93,heat,seal hold temperature,4,78.73075,°C,lab_a,lab_e,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_P4KHV039K7,qualification,QP-9259,p_9YW85TNK93,heat,seal hold temperature,5,78.93150,°C,lab_a,lab_e,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_0Q7AWRKRNS,qualification,QP-9980,p_ZDYAYEX9AC,heat,seal hold temperature,0,78.17650,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,RZ8,8KZ,3XM,UX3,62B,YT2
++r_0Q7AWRKRNT,qualification,QP-9980,p_ZDYAYEX9AC,heat,seal hold temperature,1,78.29350,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,RZ8,8KZ,3XM,UX3,62B,YT2
++r_0Q7AWRKRNV,qualification,QP-9980,p_ZDYAYEX9AC,heat,seal hold temperature,2,78.34550,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,RZ8,8KZ,3XM,UX3,62B,YT2
++r_0Q7AWRKRNW,qualification,QP-9980,p_ZDYAYEX9AC,heat,seal hold temperature,3,78.54800,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,RZ8,8KZ,3XM,UX3,62B,YT2
++r_0Q7AWRKRNX,qualification,QP-9980,p_ZDYAYEX9AC,heat,seal hold temperature,4,77.97375,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,RZ8,8KZ,3XM,UX3,62B,YT2
++r_0Q7AWRKRNY,qualification,QP-9980,p_ZDYAYEX9AC,heat,seal hold temperature,5,78.03075,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,RZ8,8KZ,3XM,UX3,62B,YT2
++r_0Q7AWRKRNZ,qualification,QP-9980,p_EZR46XFBAD,heat,seal hold temperature,0,78.20675,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,4CW,2A4,8KZ,3XM,96Y,62B,YT2
++r_0Q7AWRKRP0,qualification,QP-9980,p_EZR46XFBAD,heat,seal hold temperature,1,78.25375,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,4CW,2A4,8KZ,3XM,96Y,62B,YT2
++r_0Q7AWRKRP1,qualification,QP-9980,p_EZR46XFBAD,heat,seal hold temperature,2,78.45300,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,4CW,2A4,8KZ,3XM,96Y,62B,YT2
++r_0Q7AWRKRP2,qualification,QP-9980,p_EZR46XFBAD,heat,seal hold temperature,3,78.59275,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,4CW,2A4,8KZ,3XM,96Y,62B,YT2
++r_0Q7AWRKRP3,qualification,QP-9980,p_EZR46XFBAD,heat,seal hold temperature,4,78.40950,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,4CW,2A4,8KZ,3XM,96Y,62B,YT2
++r_0Q7AWRKRP4,qualification,QP-9980,p_EZR46XFBAD,heat,seal hold temperature,5,78.57425,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,4CW,2A4,8KZ,3XM,96Y,62B,YT2
++r_MS09KFQ79V,qualification,QP-9980,p_EZR46XFBAH,heat,seal hold temperature,0,78.18775,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,62B,YT2
++r_MS09KFQ79W,qualification,QP-9980,p_EZR46XFBAH,heat,seal hold temperature,1,78.16750,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,62B,YT2
++r_MS09KFQ79X,qualification,QP-9980,p_EZR46XFBAH,heat,seal hold temperature,2,78.34850,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,62B,YT2
++r_MS09KFQ79Y,qualification,QP-9980,p_EZR46XFBAH,heat,seal hold temperature,3,78.34450,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,62B,YT2
++r_MS09KFQ79Z,qualification,QP-9980,p_EZR46XFBAH,heat,seal hold temperature,4,77.86500,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,62B,YT2
++r_MS09KFQ7A0,qualification,QP-9980,p_EZR46XFBAH,heat,seal hold temperature,5,78.12775,°C,lab_a,lab_c,SQ8,D5U,VQ6,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,62B,YT2

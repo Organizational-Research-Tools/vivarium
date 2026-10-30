@@ -1,0 +1,70 @@
+--- 
++++ 
+@@ -0,0 +1,67 @@
++
++import random
++
++# Module structure
++modules = [
++    ("base sheet", ["JA8", "P2G", "DA9", "U8H"]),
++    ("secondary sheet", ["3HW", "GG7", "5BU", "YX8"]),  # GG7 is banned
++    ("binder system", ["8BB", "M2P", "NN7", "T9M"]),
++    ("additive package 1", ["5FE", "R5N", "57T", "QJ2"]),
++    ("additive package 2", ["6FA", "B3P", "S2J", "LD3"]),
++    ("additive package 3", ["L6C", "4PE", "QJ4", "44B"]),
++    ("process profile 1", ["4QB", "62D", "UP5", "WB3"]),
++    ("process profile 2", ["P8G", "C5Q", "VA8", "2BR"]),
++    ("process profile 3", ["N7N", "X9F", "H3F", "N4L"]),
++    ("surface treatment", ["ZW3", "5TZ", "7KL", "7TJ"]),
++    ("joint system", ["9FU", "57U", "DL8", "4GD"]),
++    ("conditioning step", ["YV2", "6JZ", "3N8", "G8Q"]),
++]
++
++def gen_recipe_from_indices(indices):
++    """Generate recipe from list of variant indices (0-3) for each module"""
++    recipe = []
++    for i, (name, variants) in enumerate(modules):
++        recipe.append(variants[indices[i]])
++    return recipe
++
++def safe_recipe(indices):
++    """Ensure no GG7"""
++    r = list(indices)
++    if r[1] == 1:  # secondary sheet GG7
++        r[1] = 0
++    return r
++
++# Generate a diverse set of 48 recipes
++random.seed(12345)
++batch_recipes = []
++
++# 1. All variants single-change from baseline (0,0,0,...,0)
++baseline = [0]*12
++
++# For each module, try all 4 variants (excluding GG7)
++for module_idx in range(12):
++    for variant_idx in range(4):
++        if module_idx == 1 and variant_idx == 1:  # Skip GG7
++            continue
++        r = baseline[:]
++        r[module_idx] = variant_idx
++        recipe = gen_recipe_from_indices(r)
++        if recipe not in batch_recipes:
++            batch_recipes.append(recipe)
++
++# 2. Some random diverse recipes
++for _ in range(100):
++    r = [random.randint(0, 3) for _ in range(12)]
++    if r[1] == 1:
++        r[1] = random.choice([0, 2, 3])
++    recipe = gen_recipe_from_indices(r)
++    if recipe not in batch_recipes:
++        batch_recipes.append(recipe)
++        if len(batch_recipes) >= 48:
++            break
++
++batch_recipes = batch_recipes[:48]
++print(f"Total recipes to create: {len(batch_recipes)}")
++print("\nSample recipes:")
++for i in [0, 12, 24, 36, 47]:
++    print(f"  Recipe {i}: {batch_recipes[i]}")

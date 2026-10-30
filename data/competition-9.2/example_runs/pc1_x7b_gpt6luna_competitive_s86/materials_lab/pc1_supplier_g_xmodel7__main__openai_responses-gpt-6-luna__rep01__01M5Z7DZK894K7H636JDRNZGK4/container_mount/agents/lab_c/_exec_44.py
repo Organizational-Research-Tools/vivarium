@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for p in ['p_ZFC88N6EWW','p_ZFC88N6EX7','p_YZTF8EKPRY','p_0ZT0B1FRFV','p_NBE0SSEEDQ']:
+ z=x[x.prototype_id.eq(p)];print('\n',p); print(z[['record_id','test','value','measured_by','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].to_string(index=False))

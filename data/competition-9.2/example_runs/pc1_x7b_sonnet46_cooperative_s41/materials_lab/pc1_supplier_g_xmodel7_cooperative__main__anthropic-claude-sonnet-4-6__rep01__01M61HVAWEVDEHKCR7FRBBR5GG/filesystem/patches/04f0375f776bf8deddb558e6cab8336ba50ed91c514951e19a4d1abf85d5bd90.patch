@@ -1,0 +1,46 @@
+--- 
++++ 
+@@ -0,0 +1,43 @@
++
++import pandas as pd
++pd.set_option('display.max_columns', None)
++pd.set_option('display.width', 300)
++
++df = pd.read_csv('records.csv')
++
++comp_cols = ['base_sheet','secondary_sheet','binder_system','additive_package_1',
++             'additive_package_2','additive_package_3','process_profile_1',
++             'process_profile_2','process_profile_3','surface_treatment',
++             'joint_system','conditioning_step']
++
++# Get full panel summary per recipe (using main prototype ID - the first in each group)
++panels = df[df['kind']=='qualification'].groupby(
++    ['project','prototype_id','test']
++)['value'].mean().reset_index()
++panels.columns = ['project','prototype_id','test','mean']
++pivot = panels.pivot_table(index=['project','prototype_id'], columns='test', values='mean')
++pivot.columns = ['strength','heat','water']
++pivot = pivot.reset_index()
++
++comp = df[comp_cols + ['prototype_id']].drop_duplicates('prototype_id')
++full = pivot.merge(comp, on='prototype_id', how='left')
++
++# Thresholds
++H, S, W = 77.5, 7.1, 78.0
++full['h_pass'] = full['heat'] >= H
++full['s_pass'] = full['strength'] >= S
++full['w_pass'] = full['water'] >= W
++
++# Show only those with water values
++water_data = full[full['water'].notna()].copy()
++water_data['w_margin'] = water_data['water'] - W
++print("=== WATER PERFORMANCE ===")
++print(water_data[['project','prototype_id','water','w_margin','w_pass','heat','strength','secondary_sheet'] + comp_cols].to_string())
++
++print("\n=== KEY PATTERN: recipes with passing water ===")
++water_pass = water_data[water_data['w_pass']==True]
++print(water_pass[['project','prototype_id','water'] + comp_cols].to_string())
++
++print("\n=== KEY PATTERN: recipes with failing water ===")
++water_fail = water_data[water_data['w_pass']==False]
++print(water_fail[['project','prototype_id','water'] + comp_cols].to_string())

@@ -1,0 +1,5 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+q=x[x.kind.eq('qualification')].groupby(['project','prototype_id','test']).value.mean().unstack()
+q=q.reset_index()
+print(q[q.project.isin(['QP-6879','QP-3617','QP-9273'])].to_string(index=False))

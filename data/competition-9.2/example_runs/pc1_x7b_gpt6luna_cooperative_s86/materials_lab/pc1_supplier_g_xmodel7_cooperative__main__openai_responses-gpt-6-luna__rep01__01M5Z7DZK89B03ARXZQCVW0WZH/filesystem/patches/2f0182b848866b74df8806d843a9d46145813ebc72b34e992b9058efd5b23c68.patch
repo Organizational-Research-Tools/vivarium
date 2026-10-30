@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -1731,3 +1731,27 @@
+ r_TC0PGAYWVW,qualification,QP-9259,p_5B8A3997NZ,heat,seal hold temperature,3,78.81650,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,4ZD,SU2
+ r_TC0PGAYWVX,qualification,QP-9259,p_5B8A3997NZ,heat,seal hold temperature,4,78.84925,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,4ZD,SU2
+ r_TC0PGAYWVY,qualification,QP-9259,p_5B8A3997NZ,heat,seal hold temperature,5,79.06725,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,4ZD,SU2
++r_0HVQZR6HN4,qualification,QP-9980,p_RKZ9AMQWT8,water,wet strength retained,0,80.9524,%,lab_c,lab_b,SQ8,D5U,T5L,57Y,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_0HVQZR6HN5,qualification,QP-9980,p_RKZ9AMQWT8,water,wet strength retained,1,80.4328,%,lab_c,lab_b,SQ8,D5U,T5L,57Y,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_0HVQZR6HN6,qualification,QP-9980,p_RKZ9AMQWT8,water,wet strength retained,2,80.6508,%,lab_c,lab_b,SQ8,D5U,T5L,57Y,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_YA44PHAPKM,qualification,QP-9980,p_RKZ9AMQWT8,water,wet strength retained,3,80.6716,%,lab_c,lab_b,SQ8,D5U,T5L,57Y,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_YA44PHAPKN,qualification,QP-9980,p_RKZ9AMQWT8,water,wet strength retained,4,80.7764,%,lab_c,lab_b,SQ8,D5U,T5L,57Y,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_YA44PHAPKP,qualification,QP-9980,p_RKZ9AMQWT8,water,wet strength retained,5,81.0256,%,lab_c,lab_b,SQ8,D5U,T5L,57Y,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_YA44PHAPKQ,qualification,QP-9980,p_RKZ9AMQWTA,water,wet strength retained,0,80.9440,%,lab_c,lab_b,SQ8,D5U,T5L,QG6,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_YA44PHAPKR,qualification,QP-9980,p_RKZ9AMQWTA,water,wet strength retained,1,80.2892,%,lab_c,lab_b,SQ8,D5U,T5L,QG6,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_YA44PHAPKS,qualification,QP-9980,p_RKZ9AMQWTA,water,wet strength retained,2,80.3200,%,lab_c,lab_b,SQ8,D5U,T5L,QG6,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_YA44PHAPKT,qualification,QP-9980,p_RKZ9AMQWTA,water,wet strength retained,3,80.4832,%,lab_c,lab_b,SQ8,D5U,T5L,QG6,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_YA44PHAPKV,qualification,QP-9980,p_RKZ9AMQWTA,water,wet strength retained,4,80.9580,%,lab_c,lab_b,SQ8,D5U,T5L,QG6,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_YA44PHAPKW,qualification,QP-9980,p_RKZ9AMQWTA,water,wet strength retained,5,81.0256,%,lab_c,lab_b,SQ8,D5U,T5L,QG6,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_2PAJXK2753,qualification,QP-9980,p_RKZ9AMQWT8,heat,seal hold temperature,0,78.43075,°C,lab_a,lab_b,SQ8,D5U,T5L,57Y,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_2PAJXK2754,qualification,QP-9980,p_RKZ9AMQWT8,heat,seal hold temperature,1,78.65600,°C,lab_a,lab_b,SQ8,D5U,T5L,57Y,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_2PAJXK2755,qualification,QP-9980,p_RKZ9AMQWT8,heat,seal hold temperature,2,78.77650,°C,lab_a,lab_b,SQ8,D5U,T5L,57Y,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_2PAJXK2756,qualification,QP-9980,p_RKZ9AMQWT8,heat,seal hold temperature,3,78.18600,°C,lab_a,lab_b,SQ8,D5U,T5L,57Y,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_2PAJXK2757,qualification,QP-9980,p_RKZ9AMQWT8,heat,seal hold temperature,4,78.29275,°C,lab_a,lab_b,SQ8,D5U,T5L,57Y,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_2PAJXK2758,qualification,QP-9980,p_RKZ9AMQWT8,heat,seal hold temperature,5,78.47650,°C,lab_a,lab_b,SQ8,D5U,T5L,57Y,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_2PAJXK2759,qualification,QP-9980,p_RKZ9AMQWTA,heat,seal hold temperature,0,78.59125,°C,lab_a,lab_b,SQ8,D5U,T5L,QG6,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_2PAJXK275A,qualification,QP-9980,p_RKZ9AMQWTA,heat,seal hold temperature,1,78.59850,°C,lab_a,lab_b,SQ8,D5U,T5L,QG6,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_2PAJXK275B,qualification,QP-9980,p_RKZ9AMQWTA,heat,seal hold temperature,2,78.56675,°C,lab_a,lab_b,SQ8,D5U,T5L,QG6,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_2PAJXK275C,qualification,QP-9980,p_RKZ9AMQWTA,heat,seal hold temperature,3,78.06375,°C,lab_a,lab_b,SQ8,D5U,T5L,QG6,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_2PAJXK275D,qualification,QP-9980,p_RKZ9AMQWTA,heat,seal hold temperature,4,78.25975,°C,lab_a,lab_b,SQ8,D5U,T5L,QG6,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_2PAJXK275E,qualification,QP-9980,p_RKZ9AMQWTA,heat,seal hold temperature,5,78.43250,°C,lab_a,lab_b,SQ8,D5U,T5L,QG6,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2

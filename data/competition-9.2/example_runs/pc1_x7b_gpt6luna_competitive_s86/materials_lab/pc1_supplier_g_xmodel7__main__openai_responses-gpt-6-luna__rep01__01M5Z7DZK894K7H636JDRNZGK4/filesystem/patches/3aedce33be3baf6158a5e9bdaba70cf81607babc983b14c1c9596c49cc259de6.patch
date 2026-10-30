@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd
++r=pd.read_csv('records.csv')
++r=r[r.project=='QP-8807']
++print(r.groupby(['prototype_id','test','kind']).agg(mean=('value','mean'),n=('value','size'),by=('measured_by','first')).to_string())
++print('\nknown recipes')
++cols=['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++print(r[cols].drop_duplicates().to_string(index=False))

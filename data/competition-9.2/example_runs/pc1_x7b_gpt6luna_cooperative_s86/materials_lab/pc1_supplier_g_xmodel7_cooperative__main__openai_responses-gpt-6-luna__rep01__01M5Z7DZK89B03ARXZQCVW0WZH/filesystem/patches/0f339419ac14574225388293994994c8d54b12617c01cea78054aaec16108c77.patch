@@ -1,0 +1,16 @@
+--- 
++++ 
+@@ -0,0 +1,13 @@
++import pandas as pd
++r=pd.read_csv('records.csv')
++# project rec/test, only panel means
++q=r[r.kind=='qualification'].groupby(['project','prototype_id','test','measured_by'],dropna=False).value.agg(['mean','count']).reset_index()
++# recipes latest merged first row
++rec=r.drop_duplicates('prototype_id').set_index('prototype_id')
++for p in ['QP-5174','QP-7092','QP-9273','QP-9980']:
++ print('\n',p)
++ z=q[q.project==p].pivot_table(index='prototype_id',columns='test',values='mean')
++ if len(z):
++  print(z.round(4).to_string())
++  print(rec.loc[z.index,['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].to_string())
++ else: print('none')

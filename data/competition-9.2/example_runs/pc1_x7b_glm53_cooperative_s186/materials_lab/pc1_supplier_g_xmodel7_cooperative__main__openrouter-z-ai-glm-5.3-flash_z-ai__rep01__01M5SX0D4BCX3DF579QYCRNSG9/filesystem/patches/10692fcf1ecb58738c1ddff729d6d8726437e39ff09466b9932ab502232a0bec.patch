@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -0,0 +1,12 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++q = df[df.project=='QP-8476']
++print('T3M rows:', (q.secondary_sheet=='T3M').sum(), (df.secondary_sheet=='T3M').sum())
++print('2JU rows:', (q.conditioning_step=='2JU').sum())
++# heat on QP-8476 grouped by secondary x binder
++h = q[q.test=='seal hold temperature']
++g = h.groupby(['secondary_sheet','binder_system'])['value'].agg(['mean','count']).sort_values('mean',ascending=False)
++print(g)
++# water rows on QP-8476 by secondary
++w = q[q.test=='wet strength retained']
++print(w.groupby(['secondary_sheet','binder_system'])['value'].agg(['mean','count']).sort_values('mean',ascending=False))

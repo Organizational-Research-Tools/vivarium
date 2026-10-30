@@ -1,0 +1,7 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+y=x[(x.project=='QP-3617') & (x.kind=='exploratory')]
+print(y.groupby(['prototype_id','instrument','test','measured_by']).agg(n=('value','size'),mean=('value','mean')).to_string())
+print('\nNew candidates all records:')
+z=x[x.prototype_id.isin(['p_V6SWCFNZDB','p_V6SWCFNZDD','p_V6SWCFNZDF','p_V6SWCFNZDH','p_V6SWCFNZDK','p_V6SWCFNZDN','p_V6SWCFNZDQ','p_V6SWCFNZDS','p_V6SWCFNZDV','p_V6SWCFNZDX','p_2H5CVCPPAM','p_2H5CVCPPAP'])]
+print(z.groupby(['prototype_id','instrument','test','kind','measured_by']).agg(n=('value','size'),mean=('value','mean')).to_string())

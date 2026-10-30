@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -0,0 +1,4 @@
++import pandas as pd
++D=pd.read_csv('records.csv'); mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++for pid in ['p_8ATRDK3V3Z']:
++ x=D[D.prototype_id==pid]; print(len(x)); print(x[mods].drop_duplicates().to_string(index=False)); print(x.groupby('instrument').value.mean())

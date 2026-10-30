@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x.columns.tolist()); ids=['p_7S365TH6Y2','p_M605F69WTX','p_M605F69WTZ','p_M605F69WV1'];print(x[x.prototype_id.isin(ids)].to_string(index=False))

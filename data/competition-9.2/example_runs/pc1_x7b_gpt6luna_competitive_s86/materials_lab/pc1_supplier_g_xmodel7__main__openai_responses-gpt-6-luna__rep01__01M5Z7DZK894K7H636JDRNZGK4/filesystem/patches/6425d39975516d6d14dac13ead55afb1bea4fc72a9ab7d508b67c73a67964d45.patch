@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++y=x[(x.project=='QP-9219') & (x.instrument=='water')]
++print(y.shape, y.groupby(['prototype_id','kind','measured_by']).size().value_counts().to_dict())
++print(y[['record_id','kind','prototype_id','value','measured_by','base_sheet']].tail(20).to_string(index=False))
++print('unique prototypes',y.prototype_id.nunique())

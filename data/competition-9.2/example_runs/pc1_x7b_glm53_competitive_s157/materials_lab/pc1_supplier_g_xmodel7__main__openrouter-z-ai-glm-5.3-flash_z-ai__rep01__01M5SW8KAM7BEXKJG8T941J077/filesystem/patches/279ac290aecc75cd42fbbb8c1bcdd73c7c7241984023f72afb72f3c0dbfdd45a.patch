@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -469,3 +469,6 @@
+ r_AC286AKPCM,qualification,QP-5653,p_62ECQJKMBA,water,wet strength retained,3,78.4572,%,lab_c,lab_a,,,,,,,,,,,,
+ r_AC286AKPCN,qualification,QP-5653,p_62ECQJKMBA,water,wet strength retained,4,78.6296,%,lab_c,lab_a,,,,,,,,,,,,
+ r_AC286AKPCP,qualification,QP-5653,p_62ECQJKMBA,water,wet strength retained,5,77.5252,%,lab_c,lab_a,,,,,,,,,,,,
++r_TZNBC2HBP6,exploratory,QP-5653,p_BDEMP3A2RZ,water,wet strength retained,,77.8568,%,lab_c,lab_d,,,,,,,,,,,,
++r_TZNBC2HBP7,exploratory,QP-5653,p_BDEMP3A2S5,water,wet strength retained,,78.5444,%,lab_c,lab_d,,,,,,,,,,,,
++r_TZNBC2HBP8,exploratory,QP-5653,p_BDEMP3A2S3,water,wet strength retained,,78.4464,%,lab_c,lab_d,,,,,,,,,,,,

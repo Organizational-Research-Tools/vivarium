@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -517,3 +517,5 @@
+ r_14ZARPEGRB,exploratory,QP-6820,p_JYF4BAFNPN,water,wet strength retained,,71.4760,%,lab_f,lab_e,ZY6,TU4,KX7,Y7L,RB3,5B8,8Q7,T8R,3CV,VR3,34U,W5T
+ r_3MY9QPEVDC,exploratory,QP-2236,p_F22DN8MBC4,strength,edge crush resistance,,6.76973,kN/m,lab_e,lab_d,,,,,,,,,,,,
+ r_3MY9QPEVDD,exploratory,QP-2236,p_F22DN8MBC4,strength,edge crush resistance,,6.73685,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_FQ9HS27N1X,exploratory,QP-3068,p_9GSK1FB6QN,strength,edge crush resistance,,6.79622,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_FQ9HS27N1Y,exploratory,QP-3068,p_9GSK1FB6QN,strength,edge crush resistance,,6.72542,kN/m,lab_e,lab_d,,,,,,,,,,,,

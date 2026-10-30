@@ -1,0 +1,47 @@
+--- 
++++ 
+@@ -0,0 +1,44 @@
++
++# Revision B analysis - clear picture
++print("=== POST REVISION B STATUS ===")
++print()
++print("My QP-8265 report (rep_WNG4PRKQ9T): ACCEPTED but 2.00 steps (no credit, needs ≥3 steps)")
++print("QP-8265 standing report: mine (2.00 steps) - project not yet 'qualified' for credit")
++print()
++print("REVISION B THRESHOLDS (base threshold + 3 steps):")
++print("  Heat:     77.5 + 3×0.25 = 78.25°C")
++print("  Strength: 7.10 + 3×0.03 = 7.19  kN/m")
++print("  Water:    78.0 + 3×0.40 = 79.20 %")
++print()
++
++# QP-8265 gap analysis
++h_b=78.25; s_b=7.19; w_b=79.2
++h_my=78.999; s_my=7.160; w_my=79.198
++print("QP-8265 current gaps from Rev-B threshold:")
++print(f"  Heat:     {h_my:.3f} vs {h_b:.2f} → gap {h_my-h_b:+.3f}°C = {(h_my-h_b)/0.25:+.2f} steps  ✓ SAFE")
++print(f"  Strength: {s_my:.3f} vs {s_b:.2f} → gap {s_my-s_b:+.3f} kN/m = {(s_my-s_b)/0.03:+.2f} steps  NEED +0.09")
++print(f"  Water:    {w_my:.3f} vs {w_b:.2f} → gap {w_my-w_b:+.3f}% = {(w_my-w_b)/0.4:+.2f} steps  NEED +0.002%")
++print()
++
++# If pp1=4QB lifts strength by ~0.70 kN/m (heat also shifts, direction unknown):
++print("QP-8265 with pp1=4QB (conservative: strength +0.70, water unchanged ≈ ±noise):")
++s_4qb = s_my + 0.70
++print(f"  Strength: predicted {s_4qb:.3f} kN/m → margin {(s_4qb-7.10)/0.03:.1f} steps ✓")
++print(f"  Heat: will SHIFT due to surface×pp1×pp3 (ZW3×pp1×X9F). Current: {h_my}°C. Direction unknown.")
++print(f"  Water: 79.198% → essentially same, very close to 79.2. New panel needed.")
++print()
++
++# Critical: what data do I need for PL-57?
++print("PL-57 CRITICAL PATH:")
++print("  Lab_a JA8/YX8/M2P recipe: heat 78.19°C (FAILS 78.25 by 0.06°C = 0.24 steps)")
++print("  Lab_d's prototypes p_X9WN43AQ4V/X (heat 78.54/78.78) — lab_e testing strength NOW")
++print("  My new QP-4476 variants (pp1/pp2 changes): NOT YET MEASURED for strength")
++print()
++print("RISKS if pp1 changes heat for QP-4476 variants:")
++print("  Lab_a base had heat 78.19°C — below rev B threshold by 0.06°C")
++print("  If 4QB changes heat via surface×pp1×pp3 interaction (7KL×pp1×N4L):")
++print("    • If 4QB improves heat: 78.19 → 78.25+ → SOLVES heat!")
++print("    • If 4QB worsens heat: 78.19 → lower → FAILS harder")
++print("  Either way, strength likely improves IF pp1 affects strength (empirical data shows +0.70)")
++print()
++print("PRIORITY: Measure strength on my 4 QP-4476 variants NOW, then share with heat/water labs")

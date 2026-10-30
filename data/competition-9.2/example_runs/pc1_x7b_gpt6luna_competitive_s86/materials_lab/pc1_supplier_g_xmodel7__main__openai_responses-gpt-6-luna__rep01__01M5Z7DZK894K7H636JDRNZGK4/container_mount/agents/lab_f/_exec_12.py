@@ -1,0 +1,5 @@
+import pandas as pd
+D=pd.read_csv('records.csv')
+for p in ['p_0ZT0B1FRFV','p_7CHZ5Y38J7','p_FYYJT2KJ6Z','p_J10JMJBPKQ','p_PZ5NEVT5RZ']:
+ r=D[D.prototype_id==p].iloc[0]
+ print(p, ' '.join(str(r[x]) for x in D.columns[11:23]))

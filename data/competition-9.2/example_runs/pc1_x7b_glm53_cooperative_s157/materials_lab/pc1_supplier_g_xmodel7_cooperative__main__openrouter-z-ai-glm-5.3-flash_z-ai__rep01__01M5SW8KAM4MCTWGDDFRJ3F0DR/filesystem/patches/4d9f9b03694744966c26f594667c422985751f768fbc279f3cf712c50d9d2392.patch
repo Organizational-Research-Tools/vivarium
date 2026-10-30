@@ -1,0 +1,19 @@
+--- 
++++ 
+@@ -1,4 +1,16 @@
+ record_id,kind,project,prototype_id,instrument,test,specimen,value,unit,measured_by,requester,base_sheet,secondary_sheet,binder_system,additive_package_1,additive_package_2,additive_package_3,process_profile_1,process_profile_2,process_profile_3,surface_treatment,joint_system,conditioning_step
++r_C9SMW2XESA,qualification,QP-2236,p_C9SMW2XES8,heat,seal hold temperature,0,78.92375,°C,lab_d,lab_d,,,,,,,,,,,,
++r_C9SMW2XESB,qualification,QP-2236,p_C9SMW2XES8,heat,seal hold temperature,1,79.01900,°C,lab_d,lab_d,,,,,,,,,,,,
++r_C9SMW2XESC,qualification,QP-2236,p_C9SMW2XES8,heat,seal hold temperature,2,78.83350,°C,lab_d,lab_d,,,,,,,,,,,,
++r_C9SMW2XESD,qualification,QP-2236,p_C9SMW2XES8,heat,seal hold temperature,3,78.47550,°C,lab_d,lab_d,,,,,,,,,,,,
++r_C9SMW2XESE,qualification,QP-2236,p_C9SMW2XES8,heat,seal hold temperature,4,78.63225,°C,lab_d,lab_d,,,,,,,,,,,,
++r_C9SMW2XESF,qualification,QP-2236,p_C9SMW2XES8,heat,seal hold temperature,5,78.76900,°C,lab_d,lab_d,,,,,,,,,,,,
++r_GM7DHPGB58,qualification,QP-2236,p_4V8V03KF07,strength,edge crush resistance,0,7.25699,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_GM7DHPGB59,qualification,QP-2236,p_4V8V03KF07,strength,edge crush resistance,1,7.29680,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_GM7DHPGB5A,qualification,QP-2236,p_4V8V03KF07,strength,edge crush resistance,2,7.23080,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_GM7DHPGB5B,qualification,QP-2236,p_4V8V03KF07,strength,edge crush resistance,3,7.21898,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_GM7DHPGB5C,qualification,QP-2236,p_4V8V03KF07,strength,edge crush resistance,4,7.26116,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_GM7DHPGB5D,qualification,QP-2236,p_4V8V03KF07,strength,edge crush resistance,5,7.25363,kN/m,lab_e,lab_e,,,,,,,,,,,,
+ r_GM7DHPGB5K,qualification,QP-2236,p_GM7DHPGB5H,water,wet strength retained,0,81.0892,%,lab_f,lab_f,8Z2,TU4,27X,X2P,RB3,8P4,8Q7,5UV,G4B,9B8,G7L,7MP
+ r_GM7DHPGB5M,qualification,QP-2236,p_GM7DHPGB5H,water,wet strength retained,1,80.3900,%,lab_f,lab_f,8Z2,TU4,27X,X2P,RB3,8P4,8Q7,5UV,G4B,9B8,G7L,7MP
+ r_GM7DHPGB5N,qualification,QP-2236,p_GM7DHPGB5H,water,wet strength retained,2,80.7048,%,lab_f,lab_f,8Z2,TU4,27X,X2P,RB3,8P4,8Q7,5UV,G4B,9B8,G7L,7MP

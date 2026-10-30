@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -502,3 +502,7 @@
+ r_PXPSH3060S,qualification,QP-3617,p_6HZQR01SMB,heat,seal hold temperature,3,74.39275,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_PXPSH3060T,qualification,QP-3617,p_6HZQR01SMB,heat,seal hold temperature,4,74.54525,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_PXPSH3060V,qualification,QP-3617,p_6HZQR01SMB,heat,seal hold temperature,5,74.55975,°C,lab_a,lab_e,,,,,,,,,,,,
++r_MF188V1KX9,exploratory,QP-3617,p_DEH7S6TG4Y,heat,seal hold temperature,,78.87500,°C,lab_a,lab_b,,,,,,,,,,,,
++r_MF188V1KXA,exploratory,QP-3617,p_DEH7S6TG50,heat,seal hold temperature,,78.08950,°C,lab_a,lab_b,,,,,,,,,,,,
++r_MF188V1KXB,exploratory,QP-3617,p_DEH7S6TG5A,heat,seal hold temperature,,78.68850,°C,lab_a,lab_b,,,,,,,,,,,,
++r_MF188V1KXC,exploratory,QP-3617,p_DEH7S6TG5C,heat,seal hold temperature,,78.60700,°C,lab_a,lab_b,,,,,,,,,,,,

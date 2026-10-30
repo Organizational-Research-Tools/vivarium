@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -211,3 +211,7 @@
+ r_S3FEMETB9D,exploratory,QP-8864,p_GGE02Q54QT,heat,seal hold temperature,,78.31900,°C,lab_a,lab_a,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T
+ r_S3FEMETB9E,exploratory,QP-8864,p_GGE02Q54QT,heat,seal hold temperature,,78.57150,°C,lab_a,lab_a,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T
+ r_S3FEMETB9F,exploratory,QP-8864,p_GGE02Q54QT,heat,seal hold temperature,,78.18900,°C,lab_a,lab_a,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T
++r_PGJCSNJCDB,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.16285,kN/m,lab_b,lab_a,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T
++r_RKM1FAV5Z9,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.21148,kN/m,lab_b,lab_a,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T
++r_RKM1FAV5ZA,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.25198,kN/m,lab_b,lab_a,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T
++r_RKM1FAV5ZB,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.26137,kN/m,lab_b,lab_a,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T

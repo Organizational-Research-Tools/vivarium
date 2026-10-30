@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import gh %}
+{% block title %}trace — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / trace</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "trace") }}
+
+<div class="card sticky">
+  <form class="filters" method="get">
+    <span title="clean = the conversation as the agents experienced it; full = every event in the archive, infrastructure included">
+      <a href="{{ request.url.include_query_params(view='clean', page=1) }}"
+         {% if view == 'clean' %}style="font-weight:650"{% endif %}>clean</a> ·
+      <a href="{{ request.url.include_query_params(view='full', page=1) }}"
+         {% if view == 'full' %}style="font-weight:650"{% endif %}>full</a>
+    </span>
+    <input type="hidden" name="view" value="{{ view }}">
+    {% for name in ("agent", "family", "event_class", "channel", "audience", "phase") %}
+    <select name="{{ name }}" onchange="this.form.submit()" title="{{ GLOSSARY.get({"agent": "agents", "family": "family", "event_class": "event class", "channel": "channel", "audience": "audience", "phase": "phase"}[name], "") }}">
+      <option value="">{{ name }}: all</option>
+      {% for v in facets[name if name != 'event_class' else 'event_class'] %}
+      <option value="{{ v }}" {% if active[name] == v %}selected{% endif %}>{{ v }}</option>
+      {% endfor %}
+    </select>
+    {% endfor %}
+    {% if days %}
+    <select name="day" onchange="this.form.submit()" title="one logical day (from clock.round)">
+      <option value="">day: all</option>
+      {% for d in days %}<option value="{{ d }}" {% if day == d %}selected{% endif %}>day {{ d }}</option>{% endfor %}
+    </select>
+    {% endif %}
+    <input type="text" name="turn" value="{{ active.turn or '' }}" placeholder="turn id" size="10">
+    <input type="text" name="q" value="{{ q }}" placeholder="text contains…">
+    <button type="submit">Filter</button>
+    <a href="/run/{{ run_ref }}/trace?view={{ view }}">reset</a>
+    <span class="dim" style="margin-left:auto">{{ n_rows }} rows · {{ n_events }} events
+      {% if n_pages > 1 %} · page {{ page }}/{{ n_pages }}
+      {% if page > 1 %}<a href="{{ request.url.include_query_params(page=page-1) }}">←</a>{% endif %}
+      {% if page < n_pages %}<a href="{{ request.url.include_query_params(page=page+1) }}">→</a>{% endif %}
+      {% endif %}</span>
+  </form>
+</div>
+
+<div class="card">
+  {% if not rows %}<p class="dim">No events match.</p>{% else %}
+  <table>
+    <thead><tr><th class="num">{{ gh("seq") }}</th>{% if days %}<th class="num">day</th>{% endif %}<th>{{ gh("agents", "agent") }}</th><th>{{ gh("event class", "event") }}</th><th>content</th></tr></thead>
+    <tbody>
+    {% for r in rows %}
+      {% set e = r.e %}
+      <tr>
+        <td class="num"><a href="/run/{{ run_ref }}/event/{{ e.event_id }}">{{ e.sequence_number }}</a>{% if e.event_id in ann %} <a href="/run/{{ run_ref }}/event/{{ e.event_id }}" title="{{ ann[e.event_id]|map(attribute='namespace')|join(', ') }}">◆</a>{% endif %}</td>
+        {% if days %}<td class="num">{% if r.day is not none %}<a href="{{ request.url.include_query_params(day=r.day, page=1) }}" style="color:var(--ink-muted)">{{ r.day }}</a>{% endif %}</td>{% endif %}
+        <td>{{ e.agent_id or "·" }}</td>
+        {% if r.kind == "prose" %}
+        <td class="dim"><em>says</em></td>
+        <td style="white-space:pre-wrap; max-width:60rem">{{ r.text }}</td>
+        {% else %}
+        <td><code>{{ e.event_class }}</code></td>
+        <td style="white-space:pre-wrap; max-width:60rem">{{ r.text }}{% if e.turn_id %} <span class="dim">[{{ e.turn_id }}]</span>{% endif %}</td>
+        {% endif %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+  {% if n_pages > 1 %}
+  <p>
+    {% if page > 1 %}<a href="{{ request.url.include_query_params(page=page-1) }}">← prev</a>{% endif %}
+    <span class="dim">page {{ page }} / {{ n_pages }}</span>
+    {% if page < n_pages %}<a href="{{ request.url.include_query_params(page=page+1) }}">next →</a>{% endif %}
+  </p>
+  {% endif %}
+</div>
+
+{% endblock %}

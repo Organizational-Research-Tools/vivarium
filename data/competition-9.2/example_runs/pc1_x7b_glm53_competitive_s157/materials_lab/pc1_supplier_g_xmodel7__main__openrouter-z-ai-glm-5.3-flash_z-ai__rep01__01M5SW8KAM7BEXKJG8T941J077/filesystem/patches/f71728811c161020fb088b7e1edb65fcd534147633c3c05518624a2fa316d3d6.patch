@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -474,3 +474,9 @@
+ r_TZNBC2HBP8,exploratory,QP-5653,p_BDEMP3A2S3,water,wet strength retained,,78.4464,%,lab_c,lab_d,,,,,,,,,,,,
+ r_3F83Y8FHAK,exploratory,QP-5653,p_BDEMP3A2S5,water,wet strength retained,,79.1136,%,lab_c,lab_d,,,,,,,,,,,,
+ r_3F83Y8FHAM,exploratory,QP-5653,p_BDEMP3A2S5,water,wet strength retained,,78.9200,%,lab_c,lab_d,,,,,,,,,,,,
++r_87QCCVDXD2,qualification,QP-5653,p_MWBXGZXWA5,water,wet strength retained,0,78.6212,%,lab_c,lab_a,,,,,,,,,,,,
++r_87QCCVDXD3,qualification,QP-5653,p_MWBXGZXWA5,water,wet strength retained,1,78.5776,%,lab_c,lab_a,,,,,,,,,,,,
++r_87QCCVDXD4,qualification,QP-5653,p_MWBXGZXWA5,water,wet strength retained,2,77.9896,%,lab_c,lab_a,,,,,,,,,,,,
++r_87QCCVDXD5,qualification,QP-5653,p_MWBXGZXWA5,water,wet strength retained,3,77.9872,%,lab_c,lab_a,,,,,,,,,,,,
++r_87QCCVDXD6,qualification,QP-5653,p_MWBXGZXWA5,water,wet strength retained,4,78.1320,%,lab_c,lab_a,,,,,,,,,,,,
++r_87QCCVDXD7,qualification,QP-5653,p_MWBXGZXWA5,water,wet strength retained,5,78.2908,%,lab_c,lab_a,,,,,,,,,,,,

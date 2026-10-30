@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -584,3 +584,4 @@
+ r_JNT2PZC16M,exploratory,QP-5993,p_9T7PGPYM56,strength,edge crush resistance,,7.32728,kN/m,lab_b,lab_f,,,,,,,,,,,,
+ r_JNT2PZC16N,exploratory,QP-5993,p_9T7PGPYM56,strength,edge crush resistance,,7.29554,kN/m,lab_b,lab_f,,,,,,,,,,,,
+ r_JNT2PZC16P,exploratory,QP-5993,p_9T7PGPYM56,strength,edge crush resistance,,7.36706,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_JGV3REFX1X,exploratory,QP-5993,p_BKVHDNHTCH,strength,edge crush resistance,,7.28108,kN/m,lab_b,lab_c,,,,,,,,,,,,

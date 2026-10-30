@@ -1,0 +1,55 @@
+{
+  "archive_valid": true,
+  "clock_label": null,
+  "closed": true,
+  "context_budget": null,
+  "cost_by_role": {
+    "lab_a": 0.208684,
+    "lab_b": 0.305793,
+    "lab_c": 0.222974,
+    "lab_d": 0.265291,
+    "lab_e": 0.350761,
+    "lab_f": 0.258198
+  },
+  "cost_usd": 1.6117023900000016,
+  "difficulty": "main",
+  "exposure_confounded": false,
+  "label": "unassisted",
+  "model_ref": "openrouter/z-ai/glm-5.3-flash@z-ai",
+  "output_tokens": 348216,
+  "output_tokens_by_role": {
+    "lab_a": 48366,
+    "lab_b": 69615,
+    "lab_c": 53443,
+    "lab_d": 60609,
+    "lab_e": 59810,
+    "lab_f": 56373
+  },
+  "parity_basis": "usd",
+  "parity_regime": null,
+  "partial_score": 0.0,
+  "passed": false,
+  "preset_id": "pc1_supplier_g_xmodel7_cooperative",
+  "realized_reasoning_kind": {
+    "lab_a": "summary",
+    "lab_b": "summary",
+    "lab_c": "summary",
+    "lab_d": "summary",
+    "lab_e": "summary",
+    "lab_f": "summary"
+  },
+  "role_model_refs": {
+    "lab_a": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_b": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_c": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_d": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_e": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_f": "openrouter/z-ai/glm-5.3-flash@z-ai"
+  },
+  "rounds_total": null,
+  "scored": true,
+  "scorer_label": "no credit",
+  "uncertain_usd": 0.0,
+  "unsettled_calls": 0,
+  "unsettled_usd": 0.0
+}

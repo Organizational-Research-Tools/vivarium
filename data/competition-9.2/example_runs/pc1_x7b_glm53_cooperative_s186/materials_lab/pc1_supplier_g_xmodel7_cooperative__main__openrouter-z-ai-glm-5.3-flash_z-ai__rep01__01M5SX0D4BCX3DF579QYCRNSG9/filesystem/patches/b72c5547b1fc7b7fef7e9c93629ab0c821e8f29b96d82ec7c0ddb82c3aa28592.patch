@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -803,3 +803,6 @@
+ r_37V1P6WTFC,exploratory,QP-7065,p_5T4MDE1ANA,strength,edge crush resistance,,7.18400,kN/m,lab_e,lab_d,,,,,,,,,,,,
+ r_37V1P6WTFD,exploratory,QP-7065,p_5T4MDE1ANA,strength,edge crush resistance,,7.23623,kN/m,lab_e,lab_d,,,,,,,,,,,,
+ r_37V1P6WTFE,exploratory,QP-7065,p_5T4MDE1ANA,strength,edge crush resistance,,7.22630,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_9A78ZHBNEW,exploratory,QP-7065,p_B32XMM9H85,strength,edge crush resistance,,7.24922,kN/m,lab_e,lab_e,V2W,TN6,QU7,G7U,2Y6,2CS,8KT,9AH,X9S,83B,3Y7,V8F
++r_9A78ZHBNEX,exploratory,QP-7065,p_B32XMM9H85,strength,edge crush resistance,,7.17803,kN/m,lab_e,lab_e,V2W,TN6,QU7,G7U,2Y6,2CS,8KT,9AH,X9S,83B,3Y7,V8F
++r_9A78ZHBNEY,exploratory,QP-7065,p_B32XMM9H85,strength,edge crush resistance,,7.20809,kN/m,lab_e,lab_e,V2W,TN6,QU7,G7U,2Y6,2CS,8KT,9AH,X9S,83B,3Y7,V8F

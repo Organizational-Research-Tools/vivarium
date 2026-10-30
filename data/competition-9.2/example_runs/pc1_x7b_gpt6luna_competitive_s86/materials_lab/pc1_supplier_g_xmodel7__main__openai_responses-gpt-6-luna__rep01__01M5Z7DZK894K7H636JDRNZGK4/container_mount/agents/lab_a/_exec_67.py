@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x[x.prototype_id.isin(['p_HNZGFD3XEX','p_WBS7VRK9ZY'])][['record_id','kind','project','prototype_id','test','value','measured_by']].to_string(index=False))

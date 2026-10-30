@@ -1,0 +1,97 @@
+
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv("records.csv")
+modules = ['base_sheet','secondary_sheet','binder_system','additive_package_1',
+           'additive_package_2','additive_package_3','process_profile_1','process_profile_2',
+           'process_profile_3','surface_treatment','joint_system','conditioning_step']
+
+# Get unique recipes (per prototype_id) 
+recipe_info = df[['prototype_id','project'] + modules].drop_duplicates('prototype_id')
+
+# Get complete panel summaries from the my_records data
+# The my_records showed these as "complete on all three":
+complete_combos = {
+    'QP-4476': {
+        'proto': 'p_MYEZCT24H1',  # same recipe as p_RS3V6C2DTG and p_RS3V6C2DTS
+        'heat': 78.659, 'strength': 6.700, 'water': 78.655,
+        'note': 'fails strength'
+    },
+    'QP-6843_A': {
+        'proto': 'p_20FMYAYEB9',  # same recipe as p_D4CH3W5KAA, p_D4CH3W5KAK
+        'heat': 74.472, 'strength': 7.170, 'water': 78.936,
+        'note': 'fails heat'
+    },
+    'QP-6843_B': {
+        'proto': 'p_2H2TKFDYRQ',  # same recipe as p_7BA9F130NH, p_4RVR94TWX4
+        'heat': 74.502, 'strength': 7.204, 'water': 78.985,
+        'note': 'fails heat'
+    },
+    'QP-3473_GG7': {
+        'proto': 'p_8E3MPG688H',  # GG7 recipe - PASSES ALL
+        'heat': 79.531, 'strength': 7.254, 'water': 80.850,
+        'note': 'PASSES ALL but uses GG7!'
+    },
+    'QP-3473_B': {
+        'proto': 'p_YWCAXWQPCB',  # same recipe as p_YWCAXWQPCM, p_FC7E87JJTH
+        'heat': 78.175, 'strength': 7.181, 'water': 73.227,
+        'note': 'fails water'
+    },
+    'QP-3473_C': {
+        'proto': 'p_1BSGFCX6Q8',  # same recipe as p_1BSGFCX6QH, p_1BSGFCX6QT
+        'heat': 78.281, 'strength': 7.194, 'water': 72.996,
+        'note': 'fails water'
+    },
+    'QP-7212_A': {
+        'proto': 'p_DQFXMS728T',  # same recipe as p_DQFXMS7293, p_DQFXMS729C
+        'heat': 78.197, 'strength': 7.244, 'water': 73.448,
+        'note': 'fails water'
+    },
+    'QP-7212_B': {
+        'proto': 'p_ERK3YD03GV',  # same recipe as p_ERK3YD03H4, p_ERK3YD03HD
+        'heat': 78.222, 'strength': 7.187, 'water': 73.489,
+        'note': 'fails water'
+    },
+    'QP-7212_C': {
+        'proto': 'p_M9C39Z8ZAH',  # same recipe as p_5HB53C74E5, p_5HB53C74EE
+        'heat': 78.200, 'strength': 7.184, 'water': 73.454,
+        'note': 'fails water'
+    },
+    'QP-3089_main': {
+        'proto': 'p_9N4J1S2GVS',  # same recipe as p_9N4J1S2GW2, p_9N4J1S2GWB
+        'heat': 79.049, 'strength': 6.459, 'water': 78.478,
+        'note': 'fails strength'
+    },
+    'QP-8265': {
+        'proto': 'p_BQ5YN7X4HF',  # same recipe as p_BQ5YN7X4HR, p_BW587HPKGF
+        'heat': 71.411, 'strength': 6.502, 'water': 71.047,
+        'note': 'fails all!'
+    },
+}
+
+print("=== COMPLETE PANEL RESULTS (from my_records) ===")
+print(f"{'Key':<15} {'Heat':>7} {'Str':>7} {'Water':>7} {'Note'}")
+print("-"*70)
+thresholds = {'heat':77.5, 'strength':7.10, 'water':78.0}
+for key, data in complete_combos.items():
+    h = data['heat']; s = data['strength']; w = data['water']
+    hm = (h-77.5)/0.25; sm = (s-7.10)/0.03; wm = (w-78.0)/0.4
+    wkm = min(hm,sm,wm)
+    flag = '✓PASS' if h>=77.5 and s>=7.10 and w>=78.0 else '✗'
+    print(f"{key:<15} {h:>7.2f} {s:>7.3f} {w:>7.2f}  wk={wkm:+.1f}steps  {flag}  {data['note']}")
+
+print()
+print("=== RECIPE COMPOSITIONS ===")
+for key, data in complete_combos.items():
+    pid = data['proto']
+    rec = recipe_info[recipe_info['prototype_id']==pid]
+    if len(rec):
+        row = rec.iloc[0]
+        print(f"\n{key} ({pid}):")
+        for m in modules:
+            val = row[m] if pd.notna(row.get(m, None)) else '?'
+            flag = ' ← GG7!' if val=='GG7' else ''
+            print(f"  {m:25s}: {val}{flag}")
+    else:
+        print(f"\n{key}: recipe NOT in records.csv")

@@ -1,0 +1,342 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import howto %}
+{% from "_story_item.html" import story_css %}
+{% block title %}replay — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / replay</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "replay") }}
+
+{% call howto() %}
+  <p>The replay plays the saved record back against the time since the run's first event. Press play, drag the timeline, or click the activity strip under it to jump; the strip shows how many messages fell in each stretch of the run, so busy periods are easy to find.</p>
+  <p><strong>The conversation</strong> shows every message as it was sent, one line each with its opening words; the newest is shown in full, and a click keeps any other open. By default the replay moves <strong>a message at a time</strong> (every 3 or 5 seconds), so a back-and-forth can be read turn by turn, and ◀ ▶| step by hand; stepping follows the kinds and the pair you have chosen. <em>Real time</em> instead moves the clock at the chosen speed. The messages carry their recorded text: notes, posts to the board, handoffs (a work product passed to a role; one sent to several roles in a row is one message), and the task's registered exchanges. The task's exchanges start hidden so the talk reads first; the buttons above the conversation switch each kind on or off, and the graph follows them. Messages appear as the cursor reaches them, newest at the bottom; those before the window are faded. To follow one back-and-forth, click an arrow in the graph or a name in a message: the conversation then keeps the messages between those two roles in both directions. A message says nothing about whether it was read or understood.</p>
+  <p><strong>The graph</strong> draws the messages in the window (the last minute, five minutes, fifteen minutes, or everything so far): an arrow's width counts them, and an arrow is highlighted when one fell in the last tenth of the window. A node is filled while its agent has a model call or a tool call open; that is recorded work, not what the model attends to.</p>
+  <p><strong>Everything, in lanes</strong> (folded at the bottom) is the live view's lanes for the whole run, revealed the same way. {% if n_rows > cap %}This run has {{ n_rows }} lane rows at this detail; the first {{ cap }} are loaded.{% endif %}</p>
+{% endcall %}
+
+{{ story_css() }}
+{% include "_lanes_css.html" %}
+<style>
+  .rbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; }
+  .rbar button, .rkinds button { font: inherit; padding: 0.25rem 0.8rem; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); cursor: pointer; }
+  .rbar button.on, .rkinds button.on { border-color: var(--ink); font-weight: 650; }
+  .rkinds button:not(.on) { color: var(--ink-muted); text-decoration: line-through; }
+  .rclock { font-variant-numeric: tabular-nums; font-size: 18px; font-weight: 650; min-width: 9rem; }
+  #rscrub { width: 100%; margin: 0.4rem 0 0; }
+  #rstrip { width: 100%; height: 34px; display: block; cursor: pointer; }
+  .rgrid { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 0.75rem; align-items: start; }
+  @media (max-width: 900px) { .rgrid { grid-template-columns: 1fr; } }
+  #rgraph { width: 100%; height: auto; display: block; }
+  #rgraph path { cursor: pointer; }
+  #rgraph .node-busy { stroke: var(--good); stroke-width: 4; }
+  #rconv { max-height: 62vh; overflow-y: auto; padding-right: 0.3rem; }
+  .rmsg { border: 1px solid var(--hairline); border-left: 3px solid var(--ink-2); border-radius: 6px; padding: 0.35rem 0.55rem; margin: 0.35rem 0; background: var(--surface); }
+  .rmsg.k-note { border-left-color: var(--s5, #4a3aa7); }
+  .rmsg.k-post { border-left-color: var(--ink-2); }
+  .rmsg.k-handoff { border-left-color: var(--s1, #2a78d6); }
+  .rmsg.k-exchange { border-left-color: var(--serious); }
+  .rmsg.rpast { opacity: 0.45; }
+  .rmsg { cursor: pointer; padding: 0.2rem 0.5rem; margin: 0.2rem 0; }
+  .rmsg .rhead { font-size: 12.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rmsg .rsnip { color: var(--ink-2); }
+  .rmsg .rbody { display: none; white-space: pre-wrap; margin: 0.25rem 0 0.1rem; font-size: 13px; overflow-wrap: anywhere; cursor: text; }
+  .rmsg.open .rbody, .rmsg.rlatest .rbody { display: block; }
+  .rmsg.open .rhead, .rmsg.rlatest .rhead { white-space: normal; }
+  .rmsg.open .rsnip, .rmsg.rlatest .rsnip { display: none; }
+  .rmsg.rlatest { box-shadow: 0 0 0 2px color-mix(in srgb, var(--serious) 35%, transparent); }
+  .rbar button:disabled { opacity: 0.4; cursor: default; }
+  .rmsg .rwho { cursor: pointer; font-weight: 650; }
+  .rmsg .rwho:hover { text-decoration: underline; }
+  .rkinds { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0 0 0.4rem; align-items: center; }
+  .rpair { font-size: 12.5px; }
+  .llanes .lrow.rpast, .llanes .lsep.rpast { opacity: 0.35; }
+  #lfeed { max-height: 60vh; overflow-y: auto; border: 1px solid var(--border); border-radius: 8px; }
+  .ropts { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin: 0.5rem 0; }
+  .ropts fieldset { border: 1px solid var(--hairline); border-radius: 8px; padding: 0.2rem 0.6rem 0.35rem; margin: 0; }
+  .ropts legend { font-size: 11px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.04em; padding: 0 0.3rem; }
+  .ropts label { display: inline-flex; align-items: center; gap: 0.25rem; margin-right: 0.6rem; font-size: 13px; cursor: pointer; color: var(--ink-2); }
+  .ropts label.on { color: var(--ink); font-weight: 650; }
+</style>
+
+{% if not data.timed %}
+<div class="card"><p class="dim">{% if not data.n_events %}This run's record is empty: it was started but wrote no events, so there is nothing to replay.{% else %}This run's events carry no timestamps, so there is nothing to replay in time. The <a href="/run/{{ run_ref }}/story">Story</a> reads it in order.{% endif %}</p></div>
+{% else %}
+{% if data.span_s is not none and data.span_s < 5 %}
+<p class="banner superseded">The whole run took {{ data.span_s }} seconds{% if data.span_s < 1 %}, as an offline run with a simulated model does{% endif %}, so its events are nearly simultaneous; the replay is stretched to one second and shows their order, not timing.</p>
+{% endif %}
+<div class="card">
+  <div class="rbar">
+    <button type="button" id="rprev" title="the previous message">◀</button>
+    <button type="button" id="rplay">▶ play</button>
+    <button type="button" id="rnext" title="the next message">▶|</button>
+    <span class="rclock" id="rclock">0:00</span>
+    <span class="dim">pace</span>
+    {% for v, label in ((5, "a message every 5 s"), (3, "every 3 s"), (0, "real time")) %}<button type="button" class="rpace{{ ' on' if v == 3 }}" data-v="{{ v }}">{{ label }}</button>{% endfor %}
+    <span class="dim rspeedlabel">speed</span>
+    {% for x in (10, 30, 60, 120) %}<button type="button" class="rspeed{{ ' on' if x == 30 }}" data-x="{{ x }}">{{ x }}×</button>{% endfor %}
+    <span class="dim">window</span>
+    {% for w, label in ((60, "1 min"), (300, "5 min"), (900, "15 min"), (0, "all so far")) %}<button type="button" class="rwin{{ ' on' if w == 300 }}" data-w="{{ w }}">{{ label }}</button>{% endfor %}
+  </div>
+  <input type="range" id="rscrub" min="0" max="{{ data.duration }}" step="0.5" value="0" aria-label="replay position">
+  <canvas id="rstrip" aria-label="messages over time; click to jump"></canvas>
+</div>
+
+<div class="rgrid">
+  <div class="card">
+    <h2>The conversation <span class="dim" id="rcount" style="font-weight:400"></span></h2>
+    <div class="rkinds">
+      <span class="dim" style="font-size:12px">show</span>
+      {% for k, label in (("note", "notes"), ("post", "board posts"), ("handoff", "handoffs"), ("exchange", "exchanges")) %}
+      <button type="button" class="rkind{{ ' on' if k != 'exchange' }}" data-kind="{{ k }}">{{ label }}</button>
+      {% endfor %}
+      <span class="rpair" id="rpair"></span>
+    </div>
+    <div id="rconv"></div>
+  </div>
+  <div class="card">
+    <h2>Who dealt with whom, in the window</h2>
+    <svg id="rgraph" viewBox="0 0 {{ data.w }} {{ data.h }}" role="img" aria-label="interaction graph over the replay window">
+      <defs>
+        <marker id="rarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--ink-2)"/></marker>
+        <marker id="rarr-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--serious)"/></marker>
+      </defs>
+      <g id="redges"></g>
+      {% for n in data.nodes %}
+      {% if n.board %}
+      <rect x="{{ n.x - 26 }}" y="{{ n.y - 12 }}" width="52" height="24" rx="4" fill="var(--s5, #4a3aa7)" fill-opacity="0.15" stroke="var(--s5, #4a3aa7)"/>
+      <text x="{{ n.x }}" y="{{ n.y + 4 }}" font-size="11" text-anchor="middle" fill="var(--ink)">board</text>
+      {% else %}
+      <circle id="rn-{{ n.id }}" cx="{{ n.x }}" cy="{{ n.y }}" r="16" class="adot-{{ aslot.get(n.id, -1) }}" fill="currentColor" fill-opacity="0.25" stroke="var(--hairline)"><title>{{ n.id }}</title></circle>
+      <text x="{{ n.x }}" y="{{ n.y + 30 }}" font-size="11" text-anchor="middle" fill="var(--ink)">{{ n.id }}</text>
+      {% endif %}
+      {% endfor %}
+    </svg>
+    <p class="dim" style="margin:0.3rem 0 0; font-size:12px">filled: a model or tool call open · arrow width: messages in the window · <span style="color:var(--serious)">highlighted</span>: the newest · click an arrow to follow that pair</p>
+  </div>
+</div>
+
+<details class="card">
+  <summary>Everything, in lanes <span class="dim">· milestones, what agents said, and more, by role</span></summary>
+  <form method="get" class="ropts">
+    <fieldset><legend>detail</legend>
+      {% for d in depths %}<label class="{{ 'on' if d == depth }}"><input type="radio" name="depth" value="{{ d }}" {% if d == depth %}checked{% endif %} onchange="this.form.submit()"> {{ depth_label(d, has_board) }}</label>{% endfor %}
+    </fieldset>
+    <fieldset><legend>group by</legend>
+      {% for b in group_bys %}<label class="{{ 'on' if b == by }}"><input type="radio" name="by" value="{{ b }}" {% if b == by %}checked{% endif %} onchange="this.form.submit()"> {{ {"auto": "automatic", "packet": "role packet", "attention": "attention scope", "none": "no groups"}[b] }}</label>{% endfor %}
+    </fieldset>
+  </form>
+  <div id="lfeed" class="story llanes" style="--lanes: {{ lanes|length }}">
+    <div class="lrow lhead"><div class="ltime dim">time</div>{% for l in lanes %}<div class="lcell" style="grid-column: {{ loop.index + 1 }}">{% if l.name == "board" %}<strong>board</strong>{% else %}{% if l.members|length == 1 %}<span class="adot-{{ aslot.get(l.members[0], -1) }}"></span>{% endif %}<strong>{{ l.name }}</strong>{% if l.members|length > 1 %} <span class="dim">· {{ l.members|length }}</span>{% endif %}{% endif %}</div>{% endfor %}</div>
+    {{ lanes_html|safe }}
+  </div>
+</details>
+
+<script type="application/json" id="rdata">{{ data|tojson }}</script>
+<script type="application/json" id="rslots">{{ aslot|tojson }}</script>
+<script>
+(function () {
+  var D = JSON.parse(document.getElementById("rdata").textContent);
+  var SLOT = JSON.parse(document.getElementById("rslots").textContent);
+  var RUN = {{ ("/run/" ~ run_ref)|tojson }};
+  var T = D.duration, cursor = 0, playing = false, speed = 30, win = 300, last = null;
+  // the talk first: the task's exchanges (grants, shares) start hidden, one click away
+  var kinds = { note: true, post: true, handoff: true, exchange: false }, pair = null;
+  var pos = {}; D.nodes.forEach(function (n) { pos[n.id] = n; });
+  var scrub = document.getElementById("rscrub"), clock = document.getElementById("rclock");
+  var edges = document.getElementById("redges"), conv = document.getElementById("rconv");
+  var feed = document.getElementById("lfeed");
+  var laneRows = Array.prototype.slice.call(feed.querySelectorAll(".lrow[data-t], .lsep[data-t]"));
+  function fmt(s) { s = Math.max(0, Math.round(s)); var m = Math.floor(s / 60); return m + ":" + ("0" + (s % 60)).slice(-2); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function kindOf(m) { return { note: "note", post: "post", handoff: "handoff" }[m.kind] || "exchange"; }
+  function who(a) { return '<span class="rwho" data-who="' + esc(a) + '"><span class="adot-' + (a in SLOT ? SLOT[a] : -1) + '"></span> ' + esc(a) + "</span>"; }
+  // one element per message, built once, so an opened "more" stays open while playing
+  var msgs = D.messages.map(function (m) {
+    var el = document.createElement("div");
+    el.className = "rmsg k-" + kindOf(m);
+    var body = m.text || "";
+    var snip = body.replace(/^\[note from [^\]]*\]\s*/, "").replace(/\s+/g, " ").slice(0, 160);
+    el.innerHTML = '<div class="rhead"><span class="dim">' + fmt(m.t) + "</span> " + who(m.from) + ' <span class="dim">→</span> ' +
+      m.to.map(who).join(", ") + ' <span class="dim">· ' + esc(m.kind) + '</span> <a class="dim" href="' + RUN + "/event/" + esc(m.event_id) +
+      '" title="open the event record">[' + m.seq + "]</a>" + (snip ? ' <span class="rsnip">' + esc(snip) + (body.length > snip.length ? "…" : "") + "</span>" : "") + "</div>" +
+      (body ? '<div class="rbody">' + esc(body) + "</div>" : "");
+    conv.appendChild(el);
+    return { m: m, el: el, k: kindOf(m), i: conv.children.length - 1 };
+  });
+  // Messages are revealed by position, not only by time, so that several sent in the
+  // same second can be read one at a time. ``upto`` is the last revealed message.
+  var upto = -1, pace = 3, stepTimer = null;
+  function uptoFor(t) { var u = -1; msgs.forEach(function (x) { if (x.m.t <= t) u = x.i; }); return u; }
+  function readable(x) { return kinds[x.k] && inPair(x.m); }
+  conv.addEventListener("click", function (ev) {
+    if (ev.target.closest(".rwho, a, .rbody")) return;
+    var el = ev.target.closest(".rmsg"); if (el) el.classList.toggle("open");
+  });
+  function inPair(m) {
+    if (!pair) return true;
+    var parties = [m.from].concat(m.to);
+    return parties.indexOf(pair[0]) >= 0 && (pair[1] === null || parties.indexOf(pair[1]) >= 0) &&
+           (pair[1] === null || m.from === pair[0] || m.from === pair[1]);
+  }
+  function setPair(a, b) {
+    pair = a ? [a, b] : null;
+    document.getElementById("rpair").innerHTML = pair ? ' · only <strong>' + esc(a) + "</strong>" + (b ? " ⇄ <strong>" + esc(b) + "</strong>" : "") +
+      ' <a href="#" id="rpairx">show everyone</a>' : "";
+    var x = document.getElementById("rpairx");
+    if (x) x.addEventListener("click", function (ev) { ev.preventDefault(); setPair(null); });
+    draw(true);
+  }
+  conv.addEventListener("click", function (ev) {
+    var w = ev.target.closest(".rwho"); if (!w) return;
+    var a = w.dataset.who;
+    if (pair && pair[0] !== a && pair[1] === null) setPair(pair[0], a); else setPair(a, null);
+  });
+  function curve(a, b) {
+    var dx = b.x - a.x, dy = b.y - a.y, L = Math.hypot(dx, dy) || 1, nx = -dy / L, ny = dx / L;
+    var cx = (a.x + b.x) / 2 + nx * 22, cy = (a.y + b.y) / 2 + ny * 22;
+    return "M" + a.x + "," + a.y + " Q" + cx + "," + cy + " " + (b.x - dx / L * 20) + "," + (b.y - dy / L * 20);
+  }
+  function dayAt(t) { var d = null; D.days.forEach(function (x) { if (x.t <= t) d = x.day; }); return d; }
+  function busyAt(a, t) { return (D.busy[a] || []).some(function (iv) { return iv[0] <= t && t <= iv[1]; }); }
+  function draw(jump) {
+    var lo = win ? cursor - win : -1, hot = win ? cursor - win / 10 : cursor - Math.max(T / 50, 30);
+    // graph: messages in the window, by kind shown
+    var pairs = {};
+    D.acts.forEach(function (x) {
+      if (x.t > cursor || x.t <= lo) return;
+      var k = { note: "note", post: "post", handoff: "handoff" }[x.kind] || "exchange";
+      if (!kinds[k]) return;
+      var key = x.from + "→" + x.to;
+      var p = pairs[key] = pairs[key] || { from: x.from, to: x.to, n: 0, hot: false };
+      p.n++; if (x.t > hot) p.hot = true;
+    });
+    var max = 1; Object.keys(pairs).forEach(function (k) { max = Math.max(max, pairs[k].n); });
+    var svg = "";
+    Object.keys(pairs).forEach(function (k) {
+      var p = pairs[k], a = pos[p.from], b = pos[p.to];
+      if (!a || !b) return;
+      var sel = pair && ((pair[0] === p.from && pair[1] === p.to) || (pair[0] === p.to && pair[1] === p.from));
+      svg += '<path data-from="' + esc(p.from) + '" data-to="' + esc(p.to) + '" d="' + curve(a, b) + '" fill="none" stroke="' +
+        (p.hot || sel ? "var(--serious)" : "var(--ink-2)") + '" stroke-opacity="' + (p.hot || sel ? 0.95 : 0.45) +
+        '" stroke-width="' + ((sel ? 2 : 1) + 5 * p.n / max).toFixed(1) + '" marker-end="url(#' + (p.hot || sel ? "rarr-hot" : "rarr") +
+        ')"><title>' + esc(p.from) + " → " + esc(p.to) + ": " + p.n + " in the window (click to follow)</title></path>";
+    });
+    edges.innerHTML = svg;
+    D.agents.forEach(function (a) {
+      var c = document.getElementById("rn-" + a); if (!c) return;
+      var b = busyAt(a, cursor);
+      c.setAttribute("fill-opacity", b ? "0.95" : "0.2");
+      c.setAttribute("class", c.getAttribute("class").replace(/ node-busy/, "") + (b ? " node-busy" : ""));
+    });
+    var d = dayAt(cursor);
+    clock.textContent = fmt(cursor) + " / " + fmt(T) + (d != null ? " · day " + d : "");
+    scrub.value = cursor;
+    // conversation: messages so far, faded before the window
+    var shown = 0, inWin = 0, lastEl = null;
+    msgs.forEach(function (x) {
+      x.el.classList.remove("rlatest");
+      var ok = x.i <= upto && readable(x);
+      x.el.style.display = ok ? "" : "none";
+      if (!ok) return;
+      shown++;
+      var past = win && x.m.t <= lo;
+      x.el.classList.toggle("rpast", !!past);
+      if (!past) inWin++;
+      lastEl = x.el;
+    });
+    if (lastEl) lastEl.classList.add("rlatest");
+    document.getElementById("rcount").textContent = "· " + shown + " so far, " + inWin + " in the window";
+    document.getElementById("rprev").disabled = !msgs.some(function (x) { return x.i < upto && readable(x); });
+    document.getElementById("rnext").disabled = !msgs.some(function (x) { return x.i > upto && readable(x); });
+    if (lastEl && (playing || jump)) conv.scrollTop = lastEl.offsetTop - conv.offsetTop - conv.clientHeight + lastEl.offsetHeight + 8;
+    laneRows.forEach(function (r) {
+      var t = r.dataset.t === "" ? 0 : +r.dataset.t, show = t <= cursor;
+      r.style.display = show ? "" : "none";
+      r.classList.toggle("rpast", show && !!win && t <= lo);
+    });
+  }
+  edges.addEventListener("click", function (ev) {
+    var p = ev.target.closest("path[data-from]"); if (!p) return;
+    setPair(p.dataset.from, p.dataset.to === "board" ? null : p.dataset.to);
+  });
+  function step(dir) {
+    var pool = msgs.filter(readable);
+    var target = dir > 0 ? pool.find(function (x) { return x.i > upto; })
+                         : pool.filter(function (x) { return x.i < upto; }).pop();
+    if (!target) return false;
+    upto = target.i; cursor = target.m.t; draw(true);
+    return true;
+  }
+  function tick(now) {
+    if (!playing || pace) return;
+    if (last != null) cursor = Math.min(T, cursor + (now - last) / 1000 * speed);
+    last = now; upto = uptoFor(cursor); draw();
+    if (cursor >= T) { toggle(false); return; }
+    requestAnimationFrame(tick);
+  }
+  function toggle(on) {
+    playing = on; last = null;
+    clearInterval(stepTimer); stepTimer = null;
+    document.getElementById("rplay").textContent = on ? "❚❚ pause" : "▶ play";
+    if (!on) return;
+    if (pace) {
+      if (!msgs.some(function (x) { return x.i > upto && readable(x); })) { upto = -1; cursor = 0; }
+      step(1);
+      stepTimer = setInterval(function () { if (!step(1)) toggle(false); }, pace * 1000);
+    } else {
+      if (cursor >= T) { cursor = 0; upto = -1; }
+      requestAnimationFrame(tick);
+    }
+  }
+  document.getElementById("rnext").addEventListener("click", function () { if (playing) toggle(false); step(1); });
+  document.getElementById("rprev").addEventListener("click", function () { if (playing) toggle(false); step(-1); });
+  function showSpeed() {
+    document.querySelectorAll(".rspeed, .rspeedlabel").forEach(function (b) { b.style.display = pace ? "none" : ""; });
+  }
+  document.querySelectorAll(".rpace").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll(".rpace").forEach(function (x) { x.classList.toggle("on", x === b); });
+      var was = playing; toggle(false); pace = +b.dataset.v; showSpeed(); if (was) toggle(true);
+    });
+  });
+  showSpeed();
+  document.getElementById("rplay").addEventListener("click", function () { toggle(!playing); });
+  scrub.addEventListener("input", function () { cursor = +scrub.value; upto = uptoFor(cursor); draw(true); });
+  function pick(cls, attr, set) {
+    document.querySelectorAll("." + cls).forEach(function (b) {
+      b.addEventListener("click", function () {
+        document.querySelectorAll("." + cls).forEach(function (x) { x.classList.toggle("on", x === b); });
+        set(+b.dataset[attr]); draw(true);
+      });
+    });
+  }
+  pick("rspeed", "x", function (v) { speed = v; });
+  pick("rwin", "w", function (v) { win = v; });
+  document.querySelectorAll(".rkind").forEach(function (b) {
+    b.addEventListener("click", function () { kinds[b.dataset.kind] = !kinds[b.dataset.kind]; b.classList.toggle("on", kinds[b.dataset.kind]); draw(true); });
+  });
+  // the activity strip: messages per slice of the run, and day openings
+  var strip = document.getElementById("rstrip");
+  function paintStrip() {
+    var w = strip.clientWidth, h = strip.clientHeight, dpr = window.devicePixelRatio || 1;
+    strip.width = w * dpr; strip.height = h * dpr;
+    var g = strip.getContext("2d"); g.scale(dpr, dpr);
+    var bins = Math.max(20, Math.floor(w / 10)), counts = new Array(bins).fill(0);
+    D.messages.forEach(function (x) { counts[Math.min(bins - 1, Math.floor(x.t / (T || 1) * bins))]++; });
+    var m = Math.max.apply(null, counts) || 1, css = getComputedStyle(document.documentElement);
+    g.fillStyle = css.getPropertyValue("--serious") || "#c55";
+    counts.forEach(function (c, i) { var bh = c / m * (h - 4); g.fillRect(i * w / bins, h - bh, Math.max(1, w / bins - 1), bh); });
+    g.fillStyle = css.getPropertyValue("--ink-muted") || "#888";
+    D.days.forEach(function (x) { g.fillRect(x.t / T * w, 0, 1, h); });
+  }
+  strip.addEventListener("click", function (e) {
+    var r = strip.getBoundingClientRect(); cursor = (e.clientX - r.left) / r.width * T; upto = uptoFor(cursor); draw(true);
+  });
+  window.addEventListener("resize", paintStrip);
+  paintStrip(); draw();
+})();
+</script>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -0,0 +1,9 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++print(df.columns.tolist())
++sub = df[(df.get('project')=='QP-3777') | (df.get('project_id')=='QP-3777')] if 'project' in df.columns or 'project_id' in df.columns else df
++print(df.head(3).to_string())
++h = df[df['record_id'].str.startswith(('r_TTRP7JNZX','r_TTRP7JNZXR'))]
++for proto in ['p_E05X2XJNTY']:
++    s = df[df['prototype_id']==proto]
++    print(s.to_string())

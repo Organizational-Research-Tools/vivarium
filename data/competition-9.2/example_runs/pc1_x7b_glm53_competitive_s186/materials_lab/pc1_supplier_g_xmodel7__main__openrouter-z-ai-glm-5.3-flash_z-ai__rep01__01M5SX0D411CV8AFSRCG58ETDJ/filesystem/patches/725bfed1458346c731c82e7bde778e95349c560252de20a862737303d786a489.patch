@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -665,3 +665,9 @@
+ r_N3A2Y9S445,exploratory,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,,7.30508,kN/m,lab_e,lab_c,,,,,,,,,,,,
+ r_Z6T2WN3YZ9,exploratory,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,,7.24985,kN/m,lab_e,lab_c,,,,,,,,,,,,
+ r_Z6T2WN3YZA,exploratory,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,,7.22555,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XHT0704J0X,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,0,7.23653,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XHT0704J0Y,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,1,7.24508,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XHT0704J0Z,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,2,7.25096,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XHT0704J10,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,3,7.28177,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XHT0704J11,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,4,7.28258,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XHT0704J12,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,5,7.29056,kN/m,lab_e,lab_c,,,,,,,,,,,,

@@ -1,0 +1,43 @@
+
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('records.csv')
+
+# Get compositions per prototype
+comp_cols = ['base_sheet', 'secondary_sheet', 'binder_system', 'additive_package_1',
+             'additive_package_2', 'additive_package_3', 'process_profile_1', 'process_profile_2',
+             'process_profile_3', 'surface_treatment', 'joint_system', 'conditioning_step']
+
+# Get unique composition per prototype
+comps = df.dropna(subset=['base_sheet']).drop_duplicates('prototype_id')[['prototype_id', 'project'] + comp_cols]
+
+# Get panel means
+panels = df[df['kind'] == 'qualification'].groupby(['project', 'prototype_id', 'test'])['value'].agg(['mean', 'count']).reset_index()
+
+heat = panels[panels['test'] == 'seal hold temperature'].rename(columns={'mean': 'heat', 'count': 'heat_n'})
+strength = panels[panels['test'] == 'edge crush resistance'].rename(columns={'mean': 'strength', 'count': 'str_n'})
+water = panels[panels['test'] == 'wet strength retained'].rename(columns={'mean': 'water', 'count': 'wat_n'})
+
+summary = comps.merge(heat[['prototype_id', 'heat', 'heat_n']], on='prototype_id', how='left')
+summary = summary.merge(strength[['prototype_id', 'strength', 'str_n']], on='prototype_id', how='left')
+summary = summary.merge(water[['prototype_id', 'water', 'wat_n']], on='prototype_id', how='left')
+
+# Thresholds
+HEAT_T = 77.5
+STR_T = 7.1
+WAT_T = 78.0
+
+summary['heat_ok'] = summary['heat'] >= HEAT_T
+summary['str_ok'] = summary['strength'] >= STR_T
+summary['wat_ok'] = summary['water'] >= WAT_T
+summary['all_ok'] = summary['heat_ok'] & summary['str_ok'] & summary['wat_ok']
+
+# Margins in steps
+summary['heat_margin'] = (summary['heat'] - HEAT_T) / 0.25
+summary['str_margin'] = (summary['strength'] - STR_T) / 0.03
+summary['wat_margin'] = (summary['water'] - WAT_T) / 0.4
+summary['weakest_margin'] = summary[['heat_margin', 'str_margin', 'wat_margin']].min(axis=1)
+
+cols_show = ['project', 'prototype_id', 'secondary_sheet', 'heat', 'heat_ok', 'strength', 'str_ok', 'water', 'wat_ok', 'all_ok', 'weakest_margin']
+print(summary[cols_show].to_string())

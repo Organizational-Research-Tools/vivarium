@@ -1,0 +1,15 @@
+import pandas as pd
+r=pd.read_csv('records.csv')
+print(r.project.unique())
+# Means per prototype and test, has full panel count
+p=r[r.kind=='qualification'].groupby(['project','prototype_id','instrument','test']).agg(n=('value','count'),mean=('value','mean')).reset_index()
+w=p.pivot_table(index=['project','prototype_id'],columns='test',values='mean',aggfunc='first')
+n=p.pivot_table(index=['project','prototype_id'],columns='test',values='n',aggfunc='first')
+print('all projects prototypes with at least heat and strength panels and target criteria:')
+for (pr,pid), row in w.iterrows():
+    if pr!='QP-9980' and row.get('heat',-999)>=78.25 and row.get('strength',-999)>=7.19:
+        print(pr,pid,row.to_dict(), 'n', n.loc[(pr,pid)].to_dict())
+print('\nprototypes with W pass and H/S any')
+for (pr,pid), row in w.iterrows():
+    if pr!='QP-9980' and row.get('water',-999)>=79.2:
+        print(pr,pid,row.to_dict(), 'n', n.loc[(pr,pid)].to_dict())

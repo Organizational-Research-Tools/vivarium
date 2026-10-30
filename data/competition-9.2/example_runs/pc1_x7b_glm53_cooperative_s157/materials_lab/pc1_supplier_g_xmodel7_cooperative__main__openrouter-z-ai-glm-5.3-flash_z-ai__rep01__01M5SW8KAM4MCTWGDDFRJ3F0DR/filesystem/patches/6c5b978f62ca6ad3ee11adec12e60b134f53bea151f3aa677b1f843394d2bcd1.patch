@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -0,0 +1,14 @@
++import pandas as pd
++df=pd.read_csv("records.csv")
++q=df[df.kind=='qualification']
++# group full panels: per prototype+test mean
++g=q.groupby(['prototype_id','test']).value.agg(['count','mean'])
++panels=g[g['count']==6]
++print(panels)
++# best full recipes per test
++for t in ['heat','strength','water']:
++    s=panels.xs(t,level='test').sort_values('mean',ascending=False).head(8)
++    print(t); print(s)
++# join recipes
++prot=q[q.test=='heat'].drop_duplicates('prototype_id')
++print(prot[['prototype_id']+ [c for c in df.columns if c not in ('record_id','kind','project','prototype_id','instrument','test','specimen','value','unit','measured_by','requester')]].head(30))

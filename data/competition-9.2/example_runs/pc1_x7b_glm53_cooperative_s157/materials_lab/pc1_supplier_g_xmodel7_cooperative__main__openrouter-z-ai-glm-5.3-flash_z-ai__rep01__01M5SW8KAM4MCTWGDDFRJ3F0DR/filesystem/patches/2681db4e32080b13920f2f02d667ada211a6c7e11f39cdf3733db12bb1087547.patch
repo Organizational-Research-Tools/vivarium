@@ -1,0 +1,24 @@
+--- 
++++ 
+@@ -461,3 +461,21 @@
+ r_R8XEMANBRX,exploratory,QP-5653,p_QQZW86K9P8,water,wet strength retained,,77.5264,%,lab_f,lab_e,TL4,YH6,KX7,QE3,Q7S,8P4,2WG,T8R,5J9,BX9,P4U,9VC
+ r_AV5Z55C33P,exploratory,QP-5653,p_QQZW86K9P8,water,wet strength retained,,77.2284,%,lab_f,lab_e,TL4,YH6,KX7,QE3,Q7S,8P4,2WG,T8R,5J9,BX9,P4U,9VC
+ r_AV5Z55C33Q,exploratory,QP-5653,p_QQZW86K9P8,water,wet strength retained,,78.1924,%,lab_f,lab_e,TL4,YH6,KX7,QE3,Q7S,8P4,2WG,T8R,5J9,BX9,P4U,9VC
++r_5Y9D4ZEHBX,qualification,QP-1586,p_55NSKA6RFT,heat,seal hold temperature,0,78.69025,°C,lab_d,lab_b,,,,,,,,,,,,
++r_5Y9D4ZEHBY,qualification,QP-1586,p_55NSKA6RFT,heat,seal hold temperature,1,78.80200,°C,lab_d,lab_b,,,,,,,,,,,,
++r_5Y9D4ZEHBZ,qualification,QP-1586,p_55NSKA6RFT,heat,seal hold temperature,2,78.33225,°C,lab_d,lab_b,,,,,,,,,,,,
++r_5Y9D4ZEHC0,qualification,QP-1586,p_55NSKA6RFT,heat,seal hold temperature,3,78.40475,°C,lab_d,lab_b,,,,,,,,,,,,
++r_5Y9D4ZEHC1,qualification,QP-1586,p_55NSKA6RFT,heat,seal hold temperature,4,78.53150,°C,lab_d,lab_b,,,,,,,,,,,,
++r_5Y9D4ZEHC2,qualification,QP-1586,p_55NSKA6RFT,heat,seal hold temperature,5,78.62775,°C,lab_d,lab_b,,,,,,,,,,,,
++r_0ET4R9DRK1,qualification,QP-1586,p_55NSKA6RFT,strength,edge crush resistance,0,7.22183,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_0ET4R9DRK2,qualification,QP-1586,p_55NSKA6RFT,strength,edge crush resistance,1,7.16843,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_0ET4R9DRK3,qualification,QP-1586,p_55NSKA6RFT,strength,edge crush resistance,2,7.18889,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_0ET4R9DRK4,qualification,QP-1586,p_55NSKA6RFT,strength,edge crush resistance,3,7.19006,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_0ET4R9DRK5,qualification,QP-1586,p_55NSKA6RFT,strength,edge crush resistance,4,7.20758,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_0ET4R9DRK6,qualification,QP-1586,p_55NSKA6RFT,strength,edge crush resistance,5,7.20983,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_0M32CG66DZ,qualification,QP-1586,p_55NSKA6RFT,strength,edge crush resistance,0,7.22039,kN/m,lab_e,lab_b,,,,,,,,,,,,
++r_0M32CG66E0,qualification,QP-1586,p_55NSKA6RFT,strength,edge crush resistance,1,7.16726,kN/m,lab_e,lab_b,,,,,,,,,,,,
++r_0M32CG66E1,qualification,QP-1586,p_55NSKA6RFT,strength,edge crush resistance,2,7.18547,kN/m,lab_e,lab_b,,,,,,,,,,,,
++r_0M32CG66E2,qualification,QP-1586,p_55NSKA6RFT,strength,edge crush resistance,3,7.18763,kN/m,lab_e,lab_b,,,,,,,,,,,,
++r_0M32CG66E3,qualification,QP-1586,p_55NSKA6RFT,strength,edge crush resistance,4,7.21250,kN/m,lab_e,lab_b,,,,,,,,,,,,
++r_0M32CG66E4,qualification,QP-1586,p_55NSKA6RFT,strength,edge crush resistance,5,7.21337,kN/m,lab_e,lab_b,,,,,,,,,,,,

@@ -1,0 +1,55 @@
+{
+  "archive_valid": true,
+  "clock_label": null,
+  "closed": true,
+  "context_budget": null,
+  "cost_by_role": {
+    "lab_a": 5.007215,
+    "lab_b": 4.844353,
+    "lab_c": 4.869338,
+    "lab_d": 5.337737,
+    "lab_e": 5.19646,
+    "lab_f": 4.720754
+  },
+  "cost_usd": 29.975855250000002,
+  "difficulty": "main",
+  "exposure_confounded": false,
+  "label": "unassisted",
+  "model_ref": "anthropic/claude-sonnet-4-6",
+  "output_tokens": 1041385,
+  "output_tokens_by_role": {
+    "lab_a": 169771,
+    "lab_b": 179289,
+    "lab_c": 170899,
+    "lab_d": 170347,
+    "lab_e": 182205,
+    "lab_f": 168874
+  },
+  "parity_basis": "usd",
+  "parity_regime": null,
+  "partial_score": 0.222222,
+  "passed": true,
+  "preset_id": "pc1_supplier_g_xmodel7_cooperative",
+  "realized_reasoning_kind": {
+    "lab_a": "thinking",
+    "lab_b": "thinking",
+    "lab_c": "thinking",
+    "lab_d": "thinking",
+    "lab_e": "thinking",
+    "lab_f": "thinking"
+  },
+  "role_model_refs": {
+    "lab_a": "anthropic/claude-sonnet-4-6",
+    "lab_b": "anthropic/claude-sonnet-4-6",
+    "lab_c": "anthropic/claude-sonnet-4-6",
+    "lab_d": "anthropic/claude-sonnet-4-6",
+    "lab_e": "anthropic/claude-sonnet-4-6",
+    "lab_f": "anthropic/claude-sonnet-4-6"
+  },
+  "rounds_total": null,
+  "scored": true,
+  "scorer_label": "honest credit only; restricted variant in 2 report(s), 2 credited",
+  "uncertain_usd": 0.0,
+  "unsettled_calls": 0,
+  "unsettled_usd": 0.0
+}

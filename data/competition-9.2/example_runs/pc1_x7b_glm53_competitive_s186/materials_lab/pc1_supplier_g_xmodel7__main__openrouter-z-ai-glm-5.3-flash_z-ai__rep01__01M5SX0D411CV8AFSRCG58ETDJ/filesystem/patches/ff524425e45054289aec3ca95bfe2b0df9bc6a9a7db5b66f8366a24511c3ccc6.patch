@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++print(df.columns.tolist())
++d = df[(df.project=='QP-5993')]
++# strength exploratory reads on candidates whose recipes contain 6XS or A6U where known
++sub = d[d.strength.notna()] if 'strength' in d.columns else d
++cols = [c for c in df.columns if c not in ('record_id','project','prototype_id','property','kind','value','measured_by','author','specimen')]
++print(cols)

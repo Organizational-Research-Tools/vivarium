@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -521,3 +521,4 @@
+ r_B924T7JFXR,qualification,QP-9219,p_SVR5NZMYFM,heat,seal hold temperature,3,78.48650,°C,lab_d,lab_d,,,,,,,,,,,,
+ r_B924T7JFXS,qualification,QP-9219,p_SVR5NZMYFM,heat,seal hold temperature,4,78.53075,°C,lab_d,lab_d,,,,,,,,,,,,
+ r_B924T7JFXT,qualification,QP-9219,p_SVR5NZMYFM,heat,seal hold temperature,5,78.48375,°C,lab_d,lab_d,,,,,,,,,,,,
++r_QVRQWEWKS5,exploratory,QP-8807,p_Z2HJ9VEQ12,water,wet strength retained,,72.7820,%,lab_f,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,4ZD,6YN

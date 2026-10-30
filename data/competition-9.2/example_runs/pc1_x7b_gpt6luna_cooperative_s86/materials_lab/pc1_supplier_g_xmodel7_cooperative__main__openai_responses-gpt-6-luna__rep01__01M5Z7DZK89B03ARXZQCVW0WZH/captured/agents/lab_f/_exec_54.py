@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); ids=['p_FF5QPYJ1FJ','p_FF5QPYJ1FM','p_FF5QPYJ1FP','p_174NHB75ES']; print(x[x.prototype_id.isin(ids)].groupby(['prototype_id','test']).value.agg(['mean','count']).to_string())

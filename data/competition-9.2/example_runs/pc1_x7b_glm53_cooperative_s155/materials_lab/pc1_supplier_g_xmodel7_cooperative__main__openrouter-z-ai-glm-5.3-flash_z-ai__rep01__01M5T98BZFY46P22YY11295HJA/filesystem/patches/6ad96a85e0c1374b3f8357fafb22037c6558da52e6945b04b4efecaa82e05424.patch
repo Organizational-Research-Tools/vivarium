@@ -1,0 +1,21 @@
+--- 
++++ 
+@@ -291,6 +291,18 @@
+ r_Q2CSETH5AN,qualification,QP-1454,p_9RQ03FNFG8,strength,edge crush resistance,5,7.21868,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,4C2,3LL,3RB,GL8,37J,RQ5,8K5,LW5
+ r_5A6QWDFCKB,exploratory,QP-6489,p_C4WKEC66VP,strength,edge crush resistance,,7.08119,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,NS4,3LL,3RB,F9B,37J,N4Y,PK9,4YT
+ r_5A6QWDFCKC,exploratory,QP-6489,p_C4WKEC66VR,strength,edge crush resistance,,7.13954,kN/m,lab_e,lab_e,3F4,HJ7,6ZC,V5J,NS4,3LL,3RB,F9B,37J,N4Y,PK9,4YT
++r_0AV99B6C88,qualification,QP-6489,p_6SVD7WN5N8,water,wet strength retained,0,80.8644,%,lab_c,lab_f,,,,,,,,,,,,
++r_0AV99B6C89,qualification,QP-6489,p_6SVD7WN5N8,water,wet strength retained,1,80.1892,%,lab_c,lab_f,,,,,,,,,,,,
++r_0AV99B6C8A,qualification,QP-6489,p_6SVD7WN5N8,water,wet strength retained,2,80.2204,%,lab_c,lab_f,,,,,,,,,,,,
++r_0AV99B6C8B,qualification,QP-6489,p_6SVD7WN5N8,water,wet strength retained,3,80.5716,%,lab_c,lab_f,,,,,,,,,,,,
++r_0AV99B6C8C,qualification,QP-6489,p_6SVD7WN5N8,water,wet strength retained,4,80.7096,%,lab_c,lab_f,,,,,,,,,,,,
++r_0AV99B6C8D,qualification,QP-6489,p_6SVD7WN5N8,water,wet strength retained,5,80.4640,%,lab_c,lab_f,,,,,,,,,,,,
++r_8RB75RNTBQ,qualification,QP-6489,p_R7VTRCZQPS,heat,seal hold temperature,0,78.39775,°C,lab_a,lab_a,,,,,,,,,,,,
++r_8RB75RNTBR,qualification,QP-6489,p_R7VTRCZQPS,heat,seal hold temperature,1,78.58300,°C,lab_a,lab_a,,,,,,,,,,,,
++r_8RB75RNTBS,qualification,QP-6489,p_R7VTRCZQPS,heat,seal hold temperature,2,78.51600,°C,lab_a,lab_a,,,,,,,,,,,,
++r_AW5RNJ0C09,qualification,QP-6489,p_R7VTRCZQPS,heat,seal hold temperature,3,78.02425,°C,lab_a,lab_a,,,,,,,,,,,,
++r_AW5RNJ0C0A,qualification,QP-6489,p_R7VTRCZQPS,heat,seal hold temperature,4,78.09150,°C,lab_a,lab_a,,,,,,,,,,,,
++r_AW5RNJ0C0B,qualification,QP-6489,p_R7VTRCZQPS,heat,seal hold temperature,5,78.27450,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_X5DBTJDKW6,exploratory,QP-6489,p_7EQCYS545A,strength,edge crush resistance,,7.24121,kN/m,lab_e,lab_e,3F4,HJ7,6ZC,M5L,NS4,3LL,3RB,F9B,37J,N4Y,PK9,4YT
+ r_X5DBTJDKW7,exploratory,QP-6489,p_7EQCYS545C,strength,edge crush resistance,,7.13270,kN/m,lab_e,lab_e,3F4,HJ7,6ZC,V5J,NS4,3LL,3RB,F9B,37J,N4Y,8K5,4YT
+ r_X5DBTJDKW8,exploratory,QP-6489,p_7EQCYS545E,strength,edge crush resistance,,7.21586,kN/m,lab_e,lab_e,3F4,HJ7,DQ9,V5J,NS4,3LL,3RB,F9B,37J,N4Y,PK9,4YT

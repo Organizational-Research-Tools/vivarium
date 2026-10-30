@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++for pid in ['p_ZD62ZAD3QM','p_ZD62ZAD3QX','p_ZD62ZAD3R6','p_A2B8KB6SJC','p_W7FY9708C5','p_W7FY9708CG','p_XHAQXTT5GC','p_XHAQXTT5GN','p_S1J55G2ZTT','p_S1J55G2ZV3','p_HW2VTSX4T7','p_6FKHJFZBEF','p_6FKHJFZBF1','p_6FKHJFZBER','p_HM0GYQGX10']:
++    sub=df[df.prototype_id==pid]
++    print(pid, dict(sub.groupby('test').value.agg(['mean','count']).round(3)))
++    if 'conditioning_step' in sub and sub.conditioning_step.notna().any():
++        mods=[c for c in df.columns if c not in ('record_id','kind','project','prototype_id','instrument','test','specimen','value','unit','measured_by','requester')]
++        print('  ', sub[mods].dropna(axis=1,how='all').drop_duplicates().values.tolist())

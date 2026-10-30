@@ -1,0 +1,8 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+h = df[(df.project_id=='QP-8476') & (df.property=='heat')]
+print(len(df.columns), list(df.columns)[:20])
+# heat on TN6 recipes
+tn6 = h[h.secondary=='TN6'].sort_values('value', ascending=False)
+print(tn6[['prototype_id','value']].head(15).to_string())
+print(tn6.head(8)[['prototype_id','value','add3','PP2','PP3','add2']].to_string() if 'add2' in df.columns else '')

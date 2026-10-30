@@ -1,0 +1,9 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+for proj in ['QP-7006','QP-1992','QP-4152','QP-4757','QP-8476']:
+    q=df[df.project==proj]
+    if len(q)==0:
+        print('===',proj,'NO RECORDS'); continue
+    piv = q.pivot_table(index='prototype_id', columns='test', values='value', aggfunc='mean')
+    print('===',proj, list(piv.columns))
+    print(piv.round(2).head(12).to_string())

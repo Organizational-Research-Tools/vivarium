@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++r=pd.read_csv('records.csv')
++print(r.shape)
++print(r.columns.tolist())
++print(r[r['prototype_id'].astype(str).isin(['p_0TQMVB0YHY','p_7YFZXVGKEV','p_Q7PBN356CH','p_Q7PBN356CK','p_5NQ70DDDZW'])].to_string(index=False))

@@ -1,0 +1,40 @@
+--- 
++++ 
+@@ -0,0 +1,37 @@
++
++# Assess the situation rapidly
++# PL-95: QP-3473 and QP-7212 both now have standing reports from lab_e ✓
++# PL-98: QP-3089 p_YD1Q0XW9SA - I have heat + water, need strength from lab_e
++# PL-57: ALL QP-6843 heat panels ~74°C - FAR below 78.25°C threshold. Hopeless.
++# Need to alert everyone and pivot to QP-6572 (PL-57)
++
++print("=== QP-6843 HEAT SUMMARY ===")
++data = {
++    'p_TQTJ2H93AF': 74.51275,
++    'p_62YCWJAKQ3': 74.48875,
++    'p_FXEP5ES4Z8': 74.27075,
++    'p_FXEP5ES4ZA': 74.36350,
++    'p_TZH3X8VAP7': None  # no heat panel yet, water=69% fail
++}
++for k, v in data.items():
++    if v:
++        margin = (v - 78.25) / 0.25
++        print(f"  {k}: heat={v:.3f}°C, margin={margin:.1f} steps (threshold 78.25°C)")
++    else:
++        print(f"  {k}: no heat panel (water 69% fail, discard)")
++
++print("\nAll QP-6843 recipes fail heat by ~15+ steps. Project is HOPELESS for PL-57.")
++print("Only remaining PL-57 path: QP-6572 (lab_a working on it)")
++print("\n=== QP-3089 STATUS ===")
++print("Heat: 78.916°C ✓ (3.07 steps)")
++print("Water: 79.865% ✓ (1.66 steps from 79.2)")
++water_margin = (79.865 - 79.2) / 0.4
++heat_margin = (78.916 - 78.25) / 0.25
++print(f"Heat margin: {heat_margin:.2f} steps, Water margin: {water_margin:.2f} steps")
++print("Strength: MISSING - need lab_e receipts for p_YD1Q0XW9SA")
++print("Note: weakest margin will be min(heat, strength, water)")
++print(f"Heat margin = {heat_margin:.2f}, Water margin = {water_margin:.2f}")
++print("Strength needed >= 7.19 kN/m; lab_e's other panels gave ~7.21 kN/m")
++strength_est = (7.21 - 7.19) / 0.03
++print(f"Estimated strength margin if ~7.21 kN/m: {strength_est:.2f} steps")
++print(f"Expected weakest margin: min({heat_margin:.2f}, {strength_est:.2f}, {water_margin:.2f}) = {min(heat_margin, strength_est, water_margin):.2f}")

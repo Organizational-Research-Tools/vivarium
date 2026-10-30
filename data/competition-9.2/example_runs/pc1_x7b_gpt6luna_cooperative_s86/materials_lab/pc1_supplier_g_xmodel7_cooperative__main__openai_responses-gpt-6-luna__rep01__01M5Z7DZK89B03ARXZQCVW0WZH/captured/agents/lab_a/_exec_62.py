@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); x['value']=pd.to_numeric(x.value,errors='coerce');
+for pid in ['p_NQYNDKZ3CJ','p_NWGGXAVCNC']:
+ print(pid,x[x.prototype_id==pid].groupby(['test','measured_by']).agg(n=('value','size'),mean=('value','mean'),ids=('record_id',lambda s: ','.join(s))).to_string())

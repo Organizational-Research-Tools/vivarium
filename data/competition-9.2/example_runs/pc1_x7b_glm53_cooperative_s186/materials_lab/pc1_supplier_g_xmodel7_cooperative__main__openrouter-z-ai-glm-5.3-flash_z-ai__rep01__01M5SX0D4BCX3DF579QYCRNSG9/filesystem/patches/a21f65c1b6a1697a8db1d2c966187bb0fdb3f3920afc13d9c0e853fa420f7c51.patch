@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -0,0 +1,9 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++# all QP-1992 prototypes incl. ones not shared with composition
++q=df[df['project']=='QP-1992']
++for pid,sub in q.groupby('prototype_id'):
++    quals={t:round(g.value.mean(),2) for t,g in sub[sub.kind=='qualification'].groupby('test')}
++    exps={t:round(g.value.mean(),2) for t,g in sub[sub.kind!='qualification'].groupby('test')}
++    meas=sub.measured_by.unique()
++    print(pid, 'n',len(sub), 'meas',meas, 'QUAL',quals, 'EXP',exps, sub.requester.unique() if 'requester' in sub else '')

@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x.columns.tolist()); print(x.tail().to_string(index=False)); print(x.groupby(['project_id','prototype_id','kind','property'])['value'].agg(['count','mean']).tail(100).to_string())

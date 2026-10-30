@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -1019,3 +1019,15 @@
+ r_6M723E1QGF,qualification,QP-9219,p_YJCA9TYHK1,strength,edge crush resistance,3,7.17458,kN/m,lab_b,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
+ r_6M723E1QGG,qualification,QP-9219,p_YJCA9TYHK1,strength,edge crush resistance,4,7.19735,kN/m,lab_b,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
+ r_6M723E1QGH,qualification,QP-9219,p_YJCA9TYHK1,strength,edge crush resistance,5,7.22399,kN/m,lab_b,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
++r_KPAKGCD9HH,qualification,QP-9980,p_B7CX78CE96,water,wet strength retained,0,81.2876,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,96Y,4ZD,YT2
++r_KPAKGCD9HJ,qualification,QP-9980,p_B7CX78CE96,water,wet strength retained,1,80.6248,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,96Y,4ZD,YT2
++r_KPAKGCD9HK,qualification,QP-9980,p_B7CX78CE96,water,wet strength retained,2,80.8524,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,96Y,4ZD,YT2
++r_KPAKGCD9HM,qualification,QP-9980,p_B7CX78CE96,water,wet strength retained,3,81.0976,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,96Y,4ZD,YT2
++r_KPAKGCD9HN,qualification,QP-9980,p_B7CX78CE96,water,wet strength retained,4,81.4092,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,96Y,4ZD,YT2
++r_KPAKGCD9HP,qualification,QP-9980,p_B7CX78CE96,water,wet strength retained,5,81.4292,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,96Y,4ZD,YT2
++r_KPAKGCD9HQ,qualification,QP-9980,p_B7CX78CE98,water,wet strength retained,0,80.8176,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,L2J,4ZD,YT2
++r_KPAKGCD9HR,qualification,QP-9980,p_B7CX78CE98,water,wet strength retained,1,81.3548,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,L2J,4ZD,YT2
++r_KPAKGCD9HS,qualification,QP-9980,p_B7CX78CE98,water,wet strength retained,2,81.1692,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,L2J,4ZD,YT2
++r_KPAKGCD9HT,qualification,QP-9980,p_B7CX78CE98,water,wet strength retained,3,81.3556,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,L2J,4ZD,YT2
++r_KPAKGCD9HV,qualification,QP-9980,p_B7CX78CE98,water,wet strength retained,4,80.5392,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,L2J,4ZD,YT2
++r_KPAKGCD9HW,qualification,QP-9980,p_B7CX78CE98,water,wet strength retained,5,80.8260,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,L2J,4ZD,YT2

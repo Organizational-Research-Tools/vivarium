@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -967,3 +967,6 @@
+ r_AGEFGPRFG3,exploratory,QP-5653,p_HQZBRP1VTB,strength,edge crush resistance,,7.17518,kN/m,lab_e,lab_a,TL4,YH6,KX7,QE3,6DD,8P4,8Q7,T8R,5J9,BX9,FA3,7MP
+ r_7WZ1Z1CCKP,exploratory,QP-5066,p_D9HNSWCWZ3,heat,seal hold temperature,,58.76025,°C,lab_d,lab_a,ZY6,LB3,Y9V,Y7L,Q7S,5B8,RF3,X9Z,G4B,WN7,34U,7MP
+ r_7WZ1Z1CCKQ,exploratory,QP-5066,p_D9HNSWCWZ3,heat,seal hold temperature,,58.74550,°C,lab_d,lab_a,ZY6,LB3,Y9V,Y7L,Q7S,5B8,RF3,X9Z,G4B,WN7,34U,7MP
++r_BH8YXZGFCB,exploratory,QP-5653,p_8VT9BG7Y6X,heat,seal hold temperature,,78.69925,°C,lab_a,lab_a,TL4,LB3,KX7,QE3,6DD,8P4,8Q7,T8R,5J9,BX9,34U,7MP
++r_BH8YXZGFCC,exploratory,QP-5653,p_CGVJX4F96H,heat,seal hold temperature,,79.07975,°C,lab_a,lab_a,TL4,N2L,KX7,QE3,6DD,8P4,8Q7,T8R,5J9,BX9,34U,7MP
++r_0E4QA88H2F,exploratory,QP-5653,p_CGVJX4F96K,heat,seal hold temperature,,78.90650,°C,lab_a,lab_a,TL4,TU4,KX7,QE3,6DD,8P4,8Q7,T8R,5J9,BX9,34U,7MP

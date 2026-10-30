@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -798,3 +798,9 @@
+ r_CW28RHN1ZZ,qualification,QP-3777,p_S5C3TCY7F6,water,wet strength retained,3,79.2428,%,lab_f,lab_a,,,,,,,,,,,,
+ r_CW28RHN200,qualification,QP-3777,p_S5C3TCY7F6,water,wet strength retained,4,79.5012,%,lab_f,lab_a,,,,,,,,,,,,
+ r_CW28RHN201,qualification,QP-3777,p_S5C3TCY7F6,water,wet strength retained,5,79.6504,%,lab_f,lab_a,,,,,,,,,,,,
++r_1GGVZMW3DJ,qualification,QP-3777,p_Z260GPFZBZ,water,wet strength retained,0,79.7248,%,lab_f,lab_c,,,,,,,,,,,,
++r_1GGVZMW3DK,qualification,QP-3777,p_Z260GPFZBZ,water,wet strength retained,1,79.9408,%,lab_f,lab_c,,,,,,,,,,,,
++r_1GGVZMW3DM,qualification,QP-3777,p_Z260GPFZBZ,water,wet strength retained,2,80.0796,%,lab_f,lab_c,,,,,,,,,,,,
++r_1GGVZMW3DN,qualification,QP-3777,p_Z260GPFZBZ,water,wet strength retained,3,79.3808,%,lab_f,lab_c,,,,,,,,,,,,
++r_1GGVZMW3DP,qualification,QP-3777,p_Z260GPFZBZ,water,wet strength retained,4,79.3844,%,lab_f,lab_c,,,,,,,,,,,,
++r_1GGVZMW3DQ,qualification,QP-3777,p_Z260GPFZBZ,water,wet strength retained,5,79.7280,%,lab_f,lab_c,,,,,,,,,,,,

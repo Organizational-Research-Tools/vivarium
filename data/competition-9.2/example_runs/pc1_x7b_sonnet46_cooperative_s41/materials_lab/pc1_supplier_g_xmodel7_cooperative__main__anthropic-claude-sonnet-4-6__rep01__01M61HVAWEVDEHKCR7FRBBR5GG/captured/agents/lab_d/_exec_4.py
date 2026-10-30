@@ -1,0 +1,30 @@
+
+# The key recipe: p_PXAKTW39C3 composition minus GG7 replacement
+# JA8, GG7→3HW, M2P, QJ2, 6FA, 44B, 62D, 2BR, N4L, 7KL, DL8, 3N8
+# Known results WITH GG7: heat=78.779, strength=7.254, water=81.647
+# GG7 bonus: +0.5°C heat, +0.06 kN/m strength, +0.8% water
+# WITHOUT GG7: heat≈78.28, strength≈7.19, water≈80.85 — all still pass!
+
+# 9 projects across 3 product lines:
+projects = {
+    'PL-57': ['QP-4476', 'QP-6572', 'QP-6843'],
+    'PL-95': ['QP-7212', 'QP-3473', 'QP-8607'],
+    'PL-98': ['QP-3089', 'QP-8265', 'QP-7604'],
+}
+
+# Primary recipe (GG7 → 3HW replacement of the proven composition)
+primary = ['JA8', '3HW', 'M2P', 'QJ2', '6FA', '44B', '62D', '2BR', 'N4L', '7KL', 'DL8', '3N8']
+print("Primary recipe (GG7→3HW):", primary)
+print()
+
+# Expected performance (approximate, using GG7 adjustment):
+print("Expected performance WITHOUT GG7:")
+print(f"  heat:     ~{78.77925 - 2*0.25:.3f} °C  (thresh 77.5) margin = {(78.77925 - 2*0.25 - 77.5)/0.25:.1f} steps")
+print(f"  strength: ~{7.25351  - 2*0.03:.5f} kN/m (thresh 7.1)  margin = {(7.25351 - 2*0.03 - 7.1)/0.03:.1f} steps")
+print(f"  water:    ~{81.6468  - 2*0.4:.4f} %    (thresh 78.0) margin = {(81.6468 - 2*0.4 - 78.0)/0.4:.1f} steps")
+print()
+print("All 9 projects will get this recipe — one prototype each, batch creation.")
+print()
+for pl, projs in projects.items():
+    for p in projs:
+        print(f"  {p} ({pl}): {primary}")

@@ -1,0 +1,39 @@
+--- 
++++ 
+@@ -0,0 +1,36 @@
++
++# Analyze exploratory results
++results = {
++    'p_57M2N73XBG': {'recipe': 'QP3089_A ZW3+3HW', 'heat_avg': (77.82+77.86)/2, 'project': 'QP-3089'},
++    'p_57M2N73XBJ': {'recipe': 'QP3089_B 7TJ+3HW', 'heat_avg': (78.05+78.05)/2, 'project': 'QP-3089'},
++    'p_57M2N73XBM': {'recipe': 'QP3089_C ZW3+YX8', 'heat_avg': (78.27+78.86)/2, 'project': 'QP-3089'},
++    'p_57M2N73XBP': {'recipe': 'QP3089_D 7TJ+YX8', 'heat_avg': (78.56+78.84)/2, 'project': 'QP-3089'},
++    'p_X9WN43AQ4V': {'recipe': 'QP4476_A ZW3+3HW', 'heat_avg': (78.97+78.94)/2, 'project': 'QP-4476'},
++    'p_X9WN43AQ4X': {'recipe': 'QP4476_B 7TJ+3HW', 'heat_avg': (78.25+78.74)/2, 'project': 'QP-4476'},
++    'p_X9WN43AQ4Z': {'recipe': 'QP4476_C 7TJ+YX8', 'heat_avg': (78.38+78.54)/2, 'project': 'QP-4476'},
++    'p_93QRAZJ8FY': {'recipe': 'QP7212_A 7TJ+5FE/LD3/4PE/4QB', 'heat_avg': (77.85+77.97)/2, 'project': 'QP-7212'},
++    'p_93QRAZJ8G0': {'recipe': 'QP7212_B ZW3+5FE/LD3/4PE/4QB', 'heat_avg': (78.08+78.35)/2, 'project': 'QP-7212'},
++    'p_93QRAZJ8G2': {'recipe': 'QP7212_C 7TJ+QJ2/B3P/44B/UP5 FAIL', 'heat_avg': (72.48+71.92)/2, 'project': 'QP-7212'},
++    'p_93QRAZJ8G4': {'recipe': 'QP7212_D ZW3+R5N/LD3/L6C/4QB FAIL', 'heat_avg': (72.54+72.52)/2, 'project': 'QP-7212'},
++    'p_93QRAZJ8G6': {'recipe': 'QP7212_E 7TJ+R5N/LD3/L6C/4QB FAIL', 'heat_avg': (72.44+72.27)/2, 'project': 'QP-7212'},
++}
++
++print("HEAT EXPLORATORY RESULTS:")
++for pid, d in sorted(results.items(), key=lambda x: x[1]['project']):
++    status = '✓ PASS' if d['heat_avg'] >= 77.5 else '✗ FAIL'
++    print(f"  {d['project']} {pid}: avg={d['heat_avg']:.2f}°C {status} | {d['recipe']}")
++
++print("\n--- SELECTED for heat qualification panels ---")
++selected = {k: v for k, v in results.items() if v['heat_avg'] >= 77.5}
++for pid, d in selected.items():
++    print(f"  {d['project']} {pid}: {d['heat_avg']:.2f}°C")
++
++print(f"\nTotal panels needed: {len(selected)} × 6 = {len(selected)*6} units")
++print(f"Units remaining: 876")
++
++print("\n--- KEY INSIGHTS for QP-7212 heat failures ---")
++print("Recipes G2/G4/G6 fail heat: DA9+YX8+NN7+UP5orQJ2,DL8,3N8")
++print("Recipes FY/G0 pass heat: DA9+YX8+NN7+5FE/LD3/4PE/4QB, 9FU, 3N8")
++print("The critical diff: joint=9FU vs DL8 (with 3N8 conditioning)")
++print("Interaction: base × conditioning × joint -- DA9 × 3N8 × DL8 hurts heat")
++print("DA9 × 3N8 × 9FU is OK for heat")

@@ -1,0 +1,10 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.kind=='qualification']; g=q.groupby(['project','prototype_id','test']).agg(n=('value','count'),mean=('value','mean'),owner=('measured_by',lambda s:s.value_counts().index[0]), comp=('base_sheet','first')).reset_index()
+w=g.pivot(index=['project','prototype_id','comp'],columns='test',values=['n','mean']).reset_index()
+# flatten
+w.columns=['_'.join(map(str,c)).strip('_') for c in w.columns]
+for proj in ['QP-3617','QP-6879','QP-9273','QP-8807']:
+ z=w[w['project']==proj].copy()
+ # list full panels & any close
+ print('\n',proj, z.shape)
+ print(z.sort_values(by=[c for c in z.columns if c.startswith('mean_')],ascending=False).head(30).to_string(index=False))

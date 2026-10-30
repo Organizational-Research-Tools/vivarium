@@ -1,0 +1,27 @@
+--- 
++++ 
+@@ -0,0 +1,24 @@
++import numpy as np
++
++# p_CJXWSWQ72F water
++cjx = [70.8260, 70.9752, 71.0200, 70.8996, 71.1308, 71.1508]
++# p_AT6B9DFWN1 water
++at6 = [71.0860, 71.4280, 70.7664, 70.7912, 71.0076, 71.1704]
++
++print(f"p_CJXWSWQ72F (L6C add_pkg3) water: {np.mean(cjx):.3f}% — FAILS (need 79.80%)")
++print(f"p_AT6B9DFWN1 (QP-8265 N4L/L6C) water: {np.mean(at6):.3f}% — FAILS (need 79.80%)")
++print()
++print("L6C kills water: same catastrophic ~71% as 8BB binder recipes")
++print("L6C appears in add_pkg2×joint×add_pkg3 AND add_pkg3×base×pp3 water interactions")
++print()
++print("WATER-SAFE recipe on QP-4476: MUST keep 44B, M2P, N4L, YV2 (or 3N8)")
++print()
++print("Lab_b's new variants — water interaction analysis:")
++print("1. joint DL8→9FU: IN water interactions (add_pkg2×joint×add_pkg3 AND base×cond×joint)")
++print("   Water margin: only 0.27% above threshold — any negative change is fatal")
++print("2. add_pkg1 QJ2→5FE: IN water interaction (cond×pp3×add_pkg1)")
++print("   Also risky for water")
++print("3. surface 7KL→5TZ: IN water interaction (surface×binder×pp2)")
++print("   Also risky for water")
++print()
++print("=> ALL THREE lab_b variants touch water interactions. Need panels URGENTLY.")

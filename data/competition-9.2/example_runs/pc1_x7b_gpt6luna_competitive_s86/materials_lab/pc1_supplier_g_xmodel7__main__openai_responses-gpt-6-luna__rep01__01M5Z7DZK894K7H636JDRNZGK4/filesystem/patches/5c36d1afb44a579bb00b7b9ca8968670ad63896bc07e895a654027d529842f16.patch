@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -0,0 +1,4 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); q=x[(x.kind=='qualification') & x.project.isin(['QP-6879','QP-3617','QP-9273'])]; mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']; z=q.groupby(['project']+mods+['test']).value.agg(['count','mean']).reset_index();
++for pr,g in z.groupby('project'):
++ p=g.pivot(index=mods,columns='test',values=['count','mean']); p.columns=['_'.join(c) for c in p.columns]; ok=p[(p.get('mean_seal hold temperature',0)>=78.625)&(p.get('mean_edge crush resistance',0)>=7.235)&(p.get('mean_wet strength retained',0)>=79.8)]; print(pr, 'qualifying recipe aggregates',len(ok)); print(ok.to_string())

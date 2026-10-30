@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++print(df.columns.tolist())
++print(df['project'].value_counts())
++q = df[df['project']=='QP-8476']
++# assume there's a value column
++cols=[c for c in df.columns if c not in ['project']]
++print(q.head())

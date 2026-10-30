@@ -1,0 +1,20 @@
+--- 
++++ 
+@@ -695,3 +695,17 @@
+ r_BDC578J9S1,qualification,QP-7006,p_Y7RN92XBNX,heat,seal hold temperature,3,77.49800,°C,lab_a,lab_e,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
+ r_BDC578J9S2,qualification,QP-7006,p_Y7RN92XBNX,heat,seal hold temperature,4,78.40400,°C,lab_a,lab_e,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
+ r_BDC578J9S3,qualification,QP-7006,p_Y7RN92XBNX,heat,seal hold temperature,5,79.64075,°C,lab_a,lab_e,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
++r_AK2K069Z4Q,qualification,QP-7006,p_Y7RN92XBNX,strength,edge crush resistance,0,6.72398,kN/m,lab_b,lab_e,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
++r_AK2K069Z4R,qualification,QP-7006,p_Y7RN92XBNX,strength,edge crush resistance,1,6.84800,kN/m,lab_b,lab_e,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
++r_AK2K069Z4S,qualification,QP-7006,p_Y7RN92XBNX,strength,edge crush resistance,2,7.08530,kN/m,lab_b,lab_e,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
++r_AK2K069Z4T,qualification,QP-7006,p_Y7RN92XBNX,strength,edge crush resistance,3,7.20407,kN/m,lab_b,lab_e,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
++r_AK2K069Z4V,qualification,QP-7006,p_Y7RN92XBNX,strength,edge crush resistance,4,7.34183,kN/m,lab_b,lab_e,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
++r_AK2K069Z4W,qualification,QP-7006,p_Y7RN92XBNX,strength,edge crush resistance,5,6.61760,kN/m,lab_b,lab_e,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
++r_TJ58W3GTSP,exploratory,QP-7065,p_SB06GFM3PN,water,wet strength retained,,78.6124,%,lab_f,lab_e,7FT,2YJ,QU7,8BE,42D,JN6,5JK,2FG,24J,6XS,YS6,G5Y
++r_4KDKAXQ22Y,exploratory,QP-7065,p_SB06GFM3PN,water,wet strength retained,,79.3524,%,lab_f,lab_e,7FT,2YJ,QU7,8BE,42D,JN6,5JK,2FG,24J,6XS,YS6,G5Y
++r_NXNZ2E5TQZ,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,0,6.58619,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_NXNZ2E5TR0,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,1,6.60416,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_NXNZ2E5TR1,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,2,6.60113,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_NXNZ2E5TR2,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,3,6.62828,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_NXNZ2E5TR3,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,4,6.62996,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_NXNZ2E5TR4,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,5,6.59000,kN/m,lab_e,lab_a,,,,,,,,,,,,

@@ -1,0 +1,7 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+# all QP-1454 records incl others' exploratory
+q=df[df.project=='QP-1454']
+prot=df.drop_duplicates('prototype_id')[['prototype_id']+list(df.columns[11:23])].set_index('prototype_id')
+e=q[q.kind=='exploratory']
+print(e.groupby(['prototype_id','test'])['value'].agg(['mean','count']).join(prot).to_string())

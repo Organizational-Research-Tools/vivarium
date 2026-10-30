@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd, numpy as np
++df = pd.read_csv('records.csv')
++print(df.columns.tolist())
++s = df[df['property']=='strength']
++print(s.groupby('prototype_id')['value'].agg(['mean','count']).sort_values('mean',ascending=False).head(20))

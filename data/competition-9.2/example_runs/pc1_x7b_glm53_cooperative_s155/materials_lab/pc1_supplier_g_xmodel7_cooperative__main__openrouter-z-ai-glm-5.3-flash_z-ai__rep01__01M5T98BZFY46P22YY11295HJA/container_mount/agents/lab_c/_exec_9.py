@@ -1,0 +1,10 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+mods=list(df.columns[11:23])
+prot=df.drop_duplicates('prototype_id')[['project','prototype_id']+mods]
+# p_K9H37C0QVA composition if present
+print(prot[prot.prototype_id.str.contains('K9H37|6SVD7')].to_string())
+# Water means per recipe across all qualification records
+q=df[df.kind=='qualification']
+wm=q[q.test=='wet strength retained'].groupby('prototype_id')['value'].agg(['mean','count'])
+print(wm.sort_values('mean',ascending=False).head(12).to_string())

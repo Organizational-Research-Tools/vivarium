@@ -1,0 +1,25 @@
+--- 
++++ 
+@@ -801,4 +801,22 @@
+ r_G41DHHS6QJ,qualification,QP-3617,p_CD8N0FCXD5,water,wet strength retained,3,80.2756,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,74N,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2
+ r_G41DHHS6QK,qualification,QP-3617,p_CD8N0FCXD5,water,wet strength retained,4,80.5740,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,74N,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2
+ r_G41DHHS6QM,qualification,QP-3617,p_CD8N0FCXD5,water,wet strength retained,5,80.7080,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,74N,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_MR68G4T76S,qualification,QP-6879,p_1XF9VFBVYF,water,wet strength retained,0,80.0124,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T76T,qualification,QP-6879,p_1XF9VFBVYF,water,wet strength retained,1,80.0600,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T76V,qualification,QP-6879,p_1XF9VFBVYF,water,wet strength retained,2,80.3076,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T76W,qualification,QP-6879,p_1XF9VFBVYF,water,wet strength retained,3,80.4284,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T76X,qualification,QP-6879,p_1XF9VFBVYF,water,wet strength retained,4,80.3648,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T76Y,qualification,QP-6879,p_1XF9VFBVYF,water,wet strength retained,5,80.7228,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T76Z,qualification,QP-6879,p_SNNF91F2XB,water,wet strength retained,0,80.4540,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T770,qualification,QP-6879,p_SNNF91F2XB,water,wet strength retained,1,80.7372,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T771,qualification,QP-6879,p_SNNF91F2XB,water,wet strength retained,2,80.6532,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T772,qualification,QP-6879,p_SNNF91F2XB,water,wet strength retained,3,80.8872,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T773,qualification,QP-6879,p_SNNF91F2XB,water,wet strength retained,4,80.9240,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T774,qualification,QP-6879,p_SNNF91F2XB,water,wet strength retained,5,81.2140,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T775,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,0,79.8580,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T776,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,1,79.8192,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T777,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,2,80.3720,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T778,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,3,80.4440,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T779,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,4,80.4020,%,lab_c,lab_c,,,,,,,,,,,,
++r_MR68G4T77A,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,5,80.7776,%,lab_c,lab_c,,,,,,,,,,,,
+ r_PJ1DVR3X9A,exploratory,QP-3617,p_CD8N0FCXD5,strength,edge crush resistance,,7.11974,kN/m,lab_b,lab_d,8GP,RK7,VQ6,7TW,74N,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2

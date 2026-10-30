@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -1379,3 +1379,15 @@
+ r_GYD0M7M7GX,exploratory,QP-3617,p_TT1JSR5FRZ,heat,seal hold temperature,,68.55475,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,K3K,4CW,H9M,8KZ,3XM,96Y,4ZD,YT2
+ r_JXB9CW2GJ5,exploratory,QP-3617,p_TT1JSR5FS1,heat,seal hold temperature,,74.17425,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,K3K,4CW,H9M,8KZ,3XM,T6A,4ZD,YT2
+ r_JXB9CW2GJ6,exploratory,QP-3617,p_TT1JSR5FS3,heat,seal hold temperature,,68.77250,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,K3K,4CW,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_ENPRZP19GX,qualification,QP-3617,p_6H6CV4DA3D,heat,seal hold temperature,0,79.60050,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,F8Y,XD8,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_ENPRZP19GY,qualification,QP-3617,p_6H6CV4DA3D,heat,seal hold temperature,1,79.88750,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,F8Y,XD8,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_ENPRZP19GZ,qualification,QP-3617,p_6H6CV4DA3D,heat,seal hold temperature,2,79.26650,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,F8Y,XD8,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_ENPRZP19H0,qualification,QP-3617,p_6H6CV4DA3D,heat,seal hold temperature,3,79.53250,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,F8Y,XD8,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_ENPRZP19H1,qualification,QP-3617,p_6H6CV4DA3D,heat,seal hold temperature,4,79.49700,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,F8Y,XD8,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_ENPRZP19H2,qualification,QP-3617,p_6H6CV4DA3D,heat,seal hold temperature,5,79.62400,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,F8Y,XD8,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_ENPRZP19H3,qualification,QP-3617,p_6H6CV4DA3F,heat,seal hold temperature,0,79.32875,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,F8Y,XD8,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_ENPRZP19H4,qualification,QP-3617,p_6H6CV4DA3F,heat,seal hold temperature,1,79.40775,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,F8Y,XD8,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_ENPRZP19H5,qualification,QP-3617,p_6H6CV4DA3F,heat,seal hold temperature,2,79.52400,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,F8Y,XD8,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_ENPRZP19H6,qualification,QP-3617,p_6H6CV4DA3F,heat,seal hold temperature,3,79.65150,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,F8Y,XD8,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_ENPRZP19H7,qualification,QP-3617,p_6H6CV4DA3F,heat,seal hold temperature,4,79.80675,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,F8Y,XD8,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_ENPRZP19H8,qualification,QP-3617,p_6H6CV4DA3F,heat,seal hold temperature,5,79.91575,°C,lab_d,lab_d,QG7,6TX,YC8,7TW,F8Y,XD8,H9M,8KZ,3XM,L2J,4ZD,YT2

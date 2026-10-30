@@ -1,0 +1,36 @@
+
+# Design exploratory recipes - 4 diverse variants (avoiding GG7)
+# Modules order: base_sheet, secondary_sheet, binder, AP1, AP2, AP3, PP1, PP2, PP3, surface, joint, conditioning
+
+recipes = {
+    "v1_all": ["JA8", "3HW", "8BB", "5FE", "6FA", "L6C", "4QB", "P8G", "N7N", "ZW3", "9FU", "YV2"],
+    "v2_all": ["P2G", "5BU", "M2P", "R5N", "B3P", "4PE", "62D", "C5Q", "X9F", "5TZ", "57U", "6JZ"],
+    "v3_all": ["DA9", "5BU", "NN7", "57T", "S2J", "QJ4", "UP5", "VA8", "H3F", "7KL", "DL8", "3N8"],
+    "v4_all": ["U8H", "YX8", "T9M", "QJ2", "LD3", "44B", "WB3", "2BR", "N4L", "7TJ", "4GD", "G8Q"],
+}
+
+# Priority projects: one per product line
+priority = {
+    "PL-57": "QP-6572",
+    "PL-95": "QP-7212",
+    "PL-98": "QP-3089",
+}
+
+print("Recipes to create as prototypes:")
+for name, rec in recipes.items():
+    print(f"  {name}: {rec}")
+
+print("\nPriority projects:")
+for pl, proj in priority.items():
+    print(f"  {pl}: {proj}")
+
+# Build the batch: 4 recipes × 3 projects = 12 prototypes
+# We'll create each recipe for each priority project
+batch_plan = []
+for pl, proj in priority.items():
+    for rname, rec in recipes.items():
+        batch_plan.append((proj, rname, rec))
+        
+print(f"\nTotal prototypes to create: {len(batch_plan)}")
+for proj, rname, rec in batch_plan:
+    print(f"  Project {proj}, Recipe {rname}")

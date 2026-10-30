@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% from "_chip.html" import help, howto %}
+{% block title %}search — oaos2{% endblock %}
+{% block crumb %}<span class="root">search</span>{% endblock %}
+{% block content %}
+
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem">Search the archive</h1>
+{% call howto() %}
+  <p><strong>Search the archive.</strong> Full text over what was filed, said, thought, received, submitted, and kept on file — across every run in a lineage or an experiment. FTS5 syntax: quotes for phrases, AND / OR / NOT, prefix*.</p>
+{% endcall %}
+
+<div class="card">
+  <form method="get" action="/search" class="filters">
+    <input type="text" name="q" value="{{ q }}" placeholder='e.g. "planting window" OR barge' size="48" autofocus>
+    <select name="lineage"><option value="">lineage: any</option>{% for v in lineages %}<option value="{{ v }}" {% if lineage == v %}selected{% endif %}>{{ v }}</option>{% endfor %}</select>
+    <select name="experiment"><option value="">experiment: any</option>{% for v in experiments %}<option value="{{ v }}" {% if experiment == v %}selected{% endif %}>{{ v }}</option>{% endfor %}</select>
+    <select name="kind"><option value="">kind: any</option>{% for v in ("filing", "thinking", "notice", "submitted", "letter", "volley", "message") %}<option value="{{ v }}" {% if kind == v %}selected{% endif %}>{{ v }}</option>{% endfor %}</select>
+    <button type="submit">search</button>
+  </form>
+  {% if note %}<p class="dim" style="margin:0.4rem 0 0">{{ note }}</p>{% endif %}
+</div>
+
+{% if results is not none %}
+<div class="card">
+  <h2>{{ results|length }} hit{{ "s" if results|length != 1 }}{% if scope_n %} in {{ scope_n }} run(s){% endif %}{% if built %} · indexed {{ built.indexed }}, reused {{ built.reused }}{% endif %}</h2>
+  {% if results and results[0].error %}<p class="sev sev-warning">query error: {{ results[0].error }}</p>{% endif %}
+  <table>
+    <thead><tr><th>where</th><th>kind</th><th>role</th><th class="num">day</th><th>match</th></tr></thead>
+    <tbody>
+    {% for r in results if not r.error %}
+      <tr>
+        <td>{% if r.event_id %}<a href="/run/{{ r.run_ref }}/event/{{ r.event_id }}">{{ r.run_ref.rsplit("/", 1)[-1]|shortid(36) }}</a>{% else %}<a href="/run/{{ r.run_ref }}/cases">{{ r.run_ref.rsplit("/", 1)[-1]|shortid(36) }}</a>{% if r.path %} <span class="dim">{{ r.path }}</span>{% endif %}{% endif %}</td>
+        <td><code>{{ r.kind }}</code></td><td>{{ r.role or "·" }}</td><td class="num">{{ r.day if r.day is not none else "" }}</td>
+        <td style="white-space:pre-wrap; max-width:52rem">{{ r.snippet }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
+{% endblock %}

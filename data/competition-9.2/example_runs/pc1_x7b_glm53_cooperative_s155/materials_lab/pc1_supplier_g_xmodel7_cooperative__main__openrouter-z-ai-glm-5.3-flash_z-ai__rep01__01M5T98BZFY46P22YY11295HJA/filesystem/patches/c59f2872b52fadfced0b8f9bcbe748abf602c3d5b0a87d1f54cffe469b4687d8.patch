@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -504,3 +504,4 @@
+ r_EDB1BPZKH5,exploratory,QP-1466,p_QHMA9WGC82,heat,seal hold temperature,,67.75300,°C,lab_a,lab_e,SM9,3XR,DQ9,M5L,NS4,92P,GY3,GL8,49R,RQ5,8M7,23Y
+ r_EDB1BPZKH6,exploratory,QP-1466,p_QHMA9WGC84,heat,seal hold temperature,,73.19050,°C,lab_a,lab_e,SM9,3XR,6ZC,M5L,Y6H,92P,GY3,GL8,49R,RQ5,8M7,LW5
+ r_R47XMJJZ8B,exploratory,QP-1466,p_NXWW60NMKQ,strength,edge crush resistance,,6.64310,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_0316HW8GW5,exploratory,QP-4503,p_DKKBRK0YKK,strength,edge crush resistance,,6.42950,kN/m,lab_e,lab_e,73S,3S7,E5L,V5J,NS4,S3J,3RB,F9B,49R,RQ5,8K5,LW5

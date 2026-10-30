@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -437,3 +437,14 @@
+ r_GPZ3HG5CWR,exploratory,QP-3068,p_9GSK1FB6QN,heat,seal hold temperature,,77.84100,°C,lab_a,lab_d,8Z2,LB3,93H,QE3,E8S,8P4,RF3,5UV,5J9,BX9,FA3,3DC
+ r_14ZARPEGRC,exploratory,QP-6820,p_7JX0SVYP0C,water,wet strength retained,,69.2636,%,lab_f,lab_d,NF2,YH6,KX7,X2P,E8S,8P4,RF3,5UV,5J9,9B8,FA3,9VC
+ r_14ZARPEGRD,exploratory,QP-6820,p_7JX0SVYP0C,water,wet strength retained,,68.6064,%,lab_f,lab_d,NF2,YH6,KX7,X2P,E8S,8P4,RF3,5UV,5J9,9B8,FA3,9VC
++r_56TSNH1EFJ,exploratory,QP-3068,p_9GSK1FB6QN,water,wet strength retained,,78.7560,%,lab_c,lab_d,8Z2,LB3,93H,QE3,E8S,8P4,RF3,5UV,5J9,BX9,FA3,3DC
++r_56TSNH1EFK,exploratory,QP-3068,p_9GSK1FB6QN,water,wet strength retained,,78.5668,%,lab_c,lab_d,8Z2,LB3,93H,QE3,E8S,8P4,RF3,5UV,5J9,BX9,FA3,3DC
++r_020QPPTN87,exploratory,QP-3068,p_9GSK1FB6QN,water,wet strength retained,,79.4300,%,lab_c,lab_d,8Z2,LB3,93H,QE3,E8S,8P4,RF3,5UV,5J9,BX9,FA3,3DC
++r_3MY9QPEVDC,exploratory,QP-2236,p_F22DN8MBC4,strength,edge crush resistance,,6.76973,kN/m,lab_e,lab_d,ZY6,TU4,93H,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,7MP
++r_3MY9QPEVDD,exploratory,QP-2236,p_F22DN8MBC4,strength,edge crush resistance,,6.73685,kN/m,lab_e,lab_d,ZY6,TU4,93H,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,7MP
++r_FQ9HS27N1X,exploratory,QP-3068,p_9GSK1FB6QN,strength,edge crush resistance,,6.79622,kN/m,lab_e,lab_d,8Z2,LB3,93H,QE3,E8S,8P4,RF3,5UV,5J9,BX9,FA3,3DC
++r_FQ9HS27N1Y,exploratory,QP-3068,p_9GSK1FB6QN,strength,edge crush resistance,,6.72542,kN/m,lab_e,lab_d,8Z2,LB3,93H,QE3,E8S,8P4,RF3,5UV,5J9,BX9,FA3,3DC
++r_AAQ2E9VVQC,exploratory,QP-6820,p_H5JEPY1ZXY,water,wet strength retained,,70.4256,%,lab_f,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,LR4,5J9,9B8,FA3,9VC
++r_AAQ2E9VVQD,exploratory,QP-6820,p_H5JEPY1ZY0,water,wet strength retained,,77.4912,%,lab_f,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,A7P,9B8,FA3,9VC
++r_AAQ2E9VVQE,exploratory,QP-6820,p_H5JEPY1ZY4,water,wet strength retained,,78.2300,%,lab_f,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,5J9,9B8,FA3,3DC
++r_AAQ2E9VVQF,exploratory,QP-6820,p_7JX0SVYP0A,water,wet strength retained,,77.2196,%,lab_f,lab_d,NF2,YH6,KX7,QE3,E8S,5B8,RF3,5UV,5J9,9B8,FA3,9VC

@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -806,3 +806,15 @@
+ r_NPBZ8WF0A2,exploratory,QP-2236,p_38YC9Q1WJ8,water,wet strength retained,,79.1480,%,lab_f,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
+ r_DN6EE3M8TW,exploratory,QP-2236,p_38YC9Q1WJ8,strength,edge crush resistance,,7.39547,kN/m,lab_b,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
+ r_DN6EE3M8TX,exploratory,QP-2236,p_38YC9Q1WJ8,strength,edge crush resistance,,7.31966,kN/m,lab_b,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
++r_RD7Q832BKC,qualification,QP-2236,p_38YC9Q1WJ8,strength,edge crush resistance,0,7.33730,kN/m,lab_b,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
++r_RD7Q832BKD,qualification,QP-2236,p_38YC9Q1WJ8,strength,edge crush resistance,1,7.33061,kN/m,lab_b,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
++r_RD7Q832BKE,qualification,QP-2236,p_38YC9Q1WJ8,strength,edge crush resistance,2,7.34081,kN/m,lab_b,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
++r_RD7Q832BKF,qualification,QP-2236,p_38YC9Q1WJ8,strength,edge crush resistance,3,7.35944,kN/m,lab_b,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
++r_RD7Q832BKG,qualification,QP-2236,p_38YC9Q1WJ8,strength,edge crush resistance,4,7.37987,kN/m,lab_b,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
++r_RD7Q832BKH,qualification,QP-2236,p_38YC9Q1WJ8,strength,edge crush resistance,5,7.39673,kN/m,lab_b,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
++r_6P5PY9TN9R,qualification,QP-2236,p_38YC9Q1WJ8,water,wet strength retained,0,78.6584,%,lab_c,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
++r_6P5PY9TN9S,qualification,QP-2236,p_38YC9Q1WJ8,water,wet strength retained,1,78.9096,%,lab_c,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
++r_6P5PY9TN9T,qualification,QP-2236,p_38YC9Q1WJ8,water,wet strength retained,2,79.0664,%,lab_c,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
++r_6P5PY9TN9V,qualification,QP-2236,p_38YC9Q1WJ8,water,wet strength retained,3,79.2704,%,lab_c,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
++r_6P5PY9TN9W,qualification,QP-2236,p_38YC9Q1WJ8,water,wet strength retained,4,79.5056,%,lab_c,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC
++r_6P5PY9TN9X,qualification,QP-2236,p_38YC9Q1WJ8,water,wet strength retained,5,78.7864,%,lab_c,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC

@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++for pid in ['p_P2FZ2H2S5Z','p_P2FZ2H2S6A','p_GM7DHPGB5W']:
++    q = df[df.prototype_id==pid]
++    print(pid, q[['record_id','kind','test','value','measured_by']].to_string(), len(q))

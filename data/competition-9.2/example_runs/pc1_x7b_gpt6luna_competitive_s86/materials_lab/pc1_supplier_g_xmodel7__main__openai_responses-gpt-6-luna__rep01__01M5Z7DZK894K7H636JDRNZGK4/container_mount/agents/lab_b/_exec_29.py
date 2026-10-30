@@ -1,0 +1,7 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for p in ['QP-7092','QP-5174','QP-9980','QP-9273','QP-8807','QP-6879','QP-9259','QP-9219','QP-3617']:
+ d=x[(x.project==p)&(x.kind=='qualification')].groupby(['prototype_id','test']).value.agg(['mean','count']).unstack()
+ if len(d):
+  d.columns=['_'.join(c) for c in d.columns]
+  print('\n',p, d.to_string())

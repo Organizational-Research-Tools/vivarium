@@ -1,0 +1,6 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+for pid in ['p_C8ZSKAXWWR','p_JSGASS95DF','p_Q3TAPEF79N','p_XSPBXXQ6ND']:
+    sub=df[df.prototype_id==pid]
+    print(pid, sub.project.unique(), sub.groupby('test').value.mean().round(3).to_dict())
+    print(sub.drop_duplicates('prototype_id')[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].to_string(index=False))

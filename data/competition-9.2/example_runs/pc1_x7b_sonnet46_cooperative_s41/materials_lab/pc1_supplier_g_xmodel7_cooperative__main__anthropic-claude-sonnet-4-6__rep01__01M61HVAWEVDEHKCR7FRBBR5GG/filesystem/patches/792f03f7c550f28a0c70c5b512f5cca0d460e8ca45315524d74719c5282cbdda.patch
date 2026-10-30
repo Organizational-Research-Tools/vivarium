@@ -1,0 +1,56 @@
+--- 
++++ 
+@@ -0,0 +1,53 @@
++
++# Check if lab_f's QP-4476 candidates can pass Rev C water
++# Lab_f exploratory values: 79.94%, 80.11%, 80.87%
++# Rev C water threshold: 79.8%
++# Base water = 78.0%, step = 0.4%
++
++wat_base = 78.0
++wat_step = 0.4
++rev_c_wat = wat_base + 4.5 * wat_step
++print(f"Rev C water threshold: {rev_c_wat}%")
++
++candidates = [
++    ("p_QHRB9W33WW (YX8 secondary)", 79.94),
++    ("p_QHRB9W33WY (5BU secondary)", 80.11),
++    ("p_QHRB9W33X0 (3HW secondary)", 80.87),
++]
++for name, val in candidates:
++    margin = (val - wat_base) / wat_step
++    print(f"  {name}: {val}% | margin={margin:.2f} steps | Rev C {'✓' if val >= rev_c_wat else '⚠ BORDERLINE'}")
++
++print()
++print("Key: need margin >= 4.5 steps. Currently exploratory (noisy).")
++print("3HW version (80.87%) has solid margin. YX8 (79.94%) extremely thin.")
++print()
++
++# The GG7 recipe analysis for possible non-GG7 substitute
++print("=== GG7 recipe vs 8BB recipe comparison ===")
++print("GG7:  P2G | GG7 | NN7 | 57T | LD3 | L6C | WB3 | P8G | H3F | ZW3 | 9FU | YV2")
++print("8BB:  P2G | 3HW | 8BB | 57T | S2J | 4PE | WB3 | VA8 | X9F | ZW3 | DL8 | 3N8")
++print()
++print("Differences:")
++diffs = [
++    ("Module 2 (secondary)", "GG7", "3HW"),
++    ("Module 3 (binder)", "NN7", "8BB"),
++    ("Module 5 (AP2)", "LD3", "S2J"),
++    ("Module 6 (AP3)", "L6C", "4PE"),
++    ("Module 8 (PP2)", "P8G", "VA8"),
++    ("Module 9 (PP3)", "H3F", "X9F"),
++    ("Module 11 (joint)", "9FU", "DL8"),
++    ("Module 12 (conditioning)", "YV2", "3N8"),
++]
++for mod, gg7, bb8 in diffs:
++    print(f"  {mod}: GG7={gg7}, 8BB={bb8}")
++
++print()
++print("GG7 recipe performance (QP-3089):")
++print("  Heat: 79.281°C ✓ (7.12 steps)")
++print("  Strength: 7.254 kN/m ✓ (5.13 steps)")
++print("  Water: 80.050% ✓ (5.13 steps)")
++print("  Weakest: 5.13 steps — PASSES Rev C by 0.63 steps")
++print()
++print("Option: Try P2G/3HW/NN7/57T/LD3/L6C/WB3/P8G/H3F/ZW3/9FU/YV2 (GG7 recipe with 3HW sub)")
++print("  Risk: 3HW may reduce heat/strength vs GG7; water with H3F+9FU untested in QP-3089")

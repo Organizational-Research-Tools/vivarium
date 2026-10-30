@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -0,0 +1,12 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++d=df[df['project']=='QP-2342']
++# recipe columns
++rc=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++for p in ['p_GRRDR2MP4W','p_JJQFPGBY7H','p_JJQFPGBY7T','p_JJQFPGBY83','p_NPAKEKTBKY','p_QB1GR2SA65','p_9JS2853ERS','p_9JS2853ERV','p_JX7F5S9FCK']:
++    sub=d[d['prototype_id']==p]
++    if len(sub)==0:
++        print(p,'not in my records'); continue
++    r=sub[rc].dropna().drop_duplicates()
++    print(p, ' | '.join(r.iloc[0].tolist()) if len(r) else 'no recipe known')
++    print('   ', sub.groupby(['test','kind']).value.agg(['mean','count']).to_dict())

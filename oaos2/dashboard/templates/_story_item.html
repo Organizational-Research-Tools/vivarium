@@ -1,0 +1,73 @@
+{# One story item, shared by the Story view and the live feed so an item reads the
+   same in both. `crossing`, when present, names the groups a directed item crossed. #}
+{% macro who(a, aslot) -%}<span class="adot-{{ aslot.get(a, -1) }}"></span><strong>{{ a }}</strong>{%- endmacro %}
+{% macro at(it, run_ref) -%}<a class="dim" href="/run/{{ run_ref }}/event/{{ it.e.event_id }}" title="open the event record">[{{ it.seq }}]</a>{%- endmacro %}
+
+{% macro story_css() -%}
+<style>
+  .story { max-width: 62rem; }
+  .story .it { margin: 0.35rem 0; }
+  .story .post { border: 1px solid var(--hairline); border-radius: 8px; padding: 0.6rem 0.8rem; margin: 0.9rem 0; background: var(--card, transparent); }
+  .story .post .head { display: flex; gap: 0.6rem; align-items: baseline; margin-bottom: 0.3rem; }
+  .story .post .no { font-weight: 700; }
+  .story .note { margin-left: 2.5rem; padding: 0.4rem 0.7rem; border-left: 3px solid var(--s5); }
+  .story .note.notice { border-left-color: var(--s3, #eda100); }
+  .story .note.handoff { border-left-color: var(--s1, #2a78d6); }
+  .story .said { margin-left: 1.2rem; color: var(--ink-2); }
+  .story .said .q { font-style: italic; }
+  .story .thinking { margin-left: 2.5rem; color: var(--ink-2); font-size: 12px; }
+  .story .exchange, .story .tool, .story .result, .story .relay { margin-left: 2.5rem; font-size: 12px; color: var(--ink-2); }
+  .story .milestone { text-align: center; margin: 0.8rem 0; color: var(--ink); }
+  .story .milestone .m { padding: 0.15rem 0.6rem; border: 1px solid var(--hairline); border-radius: 999px; }
+  .story .lifecycle { text-align: center; color: var(--ink-2); font-size: 12px; }
+  .story .problem { border-left: 3px solid var(--critical); padding: 0.3rem 0.6rem; }
+  .story pre.body { white-space: pre-wrap; margin: 0; font: inherit; }
+  .story .xing { font-size: 11px; padding: 0 0.4rem; border: 1px dashed var(--hairline); border-radius: 999px; color: var(--ink-2); }
+  .story details.fold summary { cursor: pointer; color: var(--ink-2); font-size: 12px; }
+</style>
+{%- endmacro %}
+
+{% macro story_item(it, run_ref, aslot) -%}
+{% if it.kind == "post" %}
+<div class="it post">
+  <div class="head"><span class="no">{{ it.title }}</span> {{ who(it.who, aslot) }} <span class="dim">posted to the board · {{ it.to|length }} recipient{{ "s" if it.to|length != 1 }}</span> {{ at(it, run_ref) }}</div>
+  <pre class="body">{{ it.text }}</pre>
+  {% if it.folded %}<details class="fold"><summary>show the rest</summary><pre class="body">{{ it.folded }}</pre></details>{% endif %}
+</div>
+{% elif it.kind == "note" %}
+<div class="it note">
+  <div class="head"><span class="dim">🔒 private note</span> {{ who(it.who, aslot) }} <span class="dim">→ {{ it.to|join(", ") }}</span>{% if it.crossing %} <span class="xing">{{ it.crossing }}</span>{% endif %} {{ at(it, run_ref) }}</div>
+  <pre class="body">{{ it.text }}</pre>
+  {% if it.folded %}<details class="fold"><summary>show the rest</summary><pre class="body">{{ it.folded }}</pre></details>{% endif %}
+</div>
+{% elif it.kind == "handoff" %}
+<div class="it note handoff">
+  <div class="head"><span class="dim">⇢ handed over</span> {% if it.title %}<code>{{ it.title }}</code> {% endif %}{{ who(it.who, aslot) }} <span class="dim">→ {{ it.to|join(", ") }}</span>{% if it.crossing %} <span class="xing">{{ it.crossing }}</span>{% endif %} {{ at(it, run_ref) }}</div>
+  {% if it.text %}<details class="fold"><summary>what was handed over</summary><pre class="body">{{ it.text }}{{ it.folded }}</pre></details>{% endif %}
+</div>
+{% elif it.kind == "notice" %}
+<div class="it note notice">
+  <div class="head"><span class="dim">✉ notice to</span> {% for r in it.to %}{{ who(r, aslot) }}{% endfor %}{% if it.title %} <span class="dim">· {{ it.title }}</span>{% endif %} {{ at(it, run_ref) }}</div>
+  <pre class="body">{{ it.text }}</pre>
+  {% if it.folded %}<details class="fold"><summary>show the rest</summary><pre class="body">{{ it.folded }}</pre></details>{% endif %}
+</div>
+{% elif it.kind == "said" %}
+<div class="it said">{{ who(it.who, aslot) }} <span class="dim">says</span> {{ at(it, run_ref) }} <span class="q">{{ it.text }}</span>{% if it.folded %}<details class="fold"><summary>show the rest</summary><pre class="body">{{ it.folded }}</pre></details>{% endif %}</div>
+{% elif it.kind == "thinking" %}
+<div class="it thinking">{{ who(it.who, aslot) }} <span class="dim">thinks</span> {{ at(it, run_ref) }} <pre class="body">{{ it.text }}</pre>{% if it.folded %}<details class="fold"><summary>show the rest</summary><pre class="body">{{ it.folded }}</pre></details>{% endif %}</div>
+{% elif it.kind == "exchange" %}
+<div class="it exchange">{{ who(it.who, aslot) }} <span class="dim">→ {{ it.to|join(", ") }}</span>{% if it.crossing %} <span class="xing">{{ it.crossing }}</span>{% endif %} · {{ it.title }}: {{ it.text }} {{ at(it, run_ref) }}{% if it.last_seq %}<span class="dim">–[{{ it.last_seq }}]</span>{% endif %}</div>
+{% elif it.kind == "relay" %}
+<div class="it relay">{{ who(it.who, aslot) }} <span class="dim">→ {{ it.to|join(", ") }} · relayed {{ it.title }}</span>{% if it.crossing %} <span class="xing">{{ it.crossing }}</span>{% endif %} {{ at(it, run_ref) }} <pre class="body">{{ it.text }}</pre></div>
+{% elif it.kind == "tool" %}
+<div class="it tool">{{ who(it.who, aslot) }} <span class="dim">calls</span> <code>{{ it.title }}</code> {{ at(it, run_ref) }}{% if it.text %} <span class="dim">{{ it.text }}</span>{% endif %}</div>
+{% elif it.kind == "result" %}
+<div class="it result"><span class="dim">↳ {{ it.title }} returned</span> {{ at(it, run_ref) }} <details class="fold"><summary>output</summary><pre class="body">{{ it.text }}{{ it.folded }}</pre></details></div>
+{% elif it.kind == "milestone" %}
+<div class="it milestone"><span class="m">{% if it.title %}<span class="dim">{{ it.title }} · </span>{% endif %}{{ it.who }}: {{ it.text }} {{ at(it, run_ref) }}</span></div>
+{% elif it.kind == "lifecycle" %}
+<div class="it lifecycle">{{ it.text }} {{ at(it, run_ref) }}</div>
+{% elif it.kind == "problem" %}
+<div class="it problem"><span class="sev sev-serious">problem</span> <code>{{ it.title }}</code> {{ it.who or "" }} {{ it.text }} {{ at(it, run_ref) }}</div>
+{% endif %}
+{%- endmacro %}

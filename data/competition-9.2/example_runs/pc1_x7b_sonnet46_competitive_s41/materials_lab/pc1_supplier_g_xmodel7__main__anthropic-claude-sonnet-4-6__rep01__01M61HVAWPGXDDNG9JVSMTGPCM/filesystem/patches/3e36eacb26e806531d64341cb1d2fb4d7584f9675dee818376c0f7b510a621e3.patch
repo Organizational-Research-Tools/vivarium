@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -0,0 +1,27 @@
++
++import pandas as pd
++import numpy as np
++
++df = pd.read_csv('records.csv')
++
++# Get panel summaries per prototype per project per test
++panels = df[df['kind'] == 'qualification'].groupby(['project', 'prototype_id', 'test'])['value'].agg(['mean', 'count']).reset_index()
++
++# Pivot to get heat/strength/water per prototype
++pivot = panels.pivot_table(index=['project', 'prototype_id'], columns='test', values='mean').reset_index()
++pivot.columns.name = None
++
++print("Qualification panel means per prototype:")
++print(pivot.to_string())
++print()
++
++# Check what's complete (all 3 tests)
++complete = pivot.dropna(subset=['seal hold temperature', 'edge crush resistance', 'wet strength retained'])
++print("Complete prototypes (all 3 tests):")
++complete = complete.copy()
++complete['heat_pass'] = complete['seal hold temperature'] >= 77.5
++complete['strength_pass'] = complete['edge crush resistance'] >= 7.10
++complete['water_pass'] = complete['wet strength retained'] >= 78.0
++complete['all_pass'] = complete['heat_pass'] & complete['strength_pass'] & complete['water_pass']
++complete['has_GG7'] = complete['prototype_id'].isin(df[df['secondary_sheet'] == 'GG7']['prototype_id'].unique())
++print(complete[['project', 'prototype_id', 'seal hold temperature', 'edge crush resistance', 'wet strength retained', 'heat_pass', 'strength_pass', 'water_pass', 'all_pass', 'has_GG7']].to_string())

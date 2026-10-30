@@ -1,0 +1,9 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+ids=['p_SVR5NZMYFG','p_SVR5NZMYFM','p_GRQC7S72K1','p_SVR5NZMYFE','p_GRQC7S72KF','p_S6067EX454','p_SVR5NZMYG6']
+for p in ids:
+ y=x[x.prototype_id.eq(p)]
+ print('\n',p, 'rows',len(y))
+ if len(y):
+  print(y[['kind','instrument','test','value','measured_by','requester']].to_string(index=False))
+  print(list(y.iloc[0][['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']]))

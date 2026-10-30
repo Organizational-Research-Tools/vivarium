@@ -1,0 +1,11 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+# strength reads for lab_d's heat-strong five, and RTK strength
+ids = ['p_FRY0EA0DNZ','p_B0A2AF9B7E','p_W9QVRJ7PXQ','p_G8S61Z3JR7','p_W9QVRJ7PXS','p_R0NQ874RTK']
+s = df[(df.test=='strength (edge crush resistance, kN/m)') & (df.prototype_id.isin(ids))]
+print(s[['prototype_id','kind','value','measured_by','record_id']].to_string())
+print()
+# RTK-family strength: recipes with 6XS surface OR A6U joint on QP-5993, any measurement
+fam = df[(df.project=='QP-5993') & (df.instrument=='strength')]
+m = (fam.surface_treatment=='6XS') | (fam.joint_system=='A6U')
+print(fam[m][['prototype_id','kind','test','value','measured_by']].drop_duplicates().to_string())

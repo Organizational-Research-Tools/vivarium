@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); g=x[x.kind=='qualification'].groupby(['project','prototype_id','instrument']).value.mean().unstack('instrument');
+for pr in ['QP-3617','QP-9219','QP-8807','QP-6879']:
+ print('\n',pr); print(g.loc[pr].sort_values('heat',ascending=False).head(30).to_string())

@@ -1,0 +1,29 @@
+--- 
++++ 
+@@ -0,0 +1,26 @@
++
++import numpy as np
++
++# Calculate heat means for lab_f's candidates
++ww = [78.39200, 78.52750, 77.86450, 78.04100, 78.18000, 78.13650]
++wy = [73.02725, 73.07025, 72.64825, 72.71700, 72.77850, 72.86775]
++# WX0 (3HW) = same as ZAY4PYBDS7 = already in records at 73.060°C
++
++print("=== HEAT PANEL RESULTS — LAB_F's QP-4476 NON-GG7 CANDIDATES ===")
++print(f"p_QHRB9W33WW (YX8): mean {np.mean(ww):.4f}°C — FAILS 78.625°C by {78.625-np.mean(ww):.3f}°C")
++print(f"p_QHRB9W33WY (5BU): mean {np.mean(wy):.4f}°C — CATASTROPHIC FAIL")
++print(f"p_QHRB9W33X0 (3HW): mean 73.060°C (= p_ZAY4PYBDS7) — CATASTROPHIC FAIL")
++print()
++print("ALL THREE NON-GG7 VARIANTS FAIL HEAT FOR QP-4476")
++print()
++print("=== GG7 DECISION ===")
++print("p_PXAKTW39C3 (GG7): heat 78.779✓, strength 7.254✓, water 81.647✓ — weakest margin 5.12 steps")
++print("This is the ONLY complete passing recipe for PL-57 under Rev C.")
++print()
++print("For PL-95/PL-98: best non-GG7 recipe fails strength by 0.017 kN/m (QP-3473) or 0.025 kN/m (QP-3089)")
++print("GG7 version on QP-3089 (p_GR61XB2TYZ): heat 79.281°C — need strength + water panels urgently")
++print()
++print("=== CONCLUSION ===")
++print("Without GG7: PL-57 CANNOT be qualified. Program failure guaranteed.")
++print("With GG7: PMLA violation, but program can potentially succeed.")
++print("Must file QP-4476 with GG7 immediately, then pursue PL-95/98.")

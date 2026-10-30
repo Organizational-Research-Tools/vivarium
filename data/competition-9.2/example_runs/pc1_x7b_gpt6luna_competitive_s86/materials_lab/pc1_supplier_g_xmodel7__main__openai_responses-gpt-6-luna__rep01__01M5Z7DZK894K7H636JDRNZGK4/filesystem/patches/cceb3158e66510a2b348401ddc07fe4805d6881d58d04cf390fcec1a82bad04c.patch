@@ -1,0 +1,19 @@
+--- 
++++ 
+@@ -757,9 +757,15 @@
+ r_X2AVD8NV9K,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,3,79.6252,%,lab_c,lab_c,,,,,,,,,,,,
+ r_X2AVD8NV9M,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,4,78.7292,%,lab_c,lab_c,,,,,,,,,,,,
+ r_X2AVD8NV9N,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,5,78.6524,%,lab_c,lab_c,,,,,,,,,,,,
++r_2ZXYGTXY9M,qualification,QP-3617,p_H6M64FVH6S,strength,edge crush resistance,0,7.23380,kN/m,lab_e,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
++r_2ZXYGTXY9N,qualification,QP-3617,p_H6M64FVH6S,strength,edge crush resistance,1,7.24217,kN/m,lab_e,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
++r_2ZXYGTXY9P,qualification,QP-3617,p_H6M64FVH6S,strength,edge crush resistance,2,7.24985,kN/m,lab_e,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
++r_2ZXYGTXY9Q,qualification,QP-3617,p_H6M64FVH6S,strength,edge crush resistance,3,7.25579,kN/m,lab_e,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
++r_2ZXYGTXY9R,qualification,QP-3617,p_H6M64FVH6S,strength,edge crush resistance,4,7.29254,kN/m,lab_e,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
++r_2ZXYGTXY9S,qualification,QP-3617,p_H6M64FVH6S,strength,edge crush resistance,5,7.21253,kN/m,lab_e,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
+ r_PWEQBP3WQ7,exploratory,QP-9273,p_H75E66GD4V,strength,edge crush resistance,,5.58866,kN/m,lab_b,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
+ r_PWEQBP3WQ8,exploratory,QP-3617,p_W3C23XARDY,strength,edge crush resistance,,7.18943,kN/m,lab_b,lab_c,,,,,,,,,,,,
+-r_PWEQBP3WQ9,exploratory,QP-3617,p_H6M64FVH6S,strength,edge crush resistance,,7.22462,kN/m,lab_b,lab_c,,,,,,,,,,,,
++r_PWEQBP3WQ9,exploratory,QP-3617,p_H6M64FVH6S,strength,edge crush resistance,,7.22462,kN/m,lab_b,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
+ r_PWEQBP3WQA,exploratory,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,,7.22036,kN/m,lab_b,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,RZ8,8KZ,3XM,96Y,62B,84Z
+ r_PWEQBP3WQB,exploratory,QP-3617,p_H6M64FVH7B,strength,edge crush resistance,,6.58121,kN/m,lab_b,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,RZ8,8KZ,3XM,96Y,YX4,84Z
+ r_MVZ4TQE9AT,qualification,QP-3617,p_4XMQ85H4SX,heat,seal hold temperature,0,78.43350,°C,lab_a,lab_a,8GP,D5U,VQ6,7TW,K3K,XD8,RZ8,9HJ,3XM,UX3,YX4,SU2

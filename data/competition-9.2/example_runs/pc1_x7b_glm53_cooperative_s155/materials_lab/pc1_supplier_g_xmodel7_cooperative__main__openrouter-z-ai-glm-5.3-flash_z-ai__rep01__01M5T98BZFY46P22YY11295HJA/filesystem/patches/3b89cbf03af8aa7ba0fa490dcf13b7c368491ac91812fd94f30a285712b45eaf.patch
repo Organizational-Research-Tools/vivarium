@@ -1,0 +1,16 @@
+--- 
++++ 
+@@ -0,0 +1,13 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++pan=df[df.kind=='qualification']
++cols=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++for proj in ['QP-1454','QP-1466','QP-6489','QP-2342','QP-3589','QP-4586']:
++    print('==',proj)
++    p=pan[pan.project==proj]
++    rec=p.groupby('prototype_id')[cols].first()
++    g=p.groupby(['prototype_id','test']).value.mean().unstack()
++    for pid,row in g.iterrows():
++        r=rec.loc[pid].tolist()
++        vals={k:round(v,3) for k,v in row.items() if pd.notna(v)}
++        print(pid,vals,r)

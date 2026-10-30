@@ -1,0 +1,8 @@
+import pandas as pd
+df = pd.read_csv("records.csv")
+# Complete strength panels by lab_e on QP-5993 candidates with known composition
+me = df[(df.measured_by=="lab_e")&(df.project=="QP-5993")]
+g = me.groupby("prototype_id").agg(n=("value","count"), mean=("value","mean"))
+comp = me.groupby("prototype_id")[["secondary_sheet","binder_system","additive_package_1","additive_package_2","additive_package_3","process_profile_1","process_profile_2","surface_treatment","joint_system","conditioning_step"]].first()
+print(g.join(comp).sort_values("mean",ascending=False).head(30).to_string())
+# also all records on these: strength panels by anyone for prototypes with composition known

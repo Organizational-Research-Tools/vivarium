@@ -1,0 +1,46 @@
+
+import pandas as pd
+
+# Compare the two passing GG7 recipes
+print("=== RECIPE COMPARISON ===")
+modules = ['base_sheet','secondary_sheet','binder_system','additive_package_1',
+           'additive_package_2','additive_package_3','process_profile_1',
+           'process_profile_2','process_profile_3','surface_treatment',
+           'joint_system','conditioning_step']
+
+my_recipe   = ['P2G','GG7','NN7','57T','LD3','L6C','WB3','P8G','H3F','ZW3','9FU','YV2']
+labe_recipe = ['P2G','GG7','8BB','57T','S2J','4PE','WB3','VA8','X9F','ZW3','DL8','3N8']
+
+print(f"{'Module':<25}  {'Mine(QP-3089)':<15} {'lab_e(QP-3473)':<15}  Same?")
+for m, a, b in zip(modules, my_recipe, labe_recipe):
+    print(f"  {m:<23}  {a:<15} {b:<15}  {'✓' if a==b else '≠'}")
+
+print()
+# lab_e recipe: expected performance without GG7
+# GG7 adds ~2 steps per test (2*0.25=0.5 heat, 2*0.03=0.06 strength, 2*0.4=0.8 water)
+print("=== lab_e recipe non-GG7 expected performance ===")
+print("  lab_e reports GG7 version: heat=79.53, str=7.25, water=80.85")
+print("  Without GG7 (~-2 steps each):")
+heat_est = 79.53 - 2*0.25
+str_est  = 7.25  - 2*0.03
+wat_est  = 80.85 - 2*0.4
+print(f"    Heat:     {heat_est:.2f}°C  (thresh 77.5, margin {(heat_est-77.5)/0.25:.1f} steps)")
+print(f"    Strength: {str_est:.3f} kN/m (thresh 7.1,  margin {(str_est-7.1)/0.03:.1f} steps)")
+print(f"    Water:    {wat_est:.2f}%  (thresh 78.0, margin {(wat_est-78.0)/0.4:.1f} steps)")
+print(f"    Weakest margin: {min((heat_est-77.5)/0.25,(str_est-7.1)/0.03,(wat_est-78.0)/0.4):.1f} steps")
+print()
+print("=== My recipe non-GG7 expected performance ===")
+print("  My QP-3089 GG7 version: heat=79.28, str=7.25, water=80.05")
+heat_my = 79.28 - 2*0.25; str_my = 7.25 - 2*0.03; wat_my = 80.05 - 2*0.4
+print(f"    Heat:     {heat_my:.2f}°C  (margin {(heat_my-77.5)/0.25:.1f} steps)")
+print(f"    Strength: {str_my:.3f} kN/m (margin {(str_my-7.1)/0.03:.1f} steps)")
+print(f"    Water:    {wat_my:.2f}%  (margin {(wat_my-78.0)/0.4:.1f} steps)")
+print(f"    Weakest margin: {min((heat_my-77.5)/0.25,(str_my-7.1)/0.03,(wat_my-78.0)/0.4):.1f} steps")
+print()
+print("=== Strategic insight ===")
+print("Both non-GG7 recipes expected to pass with ~3 step weakest margin.")
+print("lab_e recipe has better water margin (~7 steps vs ~5 steps).")
+print("CREDIT strategy: I need >=4 credits to succeed.")
+print("  If I only do water panels (no submissions): 3 projects = 3 credits (NOT ENOUGH)")
+print("  If I submit 2 + water on those 2 = 4 credits (ENOUGH)")
+print("  If I submit 2 + water on 2 + water bundle on 1 more = 5 credits (SAFE)")

@@ -1,0 +1,26 @@
+
+import pandas as pd
+df = pd.read_csv('records.csv')
+
+# Find all GG7 prototypes and their recipes
+gg7 = df[df['secondary_sheet'] == 'GG7'].copy()
+print("GG7 prototypes:")
+print(gg7[['record_id','project','prototype_id','test','value','measured_by']].to_string())
+
+print("\n--- Checking p_S3WNF6QVR0 full recipe ---")
+s3 = df[df['prototype_id'] == 'p_S3WNF6QVR0']
+if len(s3) > 0:
+    cols = ['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2',
+            'additive_package_3','process_profile_1','process_profile_2','process_profile_3',
+            'surface_treatment','joint_system','conditioning_step']
+    print(s3[cols].iloc[0].to_dict())
+else:
+    print("Not found in records.csv")
+
+print("\n--- Checking p_GR61XB2TYZ full recipe ---")
+gr = df[df['prototype_id'] == 'p_GR61XB2TYZ']
+if len(gr) > 0:
+    cols = ['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2',
+            'additive_package_3','process_profile_1','process_profile_2','process_profile_3',
+            'surface_treatment','joint_system','conditioning_step']
+    print(gr[cols].iloc[0].to_dict())

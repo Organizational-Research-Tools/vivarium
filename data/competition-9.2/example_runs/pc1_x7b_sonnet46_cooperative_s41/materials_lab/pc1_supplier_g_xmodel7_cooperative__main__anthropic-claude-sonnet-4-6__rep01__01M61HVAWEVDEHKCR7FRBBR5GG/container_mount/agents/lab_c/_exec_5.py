@@ -1,0 +1,32 @@
+
+import pandas as pd
+pd.set_option('display.max_columns', None)
+
+df = pd.read_csv('records.csv')
+
+comp_cols = ['base_sheet','secondary_sheet','binder_system','additive_package_1',
+             'additive_package_2','additive_package_3','process_profile_1',
+             'process_profile_2','process_profile_3','surface_treatment',
+             'joint_system','conditioning_step']
+
+# Get water panels with compositions
+water_panels = df[(df['kind']=='qualification') & (df['test']=='wet strength retained')].copy()
+water_means = water_panels.groupby(['project','prototype_id'])['value'].mean().reset_index()
+water_means.columns = ['project','prototype_id','water_mean']
+
+comp = df[comp_cols + ['prototype_id','secondary_sheet']].drop_duplicates('prototype_id')
+wm = water_means.merge(comp, on='prototype_id', how='left')
+
+print("Water results by joint_system and additive_package_3:")
+print(wm[['project','water_mean','joint_system','additive_package_3','additive_package_2','secondary_sheet']].sort_values('water_mean', ascending=False).to_string())
+
+print("\n\n=== KEY WATER INTERACTIONS ===")
+print("joint_system breakdown:")
+print(wm.groupby('joint_system')['water_mean'].agg(['mean','count','min','max']))
+
+print("\nadditive_package_3 breakdown:")
+print(wm.groupby('additive_package_3')['water_mean'].agg(['mean','count','min','max']))
+
+print("\nap2 x joint x ap3 combo:")
+wm['combo_water'] = wm['additive_package_2'] + ' x ' + wm['joint_system'] + ' x ' + wm['additive_package_3']
+print(wm.groupby('combo_water')['water_mean'].agg(['mean','count']).sort_values('mean', ascending=False))

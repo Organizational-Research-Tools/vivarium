@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++for p in ['p_B7CX78CE96','p_B7CX78CE98','p_7YZRW7210Y','p_7YZRW72110','p_8ATRDK3V3Z']:
++ d=x[x.prototype_id==p]
++ print('\n',p, len(d), d.groupby('instrument').value.mean().to_dict())

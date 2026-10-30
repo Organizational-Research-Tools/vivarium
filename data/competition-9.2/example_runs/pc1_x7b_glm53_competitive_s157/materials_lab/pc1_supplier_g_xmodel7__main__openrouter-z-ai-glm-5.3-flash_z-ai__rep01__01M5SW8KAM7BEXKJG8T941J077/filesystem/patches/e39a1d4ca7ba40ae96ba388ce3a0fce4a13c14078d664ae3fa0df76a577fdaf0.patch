@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -406,3 +406,7 @@
+ r_CR3MNK4MTA,qualification,QP-5653,p_C9N9H45C3W,heat,seal hold temperature,3,79.39300,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_CR3MNK4MTB,qualification,QP-5653,p_C9N9H45C3W,heat,seal hold temperature,4,78.96225,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_CR3MNK4MTC,qualification,QP-5653,p_C9N9H45C3W,heat,seal hold temperature,5,78.93525,°C,lab_a,lab_a,,,,,,,,,,,,
++r_8GK9KTR6JF,exploratory,QP-5066,p_D9HNSWCWZ3,water,wet strength retained,,41.8832,%,lab_c,lab_a,,,,,,,,,,,,
++r_8GK9KTR6JG,exploratory,QP-5653,p_49WKA33T48,water,wet strength retained,,69.8240,%,lab_c,lab_a,,,,,,,,,,,,
++r_8GK9KTR6JH,exploratory,QP-5653,p_GKYT9SC1ET,water,wet strength retained,,78.9576,%,lab_c,lab_d,,,,,,,,,,,,
++r_8GK9KTR6JJ,exploratory,QP-5653,p_GKYT9SC1F0,water,wet strength retained,,79.2664,%,lab_c,lab_d,,,,,,,,,,,,

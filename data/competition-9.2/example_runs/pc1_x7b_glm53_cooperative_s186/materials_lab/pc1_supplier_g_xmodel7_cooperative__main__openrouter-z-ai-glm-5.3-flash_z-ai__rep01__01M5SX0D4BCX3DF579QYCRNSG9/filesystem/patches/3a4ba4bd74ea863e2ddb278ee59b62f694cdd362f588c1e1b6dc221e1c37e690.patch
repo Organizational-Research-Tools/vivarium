@@ -1,0 +1,20 @@
+--- 
++++ 
+@@ -245,3 +245,17 @@
+ r_53KFAFTTSN,exploratory,QP-7065,p_6KEZMCMXP0,strength,edge crush resistance,,6.52715,kN/m,lab_e,lab_e,HP9,TN6,J9B,8BE,WJ7,JN6,8KT,9AH,X9S,6XS,7UX,9DA
+ r_53KFAFTTSP,exploratory,QP-7065,p_6KEZMCMXP2,strength,edge crush resistance,,6.59942,kN/m,lab_e,lab_e,7FT,TN6,J9B,Q3H,42D,Z2E,Q7N,9AH,V7P,83B,YS6,9DA
+ r_53KFAFTTSQ,exploratory,QP-7065,p_6KEZMCMXP2,strength,edge crush resistance,,6.53414,kN/m,lab_e,lab_e,7FT,TN6,J9B,Q3H,42D,Z2E,Q7N,9AH,V7P,83B,YS6,9DA
++r_N94ZQV6GDY,exploratory,QP-7065,p_W1VN0R72RM,strength,edge crush resistance,,7.16420,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_N94ZQV6GDZ,exploratory,QP-7065,p_W1VN0R72RM,strength,edge crush resistance,,7.16630,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_N94ZQV6GE0,exploratory,QP-7065,p_2P8FD1CSCM,strength,edge crush resistance,,7.20029,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_N94ZQV6GE1,exploratory,QP-7065,p_2P8FD1CSCM,strength,edge crush resistance,,7.21997,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_N94ZQV6GE2,exploratory,QP-7065,p_JBFVJG99H5,strength,edge crush resistance,,7.26479,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_E4YYGR3JRY,exploratory,QP-7065,p_JBFVJG99H5,strength,edge crush resistance,,7.22198,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_E4YYGR3JRZ,exploratory,QP-7065,p_SAVR13Y63W,strength,edge crush resistance,,7.20935,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_E4YYGR3JS0,exploratory,QP-7065,p_SAVR13Y63W,strength,edge crush resistance,,7.17794,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_E4YYGR3JS1,exploratory,QP-7065,p_795Q00MQ7M,strength,edge crush resistance,,7.24292,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_E4YYGR3JS2,exploratory,QP-7065,p_795Q00MQ7M,strength,edge crush resistance,,7.24793,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_E4YYGR3JS3,exploratory,QP-7065,p_795Q00MQ7P,strength,edge crush resistance,,7.22228,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_E4YYGR3JS4,exploratory,QP-7065,p_795Q00MQ7P,strength,edge crush resistance,,7.26149,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_AXZ6A0SY6N,exploratory,QP-7065,p_SQZS81JT7Y,strength,edge crush resistance,,7.26419,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_AXZ6A0SY6P,exploratory,QP-7065,p_SQZS81JT7Y,strength,edge crush resistance,,7.23299,kN/m,lab_e,lab_d,,,,,,,,,,,,

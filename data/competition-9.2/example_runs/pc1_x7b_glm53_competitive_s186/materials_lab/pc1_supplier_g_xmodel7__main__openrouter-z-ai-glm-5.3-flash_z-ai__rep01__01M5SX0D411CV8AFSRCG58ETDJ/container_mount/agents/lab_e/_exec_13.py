@@ -1,0 +1,6 @@
+import pandas as pd, itertools, numpy as np
+vals = [79.6608,79.7172,79.8588,79.0256,79.1024,79.3440,79.5272]
+ids = ['r_9GMYZKRGPN','r_TQKPVR8Z6R','r_TQKPVR8Z6S','r_TQKPVR8Z6T','r_TQKPVR8Z6V','r_TQKPVR8Z6W','r_TQKPVR8Z6X']
+for c in itertools.combinations(range(7),6):
+    if abs(np.mean([vals[i] for i in c])-79.4292)<0.001:
+        print([ids[i] for i in c], np.mean([vals[i] for i in c]))

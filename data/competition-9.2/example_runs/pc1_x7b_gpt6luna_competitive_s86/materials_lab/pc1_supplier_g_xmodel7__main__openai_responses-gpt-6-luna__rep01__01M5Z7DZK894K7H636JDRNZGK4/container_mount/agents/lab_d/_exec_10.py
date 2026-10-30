@@ -1,0 +1,5 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+y=x[(x['project']=='QP-9219')&x['prototype_id'].astype(str).str.match(r'p_(9BPKMPQZ|VZGQ9H2|R7M02REJ|2YHYS3GP|TKEVXBC)')]
+print(y.groupby(['prototype_id','kind','test','measured_by']).size().unstack(fill_value=0).to_string())
+print('n protos', y.prototype_id.nunique(), 'unique exp rows', len(y[y.kind=='exploratory']))

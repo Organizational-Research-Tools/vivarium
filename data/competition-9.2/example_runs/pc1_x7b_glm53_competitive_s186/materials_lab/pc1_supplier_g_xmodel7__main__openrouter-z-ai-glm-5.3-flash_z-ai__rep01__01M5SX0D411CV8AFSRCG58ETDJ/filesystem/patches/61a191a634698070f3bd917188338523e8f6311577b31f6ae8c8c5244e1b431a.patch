@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++mods = ['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++for pid in ['p_5PM7PEQQKC','p_71A4R7AMDG','p_SV2G01G1V4','p_021YJYEVY6','p_1FF8Y39WNR']:
++    r = df[df.prototype_id==pid]
++    print(pid, r[mods].iloc[0].tolist() if len(r) else 'unknown')

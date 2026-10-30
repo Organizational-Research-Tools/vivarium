@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -217,3 +217,9 @@
+ r_KMH943SC97,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.25003,kN/m,lab_e,lab_a,,,,,,,,,,,,
+ r_BM8TDBDXMG,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.25747,kN/m,lab_e,lab_a,,,,,,,,,,,,
+ r_BM8TDBDXMH,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.23002,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_VNABKMYGMQ,qualification,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,0,7.21097,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_VNABKMYGMR,qualification,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,1,7.23383,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_VNABKMYGMS,qualification,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,2,7.23737,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_VNABKMYGMT,qualification,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,3,7.17707,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_VNABKMYGMV,qualification,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,4,7.18988,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_VNABKMYGMW,qualification,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,5,7.18754,kN/m,lab_e,lab_a,,,,,,,,,,,,

@@ -1,0 +1,6 @@
+import random, json
+mods=[["3F4","H6K","73S","SM9"],["9AF","3XR","HJ7","3S7"],["6ZC","3VE","E5L","DQ9"],["M5L","U4A","3VM","V5J"],["NS4","Y6H","4C2","7J8"],["3LL","J3Y","92P","S3J"],["3RB","PG2","24L","GY3"],["F9B","GL8","79Y","8WN"],["49R","37J","W9T","84A"],["N4Y","RQ5","NP6","6FZ"],["8K5","8M7","7PP","PK9"],["UZ4","4YT","LW5","23Y"]]
+random.seed(1)
+recipes=[[random.choice(m) for m in mods] for _ in range(48)]
+json.dump(recipes,open('recipes.json','w'))
+print(len(recipes))

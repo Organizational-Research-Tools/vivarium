@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv');q=x[x.project=='QP-3617']; cols=['prototype_id','test','value','measured_by']+list(x.columns[11:]); print(q.groupby(['prototype_id','test']).agg(mean=('value','mean'),n=('value','size'),owner=('measured_by','first')).to_string()); print('\nrecipes'); print(q[['prototype_id']+list(x.columns[11:])].drop_duplicates().to_string(index=False))

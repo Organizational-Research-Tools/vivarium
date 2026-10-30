@@ -1,0 +1,15 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+g=x.groupby(['project','prototype_id','test']).agg(mean=('value','mean'),n=('value','size')).query('n==6').reset_index()
+g=g.merge(x[['project','prototype_id']+mods].drop_duplicates(),on=['project','prototype_id'])
+# pairs per project exact matching all but surface, with heat
+for mod in ['surface_treatment','binder_system','process_profile_1','additive_package_1']:
+ print('\nMOD',mod)
+ other=[m for m in mods if m!=mod]
+ q=g[g.test=='seal hold temperature']
+ pairs=[]
+ for _, group in q.groupby(['project']+other):
+  if group[mod].nunique()>1:
+   pairs.append(group[['project','prototype_id',mod,'mean']].to_dict('records'))
+ print(pairs[:15], 'n=',len(pairs))

@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -0,0 +1,15 @@
++import random, json
++random.seed(7)
++names=["3F4","H6K","73S","SM9","9AF","3XR","HJ7","3S7","6ZC","3VE","E5L","DQ9","M5L","U4A","3VM","V5J","NS4","Y6H","4C2","7J8","3LL","J3Y","92P","S3J","3RB","PG2","24L","GY3","F9B","GL8","79Y","8WN","49R","37J","W9T","84A","N4Y","RQ5","NP6","6FZ","8K5","8M7","7PP","PK9","UZ4","4YT","LW5","23Y"]
++recipes=[]
++for i in range(48):
++    r=[]
++    for j in range(12):
++        if j==7:  # pp2 avoid 79Y idx2
++            r.append(random.choice([0,1,3]))
++        else:
++            r.append(random.randrange(4))
++    recipes.append(r)
++settings=[[names[j*4+r[j]] for j in range(12)] for r in recipes]
++json.dump({"recipes":recipes,"settings":settings}, open("round2.json","w"))
++print(settings[:3])

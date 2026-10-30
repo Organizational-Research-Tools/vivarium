@@ -1,0 +1,29 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+
+# Final summary of what lab_d measured
+print("=== LAB_D FINAL RECORD SUMMARY ===")
+print(f"Total records: {len(df)}")
+print(f"Records measured by lab_d: {len(df[df['measured_by']=='lab_d'])}")
+print()
+
+# Heat panels measured by lab_d
+heat_panels = df[(df['measured_by']=='lab_d') & (df['kind']=='qualification') & (df['test']=='seal hold temperature')]
+print("Heat qualification panels measured by lab_d:")
+for pid, grp in heat_panels.groupby('prototype_id'):
+    mean = grp['value'].mean()
+    steps = (mean - 77.5) / 0.25
+    thresh_steps = (78.625 - 77.5) / 0.25
+    status = "✓" if steps >= thresh_steps else "✗"
+    print(f"  {pid}: mean={mean:.3f}°C = {steps:.2f} steps {status}")
+print()
+
+# What was the strength threshold issue?
+print("=== STRENGTH THRESHOLD ANALYSIS ===")
+strength_records = df[df['test']=='edge crush resistance']
+for pid, grp in strength_records[strength_records['kind']=='qualification'].groupby('prototype_id'):
+    mean = grp['value'].mean()
+    steps = (mean - 6.5) / 0.03
+    status = "✓" if mean >= 7.235 else "✗"
+    proj = grp['project'].iloc[0]
+    print(f"  {pid} ({proj}): mean={mean:.3f} kN/m {status}")

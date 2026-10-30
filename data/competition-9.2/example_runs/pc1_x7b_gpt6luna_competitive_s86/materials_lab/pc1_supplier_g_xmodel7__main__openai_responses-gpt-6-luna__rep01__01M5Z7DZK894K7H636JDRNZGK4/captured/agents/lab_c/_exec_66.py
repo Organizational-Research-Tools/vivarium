@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x.columns.tolist())
+print(x[x.astype(str).apply(lambda c:c.str.contains('p_2YHYS3GPHP',na=False)).any(axis=1)].head(8).to_string(index=False))

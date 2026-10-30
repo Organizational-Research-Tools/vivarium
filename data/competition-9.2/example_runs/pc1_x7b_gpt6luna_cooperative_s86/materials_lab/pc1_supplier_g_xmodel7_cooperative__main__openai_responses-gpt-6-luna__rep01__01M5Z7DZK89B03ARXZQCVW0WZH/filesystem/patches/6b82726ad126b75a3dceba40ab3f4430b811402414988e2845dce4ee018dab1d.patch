@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++# means; select no strength and H>=78.625 W>=79.8
++m=x.groupby(['project','prototype_id','test']).value.mean().unstack()
++print(m[(m.get('heat',pd.Series(dtype=float))>=78.625)&(m.get('water',pd.Series(dtype=float))>=79.8)&m.get('strength',pd.Series(index=m.index,dtype=float)).isna()].to_string())
++# more broadly candidates H/W, report counts

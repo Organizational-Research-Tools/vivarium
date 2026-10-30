@@ -1,0 +1,22 @@
+
+import numpy as np
+
+p_P68BNAVWAS = [6.51368, 6.54323, 6.55133, 6.49103, 6.48941, 6.50690]
+p_2TK8W7BFC9 = [7.20779, 7.20923, 7.22129, 7.15940, 7.16900, 7.16969]
+
+m1 = np.mean(p_P68BNAVWAS)
+m2 = np.mean(p_2TK8W7BFC9)
+threshold = 7.235
+step = 0.03
+
+print(f"p_P68BNAVWAS (QP-3473, pp1=UP5) strength mean: {m1:.4f} kN/m  FAILS ({(m1-threshold)/step:+.2f} steps)")
+print(f"p_2TK8W7BFC9 (QP-3089, pp1=UP5) strength mean: {m2:.4f} kN/m  FAILS ({(m2-threshold)/step:+.2f} steps)")
+print()
+print("SUMMARY — ALL non-GG7 strength panel results in PL-95/PL-98 context:")
+print("  pp1=WB3 (baseline): ~7.224 kN/m FAILS by 0.37 steps")
+print("  pp1=4QB: ~7.189-7.205 kN/m FAILS by 1.0-1.5 steps (AND heat catastrophe with ZW3/X9F)")
+print("  pp1=UP5: p_P68BNAVWAS ~6.527 kN/m CATASTROPHIC; p_2TK8W7BFC9 ~7.190 kN/m FAILS")
+print("  secondary=5BU: ~7.144 kN/m FAILS")
+print()
+print("PROGRAM STATUS: PL-95 and PL-98 unqualified. Program will FAIL at deadline.")
+print("No remaining non-GG7 candidate passes strength at >= 7.235 kN/m in PL-95/PL-98 recipes.")

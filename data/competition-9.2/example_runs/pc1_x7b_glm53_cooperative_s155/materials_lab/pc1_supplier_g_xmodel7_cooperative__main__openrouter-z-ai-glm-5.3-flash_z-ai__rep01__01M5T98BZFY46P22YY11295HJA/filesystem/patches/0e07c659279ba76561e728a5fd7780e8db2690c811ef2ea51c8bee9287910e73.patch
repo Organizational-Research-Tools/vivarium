@@ -1,0 +1,27 @@
+--- 
++++ 
+@@ -0,0 +1,24 @@
++import numpy as np, pandas as pd
++df=pd.read_csv('records.csv')
++# mean by recipe for water
++q=df[df.kind=='qualification'].copy()
++g=q.groupby('prototype_id')['value']
++# baseline_2 recipe for QP-6489 (p_N493RBBF7G) not in records yet — will appear after registration/measure
++# Build additive model of water on known recipes: mean water per recipe
++means=q.groupby('prototype_id')['value'].mean()
++recipes=df.drop_duplicates('prototype_id')[['project','prototype_id']+list(df.columns[11:23])].set_index('prototype_id')
++wat=means[recipes.index[recipes.index.isin(means.index)]]
++X=recipes.join(wat.rename('y')).dropna(subset=['y'])
++mods=list(df.columns[11:23])
++# one-hot per module
++Z=pd.get_dummies(X[mods].astype(str),columns=mods)
++y=X['y']
++from sklearn.linear_model import LinearRegression
++mod=LinearRegression().fit(Z.astype(float),y)
++print(len(y), mod.score(Z.astype(float),y))
++# predict baseline2 of each module: variant index 1 (0-based)
++variants={'base_sheet':['3F4','H6K','73S','SM9'],'secondary_sheet':['9AF','3XR','HJ7','3S7'],'binder_system':['6ZC','3VE','E5L','DQ9'],'additive_package_1':['M5L','U4A','3VM','V5J'],'additive_package_2':['NS4','Y6H','4C2','7J8'],'additive_package_3':['3LL','J3Y','92P','S3J'],'process_profile_1':['3RB','PG2','24L','GY3'],'process_profile_2':['F9B','GL8','79Y','8WN'],'process_profile_3':['49R','37J','W9T','84A'],'surface_treatment':['N4Y','RQ5','NP6','6FZ'],'joint_system':['8K5','8M7','7PP','PK9'],'conditioning_step':['UZ4','4YT','LW5','23Y']}
++base2={k:v[1] for k,v in variants.items()}
++x=pd.DataFrame([{m:base2[m] for m in mods}])
++zx=pd.get_dummies(x[mods].astype(str),columns=mods).reindex(columns=Z.columns,fill_value=0)
++print('pred baseline2 water:',mod.predict(zx.astype(float)))

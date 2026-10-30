@@ -1,0 +1,9 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+print(df.instrument.value_counts()); print(df.kind.value_counts())
+for t,g in df.groupby('test'):
+    known=g.dropna(subset=mods)
+    print(t, len(known), len(g))
+    if len(known):
+        print(known.groupby('binder_system').value.agg(['mean','count']))

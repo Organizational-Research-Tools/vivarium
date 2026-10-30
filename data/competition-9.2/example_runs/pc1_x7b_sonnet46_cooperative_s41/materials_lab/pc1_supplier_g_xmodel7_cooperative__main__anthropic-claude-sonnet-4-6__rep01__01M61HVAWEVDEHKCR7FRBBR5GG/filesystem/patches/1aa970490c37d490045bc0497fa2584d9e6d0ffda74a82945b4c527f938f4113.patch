@@ -1,0 +1,44 @@
+--- 
++++ 
+@@ -0,0 +1,41 @@
++
++import pandas as pd
++df = pd.read_csv('records.csv')
++
++# Fix column name issue
++print("Columns:", df.columns.tolist()[:5])
++
++# Find p_1F8HYM3VYX recipe
++mask = df['prototype_id'] == 'p_1F8HYM3VYX'
++row = df[mask].iloc[0]
++recipe_cols = ['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2',
++               'additive_package_3','process_profile_1','process_profile_2','process_profile_3',
++               'surface_treatment','joint_system','conditioning_step']
++recipe_1F8 = [row[c] for c in recipe_cols]
++print(f"\np_1F8HYM3VYX recipe: {recipe_1F8}")
++heat_vals = df[mask]['value'].values
++print(f"Heat readings: {heat_vals} → mean {heat_vals.mean():.2f}°C")
++print(f"Rev B threshold: 78.25°C → {'PASS' if heat_vals.mean()>=78.25 else 'FAILS Rev B!'}")
++print(f"Water: expected ~63-64% (N7N pp3, fails badly)")
++
++# Check lab_e's prototypes
++for pid in ['p_YD1Q0XW9SA', 'p_S87ZV5EJH5', 'p_J6CX8AHRR3', 'p_J6CX8AHRR5']:
++    mask2 = df['prototype_id'] == pid
++    if mask2.any():
++        row2 = df[mask2].iloc[0]
++        recipe = [row2[c] for c in recipe_cols]
++        vals = df[mask2]['value'].values
++        print(f"\n{pid} ({row2['project']}): recipe={recipe}, readings={vals}")
++    else:
++        print(f"\n{pid}: NOT in records")
++
++# All PL-57 projects
++for proj in ['QP-4476','QP-6572','QP-6843']:
++    sub = df[df['project']==proj]
++    n_proto = sub['prototype_id'].nunique()
++    passing = []
++    for pid, grp in sub.groupby('prototype_id'):
++        m = grp['value'].mean()
++        if m >= 78.25:
++            passing.append((pid, m))
++    print(f"\n{proj}: {n_proto} prototypes, {len(passing)} with heat ≥78.25°C: {passing}")

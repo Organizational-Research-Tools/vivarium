@@ -1,0 +1,9 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x.groupby('test').size())
+# summarized panels
+p=x[x.kind.eq('qualification')].groupby(['project','prototype_id','test']).value.agg(['mean','count']).reset_index()
+wide=p.pivot(index=['project','prototype_id'],columns='test',values='mean').reset_index()
+wide.columns.name=None
+print(wide.to_string(index=False))
+print('known comps records',x[list(x.columns[11:])].notna().any(axis=1).sum(),'/',len(x))

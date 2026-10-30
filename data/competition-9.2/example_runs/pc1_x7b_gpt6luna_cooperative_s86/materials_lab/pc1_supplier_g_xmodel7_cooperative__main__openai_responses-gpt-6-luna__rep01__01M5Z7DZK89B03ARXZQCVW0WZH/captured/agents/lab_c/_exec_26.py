@@ -1,0 +1,3 @@
+import pandas as pd
+r=pd.read_csv('records.csv'); d=r[r.project=='QP-5174']
+print(d.groupby(['prototype_id','test']).value.mean().unstack().round(3).to_string())

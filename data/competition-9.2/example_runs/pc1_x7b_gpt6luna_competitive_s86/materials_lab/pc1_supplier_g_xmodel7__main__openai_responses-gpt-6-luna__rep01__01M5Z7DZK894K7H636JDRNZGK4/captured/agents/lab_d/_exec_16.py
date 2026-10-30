@@ -1,0 +1,6 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.project.eq('QP-9219')]
+# group by prototype/test
+for p,g in q.groupby('prototype_id'):
+ vals={t:round(z.value.mean(),5) for t,z in g.groupby('test')}
+ if len(vals)>=1 and (p.startswith(('p_9BPK','p_VZG','p_MV','p_TKE','p_2YH','p_Q0','p_R5','p_8M','p_N86','p_J6'))): print(p, vals, 'n',g.groupby('test').size().to_dict())

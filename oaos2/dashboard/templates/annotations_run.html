@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import help %}
+{% block title %}annotations — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / annotations</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "annotations") }}
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem">Annotations on this run</h1>
+
+{% if not by_ns %}
+<div class="card"><p class="dim">none yet — open an event in the <a href="/run/{{ run_ref }}/trace">trace explorer</a> and code it
+{% if not schemas %} (you'll need a <a href="/annotations">lens</a> first){% endif %}.</p></div>
+{% endif %}
+
+{% for ns, links in by_ns.items() %}
+<div class="card">
+  <h2><code>{{ ns }}</code> ({{ links|length }})</h2>
+  <table>
+    <thead><tr><th>{{ help("schema", "Which lens this mark was made with") }}</th><th>{{ help("events", "The recorded event(s) this mark points at — click ◇ to open them") }}</th><th>note</th></tr></thead>
+    <tbody>
+    {% for link in links %}
+      <tr>
+        <td><code>{{ link.label_schema_ref }}</code>{% if link.relation_kind %} <span class="dim">({{ link.relation_kind }})</span>{% endif %}</td>
+        <td>{% for eid in link.event_ids %}<a href="/run/{{ run_ref }}/event/{{ eid }}">◇</a> {% endfor %}</td>
+        <td>{{ (link.label or {}).get("note") or "" }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endfor %}
+
+{% endblock %}

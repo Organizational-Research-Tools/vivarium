@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -1019,3 +1019,4 @@
+ r_XT7ZHEEZHW,qualification,QP-3617,p_P616PW6MRS,strength,edge crush resistance,5,7.21919,kN/m,lab_e,lab_e,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,YT2
+ r_WRXC542NNV,exploratory,QP-3617,p_8AS70XY37J,heat,seal hold temperature,,73.58500,°C,lab_a,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,RZ8,8KZ,3XM,T6A,YX4,84Z
+ r_92EDNEWV2K,exploratory,QP-3617,p_8AS70XY37M,heat,seal hold temperature,,78.13075,°C,lab_a,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,RZ8,8KZ,3XM,UX3,YX4,84Z
++r_DPMFNX8ZBH,exploratory,QP-3617,p_8AS70XY37P,heat,seal hold temperature,,68.00700,°C,lab_a,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,RZ8,8KZ,3XM,L2J,YX4,84Z

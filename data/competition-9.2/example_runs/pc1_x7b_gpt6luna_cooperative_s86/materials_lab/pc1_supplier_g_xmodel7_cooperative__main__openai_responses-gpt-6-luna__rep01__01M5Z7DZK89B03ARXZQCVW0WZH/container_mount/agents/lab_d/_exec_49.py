@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); a=x[(x.project=='QP-9259')&(x.test=='seal hold temperature')].groupby('prototype_id').value.mean(); print(a.to_string())

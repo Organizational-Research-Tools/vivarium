@@ -1,0 +1,12 @@
+import pandas as pd, numpy as np
+D=pd.read_csv('records.csv'); mods=list(D.columns[11:23]);
+G=D.groupby(['project','prototype_id'])[mods].first()
+V=D.groupby(['project','prototype_id','test']).value.mean().unstack()
+R=G.join(V).reset_index()
+for pr, d in R.groupby('project'):
+ print('\n',pr)
+ for _,r in d.iterrows():
+  vals=[]
+  for t in ['seal hold temperature','edge crush resistance','wet strength retained']:
+   vals.append('—' if pd.isna(r.get(t)) else str(round(r[t],4)))
+  print(r.prototype_id, ' '.join(vals), 'H8Z' if r.base_sheet=='H8Z' else '', ' '.join(r[m] for m in mods))

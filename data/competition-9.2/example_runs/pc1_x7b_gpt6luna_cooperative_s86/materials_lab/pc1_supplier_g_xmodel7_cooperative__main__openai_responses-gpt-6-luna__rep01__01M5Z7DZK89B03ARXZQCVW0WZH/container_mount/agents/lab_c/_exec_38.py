@@ -1,0 +1,3 @@
+import pandas as pd
+r=pd.read_csv('records.csv');print(r.test.unique()); print(r.groupby(['project','test']).value.mean().round(3).to_string())
+print(r[r.project=='QP-9259'].groupby(['prototype_id','test']).agg(n=('value','count'),m=('value','mean')).head(30).to_string())

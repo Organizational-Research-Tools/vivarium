@@ -1,0 +1,28 @@
+--- 
++++ 
+@@ -257,6 +257,12 @@
+ r_CEA5JHKB38,qualification,QP-7065,p_795Q00MQ7M,water,wet strength retained,3,80.2576,%,lab_c,lab_d,,,,,,,,,,,,
+ r_CEA5JHKB39,qualification,QP-7065,p_795Q00MQ7M,water,wet strength retained,4,80.2008,%,lab_c,lab_d,,,,,,,,,,,,
+ r_CEA5JHKB3A,qualification,QP-7065,p_795Q00MQ7M,water,wet strength retained,5,80.6448,%,lab_c,lab_d,,,,,,,,,,,,
++r_BP7YYDN4KQ,qualification,QP-7065,p_W1VN0R72RM,strength,edge crush resistance,0,7.23005,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_BP7YYDN4KR,qualification,QP-7065,p_W1VN0R72RM,strength,edge crush resistance,1,7.22114,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_BP7YYDN4KS,qualification,QP-7065,p_W1VN0R72RM,strength,edge crush resistance,2,7.17263,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_BP7YYDN4KT,qualification,QP-7065,p_W1VN0R72RM,strength,edge crush resistance,3,7.17071,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_BP7YYDN4KV,qualification,QP-7065,p_W1VN0R72RM,strength,edge crush resistance,4,7.17674,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_BP7YYDN4KW,qualification,QP-7065,p_W1VN0R72RM,strength,edge crush resistance,5,7.21373,kN/m,lab_b,lab_d,,,,,,,,,,,,
+ r_1HENCQ2W51,exploratory,QP-3777,p_A2B8KB6SJC,water,wet strength retained,,80.1184,%,lab_c,lab_a,,,,,,,,,,,,
+ r_7JX1D3XM8Y,exploratory,QP-3777,p_A2B8KB6SJC,water,wet strength retained,,81.0544,%,lab_c,lab_a,,,,,,,,,,,,
+ r_7JX1D3XM8Z,exploratory,QP-3777,p_A2B8KB6SJG,water,wet strength retained,,78.2672,%,lab_c,lab_a,,,,,,,,,,,,
+@@ -265,6 +271,12 @@
+ r_7JX1D3XM92,exploratory,QP-3777,p_A2B8KB6SJT,water,wet strength retained,,80.3568,%,lab_c,lab_a,,,,,,,,,,,,
+ r_7JX1D3XM93,exploratory,QP-3777,p_A2B8KB6SJW,water,wet strength retained,,71.1228,%,lab_c,lab_a,,,,,,,,,,,,
+ r_6QZAHX2F9T,exploratory,QP-3777,p_A2B8KB6SJW,water,wet strength retained,,71.5324,%,lab_c,lab_a,,,,,,,,,,,,
++r_HYJ32VTN9X,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,0,78.78125,°C,lab_d,lab_d,,,,,,,,,,,,
++r_HYJ32VTN9Y,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,1,78.98025,°C,lab_d,lab_d,,,,,,,,,,,,
++r_HYJ32VTN9Z,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,2,78.92300,°C,lab_d,lab_d,,,,,,,,,,,,
++r_HYJ32VTNA0,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,3,78.66375,°C,lab_d,lab_d,,,,,,,,,,,,
++r_HYJ32VTNA1,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,4,78.66750,°C,lab_d,lab_d,,,,,,,,,,,,
++r_HYJ32VTNA2,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,5,78.85925,°C,lab_d,lab_d,,,,,,,,,,,,
+ r_ER1TAN7FAD,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,0,80.1448,%,lab_c,lab_d,,,,,,,,,,,,
+ r_ER1TAN7FAE,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,1,79.3348,%,lab_c,lab_d,,,,,,,,,,,,
+ r_ER1TAN7FAF,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,2,79.3608,%,lab_c,lab_d,,,,,,,,,,,,

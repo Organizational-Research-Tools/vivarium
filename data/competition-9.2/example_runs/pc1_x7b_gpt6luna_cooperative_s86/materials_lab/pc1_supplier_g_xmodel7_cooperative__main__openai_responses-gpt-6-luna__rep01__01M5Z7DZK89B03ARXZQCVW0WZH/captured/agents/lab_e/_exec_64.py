@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.prototype_id=='p_NWGGXAVCNC']; print(q[['record_id','project','test','value','measured_by']].to_string(index=False)); print(q.iloc[0][['project']])

@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++
++import pandas as pd
++
++df = pd.read_csv('records.csv')
++print(df.columns.tolist())
++print(df.shape)
++print(df.head(3).to_string())

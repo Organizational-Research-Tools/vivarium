@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -573,3 +573,14 @@
+ r_PFZ17N73Z4,exploratory,QP-5993,p_30JXSNSYKS,water,wet strength retained,,78.3740,%,lab_f,lab_f,HP9,38J,PU3,8BE,9KR,Z2E,5JK,4AL,V7P,84H,A6U,G5Y
+ r_YRZRR2KRSZ,exploratory,QP-5993,p_30JXSNSYKS,water,wet strength retained,,79.4948,%,lab_f,lab_f,HP9,38J,PU3,8BE,9KR,Z2E,5JK,4AL,V7P,84H,A6U,G5Y
+ r_YRZRR2KRT0,exploratory,QP-5993,p_30JXSNSYKS,water,wet strength retained,,79.1256,%,lab_f,lab_f,HP9,38J,PU3,8BE,9KR,Z2E,5JK,4AL,V7P,84H,A6U,G5Y
++r_F5HMV0ECCB,exploratory,QP-1992,p_P5WACE5V1Z,strength,edge crush resistance,,7.23602,kN/m,lab_e,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_F5HMV0ECCC,exploratory,QP-1992,p_P5WACE5V1Z,strength,edge crush resistance,,7.22324,kN/m,lab_e,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_TFMBE0NMHB,exploratory,QP-1992,p_P5WACE5V1Z,strength,edge crush resistance,,7.17707,kN/m,lab_e,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_NT8H53MREB,exploratory,QP-1992,p_P5WACE5V1Z,heat,seal hold temperature,,77.93950,°C,lab_a,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_NT8H53MREC,exploratory,QP-1992,p_P5WACE5V1Z,heat,seal hold temperature,,78.56650,°C,lab_a,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_NT8H53MRED,exploratory,QP-1992,p_P5WACE5V1Z,heat,seal hold temperature,,78.16200,°C,lab_a,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_WPJJEMY3SA,exploratory,QP-1992,p_P5WACE5V1Z,heat,seal hold temperature,,77.97550,°C,lab_d,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_WPJJEMY3SB,exploratory,QP-1992,p_P5WACE5V1Z,heat,seal hold temperature,,78.11000,°C,lab_d,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_WYRRM6RJ70,exploratory,QP-1992,p_P5WACE5V1Z,strength,edge crush resistance,,7.15505,kN/m,lab_e,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_WYRRM6RJ71,exploratory,QP-1992,p_P5WACE5V1Z,strength,edge crush resistance,,7.20812,kN/m,lab_e,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_WYRRM6RJ72,exploratory,QP-1992,p_P5WACE5V1Z,strength,edge crush resistance,,7.19183,kN/m,lab_e,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F

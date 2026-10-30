@@ -1,0 +1,6 @@
+import random
+random.seed(1)
+mods=[["ZY6","NF2","TL4","8Z2"],["LB3","YH6","TU4","N2L"],["Y9V","93H","KX7"],["Y7L","X2P","QE3","FZ6"],["Q7S","E8S","6DD","RB3"],["5B8","29B","8P4","6UD"],["RF3","8Q7","3JQ","2WG"],["X9Z","T8R","5UV","LR4"],["G4B","A7P","3CV","5J9"],["WN7","9B8","BX9","VR3"],["34U","FA3","G7L","P4U"],["7MP","W5T","3DC","9VC"]]
+recipes=[[random.choice(m) for m in mods] for _ in range(48)]
+open("recipes.txt","w").write("\n".join(",".join(r) for r in recipes))
+print(len(recipes))

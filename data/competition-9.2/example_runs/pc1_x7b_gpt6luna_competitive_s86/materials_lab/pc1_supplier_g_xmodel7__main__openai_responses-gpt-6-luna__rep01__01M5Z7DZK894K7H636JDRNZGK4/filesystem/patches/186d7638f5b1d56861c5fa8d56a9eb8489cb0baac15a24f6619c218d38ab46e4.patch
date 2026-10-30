@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -365,3 +365,4 @@
+ r_0CG02RV9RC,qualification,QP-6879,p_HDGZMBDKNK,water,wet strength retained,3,80.7636,%,lab_f,lab_b,,,,,,,,,,,,
+ r_0CG02RV9RD,qualification,QP-6879,p_HDGZMBDKNK,water,wet strength retained,4,80.8584,%,lab_f,lab_b,,,,,,,,,,,,
+ r_0CG02RV9RE,qualification,QP-6879,p_HDGZMBDKNK,water,wet strength retained,5,80.9468,%,lab_f,lab_b,,,,,,,,,,,,
++r_3GY09S6724,exploratory,QP-6879,p_3SZ9SPMFY6,heat,seal hold temperature,,62.44825,°C,lab_d,lab_f,SQ8,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2

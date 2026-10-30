@@ -1,0 +1,4 @@
+import pandas as pd
+df=pd.read_csv("records.csv")
+m=df[(df.prototype_id=="p_E05X2XJNTY")&(df.kind=="qualification")]
+print(m[["record_id","test","specimen","value","measured_by"]].to_string())

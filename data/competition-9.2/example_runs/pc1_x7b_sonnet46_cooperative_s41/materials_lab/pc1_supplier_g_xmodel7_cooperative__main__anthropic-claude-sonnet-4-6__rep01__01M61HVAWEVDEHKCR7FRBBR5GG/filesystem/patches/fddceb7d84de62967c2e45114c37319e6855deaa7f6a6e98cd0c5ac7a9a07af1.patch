@@ -1,0 +1,47 @@
+--- 
++++ 
+@@ -0,0 +1,44 @@
++
++import pandas as pd
++pd.set_option('display.max_columns', None)
++pd.set_option('display.width', 300)
++
++df = pd.read_csv('records.csv')
++
++# Module columns
++modules = ['base_sheet', 'secondary_sheet', 'binder_system', 'additive_package_1', 
++           'additive_package_2', 'additive_package_3', 'process_profile_1', 
++           'process_profile_2', 'process_profile_3', 'surface_treatment', 
++           'joint_system', 'conditioning_step']
++
++# Summarize by prototype: get mean per test
++panel_df = df[df['kind'] == 'qualification']
++summary = panel_df.groupby(['project', 'prototype_id', 'test']).agg(
++    mean_val=('value', 'mean'),
++    n=('value', 'count')
++).reset_index()
++
++# Pivot to get heat, strength, water side by side
++pivot = summary.pivot_table(index=['project', 'prototype_id'], columns='test', values='mean_val').reset_index()
++pivot.columns.name = None
++print("Summary of qualification panels:")
++print(pivot.to_string())
++
++# Thresholds
++heat_thresh = 77.5
++strength_thresh = 7.1
++water_thresh = 78.0
++
++print("\n\nPASS/FAIL:")
++for _, row in pivot.iterrows():
++    h = row.get('seal hold temperature', None)
++    s = row.get('edge crush resistance', None)
++    w = row.get('wet strength retained', None)
++    h_ok = h >= heat_thresh if pd.notna(h) else '?'
++    s_ok = s >= strength_thresh if pd.notna(s) else '?'
++    w_ok = w >= water_thresh if pd.notna(w) else '?'
++    all_ok = (h_ok == True and s_ok == True and w_ok == True)
++    print(f"{row['project']} / {row['prototype_id']}: heat={h:.3f if pd.notna(h) else 'N/A'} {'✓' if h_ok==True else '✗' if h_ok==False else '?'}, "
++          f"strength={s:.5f if pd.notna(s) else 'N/A'} {'✓' if s_ok==True else '✗' if s_ok==False else '?'}, "
++          f"water={w:.4f if pd.notna(w) else 'N/A'} {'✓' if w_ok==True else '✗' if w_ok==False else '?'}"
++          f" {'*** PASSES ALL ***' if all_ok else ''}")

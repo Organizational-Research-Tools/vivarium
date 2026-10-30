@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -665,3 +665,15 @@
+ r_9BF3808VD7,qualification,QP-7092,p_48EJQNHRB0,strength,edge crush resistance,3,6.17330,kN/m,lab_e,lab_f,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
+ r_9BF3808VD8,qualification,QP-7092,p_48EJQNHRB0,strength,edge crush resistance,4,6.41870,kN/m,lab_e,lab_f,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
+ r_9BF3808VD9,qualification,QP-7092,p_48EJQNHRB0,strength,edge crush resistance,5,6.53825,kN/m,lab_e,lab_f,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_C840N58ZY4,qualification,QP-9273,p_Q7PBN356CH,water,wet strength retained,0,76.8700,%,lab_f,lab_f,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_C840N58ZY5,qualification,QP-9273,p_Q7PBN356CH,water,wet strength retained,1,76.8444,%,lab_f,lab_f,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_C840N58ZY6,qualification,QP-9273,p_Q7PBN356CH,water,wet strength retained,2,77.0532,%,lab_f,lab_f,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_C840N58ZY7,qualification,QP-9273,p_Q7PBN356CH,water,wet strength retained,3,76.5016,%,lab_f,lab_f,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_C840N58ZY8,qualification,QP-9273,p_Q7PBN356CH,water,wet strength retained,4,76.7668,%,lab_f,lab_f,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_C840N58ZY9,qualification,QP-9273,p_Q7PBN356CH,water,wet strength retained,5,76.7592,%,lab_f,lab_f,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_C840N58ZYA,qualification,QP-9273,p_Q7PBN356CK,water,wet strength retained,0,59.0464,%,lab_f,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_C840N58ZYB,qualification,QP-9273,p_Q7PBN356CK,water,wet strength retained,1,59.2412,%,lab_f,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_C840N58ZYC,qualification,QP-9273,p_Q7PBN356CK,water,wet strength retained,2,59.1632,%,lab_f,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_C840N58ZYD,qualification,QP-9273,p_Q7PBN356CK,water,wet strength retained,3,58.7576,%,lab_f,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_C840N58ZYE,qualification,QP-9273,p_Q7PBN356CK,water,wet strength retained,4,58.8544,%,lab_f,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_C840N58ZYF,qualification,QP-9273,p_Q7PBN356CK,water,wet strength retained,5,58.8076,%,lab_f,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2

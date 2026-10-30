@@ -1,0 +1,23 @@
+{# The per-run tab rail — identical on every run-scoped page, so any view is one
+   click from any other. `active` names the current tab; the older record-type
+   pages (flow, trace, comms, design, files, audit) highlight the view they now
+   belong to. `run_tabs(run_ref)` decides the run-dependent tabs: Days only for a
+   clocked run, Live only for an unfinished run, and the work tab under the label
+   the task pack registers. #}
+{% macro runnav(run_ref, active) -%}
+{% set parent = {"flow": "story", "comms": "story", "trace": "record", "files": "record", "audit": "record", "design": "organization", "cases": "work", "case": "work"} %}
+{% set on = parent.get(active, active) %}
+{% set t = run_tabs(run_ref) %}
+<div class="tabs">
+  <a href="/run/{{ run_ref }}" class="{{ 'on' if on == 'overview' }}">Overview</a>
+  {% if t.has_live or on == 'live' %}<a href="/run/{{ run_ref }}/live" class="{{ 'on' if on == 'live' }}">● Live</a>{% endif %}
+  <a href="/run/{{ run_ref }}/story" class="{{ 'on' if on == 'story' }}">Story</a>
+  <a href="/run/{{ run_ref }}/replay" class="{{ 'on' if on == 'replay' }}">Replay</a>
+  <a href="/run/{{ run_ref }}/organization" class="{{ 'on' if on == 'organization' }}">Organization</a>
+  <a href="/run/{{ run_ref }}/agents" class="{{ 'on' if on == 'agents' }}">Agents</a>
+  {% if t.has_clock %}<a href="/run/{{ run_ref }}/days" class="{{ 'on' if on == 'days' }}">Days</a>{% endif %}
+  <a href="{{ t.work.href }}" class="{{ 'on' if on == 'work' }}">{{ t.work.label }}</a>
+  <a href="/run/{{ run_ref }}/record" class="{{ 'on' if on == 'record' }}">Record</a>
+  <a href="/run/{{ run_ref }}/annotations" class="{{ 'on' if on == 'annotations' }}">Annotations</a>
+</div>
+{%- endmacro %}

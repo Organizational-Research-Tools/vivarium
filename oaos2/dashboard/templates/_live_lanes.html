@@ -1,0 +1,42 @@
+{# The lanes layout's rows: one row per item, one column per lane. The item sits in
+   its author's lane (a post in the board lane); a connector spans to the lanes it
+   reached, each marked where it arrived; a lane's left stripe shows that some of its
+   agents had a model or tool call open at that position. Rows are in writer order
+   and not to scale: the time column and the separators carry the timing. #}
+{% macro clip(it) -%}
+{%- set whole = (it.text or "") ~ (it.folded or "") -%}
+{%- if whole|length > 140 %}{{ whole[:140] }}… <details class="fold"><summary>more</summary><pre class="body">{{ whole }}</pre></details>{% else %}{{ whole }}{% endif -%}
+{%- endmacro %}
+{% macro who(a) -%}<span class="adot-{{ aslot.get(a, -1) }}"></span><strong>{{ a }}</strong>{%- endmacro %}
+{% macro at(it) -%}<a class="dim" href="/run/{{ run_ref }}/event/{{ it.e.event_id }}" title="open the event record">[{{ it.seq }}]</a>{%- endmacro %}
+{% macro lane_item(it) -%}
+{% if it.kind == "post" %}<div class="li li-post"><span class="dim">#{{ it.title|replace("#", "") }} posted by</span> {{ who(it.who) }} {{ at(it) }}<div class="lt">{{ clip(it) }}</div></div>
+{% elif it.kind == "note" %}<div class="li li-note"><span class="dim">🔒</span> {{ who(it.who) }} <span class="dim">→ {{ it.to|join(", ") }}</span> {{ at(it) }}<div class="lt">{{ clip(it) }}</div></div>
+{% elif it.kind == "notice" %}<div class="li li-notice"><span class="dim">✉ notice to</span> {% for r in it.to %}{{ who(r) }}{% endfor %}{% if it.title %} <span class="dim">· {{ it.title }}</span>{% endif %} {{ at(it) }}<div class="lt">{{ clip(it) }}</div></div>
+{% elif it.kind == "handoff" %}<div class="li li-handoff"><span class="dim">⇢</span> {{ who(it.who) }} <span class="dim">→ {{ it.to|join(", ") }}</span> {{ at(it) }}<div class="lt"><code>{{ it.title }}</code>{% if it.text %} <details class="fold"><summary>contents</summary><pre class="body">{{ it.text }}{{ it.folded }}</pre></details>{% endif %}</div></div>
+{% elif it.kind == "exchange" %}<div class="li li-exchange">{{ who(it.who) }} <span class="dim">→ {{ it.to|join(", ") }} · {% if it.n and it.n > 1 %}<strong>{{ it.n }}×</strong> {% endif %}{{ it.title }}</span> {{ at(it) }}{% if it.last_seq %}<span class="dim">–[{{ it.last_seq }}]</span>{% endif %}{% if it.members %}<details class="fold"><summary class="dim">which</summary><div class="lt">{{ it.members|join("; ") }}</div></details>{% else %}<div class="lt">{{ it.text }}</div>{% endif %}</div>
+{% elif it.kind == "relay" %}<div class="li li-exchange">{{ who(it.who) }} <span class="dim">→ {{ it.to|join(", ") }} · relayed {{ it.title }}</span> {{ at(it) }}<div class="lt">{{ clip(it) }}</div></div>
+{% elif it.kind == "said" %}<div class="li li-said">{{ who(it.who) }} <span class="dim">says</span> {{ at(it) }}<div class="lt"><em>{{ clip(it) }}</em></div></div>
+{% elif it.kind == "thinking" %}<div class="li li-minor">{{ who(it.who) }} <span class="dim">thinks</span> {{ at(it) }}<div class="lt">{{ clip(it) }}</div></div>
+{% elif it.kind == "tool" %}<div class="li li-minor">{{ who(it.who) }} <span class="dim">calls</span> <code>{{ it.title }}</code> {{ at(it) }}</div>
+{% elif it.kind == "result" %}<div class="li li-minor"><span class="dim">↳ {{ it.title }} returned</span> {{ at(it) }}</div>
+{% elif it.kind == "milestone" %}<div class="li li-milestone">{% if it.title %}<span class="dim">{{ it.title }} · </span>{% endif %}{{ it.who }}: {{ it.text }} {{ at(it) }}</div>
+{% elif it.kind == "lifecycle" %}<div class="li li-minor">{{ it.text }} {{ at(it) }}</div>
+{% elif it.kind == "problem" %}<div class="li li-problem"><span class="sev sev-serious">problem</span> <code>{{ it.title }}</code> {{ it.who or "" }} {{ it.text }} {{ at(it) }}</div>
+{% endif %}
+{%- endmacro %}
+{% for r in rows %}
+{% if r.sep %}<div class="lsep" data-seq="{{ r.item.seq }}" data-t="{{ r.t if r.t is not none else '' }}"><span>{{ r.sep }}</span></div>{% endif %}
+<div class="lrow" data-seq="{{ r.item.seq }}" data-t="{{ r.t if r.t is not none else '' }}">
+  <div class="ltime dim" title="{% if r.day is not none %}logical day {{ r.day }} · {% endif %}time since the run's first event">{% if r.t is not none %}{{ "%d:%02d"|format(r.t // 60, r.t % 60) }}{% endif %}</div>
+  {% if r.span %}<div class="lconn" style="grid-column: {{ r.span[0] + 2 }} / {{ r.span[1] + 3 }}"></div>{% endif %}
+  {% for n in r.busy %}
+  <div class="lcell{% if n %} lbusy{% endif %}" style="grid-column: {{ loop.index + 1 }}" {% if n %}title="{{ n }} agent{{ 's' if n != 1 }} in this lane with a model or tool call open"{% endif %}>
+    {% if loop.index0 == r.lane %}{{ lane_item(r.item) }}
+    {% elif loop.index0 in r.reached %}<div class="lin">◂ to {{ r.arrive[loop.index0]|join(", ") }}</div>
+    {% elif loop.index0 == r.from %}<div class="lin">posted ▸</div>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}

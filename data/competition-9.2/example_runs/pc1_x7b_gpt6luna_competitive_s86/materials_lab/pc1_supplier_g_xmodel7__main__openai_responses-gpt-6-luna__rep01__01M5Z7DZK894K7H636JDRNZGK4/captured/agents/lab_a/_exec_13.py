@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); ids=['p_VKTMAFAKJX','p_VKTMAFAKK6']; y=x[x.prototype_id.isin(ids)]; print(y[['record_id','kind','project','prototype_id','test','specimen','value','measured_by']].to_string(index=False)); print('\nrecipes'); print(y[['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].drop_duplicates().to_string(index=False))

@@ -1,0 +1,22 @@
+--- 
++++ 
+@@ -501,3 +501,19 @@
+ r_E65Y7XY4EB,exploratory,QP-3068,p_YM23HABVE9,water,wet strength retained,,79.2020,%,lab_c,lab_a,,,,,,,,,,,,
+ r_E65Y7XY4EC,exploratory,QP-3068,p_94B583XC0W,water,wet strength retained,,80.3148,%,lab_c,lab_a,,,,,,,,,,,,
+ r_E65Y7XY4ED,exploratory,QP-3068,p_94B583XC0W,water,wet strength retained,,79.7436,%,lab_c,lab_a,,,,,,,,,,,,
++r_APYY1B526N,exploratory,QP-6820,p_PYKF18BDW8,water,wet strength retained,,78.2692,%,lab_c,lab_d,,,,,,,,,,,,
++r_APYY1B526P,exploratory,QP-6820,p_PYKF18BDW8,water,wet strength retained,,79.5008,%,lab_c,lab_d,,,,,,,,,,,,
++r_APYY1B526Q,exploratory,QP-6820,p_PYKF18BDWA,water,wet strength retained,,78.1808,%,lab_c,lab_d,,,,,,,,,,,,
++r_K7T1DYW7WH,exploratory,QP-6820,p_PYKF18BDWA,water,wet strength retained,,79.6092,%,lab_c,lab_d,,,,,,,,,,,,
++r_K7T1DYW7WJ,exploratory,QP-6820,p_PYKF18BDWC,water,wet strength retained,,78.5708,%,lab_c,lab_d,,,,,,,,,,,,
++r_K7T1DYW7WK,exploratory,QP-6820,p_PYKF18BDWC,water,wet strength retained,,79.1632,%,lab_c,lab_d,,,,,,,,,,,,
++r_K7T1DYW7WM,exploratory,QP-6820,p_PYKF18BDWE,water,wet strength retained,,78.2164,%,lab_c,lab_d,,,,,,,,,,,,
++r_K7T1DYW7WN,exploratory,QP-6820,p_PYKF18BDWE,water,wet strength retained,,78.6044,%,lab_c,lab_d,,,,,,,,,,,,
++r_K7T1DYW7WP,exploratory,QP-5653,p_MBDZP34MH0,water,wet strength retained,,70.3464,%,lab_c,lab_d,,,,,,,,,,,,
++r_GM2837CV59,exploratory,QP-5653,p_MBDZP34MH0,water,wet strength retained,,71.3604,%,lab_c,lab_d,,,,,,,,,,,,
++r_GM2837CV5A,exploratory,QP-5653,p_MBDZP34MH2,water,wet strength retained,,71.5036,%,lab_c,lab_d,,,,,,,,,,,,
++r_GM2837CV5B,exploratory,QP-5653,p_MBDZP34MH2,water,wet strength retained,,71.4064,%,lab_c,lab_d,,,,,,,,,,,,
++r_GM2837CV5C,exploratory,QP-5653,p_MBDZP34MH4,water,wet strength retained,,71.4996,%,lab_c,lab_d,,,,,,,,,,,,
++r_GM2837CV5D,exploratory,QP-5653,p_MBDZP34MH4,water,wet strength retained,,71.7588,%,lab_c,lab_d,,,,,,,,,,,,
++r_GM2837CV5E,exploratory,QP-5653,p_WP03JEETEX,water,wet strength retained,,71.5284,%,lab_c,lab_d,,,,,,,,,,,,
++r_GM2837CV5F,exploratory,QP-5653,p_WP03JEETEX,water,wet strength retained,,71.0892,%,lab_c,lab_d,,,,,,,,,,,,

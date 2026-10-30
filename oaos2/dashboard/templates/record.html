@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import help, gh, sev_chip, prov_chip, howto %}
+{% block title %}record — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / record</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "record") }}
+{% call howto() %}
+  <p>Record is where you check a run before relying on it. It interprets nothing; it answers three questions.</p>
+  <p><strong>Can I trust the record?</strong> The first card: whether the archive checks passed, how the run ended, what the automatic diagnostics found, and any trouble events. Passing shows the record is internally consistent, not that a research claim is true.</p>
+  <p><strong>What exactly ran?</strong> Identity and pins: the model, task materials, organization, code version, and price table the run saved. Hashes detect change; they do not reconstruct a file that is gone.</p>
+  <p><strong>Where is the evidence?</strong> The links under the tabs open every event, the saved files, the full audit, and the flow at full depth. Events by class and the raw configuration are further down.</p>
+  <p><strong>Two kinds of caution.</strong> "Recorded in this run" lists conditions that change how the result may be read. "About the archive" lists facts about the repository then or now, such as materials that have changed since.</p>
+{% endcall %}
+
+{% set ext = (d.manifest or {}).get("extensions") or {} %}
+
+<p class="dim" style="margin:0.4rem 0">
+  <a href="/run/{{ run_ref }}/trace">every event</a> · <a href="/run/{{ run_ref }}/files">files and artifacts</a> · <a href="/run/{{ run_ref }}/audit">audit in full</a> · <a href="/run/{{ run_ref }}/flow?level=everything">the flow at full depth</a></p>
+
+{% if reading.conditions %}
+<div class="card">
+  <h2>Recorded in this run</h2>
+  {% for c in reading.conditions %}<p style="margin:0.25rem 0"><span class="sev sev-{{ c.severity }}">{{ c.label }}</span> {{ c.text }}</p>{% endfor %}
+</div>
+{% endif %}
+{% if reading.notes or reading.report.kind == "error" %}
+<div class="card" id="archive-notes">
+  <h2>About the archive, then and now</h2>
+  <p class="dim" style="margin:0 0 0.4rem">Facts about the repository, not about what the agents did. They bear on reproduction and on comparison across runs.</p>
+  {% for n in reading.notes %}
+  <p style="margin:0.3rem 0"><strong>{{ n.label }}.</strong> {{ n.text }}</p>
+  {% if n.detail %}<details style="margin:0 0 0.3rem 0.9rem"><summary>what the check found</summary>{% for line in n.detail %}<div class="dim" style="overflow-wrap:anywhere">{{ line }}</div>{% endfor %}</details>{% endif %}
+  {% endfor %}
+  {% if reading.report.kind == "error" %}<p style="margin:0.3rem 0"><span class="sev sev-critical">report error</span> {{ reading.report.text }} <code>{{ reading.report.error }}</code></p>{% endif %}
+</div>
+{% endif %}
+
+<div class="grid">
+  <div class="card">
+    <h2>Is the record trustworthy?</h2>
+    <dl class="kv">
+      <dt>{{ gh("archive valid") }}</dt><dd>{{ d.run_status.get("archive_valid") if d.run_status else "— (no status file)" }}</dd>
+      <dt>{{ gh("disposition") }}</dt><dd>{{ d.disposition.disposition }}{% if d.disposition.agent_failed %} <span class="flag">agent.failed</span>{% endif %}</dd>
+      <dt>{{ gh("terminal record") }}</dt><dd>{{ d.disposition.terminal or "none" }}{% if d.disposition.terminal_reason %} · {{ d.disposition.terminal_reason }}{% endif %}</dd>
+      <dt>{{ gh("outcome closed") }}</dt><dd>{{ "yes" if d.disposition.outcome_closed else "no" }}</dd>
+      <dt>diagnostics</dt><dd>{% if findings %}<a href="/run/{{ run_ref }}/audit">{{ findings|length }} finding{{ "s" if findings|length != 1 }}</a> — worst {{ sev_chip(findings[0].severity) }} {{ findings[0].title }}{% else %}none{% endif %}</dd>
+      <dt>{{ gh("interventions") }}</dt><dd>{{ d.metrics.n_interventions }}{% if d.metrics.interventions_by_class %} ({% for cls, n in d.metrics.interventions_by_class.items() %}{{ cls }}×{{ n }}{% if not loop.last %}, {% endif %}{% endfor %}){% endif %}</dd>
+    </dl>
+    {% if d.audit_classes %}
+    <table style="margin-top:0.4rem; max-width:28rem"><thead><tr><th>trouble class</th><th class="num">count</th></tr></thead>
+      <tbody>{% for cls, n in d.audit_classes.items() %}<tr><td><code>{{ cls }}</code></td><td class="num">{{ n }}</td></tr>{% endfor %}</tbody></table>
+    {% else %}<p class="dim" style="margin:0.4rem 0 0">no violations, denials, or failures in the trace</p>{% endif %}
+  </div>
+
+  <div class="card">
+    <h2>{{ help("Identity & pins", "Saved identifiers for models, materials, prices, and software. Hashes detect changes; reconstruction needs the corresponding files.") }}
+      {{ prov_chip(prov.provenance, prov.provenance_reasons, prov.tags) }}</h2>
+    {% if d.manifest %}
+    <dl class="kv">
+      <dt>{{ gh("model") }}</dt><dd>{{ ext.get("model_ref") or d.record.model_ref or "—" }}</dd>
+      <dt>{{ gh("task pack") }}</dt><dd>{{ d.manifest.get("task_pack_id") or "—" }}</dd>
+      <dt>{{ gh("organization") }}</dt><dd>{{ d.manifest.get("organization_id") or "—" }}</dd>
+      <dt>{{ gh("mode") }}</dt><dd>{{ d.manifest.get("mode") or "—" }}</dd>
+      <dt>{{ gh("contract profile") }}</dt><dd>{{ ext.get("contract_profile") or "—" }}</dd>
+      <dt>{{ gh("source commit") }}</dt><dd>{% if ext.get("source_commit") %}<code title="{{ ext.get('source_commit') }}">{{ ext.get("source_commit")[:12] }}</code>{% else %}—{% endif %}{% if ext.get("source_dirty") %} <span class="sev sev-warning">dirty</span>{% endif %}</dd>
+      <dt>{{ gh("apparatus") }}</dt><dd>{% if ext.get("apparatus_sha256") %}<code title="{{ ext.get('apparatus_sha256') }}">{{ ext.get("apparatus_sha256")[:20] }}…</code>{% else %}—{% endif %}</dd>
+      <dt>{{ gh("cap") }}</dt><dd>{{ ext.get("cap_usd")|usd if ext.get("cap_usd") is not none else "—" }}</dd>
+      <dt>{{ gh("pricing table") }}</dt><dd>{{ d.manifest.get("pricing_table_version") or "—" }}{% if ext.get("pricing_table_hash") %} <code title="{{ ext.get('pricing_table_hash') }}">{{ ext.get("pricing_table_hash")[:12] }}…</code>{% endif %}</dd>
+      <dt>{{ gh("image") }}</dt><dd style="word-break:break-all">{{ d.manifest.get("image_digest") or d.manifest.get("image_ref") or "—" }}</dd>
+      <dt>{{ gh("reference") }}</dt><dd>{% if ext.get("reference_sha256") %}<code title="{{ ext.get('reference_sha256') }}">{{ ext.get("reference_sha256")[:19] }}…</code>{% else %}—{% endif %}</dd>
+      <dt>{{ gh("schema") }}</dt><dd>{{ d.manifest.get("schema_version") or "—" }}</dd>
+      <dt>{{ gh("run dir") }}</dt><dd><code>{{ d.record.run_dir }}</code></dd>
+    </dl>
+    {% else %}<p class="dim">no manifest.json</p>{% endif %}
+  </div>
+
+  <div class="card">
+    <h2>{{ gh("events by class", "Events by class") }} <span class="dim" style="font-weight:400">· {{ d.metrics.event_count }}</span></h2>
+    <details><summary>show the table</summary>
+    <table><tbody>{% for cls, n in d.metrics.events_by_class.items() %}<tr><td><code>{{ cls }}</code></td><td class="num">{{ n }}</td></tr>{% endfor %}</tbody></table>
+    </details>
+  </div>
+
+  <div class="card">
+    <h2>{{ gh("derived views", "Derived views and raw config") }}</h2>
+    {% if d.derived_files %}
+    <ul style="margin:0; padding-left:1.2rem">{% for f in d.derived_files %}<li><a href="/run/{{ run_ref }}/derived/{{ f }}">{{ f }}</a></li>{% endfor %}</ul>
+    {% else %}<p class="dim">no derived/ — run not re-rendered (killed or in flight)</p>{% endif %}
+    {% if d.annotation_namespaces %}<p style="margin:0.3rem 0 0">annotation namespaces: {% for ns in d.annotation_namespaces %}<code>{{ ns }}</code> {% endfor %}</p>{% endif %}
+    {% if config_json %}<details><summary>config/resolved.json</summary><pre>{{ config_json }}</pre></details>{% endif %}
+    {% if manifest_json %}<details><summary>manifest.json</summary><pre>{{ manifest_json }}</pre></details>{% endif %}
+  </div>
+</div>
+
+{% endblock %}

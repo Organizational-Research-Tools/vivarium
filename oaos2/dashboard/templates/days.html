@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import help, howto %}
+{% block title %}days — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / days</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "days") }}
+
+{% call howto() %}
+  <p><strong>Roles × days.</strong> What each role did each day: calls against the daily ceiling, notices received (✉), filings (▲), dispositions (◆), plans (P), compactions (⟲), bounced submissions (⚡). Shaded columns are wave windows and plan checkpoints; fuses are listed under the day they expire, and deadlines that passed unmet (⌛) under the day the clock recorded the lapse. Hatched days were wound out by the platform after the run ended with its outcome open; such a run is censored. Click a cell to read that role's day in the flow.</p>
+{% endcall %}
+
+<style>
+  .ledger th.day { text-align: center; font-family: ui-monospace, Menlo, monospace; text-transform: none; letter-spacing: 0; }
+  .ledger td.cell { text-align: center; white-space: nowrap; font-family: ui-monospace, Menlo, monospace; font-size: 12px; min-width: 3.6rem; }
+  .ledger td.role { white-space: nowrap; font-weight: 500; }
+  .ledger .wave { background: color-mix(in srgb, var(--link) 8%, transparent); }
+  .ledger .due { background: color-mix(in srgb, var(--critical) 9%, transparent); }
+  .ledger .idle { color: var(--ink-muted); }
+  .ledger .band td, .ledger .band th { border-bottom: 0; font-size: 11px; color: var(--ink-muted); text-align: center; padding: 0.15rem 0.3rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .g-arr { color: var(--link); } .g-file { color: var(--ink-2); } .g-disp { color: var(--good); font-weight: 600; }
+  .g-race { color: var(--serious); } .g-comp { color: var(--warning); } .g-plan { color: var(--ink); font-weight: 600; }
+  .dots { letter-spacing: -0.05em; }
+  .ledger .wound { background: repeating-linear-gradient(45deg, transparent 0 5px, color-mix(in srgb, var(--serious) 12%, transparent) 5px 7px); }
+</style>
+
+{% if not L %}
+<div class="card"><p class="dim">This run has no logical clock — nothing to lay out by day. The <a href="/run/{{ run_ref }}/flow">flow</a> reads it by turn.</p></div>
+{% else %}
+{% if L.wind_down %}
+<p class="banner serious"><strong>Censored.</strong> The platform wound the clock out from day {{ L.wind_down["from"] }} to day {{ L.wind_down["to"] }}: {{ L.wind_down.reason }}. <a href="/run/{{ run_ref }}/event/{{ L.wind_down.event_id }}">the record</a> · apply the study's rules for exclusion or separate reporting.</p>
+{% endif %}
+<div class="card ledger">
+  <h2>Roles × days
+    <span class="dim" style="font-weight:400">· horizon {{ L.horizon }} days{% if L.calls_per_day %} · {{ L.calls_per_day }} calls per role per day{% endif %}{% if L.n_lapses %} · {{ L.n_lapses }} deadline{{ "s" if L.n_lapses != 1 }} passed unmet{% endif %}</span></h2>
+  <div style="overflow-x:auto">
+  <table>
+    <tr class="band"><th></th>{% for d in L.days %}<th class="{{ 'wave' if d.wave }}{{ ' due' if d.checkpoint }}">{% if d.checkpoint %}{{ d.checkpoint|replace("_", " ") }}{% elif d.wave %}{{ d.wave|replace("_", " ") }}{% endif %}</th>{% endfor %}</tr>
+    <tr><th>role</th>{% for d in L.days %}<th class="day {{ 'wave' if d.wave }}{{ ' due' if d.checkpoint }}{{ ' wound' if d.wound }}" title="{{ d.n_events }} events{% if d.fuses %} · fuses: {{ d.fuses|join(', ') }}{% endif %}{% if d.lapses %} · lapsed: {{ d.lapses|join(', ') }}{% endif %}{% if d.wound %} · wound out by the platform{% endif %}">{{ d.day }}{% if d.fuses %}<div style="font-size:9px; font-weight:400; color:var(--critical)">⏱{{ d.fuses|length }}</div>{% endif %}{% if d.lapses %}<div style="font-size:9px; font-weight:400; color:var(--serious)">⌛{{ d.lapses|length }}</div>{% endif %}</th>{% endfor %}</tr>
+    {% for r in L.rows %}
+    <tr><td class="role"><span class="adot-{{ aslot.get(r.role, -1) }}"></span>{{ r.role }}</td>
+      {% for c in r.cells %}{% set d = L.days[loop.index0] %}
+      <td class="cell {{ 'wave' if d.wave }}{{ ' due' if d.checkpoint }}{{ ' idle' if not c }}{{ ' wound' if d.wound }}">
+        {% if c %}<a href="/run/{{ run_ref }}/flow?level=decisions&agent={{ r.role }}&day={{ d.day }}" style="color:inherit"
+           title="day {{ d.day }} · {{ r.role }} · {{ c.calls }} calls{% if c.arrivals %} · notices: {{ c.arrivals|join(', ') }}{% endif %}{% if c.filings %} · filed: {{ c.filings|join(', ') }}{% endif %}{% if c.dispositions %} · disposed: {{ c.dispositions|join(', ') }}{% endif %}{% if c.plans %} · plans: {{ c.plans|join(', ') }}{% endif %}">
+          {% if c.calls %}<span class="dots">{% for i in range(c.calls) %}●{% endfor %}{% if L.calls_per_day and c.calls < L.calls_per_day %}{% for i in range(L.calls_per_day - c.calls) %}○{% endfor %}{% endif %}</span>{% endif %}
+          {% if c.arrivals %} <span class="g-arr">✉{{ c.arrivals|length if c.arrivals|length > 1 else "" }}</span>{% endif %}
+          {% if c.filings %} <span class="g-file">▲{{ c.filings|length if c.filings|length > 1 else "" }}</span>{% endif %}
+          {% if c.dispositions %} <span class="g-disp">◆{{ c.dispositions|length if c.dispositions|length > 1 else "" }}</span>{% endif %}
+          {% if c.plans %} <span class="g-plan">P{{ c.plans|length if c.plans|length > 1 else "" }}</span>{% endif %}
+          {% if c.compactions %} <span class="g-comp">⟲</span>{% endif %}
+          {% if c.races %} <span class="g-race">⚡{{ c.races if c.races > 1 else "" }}</span>{% endif %}
+          {% if c.ceilings %} <span class="g-race">⌈⌉</span>{% endif %}
+        </a>{% else %}·{% endif %}
+      </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+  </div>
+  <p class="legend" style="margin-top:0.5rem">
+    <span><span class="dots">●●○○</span> calls used of the daily ceiling</span>
+    <span><span class="g-arr">✉</span> notice arrived</span>
+    <span><span class="g-file">▲</span> filing</span>
+    <span><span class="g-disp">◆</span> disposition</span>
+    <span><span class="g-plan">P</span> plan or other commitment</span>
+    <span><span class="g-comp">⟲</span> context compacted</span>
+    <span><span class="g-race">⚡</span> bounced submission</span>
+    <span>⏱ fuse expires</span>
+    <span>⌛ deadline passed unmet</span>
+    <span>· idle</span>
+  </p>
+</div>
+{% endif %}
+
+{% endblock %}

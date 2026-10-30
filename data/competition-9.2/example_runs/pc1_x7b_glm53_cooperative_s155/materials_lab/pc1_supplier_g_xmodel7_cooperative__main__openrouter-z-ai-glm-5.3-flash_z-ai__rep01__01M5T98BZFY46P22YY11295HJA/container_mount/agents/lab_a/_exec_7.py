@@ -1,0 +1,5 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+print(df.test.unique(), df.kind.unique())
+e=df[df.kind=='exploratory']
+print(e.groupby(['project','test']).value.count())

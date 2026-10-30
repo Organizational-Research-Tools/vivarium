@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[(x.project=='QP-9219') & (x.kind=='exploratory')]; e=q.pivot_table(index='prototype_id',columns='instrument',values='value',aggfunc='mean'); print(e.sort_values('heat',ascending=False).head(35).to_string())

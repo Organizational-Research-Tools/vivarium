@@ -1,0 +1,46 @@
+--- 
++++ 
+@@ -0,0 +1,43 @@
++
++# Analyzing heat results from lab_b's 36 prototypes
++results = {
++    'QP-6572': {'p_GCXZZ91WJ2': 65.49, 'p_GCXZZ91WJ4': 71.44, 'p_GCXZZ91WJ6': 65.91, 'p_GCXZZ91WJ8': 70.69},
++    'QP-6843': {'p_6PWNP7BFEY': 74.17, 'p_6PWNP7BFF0': 67.77, 'p_6PWNP7BFF2': 67.53, 'p_6PWNP7BFF4': 68.20},
++    'QP-4476': {'p_S1D13AXSXR': 61.42, 'p_S1D13AXSXT': 66.82, 'p_S1D13AXSXW': 66.41, 'p_S1D13AXSXY': 72.11},
++    'QP-7212': {'p_SVC8TYAQGJ': 73.61, 'p_SVC8TYAQGM': 78.56, 'p_SVC8TYAQGP': 66.76, 'p_SVC8TYAQGR': 78.35},
++    'QP-3473': {'p_FR3ZSZWV0T': 78.72, 'p_FR3ZSZWV0W': 72.88, 'p_FR3ZSZWV0Y': 67.46, 'p_FR3ZSZWV10': 78.23},
++    'QP-8607': {'p_3VTYM9QYDF': 70.35, 'p_3VTYM9QYDH': 65.24, 'p_3VTYM9QYDK': 64.87, 'p_3VTYM9QYDN': 70.11},
++    'QP-3089': {'p_5ZPYV6MTWB': 72.65, 'p_853B4YQGHJ': 78.97, 'p_853B4YQGHM': 73.23, 'p_853B4YQGHP': 78.81},
++    'QP-8265': {'p_X8JBQTDZJM': 72.54, 'p_X8JBQTDZJP': 78.75, 'p_X8JBQTDZJR': 73.72, 'p_X8JBQTDZJT': 79.15},
++    'QP-7604': {'p_XJS8WRQQBA': 70.85, 'p_XJS8WRQQBC': 76.11, 'p_XJS8WRQQBE': 70.86, 'p_XJS8WRQQBG': 77.11},
++}
++HEAT_THRESH = 77.5
++
++print("=== HEAT-PASSING lab_b PROTOTYPES ===")
++passing = {}
++for proj, protos in results.items():
++    for pid, heat in protos.items():
++        if heat >= HEAT_THRESH:
++            if proj not in passing:
++                passing[proj] = []
++            passing[proj].append((pid, heat))
++            print(f"  {proj}: {pid} = {heat:.2f}°C ✓")
++
++print()
++print("=== FAILING PROJECTS (no heat-passing prototypes from lab_b) ===")
++for proj in results:
++    if proj not in passing:
++        best = max(results[proj].values())
++        print(f"  {proj}: best = {best:.2f}°C ✗ (gap: {HEAT_THRESH-best:.2f}°C)")
++
++print()
++print("=== CRITICAL NOTE: p_853B4YQGHM (strength 7.21✓) has heat 73.23°C ✗! ===")
++print("  Lab_b's strength-passing QP-3089 proto FAILS heat.")
++print("  BUT p_853B4YQGHJ (78.97✓) and p_853B4YQGHP (78.81✓) pass heat.")
++print("  Their strength is UNKNOWN — need lab_b to check.")
++
++print()
++print("=== PRODUCT LINE STATUS ===")
++print("  PL-57 (QP-4476, QP-6572, QP-6843): NO lab_b protos pass heat — CRITICAL!")
++print("  PL-95 (QP-7212, QP-3473, QP-8607): QP-7212(2), QP-3473(2) pass heat. QP-8607: none.")
++print("  PL-98 (QP-3089, QP-8265, QP-7604): QP-3089(2), QP-8265(2) pass heat. QP-7604: none.")

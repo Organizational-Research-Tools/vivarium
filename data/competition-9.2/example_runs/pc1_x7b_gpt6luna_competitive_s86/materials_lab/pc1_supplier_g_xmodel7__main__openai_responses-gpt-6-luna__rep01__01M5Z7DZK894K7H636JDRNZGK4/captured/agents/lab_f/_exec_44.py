@@ -1,0 +1,7 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x.columns)
+for pr in ['QP-8807','QP-9219','QP-6879','QP-9273']:
+ d=x[x.project==pr]
+ print('\n',pr, 'protos',d.prototype_id.nunique(), 'records',len(d))
+ out=d.groupby(['prototype_id','instrument']).agg(n=('value','count'),mean=('value','mean')).reset_index().pivot(index='prototype_id',columns='instrument',values='mean')
+ print(out.sort_values(by='water',ascending=False).head(30).to_string())

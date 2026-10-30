@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.kind=='qualification'].copy(); g=q.groupby(['project','prototype_id','test']).value.agg(['count','mean']).reset_index(); print(g.test.unique()); w=g.pivot(index=['project','prototype_id'],columns='test',values='mean').reset_index(); print(w.columns.tolist());

@@ -1,0 +1,4 @@
+import pandas as pd
+p=pd.read_csv('records.csv')
+print(p.groupby(['project','kind','test']).size().to_string())
+print('projects',p.project.value_counts().to_dict())

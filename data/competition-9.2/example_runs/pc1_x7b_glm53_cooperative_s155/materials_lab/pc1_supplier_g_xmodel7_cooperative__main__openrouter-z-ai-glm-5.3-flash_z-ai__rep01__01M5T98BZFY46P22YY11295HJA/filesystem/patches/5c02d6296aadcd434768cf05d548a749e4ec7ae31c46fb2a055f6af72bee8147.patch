@@ -1,0 +1,27 @@
+--- 
++++ 
+@@ -0,0 +1,24 @@
++import random, json
++mods = ["base","sec","binder","add1","add2","add3","pp1","pp2","pp3","surf","joint","cond"]
++variants = {m:[m.upper()+"1",m.upper()+"2",m.upper()+"3",m.upper()+"4"] for m in mods}
++random.seed(1)
++recipes=[]
++for i in range(48):
++    r=[]
++    for m in mods:
++        if m=="pp2":
++            r.append(random.choice([0,1,3]))  # avoid 79Y (index 2)
++        else:
++            r.append(random.randrange(4))
++    recipes.append(r)
++json.dump(recipes, open("recipes.json","w"))
++# actual variant names
++names=["3F4","H6K","73S","SM9","9AF","3XR","HJ7","3S7","6ZC","3VE","E5L","DQ9","M5L","U4A","3VM","V5J","NS4","Y6H","4C2","7J8","3LL","J3Y","92P","S3J","3RB","PG2","24L","GY3","F9B","GL8","79Y","8WN","49R","37J","W9T","84A","N4Y","RQ5","NP6","6FZ","8K5","8M7","7PP","PK9","UZ4","4YT","LW5","23Y"]
++def to_settings(r):
++    out=[]
++    for i,v in enumerate(r):
++        out.append(names[i*4+v])
++    return out
++settings=[to_settings(r) for r in recipes]
++json.dump(settings, open("settings.json","w"))
++settings[:2]

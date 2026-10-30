@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -0,0 +1,2 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); y=x[x.prototype_id=='p_YJCA9TYHK1']; print(y.groupby('instrument').agg(n=('value','size'),mean=('value','mean')).to_string()); print(y[y.instrument=='strength'].record_id.tolist())

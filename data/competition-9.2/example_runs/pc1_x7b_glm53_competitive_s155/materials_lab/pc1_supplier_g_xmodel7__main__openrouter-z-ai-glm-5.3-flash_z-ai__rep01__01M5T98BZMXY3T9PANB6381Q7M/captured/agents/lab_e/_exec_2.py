@@ -1,0 +1,7 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+cols=[c for c in df.columns]
+print(df.columns.tolist())
+# group by prototype, summarize per instrument
+g=df.groupby(['prototype_id','instrument'])['reading'].agg(['mean','count','min','max'])
+print(g.to_string())

@@ -1,0 +1,34 @@
+--- 
++++ 
+@@ -790,6 +790,12 @@
+ r_E099RV4PB0,exploratory,QP-5993,p_XG0BYRA5W2,water,wet strength retained,,78.9116,%,lab_f,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
+ r_E099RV4PB1,exploratory,QP-5993,p_XG0BYRA5W2,water,wet strength retained,,79.2416,%,lab_f,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
+ r_E099RV4PB2,exploratory,QP-5993,p_XG0BYRA5W2,water,wet strength retained,,80.3916,%,lab_f,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
++r_0RR2EYC2NZ,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,0,78.64475,°C,lab_d,lab_c,,,,,,,,,,,,
++r_0RR2EYC2P0,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,1,78.12475,°C,lab_d,lab_c,,,,,,,,,,,,
++r_0RR2EYC2P1,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,2,78.19300,°C,lab_d,lab_c,,,,,,,,,,,,
++r_0RR2EYC2P2,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,3,78.27050,°C,lab_d,lab_c,,,,,,,,,,,,
++r_0RR2EYC2P3,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,4,78.44625,°C,lab_d,lab_c,,,,,,,,,,,,
++r_0RR2EYC2P4,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,5,78.54975,°C,lab_d,lab_c,,,,,,,,,,,,
+ r_W11EDVYEQX,qualification,QP-5993,p_XG0BYRA5W2,water,wet strength retained,0,79.7536,%,lab_f,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
+ r_W11EDVYEQY,qualification,QP-5993,p_XG0BYRA5W2,water,wet strength retained,1,79.7656,%,lab_f,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
+ r_W11EDVYEQZ,qualification,QP-5993,p_XG0BYRA5W2,water,wet strength retained,2,79.9864,%,lab_f,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
+@@ -802,6 +808,18 @@
+ r_F8RG7XN5FR,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,3,78.30750,°C,lab_a,lab_c,,,,,,,,,,,,
+ r_F8RG7XN5FS,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,4,78.46750,°C,lab_a,lab_c,,,,,,,,,,,,
+ r_F8RG7XN5FT,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,5,78.57875,°C,lab_a,lab_c,,,,,,,,,,,,
++r_XHT0704J0X,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,0,7.23653,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XHT0704J0Y,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,1,7.24508,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XHT0704J0Z,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,2,7.25096,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XHT0704J10,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,3,7.28177,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XHT0704J11,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,4,7.28258,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_XHT0704J12,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,5,7.29056,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_KM6BWSRMZH,qualification,QP-5993,p_CWRMK2CFRP,water,wet strength retained,0,79.3140,%,lab_c,lab_c,,,,,,,,,,,,
++r_KM6BWSRMZJ,qualification,QP-5993,p_CWRMK2CFRP,water,wet strength retained,1,79.6072,%,lab_c,lab_c,,,,,,,,,,,,
++r_KM6BWSRMZK,qualification,QP-5993,p_CWRMK2CFRP,water,wet strength retained,2,79.9756,%,lab_c,lab_c,,,,,,,,,,,,
++r_KM6BWSRMZM,qualification,QP-5993,p_CWRMK2CFRP,water,wet strength retained,3,80.0852,%,lab_c,lab_c,,,,,,,,,,,,
++r_KM6BWSRMZN,qualification,QP-5993,p_CWRMK2CFRP,water,wet strength retained,4,80.5112,%,lab_c,lab_c,,,,,,,,,,,,
++r_KM6BWSRMZP,qualification,QP-5993,p_CWRMK2CFRP,water,wet strength retained,5,79.2732,%,lab_c,lab_c,,,,,,,,,,,,
+ r_QG6PEN0CPP,qualification,QP-5993,p_XG0BYRA5W2,heat,seal hold temperature,0,78.01350,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
+ r_QG6PEN0CPQ,qualification,QP-5993,p_XG0BYRA5W2,heat,seal hold temperature,1,78.27425,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y
+ r_QG6PEN0CPR,qualification,QP-5993,p_XG0BYRA5W2,heat,seal hold temperature,2,78.30525,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XN,A6U,G5Y

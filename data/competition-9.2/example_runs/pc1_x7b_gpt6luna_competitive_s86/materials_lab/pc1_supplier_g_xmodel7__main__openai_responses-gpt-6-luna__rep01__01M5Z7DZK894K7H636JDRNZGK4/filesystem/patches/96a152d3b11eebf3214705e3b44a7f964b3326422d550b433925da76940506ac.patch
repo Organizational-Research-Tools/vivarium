@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -636,3 +636,4 @@
+ r_CHXDAX17SA,qualification,QP-3617,p_H6M64FVH7B,heat,seal hold temperature,3,78.87525,°C,lab_a,lab_c,,,,,,,,,,,,
+ r_CHXDAX17SB,qualification,QP-3617,p_H6M64FVH7B,heat,seal hold temperature,4,78.30150,°C,lab_a,lab_c,,,,,,,,,,,,
+ r_CHXDAX17SC,qualification,QP-3617,p_H6M64FVH7B,heat,seal hold temperature,5,78.46825,°C,lab_a,lab_c,,,,,,,,,,,,
++r_FFCZ21NRR1,exploratory,QP-9273,p_AZ5VDQBF40,water,wet strength retained,,79.0984,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,YX4,SU2

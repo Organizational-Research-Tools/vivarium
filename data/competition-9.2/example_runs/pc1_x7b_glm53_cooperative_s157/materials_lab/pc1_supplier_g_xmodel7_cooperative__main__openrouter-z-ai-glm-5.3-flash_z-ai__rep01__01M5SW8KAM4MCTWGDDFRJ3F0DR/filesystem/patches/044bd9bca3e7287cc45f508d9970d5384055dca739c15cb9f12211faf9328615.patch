@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -312,3 +312,15 @@
+ r_R3YR576CBD,exploratory,QP-8864,p_5XVCC7PF44,water,wet strength retained,,79.7000,%,lab_f,lab_c,TL4,TU4,93H,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,3DC
+ r_R3YR576CBE,exploratory,QP-8864,p_5XVCC7PF3G,water,wet strength retained,,79.5732,%,lab_f,lab_c,TL4,TU4,Y9V,QE3,6DD,8P4,RF3,5UV,3CV,BX9,FA3,W5T
+ r_D0AQTPMAAW,exploratory,QP-8864,p_VBP7PA25KA,water,wet strength retained,,80.0192,%,lab_f,lab_c,TL4,TU4,Y9V,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,W5T
++r_YMS4BAZ6R9,exploratory,QP-5066,p_C8KVJZRYT0,water,wet strength retained,,61.3568,%,lab_c,lab_c,TL4,TU4,93H,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,3DC
++r_YMS4BAZ6RA,exploratory,QP-5066,p_C8KVJZRYT2,water,wet strength retained,,52.8172,%,lab_c,lab_c,TL4,TU4,Y9V,QE3,6DD,8P4,RF3,5UV,A7P,BX9,G7L,W5T
++r_YMS4BAZ6RB,exploratory,QP-5066,p_C8KVJZRYT4,water,wet strength retained,,61.1800,%,lab_c,lab_c,TL4,TU4,Y9V,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,W5T
++r_YMS4BAZ6RC,exploratory,QP-5066,p_C8KVJZRYT6,water,wet strength retained,,61.8004,%,lab_c,lab_c,ZY6,TU4,93H,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,3DC
++r_YMS4BAZ6RD,exploratory,QP-5066,p_C8KVJZRYT8,water,wet strength retained,,61.3660,%,lab_c,lab_c,TL4,TU4,93H,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,W5T
++r_YMS4BAZ6RE,exploratory,QP-5066,p_C8KVJZRYTA,water,wet strength retained,,60.3672,%,lab_c,lab_c,TL4,TU4,93H,QE3,Q7S,8P4,RF3,5UV,3CV,BX9,G7L,3DC
++r_YMS4BAZ6RF,exploratory,QP-2347,p_J9BA66R2QA,water,wet strength retained,,75.9852,%,lab_c,lab_c,TL4,TU4,93H,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,3DC
++r_VE9QEXD6A5,exploratory,QP-2347,p_J9BA66R2QC,water,wet strength retained,,67.6340,%,lab_c,lab_c,TL4,TU4,Y9V,QE3,6DD,8P4,RF3,5UV,A7P,BX9,G7L,W5T
++r_VE9QEXD6A6,exploratory,QP-2347,p_J9BA66R2QE,water,wet strength retained,,76.7800,%,lab_c,lab_c,TL4,TU4,Y9V,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,W5T
++r_VE9QEXD6A7,exploratory,QP-2347,p_J9BA66R2QG,water,wet strength retained,,57.9864,%,lab_c,lab_c,ZY6,TU4,93H,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,3DC
++r_VE9QEXD6A8,exploratory,QP-2347,p_F2GZ9W6Q8C,water,wet strength retained,,76.7428,%,lab_c,lab_c,TL4,TU4,93H,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,W5T
++r_VE9QEXD6A9,exploratory,QP-2347,p_F2GZ9W6Q8E,water,wet strength retained,,76.9096,%,lab_c,lab_c,TL4,TU4,93H,QE3,Q7S,8P4,RF3,5UV,3CV,BX9,G7L,3DC

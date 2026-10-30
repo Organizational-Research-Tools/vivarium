@@ -1,0 +1,15 @@
+
+import pandas as pd
+df = pd.read_csv('records.csv')
+print("Columns:", df.columns.tolist())
+print()
+# Get p_GR61XB2TYZ recipe
+gr = df[df['prototype_id'] == 'p_GR61XB2TYZ']
+print("p_GR61XB2TYZ records:")
+print(gr[['record_id','project','instrument','test','kind','value','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].to_string())
+print()
+# Also check for QP-3089 GG7 records
+q3089 = df[(df['project'] == 'QP-3089') & (df['secondary_sheet'] == 'GG7')]
+print(f"\nQP-3089 GG7 records: {len(q3089)} rows")
+if len(q3089) > 0:
+    print(q3089[['record_id','prototype_id','instrument','test','kind','value']].to_string())

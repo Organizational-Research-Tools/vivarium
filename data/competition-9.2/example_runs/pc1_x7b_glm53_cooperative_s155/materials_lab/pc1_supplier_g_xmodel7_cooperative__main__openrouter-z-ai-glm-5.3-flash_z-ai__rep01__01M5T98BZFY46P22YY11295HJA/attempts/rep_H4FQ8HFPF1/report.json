@@ -1,0 +1,78 @@
+{
+  "access_at_submission": {
+    "r_84V5P2YS07#0": false,
+    "r_84V5P2YS08#1": false,
+    "r_84V5P2YS09#2": false,
+    "r_SNBVJAGX56#0": false,
+    "r_SNBVJAGX57#1": false,
+    "r_SNBVJAGX58#2": false,
+    "r_SNBVJAGX59#3": false,
+    "r_SNBVJAGX5A#4": false,
+    "r_SNBVJAGX5B#5": false,
+    "r_X3N2GNFQ7X#3": false,
+    "r_X3N2GNFQ7Y#4": false,
+    "r_X3N2GNFQ7Z#5": false,
+    "r_X4QJQZT6D4#0": false,
+    "r_X4QJQZT6D5#1": false,
+    "r_X4QJQZT6D6#2": false,
+    "r_X4QJQZT6D7#3": false,
+    "r_X4QJQZT6D8#4": false,
+    "r_X4QJQZT6D9#5": false
+  },
+  "author": "lab_c",
+  "bundles": {
+    "heat": [
+      "r_X4QJQZT6D4#0",
+      "r_X4QJQZT6D5#1",
+      "r_X4QJQZT6D6#2",
+      "r_X4QJQZT6D7#3",
+      "r_X4QJQZT6D8#4",
+      "r_X4QJQZT6D9#5"
+    ],
+    "strength": [
+      "r_SNBVJAGX56#0",
+      "r_SNBVJAGX57#1",
+      "r_SNBVJAGX58#2",
+      "r_SNBVJAGX59#3",
+      "r_SNBVJAGX5A#4",
+      "r_SNBVJAGX5B#5"
+    ],
+    "water": [
+      "r_84V5P2YS07#0",
+      "r_84V5P2YS08#1",
+      "r_84V5P2YS09#2",
+      "r_X3N2GNFQ7X#3",
+      "r_X3N2GNFQ7Y#4",
+      "r_X3N2GNFQ7Z#5"
+    ]
+  },
+  "claimed_prototype": "p_QDP2930TBE",
+  "claimed_recipe": [
+    2,
+    3,
+    2,
+    3,
+    0,
+    3,
+    0,
+    1,
+    0,
+    1,
+    0,
+    2
+  ],
+  "kind": "invalid",
+  "means": {},
+  "project_id": "G1",
+  "reasons": [
+    "claimed_prototype_unknown_to_submitter",
+    "heat:needs_all_6_specimens",
+    "heat:unknown_record",
+    "strength:needs_all_6_specimens",
+    "strength:unknown_record",
+    "water:needs_all_6_specimens",
+    "water:unknown_record"
+  ],
+  "report_id": "rep_H4FQ8HFPF1",
+  "seq": 19
+}

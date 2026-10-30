@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv');print(x.project.value_counts().to_string()); print(x[x.project=='QP-6879'].to_string(index=False))

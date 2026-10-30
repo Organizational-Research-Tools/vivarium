@@ -1,0 +1,6 @@
+import pandas as pd
+r=pd.read_csv('records.csv')
+print(r.project.value_counts())
+print('\nnon-QP9259 prototypes')
+for pid,g in r[r.project!='QP-9259'].groupby(['project','prototype_id']):
+ print(pid, g.test.iloc[0],g.measured_by.iloc[0],round(g.value.mean(),4),g[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].iloc[0].tolist())

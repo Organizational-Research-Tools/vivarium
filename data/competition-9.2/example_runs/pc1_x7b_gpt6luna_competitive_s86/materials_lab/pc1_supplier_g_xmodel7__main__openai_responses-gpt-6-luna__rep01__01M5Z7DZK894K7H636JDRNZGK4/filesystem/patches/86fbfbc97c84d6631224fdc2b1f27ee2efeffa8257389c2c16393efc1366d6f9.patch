@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); x=x[x.project.isin(['QP-3617','QP-6879','QP-9273'])]
++# qualification only grouped by prototype/instrument with >=6 records
++q=x[x.kind=='qualification'].groupby(['project','prototype_id','instrument','measured_by']).agg(n=('value','size'),mean=('value','mean')).reset_index()
++q=q[q.n>=6].pivot_table(index=['project','prototype_id'],columns='instrument',values='mean',aggfunc='first').reset_index()
++print(q.to_string(index=False))

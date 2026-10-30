@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++d = pd.read_csv('records.csv')
++print(d.columns.tolist())
++for p in ['QP-7006','QP-4152','QP-4757']:
++    s = d[d.project==p] if 'project' in d.columns else None
++    print(p, len(s))

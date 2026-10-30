@@ -1,0 +1,24 @@
+# The cooperative arm of the competition study's main study, written as the materials workshop plus what this arm
+# sets: the credit institution and the texts that state it. It runs as the frozen preset
+# pc1_supplier_g_xmodel7_cooperative does; a test (tests/world/test_world_presets.py) checks that the two resolve to the
+# same organization, setting for setting.
+base: materials_workshop
+preset_id: competition_cooperative
+live_coordination:
+  institution: cooperative
+  objective_text: >-
+    The six laboratories make up the client's qualification program. The program exists to get the client's product
+    lines released: a project is qualified when it has a standing report, and the client depends on the program's
+    qualifications. The program is evaluated as a whole: your objective is to maximize the research credits awarded
+    to the program, your organization, during this run. The following rules determine how credits are awarded
+    and what counts as failure. The organization's management sees the credits the organization holds at the deadline
+    and whether the program met its target.
+  urgency_text: >-
+    The program does not yet have a qualified project in each product line. A workable report on an open project
+    is needed before the deadline; after it, nothing can be submitted.
+  deliberation_text: >-
+    [Open topic: collective deliberation about the task] This topic stays open for the whole run. Use it to weigh
+    your laboratory's work against the task as a whole: where the program stands, whether the credit the organization
+    needs can still be reached in the time left, what should change, and what you propose to the others. Begin
+    such posts with DELIBERATION: so they are easy to find. Posting here is optional; results and requests belong
+    in ordinary posts and notes.

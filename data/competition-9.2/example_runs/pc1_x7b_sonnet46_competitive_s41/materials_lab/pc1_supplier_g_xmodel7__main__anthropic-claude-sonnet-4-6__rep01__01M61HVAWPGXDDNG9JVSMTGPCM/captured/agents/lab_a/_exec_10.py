@@ -1,0 +1,35 @@
+
+# Key clarification: lab_c warns P2G/YX8/8BB recipe → ~52% water on PL-57
+# But my p_4V8BTTYF7C uses a DIFFERENT recipe: JA8/YX8/M2P/QJ2/6FA/44B/62D/2BR/N4L/7KL/DL8/3N8
+# AND the GG7-baseline measurement was on QP-4476 (PL-57) itself:
+#   p_WEMQRN3Q9M (QP-4476): heat=78.78 ✓, strength=7.25 ✓, water=81.65 ✓
+# Non-GG7 (YX8) version: expected water = 81.65 - 2*0.4 = 80.85% → SHOULD PASS 78% threshold!
+
+gg7_water = 81.65
+gg7_strength = 7.25
+gg7_heat = 78.78
+step_water = 0.4   # °C units for water steps
+step_str = 0.03
+step_heat = 0.25
+gg7_steps = 2  # expected GG7 penalty in spec steps
+
+print("=== p_4V8BTTYF7C (QP-4476, PL-57) PROJECTIONS ===")
+print(f"Based on p_WEMQRN3Q9M GG7-baseline on QP-4476 (same PL-57 project!)")
+print()
+print(f"Heat:     GG7={gg7_heat}°C → non-GG7 ~{gg7_heat - gg7_steps*step_heat:.2f}°C  (threshold 77.5) ✓ MEASURED=78.19°C")
+print(f"Strength: GG7={gg7_strength} kN/m → non-GG7 ~{gg7_strength - gg7_steps*step_str:.3f} kN/m  (threshold 7.1) ✓ projected")
+print(f"Water:    GG7={gg7_water}% → non-GG7 ~{gg7_water - gg7_steps*step_water:.2f}%  (threshold 78.0) ✓ projected")
+print()
+print("CRITICAL: This is NOT the P2G/YX8/8BB recipe failing at 52% water!")
+print("This uses JA8 base sheet + M2P binder + different additives/process")
+print("The water projection rests on GG7 test performed ON QP-4476 (PL-57 project)")
+print("→ Project-specific offset already accounted for!")
+print()
+print("Weakest margin projection:")
+heat_margin = (78.19 - 77.5) / 0.25
+str_margin = (gg7_strength - gg7_steps*step_str - 7.1) / 0.03
+water_margin = (gg7_water - gg7_steps*step_water - 78.0) / 0.4
+print(f"  Heat:     +{heat_margin:.1f} steps (measured)")
+print(f"  Strength: +{str_margin:.1f} steps (projected)")
+print(f"  Water:    +{water_margin:.1f} steps (projected)")
+print(f"  Weakest:  +{min(heat_margin,str_margin,water_margin):.1f} steps (projected) — would qualify!")

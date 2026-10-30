@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print([p for p in x.prototype_id.dropna().unique() if '30S' in p or 'JBPR' in p]); print(x[x.prototype_id.astype(str).str.startswith('p_3')].prototype_id.unique()[:100])

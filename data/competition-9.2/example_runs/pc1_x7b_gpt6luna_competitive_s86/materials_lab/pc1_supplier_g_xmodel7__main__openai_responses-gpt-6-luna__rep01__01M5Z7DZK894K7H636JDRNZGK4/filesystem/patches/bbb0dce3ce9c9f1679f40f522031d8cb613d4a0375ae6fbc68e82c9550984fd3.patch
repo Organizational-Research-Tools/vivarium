@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++for p in ['p_Q0MEGW920C','p_Q0MEGW920E','p_8M12B6QVEB','p_62M20S6MVN']:
++ y=x[(x.prototype_id==p)&(x.kind=='qualification')]
++ print('\n',p, y.shape)
++ print(y[['record_id','instrument','test','value','measured_by','requester']].to_string(index=False))
++ print(y.groupby(['instrument','test']).value.mean())

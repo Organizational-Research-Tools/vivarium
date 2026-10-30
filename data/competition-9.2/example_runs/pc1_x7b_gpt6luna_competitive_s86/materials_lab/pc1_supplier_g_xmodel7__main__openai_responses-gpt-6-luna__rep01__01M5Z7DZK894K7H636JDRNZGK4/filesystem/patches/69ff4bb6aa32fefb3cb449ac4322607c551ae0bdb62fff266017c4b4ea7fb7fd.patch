@@ -1,0 +1,21 @@
+--- 
++++ 
+@@ -676,12 +676,12 @@
+ r_X2AVD8NV9K,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,3,79.6252,%,lab_c,lab_c,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
+ r_X2AVD8NV9M,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,4,78.7292,%,lab_c,lab_c,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
+ r_X2AVD8NV9N,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,5,78.6524,%,lab_c,lab_c,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,62B,84Z
+-r_2ZXYGTXY9T,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,0,7.24874,kN/m,lab_e,lab_c,,,,,,,,,,,,
+-r_2ZXYGTXY9V,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,1,7.26287,kN/m,lab_e,lab_c,,,,,,,,,,,,
+-r_2ZXYGTXY9W,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,2,7.28552,kN/m,lab_e,lab_c,,,,,,,,,,,,
+-r_2ZXYGTXY9X,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,3,7.29350,kN/m,lab_e,lab_c,,,,,,,,,,,,
+-r_2ZXYGTXY9Y,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,4,7.29713,kN/m,lab_e,lab_c,,,,,,,,,,,,
+-r_2ZXYGTXY9Z,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,5,7.23140,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_2ZXYGTXY9T,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,0,7.24874,kN/m,lab_e,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,RZ8,8KZ,3XM,96Y,62B,84Z
++r_2ZXYGTXY9V,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,1,7.26287,kN/m,lab_e,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,RZ8,8KZ,3XM,96Y,62B,84Z
++r_2ZXYGTXY9W,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,2,7.28552,kN/m,lab_e,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,RZ8,8KZ,3XM,96Y,62B,84Z
++r_2ZXYGTXY9X,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,3,7.29350,kN/m,lab_e,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,RZ8,8KZ,3XM,96Y,62B,84Z
++r_2ZXYGTXY9Y,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,4,7.29713,kN/m,lab_e,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,RZ8,8KZ,3XM,96Y,62B,84Z
++r_2ZXYGTXY9Z,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,5,7.23140,kN/m,lab_e,lab_c,8GP,D5U,YC8,7TW,K3K,4CW,RZ8,8KZ,3XM,96Y,62B,84Z
+ r_17GX4JAAZF,qualification,QP-9273,p_H75E66GD4V,heat,seal hold temperature,0,65.23200,°C,lab_d,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
+ r_17GX4JAAZG,qualification,QP-9273,p_H75E66GD4V,heat,seal hold temperature,1,65.25825,°C,lab_d,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
+ r_17GX4JAAZH,qualification,QP-9273,p_H75E66GD4V,heat,seal hold temperature,2,65.40525,°C,lab_d,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN

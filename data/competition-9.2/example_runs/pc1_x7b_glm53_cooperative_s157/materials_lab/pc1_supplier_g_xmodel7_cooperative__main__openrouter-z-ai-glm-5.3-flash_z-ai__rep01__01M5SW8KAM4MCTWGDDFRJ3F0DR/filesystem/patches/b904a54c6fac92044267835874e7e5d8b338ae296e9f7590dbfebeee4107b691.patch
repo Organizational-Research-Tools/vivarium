@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++p = df[df.prototype_id=='p_GM7DHPGB5W']
++print(p[['record_id','kind','instrument','test','specimen','value','measured_by']].to_string())
++# also any PL-80 strength panels I hold clearing 7.235
++for pid in ['p_5XVCC7PF44','p_55NSKA6RFT','p_5XVCC7PF3G']:
++    q = df[(df.prototype_id==pid)&(df.test=='strength')&(df.kind=='panel')]
++    print(pid, q[['record_id','value','measured_by']].to_string() if len(q) else 'none')

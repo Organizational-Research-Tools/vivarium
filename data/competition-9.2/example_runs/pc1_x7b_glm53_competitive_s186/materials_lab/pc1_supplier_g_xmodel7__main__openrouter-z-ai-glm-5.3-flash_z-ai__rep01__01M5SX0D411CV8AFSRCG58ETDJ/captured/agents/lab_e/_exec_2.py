@@ -1,0 +1,11 @@
+import pandas as pd, numpy as np
+df = pd.read_csv('records.csv')
+s = df[df['test']=='strength']
+mods = ['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+g = s.groupby('prototype_id')['value'].agg(['mean','count'])
+print(g.sort_values('mean',ascending=False).head(25))
+# main effects over known-composition rows
+known = s.dropna(subset=mods)
+print(len(known), 'strength rows with known comp')
+for m in mods:
+    print(m, known.groupby(m)['value'].mean().round(2).to_dict())

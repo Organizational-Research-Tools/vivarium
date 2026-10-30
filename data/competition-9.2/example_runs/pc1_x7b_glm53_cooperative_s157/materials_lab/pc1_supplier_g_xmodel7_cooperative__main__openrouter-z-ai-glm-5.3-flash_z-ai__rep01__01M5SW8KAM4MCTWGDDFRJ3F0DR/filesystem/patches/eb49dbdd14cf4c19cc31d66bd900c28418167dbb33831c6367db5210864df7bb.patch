@@ -1,0 +1,14 @@
+--- 
++++ 
+@@ -0,0 +1,11 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++e=df[df.kind=='exploratory']
++# aggregate means per prototype
++g=e.groupby(['project','prototype_id','test'])['value'].mean().unstack()
++c=g[(g['seal hold temperature']>=78.5)&(g['edge crush resistance']>=7.2)&(g['wet strength retained']>=79.6)]
++print(c.to_string())
++# also qualification panels
++q=df[df.kind=='qualification']
++gq=q.groupby(['project','prototype_id','test'])['value'].agg(['mean','count'])
++print(gq[(gq['mean']>77.5)].to_string())

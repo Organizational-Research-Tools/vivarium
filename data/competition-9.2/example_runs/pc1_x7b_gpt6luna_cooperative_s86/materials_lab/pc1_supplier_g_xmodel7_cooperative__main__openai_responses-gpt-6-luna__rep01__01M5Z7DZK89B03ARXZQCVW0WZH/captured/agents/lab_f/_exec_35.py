@@ -1,0 +1,6 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for pid in ['p_5NQ70DDDZW']:
+ d=x[x.prototype_id==pid]
+ print(d[['project','prototype_id','measured_by','test','value']].groupby(['project','test','measured_by']).value.agg(['count','mean']).to_string())
+ print(d[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].drop_duplicates().to_string(index=False))

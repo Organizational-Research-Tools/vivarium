@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -695,3 +695,15 @@
+ r_9R8Y7M0J0C,qualification,QP-5174,p_K7XF099AZ8,heat,seal hold temperature,3,62.76500,°C,lab_a,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
+ r_9R8Y7M0J0D,qualification,QP-5174,p_K7XF099AZ8,heat,seal hold temperature,4,63.78075,°C,lab_a,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
+ r_9R8Y7M0J0E,qualification,QP-5174,p_K7XF099AZ8,heat,seal hold temperature,5,57.72975,°C,lab_a,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_BB139DDQ1Q,qualification,QP-5174,p_K7XF099AZ8,strength,edge crush resistance,0,5.43965,kN/m,lab_e,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_BB139DDQ1R,qualification,QP-5174,p_K7XF099AZ8,strength,edge crush resistance,1,5.69411,kN/m,lab_e,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_BB139DDQ1S,qualification,QP-5174,p_K7XF099AZ8,strength,edge crush resistance,2,5.80355,kN/m,lab_e,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_BB139DDQ1T,qualification,QP-5174,p_K7XF099AZ8,strength,edge crush resistance,3,5.91266,kN/m,lab_e,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_BB139DDQ1V,qualification,QP-5174,p_K7XF099AZ8,strength,edge crush resistance,4,5.21309,kN/m,lab_e,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_BB139DDQ1W,qualification,QP-5174,p_K7XF099AZ8,strength,edge crush resistance,5,5.33678,kN/m,lab_e,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_E69CF0Z5SN,qualification,QP-5174,p_K7XF099AZ8,water,wet strength retained,0,52.2012,%,lab_c,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_E69CF0Z5SP,qualification,QP-5174,p_K7XF099AZ8,water,wet strength retained,1,53.8536,%,lab_c,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_E69CF0Z5SQ,qualification,QP-5174,p_K7XF099AZ8,water,wet strength retained,2,55.3060,%,lab_c,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_E69CF0Z5SR,qualification,QP-5174,p_K7XF099AZ8,water,wet strength retained,3,45.6612,%,lab_c,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_E69CF0Z5SS,qualification,QP-5174,p_K7XF099AZ8,water,wet strength retained,4,47.3496,%,lab_c,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_E69CF0Z5ST,qualification,QP-5174,p_K7XF099AZ8,water,wet strength retained,5,48.8108,%,lab_c,lab_a,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN

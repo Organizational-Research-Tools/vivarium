@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++for p in ['p_AWPY5ZV668','p_9YW85TNK97','p_9YW85TNK93']:
++ d=x[x.prototype_id==p]
++ print(p, d.groupby('test').value.agg(['count','mean']).to_string())

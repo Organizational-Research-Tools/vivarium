@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -604,3 +604,9 @@
+ r_6S7G6VD63K,qualification,QP-5653,p_XS595HTDBV,strength,edge crush resistance,3,7.10381,kN/m,lab_e,lab_a,TL4,YH6,KX7,X2P,6DD,8P4,8Q7,5UV,5J9,BX9,34U,W5T
+ r_6S7G6VD63M,qualification,QP-5653,p_XS595HTDBV,strength,edge crush resistance,4,7.10249,kN/m,lab_e,lab_a,TL4,YH6,KX7,X2P,6DD,8P4,8Q7,5UV,5J9,BX9,34U,W5T
+ r_6S7G6VD63N,qualification,QP-5653,p_XS595HTDBV,strength,edge crush resistance,5,7.11848,kN/m,lab_e,lab_a,TL4,YH6,KX7,X2P,6DD,8P4,8Q7,5UV,5J9,BX9,34U,W5T
++r_MFMSD5J493,qualification,QP-5653,p_XS595HTDBV,heat,seal hold temperature,0,79.16650,°C,lab_a,lab_a,TL4,YH6,KX7,X2P,6DD,8P4,8Q7,5UV,5J9,BX9,34U,W5T
++r_MFMSD5J494,qualification,QP-5653,p_XS595HTDBV,heat,seal hold temperature,1,79.18700,°C,lab_a,lab_a,TL4,YH6,KX7,X2P,6DD,8P4,8Q7,5UV,5J9,BX9,34U,W5T
++r_MFMSD5J495,qualification,QP-5653,p_XS595HTDBV,heat,seal hold temperature,2,79.40850,°C,lab_a,lab_a,TL4,YH6,KX7,X2P,6DD,8P4,8Q7,5UV,5J9,BX9,34U,W5T
++r_MFMSD5J496,qualification,QP-5653,p_XS595HTDBV,heat,seal hold temperature,3,79.55525,°C,lab_a,lab_a,TL4,YH6,KX7,X2P,6DD,8P4,8Q7,5UV,5J9,BX9,34U,W5T
++r_MFMSD5J497,qualification,QP-5653,p_XS595HTDBV,heat,seal hold temperature,4,78.93050,°C,lab_a,lab_a,TL4,YH6,KX7,X2P,6DD,8P4,8Q7,5UV,5J9,BX9,34U,W5T
++r_MFMSD5J498,qualification,QP-5653,p_XS595HTDBV,heat,seal hold temperature,5,79.13525,°C,lab_a,lab_a,TL4,YH6,KX7,X2P,6DD,8P4,8Q7,5UV,5J9,BX9,34U,W5T

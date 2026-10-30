@@ -1,0 +1,36 @@
+--- 
++++ 
+@@ -621,9 +621,33 @@
+ r_M5CKSGZ5EJ,exploratory,QP-1454,p_9V90B1NZP7,water,wet strength retained,,79.4320,%,lab_c,lab_e,,,,,,,,,,,,
+ r_M5CKSGZ5EK,exploratory,QP-1454,p_9V90B1NZP9,water,wet strength retained,,79.5280,%,lab_c,lab_e,,,,,,,,,,,,
+ r_M5CKSGZ5EM,exploratory,QP-1454,p_DSTFRJN4CR,water,wet strength retained,,79.6868,%,lab_c,lab_e,,,,,,,,,,,,
++r_85X3CJ0H86,qualification,QP-1454,p_9V90B1NZP9,strength,edge crush resistance,0,7.26107,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_85X3CJ0H87,qualification,QP-1454,p_9V90B1NZP9,strength,edge crush resistance,1,7.26107,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_85X3CJ0H88,qualification,QP-1454,p_9V90B1NZP9,strength,edge crush resistance,2,7.28555,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_85X3CJ0H89,qualification,QP-1454,p_9V90B1NZP9,strength,edge crush resistance,3,7.29086,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_85X3CJ0H8A,qualification,QP-1454,p_9V90B1NZP9,strength,edge crush resistance,4,7.23281,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_85X3CJ0H8B,qualification,QP-1454,p_9V90B1NZP9,strength,edge crush resistance,5,7.23758,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_85X3CJ0H8C,qualification,QP-1454,p_DSTFRJN4CR,strength,edge crush resistance,0,7.26869,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_85X3CJ0H8D,qualification,QP-1454,p_DSTFRJN4CR,strength,edge crush resistance,1,7.27073,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_85X3CJ0H8E,qualification,QP-1454,p_DSTFRJN4CR,strength,edge crush resistance,2,7.28153,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_85X3CJ0H8F,qualification,QP-1454,p_DSTFRJN4CR,strength,edge crush resistance,3,7.28393,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_85X3CJ0H8G,qualification,QP-1454,p_DSTFRJN4CR,strength,edge crush resistance,4,7.23287,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_85X3CJ0H8H,qualification,QP-1454,p_DSTFRJN4CR,strength,edge crush resistance,5,7.25585,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_F08HCTNTKF,qualification,QP-1454,p_9V90B1NZP7,strength,edge crush resistance,0,7.25144,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_F08HCTNTKG,qualification,QP-1454,p_9V90B1NZP7,strength,edge crush resistance,1,7.27199,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_F08HCTNTKH,qualification,QP-1454,p_9V90B1NZP7,strength,edge crush resistance,2,7.27670,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_F08HCTNTKJ,qualification,QP-1454,p_9V90B1NZP7,strength,edge crush resistance,3,7.29053,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_F08HCTNTKK,qualification,QP-1454,p_9V90B1NZP7,strength,edge crush resistance,4,7.22927,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_F08HCTNTKM,qualification,QP-1454,p_9V90B1NZP7,strength,edge crush resistance,5,7.24145,kN/m,lab_e,lab_e,,,,,,,,,,,,
+ r_1RAWJ1AYRS,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,0,79.5148,%,lab_c,lab_e,,,,,,,,,,,,
+ r_1RAWJ1AYRT,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,1,79.5044,%,lab_c,lab_e,,,,,,,,,,,,
+ r_1RAWJ1AYRV,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,2,79.7496,%,lab_c,lab_e,,,,,,,,,,,,
+ r_1RAWJ1AYRW,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,3,78.8872,%,lab_c,lab_e,,,,,,,,,,,,
+ r_1RAWJ1AYRX,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,4,79.3700,%,lab_c,lab_e,,,,,,,,,,,,
+ r_1RAWJ1AYRY,qualification,QP-1454,p_DSTFRJN4CR,water,wet strength retained,5,79.4220,%,lab_c,lab_e,,,,,,,,,,,,
++r_4JS869FR69,qualification,QP-1454,p_AGDEFR9K2N,water,wet strength retained,0,79.8364,%,lab_c,lab_c,H6K,9AF,DQ9,U4A,NS4,3LL,3RB,F9B,49R,RQ5,8K5,4YT
++r_4JS869FR6A,qualification,QP-1454,p_AGDEFR9K2N,water,wet strength retained,1,79.9896,%,lab_c,lab_c,H6K,9AF,DQ9,U4A,NS4,3LL,3RB,F9B,49R,RQ5,8K5,4YT
++r_4JS869FR6B,qualification,QP-1454,p_AGDEFR9K2N,water,wet strength retained,2,79.9644,%,lab_c,lab_c,H6K,9AF,DQ9,U4A,NS4,3LL,3RB,F9B,49R,RQ5,8K5,4YT
++r_4JS869FR6C,qualification,QP-1454,p_AGDEFR9K2N,water,wet strength retained,3,79.6308,%,lab_c,lab_c,H6K,9AF,DQ9,U4A,NS4,3LL,3RB,F9B,49R,RQ5,8K5,4YT
++r_4JS869FR6D,qualification,QP-1454,p_AGDEFR9K2N,water,wet strength retained,4,79.7568,%,lab_c,lab_c,H6K,9AF,DQ9,U4A,NS4,3LL,3RB,F9B,49R,RQ5,8K5,4YT
++r_4JS869FR6E,qualification,QP-1454,p_AGDEFR9K2N,water,wet strength retained,5,79.7132,%,lab_c,lab_c,H6K,9AF,DQ9,U4A,NS4,3LL,3RB,F9B,49R,RQ5,8K5,4YT

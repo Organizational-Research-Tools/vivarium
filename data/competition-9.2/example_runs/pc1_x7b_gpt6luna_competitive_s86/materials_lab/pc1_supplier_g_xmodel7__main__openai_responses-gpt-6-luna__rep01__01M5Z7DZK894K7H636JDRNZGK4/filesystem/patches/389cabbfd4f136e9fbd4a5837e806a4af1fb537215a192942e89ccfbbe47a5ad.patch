@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -604,3 +604,5 @@
+ r_09EM48FNJS,qualification,QP-7092,p_PDDT6X6J04,heat,seal hold temperature,5,73.24700,°C,lab_a,lab_a,QG7,6TX,P8G,7TW,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
+ r_FVN1882H8H,exploratory,QP-7092,p_EFB2ME7Y7X,strength,edge crush resistance,,7.00271,kN/m,lab_b,lab_a,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
+ r_FVN1882H8J,exploratory,QP-7092,p_PDDT6X6J04,strength,edge crush resistance,,6.99818,kN/m,lab_b,lab_a,QG7,6TX,P8G,7TW,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_SC6ZHXT2ME,exploratory,QP-7092,p_EFB2ME7Y7X,water,wet strength retained,,76.2352,%,lab_c,lab_a,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_SC6ZHXT2MF,exploratory,QP-7092,p_PDDT6X6J04,water,wet strength retained,,76.3160,%,lab_c,lab_a,QG7,6TX,P8G,7TW,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN

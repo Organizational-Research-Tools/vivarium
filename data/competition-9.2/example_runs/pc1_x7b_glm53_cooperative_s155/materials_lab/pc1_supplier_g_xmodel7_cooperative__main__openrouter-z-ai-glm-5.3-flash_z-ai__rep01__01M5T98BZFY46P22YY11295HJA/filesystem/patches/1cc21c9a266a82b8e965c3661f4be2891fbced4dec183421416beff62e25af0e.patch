@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++print(df.columns.tolist())
++h = df[df.property.str.contains('heat', na=False)] if 'property' in df.columns else None
++print(df.head(3).T)

@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -883,3 +883,27 @@
+ r_GQ7HYJ03FT,exploratory,QP-5174,p_YMJHF3Y85G,heat,seal hold temperature,,71.44225,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,74N,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
+ r_GQ7HYJ03FV,exploratory,QP-5174,p_YMJHF3Y85J,heat,seal hold temperature,,77.80650,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
+ r_GQ7HYJ03FW,exploratory,QP-5174,p_QZK6EAR24S,heat,seal hold temperature,,77.23100,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,EB7,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_73P32FVDCK,qualification,QP-5174,p_YMJHF3Y85J,heat,seal hold temperature,0,79.45100,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_73P32FVDCM,qualification,QP-5174,p_YMJHF3Y85J,heat,seal hold temperature,1,80.47800,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_73P32FVDCN,qualification,QP-5174,p_YMJHF3Y85J,heat,seal hold temperature,2,74.31650,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_73P32FVDCP,qualification,QP-5174,p_YMJHF3Y85J,heat,seal hold temperature,3,75.60125,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_73P32FVDCQ,qualification,QP-5174,p_YMJHF3Y85J,heat,seal hold temperature,4,76.35775,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_73P32FVDCR,qualification,QP-5174,p_YMJHF3Y85J,heat,seal hold temperature,5,78.42350,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_73P32FVDCS,qualification,QP-5174,p_YMJHF3Y85A,heat,seal hold temperature,0,79.25575,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,79B,UX3,YX4,YT2
++r_73P32FVDCT,qualification,QP-5174,p_YMJHF3Y85A,heat,seal hold temperature,1,80.18675,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,79B,UX3,YX4,YT2
++r_73P32FVDCV,qualification,QP-5174,p_YMJHF3Y85A,heat,seal hold temperature,2,74.23625,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,79B,UX3,YX4,YT2
++r_73P32FVDCW,qualification,QP-5174,p_YMJHF3Y85A,heat,seal hold temperature,3,75.37425,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,79B,UX3,YX4,YT2
++r_73P32FVDCX,qualification,QP-5174,p_YMJHF3Y85A,heat,seal hold temperature,4,76.31225,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,79B,UX3,YX4,YT2
++r_73P32FVDCY,qualification,QP-5174,p_YMJHF3Y85A,heat,seal hold temperature,5,78.41075,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,79B,UX3,YX4,YT2
++r_73P32FVDCZ,qualification,QP-5174,p_YMJHF3Y85E,heat,seal hold temperature,0,79.29600,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,79B,UX3,YX4,YT2
++r_73P32FVDD0,qualification,QP-5174,p_YMJHF3Y85E,heat,seal hold temperature,1,80.28650,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,79B,UX3,YX4,YT2
++r_73P32FVDD1,qualification,QP-5174,p_YMJHF3Y85E,heat,seal hold temperature,2,74.28150,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,79B,UX3,YX4,YT2
++r_73P32FVDD2,qualification,QP-5174,p_YMJHF3Y85E,heat,seal hold temperature,3,75.32450,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,79B,UX3,YX4,YT2
++r_73P32FVDD3,qualification,QP-5174,p_YMJHF3Y85E,heat,seal hold temperature,4,76.21525,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,79B,UX3,YX4,YT2
++r_73P32FVDD4,qualification,QP-5174,p_YMJHF3Y85E,heat,seal hold temperature,5,78.19375,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,79B,UX3,YX4,YT2
++r_73P32FVDD5,qualification,QP-5174,p_EB2BAKBS33,heat,seal hold temperature,0,79.05050,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,3XM,UX3,YX4,YT2
++r_73P32FVDD6,qualification,QP-5174,p_EB2BAKBS33,heat,seal hold temperature,1,80.04275,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,3XM,UX3,YX4,YT2
++r_73P32FVDD7,qualification,QP-5174,p_EB2BAKBS33,heat,seal hold temperature,2,74.15750,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,3XM,UX3,YX4,YT2
++r_73P32FVDD8,qualification,QP-5174,p_EB2BAKBS33,heat,seal hold temperature,3,75.17825,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,3XM,UX3,YX4,YT2
++r_73P32FVDD9,qualification,QP-5174,p_EB2BAKBS33,heat,seal hold temperature,4,76.19700,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,3XM,UX3,YX4,YT2
++r_73P32FVDDA,qualification,QP-5174,p_EB2BAKBS33,heat,seal hold temperature,5,78.06250,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,F8Y,P2E,2A4,2JH,3XM,UX3,YX4,YT2

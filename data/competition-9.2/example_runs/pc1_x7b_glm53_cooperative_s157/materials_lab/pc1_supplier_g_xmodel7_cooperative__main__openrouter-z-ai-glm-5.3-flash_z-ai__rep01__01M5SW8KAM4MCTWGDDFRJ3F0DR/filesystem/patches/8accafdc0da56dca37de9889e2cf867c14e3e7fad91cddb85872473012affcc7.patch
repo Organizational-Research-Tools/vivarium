@@ -1,0 +1,22 @@
+--- 
++++ 
+@@ -607,3 +607,19 @@
+ r_ETKXSVJF80,exploratory,QP-6820,p_0SFWV492V6,heat,seal hold temperature,,78.54800,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_ETKXSVJF81,exploratory,QP-6820,p_TS3TQG4Q8Q,heat,seal hold temperature,,77.99150,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_00HZC8XVBM,exploratory,QP-6820,p_TS3TQG4Q8Q,heat,seal hold temperature,,77.73400,°C,lab_a,lab_a,,,,,,,,,,,,
++r_264Q4RDDVY,exploratory,QP-3068,p_YM23HABVE5,water,wet strength retained,,70.3956,%,lab_f,lab_a,,,,,,,,,,,,
++r_264Q4RDDVZ,exploratory,QP-3068,p_YM23HABVE5,water,wet strength retained,,70.7048,%,lab_f,lab_a,,,,,,,,,,,,
++r_264Q4RDDW0,exploratory,QP-3068,p_YM23HABVE7,water,wet strength retained,,78.6892,%,lab_f,lab_a,,,,,,,,,,,,
++r_264Q4RDDW1,exploratory,QP-3068,p_YM23HABVE7,water,wet strength retained,,78.5552,%,lab_f,lab_a,,,,,,,,,,,,
++r_009MCADJZB,exploratory,QP-3068,p_YM23HABVE9,water,wet strength retained,,79.0652,%,lab_f,lab_a,,,,,,,,,,,,
++r_009MCADJZC,exploratory,QP-3068,p_YM23HABVE9,water,wet strength retained,,79.1608,%,lab_f,lab_a,,,,,,,,,,,,
++r_009MCADJZD,exploratory,QP-3068,p_94B583XC0R,water,wet strength retained,,69.6712,%,lab_f,lab_a,,,,,,,,,,,,
++r_009MCADJZE,exploratory,QP-3068,p_94B583XC0R,water,wet strength retained,,70.5956,%,lab_f,lab_a,,,,,,,,,,,,
++r_009MCADJZF,exploratory,QP-3068,p_94B583XC0T,water,wet strength retained,,62.8452,%,lab_f,lab_a,,,,,,,,,,,,
++r_009MCADJZG,exploratory,QP-3068,p_94B583XC0T,water,wet strength retained,,61.7616,%,lab_f,lab_a,,,,,,,,,,,,
++r_H1QSRSV34K,exploratory,QP-3068,p_94B583XC0W,water,wet strength retained,,79.4972,%,lab_f,lab_a,,,,,,,,,,,,
++r_H1QSRSV34M,exploratory,QP-3068,p_94B583XC0W,water,wet strength retained,,79.1296,%,lab_f,lab_a,,,,,,,,,,,,
++r_H1QSRSV34N,exploratory,QP-3068,p_94B583XC0Y,water,wet strength retained,,70.4192,%,lab_f,lab_a,,,,,,,,,,,,
++r_H1QSRSV34P,exploratory,QP-3068,p_94B583XC0Y,water,wet strength retained,,70.5664,%,lab_f,lab_a,,,,,,,,,,,,
++r_H1QSRSV34Q,exploratory,QP-3068,p_94B583XC10,water,wet strength retained,,72.1724,%,lab_f,lab_a,,,,,,,,,,,,
++r_H1QSRSV34R,exploratory,QP-3068,p_94B583XC10,water,wet strength retained,,72.2216,%,lab_f,lab_a,,,,,,,,,,,,

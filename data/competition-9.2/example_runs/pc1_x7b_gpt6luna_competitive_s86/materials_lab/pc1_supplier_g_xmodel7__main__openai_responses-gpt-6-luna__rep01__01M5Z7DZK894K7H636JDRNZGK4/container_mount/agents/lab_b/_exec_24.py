@@ -1,0 +1,8 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for p in ['p_3QBE171REF','p_6HZQR01SMB']:
+ y=x[x.prototype_id.eq(p)]
+ print('\n',p,len(y))
+ if len(y):
+  print(y[['kind','instrument','test','specimen','value','measured_by','requester']].to_string(index=False))
+  print(y.iloc[0][['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].to_dict())

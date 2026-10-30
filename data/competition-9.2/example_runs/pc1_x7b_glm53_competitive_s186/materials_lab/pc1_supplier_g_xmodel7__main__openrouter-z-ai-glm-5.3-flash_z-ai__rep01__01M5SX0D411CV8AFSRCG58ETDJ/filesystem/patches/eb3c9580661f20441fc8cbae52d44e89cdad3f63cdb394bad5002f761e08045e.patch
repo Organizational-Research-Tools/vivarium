@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -491,3 +491,9 @@
+ r_C3Q1H9JWAR,exploratory,QP-5993,p_9T7PGPYM56,heat,seal hold temperature,,77.53900,°C,lab_a,lab_f,,,,,,,,,,,,
+ r_D16884MTBV,exploratory,QP-5993,p_9T7PGPYM56,heat,seal hold temperature,,78.13900,°C,lab_a,lab_f,,,,,,,,,,,,
+ r_D16884MTBW,exploratory,QP-5993,p_9T7PGPYM56,heat,seal hold temperature,,78.41375,°C,lab_a,lab_f,,,,,,,,,,,,
++r_2PT27ETTYG,qualification,QP-5993,p_BKVHDNHTCH,heat,seal hold temperature,0,78.11000,°C,lab_a,lab_c,,,,,,,,,,,,
++r_2PT27ETTYH,qualification,QP-5993,p_BKVHDNHTCH,heat,seal hold temperature,1,78.21575,°C,lab_a,lab_c,,,,,,,,,,,,
++r_2PT27ETTYJ,qualification,QP-5993,p_BKVHDNHTCH,heat,seal hold temperature,2,78.36625,°C,lab_a,lab_c,,,,,,,,,,,,
++r_2PT27ETTYK,qualification,QP-5993,p_BKVHDNHTCH,heat,seal hold temperature,3,77.83550,°C,lab_a,lab_c,,,,,,,,,,,,
++r_2PT27ETTYM,qualification,QP-5993,p_BKVHDNHTCH,heat,seal hold temperature,4,77.95300,°C,lab_a,lab_c,,,,,,,,,,,,
++r_SWPCWVF8XJ,qualification,QP-5993,p_BKVHDNHTCH,heat,seal hold temperature,5,78.02950,°C,lab_a,lab_c,,,,,,,,,,,,

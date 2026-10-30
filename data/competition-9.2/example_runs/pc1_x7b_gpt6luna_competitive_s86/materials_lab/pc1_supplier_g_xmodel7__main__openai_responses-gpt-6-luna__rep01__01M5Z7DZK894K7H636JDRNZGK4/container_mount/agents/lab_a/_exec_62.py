@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x.project.value_counts().to_string()); d=x[x.project=='QP-3617']; print('n',len(d));
+print(d.groupby(['prototype_id','test']).agg(n=('value','size'),mean=('value','mean'),min=('value','min'),max=('value','max'),kind=('kind','first')).to_string())
+print(d[['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].drop_duplicates().to_string(index=False))

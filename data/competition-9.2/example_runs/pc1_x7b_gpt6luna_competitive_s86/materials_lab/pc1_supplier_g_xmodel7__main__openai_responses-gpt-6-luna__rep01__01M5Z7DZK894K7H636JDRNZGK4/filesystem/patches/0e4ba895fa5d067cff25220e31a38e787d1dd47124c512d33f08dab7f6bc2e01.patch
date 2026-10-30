@@ -1,0 +1,31 @@
+--- 
++++ 
+@@ -461,6 +461,12 @@
+ r_ZEPT0HEHMR,qualification,QP-9219,p_9BPKMPQZJN,heat,seal hold temperature,3,77.88675,°C,lab_d,lab_c,8GP,RK7,YC8,S7U,74N,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
+ r_ZEPT0HEHMS,qualification,QP-9219,p_9BPKMPQZJN,heat,seal hold temperature,4,78.19550,°C,lab_d,lab_c,8GP,RK7,YC8,S7U,74N,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
+ r_ZEPT0HEHMT,qualification,QP-9219,p_9BPKMPQZJN,heat,seal hold temperature,5,78.16175,°C,lab_d,lab_c,8GP,RK7,YC8,S7U,74N,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_P43D9T714V,qualification,QP-3617,p_4AQTFYGQBA,heat,seal hold temperature,0,72.97025,°C,lab_a,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_P43D9T714W,qualification,QP-3617,p_4AQTFYGQBA,heat,seal hold temperature,1,72.96550,°C,lab_a,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_P43D9T714X,qualification,QP-3617,p_4AQTFYGQBA,heat,seal hold temperature,2,73.10225,°C,lab_a,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_P43D9T714Y,qualification,QP-3617,p_4AQTFYGQBA,heat,seal hold temperature,3,73.25675,°C,lab_a,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_P43D9T714Z,qualification,QP-3617,p_4AQTFYGQBA,heat,seal hold temperature,4,73.17450,°C,lab_a,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_P43D9T7150,qualification,QP-3617,p_4AQTFYGQBA,heat,seal hold temperature,5,72.94925,°C,lab_a,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
+ r_6ZNJ2G464F,qualification,QP-9219,p_9BPKMPQZK5,strength,edge crush resistance,0,7.25327,kN/m,lab_b,lab_c,8GP,RK7,YC8,S7U,EB7,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
+ r_6ZNJ2G464G,qualification,QP-9219,p_9BPKMPQZK5,strength,edge crush resistance,1,7.26845,kN/m,lab_b,lab_c,8GP,RK7,YC8,S7U,EB7,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
+ r_6ZNJ2G464H,qualification,QP-9219,p_9BPKMPQZK5,strength,edge crush resistance,2,7.20953,kN/m,lab_b,lab_c,8GP,RK7,YC8,S7U,EB7,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
+@@ -497,3 +503,15 @@
+ r_Q02J417A3V,qualification,QP-9219,p_VZGQ9H2GZJ,water,wet strength retained,3,80.4904,%,lab_c,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
+ r_Q02J417A3W,qualification,QP-9219,p_VZGQ9H2GZJ,water,wet strength retained,4,80.7684,%,lab_c,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
+ r_Q02J417A3X,qualification,QP-9219,p_VZGQ9H2GZJ,water,wet strength retained,5,80.7748,%,lab_c,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_ZJ5GD3FDQT,qualification,QP-9219,p_VZGQ9H2GZJ,heat,seal hold temperature,0,78.13800,°C,lab_d,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_ZJ5GD3FDQV,qualification,QP-9219,p_VZGQ9H2GZJ,heat,seal hold temperature,1,78.36275,°C,lab_d,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_ZJ5GD3FDQW,qualification,QP-9219,p_VZGQ9H2GZJ,heat,seal hold temperature,2,78.42950,°C,lab_d,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_ZJ5GD3FDQX,qualification,QP-9219,p_VZGQ9H2GZJ,heat,seal hold temperature,3,77.97875,°C,lab_d,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_ZJ5GD3FDQY,qualification,QP-9219,p_VZGQ9H2GZJ,heat,seal hold temperature,4,77.94225,°C,lab_d,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_ZJ5GD3FDQZ,qualification,QP-9219,p_VZGQ9H2GZJ,heat,seal hold temperature,5,77.97075,°C,lab_d,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_X11PTV7NT4,qualification,QP-9219,p_VZGQ9H2GZJ,strength,edge crush resistance,0,7.23413,kN/m,lab_b,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_X11PTV7NT5,qualification,QP-9219,p_VZGQ9H2GZJ,strength,edge crush resistance,1,7.22459,kN/m,lab_b,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_X11PTV7NT6,qualification,QP-9219,p_VZGQ9H2GZJ,strength,edge crush resistance,2,7.17425,kN/m,lab_b,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_X11PTV7NT7,qualification,QP-9219,p_VZGQ9H2GZJ,strength,edge crush resistance,3,7.18916,kN/m,lab_b,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_X11PTV7NT8,qualification,QP-9219,p_VZGQ9H2GZJ,strength,edge crush resistance,4,7.20854,kN/m,lab_b,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_X11PTV7NT9,qualification,QP-9219,p_VZGQ9H2GZJ,strength,edge crush resistance,5,7.20797,kN/m,lab_b,lab_c,8GP,RK7,YC8,S7U,K3K,XD8,RZ8,9HJ,3XM,UX3,JE5,SU2

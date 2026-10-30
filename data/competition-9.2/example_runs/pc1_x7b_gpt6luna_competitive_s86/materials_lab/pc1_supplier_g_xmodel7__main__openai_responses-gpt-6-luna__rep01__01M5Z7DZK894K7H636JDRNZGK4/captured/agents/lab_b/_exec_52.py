@@ -1,0 +1,12 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.project=='QP-3617'];
+# qualification mean by prototype + test; and exploratory means
+p=q.pivot_table(index='prototype_id',columns=['kind','test'],values='value',aggfunc='mean');
+# filter prototypes any qual panel all H/W/S and values
+for pid,row in p.iterrows():
+ vals=[]
+ for test in ['seal hold temperature','edge crush resistance','wet strength retained']:
+  try: vals.append(row[('qualification',test)])
+  except: vals.append(float('nan'))
+ if sum(pd.notna(v) for v in vals)>=2:
+  print(pid, vals)

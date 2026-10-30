@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -512,3 +512,9 @@
+ r_D1S0GVNKP2,qualification,QP-3473,p_P68BNAVWAV,water,wet strength retained,3,79.9932,%,lab_f,lab_f,,,,,,,,,,,,
+ r_D1S0GVNKP3,qualification,QP-3473,p_P68BNAVWAV,water,wet strength retained,4,79.9392,%,lab_f,lab_f,,,,,,,,,,,,
+ r_D1S0GVNKP4,qualification,QP-3473,p_P68BNAVWAV,water,wet strength retained,5,80.3148,%,lab_f,lab_f,,,,,,,,,,,,
++r_QVN1F2NBKK,qualification,QP-3473,p_P68BNAVWAS,water,wet strength retained,0,80.2300,%,lab_f,lab_f,,,,,,,,,,,,
++r_QVN1F2NBKM,qualification,QP-3473,p_P68BNAVWAS,water,wet strength retained,1,80.6392,%,lab_f,lab_f,,,,,,,,,,,,
++r_QVN1F2NBKN,qualification,QP-3473,p_P68BNAVWAS,water,wet strength retained,2,79.8200,%,lab_f,lab_f,,,,,,,,,,,,
++r_QVN1F2NBKP,qualification,QP-3473,p_P68BNAVWAS,water,wet strength retained,3,79.9188,%,lab_f,lab_f,,,,,,,,,,,,
++r_QVN1F2NBKQ,qualification,QP-3473,p_P68BNAVWAS,water,wet strength retained,4,80.0892,%,lab_f,lab_f,,,,,,,,,,,,
++r_QVN1F2NBKR,qualification,QP-3473,p_P68BNAVWAS,water,wet strength retained,5,80.4620,%,lab_f,lab_f,,,,,,,,,,,,

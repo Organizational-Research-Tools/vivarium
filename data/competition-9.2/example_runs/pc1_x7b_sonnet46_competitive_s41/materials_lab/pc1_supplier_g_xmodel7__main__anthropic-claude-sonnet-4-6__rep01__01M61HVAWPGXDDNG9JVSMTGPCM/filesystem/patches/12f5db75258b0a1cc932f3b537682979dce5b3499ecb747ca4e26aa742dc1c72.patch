@@ -1,0 +1,40 @@
+--- 
++++ 
+@@ -0,0 +1,37 @@
++
++# Analyze exploratory strength results
++results = {
++    "QP-3473": {"p_02A6NY9WNM (YX8)": 7.22105, "p_02A6NY9WNP (3HW)": 7.22513, "p_02A6NY9WNR (5BU)": 7.17029},
++    "QP-7212":  {"p_BZB62TCK50 (ZW3)": 7.18007, "p_BZB62TCK52 (7TJ)": 6.49160},
++    "QP-3089":  {"p_2058095Z34 (main)": 7.17254, "p_2058095Z36 (backup)": 7.15139},
++    "QP-4476":  {"p_XV6JQRAVAS (P2G)": 4.46966, "p_XV6JQRAVAV (JA8/YX8)": 6.57167},
++    "QP-6843":  {"p_AJDCM7NSKX (YX8)": 5.25887, "p_AJDCM7NSKZ (3HW)": 5.81084},
++    "QP-6572":  {"p_CCG0G7KHZV": 5.03096},
++    "QP-8607":  {"p_HJ0BE1DW9Z": 6.16922},
++    "QP-7604":  {"p_VREAS4CDW2": 6.94808},
++    "QP-8265":  {"p_VRARQQZ7AR": 7.12601},
++}
++
++thresh = 7.1
++print(f"Strength threshold: {thresh} kN/m")
++print()
++for proj, recipes in results.items():
++    print(f"  {proj}:")
++    for name, val in recipes.items():
++        status = "✓ PASS" if val >= thresh else f"✗ FAIL (gap={val-thresh:.3f})"
++        print(f"    {name}: {val:.3f} {status}")
++    print()
++
++print("SUMMARY:")
++print("PASS strength: QP-3473 (all 3), QP-7212 (ZW3 only), QP-3089 (both), QP-8265 (marginal)")
++print("FAIL strength: QP-4476 (both recipes), QP-6843 (both), QP-6572, QP-8607, QP-7604")
++print()
++print("KEY OBSERVATION: Same recipe gives VERY different strength across projects!")
++print("  QP-3473: 7.22  |  QP-4476: 4.47 (same recipe!)")
++print("  → Projects have project-specific effects; recipes don't transfer directly")
++print()
++print("PRIORITY ACTIONS:")
++print("1. Run strength panels on QP-3473/p_02A6NY9WNM, QP-7212/p_BZB62TCK50, QP-3089/p_2058095Z34")
++print("2. Share compositions with heat+water labs for panel runs")
++print("3. Explore new recipes for QP-4476, QP-6843, QP-6572 (PL-57 problem!)")
++print("4. Explore QP-8607, QP-7604 more")

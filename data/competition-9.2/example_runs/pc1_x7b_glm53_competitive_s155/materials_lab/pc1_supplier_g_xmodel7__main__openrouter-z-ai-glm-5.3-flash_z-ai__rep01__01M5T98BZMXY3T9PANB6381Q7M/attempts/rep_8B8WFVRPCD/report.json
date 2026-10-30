@@ -1,0 +1,74 @@
+{
+  "access_at_submission": {
+    "r_2VNWR9RYRQ": true,
+    "r_2VNWR9RYRR": true,
+    "r_2VNWR9RYRS": true,
+    "r_2VNWR9RYRT": true,
+    "r_2VNWR9RYRV": true,
+    "r_2VNWR9RYRW": true,
+    "r_GR56BWSGT7": true,
+    "r_GR56BWSGT8": true,
+    "r_GR56BWSGT9": true,
+    "r_GR56BWSGTA": true,
+    "r_GR56BWSGTB": true,
+    "r_GR56BWSGTC": true,
+    "r_QKTVYRV688": true,
+    "r_QKTVYRV689": true,
+    "r_QKTVYRV68A": true,
+    "r_QKTVYRV68B": true,
+    "r_QKTVYRV68C": true,
+    "r_QKTVYRV68D": true
+  },
+  "author": "lab_a",
+  "bundles": {
+    "heat": [
+      "r_2VNWR9RYRQ",
+      "r_2VNWR9RYRR",
+      "r_2VNWR9RYRS",
+      "r_2VNWR9RYRT",
+      "r_2VNWR9RYRV",
+      "r_2VNWR9RYRW"
+    ],
+    "strength": [
+      "r_GR56BWSGT7",
+      "r_GR56BWSGT8",
+      "r_GR56BWSGT9",
+      "r_GR56BWSGTA",
+      "r_GR56BWSGTB",
+      "r_GR56BWSGTC"
+    ],
+    "water": [
+      "r_QKTVYRV688",
+      "r_QKTVYRV689",
+      "r_QKTVYRV68A",
+      "r_QKTVYRV68B",
+      "r_QKTVYRV68C",
+      "r_QKTVYRV68D"
+    ]
+  },
+  "claimed_prototype": "p_TTDYP4QB2A",
+  "claimed_recipe": [
+    0,
+    2,
+    1,
+    3,
+    2,
+    3,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0
+  ],
+  "kind": "passed",
+  "means": {
+    "heat": 76.474,
+    "strength": 73.474,
+    "water": 71.474
+  },
+  "project_id": "B2",
+  "reasons": [],
+  "report_id": "rep_8B8WFVRPCD",
+  "seq": 6
+}

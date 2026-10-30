@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -743,3 +743,4 @@
+ r_EZTF1NBG40,qualification,QP-6879,p_W3B2SY0Z6A,strength,edge crush resistance,3,7.19606,kN/m,lab_e,lab_a,,,,,,,,,,,,
+ r_EZTF1NBG41,qualification,QP-6879,p_W3B2SY0Z6A,strength,edge crush resistance,4,7.19324,kN/m,lab_e,lab_a,,,,,,,,,,,,
+ r_EZTF1NBG42,qualification,QP-6879,p_W3B2SY0Z6A,strength,edge crush resistance,5,7.20017,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_8XGZH7RGSY,exploratory,QP-6879,p_W3B2SY0Z6A,water,wet strength retained,,79.9028,%,lab_c,lab_a,,,,,,,,,,,,

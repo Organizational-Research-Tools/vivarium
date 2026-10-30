@@ -1,0 +1,11 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+g = df.groupby(['prototype_id','project','test']).agg(mean=('value','mean'), n=('value','count')).reset_index()
+p = g.pivot_table(index=['prototype_id','project'], columns='test', values='mean')
+rows = df.drop_duplicates('prototype_id').set_index('prototype_id')
+cols = ['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+out = p.join(rows[cols])
+# recipes with heat>=77.5 and water>=78
+good = out[(out.get('seal hold temperature')>=77.3) & (out.get('wet strength retained')>=78)]
+print(good[[c for c in ['seal hold temperature','edge crush resistance','wet strength retained'] if c in good]] .to_string())
+print(good[cols].to_string())

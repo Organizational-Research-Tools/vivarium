@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -436,3 +436,4 @@
+ r_EA7VNB8YBT,exploratory,QP-4476,p_8JN5B4DPHJ,strength,edge crush resistance,,5.25209,kN/m,lab_b,lab_a,,,,,,,,,,,,
+ r_EA7VNB8YBV,exploratory,QP-4476,p_8JN5B4DPHM,strength,edge crush resistance,,6.46751,kN/m,lab_b,lab_a,,,,,,,,,,,,
+ r_EA7VNB8YBW,exploratory,QP-4476,p_1HDVXQ4N6A,strength,edge crush resistance,,6.53735,kN/m,lab_b,lab_c,JA8,3HW,8BB,QJ2,6FA,44B,4QB,2BR,N4L,7KL,DL8,3N8
++r_00CX4BK2ME,exploratory,QP-4476,p_CJXWSWQ72F,strength,edge crush resistance,,6.59375,kN/m,lab_b,lab_b,JA8,YX8,M2P,QJ2,6FA,L6C,4QB,2BR,N4L,7KL,DL8,YV2

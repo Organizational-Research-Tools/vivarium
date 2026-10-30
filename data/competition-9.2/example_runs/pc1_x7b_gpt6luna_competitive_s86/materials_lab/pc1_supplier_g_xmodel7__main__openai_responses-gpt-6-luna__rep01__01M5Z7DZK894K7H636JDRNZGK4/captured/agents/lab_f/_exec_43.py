@@ -1,0 +1,5 @@
+import pandas as pd
+x=pd.read_csv('records.csv');
+for p in ['p_W3C23XARE8','p_W3C23XAREG','p_W3C23XARER','p_W3C23XARDY']:
+ d=x[x.prototype_id==p]; print(p,len(d));
+ if len(d): print(d[['project','instrument','test','value','measured_by']].to_string(index=False)); print(d[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].drop_duplicates().to_string(index=False))

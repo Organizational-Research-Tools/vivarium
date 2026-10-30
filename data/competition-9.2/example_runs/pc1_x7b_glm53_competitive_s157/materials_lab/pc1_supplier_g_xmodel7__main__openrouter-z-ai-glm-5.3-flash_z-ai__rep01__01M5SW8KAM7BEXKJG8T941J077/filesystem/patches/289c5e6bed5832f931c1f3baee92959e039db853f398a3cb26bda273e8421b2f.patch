@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -401,3 +401,9 @@
+ r_CATP4SFZ78,qualification,QP-1586,p_KV3GM10NKV,strength,edge crush resistance,3,7.17539,kN/m,lab_e,lab_d,,,,,,,,,,,,
+ r_CATP4SFZ79,qualification,QP-1586,p_KV3GM10NKV,strength,edge crush resistance,4,7.21256,kN/m,lab_e,lab_d,,,,,,,,,,,,
+ r_CATP4SFZ7A,qualification,QP-1586,p_KV3GM10NKV,strength,edge crush resistance,5,7.22420,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_4NV332QFT0,exploratory,QP-5653,p_C9N9H45C3W,strength,edge crush resistance,,7.14620,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_4NV332QFT1,exploratory,QP-5653,p_C9N9H45C3W,strength,edge crush resistance,,7.13492,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_4NV332QFT2,exploratory,QP-5653,p_B45PPFWV3C,strength,edge crush resistance,,7.11818,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_4NV332QFT3,exploratory,QP-5653,p_B45PPFWV3C,strength,edge crush resistance,,7.13111,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_4NV332QFT4,exploratory,QP-5653,p_C9N9H45C42,strength,edge crush resistance,,7.17176,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_4NV332QFT5,exploratory,QP-5653,p_C9N9H45C42,strength,edge crush resistance,,7.16753,kN/m,lab_e,lab_a,,,,,,,,,,,,

@@ -1,0 +1,45 @@
+--- 
++++ 
+@@ -0,0 +1,42 @@
++
++import pandas as pd
++
++df = pd.read_csv('records.csv')
++
++modules = ['base_sheet', 'secondary_sheet', 'binder_system', 'additive_package_1',
++           'additive_package_2', 'additive_package_3', 'process_profile_1',
++           'process_profile_2', 'process_profile_3', 'surface_treatment',
++           'joint_system', 'conditioning_step']
++
++# Get recipe composition for each prototype
++recipe_comp = df.groupby('prototype_id')[modules].first().dropna(how='all')
++
++# Key prototypes per recipe group
++recipe_groups = {
++    "QP-4476-A": ["p_3M6XTZNJH7", "p_116KYTE75G", "p_116KYTE75S"],
++    "QP-4476-B(GG7)": ["p_Q15KX5S0ZB"],
++    "QP-6843-A": ["p_BNV031NMS0", "p_FHEAB08WKF", "p_FHEAB08WKR"],
++    "QP-6843-B": ["p_KM74HN14JP", "p_709M2WBJ6B", "p_S88GZKQT24"],
++    "QP-3473-A(GG7)": ["p_0SM1T5W2MM", "p_0SM1T5W2MZ", "p_YWF2FP1GRJ"],
++    "QP-3473-B": ["p_EPVZ9RFXEN", "p_EPVZ9RFXEY", "p_PH32D2B0XS"],
++    "QP-3473-C": ["p_W26PZ2P9TS", "p_5NEMM18WK4", "p_5NEMM18WKD"],
++    "QP-7212-A": ["p_JWY0AKX2JN", "p_4GSHAV07RH", "p_4GSHAV07RT"],
++    "QP-7212-B": ["p_62M6F55F9E", "p_C0Q8ZSBFW5", "p_C0Q8ZSBFWE"],
++    "QP-7212-C": ["p_5ABZWZZPBZ", "p_AAY9VGT90M", "p_AAY9VGT90X"],
++    "QP-3089-A": ["p_Q415FNG0HY", "p_5DNPXA0CHC", "p_5DNPXA0CHN"],
++    "QP-3089-B(GG7)": ["p_Q63BGDH256"],
++    "QP-8265-A": ["p_PR6XQ3SNQH", "p_PR6XQ3SNQT", "p_PR6XQ3SNR3"],
++}
++
++for grp_name, pids in recipe_groups.items():
++    comp = None
++    for pid in pids:
++        if pid in recipe_comp.index:
++            comp = recipe_comp.loc[pid]
++            break
++    print(f"\n{grp_name}:")
++    if comp is not None:
++        for m in modules:
++            print(f"  {m}: {comp[m]}")
++    else:
++        print("  (no composition data)")

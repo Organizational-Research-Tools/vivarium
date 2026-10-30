@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import help, gh, howto %}
+{% from "_story_item.html" import story_item, story_css %}
+{% block title %}story — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / story</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "story") }}
+
+{% call howto() %}
+  <p>Every item is one recorded event in the order the single writer appended it, shown in the agent's own words. {% if has_board %}The board's posts are the spine: a post went to every other active agent; a note went to one;{% else %}This run had no board, so the first level shows milestones, lifecycle and problems only; a note went to one role;{% endif %} a handoff passed a formal work product to one role and appears with the notes. 'Says' is the narration the model produced with its actions; thinking is retained reasoning text, which is model output, not access to its computation. Notices are the environment's messages to one role, shown with the notes. Milestones are the task's recorded turning points and case deadlines that lapsed; day openings and context compaction (earlier material summarized or dropped from what a model sees) are marked in line. Problems are platform failures, timeouts and refused commits, shown at every depth; a task's own refusals, such as the lab interface declining a measurement request, appear as that task's exchanges or milestones. The agent filter keeps {% if has_board %}the shared board plus {% endif %}everything that touched that agent; it does not reconstruct what the agent had read.</p>
+{% endcall %}
+
+{{ story_css() }}
+
+<div class="card">
+  <form method="get" class="filters" style="margin-bottom:0.3rem">
+    {% for d in depths %}<a href="?depth={{ d }}{% if agent %}&agent={{ agent }}{% endif %}" class="{{ 'on' if d == depth }}" style="{% if d == depth %}font-weight:700{% endif %}">{{ depth_label(d, has_board) }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
+    <span style="margin-left:1rem"></span>
+    <select name="agent" onchange="this.form.submit()">
+      <option value="">everyone</option>
+      {% for a in agents %}<option value="{{ a }}" {% if a == agent %}selected{% endif %}>{{ a }}'s story</option>{% endfor %}
+    </select>
+    <input type="hidden" name="depth" value="{{ depth }}">
+    <span class="dim">{{ n_items }} item{{ "s" if n_items != 1 }}{% if pages > 1 %} · page {{ page }}/{{ pages }}{% endif %}
+      {%- for k, n in kinds.items() %} · {{ n }} {{ k }}{% endfor %}</span>
+  </form>
+  <p class="dim" style="margin:0">click a position to open the record · <a href="/run/{{ run_ref }}/comms">counts and threads</a></p>
+</div>
+
+<div class="story">
+{% for it in items %}
+  {{ story_item(it, run_ref, aslot) }}
+{% else %}
+  <p class="dim">Nothing to show at this depth{% if agent %} for {{ agent }}{% endif %}.</p>
+{% endfor %}
+</div>
+
+{% if pages > 1 %}
+<p style="margin-top:0.8rem">
+  {% for pg in range(1, pages + 1) %}{% if pg == page %}<strong>{{ pg }}</strong>{% else %}<a href="?depth={{ depth }}&page={{ pg }}{% if agent %}&agent={{ agent }}{% endif %}">{{ pg }}</a>{% endif %} {% endfor %}
+</p>
+{% endif %}
+
+{% endblock %}

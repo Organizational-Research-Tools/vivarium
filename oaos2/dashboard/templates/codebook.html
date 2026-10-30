@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% from "_chip.html" import help, howto %}
+{% block title %}codebook — oaos2{% endblock %}
+{% block crumb %}<span class="root">codebook</span>{% endblock %}
+{% block content %}
+
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem">Codebook</h1>
+{% call howto() %}
+  <p>Pack codebooks live in <code>library/tasks/&lt;pack&gt;/codebook.yaml</code> (committed, hashed onto every link); your own lenses in <code>runs/.dashboard/label_schemas.json</code>. <a href="/annotations">annotations →</a></p>
+  <p><strong>Codebook.</strong> Track B: the reader's lenses as versioned data — definitions, inclusion and exclusion rules, origin, the condition a deductive code is expected under, exemplars, history. A changed lens is a new ref.</p>
+{% endcall %}
+
+{% for book in books %}
+<div class="card">
+  <h2>{{ book.title }} <span class="dim" style="font-weight:400">· {{ book.pack_id }} · {{ book.codes|length }} codes{% if book.sha256 %} · {{ book.sha256[:19] }}…{% endif %}</span></h2>
+  {% if book.error %}<div class="banner critical"><strong>Codebook failed to load.</strong> {{ book.error }}</div>{% endif %}
+  {% set ns = namespace(last="") %}
+  {% for c in book.codes %}
+    {% if c.namespace != ns.last %}{% set ns.last = c.namespace %}<h3 style="font-size:13px; margin:0.8rem 0 0.2rem"><code>{{ c.namespace }}</code></h3>{% endif %}
+    <div style="border-top:1px solid var(--hairline); padding:0.4rem 0">
+      <p style="margin:0"><strong><code>{{ c.ref }}</code></strong> <span class="chip">{{ c.arity }}</span> <span class="chip">{{ c.origin }}</span>
+        {% if c.predicate %}<span class="chip" title="expected under this condition (design.* predicate)">expected under: {% for k, v in c.predicate.items() %}{{ k.replace("design.cell.", "") }} = {{ v if v is string else v|join(" | ") }}{% if not loop.last %}, {% endif %}{% endfor %}</span>{% endif %}</p>
+      <p style="margin:0.2rem 0">{{ c.definition }}</p>
+      {% if c.include %}<p class="dim" style="margin:0.1rem 0">include: {{ c.include|join(" · ") }}</p>{% endif %}
+      {% if c.exclude %}<p class="dim" style="margin:0.1rem 0">exclude: {{ c.exclude|join(" · ") }}</p>{% endif %}
+      {% if c.exemplars %}<p class="dim" style="margin:0.1rem 0">exemplars: {% for x in c.exemplars %}<code>{{ x }}</code> {% endfor %}</p>{% endif %}
+      {% if c.history %}<p class="dim" style="margin:0.1rem 0; font-size:12px">history: {% for h in c.history %}{{ h.version }} {{ h.date }} — {{ h.note }}{% if not loop.last %}; {% endif %}{% endfor %}</p>{% endif %}
+    </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="card"><p class="dim">no pack codebooks in the library</p></div>
+{% endfor %}
+
+<div class="card">
+  <h2>Researcher lenses ({{ mine|length }})</h2>
+  {% for s in mine %}<p style="margin:0.2rem 0"><code>{{ s.label_schema_ref }}</code> · {{ s.namespace }} · {{ s.arity }}{% if s.description %} — {{ s.description }}{% endif %}</p>{% else %}<p class="dim">none yet — create one on the <a href="/annotations">annotations</a> page</p>{% endfor %}
+</div>
+
+{% endblock %}

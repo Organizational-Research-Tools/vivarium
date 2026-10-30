@@ -1,0 +1,11 @@
+
+import pandas as pd
+
+df = pd.read_csv('records.csv')
+print("Tests available:", df['test'].unique())
+print("Instruments:", df['instrument'].unique())
+water = df[df['instrument']=='water'].copy()
+print(f"\n{len(water)} water records")
+print(water[['project','prototype_id','joint_system','process_profile_3',
+             'additive_package_3','additive_package_2','additive_package_1',
+             'conditioning_step','value']].dropna(subset=['joint_system']).to_string())

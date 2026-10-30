@@ -1,0 +1,11 @@
+import pandas as pd
+r=pd.read_csv('records.csv')
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+# each recipe/project/test summarized, plus recipes across IDs
+s=r.groupby(['project','prototype_id','instrument','kind'])['value'].agg(['count','mean']).reset_index()
+for p in ['QP-3617','QP-6879','QP-8807','QP-9219','QP-9980']:
+ print('\n##',p)
+ z=r[r.project==p].groupby(['prototype_id'])[mods].first().reset_index()
+ mm=s[s.project==p].pivot_table(index='prototype_id',columns='instrument',values='mean',aggfunc='first')
+ x=z.merge(mm,on='prototype_id')
+ print(x.to_string(index=False))

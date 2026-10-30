@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -277,3 +277,14 @@
+ r_8QYAR6YCSJ,exploratory,QP-6820,p_H5JEPY1ZY2,water,wet strength retained,,77.8300,%,lab_c,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,5J9,BX9,FA3,9VC
+ r_8QYAR6YCSK,exploratory,QP-6820,p_H5JEPY1ZY4,water,wet strength retained,,77.3732,%,lab_c,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,5J9,9B8,FA3,3DC
+ r_8QYAR6YCSM,exploratory,QP-6820,p_H5JEPY1ZY6,water,wet strength retained,,77.7240,%,lab_c,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,5J9,9B8,G7L,9VC
++r_Y1A82RZCW4,exploratory,QP-6820,p_7JX0SVYP0A,strength,edge crush resistance,,7.16669,kN/m,lab_b,lab_d,NF2,YH6,KX7,QE3,E8S,5B8,RF3,5UV,5J9,9B8,FA3,9VC
++r_Y1A82RZCW5,exploratory,QP-6820,p_H5JEPY1ZY0,strength,edge crush resistance,,6.59444,kN/m,lab_b,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,A7P,9B8,FA3,9VC
++r_Y1A82RZCW6,exploratory,QP-6820,p_H5JEPY1ZY2,strength,edge crush resistance,,7.23317,kN/m,lab_b,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,5J9,BX9,FA3,9VC
++r_Y1A82RZCW7,exploratory,QP-6820,p_H5JEPY1ZY4,strength,edge crush resistance,,6.55316,kN/m,lab_b,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,5J9,9B8,FA3,3DC
++r_Y1A82RZCW8,exploratory,QP-6820,p_H5JEPY1ZY6,strength,edge crush resistance,,7.21154,kN/m,lab_b,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,5J9,9B8,G7L,9VC
++r_3VBDHBMBFZ,exploratory,QP-6820,p_H5JEPY1ZY2,water,wet strength retained,,77.7644,%,lab_c,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,5J9,BX9,FA3,9VC
++r_3VBDHBMBG0,exploratory,QP-6820,p_H5JEPY1ZY2,water,wet strength retained,,77.9456,%,lab_c,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,5J9,BX9,FA3,9VC
++r_3VBDHBMBG1,exploratory,QP-6820,p_7JX0SVYP0A,water,wet strength retained,,78.6216,%,lab_c,lab_d,NF2,YH6,KX7,QE3,E8S,5B8,RF3,5UV,5J9,9B8,FA3,9VC
++r_3VBDHBMBG2,exploratory,QP-6820,p_7JX0SVYP0A,water,wet strength retained,,78.3200,%,lab_c,lab_d,NF2,YH6,KX7,QE3,E8S,5B8,RF3,5UV,5J9,9B8,FA3,9VC
++r_47XY6RK214,exploratory,QP-6820,p_H5JEPY1ZY6,water,wet strength retained,,77.7508,%,lab_c,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,5J9,9B8,G7L,9VC
++r_47XY6RK215,exploratory,QP-6820,p_H5JEPY1ZY6,water,wet strength retained,,78.3188,%,lab_c,lab_d,NF2,YH6,KX7,QE3,E8S,8P4,RF3,5UV,5J9,9B8,G7L,9VC

@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -498,3 +498,4 @@
+ r_DWD2KH1WJD,exploratory,QP-1466,p_83YB3KA1QC,strength,edge crush resistance,,7.14398,kN/m,lab_e,lab_e,SM9,3XR,DQ9,M5L,Y6H,92P,3RB,GL8,49R,RQ5,8K5,23Y
+ r_FKE3DPC06H,exploratory,QP-1466,p_83YB3KA1QC,water,wet strength retained,,71.3752,%,lab_c,lab_e,SM9,3XR,DQ9,M5L,Y6H,92P,3RB,GL8,49R,RQ5,8K5,23Y
+ r_CZVJ27ZWWB,exploratory,QP-1466,p_83YB3KA1QC,water,wet strength retained,,71.0780,%,lab_c,lab_e,SM9,3XR,DQ9,M5L,Y6H,92P,3RB,GL8,49R,RQ5,8K5,23Y
++r_S17Q2DY2DX,exploratory,QP-1466,p_83YB3KA1QC,heat,seal hold temperature,,73.23575,°C,lab_a,lab_e,SM9,3XR,DQ9,M5L,Y6H,92P,3RB,GL8,49R,RQ5,8K5,23Y

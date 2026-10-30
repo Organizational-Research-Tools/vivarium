@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -863,3 +863,15 @@
+ r_VV3845KP4W,qualification,QP-5174,p_JP6EPY2552,water,wet strength retained,3,76.2912,%,lab_c,lab_a,,,,,,,,,,,,
+ r_VV3845KP4X,qualification,QP-5174,p_JP6EPY2552,water,wet strength retained,4,77.8628,%,lab_c,lab_a,,,,,,,,,,,,
+ r_VV3845KP4Y,qualification,QP-5174,p_JP6EPY2552,water,wet strength retained,5,79.5000,%,lab_c,lab_a,,,,,,,,,,,,
++r_6NTF3BXX2M,qualification,QP-3617,p_KBABVTJCWW,water,wet strength retained,0,78.7740,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_6NTF3BXX2N,qualification,QP-3617,p_KBABVTJCWW,water,wet strength retained,1,78.9420,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_6NTF3BXX2P,qualification,QP-3617,p_KBABVTJCWW,water,wet strength retained,2,79.0672,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_6NTF3BXX2Q,qualification,QP-3617,p_KBABVTJCWW,water,wet strength retained,3,79.1756,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_6NTF3BXX2R,qualification,QP-3617,p_KBABVTJCWW,water,wet strength retained,4,79.6100,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_6NTF3BXX2S,qualification,QP-3617,p_KBABVTJCWW,water,wet strength retained,5,79.5160,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,T6A,4ZD,YT2
++r_6NTF3BXX2T,qualification,QP-3617,p_KBABVTJCX0,water,wet strength retained,0,78.9912,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_6NTF3BXX2V,qualification,QP-3617,p_KBABVTJCX0,water,wet strength retained,1,79.2868,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_6NTF3BXX2W,qualification,QP-3617,p_KBABVTJCX0,water,wet strength retained,2,79.5592,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_6NTF3BXX2X,qualification,QP-3617,p_KBABVTJCX0,water,wet strength retained,3,79.4872,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_6NTF3BXX2Y,qualification,QP-3617,p_KBABVTJCX0,water,wet strength retained,4,78.9684,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2
++r_6NTF3BXX2Z,qualification,QP-3617,p_KBABVTJCX0,water,wet strength retained,5,79.1544,%,lab_c,lab_d,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,L2J,4ZD,YT2

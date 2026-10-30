@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% from "_chip.html" import help, howto %}
+{% block title %}{{ experiment_id }} · cases — oaos2{% endblock %}
+{% block crumb %}<span class="root"><a href="/experiment/{{ experiment_id }}">experiment / {{ experiment_id }}</a> / cases</span>{% endblock %}
+{% block content %}
+
+
+<style>
+  .mx td.c { text-align: center; font-family: ui-monospace, Menlo, monospace; white-space: nowrap; padding: 0.2rem 0.3rem; }
+  .mx td.c a { color: var(--ink); }
+  .mx td.c.att a { color: var(--critical); font-weight: 700; }
+  .mx td.c .r { font-size: 10px; color: var(--good); vertical-align: super; }
+  .mx td.c .k { font-size: 10px; color: var(--link); vertical-align: super; }
+  .mx th.col { writing-mode: vertical-rl; transform: rotate(180deg); text-transform: none; letter-spacing: 0; font-size: 11px; white-space: nowrap; max-height: 9rem; }
+</style>
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem">{{ experiment_id }} — items across cells</h1>
+<p class="dim" style="margin:0 0 0.6rem">
+  {{ m.item_ids|length }} items × {{ m.cells|length }} cells · columns by {% if by == "rep" %}<strong>replicate</strong> (paired arms adjacent) · <a href="?by=arm{{ '&mode=blind' if blind }}">by arm</a>{% else %}<strong>arm</strong> · <a href="?by=rep{{ '&mode=blind' if blind }}">by replicate</a>{% endif %}
+  · {% if blind %}<strong>blind</strong> (coverage only) · <a href="?by={{ by }}">show outcomes</a>{% else %}outcomes shown · <a href="?by={{ by }}&mode=blind">blind</a>{% endif %}
+  {% if m.n_rendered %}· {{ m.n_rendered }} report(s) re-rendered at HEAD{% endif %}
+</p>
+{% call howto() %}
+  {% if not blind %}<p><strong>Work queue.</strong> Items whose scorer outcome needs a human reading (wrong choice, undetermined, unresolved, dangling repair, covered but unhandled) and that no one has marked as read yet.</p>{% endif %}
+  <p><strong>Matrix.</strong> One row per item, one column per cell. Glyph = the frozen scorer's outcome; superscript r = read by a human, k = coded. Red = needs reading. Click a cell to open the dossier.</p>
+{% endcall %}
+
+{% if not blind %}
+<div class="card">
+  <h2>Work queue ({{ m.queue|length }})</h2>
+  {% if m.queue %}
+  <table><thead><tr><th>item</th><th>cell</th><th>outcome</th><th>verdict</th></tr></thead><tbody>
+  {% for q in m.queue[:200] %}
+    <tr><td><a href="/run/{{ q.run_ref }}/case/{{ q.item_id }}">{{ q.item_id }}</a></td><td><a href="/run/{{ q.run_ref }}"><code>{{ q.run_ref.rsplit("/", 1)[-1]|shortid(40) }}</code></a></td><td>{{ q.outcome }}</td><td>{{ q.verdict or "—" }}{% if q.verdict_source %} <span class="dim">({{ q.verdict_source }})</span>{% endif %}</td></tr>
+  {% endfor %}
+  </tbody></table>
+  {% if m.queue|length > 200 %}<p class="dim">first 200 of {{ m.queue|length }}</p>{% endif %}
+  {% else %}<p class="dim">nothing waiting — every attention item has been read</p>{% endif %}
+</div>
+{% endif %}
+
+<div class="card">
+  <h2>Matrix</h2>
+  <div style="overflow-x:auto">
+  <table class="mx">
+    <thead><tr><th>item</th>{% for c in m.cells %}<th class="col" title="{{ c.run_id }}">{{ c.org|replace("budget_execution_", "")|replace("_clocked", "") }} · {{ (c.tier or "")[:6] }} · r{{ c.rep }}</th>{% endfor %}<th class="num">attn</th><th class="num">read</th></tr></thead>
+    <tbody>
+    {% for g in m.grid %}
+      <tr><td><code>{{ g.item_id }}</code></td>
+      {% for e in g.cells %}
+        <td class="c {{ 'att' if (e.attention and not blind) }}"><a href="/run/{{ e.run_ref }}/case/{{ g.item_id }}{{ '' if blind else '?mode=open' }}" title="{% if not blind %}{{ e.outcome or '' }}{% if e.verdict %} · {{ e.verdict }}{% endif %}{% endif %}">{% if blind %}{{ "·" if e.outcome else "" }}{% else %}{{ e.glyph }}{% endif %}</a>{% if e.read %}<span class="r">r</span>{% endif %}{% if e.coded %}<span class="k">k</span>{% endif %}</td>
+      {% endfor %}
+      <td class="num">{{ g.n_attention if not blind else "" }}</td><td class="num">{{ g.n_read }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% if not blind %}<p class="legend" style="margin-top:0.4rem">{% for k, v in m.glyphs.items() %}<span><code>{{ v }}</code> {{ k }}</span>{% endfor %}</p>{% endif %}
+</div>
+
+<div class="card">
+  <h2>{{ help("Coverage by cell", "How much of each cell a human has read or coded — the record behind 'did you read the transcripts'") }}</h2>
+  <table><thead><tr><th>cell</th><th class="num">items</th>{% if not blind %}<th class="num">attention</th><th class="num">retained</th>{% endif %}<th class="num">read</th><th class="num">coded</th></tr></thead><tbody>
+  {% for c in m.per_cell %}
+    <tr><td><a href="/run/{{ c.run_ref }}/cases">{{ c.org }} · {{ c.tier }} · rep{{ c.rep }}</a>{% if c.report_source in ("rendered", "store") %}<span class="dim" title="report re-rendered at HEAD">*</span>{% endif %}</td>
+        <td class="num">{{ c.n_items }}</td>{% if not blind %}<td class="num">{{ c.n_attention }}</td><td class="num">{{ "%.1f%%"|format(c.retained * 100) if c.retained is not none else "—" }}</td>{% endif %}
+        <td class="num">{{ c.n_read }}</td><td class="num">{{ c.n_coded }}</td></tr>
+  {% endfor %}
+  </tbody></table>
+</div>
+
+{% endblock %}

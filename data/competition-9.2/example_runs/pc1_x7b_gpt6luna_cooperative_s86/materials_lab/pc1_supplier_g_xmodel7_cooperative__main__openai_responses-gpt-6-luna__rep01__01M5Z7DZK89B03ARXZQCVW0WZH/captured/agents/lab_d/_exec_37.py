@@ -1,0 +1,4 @@
+import pandas as pd
+r=pd.read_csv('records.csv');
+for pid in ['p_NQYNDKZ3CG','p_RP6VC22H2M','p_M1K5K43JQG']:
+ print(pid); q=r[r.prototype_id==pid]; print(q[['project','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].drop_duplicates().to_string(index=False)); print(q.groupby('test').value.mean())

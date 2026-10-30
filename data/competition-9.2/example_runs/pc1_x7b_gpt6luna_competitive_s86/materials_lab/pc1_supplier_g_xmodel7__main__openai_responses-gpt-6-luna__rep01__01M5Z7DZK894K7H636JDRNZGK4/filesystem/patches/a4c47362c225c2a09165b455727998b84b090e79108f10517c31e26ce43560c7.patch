@@ -1,0 +1,6 @@
+--- 
++++ 
+@@ -0,0 +1,3 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); s=x[(x.test=='edge crush resistance') & (x.kind=='qualification')].groupby(['project','prototype_id','measured_by']).value.agg(['mean','count']).reset_index(); print(s[s['count']==6].sort_values('mean',ascending=False).head(40).to_string(index=False)); print('\nExploratory latest/high')
++e=x[(x.test=='edge crush resistance') & (x.kind=='exploratory')].groupby(['project','prototype_id','measured_by']).value.agg(['mean','count']).reset_index(); print(e.sort_values('mean',ascending=False).head(30).to_string(index=False))

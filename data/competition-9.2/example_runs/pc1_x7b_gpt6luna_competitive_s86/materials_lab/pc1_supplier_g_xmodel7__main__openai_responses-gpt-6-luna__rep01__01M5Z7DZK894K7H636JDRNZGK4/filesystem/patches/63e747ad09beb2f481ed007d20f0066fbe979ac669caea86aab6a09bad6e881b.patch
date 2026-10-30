@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++y=x[x.prototype_id=='p_K6ZM59ZMJT']
++print(y[['record_id','kind','instrument','value','measured_by']].to_string(index=False))
++print('\nmeans',y.groupby(['instrument','kind']).value.mean())

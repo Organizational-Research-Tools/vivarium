@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -581,3 +581,5 @@
+ r_EM83S687GN,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,3,78.5996,%,lab_c,lab_a,,,,,,,,,,,,
+ r_EM83S687GP,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,4,78.5836,%,lab_c,lab_a,,,,,,,,,,,,
+ r_EM83S687GQ,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,5,78.6164,%,lab_c,lab_a,,,,,,,,,,,,
++r_R52NZV235T,exploratory,QP-2342,p_PSG59ZNNC0,water,wet strength retained,,79.0580,%,lab_c,lab_e,,,,,,,,,,,,
++r_R52NZV235V,exploratory,QP-2342,p_PSG59ZNNC0,water,wet strength retained,,79.7816,%,lab_c,lab_e,,,,,,,,,,,,

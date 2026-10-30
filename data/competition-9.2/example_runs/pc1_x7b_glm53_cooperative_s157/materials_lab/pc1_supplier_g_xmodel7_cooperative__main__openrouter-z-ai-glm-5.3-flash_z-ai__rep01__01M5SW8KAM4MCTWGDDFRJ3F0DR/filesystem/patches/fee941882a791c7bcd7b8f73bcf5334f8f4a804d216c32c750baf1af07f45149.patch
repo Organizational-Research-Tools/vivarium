@@ -1,0 +1,4 @@
+--- 
++++ 
+@@ -0,0 +1 @@
++import pandas as pd; df=pd.read_csv('records.csv'); print(df.test.value_counts()); print(df.project.value_counts()); print(df.measured_by.value_counts()); print(df.groupby('test').value.describe())

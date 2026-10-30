@@ -1,0 +1,13 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+print(df['project'].unique())
+print(df[df['project'].astype(str).str.contains('4757|7006|4152')]['project'].unique())
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+for proj in ['QP-4757','QP-7006','QP-4152']:
+    q=df[df['project']==proj]
+    print('===',proj,len(q))
+    for pid,sub in q.groupby('prototype_id'):
+        quals={t:round(g.value.mean(),2) for t,g in sub[sub.kind=='qualification'].groupby('test')}
+        exps={t:round(g.value.mean(),2) for t,g in sub[sub.kind!='qualification'].groupby('test')}
+        comp=tuple(sub[mods].dropna(axis=1,how='all').iloc[0].dropna())
+        print(pid,comp,'QUAL',quals,'EXP',exps)

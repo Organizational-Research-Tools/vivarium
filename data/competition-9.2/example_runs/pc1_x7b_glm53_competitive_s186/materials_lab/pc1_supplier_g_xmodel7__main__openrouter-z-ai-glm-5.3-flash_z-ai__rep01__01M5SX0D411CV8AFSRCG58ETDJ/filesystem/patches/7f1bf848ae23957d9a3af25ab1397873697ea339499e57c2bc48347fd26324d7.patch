@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++# rows from panel firing messages shared but maybe not in my csv; check all recent rows mentioning r_0RR, r_KM6, r_QG6
++import re
++for pat in ['0RR2','KM6B','QG6P']:
++    print(pat, df[df.record_id.str.contains(pat, na=False)][['record_id','prototype_id','test','value','measured_by']].to_string())
++# anything heat or water qualification from other labs recent
++print(df[(df.kind=='qualification') & (df.test!='edge crush resistance') & (df.measured_by.isin(['lab_a','lab_d','lab_c','lab_f']))][['record_id','prototype_id','test','value','measured_by']].tail(40).to_string())

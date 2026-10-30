@@ -1,0 +1,7 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for pid in ['p_MVYDTC3AAJ','p_MVYDTC3AAM','p_MVYDTC3AAG','p_MVYDTC3AAR']:
+ y=x[(x.prototype_id==pid)&(x.kind=='qualification')]
+ print('\n',pid)
+ for t,g in y.groupby('test'):
+  print(t,g.value.mean(),g.measured_by.iloc[0])

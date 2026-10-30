@@ -1,0 +1,21 @@
+--- 
++++ 
+@@ -257,6 +257,18 @@
+ r_CEA5JHKB38,qualification,QP-7065,p_795Q00MQ7M,water,wet strength retained,3,80.2576,%,lab_c,lab_d,,,,,,,,,,,,
+ r_CEA5JHKB39,qualification,QP-7065,p_795Q00MQ7M,water,wet strength retained,4,80.2008,%,lab_c,lab_d,,,,,,,,,,,,
+ r_CEA5JHKB3A,qualification,QP-7065,p_795Q00MQ7M,water,wet strength retained,5,80.6448,%,lab_c,lab_d,,,,,,,,,,,,
++r_4QVDY22KRH,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,0,78.90300,°C,lab_a,lab_d,,,,,,,,,,,,
++r_4QVDY22KRJ,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,1,78.91000,°C,lab_a,lab_d,,,,,,,,,,,,
++r_4QVDY22KRK,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,2,79.09575,°C,lab_a,lab_d,,,,,,,,,,,,
++r_4QVDY22KRM,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,3,78.58475,°C,lab_a,lab_d,,,,,,,,,,,,
++r_4QVDY22KRN,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,4,78.63975,°C,lab_a,lab_d,,,,,,,,,,,,
++r_4QVDY22KRP,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,5,78.74175,°C,lab_a,lab_d,,,,,,,,,,,,
++r_4QVDY22KRQ,qualification,QP-7065,p_795Q00MQ7M,heat,seal hold temperature,0,77.98725,°C,lab_a,lab_d,,,,,,,,,,,,
++r_4QVDY22KRR,qualification,QP-7065,p_795Q00MQ7M,heat,seal hold temperature,1,77.99725,°C,lab_a,lab_d,,,,,,,,,,,,
++r_4QVDY22KRS,qualification,QP-7065,p_795Q00MQ7M,heat,seal hold temperature,2,78.24400,°C,lab_a,lab_d,,,,,,,,,,,,
++r_4QVDY22KRT,qualification,QP-7065,p_795Q00MQ7M,heat,seal hold temperature,3,77.72925,°C,lab_a,lab_d,,,,,,,,,,,,
++r_4QVDY22KRV,qualification,QP-7065,p_795Q00MQ7M,heat,seal hold temperature,4,77.65175,°C,lab_a,lab_d,,,,,,,,,,,,
++r_4QVDY22KRW,qualification,QP-7065,p_795Q00MQ7M,heat,seal hold temperature,5,77.88050,°C,lab_a,lab_d,,,,,,,,,,,,
+ r_BP7YYDN4KQ,qualification,QP-7065,p_W1VN0R72RM,strength,edge crush resistance,0,7.23005,kN/m,lab_b,lab_d,,,,,,,,,,,,
+ r_BP7YYDN4KR,qualification,QP-7065,p_W1VN0R72RM,strength,edge crush resistance,1,7.22114,kN/m,lab_b,lab_d,,,,,,,,,,,,
+ r_BP7YYDN4KS,qualification,QP-7065,p_W1VN0R72RM,strength,edge crush resistance,2,7.17263,kN/m,lab_b,lab_d,,,,,,,,,,,,

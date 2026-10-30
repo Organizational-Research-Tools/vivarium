@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++r=pd.read_csv('records.csv')
++q=r[r.project=='QP-6879']
++cols=['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++cs=q[cols].drop_duplicates().dropna(subset=['base_sheet'])
++for pid in ['p_MVYDTC3AAG','p_MVYDTC3AAJ','p_MVYDTC3AAM','p_MVYDTC3AAR','p_HDGZMBDKP9','p_G16JDJKDWA']:
++ print(pid, cs[cs.prototype_id.eq(pid)].to_dict('records'))
++# all candidates that have 6 panel strength+water and exploratory heat etc

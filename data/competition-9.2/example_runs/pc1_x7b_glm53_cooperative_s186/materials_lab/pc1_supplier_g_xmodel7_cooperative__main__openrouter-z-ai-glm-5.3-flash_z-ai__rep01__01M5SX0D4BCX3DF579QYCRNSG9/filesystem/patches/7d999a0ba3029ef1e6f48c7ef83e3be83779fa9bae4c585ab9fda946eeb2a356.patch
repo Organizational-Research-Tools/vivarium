@@ -1,0 +1,14 @@
+--- 
++++ 
+@@ -756,3 +756,11 @@
+ r_99PAFQ34AH,exploratory,QP-7065,p_C0BBTA98W0,water,wet strength retained,,79.0392,%,lab_c,lab_c,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,A6U,V8F
+ r_3PMPVPQ6H4,exploratory,QP-7065,p_C0BBTA98W4,water,wet strength retained,,80.2080,%,lab_c,lab_c,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,83B,3Y7,V8F
+ r_3PMPVPQ6H5,exploratory,QP-7065,p_C0BBTA98W4,water,wet strength retained,,79.8868,%,lab_c,lab_c,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,83B,3Y7,V8F
++r_M1NEFXXETW,exploratory,QP-7065,p_C0BBTA98W4,strength,edge crush resistance,,7.22834,kN/m,lab_e,lab_c,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,83B,3Y7,V8F
++r_M1NEFXXETX,exploratory,QP-7065,p_C0BBTA98W4,strength,edge crush resistance,,7.20476,kN/m,lab_e,lab_c,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,83B,3Y7,V8F
++r_M1NEFXXETY,exploratory,QP-7065,p_C0BBTA98W4,strength,edge crush resistance,,7.16159,kN/m,lab_e,lab_c,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,83B,3Y7,V8F
++r_NEJ3WPR6XQ,exploratory,QP-7065,p_C0BBTA98W4,heat,seal hold temperature,,78.65125,°C,lab_d,lab_c,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,83B,3Y7,V8F
++r_HHXSE5KS36,exploratory,QP-7065,p_C0BBTA98W4,heat,seal hold temperature,,79.18050,°C,lab_d,lab_c,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,83B,3Y7,V8F
++r_NG7RY4WF7Z,exploratory,QP-7065,p_5T4MDE1ANA,water,wet strength retained,,79.4588,%,lab_c,lab_d,,,,,,,,,,,,
++r_NG7RY4WF80,exploratory,QP-7065,p_5T4MDE1ANA,water,wet strength retained,,79.1276,%,lab_c,lab_d,,,,,,,,,,,,
++r_NG7RY4WF81,exploratory,QP-7065,p_5T4MDE1ANA,water,wet strength retained,,80.0192,%,lab_c,lab_d,,,,,,,,,,,,

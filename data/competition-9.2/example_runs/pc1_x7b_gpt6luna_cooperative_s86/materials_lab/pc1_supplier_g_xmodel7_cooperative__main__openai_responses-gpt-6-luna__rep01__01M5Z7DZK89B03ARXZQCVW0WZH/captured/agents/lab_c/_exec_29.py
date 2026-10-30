@@ -1,0 +1,6 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x.columns.tolist())
+for p in ['p_D696T2GG1E','p_JNX5YJ8DVF','p_JNX5YJ8DVH','p_3KNEMDD3PP','p_3KNEMDD3PR','p_3KNEMDD3PT','p_3KNEMDD3PW']:
+ d=x[(x.prototype_id==p)&(x.instrument=='water')]
+ print(p, d.value.mean(), list(d.value))

@@ -1,0 +1,7 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+# water-panel-relevant: any exploratory water >=79.3 on QP-5653/2236/3068/2347/5066/9470?
+e=df[(df['kind']=='exploratory')&(df['test']=='wet strength retained')&(df['value']>=79.3)]
+g=e.groupby(['project','prototype_id'])['value'].agg(['mean','count'])
+print(g.to_string())
+print(set(df['project']))

@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.kind=='qualification']; g=q.groupby(['project','prototype_id','test']).agg(n=('value','count'),m=('value','mean')).reset_index(); wide=g.pivot(index=['project','prototype_id'],columns='test',values='m'); counts=g.pivot(index=['project','prototype_id'],columns='test',values='n'); wide=wide.dropna(); print(wide.to_string());

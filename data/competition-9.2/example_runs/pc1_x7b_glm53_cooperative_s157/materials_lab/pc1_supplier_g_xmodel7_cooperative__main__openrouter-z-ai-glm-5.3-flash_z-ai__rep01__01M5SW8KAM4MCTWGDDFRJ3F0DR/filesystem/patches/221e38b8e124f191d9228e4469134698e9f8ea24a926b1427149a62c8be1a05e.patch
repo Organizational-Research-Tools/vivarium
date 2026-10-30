@@ -1,0 +1,14 @@
+--- 
++++ 
+@@ -213,3 +213,11 @@
+ r_X2TZ7E6ZD3,qualification,QP-8864,p_5XVCC7PF44,strength,edge crush resistance,3,7.21085,kN/m,lab_b,lab_c,,,,,,,,,,,,
+ r_X2TZ7E6ZD4,qualification,QP-8864,p_5XVCC7PF44,strength,edge crush resistance,4,7.22534,kN/m,lab_b,lab_c,,,,,,,,,,,,
+ r_X2TZ7E6ZD5,qualification,QP-8864,p_5XVCC7PF44,strength,edge crush resistance,5,7.23146,kN/m,lab_b,lab_c,,,,,,,,,,,,
++r_VQX5Y86K3Q,exploratory,QP-8864,p_5XVCC7PF3W,heat,seal hold temperature,,78.72600,°C,lab_a,lab_c,,,,,,,,,,,,
++r_VQX5Y86K3R,exploratory,QP-8864,p_5XVCC7PF3W,heat,seal hold temperature,,78.56600,°C,lab_a,lab_c,,,,,,,,,,,,
++r_VQX5Y86K3S,exploratory,QP-8864,p_5XVCC7PF44,heat,seal hold temperature,,78.91250,°C,lab_a,lab_c,,,,,,,,,,,,
++r_VQX5Y86K3T,exploratory,QP-8864,p_5XVCC7PF44,heat,seal hold temperature,,78.25300,°C,lab_a,lab_c,,,,,,,,,,,,
++r_VQX5Y86K3V,exploratory,QP-8864,p_5XVCC7PF3G,heat,seal hold temperature,,79.28575,°C,lab_a,lab_c,,,,,,,,,,,,
++r_W83JFTWTQ6,exploratory,QP-8864,p_5XVCC7PF3G,heat,seal hold temperature,,78.92150,°C,lab_a,lab_c,,,,,,,,,,,,
++r_W83JFTWTQ7,exploratory,QP-8864,p_VBP7PA25KA,heat,seal hold temperature,,79.03425,°C,lab_a,lab_c,,,,,,,,,,,,
++r_W83JFTWTQ8,exploratory,QP-8864,p_VBP7PA25KA,heat,seal hold temperature,,79.40375,°C,lab_a,lab_c,,,,,,,,,,,,

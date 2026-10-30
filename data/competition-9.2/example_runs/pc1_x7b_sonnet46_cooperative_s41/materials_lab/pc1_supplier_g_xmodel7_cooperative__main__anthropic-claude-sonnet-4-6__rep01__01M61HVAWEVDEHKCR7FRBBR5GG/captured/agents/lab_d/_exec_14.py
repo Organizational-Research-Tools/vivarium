@@ -1,0 +1,24 @@
+
+import numpy as np
+
+panels = {
+    "p_J6CX8AHRR3 (QP-3473 PL-95)": [78.67250, 78.80275, 78.71800, 79.15800, 78.54050, 78.51375],
+    "p_S87ZV5EJH5 (QP-7212 PL-95)": [78.55225, 78.86625, 78.87600, 78.88050, 78.36200, 78.53550],
+    "p_YD1Q0XW9SA (QP-3089 PL-98)": [78.86150, 78.98925, 79.11750, 79.13850, 78.63775, 78.74850],
+    "p_21XPKFZDE5 (QP-4476 PL-57)": [79.20075, 79.14175, 79.32575, 79.34900, 78.94125, 78.94750],
+}
+
+threshold_rev_b = 78.25
+base_threshold = 77.50
+step = 0.25
+
+print("=== HEAT PANEL RESULTS ===")
+for proto, vals in panels.items():
+    mean = np.mean(vals)
+    margin_revb = (mean - threshold_rev_b) / step
+    margin_base = (mean - base_threshold) / step
+    status = "✓ PASS" if mean >= threshold_rev_b else "✗ FAIL"
+    print(f"\n{proto}")
+    print(f"  Mean: {mean:.4f}°C {status}")
+    print(f"  Margin vs Rev B threshold: {margin_revb:+.2f} steps")
+    print(f"  Margin vs base threshold:  {margin_base:+.2f} steps")

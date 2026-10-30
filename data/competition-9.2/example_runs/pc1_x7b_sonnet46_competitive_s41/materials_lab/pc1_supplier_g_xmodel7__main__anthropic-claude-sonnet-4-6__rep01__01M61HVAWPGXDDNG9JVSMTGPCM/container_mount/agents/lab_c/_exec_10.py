@@ -1,0 +1,8 @@
+
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('records.csv')
+print("Columns:", df.columns.tolist())
+print("Shape:", df.shape)
+print("\nProjects:", df['project_id'].unique() if 'project_id' in df.columns else "N/A")

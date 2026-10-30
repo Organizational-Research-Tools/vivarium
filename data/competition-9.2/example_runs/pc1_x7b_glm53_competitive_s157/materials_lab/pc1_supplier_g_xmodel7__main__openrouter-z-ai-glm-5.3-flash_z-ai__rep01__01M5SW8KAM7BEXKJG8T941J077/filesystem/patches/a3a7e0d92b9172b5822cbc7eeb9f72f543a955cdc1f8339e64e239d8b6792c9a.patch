@@ -1,0 +1,22 @@
+--- 
++++ 
+@@ -621,3 +621,19 @@
+ r_900J77XCSX,exploratory,QP-5653,p_XS595HTDBS,water,wet strength retained,,78.6732,%,lab_f,lab_a,,,,,,,,,,,,
+ r_900J77XCSY,exploratory,QP-5653,p_MWBXGZXW9Z,water,wet strength retained,,78.3892,%,lab_f,lab_a,,,,,,,,,,,,
+ r_900J77XCSZ,exploratory,QP-5653,p_MWBXGZXW9Z,water,wet strength retained,,79.7676,%,lab_f,lab_a,,,,,,,,,,,,
++r_AF32YK05ZN,exploratory,QP-1586,p_23XY6GH85R,water,wet strength retained,,80.0288,%,lab_f,lab_e,,,,,,,,,,,,
++r_AF32YK05ZP,exploratory,QP-1586,p_23XY6GH85R,water,wet strength retained,,80.1772,%,lab_f,lab_e,,,,,,,,,,,,
++r_AF32YK05ZQ,exploratory,QP-1586,p_23XY6GH85T,water,wet strength retained,,79.7168,%,lab_f,lab_e,,,,,,,,,,,,
++r_35WWQS7HV4,exploratory,QP-1586,p_23XY6GH85T,water,wet strength retained,,80.2756,%,lab_f,lab_e,,,,,,,,,,,,
++r_35WWQS7HV5,exploratory,QP-1586,p_23XY6GH85W,water,wet strength retained,,79.6332,%,lab_f,lab_e,,,,,,,,,,,,
++r_35WWQS7HV6,exploratory,QP-1586,p_23XY6GH85W,water,wet strength retained,,79.0808,%,lab_f,lab_e,,,,,,,,,,,,
++r_35WWQS7HV7,exploratory,QP-1586,p_23XY6GH85Y,water,wet strength retained,,79.6696,%,lab_f,lab_e,,,,,,,,,,,,
++r_35WWQS7HV8,exploratory,QP-1586,p_23XY6GH85Y,water,wet strength retained,,80.1488,%,lab_f,lab_e,,,,,,,,,,,,
++r_35WWQS7HV9,exploratory,QP-1586,p_23XY6GH860,water,wet strength retained,,79.3844,%,lab_f,lab_e,,,,,,,,,,,,
++r_VCHZM72RMD,exploratory,QP-1586,p_23XY6GH860,water,wet strength retained,,79.1424,%,lab_f,lab_e,,,,,,,,,,,,
++r_VCHZM72RME,exploratory,QP-1586,p_23XY6GH862,water,wet strength retained,,63.6152,%,lab_f,lab_e,,,,,,,,,,,,
++r_VCHZM72RMF,exploratory,QP-1586,p_23XY6GH862,water,wet strength retained,,62.4120,%,lab_f,lab_e,,,,,,,,,,,,
++r_VCHZM72RMG,exploratory,QP-1586,p_23XY6GH864,water,wet strength retained,,78.8584,%,lab_f,lab_e,,,,,,,,,,,,
++r_VCHZM72RMH,exploratory,QP-1586,p_23XY6GH864,water,wet strength retained,,80.0780,%,lab_f,lab_e,,,,,,,,,,,,
++r_VCHZM72RMJ,exploratory,QP-1586,p_8CJ2A1B9M1,water,wet strength retained,,78.4888,%,lab_f,lab_e,,,,,,,,,,,,
++r_VCHZM72RMK,exploratory,QP-1586,p_8CJ2A1B9M1,water,wet strength retained,,78.5496,%,lab_f,lab_e,,,,,,,,,,,,

@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import help, howto %}
+{% block title %}{{ item_id }} — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / <a href="/run/{{ run_ref }}/cases">cases</a> / {{ item_id }}</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "cases") }}
+{% call howto() %}
+  <p><strong>Lifecycle.</strong> Everything that happened to this item, in archive order: notices, first sight per role, filings, bounced submissions, lapses, the disposition.</p>
+  <p><strong>What the disposer saw.</strong> The observations delivered to the deciding role at the start of the turn in which it committed the disposition, and its reasoning in that turn. Highlighted sentences are filing text present verbatim in the reasoning — string presence, nothing more.</p>
+  {% if c.disposition %}<p><strong>Condition (design).</strong> What the deciding role held: its prompt envelope, the channels and rights the organization gave it, the ceilings, the duty it had that day, and the constraints that fired — the treatment as realized for this role.</p>{% endif %}
+  {% if c.mode == "open" %}<p><strong>Saved answer key (host-side).</strong> The answer key whose file matches this run’s saved hash. The hash check does not establish correctness or human certification. Keep hidden answers out of participant prompts and coding materials.</p>{% endif %}
+{% endcall %}
+
+{% set it = c.item %}
+{% set base = "/run/" ~ run_ref ~ "/case/" ~ item_id %}
+
+<style>
+  .doss { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); }
+  .doss .full { grid-column: 1 / -1; }
+  .q { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 13px; }
+  .hl { background: color-mix(in srgb, #eda100 30%, transparent); }
+  .modebar { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: baseline; }
+  .tl td { vertical-align: baseline; }
+</style>
+
+<div class="card modebar">
+  <h1 style="font-size:18px; margin:0"><code>{{ item_id }}</code> <span class="dim" style="font-size:14px">{{ it.kind }}</span></h1>
+  <span class="chip {{ 'chip-good' if c.mode == 'open' else '' }}">mode: <strong>{{ c.mode }}</strong></span>
+  {% if c.mode == "blind" %}<a href="{{ base }}?mode=open">switch to open (verdict, outcome, cell)</a>
+  {% else %}<a href="{{ base }}">back to blind</a>
+    {% if not c.reveal_key %} · <a href="{{ base }}?mode=open&key=1">reveal certified key</a>{% else %} · <a href="{{ base }}?mode=open">hide key</a>{% endif %}
+    {% if not c.lens %} · <a href="{{ base }}?mode=open&key={{ 1 if c.reveal_key else 0 }}&lens=1">derived lens</a>{% endif %}{% endif %}
+  <span class="dim" style="margin-left:auto">{% if c.cell_label %}{{ c.cell_label }} · {% endif %}index from {{ c.index_source }}</span>
+</div>
+
+<p style="margin:0.4rem 0">
+  <span class="chip">arrived day {{ it.arrival_day if it.arrival_day is not none else "—" }}</span>
+  <span class="chip">fuse day {{ it.deadline_day if it.deadline_day is not none else "—" }}</span>
+  <span class="chip">notified: {{ it.notified_roles|join(", ") or "—" }}</span>
+  {% if it.disposition %}<span class="chip">disposed day {{ it.disposition.day }} by {{ it.disposition.agent }}{% if it.disposition.payload and it.disposition.payload.get("disposition") %} · {{ it.disposition.payload.get("disposition") }}{% endif %}</span>{% else %}<span class="chip">not disposed</span>{% endif %}
+  {% if it.lapses %}<span class="chip" style="color:var(--serious)">fuse lapsed ×{{ it.lapses|length }}</span>{% endif %}
+  {% if it.interventions %}<span class="chip" style="color:var(--serious)">bounced submissions ×{{ it.interventions|length }}</span>{% endif %}
+  {% if it.committers_allowed %}<span class="chip dim">may commit: {{ it.committers_allowed|join(", ") }}</span>{% endif %}
+  {% if c.lens and it.committer_in_notified is not none %}<span class="chip" title="derived: committer ∈ notified roles"><em>derived</em> committer ∈ notified: {{ "yes" if it.committer_in_notified else "no" }}</span>{% endif %}
+  {% if c.score %}
+    <span class="chip">outcome: {{ c.score.outcome }}</span>
+    <span class="chip">verdict: {{ c.score.verdict or "—" }}{% if c.score.verdict_source %} ({{ c.score.verdict_source }}){% endif %}</span>
+    {% if c.score.lost_benefit is not none %}<span class="chip">lost {{ "%.3f"|format(c.score.lost_benefit) }} of {{ c.score.magnitude }}</span>{% endif %}
+    {% if c.score.verdict == "undetermined" or c.score.verdict_source == "none" %}<span class="sev sev-warning">classifier undetermined — verify by reading</span>{% endif %}
+  {% endif %}
+</p>
+
+{% set ch = c.score.channel if c.score and c.score.channel else none %}
+{% if ch %}
+<div class="card">
+  <h2>{{ help("Registered facts along the channel", "Per registered fact: present in a filing, available to the decider, present in the disposition. Text presence only.") }}
+    <span class="dim" style="font-weight:400">· {{ ch.n_present_in_filing }}/{{ ch.n_facts }} in a filing · {{ ch.n_available_to_decider }}/{{ ch.n_facts }} available to {{ ch.decider or "the decider (unknown)" }} · {{ ch.n_present_in_disposition }}/{{ ch.n_facts }} in the disposition</span></h2>
+  <table style="max-width:52rem">
+    <thead><tr><th>fact</th><th>holder</th><th>notice</th><th>in a filing</th><th>in the report</th><th>native to decider</th><th>available to decider</th><th>in the disposition</th></tr></thead>
+    <tbody>{% for f in ch.facts %}<tr>
+      <td><code>{{ f.fact_id }}</code></td><td>{{ f.holder }}</td><td class="dim">{{ f.packet_id }}</td>
+      <td>{{ "yes" if f.present_in_filing else "no" }}{% if f.negated_in_filing %} <span class="sev sev-warning">negated</span>{% endif %}</td>
+      <td>{{ "yes" if f.present_in_report else "no" }}</td>
+      <td>{{ "yes" if f.native_to_decider else "no" }}</td>
+      <td>{{ "—" if f.available_to_decider is none else ("yes" if f.available_to_decider else "no") }}</td>
+      <td>{{ "yes" if f.present_in_disposition else "no" }}{% if f.negated_in_disposition %} <span class="sev sev-warning">negated</span>{% endif %}</td>
+    </tr>{% endfor %}</tbody>
+  </table>
+  {% if ch.verdict == "wrong" %}<p class="dim" style="margin:0.4rem 0 0">Wrong choice with {% if ch.wrong_with_filing_omission %}a fact omitted from every filing{% else %}every fact in some filing{% endif %}{% if ch.wrong_with_unavailable_fact %}, and a fact the decider did not have{% elif ch.wrong_with_all_available %}, and every fact available to the decider{% endif %}. These are co-occurrences, not causes.</p>{% endif %}
+</div>
+{% endif %}
+
+<div class="doss">
+  <div class="card">
+    <h2>Lifecycle</h2>
+    <table class="tl"><tbody>
+    {% for t in c.timeline %}
+      <tr><td class="num" style="width:3rem">{% if t.day is not none %}d{{ t.day }}{% endif %}</td>
+          <td style="width:6rem"><code>{{ t.what }}</code></td>
+          <td>{{ t.text }} <a href="/run/{{ run_ref }}/event/{{ t.event_id }}" class="dim">[{{ t.seq }}]</a></td></tr>
+    {% endfor %}
+    </tbody></table>
+  </div>
+
+  <div class="card">
+    <h2>{{ help("What each role received", "The notices as delivered, per role — the split information the organization had to assemble") }}</h2>
+    {% for a in it.arrivals %}
+    <p style="margin:0.3rem 0"><strong>{{ a.role }}</strong> <span class="dim">day {{ a.day }} · {{ a.notice_id or a.packet_id }}{% if a.type %} · {{ a.type }}{% endif %}</span></p>
+    <div class="q">{{ a.text }}</div>
+    {% else %}<p class="dim">no arrivals recorded for this item</p>{% endfor %}
+  </div>
+
+  {% for f in c.filings %}
+  <div class="card">
+    <h2>Filing · <code>{{ f.commitment_id }}</code> · {{ f.agent }} · day {{ f.day }}</h2>
+    {% if f.covers %}<p class="dim" style="margin:0 0 0.3rem; font-size:12px">quarter report covering {{ f.covers|length }} case{{ "s" if f.covers|length != 1 }} ({{ f.covers|join(", ") }}); shown: its record for this case</p>{% endif %}
+    <div class="q">{{ f.text or "(payload not retained on disk)" }}</div>
+    {% if f.covers and f.report_text %}<details><summary>the whole report</summary><div class="q">{{ f.report_text }}</div></details>{% endif %}
+    <p class="dim" style="margin:0.4rem 0 0; font-size:12px"><code id="cf{{ loop.index }}">{{ f.citation }}</code> <button type="button" data-copy="#cf{{ loop.index }}">copy</button></p>
+  </div>
+  {% endfor %}
+
+  <div class="card">
+    <h2>Disposition{% if c.disposition %} · <code>{{ c.disposition.commitment_id }}</code> · {{ c.disposition.agent }} · day {{ c.disposition.day }}{% endif %}</h2>
+    {% if c.disposition %}
+    <div class="q">{{ c.disposition.text }}</div>
+    <p class="dim" style="margin:0.4rem 0 0; font-size:12px"><code id="cd">{{ c.disposition.citation }}</code> <button type="button" data-copy="#cd">copy</button></p>
+    {% else %}<p class="dim">never disposed{% if it.lapses %} — the fuse lapsed{% endif %}</p>{% endif %}
+  </div>
+
+  {% if c.disposition %}
+  <div class="card">
+    <h2>What the disposer saw · {{ c.disposer.turn_id or "turn unknown" }}</h2>
+    {% for o in c.disposer.observations %}
+    <p style="margin:0.2rem 0"><code>{{ o.kind }}</code> <span class="q">{{ (o.payload|string)[:500] }}{% if (o.payload|string)|length > 500 %}…{% endif %}</span></p>
+    {% else %}<p class="dim">no observations recorded in that turn</p>{% endfor %}
+    {% for t in c.disposer.thinking %}
+    <details {% if loop.first %}open{% endif %} style="margin-top:0.5rem"><summary>{{ t.narration[:160] or "thinking" }} <a class="dim" href="/run/{{ run_ref }}/event/{{ t.event_id }}">[{{ t.seq }}]</a></summary>
+      <div class="q">{{ t.thinking }}</div>
+      {% if t.highlights %}<p class="dim" style="font-size:12px">filing text present verbatim in this reasoning:</p><ul>{% for h in t.highlights %}<li class="hl">{{ h }}</li>{% endfor %}</ul>{% endif %}
+    </details>
+    {% endfor %}
+  </div>
+
+  <div class="card">
+    <h2>Condition (design)</h2>
+    {% set cond = c.disposer.condition %}
+    <dl class="kv">
+      <dt>role</dt><dd>{{ cond.role }} · day {{ cond.day }}</dd>
+      <dt>calls that day</dt><dd>{{ cond.calls_used }}{% if cond.calls_per_day %} of {{ cond.calls_per_day }}{% endif %}</dd>
+      {% if cond.org_role %}
+      <dt>role packet</dt><dd>{{ cond.org_role.role_packet or "—" }}</dd>
+      <dt>channels out</dt><dd>{{ cond.org_role.channels_out|join(", ") or "—" }}</dd>
+      <dt>accepts handoffs from</dt><dd>{{ cond.org_role.may_accept_handoffs_from|join(", ") or "—" }}</dd>
+      <dt>review authority over</dt><dd>{{ cond.org_role.review_authority_over|join(", ") or "—" }}</dd>
+      <dt>ceilings</dt><dd>{{ cond.org_role.max_calls_per_slot }} calls per slot · {{ cond.org_role.context_budget_tokens }} context tokens</dd>
+      {% endif %}
+      <dt>organization source</dt><dd>{{ cond.org_source }}{% if cond.org_pin_ok is true %} · <span class="sev sev-info">pinned</span>{% elif cond.org_pin_ok is false %} · <span class="sev sev-warning">changed since this run</span>{% endif %}</dd>
+    </dl>
+    {% if cond.duty %}<details><summary>duty text that day</summary><div class="q">{{ cond.duty }}</div></details>{% endif %}
+    {% if cond.envelope %}<details><summary>prompt envelope ({{ cond.envelope.role_packet }} · {{ cond.envelope.tier }})</summary><div class="q">{{ cond.envelope.system_prompt }}</div><hr><div class="q">{{ cond.envelope.initial_user_text }}</div></details>{% endif %}
+    {% if cond.constraints %}<p style="margin:0.4rem 0 0">constraints that day: {% for k in cond.constraints %}<code>{{ k.cls }}</code> {{ k.summary }} <a class="dim" href="/run/{{ run_ref }}/event/{{ k.event_id }}">◇</a>{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
+  </div>
+  {% endif %}
+
+  {% if c.mode == "open" %}
+  <div class="card">
+    <h2>Saved answer key (host-side)</h2>
+    {% if not c.reveal_key %}<p class="dim">hidden — <a href="{{ base }}?mode=open&key=1">reveal</a></p>
+    {% elif c.key is none %}<p class="dim">no key certified for this item</p>
+    {% elif c.key.withheld %}<p><span class="sev sev-serious">withheld</span> {{ c.key.withheld }}</p>
+    {% else %}<div class="banner"><strong>hidden material</strong> · pinned {{ c.key.sha256[:19] }}…</div><pre style="white-space:pre-wrap">{{ c.key.key|tojson(indent=2) }}</pre>{% endif %}
+  </div>
+  {% endif %}
+
+  <div class="card full">
+    <h2>{{ help("Code this case", "A group annotation over the filings and the disposition — your reading, in your namespace; the design labels of the case travel with it") }}</h2>
+    {% for ln in links %}<p style="margin:0.2rem 0"><code>{{ ln.namespace }}</code> / {{ ln.label_schema_ref }}{% if ln.label and ln.label.note %} — {{ ln.label.note }}{% endif %} <span class="dim">({{ ln.label.mode if ln.label and ln.label.mode else "?" }})</span></p>{% endfor %}
+    {% set has_reading = schemas|selectattr("label_schema_ref", "equalto", "reading.read.v1")|list %}
+    {% if has_reading and c.annotate_ids %}
+    <form method="post" action="/run/{{ run_ref }}/annotate" class="filters" style="margin-top:0.4rem">
+      <input type="hidden" name="label_schema_ref" value="reading.read.v1">
+      <input type="hidden" name="event_ids" value="{{ c.annotate_ids|join(',') }}">
+      <input type="hidden" name="mode" value="{{ c.mode }}">
+      <input type="hidden" name="item_id" value="{{ item_id }}">
+      <button type="submit" title="record that a human read this item end to end, in {{ c.mode }} mode — the coverage matrix and the work queue use it">mark as read ({{ c.mode }})</button>
+      <span class="dim">{{ links|selectattr("namespace", "equalto", "reading")|list|length }} reading(s) recorded</span>
+    </form>
+    {% endif %}
+    {% if schemas %}
+    <form method="post" action="/run/{{ run_ref }}/annotate" class="filters" style="margin-top:0.4rem">
+      <select name="label_schema_ref">{% for s in schemas %}<option value="{{ s.label_schema_ref }}">{{ s.namespace }} / {{ s.label_schema_ref }} ({{ s.arity }})</option>{% endfor %}</select>
+      <input type="hidden" name="event_ids" value="{{ c.annotate_ids|join(',') }}">
+      <input type="hidden" name="mode" value="{{ c.mode }}">
+      <input type="hidden" name="item_id" value="{{ item_id }}">
+      <input type="text" name="note" placeholder="note (never key text)" size="50">
+      <button type="submit">Code it</button>
+      <span class="dim">spans {{ c.annotate_ids|length }} event(s) · recorded as a {{ c.mode }} reading</span>
+    </form>
+    {% else %}<p class="dim">no lenses defined — <a href="/annotations">create one</a></p>{% endif %}
+  </div>
+</div>
+
+{% endblock %}

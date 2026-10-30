@@ -1,0 +1,20 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for proj in ['QP-7092','QP-5174','QP-9273']:
+ d=x[x.project==proj]
+ print('\n',proj, d.shape, d.prototype_id.nunique())
+ g=d.groupby(['prototype_id','test'])
+ rows=[]
+ mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+ for pid, sub in d.groupby('prototype_id'):
+  rr={c:sub[c].dropna().iloc[0] if sub[c].notna().any() else '' for c in mods}
+  for t in ['heat','strength','water']:
+   q=sub[(sub.test==t)&(sub.kind=='qualification')]
+   e=sub[(sub.test==t)&(sub.kind=='exploratory')]
+   rr[t+'_panel']=q.value.mean() if len(q)==6 else None
+   rr[t+'_n']=len(q)
+   rr[t+'_expl']=e.value.mean() if len(e) else None
+  rr['prototype_id']=pid
+  rows.append(rr)
+ z=pd.DataFrame(rows)
+ print(z.to_string(index=False))

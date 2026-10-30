@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -844,3 +844,8 @@
+ r_4HCXMG1W6H,exploratory,QP-2236,p_RVJ7T3AV7G,water,wet strength retained,,78.5856,%,lab_c,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,G4B,VR3,G7L,7MP
+ r_4HCXMG1W6J,exploratory,QP-2236,p_RVJ7T3AV7G,water,wet strength retained,,78.6604,%,lab_c,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,G4B,VR3,G7L,7MP
+ r_XCZD19AXK5,exploratory,QP-2236,p_RVJ7T3AV7G,strength,edge crush resistance,,6.06569,kN/m,lab_e,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,G4B,VR3,G7L,7MP
++r_WVPC970ZW5,exploratory,QP-2236,p_0AVS608FWX,water,wet strength retained,,79.2228,%,lab_c,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,FA3,7MP
++r_PC5G999W9Z,exploratory,QP-2236,p_0AVS608FWX,water,wet strength retained,,79.2312,%,lab_c,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,FA3,7MP
++r_PC5G999WA0,exploratory,QP-2236,p_0AVS608FWX,water,wet strength retained,,78.7356,%,lab_c,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,FA3,7MP
++r_D3HDXM9WQW,exploratory,QP-2236,p_0AVS608FWX,water,wet strength retained,,79.2940,%,lab_f,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,FA3,7MP
++r_D3HDXM9WQX,exploratory,QP-2236,p_0AVS608FWX,water,wet strength retained,,78.5628,%,lab_f,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,FA3,7MP

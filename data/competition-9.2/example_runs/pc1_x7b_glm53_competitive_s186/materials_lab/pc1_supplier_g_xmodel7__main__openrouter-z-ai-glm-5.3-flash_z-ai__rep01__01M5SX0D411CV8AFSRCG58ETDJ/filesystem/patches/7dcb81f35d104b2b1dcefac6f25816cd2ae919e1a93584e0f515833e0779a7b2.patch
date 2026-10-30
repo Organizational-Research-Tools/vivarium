@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd
++df = pd.read_csv("records.csv")
++print(df[df.record_id.isin(["r_0RR2EYC2NZ","r_0RR2EYC2O0","r_0RR2EYC2O1","r_0RR2EYC2O2","r_0RR2EYC2O3","r_0RR2EYC2O4"])]["record_id"].tolist() if True else "")
++for p in ["p_CWRMK2CFRP"]:
++    sub = df[(df.prototype_id==p)&(df.kind=="qualification")] if "kind" in df else df[df.prototype_id==p]
++    print(sub[["record_id","test","value","measured_by"]].to_string())
++    print(sub.record_id.tolist())

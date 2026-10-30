@@ -1,0 +1,13 @@
+--- 
++++ 
+@@ -0,0 +1,10 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++# Does any QP-1586/8864 recipe with binder 27X appear with a full recipe?
++q = df[(df['project'].isin(['QP-1586','QP-8864'])) & (df['binder_system']=='27X')]
++cols=['prototype_id','project','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++print(q[cols].drop_duplicates().to_string())
++print(q.groupby(['prototype_id','test'])['value'].agg(['count','mean']))
++# also: does p_4V8V03KF07's recipe exist on other projects?
++r = df[df['prototype_id']=='p_4V8V03KF07']
++print(r[cols].drop_duplicates().to_string())

@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x.columns.tolist())
+print(x[x.prototype_id.astype(str).str.contains('NQX11|KBAB|BY88')].to_string(index=False))

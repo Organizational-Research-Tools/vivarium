@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++df = pd.read_csv("records.csv")
++cols=[c for c in df.columns if c not in("record_id","project_id","prototype_id","test","kind","value","measured_by")]
++for p in ["p_E05X2XJNTY","p_MJ6G5J683J","p_25SH4G2DQE","p_6HRWVWM6EN"]:
++    sub=df[df.prototype_id==p]
++    print(p, sub[cols].dropna(axis=1).drop_duplicates().to_dict("records")[:1], "water vals:", sorted(df[(df.prototype_id==p)&(df.test=="wet strength retained")].value.unique().round(2)))

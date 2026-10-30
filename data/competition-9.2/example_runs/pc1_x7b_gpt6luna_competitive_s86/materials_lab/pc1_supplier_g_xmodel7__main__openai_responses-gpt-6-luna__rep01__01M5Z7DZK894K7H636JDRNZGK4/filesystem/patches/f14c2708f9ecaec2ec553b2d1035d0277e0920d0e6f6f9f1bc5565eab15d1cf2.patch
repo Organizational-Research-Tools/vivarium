@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -0,0 +1,2 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); ids=['p_7S365TH6Y2','p_HNZGFD3XEX','p_R99Z9XY3FX','p_R99Z9XY3FZ']; print(x[x.prototype_id.isin(ids)].groupby(['prototype_id','test','kind','measured_by']).value.agg(['count','mean']).to_string())

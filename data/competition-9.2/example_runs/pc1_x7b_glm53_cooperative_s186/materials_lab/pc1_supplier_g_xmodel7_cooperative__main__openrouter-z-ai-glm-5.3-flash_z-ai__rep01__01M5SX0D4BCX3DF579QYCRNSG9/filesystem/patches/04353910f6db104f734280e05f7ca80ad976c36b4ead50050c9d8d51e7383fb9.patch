@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++# QP-1992: which recipes are the near-misses? comps
++cols=['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++q=df[df.project=='QP-1992']
++print(q[['prototype_id','test','value']].to_string())
++print(q[cols].drop_duplicates().to_string())
++print('authors:', q.groupby('prototype_id')['measured_by'].unique())

@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -780,3 +780,5 @@
+ r_SDSEH498YF,exploratory,QP-5993,p_SGZ2NKV5K6,heat,seal hold temperature,,78.54500,°C,lab_d,lab_b,,,,,,,,,,,,
+ r_SDSEH498YG,exploratory,QP-5993,p_SGZ2NKV5KA,heat,seal hold temperature,,77.89775,°C,lab_d,lab_b,,,,,,,,,,,,
+ r_SDSEH498YH,exploratory,QP-5993,p_SGZ2NKV5KA,heat,seal hold temperature,,78.47975,°C,lab_d,lab_b,,,,,,,,,,,,
++r_3Q6E9MRE4B,exploratory,QP-5993,p_SGZ2NKV5K4,heat,seal hold temperature,,78.51150,°C,lab_d,lab_b,,,,,,,,,,,,
++r_3Q6E9MRE4C,exploratory,QP-5993,p_SGZ2NKV5K4,heat,seal hold temperature,,78.58675,°C,lab_d,lab_b,,,,,,,,,,,,

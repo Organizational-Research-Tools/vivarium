@@ -1,0 +1,10 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+known=df.dropna(subset=mods)
+# check pairs for water
+w=known[known.test=='wet strength retained']
+import itertools
+for m1,m2 in [('binder_system','joint_system'),('base_sheet','binder_system'),('additive_package_1','process_profile_2'),('additive_package_1','additive_package_3'),('additive_package_1','process_profile_3'),('additive_package_1','secondary_sheet')]:
+    piv=w.pivot_table(index=m1,columns=m2,values='value',aggfunc=['mean','count'])
+    print(m1,m2); print(piv['mean'].round(1)); print()

@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -866,3 +866,9 @@
+ r_KM6BWSRMZM,qualification,QP-5993,p_CWRMK2CFRP,water,wet strength retained,3,80.0852,%,lab_c,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
+ r_KM6BWSRMZN,qualification,QP-5993,p_CWRMK2CFRP,water,wet strength retained,4,80.5112,%,lab_c,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
+ r_KM6BWSRMZP,qualification,QP-5993,p_CWRMK2CFRP,water,wet strength retained,5,79.2732,%,lab_c,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_B62J5GSA56,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,0,7.23005,kN/m,lab_b,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_B62J5GSA57,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,1,7.26248,kN/m,lab_b,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_B62J5GSA58,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,2,7.26092,kN/m,lab_b,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_B62J5GSA59,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,3,7.26086,kN/m,lab_b,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_B62J5GSA5A,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,4,7.28348,kN/m,lab_b,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_B62J5GSA5B,qualification,QP-5993,p_CWRMK2CFRP,strength,edge crush resistance,5,7.28969,kN/m,lab_b,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y

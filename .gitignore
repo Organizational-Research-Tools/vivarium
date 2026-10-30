@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+
+# Credentials: never commit
+.env
+.env.*
+
+# Run archives: kept out of git (completed studies' archives are deposited with a DOI)
+/runs/
+/examples/runs/
+/results/
+/archive/
+.cache/
+# the dashboard's caches beside the example runs
+/data/competition-9.2/example_runs/.dashboard/
+
+.DS_Store
+.vscode/
+.idea/

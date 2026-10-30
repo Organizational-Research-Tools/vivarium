@@ -1,0 +1,6 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+q=df[(df.kind=='qualification')&(df.prototype_id=='p_5XVCC7PF44')]
+print(q[['record_id','instrument','test','specimen','value','measured_by']])
+q2=df[(df.kind=='qualification')&(df.prototype_id=='p_5XVCC7PF3G')]
+print(q2[['record_id','instrument','test','specimen','value','measured_by']])

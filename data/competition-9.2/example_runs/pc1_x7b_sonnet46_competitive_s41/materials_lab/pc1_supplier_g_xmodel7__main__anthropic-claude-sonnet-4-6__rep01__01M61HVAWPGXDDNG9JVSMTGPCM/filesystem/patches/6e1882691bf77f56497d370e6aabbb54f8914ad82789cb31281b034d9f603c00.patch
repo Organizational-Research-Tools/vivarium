@@ -1,0 +1,52 @@
+--- 
++++ 
+@@ -0,0 +1,49 @@
++
++import numpy as np
++
++# The key insight: projects have project-specific heat baselines
++# Evidence:
++# P2G/YX8/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8 (same recipe):
++#   QP-6572: 65.51°C
++#   QP-8607: 70.96°C
++#   QP-7604: 76.43°C
++
++# JA8/YX8/M2P/QJ2/6FA/44B/62D/2BR/N4L/7KL/DL8/3N8 (same recipe):
++#   QP-4476: 78.19°C  ← PASSES!
++#   QP-3473: 73.22°C  ← fails
++#   QP-8265: 72.95°C  ← fails
++
++# Lab_e's recipe for QP-3473: P2G/YX8/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8
++# For QP-3473, the GG7 version gave 79.53°C. With GG7 subtraction ~0.5°C -> 79.03 expected!
++# So QP-3473 non-GG7 should PASS heat. Lab_e's logic is correct FOR QP-3473 specifically.
++
++# For QP-7212 and QP-3089 with same recipe:
++# Prior known heat for those projects with DIFFERENT recipes:
++# QP-7212 (P2G/YX8 but different recipe): 78.27°C  -> project seems favorable
++# QP-3089 (JA8/3HW different recipe): 78.13°C -> project seems favorable
++
++# BUT: projects can have very different baselines for the same recipe
++# Need to actually measure
++
++print("Lab_e prototypes to measure:")
++print("  p_02A6NY9WNM: QP-3473 — P2G/YX8/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8")
++print("    Expected heat: ~79.03°C (GG7 version was 79.53 on same project)")
++print("    → Should PASS threshold 77.5°C")
++print()
++print("  p_BZB62TCK50: QP-7212 — same recipe")
++print("    QP-7212 prev recipe heat was 78.27°C but DIFFERENT recipe - uncertain")
++print("    → Need to MEASURE to know")
++print()
++print("  p_2058095Z34: QP-3089 — same recipe")  
++print("    QP-3089 prev recipe heat was 78.13°C but DIFFERENT recipe - uncertain")
++print("    → Need to MEASURE to know")
++print()
++print("My QP-4476 JA8/YX8 prototype p_4V8BTTYF7C: heat=78.19 PASSES!")
++print("  Need strength panel from lab_e/lab_b and water panel from lab_c/lab_f")
++print("  This is our best immediate path for PL-57")
++print()
++print("Actions needed:")
++print("1. Measure heat panels for lab_e's 3 prototypes IMMEDIATELY")
++print("2. Share results with lab_e")
++print("3. Push lab_e/lab_b to measure strength for p_4V8BTTYF7C (QP-4476)")
++print("4. Push lab_c/lab_f to measure water for p_4V8BTTYF7C (QP-4476)")

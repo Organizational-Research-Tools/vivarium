@@ -1,0 +1,6 @@
+import pandas as pd
+x=pd.read_csv('records.csv');
+for p in ['QP-9259','QP-5174','QP-9273','QP-8807','QP-9219']:
+ z=x[x.project==p]
+ print('\n',p, z.groupby(['prototype_id','instrument']).value.agg(['size','mean']).to_string())
+ print(z.drop_duplicates('prototype_id')[['prototype_id']+[c for c in x.columns[10:]].__class__] if False else '')

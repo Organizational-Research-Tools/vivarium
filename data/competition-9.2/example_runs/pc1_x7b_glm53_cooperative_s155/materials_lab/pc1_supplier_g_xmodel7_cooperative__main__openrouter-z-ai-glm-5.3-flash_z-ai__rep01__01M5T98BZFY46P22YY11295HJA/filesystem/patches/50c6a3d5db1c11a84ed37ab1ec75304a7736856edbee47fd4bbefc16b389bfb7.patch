@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++cols=[c for c in df.columns]
++print(cols)
++sub=df[(df.prototype_id.isin(['p_NHMP03RFW8','p_NW6X0WP08N','p_STWKHJTXGX','p_7XKYSR0K56']))]
++print(sub[cols].to_string())

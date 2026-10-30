@@ -1,0 +1,9 @@
+import pandas as pd
+D=pd.read_csv('records.csv')
+mods=list(D.columns[11:23]); print(mods)
+x=D.groupby(['project','prototype_id','instrument','measured_by']).first().reset_index()
+# each prototype properties means
+z=D.groupby(['project','prototype_id','instrument','test']).value.mean().unstack('test').reset_index()
+recipes=D.groupby(['project','prototype_id'])[mods].first().reset_index()
+r=recipes.merge(z,on=['project','prototype_id'],how='left')
+print(r.to_string(index=False))

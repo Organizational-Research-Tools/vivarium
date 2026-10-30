@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+y=x[(x.project=='QP-3617')&(x.instrument=='water')]
+print(y[['prototype_id','kind','value','measured_by','base_sheet','joint_system','process_profile_1']].tail(160).to_string(index=False))

@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -829,3 +829,4 @@
+ r_EQ7Z63GBR3,exploratory,QP-2236,p_S5WN995RB7,heat,seal hold temperature,,78.15200,°C,lab_d,lab_a,,,,,,,,,,,,
+ r_D1SNQEKJDS,exploratory,QP-2236,p_S5WN995RB7,heat,seal hold temperature,,78.42725,°C,lab_d,lab_a,,,,,,,,,,,,
+ r_D1SNQEKJDT,exploratory,QP-2236,p_S5WN995RB7,heat,seal hold temperature,,78.56425,°C,lab_d,lab_a,,,,,,,,,,,,
++r_KNJXRSMYX7,exploratory,QP-2236,p_38YC9Q1WJ8,strength,edge crush resistance,,7.29950,kN/m,lab_e,lab_d,ZY6,TU4,Y9V,QE3,Q7S,6UD,2WG,T8R,5J9,VR3,G7L,3DC

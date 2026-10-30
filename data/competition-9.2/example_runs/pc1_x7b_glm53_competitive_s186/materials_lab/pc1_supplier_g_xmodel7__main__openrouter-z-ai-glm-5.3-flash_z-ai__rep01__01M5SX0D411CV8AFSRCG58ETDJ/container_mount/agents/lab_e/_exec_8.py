@@ -1,0 +1,6 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+print(df.project.unique())
+print(df.test.unique())
+print(df[df.project=='QP-8476'].shape)
+print(df[df.project=='QP-8476'].head(3).to_string())

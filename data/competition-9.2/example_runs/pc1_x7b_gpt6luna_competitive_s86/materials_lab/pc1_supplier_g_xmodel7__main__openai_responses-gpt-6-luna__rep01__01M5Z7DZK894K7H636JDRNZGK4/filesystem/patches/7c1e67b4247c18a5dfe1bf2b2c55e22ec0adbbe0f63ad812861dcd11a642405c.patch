@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -0,0 +1,12 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++# aggregate by prototype/test/type
++z=x.groupby(['project','prototype_id','test','kind']).value.agg(['mean','count']).reset_index()
++# panels candidates with all panel tests
++p=z[z.kind=='qualification'].pivot_table(index=['project','prototype_id'],columns='test',values='mean')
++print('ALL 3 panel candidates')
++print(p.dropna().to_string())
++# summary prototypes for QP6879,3617,9273
++for proj in ['QP-6879','QP-3617','QP-9273']:
++ print('\n',proj)
++ print(z[z.project==proj].sort_values(['prototype_id','test']).to_string(index=False))

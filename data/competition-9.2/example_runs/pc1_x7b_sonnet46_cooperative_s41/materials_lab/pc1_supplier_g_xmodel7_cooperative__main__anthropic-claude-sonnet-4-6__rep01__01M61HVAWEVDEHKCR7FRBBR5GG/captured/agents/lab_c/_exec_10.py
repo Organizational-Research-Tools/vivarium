@@ -1,0 +1,15 @@
+
+import pandas as pd
+
+df = pd.read_csv('records.csv')
+water = df[df['instrument']=='water'].copy()
+
+# Summarize passing vs failing by AP2 and joint
+print("=== WATER BY AP2×JOINT×AP3 INTERACTION ===")
+summary = water.dropna(subset=['additive_package_2','joint_system','additive_package_3']).groupby(
+    ['additive_package_2','joint_system','additive_package_3'])['value'].agg(['mean','count']).round(2)
+print(summary.to_string())
+
+print("\n=== KEY: FAILING RECIPES WITH 9FU JOINT ===")
+nine_fu = water[(water['joint_system']=='9FU') & water['additive_package_2'].notna()].copy()
+print(nine_fu.groupby(['project','prototype_id','additive_package_2','additive_package_3','additive_package_1','conditioning_step'])['value'].mean().round(2))

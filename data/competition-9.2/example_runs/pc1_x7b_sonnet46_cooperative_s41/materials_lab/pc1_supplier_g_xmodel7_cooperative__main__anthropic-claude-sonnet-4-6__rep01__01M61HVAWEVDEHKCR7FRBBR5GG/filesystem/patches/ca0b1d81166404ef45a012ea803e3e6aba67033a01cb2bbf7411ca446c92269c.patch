@@ -1,0 +1,53 @@
+--- 
++++ 
+@@ -0,0 +1,50 @@
++
++import pandas as pd
++df = pd.read_csv('records.csv')
++
++# Check what complete 3-test panels exist with all passing Rev C
++heat_thresh, str_thresh, water_thresh = 78.625, 7.235, 79.8
++
++print("=== Finding prototypes with complete panels passing ALL Rev C thresholds ===")
++candidates = []
++for pid, grp in df.groupby('prototype_id'):
++    proj = grp['project'].iloc[0]
++    
++    # Get per-test groups
++    heat_q = grp[grp['test'].str.contains('temperature', case=False) & (grp['kind']=='qualification')]
++    str_q = grp[grp['test'].str.contains('crush', case=False) & (grp['kind']=='qualification')]
++    water_q = grp[grp['test'].str.contains('wet', case=False) & (grp['kind']=='qualification')]
++    
++    if len(heat_q)==6 and len(str_q)==6 and len(water_q)==6:
++        h_mean = heat_q['value'].mean()
++        s_mean = str_q['value'].mean()
++        w_mean = water_q['value'].mean()
++        h_ok = h_mean >= heat_thresh
++        s_ok = s_mean >= str_thresh
++        w_ok = w_mean >= water_thresh
++        
++        # weakest margin
++        h_margin = (h_mean - 77.5) / 0.25
++        s_margin = (s_mean - 7.10) / 0.03
++        w_margin = (w_mean - 78.0) / 0.4
++        weakest = min(h_margin, s_margin, w_margin)
++        
++        # recipe
++        recipe_cols = ['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2',
++                       'additive_package_3','process_profile_1','process_profile_2','process_profile_3',
++                       'surface_treatment','joint_system','conditioning_step']
++        recipe = [grp.iloc[0].get(c,'?') for c in recipe_cols if c in grp.columns]
++        
++        gg7 = 'GG7' in recipe
++        all_pass = h_ok and s_ok and w_ok
++        
++        print(f"\n{'✅ PASS' if all_pass else '❌ FAIL'} {'[GG7]' if gg7 else '[non-GG7]'} {pid} ({proj}):")
++        print(f"  heat={h_mean:.4f}{'✅' if h_ok else '❌'}, str={s_mean:.4f}{'✅' if s_ok else '❌'}, water={w_mean:.4f}{'✅' if w_ok else '❌'}")
++        print(f"  weakest margin: {weakest:.3f} steps")
++        print(f"  recipe: {recipe}")
++        if all_pass:
++            candidates.append((pid, proj, weakest, gg7, heat_q['record_id'].tolist(), str_q['record_id'].tolist(), water_q['record_id'].tolist()))
++
++print(f"\n\nTotal complete passing candidates: {len(candidates)}")
++for c in candidates:
++    print(f"  {c[0]} ({c[1]}) weakest={c[2]:.3f} GG7={c[3]}")

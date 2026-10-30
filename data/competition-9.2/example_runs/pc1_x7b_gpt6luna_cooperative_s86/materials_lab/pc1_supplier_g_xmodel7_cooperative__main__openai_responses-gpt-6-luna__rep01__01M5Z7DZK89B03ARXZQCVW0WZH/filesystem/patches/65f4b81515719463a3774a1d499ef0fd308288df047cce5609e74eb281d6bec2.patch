@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -0,0 +1,12 @@
++import pandas as pd
++r=pd.read_csv('records.csv'); q=r[r.kind=='qualification'].groupby(['project','prototype_id','test']).agg(n=('value','count'),m=('value','mean')).reset_index()
++p=q.pivot(index=['project','prototype_id'],columns='test',values='m')
++# all with two of heat/S at threshold, see water
++for (pr,pid), row in p.iterrows():
++  if pr in ['QP-5174','QP-7092','QP-6879','QP-9273']:
++    h=row.get('seal hold temperature',float('nan')); s=row.get('edge crush resistance',float('nan')); w=row.get('wet strength retained',float('nan'))
++    if (pd.notna(h) and h>=78.25 and pd.notna(s) and s>=7.19) or (pd.notna(h) and h>=78.25 and pd.notna(w) and w>=79.2) or (pd.notna(s) and s>=7.19 and pd.notna(w) and w>=79.2):
++      print(pr,pid,'H',h,'S',s,'W',w)
++print('\nAll prototypes in no-qual projects with W pass:')
++for (pr,pid), row in p.iterrows():
++  if pr in ['QP-5174','QP-7092','QP-6879','QP-9273'] and row.get('wet strength retained',-1)>=79.2: print(pr,pid,row.to_dict())

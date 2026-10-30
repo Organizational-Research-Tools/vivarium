@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -537,3 +537,9 @@
+ r_NVBEWBKKEJ,exploratory,QP-5653,p_6J148CPE86,strength,edge crush resistance,,7.21376,kN/m,lab_e,lab_a,,,,,,,,,,,,
+ r_NVBEWBKKEK,exploratory,QP-5653,p_62ECQJKMB8,strength,edge crush resistance,,7.19987,kN/m,lab_e,lab_a,,,,,,,,,,,,
+ r_NVBEWBKKEM,exploratory,QP-5653,p_62ECQJKMB8,strength,edge crush resistance,,7.21310,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_HK19HMNYV5,qualification,QP-5653,p_62ECQJKMBA,strength,edge crush resistance,0,7.13756,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_HK19HMNYV6,qualification,QP-5653,p_62ECQJKMBA,strength,edge crush resistance,1,7.14251,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_HK19HMNYV7,qualification,QP-5653,p_62ECQJKMBA,strength,edge crush resistance,2,7.16966,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_HK19HMNYV8,qualification,QP-5653,p_62ECQJKMBA,strength,edge crush resistance,3,7.18280,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_HK19HMNYV9,qualification,QP-5653,p_62ECQJKMBA,strength,edge crush resistance,4,7.18007,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_HK19HMNYVA,qualification,QP-5653,p_62ECQJKMBA,strength,edge crush resistance,5,7.20050,kN/m,lab_e,lab_a,,,,,,,,,,,,

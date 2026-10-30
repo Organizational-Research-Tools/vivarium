@@ -1,0 +1,40 @@
+--- 
++++ 
+@@ -0,0 +1,37 @@
++
++import pandas as pd
++import numpy as np
++
++df = pd.read_csv('records.csv')
++
++# Check lab_d's QP-4476 prototype data I have
++print("=== ALL RECORDS I HOLD (checking for compositions) ===")
++print(f"Total records: {len(df)}")
++print(f"Unique prototypes: {df['prototype_id'].nunique()}")
++print(f"Prototypes: {df['prototype_id'].unique()[:10]}")
++
++# Check which prototypes have recipe info
++has_recipe = df[df['base_sheet'].notna()].copy() if 'base_sheet' in df.columns else pd.DataFrame()
++print(f"\nRecords with recipe info: {len(has_recipe)}")
++
++# Check the QP-8265 margins carefully
++print("\n=== QP-8265 (p_KJZ5KNC3WG) DETAILED ===")
++q8265 = df[(df['prototype_id'] == 'p_KJZ5KNC3WG') & (df['kind'] == 'qualification')].copy() if 'prototype_id' in df.columns else pd.DataFrame()
++if not q8265.empty:
++    for test in q8265['test'].unique():
++        grp = q8265[q8265['test'] == test]
++        mean = grp['value'].mean()
++        print(f"  {test}: n={len(grp)}, mean={mean:.4f}")
++        
++# Check thresholds under rev B
++print("\n=== REVISION B THRESHOLD CHECK ===")
++print("Heat: base 77.5°C + 3×0.25 = 78.25°C required")
++print("Strength: base 7.1 kN/m + 3×0.03 = 7.19 kN/m required")  
++print("Water: base 78.0% + 3×0.4 = 79.2% required")
++
++print("\n=== INTERACTION WARNING FOR LAB_B ===")
++print("Lab_b claims pp1 is NOT in heat interactions. THIS IS WRONG!")
++print("Interaction: surface_treatment × process_profile_1 × process_profile_3 → HEAT")
++print("In JA8 recipe: 7KL × [62D→4QB] × N4L — WILL change heat!")
++print("Direction unknown but could help (push above 78.25°C) or hurt further.")
++print("Good news: water thresholds don't involve pp1 — water ~80.7% should remain safe.")

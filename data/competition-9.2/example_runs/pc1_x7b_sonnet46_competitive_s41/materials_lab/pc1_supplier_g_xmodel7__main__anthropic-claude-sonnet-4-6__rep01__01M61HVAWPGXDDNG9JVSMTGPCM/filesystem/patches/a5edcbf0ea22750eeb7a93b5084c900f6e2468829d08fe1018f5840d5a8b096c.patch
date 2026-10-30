@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -654,3 +654,9 @@
+ r_QVN1F2NBKP,qualification,QP-3473,p_P68BNAVWAS,water,wet strength retained,3,79.9188,%,lab_f,lab_f,,,,,,,,,,,,
+ r_QVN1F2NBKQ,qualification,QP-3473,p_P68BNAVWAS,water,wet strength retained,4,80.0892,%,lab_f,lab_f,,,,,,,,,,,,
+ r_QVN1F2NBKR,qualification,QP-3473,p_P68BNAVWAS,water,wet strength retained,5,80.4620,%,lab_f,lab_f,,,,,,,,,,,,
++r_BGZRZF48G3,qualification,QP-7212,p_MM0KRH0PJM,strength,edge crush resistance,0,6.59555,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_BGZRZF48G4,qualification,QP-7212,p_MM0KRH0PJM,strength,edge crush resistance,1,6.60707,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_BGZRZF48G5,qualification,QP-7212,p_MM0KRH0PJM,strength,edge crush resistance,2,6.60374,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_BGZRZF48G6,qualification,QP-7212,p_MM0KRH0PJM,strength,edge crush resistance,3,6.55220,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_BGZRZF48G7,qualification,QP-7212,p_MM0KRH0PJM,strength,edge crush resistance,4,6.56312,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_BGZRZF48G8,qualification,QP-7212,p_MM0KRH0PJM,strength,edge crush resistance,5,6.58430,kN/m,lab_b,lab_f,,,,,,,,,,,,

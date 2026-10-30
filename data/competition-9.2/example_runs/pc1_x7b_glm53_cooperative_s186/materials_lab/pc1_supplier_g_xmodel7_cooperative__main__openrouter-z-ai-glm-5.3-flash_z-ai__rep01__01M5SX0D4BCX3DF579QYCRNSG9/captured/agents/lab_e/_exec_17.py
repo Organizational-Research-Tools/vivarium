@@ -1,0 +1,8 @@
+import pandas as pd
+d = pd.read_csv("records.csv")
+tmap = {"seal hold temperature":"heat","edge crush resistance":"strength","wet strength retained":"water"}
+d["t"]=d.test.map(tmap)
+e = d[d.kind=="exploratory"]
+for proj,g in e.groupby("project"):
+    s = g.pivot_table(index="prototype_id", columns="t", values="value", aggfunc="max")
+    print(proj, s.round(2).to_string())

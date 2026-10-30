@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -339,3 +339,15 @@
+ r_AKHZ0ZBP23,qualification,QP-3068,p_B5MA1D5HJ8,strength,edge crush resistance,4,7.21517,kN/m,lab_b,lab_b,,,,,,,,,,,,
+ r_AKHZ0ZBP24,qualification,QP-3068,p_B5MA1D5HJ8,strength,edge crush resistance,5,7.21748,kN/m,lab_b,lab_b,,,,,,,,,,,,
+ r_ZK438HCGMA,exploratory,QP-5066,p_4GDGQG6XPF,heat,seal hold temperature,,77.44000,°C,lab_a,lab_c,ZY6,N2L,KX7,X2P,RB3,8P4,RF3,LR4,A7P,BX9,FA3,3DC
++r_6F7F5Z2HME,exploratory,QP-9470,p_R5D0ZPFW5D,water,wet strength retained,,76.6812,%,lab_c,lab_d,,,,,,,,,,,,
++r_6F7F5Z2HMF,exploratory,QP-9470,p_R5D0ZPFW5D,water,wet strength retained,,76.6248,%,lab_c,lab_d,,,,,,,,,,,,
++r_6F7F5Z2HMG,exploratory,QP-9470,p_R5D0ZPFW5D,water,wet strength retained,,76.3464,%,lab_c,lab_d,,,,,,,,,,,,
++r_6F7F5Z2HMH,exploratory,QP-1586,p_KV3GM10NKV,water,wet strength retained,,78.9480,%,lab_c,lab_d,,,,,,,,,,,,
++r_6F7F5Z2HMJ,exploratory,QP-1586,p_KV3GM10NKV,water,wet strength retained,,80.3816,%,lab_c,lab_d,,,,,,,,,,,,
++r_6F7F5Z2HMK,exploratory,QP-1586,p_KV3GM10NKV,water,wet strength retained,,79.7308,%,lab_c,lab_d,,,,,,,,,,,,
++r_6F7F5Z2HMM,exploratory,QP-2236,p_SDA1QZ1MZN,water,wet strength retained,,70.7400,%,lab_c,lab_a,,,,,,,,,,,,
++r_6F7F5Z2HMN,exploratory,QP-2236,p_SDA1QZ1MZN,water,wet strength retained,,70.0828,%,lab_c,lab_a,,,,,,,,,,,,
++r_6F7F5Z2HMP,exploratory,QP-2236,p_SDA1QZ1MZN,water,wet strength retained,,70.3736,%,lab_c,lab_a,,,,,,,,,,,,
++r_P8R8SXQ4KK,exploratory,QP-2236,p_ZTC41DJ3T0,water,wet strength retained,,70.1208,%,lab_c,lab_a,,,,,,,,,,,,
++r_P8R8SXQ4KM,exploratory,QP-2236,p_ZTC41DJ3T0,water,wet strength retained,,70.9840,%,lab_c,lab_a,,,,,,,,,,,,
++r_P8R8SXQ4KN,exploratory,QP-2236,p_ZTC41DJ3T0,water,wet strength retained,,70.9776,%,lab_c,lab_a,,,,,,,,,,,,

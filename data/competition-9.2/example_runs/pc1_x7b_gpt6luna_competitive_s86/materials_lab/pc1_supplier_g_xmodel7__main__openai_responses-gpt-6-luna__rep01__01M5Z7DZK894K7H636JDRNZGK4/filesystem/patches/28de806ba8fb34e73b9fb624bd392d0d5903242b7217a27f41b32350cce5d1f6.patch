@@ -1,0 +1,65 @@
+--- 
++++ 
+@@ -740,24 +740,24 @@
+ r_GS196BRVCQ,qualification,QP-3617,p_V6SWCFNZDS,heat,seal hold temperature,3,78.18500,°C,lab_d,lab_d,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2
+ r_GS196BRVCR,qualification,QP-3617,p_V6SWCFNZDS,heat,seal hold temperature,4,77.83450,°C,lab_d,lab_d,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2
+ r_GS196BRVCS,qualification,QP-3617,p_V6SWCFNZDS,heat,seal hold temperature,5,77.94900,°C,lab_d,lab_d,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2
+-r_XWNJSCQW8A,qualification,QP-3617,p_1R7D8ZYK1G,water,wet strength retained,0,79.5820,%,lab_c,lab_b,,,,,,,,,,,,
+-r_XWNJSCQW8B,qualification,QP-3617,p_1R7D8ZYK1G,water,wet strength retained,1,80.0060,%,lab_c,lab_b,,,,,,,,,,,,
+-r_XWNJSCQW8C,qualification,QP-3617,p_1R7D8ZYK1G,water,wet strength retained,2,80.2980,%,lab_c,lab_b,,,,,,,,,,,,
+-r_XWNJSCQW8D,qualification,QP-3617,p_1R7D8ZYK1G,water,wet strength retained,3,80.1496,%,lab_c,lab_b,,,,,,,,,,,,
+-r_XWNJSCQW8E,qualification,QP-3617,p_1R7D8ZYK1G,water,wet strength retained,4,80.3080,%,lab_c,lab_b,,,,,,,,,,,,
+-r_XWNJSCQW8F,qualification,QP-3617,p_1R7D8ZYK1G,water,wet strength retained,5,80.5180,%,lab_c,lab_b,,,,,,,,,,,,
+-r_XWNJSCQW8G,qualification,QP-3617,p_1R7D8ZYK1J,water,wet strength retained,0,80.0992,%,lab_c,lab_b,,,,,,,,,,,,
+-r_XWNJSCQW8H,qualification,QP-3617,p_1R7D8ZYK1J,water,wet strength retained,1,80.3036,%,lab_c,lab_b,,,,,,,,,,,,
+-r_XWNJSCQW8J,qualification,QP-3617,p_1R7D8ZYK1J,water,wet strength retained,2,80.5884,%,lab_c,lab_b,,,,,,,,,,,,
+-r_XWNJSCQW8K,qualification,QP-3617,p_1R7D8ZYK1J,water,wet strength retained,3,80.7088,%,lab_c,lab_b,,,,,,,,,,,,
+-r_XWNJSCQW8M,qualification,QP-3617,p_1R7D8ZYK1J,water,wet strength retained,4,80.9092,%,lab_c,lab_b,,,,,,,,,,,,
+-r_XWNJSCQW8N,qualification,QP-3617,p_1R7D8ZYK1J,water,wet strength retained,5,81.1540,%,lab_c,lab_b,,,,,,,,,,,,
+-r_B0JWY5GG4J,qualification,QP-3617,p_1R7D8ZYK1M,water,wet strength retained,0,79.6984,%,lab_c,lab_b,,,,,,,,,,,,
+-r_B0JWY5GG4K,qualification,QP-3617,p_1R7D8ZYK1M,water,wet strength retained,1,79.6976,%,lab_c,lab_b,,,,,,,,,,,,
+-r_B0JWY5GG4M,qualification,QP-3617,p_1R7D8ZYK1M,water,wet strength retained,2,79.8648,%,lab_c,lab_b,,,,,,,,,,,,
+-r_B0JWY5GG4N,qualification,QP-3617,p_1R7D8ZYK1M,water,wet strength retained,3,80.0992,%,lab_c,lab_b,,,,,,,,,,,,
+-r_B0JWY5GG4P,qualification,QP-3617,p_1R7D8ZYK1M,water,wet strength retained,4,80.4356,%,lab_c,lab_b,,,,,,,,,,,,
+-r_B0JWY5GG4Q,qualification,QP-3617,p_1R7D8ZYK1M,water,wet strength retained,5,80.6100,%,lab_c,lab_b,,,,,,,,,,,,
++r_XWNJSCQW8A,qualification,QP-3617,p_1R7D8ZYK1G,water,wet strength retained,0,79.5820,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,8KZ,FJ2,UX3,YX4,SU2
++r_XWNJSCQW8B,qualification,QP-3617,p_1R7D8ZYK1G,water,wet strength retained,1,80.0060,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,8KZ,FJ2,UX3,YX4,SU2
++r_XWNJSCQW8C,qualification,QP-3617,p_1R7D8ZYK1G,water,wet strength retained,2,80.2980,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,8KZ,FJ2,UX3,YX4,SU2
++r_XWNJSCQW8D,qualification,QP-3617,p_1R7D8ZYK1G,water,wet strength retained,3,80.1496,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,8KZ,FJ2,UX3,YX4,SU2
++r_XWNJSCQW8E,qualification,QP-3617,p_1R7D8ZYK1G,water,wet strength retained,4,80.3080,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,8KZ,FJ2,UX3,YX4,SU2
++r_XWNJSCQW8F,qualification,QP-3617,p_1R7D8ZYK1G,water,wet strength retained,5,80.5180,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,8KZ,FJ2,UX3,YX4,SU2
++r_XWNJSCQW8G,qualification,QP-3617,p_1R7D8ZYK1J,water,wet strength retained,0,80.0992,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,QE8,FJ2,UX3,YX4,SU2
++r_XWNJSCQW8H,qualification,QP-3617,p_1R7D8ZYK1J,water,wet strength retained,1,80.3036,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,QE8,FJ2,UX3,YX4,SU2
++r_XWNJSCQW8J,qualification,QP-3617,p_1R7D8ZYK1J,water,wet strength retained,2,80.5884,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,QE8,FJ2,UX3,YX4,SU2
++r_XWNJSCQW8K,qualification,QP-3617,p_1R7D8ZYK1J,water,wet strength retained,3,80.7088,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,QE8,FJ2,UX3,YX4,SU2
++r_XWNJSCQW8M,qualification,QP-3617,p_1R7D8ZYK1J,water,wet strength retained,4,80.9092,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,QE8,FJ2,UX3,YX4,SU2
++r_XWNJSCQW8N,qualification,QP-3617,p_1R7D8ZYK1J,water,wet strength retained,5,81.1540,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,QE8,FJ2,UX3,YX4,SU2
++r_B0JWY5GG4J,qualification,QP-3617,p_1R7D8ZYK1M,water,wet strength retained,0,79.6984,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,2JH,FJ2,UX3,YX4,SU2
++r_B0JWY5GG4K,qualification,QP-3617,p_1R7D8ZYK1M,water,wet strength retained,1,79.6976,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,2JH,FJ2,UX3,YX4,SU2
++r_B0JWY5GG4M,qualification,QP-3617,p_1R7D8ZYK1M,water,wet strength retained,2,79.8648,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,2JH,FJ2,UX3,YX4,SU2
++r_B0JWY5GG4N,qualification,QP-3617,p_1R7D8ZYK1M,water,wet strength retained,3,80.0992,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,2JH,FJ2,UX3,YX4,SU2
++r_B0JWY5GG4P,qualification,QP-3617,p_1R7D8ZYK1M,water,wet strength retained,4,80.4356,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,2JH,FJ2,UX3,YX4,SU2
++r_B0JWY5GG4Q,qualification,QP-3617,p_1R7D8ZYK1M,water,wet strength retained,5,80.6100,%,lab_c,lab_b,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,2JH,FJ2,UX3,YX4,SU2
+ r_3Z9TAKZS2M,exploratory,QP-3617,p_CD8N0FCXD5,heat,seal hold temperature,,78.16150,°C,lab_d,lab_d,8GP,RK7,VQ6,7TW,74N,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2
+ r_3Z9TAKZS2N,exploratory,QP-3617,p_CD8N0FCXD7,heat,seal hold temperature,,78.11825,°C,lab_d,lab_d,8GP,RK7,VQ6,7TW,F8Y,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2
+ r_3Z9TAKZS2P,exploratory,QP-3617,p_CD8N0FCXD9,heat,seal hold temperature,,72.14800,°C,lab_d,lab_d,8GP,RK7,VQ6,7TW,EB7,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2
+@@ -773,3 +773,19 @@
+ r_NJ14EF7EKE,exploratory,QP-3617,p_SB5P13SAGD,heat,seal hold temperature,,72.87900,°C,lab_d,lab_d,8GP,RK7,VQ6,7TW,EB7,7BD,2A4,9HJ,FJ2,96Y,YX4,SU2
+ r_NJ14EF7EKF,exploratory,QP-3617,p_SB5P13SAGF,heat,seal hold temperature,,72.99750,°C,lab_d,lab_d,8GP,RK7,VQ6,7TW,EB7,P2E,2A4,9HJ,FJ2,96Y,YX4,SU2
+ r_KZNS7KDPSH,exploratory,QP-3617,p_SB5P13SAGH,heat,seal hold temperature,,77.52475,°C,lab_d,lab_d,8GP,RK7,VQ6,7TW,EB7,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_XXJSJJNDVS,exploratory,QP-3617,p_CD8N0FCXD5,water,wet strength retained,,80.3900,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,74N,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_XXJSJJNDVT,exploratory,QP-3617,p_CD8N0FCXD7,water,wet strength retained,,72.3912,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,F8Y,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_R7KS9HENE5,exploratory,QP-3617,p_CD8N0FCXDN,water,wet strength retained,,79.8552,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_R7KS9HENE6,exploratory,QP-3617,p_SB5P13SAGH,water,wet strength retained,,71.0616,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,EB7,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_D42CV6ZZB7,qualification,QP-3617,p_CD8N0FCXDN,water,wet strength retained,0,80.6504,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_D42CV6ZZB8,qualification,QP-3617,p_CD8N0FCXDN,water,wet strength retained,1,80.7804,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_D42CV6ZZB9,qualification,QP-3617,p_CD8N0FCXDN,water,wet strength retained,2,79.8932,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_D42CV6ZZBA,qualification,QP-3617,p_CD8N0FCXDN,water,wet strength retained,3,80.0484,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_D42CV6ZZBB,qualification,QP-3617,p_CD8N0FCXDN,water,wet strength retained,4,80.3088,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_D42CV6ZZBC,qualification,QP-3617,p_CD8N0FCXDN,water,wet strength retained,5,80.3588,%,lab_f,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_BWMWFRQY1S,qualification,QP-3617,p_CD8N0FCXDN,strength,edge crush resistance,0,6.52037,kN/m,lab_b,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_BWMWFRQY1T,qualification,QP-3617,p_CD8N0FCXDN,strength,edge crush resistance,1,6.54908,kN/m,lab_b,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_BWMWFRQY1V,qualification,QP-3617,p_CD8N0FCXDN,strength,edge crush resistance,2,6.55820,kN/m,lab_b,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_BWMWFRQY1W,qualification,QP-3617,p_CD8N0FCXDN,strength,edge crush resistance,3,6.51452,kN/m,lab_b,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_BWMWFRQY1X,qualification,QP-3617,p_CD8N0FCXDN,strength,edge crush resistance,4,6.49295,kN/m,lab_b,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_BWMWFRQY1Y,qualification,QP-3617,p_CD8N0FCXDN,strength,edge crush resistance,5,6.51140,kN/m,lab_b,lab_d,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,96Y,YX4,SU2

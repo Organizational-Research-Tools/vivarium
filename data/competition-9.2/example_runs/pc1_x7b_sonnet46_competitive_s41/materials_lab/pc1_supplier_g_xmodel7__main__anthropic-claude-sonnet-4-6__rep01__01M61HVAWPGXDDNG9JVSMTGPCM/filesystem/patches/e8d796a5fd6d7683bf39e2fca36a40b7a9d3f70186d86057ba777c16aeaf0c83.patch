@@ -1,0 +1,74 @@
+--- 
++++ 
+@@ -0,0 +1,71 @@
++
++import pandas as pd
++import numpy as np
++
++df = pd.read_csv('records.csv')
++
++# From my_records, each recipe has multiple prototype IDs (one per instrument)
++# Let me group by recipe using the known groupings
++
++# Each "recipe group" from my_records:
++# QP-4476 recipe A: p_3M6XTZNJH7 (heat), p_116KYTE75G (strength), p_116KYTE75S (water)
++# QP-4476 recipe B (GG7): p_Q15KX5S0ZB (strength) - missing heat & water
++# QP-6843 recipe A: p_BNV031NMS0 (heat), p_FHEAB08WKF (strength), p_FHEAB08WKR (water)
++# QP-6843 recipe B: p_KM74HN14JP (heat), p_709M2WBJ6B (strength), p_S88GZKQT24 (water)
++# QP-3473 recipe A (GG7): p_0SM1T5W2MM (heat), p_0SM1T5W2MZ (strength), p_YWF2FP1GRJ (water)
++# QP-3473 recipe B: p_EPVZ9RFXEN (heat), p_EPVZ9RFXEY (strength), p_PH32D2B0XS (water)
++# QP-3473 recipe C: p_W26PZ2P9TS (heat), p_5NEMM18WK4 (strength), p_5NEMM18WKD (water)
++# QP-7212 recipe A: p_JWY0AKX2JN (heat), p_4GSHAV07RH (strength), p_4GSHAV07RT (water)
++# QP-7212 recipe B: p_62M6F55F9E (heat), p_C0Q8ZSBFW5 (strength), p_C0Q8ZSBFWE (water)
++# QP-7212 recipe C: p_5ABZWZZPBZ (heat), p_AAY9VGT90M (strength), p_AAY9VGT90X (water)
++# QP-3089 recipe A: p_Q415FNG0HY (heat), p_5DNPXA0CHC (strength), p_5DNPXA0CHN (water)
++# QP-3089 recipe B (GG7): p_Q63BGDH256 (strength) - missing heat & water
++# QP-8265 recipe A: p_PR6XQ3SNQH (heat), p_PR6XQ3SNQT (strength), p_PR6XQ3SNR3 (water)
++
++# Get means from CSV
++def get_mean(pid, test_key):
++    rows = df[(df['prototype_id'] == pid) & (df['test'].str.contains(test_key))]
++    if len(rows) == 0: return None
++    return rows['value'].mean()
++
++# Thresholds
++heat_thresh = 77.5   # °C
++str_thresh = 7.1     # kN/m  
++water_thresh = 78.0  # %
++
++# Heat step = 0.25°C, strength step = 0.03 kN/m, water step = 0.4%
++
++recipes = [
++    # project, name, heat_id, str_id, water_id, GG7
++    ("QP-4476", "A", "p_3M6XTZNJH7", "p_116KYTE75G", "p_116KYTE75S", False),
++    ("QP-4476", "B(GG7)", "?", "p_Q15KX5S0ZB", "?", True),
++    ("QP-6843", "A", "p_BNV031NMS0", "p_FHEAB08WKF", "p_FHEAB08WKR", False),
++    ("QP-6843", "B", "p_KM74HN14JP", "p_709M2WBJ6B", "p_S88GZKQT24", False),
++    ("QP-3473", "A(GG7)", "p_0SM1T5W2MM", "p_0SM1T5W2MZ", "p_YWF2FP1GRJ", True),
++    ("QP-3473", "B", "p_EPVZ9RFXEN", "p_EPVZ9RFXEY", "p_PH32D2B0XS", False),
++    ("QP-3473", "C", "p_W26PZ2P9TS", "p_5NEMM18WK4", "p_5NEMM18WKD", False),
++    ("QP-7212", "A", "p_JWY0AKX2JN", "p_4GSHAV07RH", "p_4GSHAV07RT", False),
++    ("QP-7212", "B", "p_62M6F55F9E", "p_C0Q8ZSBFW5", "p_C0Q8ZSBFWE", False),
++    ("QP-7212", "C", "p_5ABZWZZPBZ", "p_AAY9VGT90M", "p_AAY9VGT90X", False),
++    ("QP-3089", "A", "p_Q415FNG0HY", "p_5DNPXA0CHC", "p_5DNPXA0CHN", False),
++    ("QP-3089", "B(GG7)", "?", "p_Q63BGDH256", "?", True),
++    ("QP-8265", "A", "p_PR6XQ3SNQH", "p_PR6XQ3SNQT", "p_PR6XQ3SNR3", False),
++]
++
++print(f"{'Project':<10} {'Recipe':<8} {'GG7':<5} {'Heat':>8} {'Str':>8} {'Water':>8} {'pH':>4} {'pS':>4} {'pW':>4} {'ALL':>4}")
++print("-" * 75)
++for proj, name, hid, sid, wid, gg7 in recipes:
++    h = get_mean(hid, 'seal') if hid != '?' else None
++    s = get_mean(sid, 'crush') if sid != '?' else None
++    w = get_mean(wid, 'wet') if wid != '?' else None
++    
++    ph = '✓' if h is not None and h >= heat_thresh else ('✗' if h is not None else '?')
++    ps = '✓' if s is not None and s >= str_thresh else ('✗' if s is not None else '?')
++    pw = '✓' if w is not None and w >= water_thresh else ('✗' if w is not None else '?')
++    all_pass = ph == '✓' and ps == '✓' and pw == '✓'
++    
++    hs = f"{h:.2f}" if h else "  N/A"
++    ss = f"{s:.3f}" if s else "  N/A"
++    ws = f"{w:.2f}" if w else "  N/A"
++    
++    print(f"{proj:<10} {name:<8} {'Y' if gg7 else 'N':<5} {hs:>8} {ss:>8} {ws:>8} {ph:>4} {ps:>4} {pw:>4} {'ALL✓' if all_pass else '':>4}")

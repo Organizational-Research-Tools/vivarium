@@ -1,0 +1,10 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+g=df[df.kind=='qualification'].groupby(['prototype_id','test','instrument']+['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step'])['value'].agg(['mean','count']).reset_index()
+# print full table
+pd.set_option('display.width',250)
+for pid in ['p_M7Z2FRPCJY','p_YGT9NNJ46Z','p_ZMZBZW024X','p_AQVRPTDBJQ','p_AQVRPTDBK0','p_NVQ6R2Y4BB','p_NVQ6R2Y4BM','p_NVQ6R2Y4BX','p_C9SMW2XES8']:
+    r=g[g.prototype_id==pid]
+    if len(r):
+        print(pid, r[['prototype_id','test','mean']].values.tolist())
+        print(' mods:', r[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].iloc[0].tolist())

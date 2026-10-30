@@ -1,0 +1,10 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print('rows',len(x)); e=x[x.kind=='exploratory'].groupby(['project','prototype_id','test']).value.mean().unstack(); print(e.shape); thresholds={'seal hold temperature':78.625,'edge crush resistance':7.235,'wet strength retained':79.8}; mask=pd.Series(True,index=e.index)
+for c,t in thresholds.items():
+ if c in e: mask &= e[c]>=t
+best=e[mask].copy(); print('all exp pass',len(best)); print(best.to_string())
+# top per project by normalized min margins
+for idx,r in e.iterrows():
+ vals=[r.get(k,float('nan')) for k in thresholds];
+ if all(pd.notna(v) for v in vals):
+  margins=[(v-thresholds[k])/d for (k,v),d in zip(zip(thresholds,vals),[.25,.03,.4])]

@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++q=df[df.kind=='qualification']
++w=q[q.test=='wet strength retained'].groupby(['project','prototype_id']).value.agg(['mean','count'])
++print(w[w['count']>=3].sort_values('mean',ascending=False).head(20))

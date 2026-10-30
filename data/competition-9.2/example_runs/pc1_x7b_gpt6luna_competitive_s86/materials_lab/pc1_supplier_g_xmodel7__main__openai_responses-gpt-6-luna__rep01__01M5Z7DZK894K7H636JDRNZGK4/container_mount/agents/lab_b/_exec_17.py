@@ -1,0 +1,6 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x.columns.tolist())
+print(x[x.project.eq('QP-9219')].groupby(['prototype_id','kind','instrument','measured_by']).size().to_string())
+print('nonempty recipe rows',x[x.project.eq('QP-9219')].groupby('prototype_id').base_sheet.first().notna().sum())
+print(x[x.prototype_id.str.startswith(('p_2YHYS','p_ND59','p_MZ2','p_HQGX','p_H508'))][['prototype_id','kind','instrument','value','base_sheet','additive_package_2','additive_package_3','surface_treatment']].to_string(index=False))

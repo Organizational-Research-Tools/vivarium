@@ -1,0 +1,12 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+g = df.groupby(['project','prototype_id','test']).value.mean().unstack()
+g.columns=['heat','strength','water']
+print("=== full panels meeting revision B (any project) ===")
+print(g[(g.heat>=78.25)&(g.strength>=7.19)&(g.water>=79.2)])
+print("=== relaxed water 78.8 ===")
+print(g[(g.heat>=78.25)&(g.strength>=7.19)&(g.water>=78.8)])
+print("=== exploratory means meeting B ===")
+e = df[df.kind=='exploratory'].groupby(['project','prototype_id','test']).value.mean().unstack()
+e.columns=['heat','strength','water']
+print(e[(e.heat>=78.3)&(e.strength>=7.19)&(e.water>=79.0)])

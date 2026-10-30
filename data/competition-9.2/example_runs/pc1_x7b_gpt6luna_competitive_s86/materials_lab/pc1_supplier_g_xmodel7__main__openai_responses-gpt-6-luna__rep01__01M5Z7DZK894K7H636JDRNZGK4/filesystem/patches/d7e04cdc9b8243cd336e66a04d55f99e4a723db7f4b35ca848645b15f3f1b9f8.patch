@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -845,3 +845,15 @@
+ r_PXPSH3060S,qualification,QP-3617,p_6HZQR01SMB,heat,seal hold temperature,3,74.39275,°C,lab_a,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
+ r_PXPSH3060T,qualification,QP-3617,p_6HZQR01SMB,heat,seal hold temperature,4,74.54525,°C,lab_a,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
+ r_PXPSH3060V,qualification,QP-3617,p_6HZQR01SMB,heat,seal hold temperature,5,74.55975,°C,lab_a,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_92DJ7A5WH1,qualification,QP-3617,p_3QBE171REF,water,wet strength retained,0,79.3708,%,lab_c,lab_e,8GP,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,96Y,4ZD,6YN
++r_92DJ7A5WH2,qualification,QP-3617,p_3QBE171REF,water,wet strength retained,1,78.8336,%,lab_c,lab_e,8GP,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,96Y,4ZD,6YN
++r_92DJ7A5WH3,qualification,QP-3617,p_3QBE171REF,water,wet strength retained,2,79.1944,%,lab_c,lab_e,8GP,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,96Y,4ZD,6YN
++r_92DJ7A5WH4,qualification,QP-3617,p_3QBE171REF,water,wet strength retained,3,79.2992,%,lab_c,lab_e,8GP,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,96Y,4ZD,6YN
++r_92DJ7A5WH5,qualification,QP-3617,p_3QBE171REF,water,wet strength retained,4,79.3244,%,lab_c,lab_e,8GP,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,96Y,4ZD,6YN
++r_92DJ7A5WH6,qualification,QP-3617,p_3QBE171REF,water,wet strength retained,5,79.3336,%,lab_c,lab_e,8GP,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,96Y,4ZD,6YN
++r_92DJ7A5WH7,qualification,QP-3617,p_6HZQR01SMB,water,wet strength retained,0,78.9764,%,lab_c,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_92DJ7A5WH8,qualification,QP-3617,p_6HZQR01SMB,water,wet strength retained,1,78.9132,%,lab_c,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_92DJ7A5WH9,qualification,QP-3617,p_6HZQR01SMB,water,wet strength retained,2,79.2012,%,lab_c,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_92DJ7A5WHA,qualification,QP-3617,p_6HZQR01SMB,water,wet strength retained,3,79.0980,%,lab_c,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_92DJ7A5WHB,qualification,QP-3617,p_6HZQR01SMB,water,wet strength retained,4,79.3752,%,lab_c,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_92DJ7A5WHC,qualification,QP-3617,p_6HZQR01SMB,water,wet strength retained,5,78.4504,%,lab_c,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN

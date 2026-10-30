@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -0,0 +1,9 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++print(x.columns.tolist())
++for p in ['p_ZDYAYEX9A4','p_ZDYAYEX9A6','p_ZDYAYEX9A8','p_ZDYAYEX9AA','p_EZR46XFBA9','p_EZR46XFBAB','p_EZR46XFBAF','p_FF5QPYJ1FJ','p_FF5QPYJ1FM','p_FF5QPYJ1FP','p_AWPY5ZV668']:
++ d=x[x.prototype_id==p]
++ print('\n',p, 'rows',len(d))
++ if len(d):
++  print(d.iloc[0].to_dict())
++  print(d.groupby(['property','instrument']).agg(n=('value','count'),mean=('value','mean')).to_string())

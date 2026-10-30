@@ -1,0 +1,5 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x.groupby(['project','kind','test']).size().to_string())
+print(x[(x.project=='QP-9219') & x.prototype_id.str.startswith(('p_9B','p_VZG','p_R7','p_2Y','p_TK'))].groupby(['kind','test']).size())
+print(x[(x.project=='QP-9219') & x.kind=='exploratory'].groupby(['test','measured_by']).size())

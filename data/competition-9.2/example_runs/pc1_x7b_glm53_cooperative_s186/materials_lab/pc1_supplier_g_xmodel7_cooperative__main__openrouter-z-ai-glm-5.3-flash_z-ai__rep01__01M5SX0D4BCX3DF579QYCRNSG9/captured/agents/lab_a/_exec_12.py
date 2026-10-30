@@ -1,0 +1,6 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+h = df[(df.project=='QP-8476') & (df.test=='heat')]
+print(h.test.unique(), len(h))
+print(h.columns)
+print(h[['record_id','prototype_id','value','secondary_sheet','additive_package_2','process_profile_2','conditioning_step']].head(10).to_string())

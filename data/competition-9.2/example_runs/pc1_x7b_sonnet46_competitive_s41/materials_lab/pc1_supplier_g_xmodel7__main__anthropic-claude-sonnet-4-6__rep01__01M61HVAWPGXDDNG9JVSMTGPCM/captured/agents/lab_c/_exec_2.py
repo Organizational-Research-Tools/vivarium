@@ -1,0 +1,14 @@
+
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('records.csv')
+
+# Get panel means by prototype and test
+panels = df[df['kind'] == 'qualification'].groupby(['project', 'prototype_id', 'test'])['value'].agg(['mean', 'count']).reset_index()
+
+# Pivot to get all three tests side by side
+pivot = panels.pivot_table(index=['project', 'prototype_id'], columns='test', values=['mean', 'count']).reset_index()
+pivot.columns = ['_'.join(c).strip('_') for c in pivot.columns]
+print(pivot.columns.tolist())
+print(pivot)

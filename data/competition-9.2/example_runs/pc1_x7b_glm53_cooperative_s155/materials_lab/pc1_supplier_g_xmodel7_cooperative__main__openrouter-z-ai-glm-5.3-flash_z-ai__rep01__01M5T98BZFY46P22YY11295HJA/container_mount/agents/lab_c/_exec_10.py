@@ -1,0 +1,8 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+mods=list(df.columns[11:23])
+prot=df.drop_duplicates('prototype_id')[['project','prototype_id','measured_by']+mods]
+want=['p_K9H37C0QVA','p_6SVD7WN5N8','p_6SVD7WN5NA','p_Q3TAPEF79N','p_4YMPK24FEB','p_0VE9V2R7E1','p_XM2PXHHASN']
+print(prot[prot.prototype_id.isin(want)].to_string())
+print()
+print(prot[prot.project=='QP-2342'].drop_duplicates([m for m in mods]).to_string())

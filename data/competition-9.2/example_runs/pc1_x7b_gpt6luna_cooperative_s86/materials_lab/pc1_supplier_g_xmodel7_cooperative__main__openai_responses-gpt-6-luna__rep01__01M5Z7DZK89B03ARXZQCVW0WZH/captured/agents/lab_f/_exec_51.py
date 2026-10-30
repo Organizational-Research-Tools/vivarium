@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x.columns.tolist()); print(x[x.prototype_id.isin(['p_174NHB75ES','p_9YW85TNK93','p_9YW85TNK95','p_9YW85TNK97','p_J0B7G433JN','p_4KP4PJ8S20'])].groupby(['prototype_id','property']).value.agg(['mean','count']))

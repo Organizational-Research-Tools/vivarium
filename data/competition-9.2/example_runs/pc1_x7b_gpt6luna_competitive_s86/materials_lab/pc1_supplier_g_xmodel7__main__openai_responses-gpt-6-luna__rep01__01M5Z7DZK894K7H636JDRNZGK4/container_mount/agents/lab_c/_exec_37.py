@@ -1,0 +1,5 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+x=x[x.project.eq('QP-3617')]
+y=x[x.kind.eq('qualification')].groupby(['prototype_id','test','measured_by']).value.agg(['mean','count']).reset_index()
+print(y.to_string(index=False))

@@ -1,0 +1,57 @@
+--- 
++++ 
+@@ -0,0 +1,54 @@
++
++import pandas as pd
++import numpy as np
++
++df = pd.read_csv('records.csv')
++
++# Get all qualification panels (6 specimens each)
++panels = df[df['kind'] == 'qualification'].copy()
++
++# Aggregate panel means by project + prototype
++panel_means = panels.groupby(['project', 'prototype_id', 'test']).agg(
++    mean_val=('value', 'mean'),
++    n=('value', 'count')
++).reset_index()
++
++# Pivot to wide format
++panel_wide = panel_means.pivot_table(index=['project', 'prototype_id'], 
++                                      columns='test', 
++                                      values='mean_val').reset_index()
++
++# Get recipe info from df
++recipe_cols = ['prototype_id', 'base_sheet', 'secondary_sheet', 'binder_system',
++               'additive_package_1', 'additive_package_2', 'additive_package_3',
++               'process_profile_1', 'process_profile_2', 'process_profile_3',
++               'surface_treatment', 'joint_system', 'conditioning_step']
++
++recipes = df[recipe_cols].dropna(subset=['base_sheet']).drop_duplicates('prototype_id')
++
++# Merge
++panel_wide = panel_wide.merge(recipes, on='prototype_id', how='left')
++
++# Calculate margins
++panel_wide['heat_margin'] = (panel_wide['seal hold temperature'] - 77.5) / 0.25
++panel_wide['strength_margin'] = (panel_wide['edge crush resistance'] - 7.1) / 0.03
++panel_wide['water_margin'] = (panel_wide['wet strength retained'] - 78.0) / 0.4
++panel_wide['weakest_margin'] = panel_wide[['heat_margin', 'strength_margin', 'water_margin']].min(axis=1)
++panel_wide['passes_all'] = panel_wide['weakest_margin'] > 0
++
++print("ALL RECIPES WITH COMPLETE PANELS (all 3 tests):")
++complete = panel_wide.dropna(subset=['seal hold temperature', 'edge crush resistance', 'wet strength retained'])
++complete = complete.sort_values('weakest_margin', ascending=False)
++
++for _, row in complete.iterrows():
++    flag = "*** PASSES ALL ***" if row['passes_all'] else "FAILS"
++    gg7 = " [GG7-BANNED]" if row.get('secondary_sheet') == 'GG7' else ""
++    print(f"\n{row['project']} / {row['prototype_id']}{gg7}")
++    print(f"  Recipe: {row['base_sheet']}, {row['secondary_sheet']}, {row['binder_system']}, "
++          f"{row['additive_package_1']}, {row['additive_package_2']}, {row['additive_package_3']}, "
++          f"{row['process_profile_1']}, {row['process_profile_2']}, {row['process_profile_3']}, "
++          f"{row['surface_treatment']}, {row['joint_system']}, {row['conditioning_step']}")
++    print(f"  Heat: {row['seal hold temperature']:.3f}°C (margin: {row['heat_margin']:.2f} steps)")
++    print(f"  Strength: {row['edge crush resistance']:.3f} kN/m (margin: {row['strength_margin']:.2f} steps)")
++    print(f"  Water: {row['wet strength retained']:.3f}% (margin: {row['water_margin']:.2f} steps)")
++    print(f"  Weakest: {row['weakest_margin']:.2f} steps  {flag}")

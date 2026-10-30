@@ -1,0 +1,6 @@
+--- 
++++ 
+@@ -0,0 +1,3 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++print(x.project.value_counts().to_string()); print(x[x.project=='QP-7092'][['record_id','prototype_id','instrument','test','value','measured_by']].to_string(index=False))

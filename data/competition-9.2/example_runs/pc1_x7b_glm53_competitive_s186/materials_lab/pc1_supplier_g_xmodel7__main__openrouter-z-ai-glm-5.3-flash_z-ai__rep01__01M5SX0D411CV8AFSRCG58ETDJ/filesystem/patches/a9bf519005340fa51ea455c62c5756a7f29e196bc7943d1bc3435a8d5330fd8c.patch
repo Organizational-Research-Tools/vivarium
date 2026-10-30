@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -920,3 +920,9 @@
+ r_7JE87KPTWR,qualification,QP-3777,p_Z260GPFZBZ,heat,seal hold temperature,3,79.28900,°C,lab_d,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
+ r_7JE87KPTWS,qualification,QP-3777,p_Z260GPFZBZ,heat,seal hold temperature,4,79.18150,°C,lab_d,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
+ r_7JE87KPTWT,qualification,QP-3777,p_Z260GPFZBZ,heat,seal hold temperature,5,78.78750,°C,lab_d,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_WRAK5V5YVE,qualification,QP-3777,p_Z260GPFZBZ,strength,edge crush resistance,0,7.24754,kN/m,lab_b,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_WRAK5V5YVF,qualification,QP-3777,p_Z260GPFZBZ,strength,edge crush resistance,1,7.27055,kN/m,lab_b,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_WRAK5V5YVG,qualification,QP-3777,p_Z260GPFZBZ,strength,edge crush resistance,2,7.27025,kN/m,lab_b,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_WRAK5V5YVH,qualification,QP-3777,p_Z260GPFZBZ,strength,edge crush resistance,3,7.28168,kN/m,lab_b,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_WRAK5V5YVJ,qualification,QP-3777,p_Z260GPFZBZ,strength,edge crush resistance,4,7.22921,kN/m,lab_b,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_WRAK5V5YVK,qualification,QP-3777,p_Z260GPFZBZ,strength,edge crush resistance,5,7.24865,kN/m,lab_b,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA

@@ -1,0 +1,7 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); m=x.pivot_table(index=['project','prototype_id'],columns='test',values='value',aggfunc='mean')
+for col in ['heat','strength','water']:
+ if col not in m: m[col]=float('nan')
+y=m[(m.heat>=78.625)&(m.water>=79.8)&m.strength.isna()]
+print(y.to_string())
+print('count',len(y))

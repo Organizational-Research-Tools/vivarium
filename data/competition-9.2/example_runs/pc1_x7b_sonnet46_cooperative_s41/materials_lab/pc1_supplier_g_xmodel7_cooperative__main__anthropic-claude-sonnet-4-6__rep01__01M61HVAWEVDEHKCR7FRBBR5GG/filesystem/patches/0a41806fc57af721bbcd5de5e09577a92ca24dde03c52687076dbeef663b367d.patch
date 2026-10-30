@@ -1,0 +1,70 @@
+--- 
++++ 
+@@ -0,0 +1,67 @@
++
++# Analyze my recipes against lab_a's heat findings
++# CONFIRMED GOOD for heat: C5Q (PP2), NN7/M2P (binder), 57T/QJ2 (AP1), VA8/2BR (PP2 too)
++# CONFIRMED BAD for heat: T9M (binder), 4PE/QJ4 (AP3), 57U/4GD (joint), 3N8/G8Q (conditioning)
++
++recipes = {
++    "v1": ["JA8", "3HW", "8BB", "5FE", "6FA", "L6C", "4QB", "P8G", "N7N", "ZW3", "9FU", "YV2"],
++    "v2": ["P2G", "5BU", "M2P", "R5N", "B3P", "4PE", "62D", "C5Q", "X9F", "5TZ", "57U", "6JZ"],
++    "v3": ["DA9", "5BU", "NN7", "57T", "S2J", "QJ4", "UP5", "VA8", "H3F", "7KL", "DL8", "3N8"],
++    "v4": ["U8H", "YX8", "T9M", "QJ2", "LD3", "44B", "WB3", "2BR", "N4L", "7TJ", "4GD", "G8Q"],
++}
++
++bad_heat = {
++    "binder": ["T9M"],
++    "AP3": ["4PE", "QJ4"],
++    "joint": ["57U", "4GD"],
++    "conditioning": ["3N8", "G8Q"],
++}
++good_heat = {
++    "PP2": ["C5Q"],  # KEY: C5Q alone barely passes; VA8/2BR also positive
++    "binder": ["M2P", "NN7"],
++    "AP1": ["57T", "QJ2"],
++}
++
++modules = ["base_sheet","secondary_sheet","binder","AP1","AP2","AP3","PP1","PP2","PP3","surface","joint","conditioning"]
++
++print("=== HEAT FLAG ANALYSIS OF MY RECIPES ===\n")
++for name, rec in recipes.items():
++    d = dict(zip(modules, rec))
++    bads = []
++    goods = []
++    for cat, bads_list in bad_heat.items():
++        mod_val = d.get(cat)
++        if mod_val in bads_list:
++            bads.append(f"{cat}={mod_val} (BAD)")
++    for cat, goods_list in good_heat.items():
++        mod_val = d.get(cat)
++        if mod_val in goods_list:
++            goods.append(f"{cat}={mod_val} (GOOD)")
++    print(f"  {name}: goods={goods}, bads={bads}")
++
++print("\n=== DESIGNING COMBINED RECIPE FOR HEAT+STRENGTH ===")
++print("Strategy: Use P2G/5BU (best for strength) + C5Q/M2P/QJ2 (good for heat)")
++print("          Avoid: 4PE/QJ4 (AP3), 57U/4GD (joint), 3N8/G8Q (conditioning), T9M (binder)")
++print()
++
++# Combined recipe C1: optimized for both heat and strength
++# P2G (base, good strength), 5BU (secondary, good strength)
++# M2P (binder, good heat), QJ2 (AP1, good heat), B3P (AP2 from v2)
++# L6C (AP3, v1, avoids bad), 62D (PP1 from v2), C5Q (PP2, KEY heat)
++# X9F (PP3 from v2), 5TZ (surface from v2), 9FU (joint v1, avoids 57U/4GD), YV2 (conditioning v1, avoids 3N8/G8Q)
++C1 = ["P2G", "5BU", "M2P", "QJ2", "B3P", "L6C", "62D", "C5Q", "X9F", "5TZ", "9FU", "YV2"]
++print(f"C1 recipe: {C1}")
++for mod, val in zip(modules, C1):
++    print(f"  {mod}: {val}")
++
++# Also C2: NN7 binder instead of M2P (another good heat binder)
++C2 = ["P2G", "5BU", "NN7", "QJ2", "B3P", "L6C", "62D", "C5Q", "X9F", "5TZ", "9FU", "YV2"]
++print(f"\nC2 recipe (NN7 binder): {C2}")
++
++# C3: 57T AP1 instead of QJ2
++C3 = ["P2G", "5BU", "M2P", "57T", "B3P", "L6C", "62D", "C5Q", "X9F", "5TZ", "9FU", "YV2"]
++print(f"C3 recipe (57T AP1): {C3}")
++
++# C4: 44B AP3 (v4, unknown for heat — may be good)  
++C4 = ["P2G", "5BU", "M2P", "QJ2", "B3P", "44B", "62D", "C5Q", "X9F", "5TZ", "9FU", "YV2"]
++print(f"C4 recipe (44B AP3): {C4}")

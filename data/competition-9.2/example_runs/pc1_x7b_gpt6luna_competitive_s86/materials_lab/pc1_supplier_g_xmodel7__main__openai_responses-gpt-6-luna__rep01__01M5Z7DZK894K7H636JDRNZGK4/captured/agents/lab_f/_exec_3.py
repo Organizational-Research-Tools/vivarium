@@ -1,0 +1,5 @@
+import pandas as pd
+D=pd.read_csv('records.csv')
+print(D.shape)
+for (pr,pid),g in D.groupby(['project','prototype_id']):
+ print(pr,pid,g.iloc[0][['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].to_list(), 'tests',g.test.unique().tolist(), 'means',g.groupby('test').value.mean().round(4).to_dict())

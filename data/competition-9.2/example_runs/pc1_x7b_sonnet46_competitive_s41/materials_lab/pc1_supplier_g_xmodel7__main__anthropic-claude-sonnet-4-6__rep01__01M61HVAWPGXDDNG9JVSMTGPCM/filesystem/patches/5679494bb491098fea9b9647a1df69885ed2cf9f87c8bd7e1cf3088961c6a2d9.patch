@@ -1,0 +1,21 @@
+--- 
++++ 
+@@ -0,0 +1,18 @@
++
++# Compute panel means immediately
++import numpy as np
++
++p2TK8W7BFC7_strength = [7.19513, 7.21109, 7.22060, 7.16363, 7.16114, 7.17995]
++pMM0KRH0PJJ_strength = [7.22609, 7.23338, 7.25642, 7.19624, 7.21535, 7.21790]
++
++m1 = np.mean(p2TK8W7BFC7_strength)
++m2 = np.mean(pMM0KRH0PJJ_strength)
++threshold = 7.235
++step = 0.03
++
++print(f"p_2TK8W7BFC7 (QP-3089, pp1=4QB) strength mean: {m1:.4f} kN/m  {'PASSES' if m1>=threshold else 'FAILS'} ({(m1-threshold)/step:+.2f} steps)")
++print(f"p_MM0KRH0PJJ (QP-7212, pp1=4QB) strength mean: {m2:.4f} kN/m  {'PASSES' if m2>=threshold else 'FAILS'} ({(m2-threshold)/step:+.2f} steps)")
++print()
++print("p_P68BNAVWAS (QP-3473, pp1=UP5): heat 78.871°C ✓, water 80.12% ✓ — THIS IS THE PATH")
++print("If pp1=UP5 with ZW3/X9F avoids the heat interaction catastrophe, and strength passes, PL-95 is alive")
++print("p_2TK8W7BFC9 (QP-3089, pp1=UP5): same base recipe — if strength and heat pass, PL-98 is alive")

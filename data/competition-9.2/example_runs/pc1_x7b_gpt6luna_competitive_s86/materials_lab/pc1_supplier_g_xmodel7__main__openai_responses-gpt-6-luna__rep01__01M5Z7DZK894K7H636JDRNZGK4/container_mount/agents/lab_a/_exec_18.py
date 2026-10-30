@@ -1,0 +1,10 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+q=x[(x.project=='QP-9219')&(x.kind=='qualification')]
+s=q.groupby(['prototype_id','test']).value.agg(['count','mean']).reset_index()
+piv=s.pivot(index='prototype_id',columns='test',values='mean')
+piv['heat_margin']=(piv.get('seal hold temperature')-77.5)/.25
+piv['strength_margin']=(piv.get('edge crush resistance')-7.1)/.03
+piv['water_margin']=(piv.get('wet strength retained')-78)/.4
+piv['weakest']=piv[['heat_margin','strength_margin','water_margin']].min(axis=1)
+print(piv.to_string())

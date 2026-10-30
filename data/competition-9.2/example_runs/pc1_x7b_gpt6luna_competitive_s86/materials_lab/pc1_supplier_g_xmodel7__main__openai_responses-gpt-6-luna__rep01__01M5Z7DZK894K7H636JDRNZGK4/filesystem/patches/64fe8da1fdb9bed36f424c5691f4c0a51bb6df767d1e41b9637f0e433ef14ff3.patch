@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++ids=['RTT858W8T1','RTT858W8T3','RTT858W8T5','RTT858W8T7','RTT858W8T9','RTT858W8TB','RTT858W8TD','RTT858W8TF','ZG7GNCT5AT','ZG7GNCT5AW','ZG7GNCT5AY','ZG7GNCT5B0']
++z=x[x.prototype_id.isin(['p_'+i for i in ids])]
++print(z.groupby(['prototype_id','instrument','kind']).agg(n=('value','size'),mean=('value','mean')).to_string())
++print('id avail')
++print(z[['prototype_id','instrument','test','kind','value','measured_by']].to_string(index=False))

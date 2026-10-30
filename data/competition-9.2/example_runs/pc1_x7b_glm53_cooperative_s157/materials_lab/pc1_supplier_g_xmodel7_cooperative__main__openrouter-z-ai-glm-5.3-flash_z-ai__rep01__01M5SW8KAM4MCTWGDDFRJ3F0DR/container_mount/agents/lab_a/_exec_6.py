@@ -1,0 +1,6 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+rows = df[df.prototype_id.isin(['p_C9SMW2XES8'])]
+cols = [c for c in df.columns]
+print(rows.to_string())
+print(list(df.columns))

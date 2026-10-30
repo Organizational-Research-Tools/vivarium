@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -670,3 +670,15 @@
+ r_SH8S207ZB7,exploratory,QP-5993,p_R0NQ874RTQ,heat,seal hold temperature,,78.22900,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,A6U,9DA
+ r_SH8S207ZB8,exploratory,QP-5993,p_R0NQ874RTQ,heat,seal hold temperature,,78.14200,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,A6U,9DA
+ r_SH8S207ZB9,exploratory,QP-5993,p_R0NQ874RTQ,heat,seal hold temperature,,78.12500,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,A6U,9DA
++r_AQBPZ5WBXT,qualification,QP-5993,p_R0NQ874RTH,heat,seal hold temperature,0,78.35375,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,A6U,9DA
++r_AQBPZ5WBXV,qualification,QP-5993,p_R0NQ874RTH,heat,seal hold temperature,1,78.34325,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,A6U,9DA
++r_AQBPZ5WBXW,qualification,QP-5993,p_R0NQ874RTH,heat,seal hold temperature,2,78.43500,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,A6U,9DA
++r_AQBPZ5WBXX,qualification,QP-5993,p_R0NQ874RTH,heat,seal hold temperature,3,78.09375,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,A6U,9DA
++r_AQBPZ5WBXY,qualification,QP-5993,p_R0NQ874RTH,heat,seal hold temperature,4,78.16900,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,A6U,9DA
++r_AQBPZ5WBXZ,qualification,QP-5993,p_R0NQ874RTH,heat,seal hold temperature,5,78.19975,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,A6U,9DA
++r_A22R6W90TF,qualification,QP-5993,p_R0NQ874RTK,heat,seal hold temperature,0,78.24225,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XS,A6U,G5Y
++r_A22R6W90TG,qualification,QP-5993,p_R0NQ874RTK,heat,seal hold temperature,1,78.38125,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XS,A6U,G5Y
++r_A22R6W90TH,qualification,QP-5993,p_R0NQ874RTK,heat,seal hold temperature,2,78.33850,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XS,A6U,G5Y
++r_A22R6W90TJ,qualification,QP-5993,p_R0NQ874RTK,heat,seal hold temperature,3,78.49475,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XS,A6U,G5Y
++r_A22R6W90TK,qualification,QP-5993,p_R0NQ874RTK,heat,seal hold temperature,4,78.13925,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XS,A6U,G5Y
++r_A22R6W90TM,qualification,QP-5993,p_R0NQ874RTK,heat,seal hold temperature,5,78.07200,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,6XS,A6U,G5Y

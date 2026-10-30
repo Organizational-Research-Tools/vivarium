@@ -1,0 +1,46 @@
+{
+  "access_at_submission": {
+    "r_ZT22DY1TSX": true
+  },
+  "author": "lab_a",
+  "bundles": {
+    "heat": [
+      "r_ZT22DY1TSX"
+    ],
+    "strength": [
+      "r_ZT22DY1TSX"
+    ],
+    "water": [
+      "r_ZT22DY1TSX"
+    ]
+  },
+  "claimed_prototype": "p_B6F5XR2FFA",
+  "claimed_recipe": [
+    0,
+    3,
+    1,
+    2,
+    0,
+    0,
+    0,
+    1,
+    1,
+    3,
+    0,
+    1
+  ],
+  "kind": "invalid",
+  "means": {
+    "heat": 73.98
+  },
+  "project_id": "G2",
+  "reasons": [
+    "heat:needs_all_6_specimens",
+    "strength:needs_all_6_specimens",
+    "strength:record_from_another_instrument",
+    "water:needs_all_6_specimens",
+    "water:record_from_another_instrument"
+  ],
+  "report_id": "rep_ABPAXNAXP4",
+  "seq": 7
+}

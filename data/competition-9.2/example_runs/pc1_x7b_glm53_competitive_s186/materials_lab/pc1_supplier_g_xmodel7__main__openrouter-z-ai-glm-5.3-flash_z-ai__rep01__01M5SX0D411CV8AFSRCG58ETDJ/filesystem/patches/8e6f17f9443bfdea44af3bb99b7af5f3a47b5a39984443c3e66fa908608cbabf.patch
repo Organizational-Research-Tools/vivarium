@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -856,3 +856,27 @@
+ r_5H7SRVN1QD,qualification,QP-5993,p_CY3W6TN2HY,heat,seal hold temperature,3,67.73200,°C,lab_a,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
+ r_5H7SRVN1QE,qualification,QP-5993,p_CY3W6TN2HY,heat,seal hold temperature,4,67.62475,°C,lab_a,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
+ r_5H7SRVN1QF,qualification,QP-5993,p_CY3W6TN2HY,heat,seal hold temperature,5,67.88125,°C,lab_a,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
++r_7DSD9XD484,qualification,QP-5993,p_CY3W6TN2HW,strength,edge crush resistance,0,4.65932,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_7DSD9XD485,qualification,QP-5993,p_CY3W6TN2HW,strength,edge crush resistance,1,4.66589,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_7DSD9XD486,qualification,QP-5993,p_CY3W6TN2HW,strength,edge crush resistance,2,4.70672,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_7DSD9XD487,qualification,QP-5993,p_CY3W6TN2HW,strength,edge crush resistance,3,4.71410,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_7DSD9XD488,qualification,QP-5993,p_CY3W6TN2HW,strength,edge crush resistance,4,4.69973,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_7DSD9XD489,qualification,QP-5993,p_CY3W6TN2HW,strength,edge crush resistance,5,4.64210,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_5VGQYX4R5D,qualification,QP-5993,p_CY3W6TN2HY,water,wet strength retained,0,62.2676,%,lab_f,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
++r_5VGQYX4R5E,qualification,QP-5993,p_CY3W6TN2HY,water,wet strength retained,1,62.4096,%,lab_f,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
++r_5VGQYX4R5F,qualification,QP-5993,p_CY3W6TN2HY,water,wet strength retained,2,62.6104,%,lab_f,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
++r_5VGQYX4R5G,qualification,QP-5993,p_CY3W6TN2HY,water,wet strength retained,3,62.6796,%,lab_f,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
++r_5VGQYX4R5H,qualification,QP-5993,p_CY3W6TN2HY,water,wet strength retained,4,61.9376,%,lab_f,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
++r_5VGQYX4R5J,qualification,QP-5993,p_CY3W6TN2HY,water,wet strength retained,5,62.1088,%,lab_f,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
++r_FZ7T8P7Q8R,qualification,QP-5993,p_CY3W6TN2HW,heat,seal hold temperature,0,50.86975,°C,lab_d,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_FZ7T8P7Q8S,qualification,QP-5993,p_CY3W6TN2HW,heat,seal hold temperature,1,50.91275,°C,lab_d,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_FZ7T8P7Q8T,qualification,QP-5993,p_CY3W6TN2HW,heat,seal hold temperature,2,51.01950,°C,lab_d,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_FZ7T8P7Q8V,qualification,QP-5993,p_CY3W6TN2HW,heat,seal hold temperature,3,51.20950,°C,lab_d,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_FZ7T8P7Q8W,qualification,QP-5993,p_CY3W6TN2HW,heat,seal hold temperature,4,51.27000,°C,lab_d,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_FZ7T8P7Q8X,qualification,QP-5993,p_CY3W6TN2HW,heat,seal hold temperature,5,51.44450,°C,lab_d,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_NXNZ2E5TQZ,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,0,6.58619,kN/m,lab_e,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
++r_NXNZ2E5TR0,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,1,6.60416,kN/m,lab_e,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
++r_NXNZ2E5TR1,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,2,6.60113,kN/m,lab_e,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
++r_NXNZ2E5TR2,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,3,6.62828,kN/m,lab_e,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
++r_NXNZ2E5TR3,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,4,6.62996,kN/m,lab_e,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA
++r_NXNZ2E5TR4,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,5,6.59000,kN/m,lab_e,lab_a,HP9,T3M,HD9,TE2,WJ7,2CK,V9D,4AL,V7P,6XN,A6U,9DA

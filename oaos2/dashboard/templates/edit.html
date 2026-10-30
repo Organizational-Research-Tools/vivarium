@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}edit {{ rel }} — oaos2{% endblock %}
+{% block crumb %}<span class="root"><a href="/library">library</a> / {{ rel }}</span>{% endblock %}
+{% block content %}
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem">Edit <code>{{ rel }}</code></h1>
+<p class="dim" style="margin:0 0 0.5rem">A save lands only if the platform's own loader accepts the result;
+otherwise the file is restored byte-for-byte and the error is shown here.</p>
+
+{% if msg %}
+<div class="banner {{ '' if ok else 'critical' }}">{{ msg }}</div>
+{% endif %}
+
+<div class="card">
+  <form method="post" action="/library/edit">
+    <input type="hidden" name="f" value="{{ rel }}">
+    <textarea name="content" spellcheck="false"
+              style="width:100%; min-height:32rem; font:12px/1.5 ui-monospace, Menlo, monospace;
+                     background:var(--surface); color:var(--ink); border:1px solid var(--border);
+                     border-radius:6px; padding:0.6rem">{{ content }}</textarea>
+    <p><button type="submit">Save (validated)</button> <a href="/library">cancel</a></p>
+  </form>
+</div>
+
+{% endblock %}

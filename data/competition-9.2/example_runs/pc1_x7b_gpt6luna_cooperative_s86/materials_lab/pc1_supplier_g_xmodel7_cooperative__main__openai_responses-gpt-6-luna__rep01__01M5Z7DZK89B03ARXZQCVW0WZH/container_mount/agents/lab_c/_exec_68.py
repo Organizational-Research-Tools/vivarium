@@ -1,0 +1,12 @@
+import pandas as pd
+r=pd.read_csv('records.csv'); m=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step'];
+pid='p_NWGGXAVCNC'; p=r[r.prototype_id==pid][m].drop_duplicates().iloc[0]; print('recipe',p.to_dict());
+# compare recipes in QP8807 with at least one record to this one
+rows=[]
+for q,df in r[r.project=='QP-8807'].groupby('prototype_id'):
+ rr=df[m].drop_duplicates();
+ if len(rr)==0 or rr.isna().any(axis=None): continue
+ rec=rr.iloc[0]; dif=[c for c in m if rec[c]!=p[c]]
+ if len(dif)<=2:
+  means=df.groupby('test').value.mean().to_dict(); rows.append((q,dif,means,rec.to_dict()))
+for x in rows: print(x[:3])

@@ -1,0 +1,6 @@
+import pandas as pd
+df = pd.read_csv("records.csv")
+me = df[(df.measured_by=="lab_e")]
+# group panels by prototype/test, print means for candidate prototypes
+g = me.groupby(["prototype_id","test"])["value"].agg(["count","mean"])
+print(g.to_string())

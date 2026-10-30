@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -0,0 +1,9 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); q=x[x.project=='QP-6879']
++cols=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++for pid,g in q.groupby('prototype_id'):
++    row=g.iloc[0]
++    vals=' '.join(f'{k}={row[k]}' for k in cols)
++    agg=[]
++    for (ins,kind),s in g.groupby(['instrument','kind']): agg.append(f'{ins}/{kind} n{s.value.count()} mean{s.value.mean():.5f}')
++    print(pid, vals, ' | '.join(agg))

@@ -1,0 +1,1 @@
+x=pd.read_csv('records.csv'); z=x[x.project.eq('QP-3617')].groupby(['prototype_id','test']).value.mean().unstack(); print(z.sort_values(list(z.columns),ascending=False).head(30).to_string())

@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -588,3 +588,4 @@
+ r_MT75WHB5XX,exploratory,QP-6489,p_ZJC86DH7B1,heat,seal hold temperature,,77.96300,°C,lab_d,lab_d,3F4,3S7,E5L,M5L,Y6H,J3Y,PG2,8WN,37J,6FZ,8M7,LW5
+ r_YXZ0MKCFK1,exploratory,QP-3589,p_P217N1V4Q1,heat,seal hold temperature,,72.84950,°C,lab_d,lab_b,,,,,,,,,,,,
+ r_YXZ0MKCFK2,exploratory,QP-3589,p_P217N1V4Q1,heat,seal hold temperature,,72.66775,°C,lab_d,lab_b,,,,,,,,,,,,
++r_GKT45H1SPA,exploratory,QP-6489,p_ZJC86DH7B1,water,wet strength retained,,78.5488,%,lab_c,lab_d,3F4,3S7,E5L,M5L,Y6H,J3Y,PG2,8WN,37J,6FZ,8M7,LW5

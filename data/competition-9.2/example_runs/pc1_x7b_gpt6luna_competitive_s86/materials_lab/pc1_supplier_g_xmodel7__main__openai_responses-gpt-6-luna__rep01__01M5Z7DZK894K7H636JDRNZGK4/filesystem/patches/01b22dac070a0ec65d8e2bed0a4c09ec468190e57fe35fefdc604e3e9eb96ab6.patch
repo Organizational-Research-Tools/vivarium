@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -263,3 +263,27 @@
+ r_2BCCGZT360,qualification,QP-9219,p_YBRQHA8KPS,heat,seal hold temperature,3,76.94825,°C,lab_d,lab_d,SQ8,RK7,P8G,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
+ r_2BCCGZT361,qualification,QP-9219,p_YBRQHA8KPS,heat,seal hold temperature,4,76.97875,°C,lab_d,lab_d,SQ8,RK7,P8G,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
+ r_2BCCGZT362,qualification,QP-9219,p_YBRQHA8KPS,heat,seal hold temperature,5,77.27300,°C,lab_d,lab_d,SQ8,RK7,P8G,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_TZVSASE170,qualification,QP-9219,p_7CHZ5Y38J7,strength,edge crush resistance,0,7.27475,kN/m,lab_b,lab_d,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_TZVSASE171,qualification,QP-9219,p_7CHZ5Y38J7,strength,edge crush resistance,1,7.26545,kN/m,lab_b,lab_d,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_TZVSASE172,qualification,QP-9219,p_7CHZ5Y38J7,strength,edge crush resistance,2,7.21379,kN/m,lab_b,lab_d,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_TZVSASE173,qualification,QP-9219,p_7CHZ5Y38J7,strength,edge crush resistance,3,7.22870,kN/m,lab_b,lab_d,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_TZVSASE174,qualification,QP-9219,p_7CHZ5Y38J7,strength,edge crush resistance,4,7.23794,kN/m,lab_b,lab_d,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_TZVSASE175,qualification,QP-9219,p_7CHZ5Y38J7,strength,edge crush resistance,5,7.27091,kN/m,lab_b,lab_d,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_TZVSASE176,qualification,QP-9219,p_YBRQHA8KPH,strength,edge crush resistance,0,7.27697,kN/m,lab_b,lab_d,SQ8,D5U,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_TZVSASE177,qualification,QP-9219,p_YBRQHA8KPH,strength,edge crush resistance,1,7.27049,kN/m,lab_b,lab_d,SQ8,D5U,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_TZVSASE178,qualification,QP-9219,p_YBRQHA8KPH,strength,edge crush resistance,2,7.21913,kN/m,lab_b,lab_d,SQ8,D5U,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_TZVSASE179,qualification,QP-9219,p_YBRQHA8KPH,strength,edge crush resistance,3,7.22171,kN/m,lab_b,lab_d,SQ8,D5U,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_TZVSASE17A,qualification,QP-9219,p_YBRQHA8KPH,strength,edge crush resistance,4,7.23701,kN/m,lab_b,lab_d,SQ8,D5U,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_TZVSASE17B,qualification,QP-9219,p_YBRQHA8KPH,strength,edge crush resistance,5,7.24697,kN/m,lab_b,lab_d,SQ8,D5U,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_NMF1JGTP3T,qualification,QP-9219,p_7CHZ5Y38J7,water,wet strength retained,0,80.6388,%,lab_c,lab_d,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_NMF1JGTP3V,qualification,QP-9219,p_7CHZ5Y38J7,water,wet strength retained,1,79.3532,%,lab_c,lab_d,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_NMF1JGTP3W,qualification,QP-9219,p_7CHZ5Y38J7,water,wet strength retained,2,79.9184,%,lab_c,lab_d,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_NMF1JGTP3X,qualification,QP-9219,p_7CHZ5Y38J7,water,wet strength retained,3,79.8536,%,lab_c,lab_d,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_NMF1JGTP3Y,qualification,QP-9219,p_7CHZ5Y38J7,water,wet strength retained,4,80.0524,%,lab_c,lab_d,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_NMF1JGTP3Z,qualification,QP-9219,p_7CHZ5Y38J7,water,wet strength retained,5,80.0708,%,lab_c,lab_d,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_NMF1JGTP40,qualification,QP-9219,p_YBRQHA8KPH,water,wet strength retained,0,80.4428,%,lab_c,lab_d,SQ8,D5U,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_H8BV9XFZ2N,qualification,QP-9219,p_YBRQHA8KPH,water,wet strength retained,1,79.5516,%,lab_c,lab_d,SQ8,D5U,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_H8BV9XFZ2P,qualification,QP-9219,p_YBRQHA8KPH,water,wet strength retained,2,79.8400,%,lab_c,lab_d,SQ8,D5U,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_H8BV9XFZ2Q,qualification,QP-9219,p_YBRQHA8KPH,water,wet strength retained,3,79.8252,%,lab_c,lab_d,SQ8,D5U,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_H8BV9XFZ2R,qualification,QP-9219,p_YBRQHA8KPH,water,wet strength retained,4,79.9368,%,lab_c,lab_d,SQ8,D5U,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_H8BV9XFZ2S,qualification,QP-9219,p_YBRQHA8KPH,water,wet strength retained,5,80.0340,%,lab_c,lab_d,SQ8,D5U,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2

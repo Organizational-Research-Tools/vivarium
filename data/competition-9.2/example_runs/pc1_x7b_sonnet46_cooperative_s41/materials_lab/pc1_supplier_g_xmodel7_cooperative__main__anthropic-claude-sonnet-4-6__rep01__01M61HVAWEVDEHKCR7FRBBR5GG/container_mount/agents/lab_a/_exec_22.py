@@ -1,0 +1,35 @@
+
+import pandas as pd
+df = pd.read_csv('records.csv')
+
+# Check p_GR61XB2TYZ (QP-3089 GG7 per lab_c/lab_d)
+print("=== p_GR61XB2TYZ records ===")
+sub = df[df['prototype_id']=='p_GR61XB2TYZ']
+print(f"Total records: {len(sub)}")
+for test, tg in sub.groupby('test'):
+    qual = tg[tg['kind']=='qualification']
+    expl = tg[tg['kind']=='exploratory']
+    if len(qual)>0:
+        print(f"  {test}: {len(qual)} qual, mean={qual['value'].mean():.4f}, by={tg['measured_by'].unique().tolist()}")
+        print(f"    IDs: {qual['record_id'].tolist()}")
+    if len(expl)>0:
+        print(f"  {test}: {len(expl)} expl, mean={expl['value'].mean():.4f}")
+
+# Check all strength panels >= 7.235 across all prototypes/projects
+print("\n=== ALL strength panels >= 7.235 kN/m ===")
+str_qual = df[(df['test'].str.contains('crush', case=False)) & (df['kind']=='qualification')]
+for pid, grp in str_qual.groupby('prototype_id'):
+    if len(grp) >= 6 and grp['value'].mean() >= 7.235:
+        proj = grp['project'].iloc[0]
+        mean = grp['value'].mean()
+        gg7 = df[df['prototype_id']==pid]['secondary_sheet'].iloc[0] if 'secondary_sheet' in df.columns else '?'
+        print(f"  {pid} ({proj}): mean={mean:.4f}, secondary_sheet={gg7}")
+
+# Check what complete packages exist for PL-95 and PL-98 projects
+print("\n=== QP-3473/QP-7212/QP-3089 strength panels ===")
+for proj in ['QP-3473','QP-7212','QP-3089']:
+    sub = df[(df['project']==proj) & (df['test'].str.contains('crush', case=False)) & (df['kind']=='qualification')]
+    for pid, grp in sub.groupby('prototype_id'):
+        mean = grp['value'].mean()
+        status = '✅' if mean>=7.235 else f'❌ (gap={7.235-mean:.4f})'
+        print(f"  {pid} ({proj}): strength={mean:.4f} {status}")

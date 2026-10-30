@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++cols = [c for c in df.columns if c not in ('record_id','kind','project','prototype_id','instrument','test','specimen','value','unit','measured_by','requester')]
++print(df[(df.prototype_id=='p_F22DN8MBC4')][['record_id']+cols].drop_duplicates().to_string())
++print(df[(df.prototype_id=='p_9GSK1FB6QN')][['record_id']+cols].drop_duplicates().to_string())

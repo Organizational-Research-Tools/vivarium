@@ -1,0 +1,13 @@
+--- 
++++ 
+@@ -0,0 +1,10 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++s = df[df.test=='edge crush resistance']
++print(len(s), s.kind.value_counts().to_dict())
++e = s[s.kind=='exploratory'].copy()
++g = e.groupby('prototype_id').agg(n=('value','size'), mn=('value','mean'), mx=('value','max'))
++g['mods'] = e.groupby('prototype_id')[['base_sheet','process_profile_3','binder_system','additive_package_2','conditioning_step','joint_system','surface_treatment','process_profile_2','additive_package_1']].first().astype(str).agg('|'.join, axis=1)
++print(g.sort_values('mn',ascending=False).head(20).to_string())
++p = s[s.kind=='qualification']
++print(p.groupby('prototype_id').agg(mn=('value','mean'), n=('value','size'), meas=('measured_by','first')).sort_values('mn',ascending=False).to_string())

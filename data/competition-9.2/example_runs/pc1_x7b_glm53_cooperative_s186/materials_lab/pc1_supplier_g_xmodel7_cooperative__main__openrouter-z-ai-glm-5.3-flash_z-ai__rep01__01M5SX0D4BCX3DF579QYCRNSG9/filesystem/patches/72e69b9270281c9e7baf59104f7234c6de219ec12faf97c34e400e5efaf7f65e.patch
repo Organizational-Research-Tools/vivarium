@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -827,3 +827,5 @@
+ r_2VZ1DDMETD,qualification,QP-1992,p_3Z4RHGH09S,strength,edge crush resistance,5,7.17323,kN/m,lab_b,lab_b,,,,,,,,,,,,
+ r_9D35G7TD4V,exploratory,QP-7065,p_5T4MDE1AN8,heat,seal hold temperature,,73.37200,°C,lab_d,lab_d,V2W,TN6,QU7,TE2,2Y6,JN6,8KT,9AH,X9S,6XN,3Y7,V8F
+ r_9D35G7TD4W,exploratory,QP-7065,p_5T4MDE1AN8,heat,seal hold temperature,,72.90750,°C,lab_d,lab_d,V2W,TN6,QU7,TE2,2Y6,JN6,8KT,9AH,X9S,6XN,3Y7,V8F
++r_TS0JAB8RBF,exploratory,QP-7065,p_C0BBTA98W2,heat,seal hold temperature,,72.94450,°C,lab_d,lab_c,,,,,,,,,,,,
++r_TS0JAB8RBG,exploratory,QP-7065,p_C0BBTA98W2,heat,seal hold temperature,,72.49800,°C,lab_d,lab_c,,,,,,,,,,,,

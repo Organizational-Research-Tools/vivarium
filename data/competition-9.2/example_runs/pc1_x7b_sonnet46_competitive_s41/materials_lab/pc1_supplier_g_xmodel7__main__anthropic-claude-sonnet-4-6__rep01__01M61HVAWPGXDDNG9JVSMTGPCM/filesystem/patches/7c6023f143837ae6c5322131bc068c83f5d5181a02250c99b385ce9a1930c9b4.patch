@@ -1,0 +1,38 @@
+--- 
++++ 
+@@ -0,0 +1,35 @@
++
++import pandas as pd
++import numpy as np
++
++df = pd.read_csv('records.csv')
++
++# Analyze p_4V8BTTYF7C full picture
++print("=== p_4V8BTTYF7C (QP-4476, PL-57) FULL PANEL ===")
++for inst in ['heat','strength','water']:
++    recs = df[(df['prototype_id']=='p_4V8BTTYF7C') & (df['kind']=='qualification') & (df['instrument']==inst)]
++    if len(recs) > 0:
++        mean = recs['value'].mean()
++        lab = recs['measured_by'].iloc[0]
++        thresholds = {'heat':77.5,'strength':7.1,'water':78.0}
++        steps = {'heat':0.25,'strength':0.03,'water':0.4}
++        margin = (mean - thresholds[inst]) / steps[inst]
++        status = '✓' if mean >= thresholds[inst] else '✗ FAIL'
++        print(f"  {inst:10s}: mean={mean:.4f}  margin={margin:+.1f} steps  {status}  (by {lab})")
++
++print()
++print("=== ALL PL-57 STRENGTH DATA ===")
++pl57 = ['QP-6572','QP-6843','QP-4476']
++str_data = df[(df['project'].isin(pl57)) & (df['instrument']=='strength')]
++if len(str_data) > 0:
++    summary = str_data.groupby(['project','prototype_id','kind','measured_by'])['value'].agg(['mean','count'])
++    print(summary.to_string())
++else:
++    print("No strength data for PL-57 projects")
++
++print()
++print("=== ALL PL-57 HEAT DATA ===")
++heat_data = df[(df['project'].isin(pl57)) & (df['instrument']=='heat') & (df['kind']=='qualification')]
++if len(heat_data) > 0:
++    summary2 = heat_data.groupby(['project','prototype_id'])['value'].agg(['mean','count'])
++    print(summary2.to_string())

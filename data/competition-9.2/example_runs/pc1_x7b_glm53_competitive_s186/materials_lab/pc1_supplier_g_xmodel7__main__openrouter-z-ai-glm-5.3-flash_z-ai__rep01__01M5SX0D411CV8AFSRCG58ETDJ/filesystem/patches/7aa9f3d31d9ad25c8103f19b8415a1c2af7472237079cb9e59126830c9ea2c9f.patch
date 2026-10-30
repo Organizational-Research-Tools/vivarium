@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -884,3 +884,15 @@
+ r_S8F2P6RV3V,qualification,QP-5993,p_CY3W6TN2HW,water,wet strength retained,3,45.8052,%,lab_c,lab_a,,,,,,,,,,,,
+ r_S8F2P6RV3W,qualification,QP-5993,p_CY3W6TN2HW,water,wet strength retained,4,45.0932,%,lab_c,lab_a,,,,,,,,,,,,
+ r_S8F2P6RV3X,qualification,QP-5993,p_CY3W6TN2HW,water,wet strength retained,5,45.2368,%,lab_c,lab_a,,,,,,,,,,,,
++r_617BP2Z306,qualification,QP-3777,p_HT5A60YTE1,water,wet strength retained,0,71.0744,%,lab_c,lab_a,,,,,,,,,,,,
++r_617BP2Z307,qualification,QP-3777,p_HT5A60YTE1,water,wet strength retained,1,71.2904,%,lab_c,lab_a,,,,,,,,,,,,
++r_617BP2Z308,qualification,QP-3777,p_HT5A60YTE1,water,wet strength retained,2,70.5860,%,lab_c,lab_a,,,,,,,,,,,,
++r_617BP2Z309,qualification,QP-3777,p_HT5A60YTE1,water,wet strength retained,3,70.7012,%,lab_c,lab_a,,,,,,,,,,,,
++r_617BP2Z30A,qualification,QP-3777,p_HT5A60YTE1,water,wet strength retained,4,70.8608,%,lab_c,lab_a,,,,,,,,,,,,
++r_617BP2Z30B,qualification,QP-3777,p_HT5A60YTE1,water,wet strength retained,5,71.0792,%,lab_c,lab_a,,,,,,,,,,,,
++r_JVNEG8888K,qualification,QP-3777,p_S5C3TCY7F6,water,wet strength retained,0,79.6940,%,lab_c,lab_a,,,,,,,,,,,,
++r_JVNEG8888M,qualification,QP-3777,p_S5C3TCY7F6,water,wet strength retained,1,80.0012,%,lab_c,lab_a,,,,,,,,,,,,
++r_JVNEG8888N,qualification,QP-3777,p_S5C3TCY7F6,water,wet strength retained,2,80.1692,%,lab_c,lab_a,,,,,,,,,,,,
++r_JVNEG8888P,qualification,QP-3777,p_S5C3TCY7F6,water,wet strength retained,3,79.0576,%,lab_c,lab_a,,,,,,,,,,,,
++r_JVNEG8888Q,qualification,QP-3777,p_S5C3TCY7F6,water,wet strength retained,4,79.6596,%,lab_c,lab_a,,,,,,,,,,,,
++r_JVNEG8888R,qualification,QP-3777,p_S5C3TCY7F6,water,wet strength retained,5,79.5968,%,lab_c,lab_a,,,,,,,,,,,,

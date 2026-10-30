@@ -1,0 +1,76 @@
+{
+  "access_at_submission": {
+    "r_36ENPZEF E0": false,
+    "r_36ENPZEFDV": true,
+    "r_36ENPZEFDW": true,
+    "r_36ENPZEFDX": true,
+    "r_36ENPZEFDY": true,
+    "r_36ENPZEFDZ": true,
+    "r_NX17EANH4Y": false,
+    "r_NX17EANH50": false,
+    "r_NX17EANH51": false,
+    "r_NX17EANH52": false,
+    "r_NX17EANH53": false,
+    "r_QSWQEK3397": true,
+    "r_QSWQEK3398": true,
+    "r_QSWQEK3399": true,
+    "r_QSWQEK339A": true,
+    "r_QSWQEK339B": true,
+    "r_QSWQEK339C": true
+  },
+  "author": "lab_b",
+  "bundles": {
+    "heat": [
+      "r_36ENPZEFDV",
+      "r_36ENPZEFDW",
+      "r_36ENPZEFDX",
+      "r_36ENPZEFDY",
+      "r_36ENPZEFDZ",
+      "r_36ENPZEF E0"
+    ],
+    "strength": [
+      "r_QSWQEK3397",
+      "r_QSWQEK3398",
+      "r_QSWQEK3399",
+      "r_QSWQEK339A",
+      "r_QSWQEK339B",
+      "r_QSWQEK339C"
+    ],
+    "water": [
+      "r_NX17EANH4Y",
+      "r_NX17EANH50",
+      "r_NX17EANH51",
+      "r_NX17EANH52",
+      "r_NX17EANH53"
+    ]
+  },
+  "claimed_prototype": "p_D1SCJCXSMK",
+  "claimed_recipe": [
+    0,
+    3,
+    1,
+    1,
+    0,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    3
+  ],
+  "kind": "invalid",
+  "means": {
+    "heat": 73.946,
+    "strength": 74.208
+  },
+  "project_id": "G1",
+  "reasons": [
+    "heat:needs_all_6_specimens",
+    "heat:unknown_record",
+    "water:inaccessible_record",
+    "water:needs_all_6_specimens"
+  ],
+  "report_id": "rep_Q6D0BA6M6N",
+  "seq": 8
+}

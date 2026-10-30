@@ -1,0 +1,22 @@
+--- 
++++ 
+@@ -0,0 +1,19 @@
++
++import pandas as pd
++import numpy as np
++
++df = pd.read_csv('records.csv')
++
++# Show all heat qualification panels grouped by project/prototype, with pass/fail
++heat_qual = df[(df['kind']=='qualification') & (df['instrument']=='heat')]
++summary = heat_qual.groupby(['project','prototype_id'])['value'].agg(['mean','count']).reset_index()
++full = summary[summary['count']==6].copy()
++full['pass'] = full['mean'] >= 77.5
++full = full.sort_values(['project','mean'], ascending=[True,False])
++print("=== FULL HEAT PANELS ===")
++print(full[['project','prototype_id','mean','pass']].to_string(index=False))
++
++# Show non-heat records  
++print("\n=== OTHER INSTRUMENT RECORDS (strength/water) ===")
++other = df[df['instrument']!='heat']
++print(other.groupby(['project','prototype_id','instrument','kind'])['value'].agg(['mean','count']).reset_index().to_string(index=False))

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% block title %}files — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / files</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "files") }}
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem">File &amp; artifact lineage</h1>
+<p class="dim" style="margin:0 0 0.5rem">Per path, the ordered capture chain (who changed what, before→after hashes).
+Each version links to its event; patches, when retained, are in the event payload.</p>
+
+{% if not lineage %}
+<div class="card"><p class="dim">no file changes captured in this run</p></div>
+{% endif %}
+
+{% for path, chain in lineage.items() %}
+<div class="card">
+  <h2><code>{{ path }}</code> <span class="dim">({{ chain|length }} version{{ "s" if chain|length != 1 }})</span></h2>
+  <table>
+    <thead><tr><th class="num">seq</th><th>agent</th><th>change</th><th>before → after</th></tr></thead>
+    <tbody>
+    {% for e in chain %}
+      {% set p = e.payload or {} %}
+      <tr>
+        <td class="num"><a href="/run/{{ run_ref }}/event/{{ e.event_id }}">{{ e.sequence_number }}</a></td>
+        <td>{{ e.agent_id or "·" }}</td>
+        <td><code>{{ e.event_class }}</code></td>
+        <td><code>{{ (p.get("hash_before") or "—")[:16] }}</code> → <code>{{ (p.get("hash_after") or "—")[:16] }}</code></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endfor %}
+
+{% endblock %}

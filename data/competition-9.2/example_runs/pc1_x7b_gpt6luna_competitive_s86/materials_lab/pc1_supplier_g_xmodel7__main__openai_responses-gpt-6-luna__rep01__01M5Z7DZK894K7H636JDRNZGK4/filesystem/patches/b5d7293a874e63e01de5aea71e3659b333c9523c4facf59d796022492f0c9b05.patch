@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -607,3 +607,4 @@
+ r_YHQ9B34GCT,qualification,QP-9273,p_H75E66GD4V,water,wet strength retained,4,50.5596,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
+ r_YHQ9B34GCV,qualification,QP-9273,p_H75E66GD4V,water,wet strength retained,5,50.5144,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
+ r_PWEQBP3WQ7,exploratory,QP-9273,p_H75E66GD4V,strength,edge crush resistance,,5.58866,kN/m,lab_b,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_1KV1JQXYQ2,exploratory,QP-9273,p_RX2G85TGAA,water,wet strength retained,,77.8936,%,lab_f,lab_f,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,YX4,SU2

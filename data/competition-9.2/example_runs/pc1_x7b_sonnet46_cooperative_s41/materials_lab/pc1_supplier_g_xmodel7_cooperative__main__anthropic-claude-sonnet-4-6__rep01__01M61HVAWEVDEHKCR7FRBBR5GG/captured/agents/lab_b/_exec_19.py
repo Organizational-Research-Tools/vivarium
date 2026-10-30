@@ -1,0 +1,41 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+
+# Get composition and results for p_VZ3XBYF5AW family
+vz = df[df['prototype_id'].isin(['p_VZ3XBYF5AW','p_VZ3XBYF5B5','p_VZ3XBYF5BE'])]
+if len(vz) > 0:
+    print("=== p_VZ3XBYF5AW family ===")
+    cols = ['prototype_id','project','test','kind','value','measured_by',
+            'base_sheet','secondary_sheet','binder_system','additive_package_1',
+            'additive_package_2','additive_package_3','process_profile_1',
+            'process_profile_2','process_profile_3','surface_treatment',
+            'joint_system','conditioning_step']
+    avail_cols = [c for c in cols if c in df.columns]
+    print(vz[avail_cols].groupby(['prototype_id','test'])['value'].agg(['mean','count']).to_string())
+    # Get recipe from first row with composition data
+    recipe_row = vz[vz['base_sheet'].notna()].iloc[0] if len(vz[vz['base_sheet'].notna()]) > 0 else None
+    if recipe_row is not None:
+        print("\nRecipe:")
+        for col in ['base_sheet','secondary_sheet','binder_system','additive_package_1',
+                    'additive_package_2','additive_package_3','process_profile_1',
+                    'process_profile_2','process_profile_3','surface_treatment',
+                    'joint_system','conditioning_step']:
+            if col in df.columns:
+                print(f"  {col}: {recipe_row[col]}")
+else:
+    print("No records found for p_VZ3XBYF5AW family")
+
+# Also check p_8E3MPG688H family
+print("\n=== p_8E3MPG688H family (QP-3473 GG7) ===")
+e8 = df[df['prototype_id'].isin(['p_8E3MPG688H','p_8E3MPG688W','p_S3WNF6QVR0'])]
+if len(e8) > 0:
+    print(e8[['prototype_id','project','test','kind','value','measured_by']].groupby(['prototype_id','test'])['value'].agg(['mean','count']).to_string())
+    recipe_row2 = e8[e8['base_sheet'].notna()].iloc[0] if len(e8[e8['base_sheet'].notna()]) > 0 else None
+    if recipe_row2 is not None:
+        print("\nRecipe:")
+        for col in ['base_sheet','secondary_sheet','binder_system','additive_package_1',
+                    'additive_package_2','additive_package_3','process_profile_1',
+                    'process_profile_2','process_profile_3','surface_treatment',
+                    'joint_system','conditioning_step']:
+            if col in df.columns:
+                print(f"  {col}: {recipe_row2[col]}")

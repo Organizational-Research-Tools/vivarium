@@ -1,0 +1,18 @@
+
+# Analyze exploratory results
+results = {
+    "p_X9WN43AQ4V (QP-4476, lab_d)": 7.12733,
+    "p_X9WN43AQ4X (QP-4476, lab_d)": 6.53345,
+    "p_AG5JYPK0FD (QP-4476, lab_f)": 4.52510,
+    "p_PP541T0ZWM (QP-6572, lab_a)": 5.02916,
+    "p_K3NJB7S7JE (QP-6572, lab_f)": 5.10551,
+    "p_DS954NKK8W (QP-6843, lab_c)": 5.91764,
+    "p_S91612HV2G (QP-6843, lab_f)": 5.27540,
+}
+str_base, str_step = 7.10, 0.03
+threshold_revB = 7.19  # 3 steps above base
+for name, val in results.items():
+    margin = (val - str_base) / str_step
+    gap = threshold_revB - val
+    status = "PASS (RevB)" if val >= threshold_revB else f"FAIL by {gap:.3f} kN/m = {gap/str_step:.1f} steps"
+    print(f"{name}: {val:.4f} kN/m | margin {margin:.2f} steps | {status}")

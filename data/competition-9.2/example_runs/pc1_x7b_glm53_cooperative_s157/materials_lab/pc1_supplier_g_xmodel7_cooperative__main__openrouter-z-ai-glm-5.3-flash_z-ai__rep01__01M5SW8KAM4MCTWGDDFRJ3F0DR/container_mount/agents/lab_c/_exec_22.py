@@ -1,0 +1,6 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+q=df[df['project']=='QP-3068']
+print(q.groupby(['prototype_id','kind','test'])['value'].agg(['mean','count']).to_string())
+print(len(set(q['prototype_id'])))
+print(df[df['prototype_id']=='p_JYM13W9TAG'].to_string())

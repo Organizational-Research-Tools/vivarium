@@ -1,0 +1,10 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+print(df.columns.tolist())
+# find rows mentioning 27X in a binder column, with panel receipts, group by prototype/project
+b = [c for c in df.columns if 'binder' in c.lower()]
+print(b)
+d27 = df[df[b[0]]=='27X'] if b else df
+prot = [c for c in df.columns if 'prototype' in c.lower() or c=='recipe_id']
+print(prot)
+print(d27.groupby([prot[0]] + b + ['test','kind']).agg(n=('value','size'), mean=('value','mean')).to_string() if 'value' in df.columns else df.head())

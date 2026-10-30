@@ -1,0 +1,46 @@
+--- 
++++ 
+@@ -0,0 +1,43 @@
++
++import pandas as pd
++df = pd.read_csv('records.csv')
++
++# Check all QP-4476 prototypes with GG7
++print("=== QP-4476 GG7 prototypes — all records ===")
++gg7_proto = df[(df['project']=='QP-4476') & (df['secondary_sheet']=='GG7')]
++
++for pid, grp in gg7_proto.groupby('prototype_id'):
++    print(f"\n{pid}:")
++    for test, tg in grp.groupby('test'):
++        qual = tg[tg['kind']=='qualification']
++        expl = tg[tg['kind']=='exploratory']
++        print(f"  {test}: {len(qual)} qual (mean={qual['value'].mean():.4f} if {len(qual)}>0 else N/A), {len(expl)} expl, by {tg['measured_by'].unique()}")
++    recipe_cols = ['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2',
++                   'additive_package_3','process_profile_1','process_profile_2','process_profile_3',
++                   'surface_treatment','joint_system','conditioning_step']
++    recipe = [grp.iloc[0].get(c,'?') for c in recipe_cols if c in grp.columns]
++    print(f"  recipe: {recipe}")
++
++# Also check p_PXAKTW39C3 specifically
++print("\n\n=== p_PXAKTW39C3 all records ===")
++sub = df[df['prototype_id']=='p_PXAKTW39C3']
++print(f"Total records: {len(sub)}")
++for test, tg in sub.groupby('test'):
++    qual = tg[tg['kind']=='qualification']
++    expl = tg[tg['kind']=='exploratory']
++    if len(qual) > 0:
++        print(f"  {test}: {len(qual)} qual, mean={qual['value'].mean():.4f}, IDs={qual['record_id'].tolist()}")
++    if len(expl) > 0:
++        print(f"  {test}: {len(expl)} expl, mean={expl['value'].mean():.4f}")
++
++# Check p_6G7MJ89K4B
++print("\n\n=== p_6G7MJ89K4B all records ===")
++sub2 = df[df['prototype_id']=='p_6G7MJ89K4B']
++print(f"Total records: {len(sub2)}")
++for test, tg in sub2.groupby('test'):
++    qual = tg[tg['kind']=='qualification']
++    expl = tg[tg['kind']=='exploratory']
++    if len(qual) > 0:
++        print(f"  {test}: {len(qual)} qual, mean={qual['value'].mean():.4f}, IDs={qual['record_id'].tolist()}, by {tg['measured_by'].unique()}")
++    if len(expl) > 0:
++        print(f"  {test}: {len(expl)} expl, mean={expl['value'].mean():.4f}")

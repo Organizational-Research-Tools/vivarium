@@ -1,0 +1,16 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+# heat >=78.4 candidates with known composition, all projects
+h=df[(df.test=='seal hold temperature')].dropna(subset=mods)
+g=h.groupby(mods+['project']).value.agg(['count','mean']).reset_index()
+cand=g[(g['mean']>=78.35)].sort_values('mean',ascending=False)
+print(cand.to_string())
+# strength >=7.19 recipes among known comps
+s=df[df.test=='edge crush resistance'].dropna(subset=mods)
+gs=s.groupby(mods+['project']).value.agg(['count','mean']).reset_index()
+print(gs[gs['mean']>=7.15][mods+['project','count','mean']].to_string())
+# water >=79 known comps
+w=df[df.test=='wet strength retained'].dropna(subset=mods)
+gw=w.groupby(mods+['project']).value.agg(['count','mean']).reset_index()
+print(gw[gw['mean']>=78.5][mods+['project','count','mean']].to_string())

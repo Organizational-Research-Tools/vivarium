@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv');
+for p in ['p_4HAS585EVB','p_3S28E8W3VW','p_CD8N0FCXDN','p_ZG7GNCT5AT']:
+ z=x[x.prototype_id.eq(p)];print('\n',p, z.groupby(['instrument','test','kind','measured_by']).value.agg(['mean','count']).to_string() if len(z) else 'none'); print(z[['project','base_sheet']].drop_duplicates().to_string(index=False))

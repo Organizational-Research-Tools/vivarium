@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -724,3 +724,5 @@
+ r_7946RZ60A2,exploratory,QP-2342,p_FYHSR9Y1B5,heat,seal hold temperature,,78.00375,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_7946RZ60A3,exploratory,QP-2342,p_FYHSR9Y1B7,heat,seal hold temperature,,78.69725,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_7946RZ60A4,exploratory,QP-2342,p_FYHSR9Y1B7,heat,seal hold temperature,,78.51550,°C,lab_a,lab_e,,,,,,,,,,,,
++r_G67CTGGDD7,exploratory,QP-2342,p_FYHSR9Y1B5,heat,seal hold temperature,,78.65200,°C,lab_a,lab_e,,,,,,,,,,,,
++r_G67CTGGDD8,exploratory,QP-2342,p_FYHSR9Y1B5,heat,seal hold temperature,,78.19375,°C,lab_a,lab_e,,,,,,,,,,,,

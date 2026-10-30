@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -0,0 +1,2 @@
++import pandas as pd
++r=pd.read_csv('records.csv'); x=r[r.kind.eq('qualification')].groupby(['project','prototype_id','test']).value.mean().unstack('test').reset_index(); print(x[x['wet strength retained']>=79.8].to_string(index=False))

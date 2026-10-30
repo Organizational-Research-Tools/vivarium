@@ -1,0 +1,5 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+for pid in ['p_7JX0SVYP0A','p_H5JEPY1ZY2','p_H5JEPY1ZY6']:
+    w=df[(df.prototype_id==pid)&(df.test=='wet strength retained')]
+    print(pid, len(w), w.value.mean().round(2), sorted(w.value.round(2)))

@@ -1,0 +1,26 @@
+
+# Summarize the critical situation
+print("=== CRITICAL RESULTS SUMMARY ===")
+print()
+print("p_8VNBERF1VK (QP-3473, GG7 recipe P2G/GG7/NN7/57T/LD3/L6C/WB3/P8G/H3F/ZW3/9FU/YV2):")
+import numpy as np
+h = [73.29725, 73.46350, 73.63000, 73.87675, 73.77900, 73.98400]
+print(f"  Heat mean = {np.mean(h):.4f}°C  — threshold 78.625°C — CATASTROPHIC FAIL (deficit {78.625-np.mean(h):.3f}°C)")
+print("  GG7 recipe works on QP-3089 (heat 79.281) but FAILS on QP-3473!")
+print()
+print("QP-3473 VIABLE CANDIDATES from history:")
+print("  p_J6CX8AHRR3 (3HW/8BB recipe): heat 78.734✓, strength 7.218✗(needs 7.235), water 80.375✓")
+print("  Gap: 0.017 kN/m short on strength — tiny gap")
+print()
+print("QP-3089 STATUS (p_GR61XB2TYZ, GG7):")
+print("  Heat 79.281°C ✓ (lab_d panel complete)")
+print("  Strength: lab_b running panel NOW")
+print("  Water: lab_c/lab_f must run panel NOW")
+print()
+print("Heat records for p_GR61XB2TYZ to share with lab_a:")
+for i, rid in enumerate(['r_GR61XB2TZ1','r_GR61XB2TZ2','r_GR61XB2TZ3','r_GR61XB2TZ4','r_GR61XB2TZ5','r_GR61XB2TZ6']):
+    print(f"  {rid}")
+print()
+print("Heat records for p_8VNBERF1VK to share (shows QP-3473 GG7 FAILS):")
+for rid in ['r_EDQFGWJFQV','r_EDQFGWJFQW','r_EDQFGWJFQX','r_EDQFGWJFQY','r_EDQFGWJFQZ','r_EDQFGWJFR0']:
+    print(f"  {rid}")

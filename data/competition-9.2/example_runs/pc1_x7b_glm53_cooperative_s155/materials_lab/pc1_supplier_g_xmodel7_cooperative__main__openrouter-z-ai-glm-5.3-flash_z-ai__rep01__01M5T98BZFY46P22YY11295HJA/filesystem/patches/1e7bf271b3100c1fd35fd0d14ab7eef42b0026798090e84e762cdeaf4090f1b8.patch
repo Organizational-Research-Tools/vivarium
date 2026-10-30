@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++d = df[(df['project']=='QP-2342') & (df['kind']=='qualification')]
++g = d.groupby(['prototype_id','test'])['value'].agg(['mean','count'])
++print(g)
++print(df[(df['project']=='QP-2342')][['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].dropna().drop_duplicates().head(20).to_string())

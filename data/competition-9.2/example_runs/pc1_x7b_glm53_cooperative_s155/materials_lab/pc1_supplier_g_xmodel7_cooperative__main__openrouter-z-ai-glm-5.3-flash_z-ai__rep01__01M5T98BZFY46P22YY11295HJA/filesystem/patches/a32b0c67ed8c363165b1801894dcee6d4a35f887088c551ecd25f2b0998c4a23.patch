@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -575,3 +575,9 @@
+ r_K54NAT21Q9,exploratory,QP-1454,p_QDP2930TBG,water,wet strength retained,,78.6724,%,lab_c,lab_a,,,,,,,,,,,,
+ r_K54NAT21QA,exploratory,QP-1454,p_QDP2930TBJ,water,wet strength retained,,79.6340,%,lab_c,lab_a,,,,,,,,,,,,
+ r_K54NAT21QB,exploratory,QP-1454,p_QDP2930TBJ,water,wet strength retained,,79.3224,%,lab_c,lab_a,,,,,,,,,,,,
++r_EM83S687GJ,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,0,78.9252,%,lab_c,lab_a,,,,,,,,,,,,
++r_EM83S687GK,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,1,79.0428,%,lab_c,lab_a,,,,,,,,,,,,
++r_EM83S687GM,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,2,79.3108,%,lab_c,lab_a,,,,,,,,,,,,
++r_EM83S687GN,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,3,78.5996,%,lab_c,lab_a,,,,,,,,,,,,
++r_EM83S687GP,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,4,78.5836,%,lab_c,lab_a,,,,,,,,,,,,
++r_EM83S687GQ,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,5,78.6164,%,lab_c,lab_a,,,,,,,,,,,,

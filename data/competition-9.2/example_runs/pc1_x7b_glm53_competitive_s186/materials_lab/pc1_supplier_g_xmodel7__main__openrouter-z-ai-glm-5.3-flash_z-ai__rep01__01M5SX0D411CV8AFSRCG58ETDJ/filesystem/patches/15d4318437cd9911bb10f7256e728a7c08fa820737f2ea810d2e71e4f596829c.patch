@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -803,3 +803,14 @@
+ r_Y0S4TQZQGF,qualification,QP-5993,p_4A7R5CRBB3,strength,edge crush resistance,3,7.31078,kN/m,lab_b,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
+ r_Y0S4TQZQGG,qualification,QP-5993,p_4A7R5CRBB3,strength,edge crush resistance,4,7.31936,kN/m,lab_b,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
+ r_Y0S4TQZQGH,qualification,QP-5993,p_4A7R5CRBB3,strength,edge crush resistance,5,7.34291,kN/m,lab_b,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_GH32F6D9V4,qualification,QP-5993,p_4A7R5CRBB3,water,wet strength retained,0,78.9796,%,lab_f,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_GH32F6D9V5,qualification,QP-5993,p_4A7R5CRBB3,water,wet strength retained,1,79.5040,%,lab_f,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_GH32F6D9V6,qualification,QP-5993,p_4A7R5CRBB3,water,wet strength retained,2,79.7856,%,lab_f,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_GH32F6D9V7,qualification,QP-5993,p_4A7R5CRBB3,water,wet strength retained,3,79.8268,%,lab_f,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_GH32F6D9V8,qualification,QP-5993,p_4A7R5CRBB3,water,wet strength retained,4,79.9008,%,lab_f,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_GH32F6D9V9,qualification,QP-5993,p_4A7R5CRBB3,water,wet strength retained,5,79.0920,%,lab_f,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_RPNJXJ2C23,exploratory,QP-5993,p_4A7R5CRBB5,heat,seal hold temperature,,77.75325,°C,lab_a,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,YS6,V8F
++r_RPNJXJ2C24,exploratory,QP-5993,p_4A7R5CRBB5,heat,seal hold temperature,,78.27300,°C,lab_a,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,YS6,V8F
++r_RPNJXJ2C25,exploratory,QP-5993,p_4A7R5CRBB5,heat,seal hold temperature,,78.06100,°C,lab_a,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,YS6,V8F
++r_RPNJXJ2C26,exploratory,QP-5993,p_4A7R5CRBB5,heat,seal hold temperature,,78.57250,°C,lab_a,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,YS6,V8F
++r_RPNJXJ2C27,exploratory,QP-5993,p_4A7R5CRBB5,heat,seal hold temperature,,78.39350,°C,lab_a,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,YS6,V8F

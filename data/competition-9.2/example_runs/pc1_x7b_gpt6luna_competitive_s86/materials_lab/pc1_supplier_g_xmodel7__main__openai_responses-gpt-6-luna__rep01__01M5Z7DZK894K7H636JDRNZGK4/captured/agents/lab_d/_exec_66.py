@@ -1,0 +1,6 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+for p in ['p_6HZQR01SM9','p_6HZQR01SMH','p_H6M64FVH7B','p_3TS98N4J3A','p_4D66GEMYNV']:
+ d=x[x.prototype_id==p]
+ print(p, d[mods].drop_duplicates().to_string(index=False) if len(d) else 'none', ' rows',len(d))

@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -275,3 +275,4 @@
+ r_BEDAKVB7Z5,exploratory,QP-5066,p_32VSPAD66B,water,wet strength retained,,42.0392,%,lab_c,lab_c,8Z2,YH6,93H,FZ6,6DD,6UD,2WG,5UV,5J9,VR3,P4U,9VC
+ r_BEDAKVB7Z6,exploratory,QP-5066,p_0GD19TNGTN,water,wet strength retained,,59.5256,%,lab_c,lab_c,ZY6,LB3,93H,X2P,Q7S,5B8,8Q7,X9Z,G4B,WN7,34U,W5T
+ r_BEDAKVB7Z7,exploratory,QP-5066,p_E25YWQ46K1,water,wet strength retained,,42.1696,%,lab_c,lab_c,ZY6,LB3,Y9V,Y7L,Q7S,5B8,RF3,X9Z,G4B,WN7,34U,7MP
++r_35WPQ8JR0D,exploratory,QP-5066,p_4GDGQG6XPF,heat,seal hold temperature,,77.22675,°C,lab_d,lab_c,ZY6,N2L,KX7,X2P,RB3,8P4,RF3,LR4,A7P,BX9,FA3,3DC

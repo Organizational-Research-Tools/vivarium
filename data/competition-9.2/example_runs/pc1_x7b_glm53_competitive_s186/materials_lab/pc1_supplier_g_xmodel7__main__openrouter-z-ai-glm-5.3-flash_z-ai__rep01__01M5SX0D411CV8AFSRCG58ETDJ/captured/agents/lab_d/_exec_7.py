@@ -1,0 +1,17 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+# lab_b's strength data
+s=df[(df.test=='edge crush resistance')&(df.requester=='lab_b')]
+print("strength rows", len(s))
+for c in mods:
+    g=s.groupby(c)['value'].agg(['mean','count']).sort_values('mean',ascending=False)
+    print(c); print(g)
+for cs in [('surface_treatment','process_profile_2','process_profile_3'),('additive_package_2','binder_system','joint_system'),('secondary_sheet','additive_package_1','process_profile_2')]:
+    g=s.groupby(list(cs))['value'].mean().sort_values(ascending=False)
+    print(g.head(6))
+# check base recipe means
+base=['HP9','TN6','HD9','TE2','9KR','Z2E','V9D','4AL','V7P','6XN','A6U','9DA']
+m=s
+for c,v in zip(mods,base): m=m[m[c]==v]
+print("base mean:", m['value'].mean(), len(m))

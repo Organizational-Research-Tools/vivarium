@@ -1,0 +1,15 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+for proj in ['QP-4069','QP-7006','QP-1992','QP-4152','QP-4757','QP-8476']:
+    q=df[df.project==proj]
+    piv = q.pivot_table(index='prototype_id', columns='test', values='value', aggfunc='mean')
+    piv.columns=['strength','heat','water']
+    # count passing per recipe
+    piv['pass'] = (piv.heat>=77.5).astype(int)+(piv.strength>=7.1).astype(int)+(piv.water>=78).astype(int)
+    top = piv.sort_values('pass',ascending=False).head(6)
+    print('===',proj)
+    print(top.round(2).to_string())
+    # print composition of top rows
+    cols=['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+    comp = q[cols].drop_duplicates().set_index('prototype_id')
+    print(comp.loc[comp.index.intersection(top.index)].to_string() if len(comp) else '(no composition known)')

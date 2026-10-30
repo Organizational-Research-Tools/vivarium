@@ -1,0 +1,2 @@
+import pandas as pd
+r=pd.read_csv('records.csv'); cols=['project','prototype_id','measured_by','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']; x=r[r.kind.eq('qualification')].drop_duplicates('prototype_id'); print(x[x.prototype_id.isin(['p_MV7HWR04AQ','p_W33J996BS8','p_174NHB75ES','p_J0B7G433JN'])][cols].to_string(index=False))

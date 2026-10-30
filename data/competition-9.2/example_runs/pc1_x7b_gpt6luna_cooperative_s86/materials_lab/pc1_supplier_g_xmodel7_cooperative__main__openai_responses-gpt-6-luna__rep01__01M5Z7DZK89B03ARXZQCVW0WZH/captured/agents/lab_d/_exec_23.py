@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); p=x[x.project=='QP-6879'].groupby(['prototype_id','instrument']).agg(n=('value','size'),mean=('value','mean')).reset_index(); print(p.to_string(index=False)); cols=[c for c in x.columns if c not in ('record_id','kind','project','prototype_id','instrument','test','specimen','value','unit','measured_by','requester')]; print('\nRecipes:'); print(x[x.project=='QP-6879'].groupby('prototype_id')[cols].first().to_string())

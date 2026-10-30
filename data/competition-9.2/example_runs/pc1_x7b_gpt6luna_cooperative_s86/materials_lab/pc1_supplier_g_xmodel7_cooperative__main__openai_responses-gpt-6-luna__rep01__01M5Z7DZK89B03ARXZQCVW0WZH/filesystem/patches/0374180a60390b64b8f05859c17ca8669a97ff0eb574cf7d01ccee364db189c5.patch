@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++for pid in ['p_XB3KE57P1J','p_6RBMX00RYK']:
++ g=x[(x.prototype_id==pid)&(x.kind=='qualification')]
++ print('\n',pid)
++ for t,sub in g.groupby('test'):
++  sub=sub.sort_values('specimen')
++  print(t,sub['value'].mean(),list(sub.record_id))

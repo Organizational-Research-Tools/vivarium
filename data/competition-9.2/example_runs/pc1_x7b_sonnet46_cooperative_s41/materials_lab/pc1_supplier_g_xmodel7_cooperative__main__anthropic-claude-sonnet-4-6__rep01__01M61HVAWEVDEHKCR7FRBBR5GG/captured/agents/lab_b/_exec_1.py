@@ -1,0 +1,47 @@
+
+# Analyze the key information
+info = {
+    "instrument": "strength (lab_b, lab_e)",
+    "heat_labs": ["lab_a", "lab_d"],
+    "water_labs": ["lab_c", "lab_f"],
+    "thresholds": {"heat": 77.5, "strength": 7.1, "water": 78.0},
+    "steps": {"heat": 0.25, "strength": 0.03, "water": 0.4},
+    "product_lines": {
+        "PL-57": ["QP-6572", "QP-6843", "QP-4476"],
+        "PL-95": ["QP-7212", "QP-3473", "QP-8607"],
+        "PL-98": ["QP-3089", "QP-8265", "QP-7604"],
+    },
+    "modules": [
+        ("base sheet", ["JA8", "P2G", "DA9", "U8H"]),
+        ("secondary sheet", ["3HW", "GG7", "5BU", "YX8"]),  # GG7 to avoid
+        ("binder system", ["8BB", "M2P", "NN7", "T9M"]),
+        ("additive package 1", ["5FE", "R5N", "57T", "QJ2"]),
+        ("additive package 2", ["6FA", "B3P", "S2J", "LD3"]),
+        ("additive package 3", ["L6C", "4PE", "QJ4", "44B"]),
+        ("process profile 1", ["4QB", "62D", "UP5", "WB3"]),
+        ("process profile 2", ["P8G", "C5Q", "VA8", "2BR"]),
+        ("process profile 3", ["N7N", "X9F", "H3F", "N4L"]),
+        ("surface treatment", ["ZW3", "5TZ", "7KL", "7TJ"]),
+        ("joint system", ["9FU", "57U", "DL8", "4GD"]),
+        ("conditioning step", ["YV2", "6JZ", "3N8", "G8Q"]),
+    ]
+}
+
+print("=== LAB B ANALYSIS ===")
+print(f"\nI operate: {info['instrument']}")
+print(f"Heat labs: {info['heat_labs']}")
+print(f"Water labs: {info['water_labs']}")
+print(f"\nThresholds: {info['thresholds']}")
+print(f"Step sizes: {info['steps']}")
+print(f"\nProjects by product line:")
+for pl, projects in info['product_lines'].items():
+    print(f"  {pl}: {projects}")
+print("\nModules and variants (GG7 must be avoided):")
+for name, variants in info['modules']:
+    flag = " *** AVOID GG7 ***" if "GG7" in variants else ""
+    print(f"  {name}: {variants}{flag}")
+
+# Baseline recipe (variant 1 for all, avoiding GG7)
+baseline = ["JA8", "3HW", "8BB", "5FE", "6FA", "L6C", "4QB", "P8G", "N7N", "ZW3", "9FU", "YV2"]
+print(f"\nBaseline recipe (all v1, no GG7): {baseline}")
+print(f"Length: {len(baseline)} modules")

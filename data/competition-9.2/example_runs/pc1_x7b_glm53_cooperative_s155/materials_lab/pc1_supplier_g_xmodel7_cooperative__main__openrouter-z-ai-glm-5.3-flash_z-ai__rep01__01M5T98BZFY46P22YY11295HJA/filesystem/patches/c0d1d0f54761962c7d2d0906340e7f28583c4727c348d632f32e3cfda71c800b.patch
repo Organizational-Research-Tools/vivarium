@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -490,3 +490,9 @@
+ r_X4QJQZT6D7,qualification,QP-1454,p_QDP2930TBE,heat,seal hold temperature,3,78.56575,°C,lab_a,lab_a,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,LW5
+ r_X4QJQZT6D8,qualification,QP-1454,p_QDP2930TBE,heat,seal hold temperature,4,78.62175,°C,lab_a,lab_a,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,LW5
+ r_X4QJQZT6D9,qualification,QP-1454,p_QDP2930TBE,heat,seal hold temperature,5,78.35350,°C,lab_a,lab_a,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,LW5
++r_T0YQM4BVXD,qualification,QP-1454,p_6ZX5BVZP3R,water,wet strength retained,0,79.3196,%,lab_c,lab_d,,,,,,,,,,,,
++r_T0YQM4BVXE,qualification,QP-1454,p_6ZX5BVZP3R,water,wet strength retained,1,79.2988,%,lab_c,lab_d,,,,,,,,,,,,
++r_T0YQM4BVXF,qualification,QP-1454,p_6ZX5BVZP3R,water,wet strength retained,2,79.4396,%,lab_c,lab_d,,,,,,,,,,,,
++r_T0YQM4BVXG,qualification,QP-1454,p_6ZX5BVZP3R,water,wet strength retained,3,78.8360,%,lab_c,lab_d,,,,,,,,,,,,
++r_T0YQM4BVXH,qualification,QP-1454,p_6ZX5BVZP3R,water,wet strength retained,4,78.8560,%,lab_c,lab_d,,,,,,,,,,,,
++r_T0YQM4BVXJ,qualification,QP-1454,p_6ZX5BVZP3R,water,wet strength retained,5,78.8452,%,lab_c,lab_d,,,,,,,,,,,,

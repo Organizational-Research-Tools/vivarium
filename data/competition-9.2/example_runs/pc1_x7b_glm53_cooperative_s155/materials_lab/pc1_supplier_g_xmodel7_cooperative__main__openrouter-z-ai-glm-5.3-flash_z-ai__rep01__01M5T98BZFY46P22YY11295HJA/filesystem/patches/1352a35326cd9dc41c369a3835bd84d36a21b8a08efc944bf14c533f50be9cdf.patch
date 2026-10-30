@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -403,3 +403,15 @@
+ r_CWX4PZ2DYN,qualification,QP-1454,p_WZQPBTDSHE,heat,seal hold temperature,3,78.56800,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_CWX4PZ2DYP,qualification,QP-1454,p_WZQPBTDSHE,heat,seal hold temperature,4,78.77100,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_CWX4PZ2DYQ,qualification,QP-1454,p_WZQPBTDSHE,heat,seal hold temperature,5,78.29400,°C,lab_a,lab_a,,,,,,,,,,,,
++r_JTNH20ZRND,exploratory,QP-1454,p_TQBAZY9Z93,strength,edge crush resistance,,6.59225,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,4C2,3LL,3RB,8WN,37J,RQ5,8K5,LW5
++r_JTNH20ZRNE,exploratory,QP-1454,p_TQBAZY9Z95,strength,edge crush resistance,,7.27811,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,4C2,3LL,3RB,F9B,37J,RQ5,8K5,LW5
++r_JTNH20ZRNF,exploratory,QP-1454,p_TQBAZY9Z97,strength,edge crush resistance,,7.21841,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,4C2,92P,3RB,GL8,37J,RQ5,8K5,LW5
++r_JTNH20ZRNG,exploratory,QP-1454,p_TQBAZY9Z99,strength,edge crush resistance,,7.35101,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,4C2,S3J,3RB,GL8,37J,RQ5,8K5,LW5
++r_JTNH20ZRNH,exploratory,QP-1454,p_TQBAZY9Z9B,strength,edge crush resistance,,7.23188,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,4C2,3LL,3RB,GL8,37J,RQ5,7PP,LW5
++r_JTNH20ZRNJ,exploratory,QP-1454,p_TQBAZY9Z9D,strength,edge crush resistance,,7.18412,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,4C2,3LL,3RB,GL8,37J,RQ5,PK9,LW5
++r_JTNH20ZRNK,exploratory,QP-1454,p_TQBAZY9Z9F,strength,edge crush resistance,,7.26191,kN/m,lab_e,lab_e,SM9,HJ7,E5L,V5J,4C2,3LL,3RB,GL8,37J,RQ5,8K5,LW5
++r_8TDCEQQR3Z,exploratory,QP-1454,p_TQBAZY9Z9H,strength,edge crush resistance,,5.87219,kN/m,lab_e,lab_e,73S,HJ7,E5L,V5J,4C2,3LL,3RB,GL8,37J,RQ5,8K5,LW5
++r_8TDCEQQR40,exploratory,QP-1454,p_TQBAZY9Z9K,strength,edge crush resistance,,7.21646,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,7J8,3LL,3RB,GL8,37J,RQ5,8K5,LW5
++r_8TDCEQQR41,exploratory,QP-1454,p_TQBAZY9Z9N,strength,edge crush resistance,,5.93450,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,4C2,3LL,3RB,GL8,37J,RQ5,8K5,4YT
++r_8TDCEQQR42,exploratory,QP-1454,p_TQBAZY9Z9Q,strength,edge crush resistance,,6.65402,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,4C2,3LL,3RB,GL8,49R,RQ5,8K5,LW5
++r_8TDCEQQR43,exploratory,QP-1454,p_TQBAZY9Z9S,strength,edge crush resistance,,7.19969,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,4C2,3LL,3RB,GL8,37J,RQ5,8K5,23Y

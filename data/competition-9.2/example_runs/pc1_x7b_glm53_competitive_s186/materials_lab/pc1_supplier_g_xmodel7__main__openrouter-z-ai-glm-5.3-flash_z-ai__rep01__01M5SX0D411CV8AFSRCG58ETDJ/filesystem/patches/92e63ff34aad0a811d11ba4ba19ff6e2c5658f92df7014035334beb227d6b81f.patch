@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -591,3 +591,9 @@
+ r_YR1163XB0D,qualification,QP-5993,p_4A7R5CRBB3,strength,edge crush resistance,3,7.31210,kN/m,lab_e,lab_b,,,,,,,,,,,,
+ r_YR1163XB0E,qualification,QP-5993,p_4A7R5CRBB3,strength,edge crush resistance,4,7.32104,kN/m,lab_e,lab_b,,,,,,,,,,,,
+ r_YR1163XB0F,qualification,QP-5993,p_4A7R5CRBB3,strength,edge crush resistance,5,7.33409,kN/m,lab_e,lab_b,,,,,,,,,,,,
++r_GH32F6D9V4,qualification,QP-5993,p_4A7R5CRBB3,water,wet strength retained,0,78.9796,%,lab_f,lab_b,,,,,,,,,,,,
++r_GH32F6D9V5,qualification,QP-5993,p_4A7R5CRBB3,water,wet strength retained,1,79.5040,%,lab_f,lab_b,,,,,,,,,,,,
++r_GH32F6D9V6,qualification,QP-5993,p_4A7R5CRBB3,water,wet strength retained,2,79.7856,%,lab_f,lab_b,,,,,,,,,,,,
++r_GH32F6D9V7,qualification,QP-5993,p_4A7R5CRBB3,water,wet strength retained,3,79.8268,%,lab_f,lab_b,,,,,,,,,,,,
++r_GH32F6D9V8,qualification,QP-5993,p_4A7R5CRBB3,water,wet strength retained,4,79.9008,%,lab_f,lab_b,,,,,,,,,,,,
++r_GH32F6D9V9,qualification,QP-5993,p_4A7R5CRBB3,water,wet strength retained,5,79.0920,%,lab_f,lab_b,,,,,,,,,,,,

@@ -1,0 +1,2 @@
+import pandas as pd
+r=pd.read_csv('records.csv'); q=r[(r.prototype_id=='p_QDC2E5V240') & (r.kind=='qualification')]; print(q[['record_id','test','specimen','value','measured_by']].to_string(index=False))

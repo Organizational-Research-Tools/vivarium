@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); cols=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']; key=['project']+[c for c in cols if c!='process_profile_2']
++q=x[(x.kind=='qualification')&(x.test=='seal hold temperature')].groupby(['project','prototype_id']+cols,dropna=False).value.mean().reset_index()
++for k,g in q.groupby(key):
++ if len(g)>1 and len(g.process_profile_2.unique())>1:
++  print('\n',k,'\n',g[['prototype_id','process_profile_2','value']].to_string(index=False))

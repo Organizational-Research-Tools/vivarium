@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -0,0 +1,9 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); q=x[x.kind.eq('qualification')]; g=q.groupby(['prototype_id','project','test']).agg(n=('value','count'),mean=('value','mean'),by=('measured_by','first')).reset_index(); w=g.pivot(index=['prototype_id','project'],columns='test',values=['n','mean']); w.columns=['_'.join(z) for z in w.columns];
++for proj in ['QP-6879','QP-9219','QP-7092','QP-9273','QP-9980','QP-8807']:
++ a=w.loc[w.index.get_level_values('project')==proj]
++ # list rows where H/W complete + pass, but no full S or S pass
++ print('\n'+proj)
++ for (pid,_),r in a.iterrows():
++  if r.get('n_seal hold temperature',0)>=6 and r.get('mean_seal hold temperature',0)>=78.25 and r.get('n_wet strength retained',0)>=6 and r.get('mean_wet strength retained',0)>=79.2:
++   print(pid, 'H',r.get('mean_seal hold temperature'),'W',r.get('mean_wet strength retained'),'S',r.get('n_edge crush resistance'),r.get('mean_edge crush resistance'))

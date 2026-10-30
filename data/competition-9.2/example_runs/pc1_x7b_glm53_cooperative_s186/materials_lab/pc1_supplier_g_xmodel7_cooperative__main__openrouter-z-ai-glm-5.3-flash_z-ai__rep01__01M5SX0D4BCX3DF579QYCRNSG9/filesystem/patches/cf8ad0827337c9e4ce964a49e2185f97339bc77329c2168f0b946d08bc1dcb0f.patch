@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -541,3 +541,5 @@
+ r_BK522F504K,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,3,77.94000,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_BK522F504M,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,4,78.14050,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_BK522F504N,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,5,78.11975,°C,lab_a,lab_e,,,,,,,,,,,,
++r_QACV84FPEC,exploratory,QP-4757,p_16A568VVKX,water,wet strength retained,,70.3648,%,lab_f,lab_d,,,,,,,,,,,,
++r_QACV84FPED,exploratory,QP-4757,p_16A568VVKX,water,wet strength retained,,70.2908,%,lab_f,lab_d,,,,,,,,,,,,

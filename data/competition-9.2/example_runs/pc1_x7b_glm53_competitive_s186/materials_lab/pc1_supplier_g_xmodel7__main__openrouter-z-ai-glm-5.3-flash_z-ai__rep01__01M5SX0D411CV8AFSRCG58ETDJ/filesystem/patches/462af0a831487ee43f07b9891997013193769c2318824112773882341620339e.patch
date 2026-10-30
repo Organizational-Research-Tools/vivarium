@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -968,3 +968,15 @@
+ r_NNK3ZR93F1,qualification,QP-3777,p_KSA6421JAG,heat,seal hold temperature,3,79.30075,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
+ r_NNK3ZR93F2,qualification,QP-3777,p_KSA6421JAG,heat,seal hold temperature,4,78.75000,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
+ r_NNK3ZR93F3,qualification,QP-3777,p_KSA6421JAG,heat,seal hold temperature,5,78.82325,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_6TBT635BG7,qualification,QP-3777,p_KSA6421JAE,strength,edge crush resistance,0,7.29260,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_6TBT635BG8,qualification,QP-3777,p_KSA6421JAE,strength,edge crush resistance,1,7.21100,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_6TBT635BG9,qualification,QP-3777,p_KSA6421JAE,strength,edge crush resistance,2,7.22486,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_6TBT635BGA,qualification,QP-3777,p_KSA6421JAE,strength,edge crush resistance,3,7.24781,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_6TBT635BGB,qualification,QP-3777,p_KSA6421JAE,strength,edge crush resistance,4,7.23083,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_6TBT635BGC,qualification,QP-3777,p_KSA6421JAE,strength,edge crush resistance,5,7.26518,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_SA7F5XQ35R,qualification,QP-3777,p_KSA6421JAG,strength,edge crush resistance,0,7.25939,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_SA7F5XQ35S,qualification,QP-3777,p_KSA6421JAG,strength,edge crush resistance,1,7.26386,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_SA7F5XQ35T,qualification,QP-3777,p_KSA6421JAG,strength,edge crush resistance,2,7.27472,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_SA7F5XQ35V,qualification,QP-3777,p_KSA6421JAG,strength,edge crush resistance,3,7.22501,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_SA7F5XQ35W,qualification,QP-3777,p_KSA6421JAG,strength,edge crush resistance,4,7.23209,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_SA7F5XQ35X,qualification,QP-3777,p_KSA6421JAG,strength,edge crush resistance,5,7.25663,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F

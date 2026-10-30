@@ -1,0 +1,4 @@
+import pandas as pd
+r=pd.read_csv('records.csv')
+q=r[(r.project=='QP-6879') & (r.test=='seal hold temperature')]
+print(q.groupby(['prototype_id','kind','measured_by']).value.agg(['mean','min','max','count']).sort_values('mean',ascending=False).head(40).to_string())

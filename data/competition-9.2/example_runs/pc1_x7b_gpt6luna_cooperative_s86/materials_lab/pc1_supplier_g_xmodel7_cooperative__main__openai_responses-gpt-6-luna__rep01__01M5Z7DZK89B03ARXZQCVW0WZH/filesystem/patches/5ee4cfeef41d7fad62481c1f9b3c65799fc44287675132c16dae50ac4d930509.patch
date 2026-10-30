@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -911,3 +911,15 @@
+ r_GMF1Q7T0F3,qualification,QP-5174,p_YQ5AFZNXTY,water,wet strength retained,3,71.1076,%,lab_c,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,96Y,YX4,YT2
+ r_GMF1Q7T0F4,qualification,QP-5174,p_YQ5AFZNXTY,water,wet strength retained,4,72.7736,%,lab_c,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,96Y,YX4,YT2
+ r_GMF1Q7T0F5,qualification,QP-5174,p_YQ5AFZNXTY,water,wet strength retained,5,75.9276,%,lab_c,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,96Y,YX4,YT2
++r_TCGXX0HKTK,qualification,QP-9259,p_9BVQ5SMM6A,water,wet strength retained,0,78.9324,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,YT2
++r_TCGXX0HKTM,qualification,QP-9259,p_9BVQ5SMM6A,water,wet strength retained,1,78.9616,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,YT2
++r_TCGXX0HKTN,qualification,QP-9259,p_9BVQ5SMM6A,water,wet strength retained,2,78.9444,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,YT2
++r_TCGXX0HKTP,qualification,QP-9259,p_9BVQ5SMM6A,water,wet strength retained,3,79.1036,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,YT2
++r_TCGXX0HKTQ,qualification,QP-9259,p_9BVQ5SMM6A,water,wet strength retained,4,79.3752,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,YT2
++r_TCGXX0HKTR,qualification,QP-9259,p_9BVQ5SMM6A,water,wet strength retained,5,78.5364,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,YT2
++r_TCGXX0HKTS,qualification,QP-9259,p_9BVQ5SMM6C,water,wet strength retained,0,78.7708,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,SU2
++r_TCGXX0HKTT,qualification,QP-9259,p_9BVQ5SMM6C,water,wet strength retained,1,78.8376,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,SU2
++r_TCGXX0HKTV,qualification,QP-9259,p_9BVQ5SMM6C,water,wet strength retained,2,79.2280,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,SU2
++r_TCGXX0HKTW,qualification,QP-9259,p_9BVQ5SMM6C,water,wet strength retained,3,79.4504,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,SU2
++r_TCGXX0HKTX,qualification,QP-9259,p_9BVQ5SMM6C,water,wet strength retained,4,79.5380,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,SU2
++r_TCGXX0HKTY,qualification,QP-9259,p_9BVQ5SMM6C,water,wet strength retained,5,78.7800,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,SU2

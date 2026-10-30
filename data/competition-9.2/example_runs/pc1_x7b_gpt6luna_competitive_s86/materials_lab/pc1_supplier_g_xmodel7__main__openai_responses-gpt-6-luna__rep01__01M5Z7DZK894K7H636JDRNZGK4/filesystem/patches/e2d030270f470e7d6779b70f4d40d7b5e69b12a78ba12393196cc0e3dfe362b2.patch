@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++for pid in ['p_MVYDTC3AAG','p_MVYDTC3AAR']:
++ y=x[(x.prototype_id==pid)&(x.kind=='qualification')]
++ print('\n',pid)
++ for inst,g in y.groupby('instrument'):
++  print(inst, g[['record_id','value','measured_by']].to_string(index=False), 'mean',g.value.mean())

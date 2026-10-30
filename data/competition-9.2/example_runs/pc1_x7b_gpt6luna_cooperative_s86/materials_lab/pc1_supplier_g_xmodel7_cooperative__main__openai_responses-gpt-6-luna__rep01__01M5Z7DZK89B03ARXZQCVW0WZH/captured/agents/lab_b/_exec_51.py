@@ -1,0 +1,15 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); x=x[x.kind=='qualification']
+# group prototype/test, means, recipe.
+keys=['project','prototype_id']
+means=x.groupby(keys+['test']).value.mean().unstack('test')
+recipes=x.groupby(keys)[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].first()
+m=recipes.join(means)
+# list complete (and near) all on QP9980, 6879 etc
+for p in ['QP-9980','QP-6879','QP-9273','QP-5174','QP-7092','QP-9219']:
+ d=m[m.index.get_level_values(0)==p].copy()
+ if len(d):
+  d['margin']=((d['seal hold temperature']-78.625)/.25).combine(((d['edge crush resistance']-7.235)/.03),min).combine(((d['wet strength retained']-79.8)/.4),min)
+  print('\n',p,'complete',d.dropna(subset=['seal hold temperature','edge crush resistance','wet strength retained']).shape)
+  cols=['seal hold temperature','edge crush resistance','wet strength retained','margin']
+  print(d.sort_values('margin',ascending=False)[cols+['base_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].head(15).to_string())

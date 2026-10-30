@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Study records — oaos2{% endblock %}
+{% block content %}
+<h1>Study records and registered analysis rules</h1>
+<p>The experiment index identifies the current study and results of record. Each preregistration
+sets its own comparisons and inclusion rules. Read its status: a draft is not a finalized analysis plan.</p>
+<p>These are the repository's saved documents, displayed without changing them. Dashboard means
+are exploratory summaries; they do not replace a study's registered dataset or analysis.</p>
+<h2>Saved documents</h2>
+<ul>{% for record in records %}<li><a href="/study-records/{{ record.name }}">{{ record.title }}</a></li>{% endfor %}</ul>
+{% if not records %}<p>No study documents are available in this installation. Open the study's preregistration and results in the source repository.</p>{% endif %}
+{% endblock %}

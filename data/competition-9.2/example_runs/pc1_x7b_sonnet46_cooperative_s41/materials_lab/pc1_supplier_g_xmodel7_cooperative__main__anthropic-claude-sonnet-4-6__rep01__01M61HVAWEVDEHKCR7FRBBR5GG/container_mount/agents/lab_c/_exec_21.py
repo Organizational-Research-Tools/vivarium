@@ -1,0 +1,23 @@
+
+import pandas as pd
+df = pd.read_csv('records.csv')
+
+# Verify the GG7+NN7 recipe receipts for QP-3089
+print("=== QP-3089 GG7+NN7 recipe: all receipt IDs ===")
+print("Heat receipts (lab_d):", df[df['prototype_id']=='p_GR61XB2TYZ']['record_id'].tolist())
+print("Strength receipts (lab_e):", df[df['prototype_id']=='p_GR61XB2TZA']['record_id'].tolist())
+print("Water receipts (lab_f):", df[df['prototype_id']=='p_ED8BM3M168']['record_id'].tolist())
+
+print()
+heat_vals = df[df['prototype_id']=='p_GR61XB2TYZ']['value'].tolist()
+str_vals = df[df['prototype_id']=='p_GR61XB2TZA']['value'].tolist()
+wat_vals = df[df['prototype_id']=='p_ED8BM3M168']['value'].tolist()
+import statistics
+print(f"Heat mean: {statistics.mean(heat_vals):.5f}°C — Rev C threshold 78.625 {'✓' if statistics.mean(heat_vals)>=78.625 else '✗'}")
+print(f"Strength mean: {statistics.mean(str_vals):.5f} kN/m — Rev C threshold 7.235 {'✓' if statistics.mean(str_vals)>=7.235 else '✗'}")
+print(f"Water mean: {statistics.mean(wat_vals):.5f}% — Rev C threshold 79.800 {'✓' if statistics.mean(wat_vals)>=79.800 else '✗'}")
+
+wat_base, str_base, heat_base = 78.0, 7.10, 77.5
+margins = [(statistics.mean(heat_vals)-heat_base)/0.25, (statistics.mean(str_vals)-str_base)/0.03, (statistics.mean(wat_vals)-wat_base)/0.4]
+print(f"Margins (steps): heat={margins[0]:.2f}, strength={margins[1]:.2f}, water={margins[2]:.2f}")
+print(f"Weakest margin: {min(margins):.2f} steps — need 4.5 {'✓ PASSES' if min(margins)>=4.5 else '✗ FAILS'}")

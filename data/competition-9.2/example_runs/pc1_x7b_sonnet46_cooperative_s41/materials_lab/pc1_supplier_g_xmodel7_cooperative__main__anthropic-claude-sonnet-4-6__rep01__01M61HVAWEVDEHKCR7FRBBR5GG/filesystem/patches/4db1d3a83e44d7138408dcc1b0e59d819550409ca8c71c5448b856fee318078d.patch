@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -335,3 +335,27 @@
+ r_HGYT24NBDY,exploratory,QP-3473,p_6VJJE4M69E,strength,edge crush resistance,,6.64835,kN/m,lab_b,lab_b,P2G,5BU,M2P,QJ2,B3P,44B,62D,C5Q,X9F,5TZ,9FU,YV2
+ r_HGYT24NBDZ,exploratory,QP-3473,p_6VJJE4M69E,strength,edge crush resistance,,6.66638,kN/m,lab_b,lab_b,P2G,5BU,M2P,QJ2,B3P,44B,62D,C5Q,X9F,5TZ,9FU,YV2
+ r_HGYT24NBE0,exploratory,QP-3473,p_6VJJE4M69E,strength,edge crush resistance,,6.61619,kN/m,lab_b,lab_b,P2G,5BU,M2P,QJ2,B3P,44B,62D,C5Q,X9F,5TZ,9FU,YV2
++r_V2Y1S2NZ65,exploratory,QP-3089,p_5ZPYV6MTWB,water,wet strength retained,,71.2908,%,lab_f,lab_b,JA8,3HW,8BB,5FE,6FA,L6C,4QB,P8G,N7N,ZW3,9FU,YV2
++r_V2Y1S2NZ66,exploratory,QP-3089,p_853B4YQGHJ,water,wet strength retained,,79.6928,%,lab_f,lab_b,P2G,5BU,M2P,R5N,B3P,4PE,62D,C5Q,X9F,5TZ,57U,6JZ
++r_V2Y1S2NZ67,exploratory,QP-3089,p_853B4YQGHM,water,wet strength retained,,79.5136,%,lab_f,lab_b,DA9,5BU,NN7,57T,S2J,QJ4,UP5,VA8,H3F,7KL,DL8,3N8
++r_V2Y1S2NZ68,exploratory,QP-3089,p_853B4YQGHP,water,wet strength retained,,78.0316,%,lab_f,lab_b,U8H,YX8,T9M,QJ2,LD3,44B,WB3,2BR,N4L,7TJ,4GD,G8Q
++r_XPRRQ145RG,exploratory,QP-6572,p_GCXZZ91WJ2,water,wet strength retained,,51.6364,%,lab_f,lab_b,JA8,3HW,8BB,5FE,6FA,L6C,4QB,P8G,N7N,ZW3,9FU,YV2
++r_XPRRQ145RH,exploratory,QP-6572,p_GCXZZ91WJ4,water,wet strength retained,,75.6480,%,lab_f,lab_b,P2G,5BU,M2P,R5N,B3P,4PE,62D,C5Q,X9F,5TZ,57U,6JZ
++r_07JC7YHYQ6,exploratory,QP-6572,p_GCXZZ91WJ6,water,wet strength retained,,52.7560,%,lab_f,lab_b,DA9,5BU,NN7,57T,S2J,QJ4,UP5,VA8,H3F,7KL,DL8,3N8
++r_07JC7YHYQ7,exploratory,QP-6572,p_GCXZZ91WJ8,water,wet strength retained,,75.6716,%,lab_f,lab_b,U8H,YX8,T9M,QJ2,LD3,44B,WB3,2BR,N4L,7TJ,4GD,G8Q
++r_CCSM2E86WH,exploratory,QP-7212,p_SVC8TYAQGJ,water,wet strength retained,,63.5552,%,lab_f,lab_b,JA8,3HW,8BB,5FE,6FA,L6C,4QB,P8G,N7N,ZW3,9FU,YV2
++r_CCSM2E86WJ,exploratory,QP-7212,p_SVC8TYAQGM,water,wet strength retained,,71.7136,%,lab_f,lab_b,P2G,5BU,M2P,R5N,B3P,4PE,62D,C5Q,X9F,5TZ,57U,6JZ
++r_CCSM2E86WK,exploratory,QP-7212,p_SVC8TYAQGP,water,wet strength retained,,80.5396,%,lab_f,lab_b,DA9,5BU,NN7,57T,S2J,QJ4,UP5,VA8,H3F,7KL,DL8,3N8
++r_CCSM2E86WM,exploratory,QP-7212,p_SVC8TYAQGR,water,wet strength retained,,70.2620,%,lab_f,lab_b,U8H,YX8,T9M,QJ2,LD3,44B,WB3,2BR,N4L,7TJ,4GD,G8Q
++r_CCSM2E86WN,exploratory,QP-6843,p_6PWNP7BFEY,water,wet strength retained,,62.6760,%,lab_f,lab_b,JA8,3HW,8BB,5FE,6FA,L6C,4QB,P8G,N7N,ZW3,9FU,YV2
++r_CCSM2E86WP,exploratory,QP-6843,p_6PWNP7BFF0,water,wet strength retained,,70.3340,%,lab_f,lab_b,P2G,5BU,M2P,R5N,B3P,4PE,62D,C5Q,X9F,5TZ,57U,6JZ
++r_CCSM2E86WQ,exploratory,QP-6843,p_6PWNP7BFF2,water,wet strength retained,,63.2904,%,lab_f,lab_b,DA9,5BU,NN7,57T,S2J,QJ4,UP5,VA8,H3F,7KL,DL8,3N8
++r_9PT190KZED,exploratory,QP-6843,p_6PWNP7BFF4,water,wet strength retained,,70.8856,%,lab_f,lab_b,U8H,YX8,T9M,QJ2,LD3,44B,WB3,2BR,N4L,7TJ,4GD,G8Q
++r_9PT190KZEE,exploratory,QP-6843,p_47ZQZMDNXM,water,wet strength retained,,46.0012,%,lab_f,lab_b,P2G,5BU,M2P,QJ2,B3P,L6C,62D,C5Q,X9F,5TZ,9FU,YV2
++r_9PT190KZEF,exploratory,QP-6843,p_47ZQZMDNXP,water,wet strength retained,,44.6168,%,lab_f,lab_b,P2G,5BU,NN7,QJ2,B3P,L6C,62D,C5Q,X9F,5TZ,9FU,YV2
++r_9PT190KZEG,exploratory,QP-6843,p_47ZQZMDNXR,water,wet strength retained,,53.7988,%,lab_f,lab_b,P2G,5BU,M2P,57T,B3P,L6C,62D,C5Q,X9F,5TZ,9FU,YV2
++r_9PT190KZEH,exploratory,QP-6843,p_47ZQZMDNXT,water,wet strength retained,,62.4108,%,lab_f,lab_b,P2G,5BU,M2P,QJ2,B3P,44B,62D,C5Q,X9F,5TZ,9FU,YV2
++r_9PT190KZEJ,exploratory,QP-8265,p_X8JBQTDZJM,water,wet strength retained,,71.4752,%,lab_f,lab_b,JA8,3HW,8BB,5FE,6FA,L6C,4QB,P8G,N7N,ZW3,9FU,YV2
++r_9PT190KZEK,exploratory,QP-8265,p_X8JBQTDZJP,water,wet strength retained,,70.8568,%,lab_f,lab_b,P2G,5BU,M2P,R5N,B3P,4PE,62D,C5Q,X9F,5TZ,57U,6JZ
++r_9PT190KZEM,exploratory,QP-8265,p_X8JBQTDZJR,water,wet strength retained,,71.5592,%,lab_f,lab_b,DA9,5BU,NN7,57T,S2J,QJ4,UP5,VA8,H3F,7KL,DL8,3N8
++r_ZVS4YQK734,exploratory,QP-8265,p_X8JBQTDZJT,water,wet strength retained,,79.7324,%,lab_f,lab_b,U8H,YX8,T9M,QJ2,LD3,44B,WB3,2BR,N4L,7TJ,4GD,G8Q

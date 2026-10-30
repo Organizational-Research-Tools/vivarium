@@ -1,0 +1,19 @@
+--- 
++++ 
+@@ -0,0 +1,16 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++# search for QP-6489 recipes with heat/water screens or panels that clear B, regardless of strength
++sub = df[df.project=='QP-6489']
++g = sub.groupby('prototype_id').apply(lambda d: pd.Series({
++  'heat_n':len(d[d.test=='seal hold temperature']),
++  'heat_mean':d[d.test=='seal hold temperature'].value.mean(),
++  'heat_panel':(d[(d.test=='seal hold temperature')&(d.kind=='qualification')].shape[0]>=6),
++  'water_n':len(d[d.test=='wet strength retained']),
++  'water_mean':d[d.test=='wet strength retained'].value.mean(),
++  'water_panel':(d[(d.test=='wet strength retained')&(d.kind=='qualification')].shape[0]>=6),
++  'str_n':len(d[d.test=='edge crush resistance']),
++  'str_mean':d[d.test=='edge crush resistance'].value.mean(),
++  'str_panel':(d[(d.test=='edge crush resistance')&(d.kind=='qualification')].shape[0]>=6),
++}), include_groups=False)
++print(g.to_string())

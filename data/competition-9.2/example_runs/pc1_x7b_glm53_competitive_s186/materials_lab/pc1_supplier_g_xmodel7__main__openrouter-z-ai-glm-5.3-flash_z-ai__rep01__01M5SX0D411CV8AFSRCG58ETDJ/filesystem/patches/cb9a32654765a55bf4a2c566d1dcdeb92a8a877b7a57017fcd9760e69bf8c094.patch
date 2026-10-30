@@ -1,0 +1,16 @@
+--- 
++++ 
+@@ -0,0 +1,13 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++# 38J-based recipes (2JU allowed only for QP-8476/QP-1992; also note 2JU excluded by Association for reports!)
++k=df.dropna(subset=['base_sheet'])
++# For QP-8476 (PL-42), find recipes with heat>=78.4
++h=df[df.project=='QP-8476']
++print('QP-8476 rows:', len(h))
++print(h.groupby(['prototype_id','test']).value.agg(['count','mean']))
++# any data on QP-8476 at all? QP-4757 strength>=7.19?
++for proj in ['QP-8476','QP-4757','QP-7006','QP-4152']:
++    sub=df[df.project==proj]
++    print(proj, sub.test.value_counts().to_dict())

@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++d=df[df.prototype_id.isin(['p_E2EW3E5JVE','p_6ZX5BVZP3R','p_QDP2930TBG','p_QDP2930TBJ','p_WZQPBTDSHE'])]
++print(d[['record_id','prototype_id','instrument','test','value','measured_by']].to_string())
++print(d.groupby(['prototype_id','instrument']).value.mean())

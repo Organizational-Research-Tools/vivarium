@@ -1,0 +1,14 @@
+--- 
++++ 
+@@ -209,3 +209,11 @@
+ r_Y1T10RFB2N,qualification,QP-3068,p_Y1T10RFB2G,water,wet strength retained,3,79.0708,%,lab_f,lab_e,NF2,LB3,93H,QE3,E8S,8P4,RF3,5UV,5J9,BX9,G7L,3DC
+ r_Y1T10RFB2P,qualification,QP-3068,p_Y1T10RFB2G,water,wet strength retained,4,79.1948,%,lab_f,lab_e,NF2,LB3,93H,QE3,E8S,8P4,RF3,5UV,5J9,BX9,G7L,3DC
+ r_Y1T10RFB2Q,qualification,QP-3068,p_Y1T10RFB2G,water,wet strength retained,5,79.2684,%,lab_f,lab_e,NF2,LB3,93H,QE3,E8S,8P4,RF3,5UV,5J9,BX9,G7L,3DC
++r_MRFTPAP16G,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.20140,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_KMH943SC93,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.19783,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_KMH943SC94,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.20443,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_KMH943SC95,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.16351,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_KMH943SC96,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.17758,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_KMH943SC97,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.25003,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_BM8TDBDXMG,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.25747,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_BM8TDBDXMH,exploratory,QP-8864,p_GGE02Q54QT,strength,edge crush resistance,,7.23002,kN/m,lab_e,lab_a,,,,,,,,,,,,

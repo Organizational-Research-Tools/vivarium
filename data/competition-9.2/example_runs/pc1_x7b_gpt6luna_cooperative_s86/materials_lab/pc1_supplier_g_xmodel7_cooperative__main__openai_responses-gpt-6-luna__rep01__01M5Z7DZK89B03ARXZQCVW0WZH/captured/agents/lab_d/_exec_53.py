@@ -1,0 +1,10 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.kind=='qualification']; g=q.groupby(['project','prototype_id','instrument','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step','test']).value.mean().reset_index(); p=g.pivot_table(index=list(g.columns[:15]),columns='test',values='value').reset_index();
+# thresholds
+for col,t in [('heat',78.625),('strength',7.235),('water',79.8)]:
+ if col not in p: p[col]=float('nan')
+print(p[(p.heat>=78.625)&(p.strength>=7.235)&(p.water>=79.8)].to_string(index=False))
+# candidates each two passing
+print('\n2 pass')
+for mask in [((p.heat>=78.625)&(p.water>=79.8)),((p.heat>=78.625)&(p.strength>=7.235)),((p.strength>=7.235)&(p.water>=79.8))]:
+ print(p[mask][['project','prototype_id','heat','strength','water']].to_string(index=False))

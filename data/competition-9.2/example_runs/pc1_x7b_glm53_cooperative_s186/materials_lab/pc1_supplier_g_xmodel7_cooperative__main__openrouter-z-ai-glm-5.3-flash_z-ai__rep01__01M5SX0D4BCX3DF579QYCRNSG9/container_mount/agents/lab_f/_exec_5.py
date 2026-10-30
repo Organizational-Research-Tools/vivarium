@@ -1,0 +1,9 @@
+import pandas as pd
+d=pd.read_csv('records.csv')
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+for p in ['p_S1J55G2ZVC','p_C9J7882FR2','p_JP0PQGK8FF','p_YYXHWBE28X','p_2GM4Y6E0QT']:
+    s=d[d.prototype_id==p]
+    if len(s): print(p, s.iloc[0][mods].tolist())
+    else: print(p,'no comp')
+# water pattern on QP-5993 core
+print(d[(d.project=='QP-5993')].groupby(['prototype_id','test'])['value'].agg(['count','mean']))

@@ -1,0 +1,3 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); y=x[(x.project=='QP-3617')&(x.instrument=='water')]
+print(y.groupby(['prototype_id','kind','measured_by']).agg(n=('value','size'), mean=('value','mean')).to_string())

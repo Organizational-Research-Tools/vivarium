@@ -1,0 +1,6 @@
+import pandas as pd
+r=pd.read_csv('records.csv'); prot=r.drop_duplicates('prototype_id').set_index('prototype_id')
+ids=['p_W33J996BS8','p_MV7HWR04AQ','p_02AJ2E0D5N','p_KBABVTJCX0','p_KBABVTJCWW','p_Y9Y4J1ZWSF','p_QDC2E5V240','p_174NHB75ES','p_9YW85TNK95','p_9YW85TNK93','p_3KNEMDD3PR']
+mods=[c for c in r.columns if c in ['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']]
+for i in ids:
+ if i in prot.index: print(i,prot.loc[i,'project'],[prot.loc[i,m] for m in mods])

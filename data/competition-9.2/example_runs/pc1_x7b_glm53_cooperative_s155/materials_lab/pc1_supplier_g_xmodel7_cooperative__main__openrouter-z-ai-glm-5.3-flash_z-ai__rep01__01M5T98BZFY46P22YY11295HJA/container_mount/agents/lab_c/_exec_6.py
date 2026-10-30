@@ -1,0 +1,8 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+cols=df.columns[11:23].tolist()
+pan=df[df.kind=='qualification']
+m=pan.groupby(['project','prototype_id','test'])['value'].mean().unstack()
+prot=df.drop_duplicates('prototype_id')[['project','prototype_id']+cols].set_index('prototype_id')
+res=m.join(prot)
+print(res.tail(8).to_string())

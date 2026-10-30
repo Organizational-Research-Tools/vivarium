@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+{% from "_chip.html" import chip, result_chip, prov_chip, help, gh, howto, elig_chip, outcome %}
+{% block title %}runs — oaos2{% endblock %}
+{% block crumb %}<span class="root">{{ runs_root }}</span>{% endblock %}
+{% block content %}
+
+{% call howto() %}
+  <p><strong>Status.</strong> Recorded completion and scoring status. Incomplete can mean active or interrupted; unscored can be intentional. Inspect the status explanation and study rules before deciding whether a run is usable.</p>
+  <p><strong>Material-version labels.</strong> The provenance filter compares each run's saved material references with today's library. The labels are archive notes, not run results, and do not establish comparability.</p>
+  <dl class="kv">
+    {% for label in ("current", "stale_materials", "superseded", "unknown") %}
+    <dt>{{ prov_chip(label) }}</dt><dd>{{ PROVENANCE_HELP[label] }}</dd>
+    {% endfor %}
+    <dt><span class="sev sev-info">gate-check</span></dt><dd>{{ PROVENANCE_HELP["gate-check"] }}</dd>
+  </dl>
+{% endcall %}
+
+<div class="tiles">
+  <a class="tile" href="/runs{{ '?blind=1' if blind }}" title="clear all filters"><div class="v">{{ rows|length }}<span class="dim" style="font-size:14px">{% if rows|length != n_total %} / {{ n_total }}{% endif %}</span></div><div class="k">runs{% if rows|length != n_total %} (filtered){% endif %}</div></a>
+  <a class="tile" href="{{ view_url.include_query_params(mode='confirmatory') }}" title="filter: mode = confirmatory"><div class="v">{{ sections.n_registered }}</div><div class="k">{{ gh("registered experiments", "registered") }}</div></a>
+  <div class="tile"><div class="v">{{ sections.n_exploratory }}</div><div class="k">{{ gh("exploratory work", "exploratory") }}</div></div>
+  <a class="tile" href="{{ view_url.include_query_params(status='incomplete') }}" title="filter: status = incomplete"><div class="v">{{ tiles.incomplete }}</div><div class="k">incomplete</div></a>
+  <div class="tile"><div class="v">{{ tiles.eligible }}</div><div class="k">{{ gh("eligibility", "eligible") }}</div></div>
+  <div class="tile"><div class="v">{{ tiles.censored }}</div><div class="k">censored</div></div>
+  <a class="tile" href="{{ view_url.include_query_params(attn=1) }}" title="filter: runs with a recorded condition"><div class="v">{{ tiles.attention }}</div><div class="k">{{ gh("needs attention") }}</div></a>
+  <div class="tile"><div class="v">{{ tiles.irregular }}</div><div class="k">irregular</div></div>
+  <div class="tile"><div class="v"{% if tiles.n_unknown_usage %} title="{{ tiles.n_unknown_usage }} model call{{ 's' if tiles.n_unknown_usage != 1 }} ended with unknown usage; the cost is a lower bound"{% endif %}>{{ tiles.cost_usd|usd_lb(tiles.n_unknown_usage) }}</div><div class="k">total cost</div></div>
+</div>
+
+<details class="card" {% if not (active.lineage or active.experiment or active.study) %}open{% endif %}>
+  <summary>Filters{% if (active.lineage or active.experiment or active.study) %} <span class="dim" style="font-weight:400">· showing {{ active.lineage or active.study or active.experiment }}</span>{% endif %}</summary>
+  <form class="filters" method="get" action="/runs">
+    {% if blind %}<input type="hidden" name="blind" value="1">{% endif %}
+    <select name="scope" onchange="this.form.submit()">
+      <option value="">scope: all runs</option>
+      <option value="registered" {% if scope == "registered" %}selected{% endif %}>scope: registered experiments</option>
+      <option value="exploratory" {% if scope == "exploratory" %}selected{% endif %}>scope: exploratory work</option>
+    </select>
+    {% if studies %}<select name="study" onchange="this.form.submit()">
+      <option value="">study: all</option>
+      {% for st in studies %}<option value="{{ st.id }}" {% if study == st.id %}selected{% endif %}>{{ st.title }}</option>{% endfor %}
+    </select>{% endif %}
+    {% if attn %}<input type="hidden" name="attn" value="1">{% endif %}
+    {% for name in (("status", "lineage", "experiment", "organization", "model", "difficulty", "mode", "clock", "prov") if single_lineage else ("status", "lineage", "experiment", "model", "prov")) %}
+    <select name="{{ name }}" onchange="this.form.submit()">
+      <option value="">{{ "provenance" if name == "prov" else name }}: all</option>
+      {% for v in facets[name] %}
+      <option value="{{ v }}" {% if active[name] == v %}selected{% endif %}>{{ v }}</option>
+      {% endfor %}
+    </select>
+    {% endfor %}
+    <select name="sort" onchange="this.form.submit()">
+      {% for key, label in (("newest", "newest first"), ("oldest", "oldest first"), ("cost", "most expensive first")) %}<option value="{{ key }}" {% if sort|default("newest") == key %}selected{% endif %}>order: {{ label }}</option>{% endfor %}
+    </select>
+    <input type="text" name="q" value="{{ q }}" placeholder="run id contains…">
+    <button type="submit">Filter</button>
+    <a href="/runs{{ '?blind=1' if blind }}">reset</a>
+    <a href="/runs?rebuild=1{{ '&blind=1' if blind }}" title="drop the registry cache and rescan every run">rescan</a>
+    {% if blind %}<span class="sev sev-info" title="scored columns hidden: a confirmatory sweep is in flight, or you asked for it">outcome-blind</span>{% if blind_held_n %} <span class="dim">held by {{ blind_held_n }} unfinished confirmatory run{{ "s" if blind_held_n != 1 }} in <a href="/runs?lineage={{ blind_held_by[0] }}&status=incomplete">{{ blind_held_by|join(", ") }}</a></span>{% endif %}{% else %}<a href="{{ view_url.include_query_params(blind=1) }}" title="hide every scored column">blind</a>{% endif %}
+    <a href="{{ view_url.replace(path='/registry.csv').include_query_params(blind=1 if blind else 0) }}" title="this filtered view as CSV">csv</a>
+  </form>
+</details>
+
+
+
+
+{% macro runs_table(tgroups) -%}
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr>
+      <th>{{ gh("started", "ran") }}</th>
+      <th>{{ gh("run") }}</th>
+      <th>{{ help("run", "Whether the run ran to its end") }}</th>
+      <th>{{ gh("eligibility") }}</th>
+      <th>{{ gh("needs attention", "attention") }}</th>
+      <th>{{ gh("mode") }}</th>
+      <th>{{ gh("experiment") }}</th>
+      {% if (n_lineages|default(2)) > 1 %}<th>lineage</th>{% endif %}
+      <th>{{ gh("organization") }}</th>
+      <th>{{ gh("model") }}</th>
+      <th>{{ gh("difficulty") }}</th>
+      <th>{{ gh("clock label") }}</th>
+      <th>observed / horizon</th>
+      <th>{{ gh("outcome") }}</th>
+      <th class="num">{{ help("posts / notes / handoffs", "Voluntary board posts, private notes, and formal handoffs recorded in the run. Counts of what was sent, not of what was read or understood.") }}</th>
+      <th class="num">{{ gh("cost") }}</th>
+    </tr></thead>
+    <tbody>
+    {% for g in tgroups %}{% set gi = loop.index %}{% set many = g.runs|length > 1 %}
+    {% for m in g.runs %}{% set r = m.row %}
+      {% set open_at = "/run/" ~ r.run_ref %}
+      <tr{% if many %} data-run-group="{{ gi }}" data-run-index="{{ loop.index0 }}"{% if not loop.first %} hidden{% endif %}{% endif %}>
+        <td class="dim" style="white-space:nowrap">{{ r.started_label or "—" }}</td>
+        <td style="white-space:nowrap"><a href="{{ open_at }}{{ '/cases' if blind }}" title="{{ r.run_id }}"><strong>{{ r.organization_id or r.run_id|shortid(20) }}</strong> <code class="dim">{{ r.run_id[-6:] }}</code></a>{% if r.task_condition %}<br><span class="dim" style="font-size:12px" title="the task's condition as the run recorded it">{{ r.task_condition }}</span>{% endif %}
+          {% if not blind %}<span class="dim">· <a href="{{ open_at }}/story">story</a></span>{% endif %}
+          {%- if many %}<br><select class="run-pick" data-run-group="{{ gi }}" aria-label="run of {{ g.stem }}" title="{{ g.runs|length }} runs of {{ g.stem }}; choose one to show">
+            {%- for o in g.runs %}<option value="{{ loop.index0 }}"{% if o is sameas m %} selected{% endif %}>{{ o.label }}</option>{% endfor %}</select>{% endif %}</td>
+        <td>{{ chip(r.status, r.irregular) }}</td>
+        <td>{{ elig_chip(r.eligibility) }}</td>
+        <td>{% for a in r.attention %}<span class="sev sev-serious">{{ a }}</span> {% endfor %}
+          {%- if r.idle_minutes is not none and r.status in ("incomplete", "idle") %}<span class="dim" title="time since the event stream last moved">{% if r.idle_minutes >= 2880 %}{{ r.idle_minutes // 1440 }} days idle{% else %}{{ r.idle_minutes }} min idle{% endif %}</span>{% endif %}
+          {%- if active.prov %} {{ prov_chip(r.provenance, r.provenance_reasons, r.tags) }}{% endif %}</td>
+        <td>{% if r.mode == "confirmatory" %}<strong>{{ r.mode }}</strong>{% else %}<span class="dim">{{ r.mode or "none" }}</span>{% endif %}</td>
+        <td>{% if r.experiment_id %}<a href="/experiment/{{ r.experiment_id }}{{ '/cases?mode=blind' if blind }}">{{ r.experiment_id }}</a>{% else %}—{% endif %}{% if many %}<br><span class="dim" style="font-size:12px">{{ g.runs|length }} runs of {{ g.stem }}</span>{% endif %}</td>
+        {% if (n_lineages|default(2)) > 1 %}<td><a href="/runs?lineage={{ r.lineage }}{{ '&blind=1' if blind }}">{{ r.lineage }}</a></td>{% endif %}
+        <td>{{ r.organization_id or "—" }}</td>
+        <td>{{ r.model_ref or "—" }}</td>
+        <td>{{ r.difficulty or "—" }}</td>
+        <td>{{ r.clock_label or "—" }}</td>
+        <td>{{ r.final_round or "—" }}{% if r.rounds_total %} / {{ r.rounds_total }}{% endif %}</td>
+        {% if blind %}<td class="dim">·</td>{% else %}
+        <td>{{ outcome(r.outcome) }}{% if r.report_source == "rendered" and r.outcome %}<span class="dim" title="re-rendered at HEAD · analysis {{ r.report_identity }}">*</span>{% endif %}{% if r.outcome and r.outcome.detail %}<br><span class="dim" style="font-size:12px">{{ r.outcome.detail }}</span>{% endif %}</td>{% endif %}
+        <td class="num">{% if r.n_board_posts or r.n_notes or r.n_handoffs %}{{ r.n_board_posts or 0 }} / {{ r.n_notes or 0 }} / {{ r.n_handoffs or 0 }}{% else %}<span class="dim">—</span>{% endif %}</td>
+        <td class="num"{% if r.n_unknown_usage %} title="{{ r.n_unknown_usage }} model call{{ 's' if r.n_unknown_usage != 1 }} ended with unknown usage; the cost is a lower bound"{% endif %}>{{ r.cost_usd|usd_lb(r.n_unknown_usage) if r.cost_usd is not none else "" }}</td>
+      </tr>
+    {% endfor %}
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  <script>
+  // One entry per experiment stem (DASHBOARD.md §4.1): the menu shows the chosen run's row and hides the others.
+  document.querySelectorAll("select.run-pick").forEach(function (sel) {
+    sel.addEventListener("change", function () {
+      var g = sel.getAttribute("data-run-group"), pick = sel.value;
+      document.querySelectorAll('tr[data-run-group="' + g + '"]').forEach(function (tr) {
+        var on = tr.getAttribute("data-run-index") === pick;
+        tr.hidden = !on;
+        if (on) { var s = tr.querySelector("select.run-pick"); if (s) { s.value = pick; s.focus(); } }
+      });
+    });
+  });
+  </script>
+{%- endmacro %}
+
+{% if lineage_index %}
+<div class="card">
+  <h2>Studies and lineages <span class="dim" style="font-weight:400">· {{ lineage_index|length }} · newest first</span></h2>
+  <p class="dim" style="margin:0 0 0.4rem">One row per declared study or lineage. Open one to read its runs, or <a href="{{ view_url.include_query_params(flat=1) }}">list every run</a>.</p>
+  <div style="overflow-x:auto"><table>
+    <thead><tr>
+      <th>lineage</th><th>{{ gh("mode") }}</th><th>{{ gh("task pack", "task") }}</th><th class="num">runs</th><th>ran</th>
+      <th class="num">{{ gh("needs attention", "attention") }}</th>
+      <th class="num">{{ gh("eligibility", "eligible") }}</th>
+      {% if not blind %}<th>{{ help("outcomes", "The task's outcome over eligible runs: counts by kind, or a mean. Shown when the row holds one task.") }}</th>{% endif %}
+      <th class="num">posts + notes</th><th class="num">{{ gh("cost") }}</th><th>latest run</th><th>study record</th>
+    </tr></thead>
+    <tbody>
+    {% for g in lineage_index %}
+      <tr>
+        {% if g.kind == "study" %}
+        <td><strong><a href="/runs?study={{ g.study }}{{ '&blind=1' if blind }}">{{ g.title }}</a></strong>
+          <details style="display:inline-block; vertical-align:top; margin-left:0.4rem"><summary class="dim">{{ g.members|length }} lineage{{ "s" if g.members|length != 1 }}</summary>
+            {% for m in g.members %}<div><span class="dim">{{ m.last_day or "—" }}</span> <a href="{% if m.n == 1 and m.latest_run %}/run/{{ m.latest_run.run_ref }}{{ '/cases' if blind }}{% else %}/runs?lineage={{ m.lineage }}{{ '&blind=1' if blind }}{% endif %}">{{ m.lineage }}</a>{% if m.n != 1 %} <span class="dim">· {{ m.n }} runs</span>{% endif %}</div>{% endfor %}</details></td>
+        {% elif g.n == 1 and g.latest_run %}
+        <td><strong><a href="/run/{{ g.latest_run.run_ref }}{{ '/cases' if blind }}" title="one run: opens it">{{ g.lineage }}</a></strong></td>
+        {% else %}
+        <td><strong><a href="/runs?lineage={{ g.lineage }}{{ '&blind=1' if blind }}">{{ g.lineage }}</a></strong></td>
+        {% endif %}
+        <td>{% if "registered" in g.scopes %}<span class="sev sev-info">registered</span> {% endif %}<span class="dim">{{ g.modes|join(", ") }}</span></td>
+        <td>{{ g.packs|join(", ") or "—" }}</td>
+        <td class="num">{{ g.n }}</td>
+        <td class="dim" style="white-space:nowrap">{% if g.last_day %}{{ g.first_day }}{% if g.first_day != g.last_day %} to {{ g.last_day }}{% endif %}{% else %}—{% endif %}</td>
+        <td class="num">{% if g.attention %}<a href="/runs?{{ 'study=' ~ g.study if g.kind == 'study' else 'lineage=' ~ g.lineage }}&attn=1{{ '&blind=1' if blind }}">{{ g.attention }}</a>{% else %}<span class="dim">·</span>{% endif %}</td>
+        <td class="num">{{ g.n_eligible }}</td>
+        {% if not blind %}<td>{{ g.outcome_digest or "" }}</td>{% endif %}
+        <td class="num">{{ g.posts or "" }}</td>
+        <td class="num"{% if g.n_unknown_usage %} title="{{ g.n_unknown_usage }} model call{{ 's' if g.n_unknown_usage != 1 }} ended with unknown usage; the cost is a lower bound"{% endif %}>{{ g.cost_usd|usd_lb(g.n_unknown_usage) }}</td>
+        <td style="white-space:nowrap">{% if g.latest_run %}<a href="/run/{{ g.latest_run.run_ref }}{{ '/cases' if blind }}" title="{{ g.latest_run.run_id }}">{{ g.latest_run.organization_id or g.latest_run.run_id|shortid(18) }}</a>{% if not blind %} <span class="dim">· <a href="/run/{{ g.latest_run.run_ref }}/story">story</a></span>{% endif %}{% else %}—{% endif %}</td>
+        <td>{% if g.kind == "study" %}{% if g.record_href %}<a href="{{ g.record_href }}">{{ g.record }}</a>{% else %}<span class="dim">{{ g.record or "—" }}</span>{% endif %}{% elif g.prereg_href %}<a href="{{ g.prereg_href }}">{{ g.prereg_ref }}</a>{% elif g.design %}<code>{{ g.design }}</code>{% else %}<span class="dim">—</span>{% endif %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+</div>
+{% elif not rows %}
+<div class="card"><p class="dim">No runs{% if rows|length != n_total %} match the filter{% else %} under {{ runs_root }}{% endif %}.</p></div>
+{% else %}
+<div class="card">
+  <h2>Runs <span class="dim" style="font-weight:400">· {{ rows|length }} · {{ {"newest": "newest first", "oldest": "oldest first", "cost": "most expensive first"}[sort|default("newest")] }}
+    {%- if sections.n_registered and sections.n_exploratory %} · {{ sections.n_registered }} {{ gh("registered experiments", "registered") }}, {{ sections.n_exploratory }} {{ gh("exploratory work", "exploratory") }}{% endif %}</span></h2>
+  {% if lineage_head %}{% set g = lineage_head %}
+  <p class="dim" style="margin:0 0 0.4rem">{{ g.modes|join(", ") }}
+    {%- if g.design %} · design <code>{{ g.design }}</code>{% endif %}
+    {%- if g.prereg_ref %} · prereg {% if g.prereg_href %}<a href="{{ g.prereg_href }}">{{ g.prereg_ref }}</a>{% else %}<code>{{ g.prereg_ref }}</code>{% endif %}
+    {%- elif "confirmatory" in g.modes %} · <span class="sev sev-warning">no preregistration found in the library</span>{% endif %}</p>
+  {% endif %}
+  <p class="dim" style="margin:0 0 0.4rem">The run name opens its overview; <em>story</em> opens what the agents said. Each row shows whether the run finished, whether it is {{ gh("eligibility", "eligible") }} for results, and the task's {{ gh("outcome") }}.
+    {%- if group %} Runs of one experiment, its seeds and reruns included, share an entry ({{ groups|length }} for {{ rows|length }} runs); its menu chooses the run shown. <a href="{{ view_url.include_query_params(group=0) }}">one row per run</a>
+    {%- else %} <a href="{{ view_url.include_query_params(group=1) }}">one entry per experiment</a>{% endif %}</p>
+  {{ runs_table(groups) }}
+</div>
+{% endif %}
+
+{% if arms and not blind %}
+<div class="card">
+  <h2>Exploratory condition summaries</h2>
+  <p class="dim">Rows keep requirement tier, clock, mode, model assignments, and saved setup versions separate.
+    Means use the runs in this filtered view with available scores; registered exclusions and interaction tests are not applied.
+    Runs without a setup fingerprint remain separate. Consult the <a href="/study-records">study records and registered analysis rules</a>
+    before drawing a study conclusion.</p>
+  <div style="overflow-x:auto"><table>
+    <thead><tr>
+      <th>{{ gh("experiment") }}</th><th>{{ gh("organization") }}</th><th>{{ gh("difficulty", "requirement / difficulty") }}</th><th>{{ gh("clock label") }}</th>
+      <th>{{ gh("model") }}</th><th>{{ gh("mode") }}</th><th>Saved setup</th>
+      <th class="num">runs</th><th class="num">{{ gh("eligibility", "eligible") }}</th><th class="num">{{ gh("censored") }}</th><th class="num">floor</th><th class="num">{{ gh("irregular") }}</th>
+      <th>{{ help("outcomes", "The task's outcome over this condition's eligible runs: counts by kind, or a mean. It does not apply the study's registered analysis.") }}</th><th class="num">{{ gh("cost") }}</th>
+    </tr></thead>
+    <tbody>
+    {% for a in arms %}
+      <tr>
+        <td>{{ a.experiment_id or "—" }}</td><td>{{ a.organization_id or "—" }}{% if a.task_condition %}<br><span class="dim" style="font-size:12px">{{ a.task_condition }}</span>{% endif %}</td><td>{{ a.difficulty or "—" }}</td><td>{{ a.clock_label or "—" }}</td>
+        <td>{{ a.model_ref or "—" }}{% if a.role_model_refs %}<details><summary>Models by role</summary>{% for role, model in a.role_model_refs|dictsort %}<div>{{ role }}: {{ model }}</div>{% endfor %}</details>{% endif %}</td>
+        <td>{{ a.mode or "—" }}</td>
+        <td><details><summary>{{ "saved" if a.setup_pinned else "partial · unpooled" }} <code>{{ a.material_identity }}</code></summary>
+          <div>{{ a.task_pack_id or "unknown task" }}</div>
+          <p class="dim">A fingerprint identifies saved settings; it does not establish research validity.</p>
+          <pre>{{ a.material_pins|tojson(indent=2) }}</pre></details></td>
+        <td class="num">{{ a.n_runs }}</td><td class="num">{{ a.n_eligible }}</td>
+        <td class="num">{{ a.n_censored or "" }}</td><td class="num">{{ a.n_floor or "" }}</td>
+        <td class="num">{{ a.n_irregular or "" }}</td>
+        <td>{{ a.outcome_digest or "" }}{% if a.n_rendered and a.outcome_digest %}<span class="dim" title="{{ a.n_rendered }} report(s) re-rendered at HEAD">*</span>{% endif %}</td>
+        <td class="num"{% if a.n_unknown_usage %} title="{{ a.n_unknown_usage }} model call{{ 's' if a.n_unknown_usage != 1 }} ended with unknown usage; the cost is a lower bound"{% endif %}>{{ a.total_cost_usd|usd_lb(a.n_unknown_usage) if a.total_cost_usd is not none else "" }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+</div>
+{% endif %}
+
+{% endblock %}

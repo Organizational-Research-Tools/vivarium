@@ -1,0 +1,28 @@
+import numpy as np
+
+q = [72.2252, 72.3568, 71.4624, 71.9036, 72.0040, 71.9568]
+te = [79.9268, 80.0244, 79.9352, 80.1728, 80.3164, 80.5148]
+tg = [72.5360, 71.6400, 71.6508, 72.0268, 71.9996, 72.1828]
+
+print("=== WATER PANEL RESULTS ===")
+print(f"p_QRXYJCY4QM (joint DL8→9FU): {np.mean(q):.4f}% — FAILS (71.98% vs 79.80% needed)")
+print(f"  Joint change DESTROYS water. Dead.")
+print()
+print(f"p_3BN21AR8TE (add_pkg1 QJ2→5FE): {np.mean(te):.4f}% — PASSES ✓")
+print(f"  Margin above rev C: {np.mean(te)-79.80:.4f}% = {(np.mean(te)-79.80)/0.4:.3f} steps")
+print(f"  Slightly BETTER than p_8NVJHKV1KY (80.07%) — 5FE helps water!")
+print()
+print(f"p_3BN21AR8TG (surface 7KL→5TZ): {np.mean(tg):.4f}% — FAILS (72.01% vs 79.80%)")
+print(f"  Surface change DESTROYS water. Dead.")
+print()
+print("=== CRITICAL FINDING ===")
+print("p_3BN21AR8TE (add_pkg1 5FE) is the ONLY new variant that passes water!")
+print("Recipe: JA8/YX8/M2P/5FE/6FA/44B/4QB/2BR/N4L/7KL/DL8/YV2")
+print("Water: 80.149% ✓ (margin: 0.349% = 0.873 steps above rev C threshold)")
+print()
+print("STILL NEED:")
+print("  Strength: lab_b measuring now. Need ≥7.235 kN/m (was 7.195 for QJ2 variant)")
+print("  Heat: lab_a/lab_d. Need ≥78.625°C (original recipe gave 78.19°C)")
+print()
+print("Water constraint rule: MUST keep M2P, N4L, 44B, and 6FA. YV2 ok. 5FE slightly better than QJ2.")
+print("Joint changes kill water. Surface changes kill water. L6C kills water.")

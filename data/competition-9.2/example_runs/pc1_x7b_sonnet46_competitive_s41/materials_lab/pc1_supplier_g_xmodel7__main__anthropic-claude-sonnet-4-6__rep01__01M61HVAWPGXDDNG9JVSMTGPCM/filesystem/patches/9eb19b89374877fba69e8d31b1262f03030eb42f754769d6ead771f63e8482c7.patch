@@ -1,0 +1,46 @@
+--- 
++++ 
+@@ -0,0 +1,43 @@
++
++# Analyze QP-6572 batch-2 results
++results_6572 = [
++    ('p_NTBHW2EV68', '8BB', 'L6C', 'WB3', 6.11246),
++    ('p_NTBHW2EV6A', '8BB', 'L6C', '4QB', 6.87761),
++    ('p_NTBHW2EV6C', '8BB', '4PE', 'WB3', 5.55461),
++    ('p_NTBHW2EV6E', '8BB', '4PE', '4QB', 6.20939),
++    ('p_NTBHW2EV6G', 'NN7', 'L6C', 'WB3', 6.25364),
++    ('p_NTBHW2EV6J', 'NN7', 'L6C', '4QB', 6.87476),
++    ('p_NTBHW2EV6M', 'NN7', '4PE', 'WB3', 5.52845),
++    ('p_81KC8AT4ZJ', 'NN7', '4PE', '4QB', 6.29684),
++]
++
++print("=== QP-6572 Batch 2 Results (JA8/3HW/binder/5FE/B3P/pkg3/pp1/P8G/N7N/5TZ/9FU/YV2) ===")
++print(f"{'Proto':20} {'Binder':6} {'Pkg3':5} {'PP1':5} {'Str kN/m':10} {'vs 7.10':>10}")
++for p, binder, pkg3, pp1, val in sorted(results_6572, key=lambda x: -x[4]):
++    gap = val - 7.10
++    print(f"{p:20} {binder:6} {pkg3:5} {pp1:5} {val:10.4f} {gap:>10.4f}")
++
++print("\n=== Pattern analysis ===")
++# WB3 effect
++wb3_vals = [v for _,_,_,pp1,v in results_6572 if pp1=='WB3']
++qb4_vals = [v for _,_,_,pp1,v in results_6572 if pp1=='4QB']
++lc6_vals = [v for _,_,pkg3,_,v in results_6572 if pkg3=='L6C']
++pe4_vals = [v for _,_,pkg3,_,v in results_6572 if pkg3=='4PE']
++bnd_8bb  = [v for _,b,_,_,v in results_6572 if b=='8BB']
++bnd_nn7  = [v for _,b,_,_,v in results_6572 if b=='NN7']
++print(f"WB3 mean: {sum(wb3_vals)/len(wb3_vals):.4f} vs 4QB mean: {sum(qb4_vals)/len(qb4_vals):.4f} → 4QB better by {sum(qb4_vals)/len(qb4_vals)-sum(wb3_vals)/len(wb3_vals):.4f}")
++print(f"L6C mean: {sum(lc6_vals)/len(lc6_vals):.4f} vs 4PE mean: {sum(pe4_vals)/len(pe4_vals):.4f} → L6C better by {sum(lc6_vals)/len(lc6_vals)-sum(pe4_vals)/len(pe4_vals):.4f}")
++print(f"8BB mean: {sum(bnd_8bb)/len(bnd_8bb):.4f} vs NN7 mean: {sum(bnd_nn7)/len(bnd_nn7):.4f}")
++
++print("\nBest so far for QP-6572: 6.88 (8BB/L6C/4QB or NN7/L6C/4QB)")
++print("Gap to threshold: 7.10 - 6.88 = 0.22 kN/m (>7 steps)")
++print("Next: vary pp3 (N7N→H3F/X9F/N4L) and pp2 (P8G→C5Q/VA8/2BR)")
++print("Note: pp3 is in interaction 5TZ×pp3×B3P(str) — maybe N7N gives negative; X9F or H3F might be better")
++print("Note: pp2 is in interaction 5TZ×8BB×pp2(str) — C5Q, VA8, 2BR not yet tested")
++
++print("\n=== Lab_a recipe for QP-4476 ===")
++print("JA8/YX8/M2P/QJ2/6FA/44B/62D/2BR/N4L/7KL/DL8/3N8")
++print("Heat confirmed: 78.19°C (threshold 77.5) ✓")
++print("Expected strength: ~7.19 kN/m (GG7 baseline 7.25 - 2 steps)")
++print("Also need: water panel confirmation → threshold 78.0%")
++print("MEASURING STRENGTH PANEL NOW on p_4V8BTTYF7C")

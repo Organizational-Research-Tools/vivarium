@@ -1,0 +1,11 @@
+import pandas as pd
+r=pd.read_csv('records.csv')
+# summarize complete panels
+p=r[r.kind=='qualification'].groupby(['project','prototype_id','test']).agg(n=('value','count'),mean=('value','mean'),by=('measured_by','first')).reset_index()
+w=p.pivot(index=['project','prototype_id'],columns='test',values='mean').reset_index()
+# recipe first row
+rec=r.drop_duplicates('prototype_id').set_index('prototype_id')
+for c in rec.columns[10:]:
+    if c in w.columns: continue
+w=w.merge(rec[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']],left_on='prototype_id',right_index=True,how='left')
+print(w[(w.base_sheet!='H8Z')].sort_values('project').to_string(index=False))

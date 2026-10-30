@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% from "_chip.html" import chip, prov_chip, help, gh, elig_chip, outcome %}
+{% block title %}{{ experiment_id }} — oaos2{% endblock %}
+{% block crumb %}<span class="root">experiment / {{ experiment_id }}</span>{% endblock %}
+{% block content %}
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem">{{ experiment_id }} <a href="/experiment/{{ experiment_id }}/cases" style="font-size:14px; font-weight:400">items across cells →</a></h1>
+<p style="margin:0 0 0.5rem">
+  {% if registered %}<strong>{{ gh("registered experiments", "Registered experiment") }}</strong>{% else %}<span class="dim">{{ gh("exploratory work", "Exploratory work") }}</span>{% endif %}
+  <span class="dim">· mode {{ modes|join(", ") }}{% if design %} · design <code>{{ design }}</code>{% endif %}
+  {% if prereg_ref %} · prereg {% if prereg_href %}<a href="{{ prereg_href }}">{{ prereg_ref }}</a>{% else %}<code>{{ prereg_ref }}</code>{% endif %}{% elif registered %} · <span class="sev sev-warning">no preregistration found in the library</span>{% endif %}</span>
+</p>
+
+{% if material_versions %}
+<p class="reading-line"><span class="sev sev-warning">materials differ across runs</span>
+  {% for v in material_versions %}{{ v.label }}: {{ v.versions|length }} versions ({{ v.versions|join(" + ") }} runs){% if not loop.last %} · {% endif %}{% endfor %}
+  <span class="dim">· the study's rules decide which runs may be compared · each run's pins are in its Record</span></p>
+{% endif %}
+<div class="tiles">
+  <div class="tile"><div class="v">{{ rows|length }}</div><div class="k">{{ gh("run", "runs") }}</div></div>
+  <div class="tile"><div class="v">{{ tiles.eligible }}</div><div class="k">{{ gh("eligibility", "eligible") }}</div></div>
+  <a class="tile" href="/runs?experiment={{ experiment_id }}&attn=1"><div class="v">{{ n_attention }}</div><div class="k">{{ gh("needs attention") }}</div></a>
+  <div class="tile"><div class="v">{{ tiles.cost_usd|usd_lb(tiles.n_unknown_usage) }}</div><div class="k">total cost{% if tiles.n_unknown_usage %} · {{ tiles.n_unknown_usage }} call{{ "s" if tiles.n_unknown_usage != 1 }} with unknown usage{% endif %}</div></div>
+</div>
+
+<div class="card">
+  <h2>{{ gh("cell", "Cells") }} — {{ gh("organization", "arm") }} × {{ gh(pivot.axis, pivot.axis) }}</h2>
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr><th>organization</th>{% for c in pivot.conditions %}<th>{{ c }}</th>{% endfor %}</tr></thead>
+    <tbody>
+    {% for arm in pivot.arms %}
+      <tr>
+        <td><strong>{{ arm }}</strong></td>
+        {% for c in pivot.conditions %}
+        {% set cell = pivot.cells.get((arm, c)) %}
+        <td>
+          {% if cell %}
+          <a href="/runs?experiment={{ experiment_id }}&organization={{ arm }}{% if pivot.axis == 'difficulty' and c != '—' %}&difficulty={{ c }}{% elif pivot.axis == 'clock' and c != '—' %}&clock={{ c }}{% endif %}">
+            {{ cell.eligible }} of {{ cell.n }} eligible</a>
+          <div>{{ cell.outcome_digest or "" }}</div>
+          <div class="dim">{% if cell.unknown_usage %}<span title="{{ cell.unknown_usage }} model call(s) ended with unknown usage; the cost is a lower bound">≥ </span>{% endif %}${{ "%.2f"|format(cell.cost) }}{% if cell.censored %} · {{ cell.censored }} censored{% endif %}{% if cell.floor %} · {{ cell.floor }} floor{% endif %}{% if cell.prov != ["current"] %} · {{ cell.prov|join("+") }}{% endif %}</div>
+          {% else %}<span class="dim">—</span>{% endif %}
+        </td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  <p class="dim" style="margin-bottom:0">This is an exploratory overview grouped by organization and the displayed condition. Other settings or material versions may differ within a box, even when all rows say “current.” Use the saved-condition summaries on Runs and the study's registered analysis for scientific comparisons; these averages do not apply its exclusions or estimate its treatment effect.</p>
+</div>
+
+{% if evidence %}
+<div class="card">
+  <h2>{{ help("Registered analysis", "What the study's saved analysis records. The dashboard shows it; it does not apply the rules.") }}</h2>
+  {% for ev in evidence %}
+  <p style="margin:0.2rem 0"><code>{{ ev.file }}</code> <span class="dim">· {{ ev.n_shared }} of these runs among its {{ ev.n_rows }} dataset rows{% if ev.results_doc %} · <a href="/study-records/{{ ev.results_doc }}">results of record</a>{% endif %}</span></p>
+  {% if ev.decisions %}
+  <table style="max-width:60rem">
+    <thead><tr><th>hypothesis</th><th>rule</th><th>result</th><th>estimate</th></tr></thead>
+    <tbody>{% for x in ev.decisions %}<tr>
+      <td>{{ x.hypothesis or x.id or "—" }}</td><td class="dim">{{ x.rule or "" }}</td>
+      <td><span class="chip chip-{{ {'supported': 'good', 'not_supported': 'critical', 'inconclusive': 'warning'}.get(x.result, 'muted') }}">{{ (x.result or "—")|replace("_", " ") }}</span></td>
+      <td class="dim">{{ x.estimate if x.estimate is not none else "" }}{% if x.note %} · {{ x.note }}{% endif %}</td>
+    </tr>{% endfor %}</tbody>
+  </table>
+  {% else %}
+  <p class="dim" style="margin:0 0 0.4rem">This file saves analyses ({{ ev.analyses|join(", ") or "none named" }}) but no per-hypothesis decisions in the standard form; read the study's results document for what they establish.</p>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="card">
+  <h2>Runs</h2>
+  <table>
+    <thead><tr><th>run</th><th>{{ gh("eligibility") }}</th><th>provenance</th><th>{{ gh("organization") }}</th><th>{{ gh("difficulty") }}</th><th>{{ gh("clock label") }}</th><th>observed / horizon</th><th>{{ gh("outcome") }}</th><th>interpretation</th><th class="num">{{ gh("cost") }}</th><th>{{ gh("run") }}</th></tr></thead>
+    <tbody>
+    {% for r in rows %}
+      <tr>
+        <td>{{ chip(r.status, r.irregular) }}</td>
+        <td>{{ elig_chip(r.eligibility) }}</td>
+        <td>{{ prov_chip(r.provenance, r.provenance_reasons, r.tags) }}</td>
+        <td>{{ r.organization_id or "—" }}</td>
+        <td>{{ r.difficulty or "—" }}</td>
+        <td>{{ r.clock_label or "—" }}</td>
+        <td>{{ r.final_round or "—" }}{% if r.rounds_total %} / {{ r.rounds_total }}{% endif %}</td>
+        <td>{{ outcome(r.outcome) }}</td>
+        <td>{% if r.status in ("incomplete", "idle") %}<span class="sev sev-serious">partial</span>{% elif r.censored %}<span class="sev sev-serious">censored</span>{% elif r.floor_regime %}<span class="sev sev-serious">floor regime</span>{% else %}<span class="dim">ordinary</span>{% endif %}</td>
+        <td class="num">{{ r.cost_usd|usd_lb(r.n_unknown_usage) if r.cost_usd is not none else "" }}</td>
+        <td><a href="/run/{{ r.run_ref }}"><code>{{ r.run_id }}</code></a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

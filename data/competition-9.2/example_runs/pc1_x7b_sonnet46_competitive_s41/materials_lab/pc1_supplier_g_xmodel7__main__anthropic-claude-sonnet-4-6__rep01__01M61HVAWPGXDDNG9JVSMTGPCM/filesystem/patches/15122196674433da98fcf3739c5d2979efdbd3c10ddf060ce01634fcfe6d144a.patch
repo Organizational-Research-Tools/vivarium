@@ -1,0 +1,29 @@
+--- 
++++ 
+@@ -0,0 +1,26 @@
++
++# Calculate panel mean for p_8NVJHKV1KY
++specimens = [7.20539, 7.17560, 7.16267, 7.19321, 7.20656, 7.22825]
++mean = sum(specimens) / len(specimens)
++base_threshold = 7.10  # kN/m base
++step = 0.03
++rev_b_threshold = 7.19
++margin_steps = (mean - base_threshold) / step
++print(f"Panel mean: {mean:.5f} kN/m")
++print(f"Revision B threshold: {rev_b_threshold} kN/m")
++print(f"Passes strength: {mean >= rev_b_threshold}")
++print(f"Margin above base ({base_threshold} kN/m): {margin_steps:.3f} steps")
++print(f"Min specimen: {min(specimens):.5f} kN/m")
++print()
++
++# Also note p_8JN5B4DPHJ and p_8JN5B4DPHM results
++print("lab_a new prototypes strength:")
++print(f"p_8JN5B4DPHJ: 5.207 kN/m - FAILS (needs 7.19)")
++print(f"p_8JN5B4DPHM: 6.531 kN/m - FAILS (needs 7.19)")
++print()
++print("Summary of p_8NVJHKV1KY vs p_4V8BTTYF7C (the dead prototype):")
++print("p_4V8BTTYF7C: pp1=62D, cond=3N8 -> strength 6.554, heat 78.19, water 80.70")
++print("p_8NVJHKV1KT: pp1=62D, cond=YV2 -> strength 7.141 (FAIL)")
++print("p_8NVJHKV1KW: pp1=4QB, cond=3N8 -> strength 6.530 (FAIL)")
++print("p_8NVJHKV1KY: pp1=4QB, cond=YV2 -> strength 7.195 PANEL MEAN (PASS!)")
++print("BOTH pp1=4QB AND cond=YV2 needed together for strength to clear 7.19!")

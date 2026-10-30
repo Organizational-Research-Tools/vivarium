@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -0,0 +1,4 @@
++import pandas as pd
++x=pd.read_csv('records.csv');
++for p in ['p_174NHB75ES','p_KBABVTJCX0','p_3KNEMDD3PR','p_FF5QPYJ1FM','p_J0B7G433JN']:
++ d=x[x.prototype_id==p].iloc[0]; cols=['project','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']; print(p, d[cols].to_dict())

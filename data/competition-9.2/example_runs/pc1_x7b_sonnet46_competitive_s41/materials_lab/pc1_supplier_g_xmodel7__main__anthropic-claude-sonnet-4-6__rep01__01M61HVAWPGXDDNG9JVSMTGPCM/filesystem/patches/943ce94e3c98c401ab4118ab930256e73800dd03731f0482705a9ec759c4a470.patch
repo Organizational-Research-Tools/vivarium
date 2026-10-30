@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -337,3 +337,14 @@
+ r_YT7V9NE12H,exploratory,QP-4476,p_QRXYJCY4QM,water,wet strength retained,,71.9840,%,lab_f,lab_b,JA8,YX8,M2P,QJ2,6FA,44B,4QB,2BR,N4L,7KL,9FU,YV2
+ r_YT7V9NE12J,exploratory,QP-4476,p_3BN21AR8TE,water,wet strength retained,,80.8428,%,lab_f,lab_b,JA8,YX8,M2P,5FE,6FA,44B,4QB,2BR,N4L,7KL,DL8,YV2
+ r_YT7V9NE12K,exploratory,QP-4476,p_3BN21AR8TG,water,wet strength retained,,71.2264,%,lab_f,lab_b,JA8,YX8,M2P,QJ2,6FA,44B,4QB,2BR,N4L,5TZ,DL8,YV2
++r_RYTW3VGNMW,qualification,QP-4476,p_8NVJHKV1KY,heat,seal hold temperature,0,78.52175,°C,lab_d,lab_e,JA8,YX8,M2P,QJ2,6FA,44B,4QB,2BR,N4L,7KL,DL8,YV2
++r_RYTW3VGNMX,qualification,QP-4476,p_8NVJHKV1KY,heat,seal hold temperature,1,78.44875,°C,lab_d,lab_e,JA8,YX8,M2P,QJ2,6FA,44B,4QB,2BR,N4L,7KL,DL8,YV2
++r_RYTW3VGNMY,qualification,QP-4476,p_8NVJHKV1KY,heat,seal hold temperature,2,78.00550,°C,lab_d,lab_e,JA8,YX8,M2P,QJ2,6FA,44B,4QB,2BR,N4L,7KL,DL8,YV2
++r_RYTW3VGNMZ,qualification,QP-4476,p_8NVJHKV1KY,heat,seal hold temperature,3,78.16050,°C,lab_d,lab_e,JA8,YX8,M2P,QJ2,6FA,44B,4QB,2BR,N4L,7KL,DL8,YV2
++r_RYTW3VGNN0,qualification,QP-4476,p_8NVJHKV1KY,heat,seal hold temperature,4,78.21375,°C,lab_d,lab_e,JA8,YX8,M2P,QJ2,6FA,44B,4QB,2BR,N4L,7KL,DL8,YV2
++r_RYTW3VGNN1,qualification,QP-4476,p_8NVJHKV1KY,heat,seal hold temperature,5,78.41375,°C,lab_d,lab_e,JA8,YX8,M2P,QJ2,6FA,44B,4QB,2BR,N4L,7KL,DL8,YV2
++r_P0R0TFY00E,exploratory,QP-4476,p_AG5JYPK0FD,strength,edge crush resistance,,4.53629,kN/m,lab_b,lab_f,P2G,YX8,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_P0R0TFY00F,exploratory,QP-6572,p_K3NJB7S7JE,strength,edge crush resistance,,5.09333,kN/m,lab_b,lab_f,P2G,YX8,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_P0R0TFY00G,exploratory,QP-6843,p_S91612HV2G,strength,edge crush resistance,,5.28554,kN/m,lab_b,lab_f,P2G,YX8,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_7HFQPX9Z1A,exploratory,QP-4476,p_NA4W276ZS6,water,wet strength retained,,80.6144,%,lab_f,lab_f,JA8,YX8,M2P,QJ2,6FA,44B,UP5,2BR,N4L,7KL,DL8,YV2
++r_7HFQPX9Z1B,exploratory,QP-4476,p_NA4W276ZS8,water,wet strength retained,,80.5488,%,lab_f,lab_f,JA8,5BU,M2P,QJ2,6FA,44B,4QB,2BR,N4L,7KL,DL8,YV2

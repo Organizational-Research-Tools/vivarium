@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -0,0 +1,12 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); mods=list(x.columns[11:]);
++for p,g in x.groupby('project'):
++ print('\n'+p)
++ for rid,r in g.drop_duplicates('prototype_id').iterrows():
++  proto=r.prototype_id
++  d=x[x.prototype_id==proto]
++  print(proto, ' '.join(str(r[m]) for m in mods), end=' | ')
++  for inst in ['heat','strength','water']:
++   z=d[d.instrument==inst]
++   if len(z): print(f'{inst[0]} {z.value.mean():.4f}',end=' ')
++  print()

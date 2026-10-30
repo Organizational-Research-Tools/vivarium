@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); x=x[x.project.isin(['QP-3617','QP-6879','QP-9273'])]; g=x[x.kind=='qualification'].groupby(['project','prototype_id','test']).agg(n=('value','count'),mean=('value','mean')).reset_index();
++for (pr,proto), z in g.groupby(['project','prototype_id']):
++ d={r.test:(r.n,r.mean) for r in z.itertuples()};
++ if len(d)>=1: print(pr,proto, {k:(int(n),round(m,5)) for k,(n,m) in d.items()})

@@ -1,0 +1,3 @@
+import pandas as pd
+r=pd.read_csv('records.csv')
+print(r[['prototype_id','project','base_sheet','kind','test']].tail(30).to_string(index=False))

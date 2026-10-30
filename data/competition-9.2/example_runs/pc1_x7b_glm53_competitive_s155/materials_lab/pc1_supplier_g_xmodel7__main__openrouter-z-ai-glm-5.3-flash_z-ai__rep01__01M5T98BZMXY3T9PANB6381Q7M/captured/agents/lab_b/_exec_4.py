@@ -1,0 +1,7 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+print(df.test.unique(), df.kind.unique())
+print(df.instrument.unique())
+print(len(df))
+s = df[df.test=='strength']
+print(len(s), s.value.describe())

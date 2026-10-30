@@ -1,0 +1,11 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x.shape)
+# qualification panel means by project prototype test
+q=x[x.kind.eq('qualification')].groupby(['project','prototype_id','test','measured_by'],dropna=False).agg(n=('value','count'),mean=('value','mean')).reset_index()
+for proj in ['QP-6879','QP-3617','QP-9219','QP-8807','QP-7092','QP-9273','QP-5174','QP-9259']:
+ z=q[(q.project==proj)&(q.n>=6)].pivot_table(index='prototype_id',columns='test',values='mean')
+ print('\n',proj)
+ if len(z):
+  z['PASS_C']=(z.get('heat',0)>=78.625)&(z.get('strength',0)>=7.235)&(z.get('water',0)>=79.8)
+  print(z.to_string())

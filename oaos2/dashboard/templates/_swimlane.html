@@ -1,0 +1,53 @@
+{# The run-unfolding swimlane, shared by the overview and communication pages.
+   One lane per agent (identity dot), soft band = the agent's active turns,
+   colored ticks = work, vertical lines = communication crossing lanes,
+   diamonds = formal submissions, red dots = problems. Everything clickable. #}
+{% macro swimlane(svg, run_ref) -%}
+<div style="overflow-x:auto">
+<svg class="sw" viewBox="0 0 {{ svg.width }} {{ svg.height }}" width="100%" style="min-width:760px" role="img"
+     aria-label="per-agent timeline of communication and work events">
+  <defs>
+    <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 z" fill="currentColor"/>
+    </marker>
+  </defs>
+  {% for s in svg.spans %}
+  <rect class="sw-span" x="{{ s.x0 }}" y="{{ s.y - 12 }}" width="{{ (s.x1 - s.x0)|round(1) }}" height="15" rx="3">
+    <title>turn {{ s.turn }}</title></rect>
+  {% endfor %}
+  {% for lane in svg.lanes %}
+  <circle class="adot-{{ lane.slot }}" cx="8" cy="{{ lane.y - 4 }}" r="4"/>
+  <text x="17" y="{{ lane.y }}">{{ lane.agent }}</text>
+  <line class="lane" x1="{{ svg.left }}" y1="{{ lane.y }}" x2="{{ svg.width - 6 }}" y2="{{ lane.y }}"/>
+  {% endfor %}
+  {% for a in svg.arrows %}
+  <a href="/run/{{ run_ref }}/event/{{ a.event_id }}"><path class="arrow {{ 'handoff' if a.cls == 'handoff' else '' }}"
+     d="M{{ a.x }},{{ a.y1 }} L{{ a.x }},{{ a.y2 }}"><title>[{{ a.seq }}] {{ a.cls }}</title></path></a>
+  {% endfor %}
+  {% for m in svg.marks %}
+  <a href="/run/{{ run_ref }}/event/{{ m.event_id }}" class="swm">
+    {% if m.kind == "commit" %}
+    <rect class="m-commit" x="{{ m.x - 3 }}" y="{{ m.y - 8 }}" width="6" height="6" transform="rotate(45 {{ m.x }} {{ m.y - 5 }})"><title>[{{ m.seq }}] {{ m.cls }}</title></rect>
+    {% elif m.kind == "trouble" %}
+    <circle class="m-trouble" cx="{{ m.x }}" cy="{{ m.y - 5 }}" r="3.5"><title>[{{ m.seq }}] {{ m.cls }}</title></circle>
+    {% elif m.kind == "volley" %}
+    <circle class="m-volley" cx="{{ m.x }}" cy="{{ m.y - 5 }}" r="2.5"><title>[{{ m.seq }}] {{ m.cls }}</title></circle>
+    {% else %}
+    <rect class="m-{{ m.kind }}" x="{{ m.x - 1 }}" y="{{ m.y - 9 }}" width="2" height="8" rx="1"><title>[{{ m.seq }}] {{ m.cls }}</title></rect>
+    {% endif %}
+  </a>
+  {% endfor %}
+</svg>
+</div>
+<div class="legend" style="margin-top:0.4rem">
+  <span><span class="sw-dot" style="background:#2a78d6"></span>model{% if svg.counts.s1 %} ×{{ svg.counts.s1 }}{% endif %}</span>
+  <span><span class="sw-dot" style="background:#1baf7a"></span>tool{% if svg.counts.s2 %} ×{{ svg.counts.s2 }}{% endif %}</span>
+  <span><span class="sw-dot" style="background:#eda100"></span>file{% if svg.counts.s3 %} ×{{ svg.counts.s3 }}{% endif %}</span>
+  <span><span class="sw-dot" style="background:#4a3aa7"></span>volley{% if svg.counts.volley %} ×{{ svg.counts.volley }}{% endif %}</span>
+  <span><span class="sw-dot" style="background:#4a3aa7; border-radius:2px"></span>post{% if svg.counts.post %} ×{{ svg.counts.post }}{% endif %}</span>
+  <span><span class="sw-dot" style="background:var(--ink)"></span>commit{% if svg.counts.commit %} ×{{ svg.counts.commit }}{% endif %}</span>
+  <span><span class="sw-dot" style="background:#d03b3b"></span>problem{% if svg.counts.trouble %} ×{{ svg.counts.trouble }}{% endif %}</span>
+  <span class="help" title="A vertical line is a message or handoff crossing between two agents' lanes (blue = handoff); the soft band behind a lane shows when that agent was actively working">│ crossings · ▂ active turns</span>
+  {% if svg.truncated %}<span class="flag">⚠ truncated at 5000 marks</span>{% endif %}
+</div>
+{%- endmacro %}

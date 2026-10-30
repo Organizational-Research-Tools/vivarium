@@ -1,0 +1,5 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+ids=['p_5H6XYY0XDG','p_Z47MQWVTGK','p_Z47MQWVTGY']
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+print(df[df.prototype_id.isin(ids)][['prototype_id','test','value','measured_by','requester','record_id']+mods].drop_duplicates(subset=['prototype_id','test','value']).to_string())

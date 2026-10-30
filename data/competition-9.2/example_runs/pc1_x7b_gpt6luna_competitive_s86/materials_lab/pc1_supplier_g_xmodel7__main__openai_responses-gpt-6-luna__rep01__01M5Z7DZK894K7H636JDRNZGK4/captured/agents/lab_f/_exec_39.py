@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for p in x.prototype_id.unique():
+ if p.startswith('p_4J2') or p.startswith('p_K6'): print(p, x[x.prototype_id==p][['instrument','test','value']].to_dict('records'))

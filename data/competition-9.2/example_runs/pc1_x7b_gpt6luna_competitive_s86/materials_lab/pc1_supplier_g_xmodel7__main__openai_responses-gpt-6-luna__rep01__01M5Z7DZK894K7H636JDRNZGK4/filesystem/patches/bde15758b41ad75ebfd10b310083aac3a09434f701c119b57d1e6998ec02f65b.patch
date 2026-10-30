@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -1077,3 +1077,9 @@
+ r_96GHNP6TDC,exploratory,QP-8807,p_M605F69WTX,water,wet strength retained,,80.0836,%,lab_c,lab_b,,,,,,,,,,,,
+ r_96GHNP6TDD,exploratory,QP-8807,p_M605F69WTZ,water,wet strength retained,,78.8308,%,lab_c,lab_b,,,,,,,,,,,,
+ r_96GHNP6TDE,exploratory,QP-8807,p_M605F69WV1,water,wet strength retained,,79.4952,%,lab_c,lab_b,,,,,,,,,,,,
++r_CR1R6HESGH,qualification,QP-8807,p_M605F69WTX,water,wet strength retained,0,79.6268,%,lab_c,lab_b,,,,,,,,,,,,
++r_CR1R6HESGJ,qualification,QP-8807,p_M605F69WTX,water,wet strength retained,1,79.8236,%,lab_c,lab_b,,,,,,,,,,,,
++r_CR1R6HESGK,qualification,QP-8807,p_M605F69WTX,water,wet strength retained,2,79.9480,%,lab_c,lab_b,,,,,,,,,,,,
++r_CR1R6HESGM,qualification,QP-8807,p_M605F69WTX,water,wet strength retained,3,79.1484,%,lab_c,lab_b,,,,,,,,,,,,
++r_CR1R6HESGN,qualification,QP-8807,p_M605F69WTX,water,wet strength retained,4,79.3660,%,lab_c,lab_b,,,,,,,,,,,,
++r_CR1R6HESGP,qualification,QP-8807,p_M605F69WTX,water,wet strength retained,5,79.3464,%,lab_c,lab_b,,,,,,,,,,,,

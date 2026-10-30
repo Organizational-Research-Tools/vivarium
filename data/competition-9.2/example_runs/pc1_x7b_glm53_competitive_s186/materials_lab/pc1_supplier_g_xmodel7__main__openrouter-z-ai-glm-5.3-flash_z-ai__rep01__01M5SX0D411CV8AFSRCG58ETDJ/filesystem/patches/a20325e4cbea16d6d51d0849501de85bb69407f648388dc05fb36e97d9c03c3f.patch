@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -357,3 +357,14 @@
+ r_SM0JAB4JFD,qualification,QP-5993,p_7ZJ7YBKK9E,heat,seal hold temperature,3,78.09800,°C,lab_a,lab_b,HP9,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,V7P,84H,YS6,G5Y
+ r_SM0JAB4JFE,qualification,QP-5993,p_7ZJ7YBKK9E,heat,seal hold temperature,4,77.99075,°C,lab_a,lab_b,HP9,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,V7P,84H,YS6,G5Y
+ r_SM0JAB4JFF,qualification,QP-5993,p_7ZJ7YBKK9E,heat,seal hold temperature,5,78.15950,°C,lab_a,lab_b,HP9,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,V7P,84H,YS6,G5Y
++r_W7C1TFC61E,exploratory,QP-5993,p_TH5VCJB5J7,water,wet strength retained,,79.6260,%,lab_f,lab_f,HP9,2YJ,PU3,8BE,WJ7,Z2E,5JK,2FG,V7P,84H,YS6,G5Y
++r_Y4KAQ9Y1ZN,exploratory,QP-5993,p_TH5VCJB5JB,water,wet strength retained,,79.9192,%,lab_f,lab_f,HP9,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,V7P,83B,YS6,G5Y
++r_Y4KAQ9Y1ZP,exploratory,QP-5993,p_B0A2AF9B7A,water,wet strength retained,,78.5960,%,lab_f,lab_f,HP9,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,V7P,6XS,YS6,G5Y
++r_Y4KAQ9Y1ZQ,exploratory,QP-5993,p_B0A2AF9B7C,water,wet strength retained,,80.3476,%,lab_f,lab_f,HP9,2YJ,PU3,8BE,WJ7,2CS,5JK,2FG,V7P,84H,YS6,G5Y
++r_Y4KAQ9Y1ZR,exploratory,QP-5993,p_B0A2AF9B7E,water,wet strength retained,,78.9324,%,lab_f,lab_f,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
++r_Y4KAQ9Y1ZS,exploratory,QP-5993,p_B0A2AF9B7G,water,wet strength retained,,70.6148,%,lab_f,lab_f,HP9,2YJ,PU3,TE2,9KR,Z2E,5JK,2FG,V7P,84H,YS6,G5Y
++r_Y4KAQ9Y1ZT,exploratory,QP-5993,p_B0A2AF9B7J,water,wet strength retained,,79.5948,%,lab_f,lab_f,HP9,2YJ,PU3,Q3H,9KR,Z2E,5JK,2FG,V7P,84H,YS6,G5Y
++r_W3YFNK2KH8,exploratory,QP-5993,p_B0A2AF9B7M,water,wet strength retained,,71.4928,%,lab_f,lab_f,L7A,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,V7P,84H,YS6,G5Y
++r_W3YFNK2KH9,exploratory,QP-5993,p_B0A2AF9B7P,water,wet strength retained,,78.7552,%,lab_f,lab_f,HP9,2YJ,PU3,8BE,9KR,Z2E,8KT,2FG,V7P,84H,YS6,G5Y
++r_W3YFNK2KHA,exploratory,QP-5993,p_9B6DVPWQM8,water,wet strength retained,,71.1168,%,lab_f,lab_f,HP9,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,24J,84H,YS6,G5Y
++r_W3YFNK2KHB,exploratory,QP-5993,p_9B6DVPWQMA,water,wet strength retained,,70.6888,%,lab_f,lab_f,HP9,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,F2C,84H,YS6,G5Y

@@ -1,0 +1,24 @@
+--- 
++++ 
+@@ -215,3 +215,21 @@
+ r_TGFRS5QHCJ,qualification,QP-9259,p_174NHB75EX,water,wet strength retained,3,71.3036,%,lab_f,lab_a,,,,,,,,,,,,
+ r_TGFRS5QHCK,qualification,QP-9259,p_174NHB75EX,water,wet strength retained,4,71.7960,%,lab_f,lab_a,,,,,,,,,,,,
+ r_TGFRS5QHCM,qualification,QP-9259,p_174NHB75EX,water,wet strength retained,5,71.8096,%,lab_f,lab_a,,,,,,,,,,,,
++r_KHDJ6ASR0G,qualification,QP-3617,p_DYASB52DDH,heat,seal hold temperature,0,78.30050,°C,lab_d,lab_d,SQ8,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_KHDJ6ASR0H,qualification,QP-3617,p_DYASB52DDH,heat,seal hold temperature,1,78.12300,°C,lab_d,lab_d,SQ8,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_KHDJ6ASR0J,qualification,QP-3617,p_DYASB52DDH,heat,seal hold temperature,2,78.37575,°C,lab_d,lab_d,SQ8,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_KHDJ6ASR0K,qualification,QP-3617,p_DYASB52DDH,heat,seal hold temperature,3,78.40875,°C,lab_d,lab_d,SQ8,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_KHDJ6ASR0M,qualification,QP-3617,p_DYASB52DDH,heat,seal hold temperature,4,78.58850,°C,lab_d,lab_d,SQ8,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_KHDJ6ASR0N,qualification,QP-3617,p_DYASB52DDH,heat,seal hold temperature,5,78.00650,°C,lab_d,lab_d,SQ8,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_9Z3QR9BW7E,qualification,QP-3617,p_DYASB52DDK,heat,seal hold temperature,0,72.94125,°C,lab_d,lab_d,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_9Z3QR9BW7F,qualification,QP-3617,p_DYASB52DDK,heat,seal hold temperature,1,72.93375,°C,lab_d,lab_d,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_9Z3QR9BW7G,qualification,QP-3617,p_DYASB52DDK,heat,seal hold temperature,2,73.18525,°C,lab_d,lab_d,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_9Z3QR9BW7H,qualification,QP-3617,p_DYASB52DDK,heat,seal hold temperature,3,73.28175,°C,lab_d,lab_d,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_9Z3QR9BW7J,qualification,QP-3617,p_DYASB52DDK,heat,seal hold temperature,4,73.27700,°C,lab_d,lab_d,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_9Z3QR9BW7K,qualification,QP-3617,p_DYASB52DDK,heat,seal hold temperature,5,72.79950,°C,lab_d,lab_d,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_9Z3QR9BW7M,qualification,QP-3617,p_DYASB52DDN,heat,seal hold temperature,0,78.43175,°C,lab_d,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_9Z3QR9BW7N,qualification,QP-3617,p_DYASB52DDN,heat,seal hold temperature,1,78.47475,°C,lab_d,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_9Z3QR9BW7P,qualification,QP-3617,p_DYASB52DDN,heat,seal hold temperature,2,78.78425,°C,lab_d,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_9Z3QR9BW7Q,qualification,QP-3617,p_DYASB52DDN,heat,seal hold temperature,3,78.70725,°C,lab_d,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_9Z3QR9BW7R,qualification,QP-3617,p_DYASB52DDN,heat,seal hold temperature,4,78.84900,°C,lab_d,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_9Z3QR9BW7S,qualification,QP-3617,p_DYASB52DDN,heat,seal hold temperature,5,78.34850,°C,lab_d,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z

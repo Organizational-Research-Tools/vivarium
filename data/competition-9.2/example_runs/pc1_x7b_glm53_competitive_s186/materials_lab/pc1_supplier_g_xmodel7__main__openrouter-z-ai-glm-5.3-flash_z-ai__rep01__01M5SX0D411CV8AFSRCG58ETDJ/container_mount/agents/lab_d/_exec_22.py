@@ -1,0 +1,5 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+# which recipes do I know compositions for (any row with base_sheet not null)
+known=df.dropna(subset=['base_sheet'])
+print(known[['prototype_id']+['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].drop_duplicates().to_string())

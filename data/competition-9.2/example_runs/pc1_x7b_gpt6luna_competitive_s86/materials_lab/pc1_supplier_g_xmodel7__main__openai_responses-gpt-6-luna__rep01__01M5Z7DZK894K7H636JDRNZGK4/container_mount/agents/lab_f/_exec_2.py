@@ -1,0 +1,7 @@
+import pandas as pd
+D=pd.read_csv('records.csv')
+cols=list(D.columns[10:])
+for pr,g in D.groupby('project'):
+ print('\n',pr)
+ x=g[cols+['prototype_id','test','value','measured_by']].drop_duplicates('prototype_id')
+ print(x.to_string(index=False))

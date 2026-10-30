@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -611,3 +611,27 @@
+ r_V6SEXQWKQW,qualification,QP-9219,p_8ATRDK3V3Z,strength,edge crush resistance,3,7.25519,kN/m,lab_b,lab_d,SQ8,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
+ r_V6SEXQWKQX,qualification,QP-9219,p_8ATRDK3V3Z,strength,edge crush resistance,4,7.24499,kN/m,lab_b,lab_d,SQ8,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
+ r_V6SEXQWKQY,qualification,QP-9219,p_8ATRDK3V3Z,strength,edge crush resistance,5,7.26686,kN/m,lab_b,lab_d,SQ8,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,SU2
++r_Q87W6GP7GT,qualification,QP-8807,p_NQYNDKZ3C8,water,wet strength retained,0,79.8952,%,lab_f,lab_f,QG7,6TX,P8G,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_Q87W6GP7GV,qualification,QP-8807,p_NQYNDKZ3C8,water,wet strength retained,1,79.8216,%,lab_f,lab_f,QG7,6TX,P8G,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_Q87W6GP7GW,qualification,QP-8807,p_NQYNDKZ3C8,water,wet strength retained,2,80.2748,%,lab_f,lab_f,QG7,6TX,P8G,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_Q87W6GP7GX,qualification,QP-8807,p_NQYNDKZ3C8,water,wet strength retained,3,79.2820,%,lab_f,lab_f,QG7,6TX,P8G,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_Q87W6GP7GY,qualification,QP-8807,p_NQYNDKZ3C8,water,wet strength retained,4,79.7192,%,lab_f,lab_f,QG7,6TX,P8G,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_Q87W6GP7GZ,qualification,QP-8807,p_NQYNDKZ3C8,water,wet strength retained,5,79.8168,%,lab_f,lab_f,QG7,6TX,P8G,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_W440TKBB61,qualification,QP-8807,p_NQYNDKZ3CA,water,wet strength retained,0,80.0420,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_W440TKBB62,qualification,QP-8807,p_NQYNDKZ3CA,water,wet strength retained,1,80.2596,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_W440TKBB63,qualification,QP-8807,p_NQYNDKZ3CA,water,wet strength retained,2,80.0984,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_W440TKBB64,qualification,QP-8807,p_NQYNDKZ3CA,water,wet strength retained,3,79.6024,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_W440TKBB65,qualification,QP-8807,p_NQYNDKZ3CA,water,wet strength retained,4,79.7028,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_W440TKBB66,qualification,QP-8807,p_NQYNDKZ3CA,water,wet strength retained,5,79.8172,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_1ZH2TXMDAJ,qualification,QP-8807,p_NQYNDKZ3CG,water,wet strength retained,0,80.0200,%,lab_f,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_1ZH2TXMDAK,qualification,QP-8807,p_NQYNDKZ3CG,water,wet strength retained,1,80.3540,%,lab_f,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_1ZH2TXMDAM,qualification,QP-8807,p_NQYNDKZ3CG,water,wet strength retained,2,80.3772,%,lab_f,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_1ZH2TXMDAN,qualification,QP-8807,p_NQYNDKZ3CG,water,wet strength retained,3,79.4268,%,lab_f,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_1ZH2TXMDAP,qualification,QP-8807,p_NQYNDKZ3CG,water,wet strength retained,4,79.9432,%,lab_f,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_1ZH2TXMDAQ,qualification,QP-8807,p_NQYNDKZ3CG,water,wet strength retained,5,79.6220,%,lab_f,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_1ZH2TXMDAR,qualification,QP-8807,p_NQYNDKZ3CJ,water,wet strength retained,0,79.9784,%,lab_f,lab_f,QG7,6TX,VQ6,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_1ZH2TXMDAS,qualification,QP-8807,p_NQYNDKZ3CJ,water,wet strength retained,1,79.8520,%,lab_f,lab_f,QG7,6TX,VQ6,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_1ZH2TXMDAT,qualification,QP-8807,p_NQYNDKZ3CJ,water,wet strength retained,2,80.3068,%,lab_f,lab_f,QG7,6TX,VQ6,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_1ZH2TXMDAV,qualification,QP-8807,p_NQYNDKZ3CJ,water,wet strength retained,3,79.1100,%,lab_f,lab_f,QG7,6TX,VQ6,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_1ZH2TXMDAW,qualification,QP-8807,p_NQYNDKZ3CJ,water,wet strength retained,4,79.6736,%,lab_f,lab_f,QG7,6TX,VQ6,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_1ZH2TXMDAX,qualification,QP-8807,p_NQYNDKZ3CJ,water,wet strength retained,5,79.7304,%,lab_f,lab_f,QG7,6TX,VQ6,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN

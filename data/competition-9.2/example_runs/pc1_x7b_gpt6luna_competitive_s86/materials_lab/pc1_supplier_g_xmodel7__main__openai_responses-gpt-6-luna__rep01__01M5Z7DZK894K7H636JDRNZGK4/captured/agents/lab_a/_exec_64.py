@@ -1,0 +1,10 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); mods=[c for c in x if c in ['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']]
+d=x[x.kind=='qualification'].dropna(subset=mods).copy(); z=d.groupby(['project']+mods+['test']).value.agg(['count','mean']).reset_index();
+rows=[]
+for keys,g in z.groupby(['project']+mods):
+ vals={r.test:(r['count'],r['mean']) for _,r in g.iterrows()}
+ if all(t in vals and vals[t][0]>=6 for t in ['seal hold temperature','edge crush resistance','wet strength retained']):
+  h,s,w=[vals[t][1] for t in ['seal hold temperature','edge crush resistance','wet strength retained']]
+  if h>=78.625 and s>=7.235 and w>=79.8: rows.append((keys[0],h,s,w,keys[1:]))
+print(rows)

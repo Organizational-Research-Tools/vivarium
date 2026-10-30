@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -645,3 +645,9 @@
+ r_6BATJRAYS6,exploratory,QP-6489,p_991JPF0WAW,strength,edge crush resistance,,7.14536,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,NS4,3LL,3RB,F9B,37J,N4Y,PK9,23Y
+ r_E61C97MCHM,exploratory,QP-6489,p_991JPF0WAR,heat,seal hold temperature,,78.05650,°C,lab_d,lab_e,3F4,HJ7,E5L,V5J,7J8,3LL,3RB,F9B,37J,N4Y,PK9,4YT
+ r_E61C97MCHN,exploratory,QP-6489,p_991JPF0WAT,heat,seal hold temperature,,78.08100,°C,lab_d,lab_e,3F4,HJ7,E5L,V5J,7J8,3LL,3RB,F9B,37J,N4Y,PK9,4YT
++r_YX4CC7CZ5V,exploratory,QP-2342,p_NZZS7WMEV8,strength,edge crush resistance,,7.15658,kN/m,lab_e,lab_e,SM9,3S7,6ZC,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,23Y
++r_YX4CC7CZ5W,exploratory,QP-2342,p_NZZS7WMEV8,strength,edge crush resistance,,7.21574,kN/m,lab_e,lab_e,SM9,3S7,6ZC,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,23Y
++r_YX4CC7CZ5X,exploratory,QP-2342,p_NZZS7WMEVA,strength,edge crush resistance,,7.20068,kN/m,lab_e,lab_e,SM9,3S7,3VE,3VM,7J8,92P,GY3,8WN,W9T,NP6,PK9,23Y
++r_YX4CC7CZ5Y,exploratory,QP-2342,p_NZZS7WMEVA,strength,edge crush resistance,,7.26206,kN/m,lab_e,lab_e,SM9,3S7,3VE,3VM,7J8,92P,GY3,8WN,W9T,NP6,PK9,23Y
++r_YX4CC7CZ5Z,exploratory,QP-2342,p_NZZS7WMEVC,strength,edge crush resistance,,7.20251,kN/m,lab_e,lab_e,SM9,3S7,6ZC,3VM,7J8,92P,GY3,8WN,W9T,NP6,PK9,23Y
++r_YX4CC7CZ60,exploratory,QP-2342,p_NZZS7WMEVC,strength,edge crush resistance,,7.27727,kN/m,lab_e,lab_e,SM9,3S7,6ZC,3VM,7J8,92P,GY3,8WN,W9T,NP6,PK9,23Y

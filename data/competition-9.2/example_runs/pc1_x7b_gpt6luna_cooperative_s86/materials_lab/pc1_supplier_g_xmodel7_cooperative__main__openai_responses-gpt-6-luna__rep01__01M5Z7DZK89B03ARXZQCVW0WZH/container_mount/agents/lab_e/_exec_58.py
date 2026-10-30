@@ -1,0 +1,4 @@
+import pandas as pd
+r=pd.read_csv('records.csv')
+ids=['p_TDMFDVT7PX','p_7FT9YYT843','p_7FT9YYT845','p_7FT9YYT847','p_RKZ9AMQWT8','p_RKZ9AMQWTA']
+print(r[(r.prototype_id.isin(ids)) & (r.instrument=='strength')].groupby('prototype_id').value.mean())

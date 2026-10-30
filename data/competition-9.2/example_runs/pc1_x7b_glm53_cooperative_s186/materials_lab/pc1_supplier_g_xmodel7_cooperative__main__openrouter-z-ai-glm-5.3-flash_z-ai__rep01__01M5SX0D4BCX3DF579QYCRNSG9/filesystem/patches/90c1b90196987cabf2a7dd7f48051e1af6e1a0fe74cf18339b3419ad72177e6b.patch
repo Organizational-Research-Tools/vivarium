@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -545,3 +545,6 @@
+ r_772109W9KH,qualification,QP-4069,p_D1SCJCXSMK,water,wet strength retained,5,79.3296,%,lab_f,lab_b,,,,,,,,,,,,
+ r_V70NTVHG0T,exploratory,QP-1992,p_E16M0W72XW,heat,seal hold temperature,,77.78700,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_V70NTVHG0V,exploratory,QP-1992,p_E16M0W72XW,heat,seal hold temperature,,78.41425,°C,lab_a,lab_e,,,,,,,,,,,,
++r_MS7G89SZYY,exploratory,QP-1992,p_E16M0W72XW,heat,seal hold temperature,,77.99275,°C,lab_a,lab_e,,,,,,,,,,,,
++r_MS7G89SZYZ,exploratory,QP-1992,p_E16M0W72XW,heat,seal hold temperature,,77.89450,°C,lab_a,lab_e,,,,,,,,,,,,
++r_MS7G89SZZ0,exploratory,QP-1992,p_E16M0W72XW,heat,seal hold temperature,,78.10475,°C,lab_a,lab_e,,,,,,,,,,,,

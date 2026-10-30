@@ -1,0 +1,5 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+y=x[x.project=='QP-7092']
+print(y.groupby(['prototype_id','test']).value.mean().unstack().to_string())
+print(y.drop_duplicates('prototype_id')[['prototype_id']+[c for c in x.columns[11:]]].to_string(index=False))

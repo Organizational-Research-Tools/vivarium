@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -819,3 +819,15 @@
+ r_WCH5VGKY5Q,exploratory,QP-1454,p_DM31Y3FE1Y,water,wet strength retained,,70.0660,%,lab_f,lab_b,73S,3S7,DQ9,V5J,NS4,S3J,3RB,8WN,49R,RQ5,8K5,UZ4
+ r_WCH5VGKY5R,exploratory,QP-1454,p_DM31Y3FE20,water,wet strength retained,,69.2556,%,lab_f,lab_b,73S,3S7,DQ9,V5J,NS4,S3J,GY3,GL8,49R,RQ5,8K5,UZ4
+ r_WCH5VGKY5S,exploratory,QP-1454,p_DM31Y3FE22,water,wet strength retained,,79.3416,%,lab_f,lab_b,73S,9AF,DQ9,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_5GCM0FT2B2,exploratory,QP-1454,p_XE2PJM6CB2,water,wet strength retained,,78.5844,%,lab_c,lab_b,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_5GCM0FT2B3,exploratory,QP-1454,p_XE2PJM6CB2,water,wet strength retained,,79.0604,%,lab_c,lab_b,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_CWMTKV75YN,exploratory,QP-1454,p_XE2PJM6CB2,heat,seal hold temperature,,78.81700,°C,lab_d,lab_b,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_CWMTKV75YP,exploratory,QP-1454,p_XE2PJM6CB2,heat,seal hold temperature,,78.90225,°C,lab_d,lab_b,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_2MQKJ3YY3H,exploratory,QP-1454,p_XE2PJM6CB2,water,wet strength retained,,79.5364,%,lab_f,lab_b,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_2MQKJ3YY3J,exploratory,QP-1454,p_XE2PJM6CB2,water,wet strength retained,,79.6396,%,lab_f,lab_b,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_FBM20EFDJE,exploratory,QP-1454,p_XE2PJM6CB2,heat,seal hold temperature,,78.37650,°C,lab_a,lab_b,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_FBM20EFDJF,exploratory,QP-1454,p_XE2PJM6CB2,heat,seal hold temperature,,77.91500,°C,lab_a,lab_b,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_2CNHVR8HS5,exploratory,QP-1454,p_XE2PJM6CB2,strength,edge crush resistance,,6.68162,kN/m,lab_e,lab_b,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_QW65XCX246,exploratory,QP-1454,p_XE2PJM6CB2,strength,edge crush resistance,,6.66920,kN/m,lab_e,lab_b,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_08PTY7CYAQ,exploratory,QP-1454,p_XE2PJM6CB2,strength,edge crush resistance,,6.75101,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_08PTY7CYAR,exploratory,QP-1454,p_XE2PJM6CB2,strength,edge crush resistance,,6.67148,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4

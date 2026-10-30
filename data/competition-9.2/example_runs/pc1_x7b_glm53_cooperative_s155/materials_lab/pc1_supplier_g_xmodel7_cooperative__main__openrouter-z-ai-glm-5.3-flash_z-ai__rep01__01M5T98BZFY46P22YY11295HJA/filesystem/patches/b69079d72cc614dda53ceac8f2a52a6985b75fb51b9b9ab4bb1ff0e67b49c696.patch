@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -436,3 +436,5 @@
+ r_J8WE4DVZEN,exploratory,QP-1466,p_QHMA9WGC84,water,wet strength retained,,63.3100,%,lab_c,lab_e,,,,,,,,,,,,
+ r_Q8QBVM30ZD,exploratory,QP-1466,p_NXWW60NMKQ,strength,edge crush resistance,,6.72950,kN/m,lab_b,lab_c,73S,3S7,6ZC,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,LW5
+ r_Q8QBVM30ZE,exploratory,QP-1466,p_NXWW60NMKQ,strength,edge crush resistance,,6.62930,kN/m,lab_b,lab_c,73S,3S7,6ZC,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,LW5
++r_0523SFFY1B,exploratory,QP-1466,p_XTDKGEAG9J,water,wet strength retained,,70.7696,%,lab_c,lab_d,,,,,,,,,,,,
++r_0523SFFY1C,exploratory,QP-1466,p_XTDKGEAG9J,water,wet strength retained,,70.3824,%,lab_c,lab_d,,,,,,,,,,,,

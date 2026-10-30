@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -627,3 +627,15 @@
+ r_JM9JG698HK,exploratory,QP-4503,p_WBVGND5WPV,strength,edge crush resistance,,7.08923,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,Y6H,92P,3RB,F9B,49R,RQ5,8K5,LW5
+ r_JM9JG698HM,exploratory,QP-4503,p_WBVGND5WPX,strength,edge crush resistance,,7.09733,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,Y6H,S3J,GY3,F9B,49R,RQ5,8K5,LW5
+ r_JM9JG698HN,exploratory,QP-4503,p_WBVGND5WPX,strength,edge crush resistance,,7.01639,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,Y6H,S3J,GY3,F9B,49R,RQ5,8K5,LW5
++r_8KECQ5G8FA,exploratory,QP-4503,p_80GGW9VW53,strength,edge crush resistance,,6.31196,kN/m,lab_b,lab_b,73S,3S7,E5L,M5L,Y6H,92P,3RB,F9B,49R,RQ5,8K5,LW5
++r_8KECQ5G8FB,exploratory,QP-4503,p_80GGW9VW53,strength,edge crush resistance,,6.28094,kN/m,lab_b,lab_b,73S,3S7,E5L,M5L,Y6H,92P,3RB,F9B,49R,RQ5,8K5,LW5
++r_8KECQ5G8FC,exploratory,QP-4503,p_80GGW9VW55,strength,edge crush resistance,,6.25112,kN/m,lab_b,lab_b,73S,3S7,E5L,U4A,Y6H,92P,3RB,F9B,49R,RQ5,8K5,LW5
++r_AJ3PZKBFNH,exploratory,QP-4503,p_80GGW9VW55,strength,edge crush resistance,,6.22967,kN/m,lab_b,lab_b,73S,3S7,E5L,U4A,Y6H,92P,3RB,F9B,49R,RQ5,8K5,LW5
++r_AJ3PZKBFNJ,exploratory,QP-4503,p_80GGW9VW57,strength,edge crush resistance,,7.08323,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,Y6H,92P,3RB,F9B,49R,NP6,8K5,LW5
++r_AJ3PZKBFNK,exploratory,QP-4503,p_80GGW9VW57,strength,edge crush resistance,,7.08437,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,Y6H,92P,3RB,F9B,49R,NP6,8K5,LW5
++r_AJ3PZKBFNM,exploratory,QP-4503,p_80GGW9VW59,strength,edge crush resistance,,7.06025,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,Y6H,92P,3RB,F9B,37J,RQ5,8K5,LW5
++r_AJ3PZKBFNN,exploratory,QP-4503,p_80GGW9VW59,strength,edge crush resistance,,6.98591,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,Y6H,92P,3RB,F9B,37J,RQ5,8K5,LW5
++r_AJ3PZKBFNP,exploratory,QP-4503,p_80GGW9VW5B,strength,edge crush resistance,,5.68505,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,Y6H,S3J,GY3,F9B,49R,RQ5,8K5,23Y
++r_AJ3PZKBFNQ,exploratory,QP-4503,p_80GGW9VW5B,strength,edge crush resistance,,5.72585,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,Y6H,S3J,GY3,F9B,49R,RQ5,8K5,23Y
++r_AJ3PZKBFNR,exploratory,QP-4503,p_80GGW9VW5D,strength,edge crush resistance,,6.36887,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,Y6H,92P,3RB,F9B,49R,RQ5,8K5,UZ4
++r_AJ3PZKBFNS,exploratory,QP-4503,p_80GGW9VW5D,strength,edge crush resistance,,6.28511,kN/m,lab_b,lab_b,73S,3S7,E5L,V5J,Y6H,92P,3RB,F9B,49R,RQ5,8K5,UZ4

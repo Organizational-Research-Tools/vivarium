@@ -1,0 +1,6 @@
+import pandas as pd
+D=pd.read_csv('records.csv')
+for p in ['p_HDGZMBDKP9','p_HDGZMBDKPB','p_GJ5SWEGMPY','p_G16JDJKDWA','p_HDGZMBDKNK']:
+ g=D[(D.prototype_id==p)&(D.kind=='qualification')&(D.test=='wet strength retained')]
+ print(p,len(g),g.value.mean() if len(g) else None)
+ print(g.record_id.tolist())

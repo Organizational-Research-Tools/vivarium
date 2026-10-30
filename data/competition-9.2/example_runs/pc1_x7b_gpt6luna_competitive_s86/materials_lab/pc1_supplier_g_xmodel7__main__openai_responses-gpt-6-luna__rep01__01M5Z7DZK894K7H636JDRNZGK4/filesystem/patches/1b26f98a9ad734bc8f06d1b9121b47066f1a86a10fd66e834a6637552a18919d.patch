@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -1101,3 +1101,6 @@
+ r_MR68G4T778,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,3,80.4440,%,lab_c,lab_c,,,,,,,,,,,,
+ r_MR68G4T779,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,4,80.4020,%,lab_c,lab_c,,,,,,,,,,,,
+ r_MR68G4T77A,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,5,80.7776,%,lab_c,lab_c,,,,,,,,,,,,
++r_B4SCYDKT11,exploratory,QP-3617,p_D7M43Y22PV,strength,edge crush resistance,,6.56423,kN/m,lab_e,lab_f,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,UX3,YX4,SU2
++r_B4SCYDKT12,exploratory,QP-3617,p_D7M43Y22PV,strength,edge crush resistance,,6.57005,kN/m,lab_e,lab_f,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,UX3,YX4,SU2
++r_B4SCYDKT13,exploratory,QP-3617,p_D7M43Y22PV,strength,edge crush resistance,,6.56870,kN/m,lab_e,lab_f,8GP,RK7,VQ6,7TW,74N,4CW,2A4,9HJ,FJ2,UX3,YX4,SU2

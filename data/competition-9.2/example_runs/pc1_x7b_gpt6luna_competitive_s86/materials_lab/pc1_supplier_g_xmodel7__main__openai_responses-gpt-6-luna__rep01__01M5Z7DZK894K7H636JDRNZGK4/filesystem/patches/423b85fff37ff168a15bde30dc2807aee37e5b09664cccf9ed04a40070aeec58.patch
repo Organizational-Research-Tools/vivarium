@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++D=pd.read_csv('records.csv')
++for p in ['p_PDMNYKBBJ1','p_231PK71DXN','p_FG83MS3A2D','p_YZTF8EKPRY','p_YP3K6XM4ZN','p_2M4216T3YK']:
++ r=D[D.prototype_id==p].iloc[0]
++ print(p, r['project'], ' '.join(str(r[x]) for x in D.columns[11:23]))

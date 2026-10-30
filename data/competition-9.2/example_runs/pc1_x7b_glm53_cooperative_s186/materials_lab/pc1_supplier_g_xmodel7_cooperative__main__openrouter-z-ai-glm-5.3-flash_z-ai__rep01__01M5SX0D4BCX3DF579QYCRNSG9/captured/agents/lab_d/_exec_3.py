@@ -1,0 +1,6 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+q = df[df.project_id=='QP-3777']
+print(q.columns.tolist())
+print(q.groupby('prototype_id')[['value']].count() if 'value' in q.columns else '')
+print(q.head(50).to_string()[:4000])

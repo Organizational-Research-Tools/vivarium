@@ -1,0 +1,103 @@
+
+# Analyze the key module effects correctly
+# Strength threshold: 7.10 kN/m - none reached it yet, max was 6.38
+
+# Best single-module changes from baseline (JA8, 3HW, 8BB, 5FE, 6FA, L6C, 4QB, P8G, N7N, ZW3, 9FU, YV2 = 4.87):
+single_effects = {
+    "base_sheet": {"JA8": 4.868, "P2G": 4.170, "DA9": 4.916, "U8H": 3.591},
+    "secondary_sheet": {"3HW": 4.868, "5BU": 4.881, "YX8": 4.903, "GG7": "BANNED"},
+    "binder": {"8BB": 4.868, "M2P": 5.473, "NN7": 5.534, "T9M": 4.964},
+    "add_pkg1": {"5FE": 4.868, "R5N": 4.936, "57T": 4.849, "QJ2": 4.822},
+    "add_pkg2": {"6FA": 4.868, "B3P": 6.305, "S2J": 4.838, "LD3": 5.666},
+    "add_pkg3": {"L6C": 4.868, "4PE": 4.955, "QJ4": 4.239, "44B": 4.918},
+    "pp1": {"4QB": 4.868, "62D": 5.597, "UP5": 5.608, "WB3": 5.566},
+    "pp2": {"P8G": 4.868, "C5Q": 5.556, "VA8": 4.864, "2BR": 5.505},
+    "pp3": {"N7N": 4.868, "X9F": 4.948, "H3F": 4.820, "N4L": 4.135},
+    "surface_trt": {"ZW3": 4.868, "5TZ": 6.111, "7KL": 5.507, "7TJ": 5.545},
+    "joint_sys": {"9FU": 4.868, "57U": 4.264, "DL8": 4.908, "4GD": 4.234},
+    "cond_step": {"YV2": 4.868, "6JZ": 4.827, "3N8": 3.647, "G8Q": 3.575},
+}
+
+print("Best variant per module (for strength):")
+for mod, variants in single_effects.items():
+    best = max([(v, k) for k, v in variants.items() if v != "BANNED"], key=lambda x: x[0])
+    print(f"  {mod}: {best[1]} = {best[0]:.3f}")
+
+print("\nKey insight: Best single choices suggest combining the following:")
+print("  base_sheet: DA9 (or JA8)")
+print("  secondary_sheet: YX8 (or any non-GG7)")
+print("  binder: NN7")
+print("  add_pkg1: R5N (marginal)")
+print("  add_pkg2: B3P (+1.44 above baseline!)")
+print("  add_pkg3: 4PE")
+print("  pp1: UP5")
+print("  pp2: C5Q")
+print("  pp3: X9F (N7N is baseline, X9F slightly better)")
+print("  surface_trt: 5TZ (+1.24 above baseline!)")
+print("  joint_sys: DL8")
+print("  cond_step: YV2 (don't use 3N8 or G8Q!)")
+
+print("\nKey interactions affecting strength:")
+print("  1. conditioning_step × base_sheet × secondary_sheet")
+print("  2. additive_pkg3 × base_sheet × process_profile3") 
+print("  3. surface_treatment × process_profile3 × additive_pkg2  ← 5TZ + pp3 + B3P!")
+print("  4. surface_treatment × binder_system × process_profile2  ← 5TZ + NN7 + C5Q!")
+print("  5. process_profile1 × additive_pkg2 × additive_pkg3  ← UP5 + B3P + ?")
+print("  6. base_sheet × conditioning_step × joint_system")
+
+print("\nTarget: 7.10 kN/m, need to gain ~0.72 from best observed 6.38")
+print("Strategy: test focused combinations with B3P+5TZ+best_others")
+
+# Design second batch of recipes focusing on B3P + 5TZ interactions
+recipes_batch2 = []
+
+# Base: B3P (add_pkg2) + 5TZ (surface_trt) + varying pp3
+# baseline = JA8, 3HW, 8BB, 5FE, 6FA, L6C, 4QB, P8G, N7N, ZW3, 9FU, YV2
+# idx:        0     1     2    3     4    5    6    7    8    9    10   11
+
+# Try B3P + 5TZ + different pp3
+for pp3_var in ["N7N", "X9F", "H3F", "N4L"]:
+    for binder in ["NN7", "M2P", "8BB"]:
+        for pp1 in ["UP5", "62D", "4QB"]:
+            r = ["JA8", "YX8", binder, "R5N", "B3P", "4PE", pp1, "C5Q", pp3_var, "5TZ", "DL8", "YV2"]
+            if r not in recipes_batch2:
+                recipes_batch2.append(r)
+
+# Also try LD3 + 5TZ combinations (LD3 is second best add_pkg2)
+for pp3_var in ["N7N", "X9F"]:
+    for binder in ["NN7", "M2P"]:
+        r = ["JA8", "YX8", binder, "R5N", "LD3", "4PE", "UP5", "C5Q", pp3_var, "5TZ", "DL8", "YV2"]
+        if r not in recipes_batch2:
+            recipes_batch2.append(r)
+
+# Try DA9 base_sheet (slightly better)
+for pp3_var in ["N7N", "X9F"]:
+    r = ["DA9", "YX8", "NN7", "R5N", "B3P", "4PE", "UP5", "C5Q", pp3_var, "5TZ", "DL8", "YV2"]
+    if r not in recipes_batch2:
+        recipes_batch2.append(r)
+
+# Try different joint systems and cond_steps
+for joint in ["9FU", "DL8", "57U"]:
+    for cond in ["YV2", "6JZ"]:
+        r = ["JA8", "YX8", "NN7", "R5N", "B3P", "4PE", "UP5", "C5Q", "N7N", "5TZ", joint, cond]
+        if r not in recipes_batch2:
+            recipes_batch2.append(r)
+
+# Try different add_pkg3 variants with B3P + 5TZ
+for add3 in ["L6C", "4PE", "QJ4", "44B"]:
+    r = ["JA8", "YX8", "NN7", "R5N", "B3P", add3, "UP5", "C5Q", "N7N", "5TZ", "DL8", "YV2"]
+    if r not in recipes_batch2:
+        recipes_batch2.append(r)
+
+# Try the "all best" combination
+r_allbest = ["JA8", "YX8", "NN7", "R5N", "B3P", "4PE", "UP5", "C5Q", "N7N", "5TZ", "DL8", "YV2"]
+if r_allbest not in recipes_batch2:
+    recipes_batch2.append(r_allbest)
+
+print(f"\nBatch 2 recipes to test: {len(recipes_batch2)}")
+# Limit to 48
+recipes_batch2 = recipes_batch2[:48]
+print(f"Will test first 48: {len(recipes_batch2)}")
+print("\nFirst few recipes:")
+for r in recipes_batch2[:5]:
+    print(f"  {r}")

@@ -1,0 +1,4 @@
+print(7.25247,'->',(7.25247-7.1)/0.03)
+print((79.013-77.5)/0.25)  # heat margin lab_a panel
+# lab_c water 79.6208 margin vs standing report's water 79.6208 — check
+print((79.6208-78)/0.4)

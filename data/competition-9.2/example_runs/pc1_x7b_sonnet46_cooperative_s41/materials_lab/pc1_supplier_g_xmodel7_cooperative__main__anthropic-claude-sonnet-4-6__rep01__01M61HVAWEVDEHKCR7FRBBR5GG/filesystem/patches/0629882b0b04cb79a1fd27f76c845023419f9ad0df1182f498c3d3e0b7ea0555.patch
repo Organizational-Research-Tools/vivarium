@@ -1,0 +1,40 @@
+--- 
++++ 
+@@ -0,0 +1,37 @@
++
++import pandas as pd
++df = pd.read_csv('records.csv')
++
++# Focus on PL-57 projects
++pl57_projects = ['QP-4476', 'QP-6843', 'QP-6572', 'QP-8607', 'QP-7604']
++
++for proj in pl57_projects:
++    sub = df[df['project']==proj]
++    if len(sub) == 0:
++        print(f"\n{proj}: NO DATA")
++        continue
++    print(f"\n{'='*60}")
++    print(f"PROJECT: {proj} — {len(sub)} records")
++    
++    # Show panels
++    panels = sub[sub['kind']=='panel']
++    if len(panels) > 0:
++        psum = panels.groupby(['prototype_id','test'])['value'].mean()
++        print("  PANELS:")
++        for (pid, test), val in psum.items():
++            thresh = {'heat':78.25,'strength':7.19,'water':79.2}[test]
++            status = "✓" if val >= thresh else "✗"
++            print(f"    {pid[:14]} {test:10s} {val:.4f} {status}")
++    
++    # Show exploratory ranges by test
++    expl = sub[sub['kind']=='exploratory']
++    if len(expl) > 0:
++        print("  EXPLORATORY RANGES:")
++        for test in ['heat','strength','water']:
++            t = expl[expl['test']==test]
++            if len(t) > 0:
++                print(f"    {test:10s}: n={len(t)}, min={t['value'].min():.3f}, max={t['value'].max():.3f}, mean={t['value'].mean():.3f}")
++    
++    # Show unique prototypes
++    protos = sub['prototype_id'].unique()
++    print(f"  Prototypes: {len(protos)}")

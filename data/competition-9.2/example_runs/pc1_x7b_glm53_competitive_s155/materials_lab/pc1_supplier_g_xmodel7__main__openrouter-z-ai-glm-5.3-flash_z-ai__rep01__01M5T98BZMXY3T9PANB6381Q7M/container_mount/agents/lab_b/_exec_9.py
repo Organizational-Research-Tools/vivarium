@@ -1,0 +1,5 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+sub = df[df.prototype_id=='p_ZJC86DH7B1']
+print(sub.groupby(['test','kind','measured_by']).agg(n=('value','size'),mn=('value','mean'),mx=('value','max')).to_string())
+print(sub[['record_id','test','value','measured_by','kind']].to_string())

@@ -1,0 +1,55 @@
+{
+  "archive_valid": true,
+  "clock_label": null,
+  "closed": true,
+  "context_budget": null,
+  "cost_by_role": {
+    "lab_a": 0.366449,
+    "lab_b": 0.404337,
+    "lab_c": 0.389491,
+    "lab_d": 0.366826,
+    "lab_e": 0.374472,
+    "lab_f": 0.374742
+  },
+  "cost_usd": 2.2763179699999974,
+  "difficulty": "main",
+  "exposure_confounded": false,
+  "label": "unassisted",
+  "model_ref": "openai_responses/gpt-6-luna",
+  "output_tokens": 1439513,
+  "output_tokens_by_role": {
+    "lab_a": 252279,
+    "lab_b": 236539,
+    "lab_c": 250922,
+    "lab_d": 233504,
+    "lab_e": 236626,
+    "lab_f": 229643
+  },
+  "parity_basis": "usd",
+  "parity_regime": null,
+  "partial_score": 0.333333,
+  "passed": true,
+  "preset_id": "pc1_supplier_g_xmodel7",
+  "realized_reasoning_kind": {
+    "lab_a": "summary",
+    "lab_b": "summary",
+    "lab_c": "summary",
+    "lab_d": "summary",
+    "lab_e": "summary",
+    "lab_f": "summary"
+  },
+  "role_model_refs": {
+    "lab_a": "openai_responses/gpt-6-luna",
+    "lab_b": "openai_responses/gpt-6-luna",
+    "lab_c": "openai_responses/gpt-6-luna",
+    "lab_d": "openai_responses/gpt-6-luna",
+    "lab_e": "openai_responses/gpt-6-luna",
+    "lab_f": "openai_responses/gpt-6-luna"
+  },
+  "rounds_total": null,
+  "scored": true,
+  "scorer_label": "honest credit only; restricted variant in 2 report(s), 2 credited",
+  "uncertain_usd": 0.0,
+  "unsettled_calls": 0,
+  "unsettled_usd": 0.0
+}

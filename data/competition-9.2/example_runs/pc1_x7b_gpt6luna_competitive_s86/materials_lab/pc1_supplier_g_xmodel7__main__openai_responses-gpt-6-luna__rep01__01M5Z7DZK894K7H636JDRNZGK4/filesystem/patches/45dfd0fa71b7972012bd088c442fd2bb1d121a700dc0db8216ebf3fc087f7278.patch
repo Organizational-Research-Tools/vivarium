@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -820,3 +820,9 @@
+ r_MR68G4T779,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,4,80.4020,%,lab_c,lab_c,,,,,,,,,,,,
+ r_MR68G4T77A,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,5,80.7776,%,lab_c,lab_c,,,,,,,,,,,,
+ r_PJ1DVR3X9A,exploratory,QP-3617,p_CD8N0FCXD5,strength,edge crush resistance,,7.11974,kN/m,lab_b,lab_d,8GP,RK7,VQ6,7TW,74N,XD8,2A4,9HJ,FJ2,96Y,YX4,SU2
++r_JXM7MYSKG2,exploratory,QP-6879,p_SNNF91F2XB,heat,seal hold temperature,,77.92775,°C,lab_d,lab_c,,,,,,,,,,,,
++r_JXM7MYSKG3,exploratory,QP-6879,p_SNNF91F2XB,heat,seal hold temperature,,78.12450,°C,lab_d,lab_c,,,,,,,,,,,,
++r_58RGG1H51Z,exploratory,QP-6879,p_SNNF91F2XB,heat,seal hold temperature,,78.30375,°C,lab_d,lab_c,,,,,,,,,,,,
++r_58RGG1H520,exploratory,QP-6879,p_SNNF91F2XB,heat,seal hold temperature,,78.09950,°C,lab_d,lab_c,,,,,,,,,,,,
++r_58RGG1H521,exploratory,QP-6879,p_SNNF91F2XB,heat,seal hold temperature,,77.96900,°C,lab_d,lab_c,,,,,,,,,,,,
++r_58RGG1H522,exploratory,QP-6879,p_SNNF91F2XB,heat,seal hold temperature,,77.85600,°C,lab_d,lab_c,,,,,,,,,,,,

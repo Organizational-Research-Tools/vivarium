@@ -1,0 +1,19 @@
+--- 
++++ 
+@@ -0,0 +1,16 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++df['mods']=df[mods].apply(lambda r:'|'.join('?' if pd.isna(v) else str(v) for v in r),axis=1)
++# find recipes whose MEAN per test is near C bars
++g = df.groupby(['prototype_id','mods','test']).agg(n=('value','size'),mn=('value','mean')).reset_index()
++piv = g.pivot_table(index=['prototype_id','mods'], columns='test', values='mn')
++piv = piv[piv.notna().all(axis=1)]
++piv.columns=['heat','strength','water']
++# allow partial: at least 2 readings per test
++cnt = g.groupby(['prototype_id','mods','test']).n.reset_index().pivot_table(index=['prototype_id','mods'],columns='test',values='n')
++good = piv[(piv.heat>=78.5)&(piv.strength>=7.2)&(piv.water>=79.6)]
++print(good.to_string())
++print('---- near misses ----')
++nm = piv[(piv.heat>=78.3)&(piv.strength>=7.15)&(piv.water>=79.3)]
++print(nm.to_string())

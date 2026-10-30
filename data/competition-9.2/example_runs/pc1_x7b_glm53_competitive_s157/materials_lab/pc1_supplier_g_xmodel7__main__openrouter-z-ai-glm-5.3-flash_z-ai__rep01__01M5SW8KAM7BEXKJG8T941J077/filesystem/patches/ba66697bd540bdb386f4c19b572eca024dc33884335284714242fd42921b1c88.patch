@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -435,3 +435,5 @@
+ r_MFMSD5J496,qualification,QP-5653,p_XS595HTDBV,heat,seal hold temperature,3,79.55525,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_MFMSD5J497,qualification,QP-5653,p_XS595HTDBV,heat,seal hold temperature,4,78.93050,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_MFMSD5J498,qualification,QP-5653,p_XS595HTDBV,heat,seal hold temperature,5,79.13525,°C,lab_a,lab_a,,,,,,,,,,,,
++r_KZKYCKYM17,exploratory,QP-5653,p_XJAAVAY8NP,water,wet strength retained,,78.6352,%,lab_c,lab_d,,,,,,,,,,,,
++r_KZKYCKYM18,exploratory,QP-5653,p_9JTXYAXC52,water,wet strength retained,,69.0864,%,lab_c,lab_d,,,,,,,,,,,,

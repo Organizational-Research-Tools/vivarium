@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -572,3 +572,6 @@
+ r_BK522F504K,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,3,77.94000,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_BK522F504M,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,4,78.14050,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_BK522F504N,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,5,78.11975,°C,lab_a,lab_e,,,,,,,,,,,,
++r_NT8H53MREB,exploratory,QP-1992,p_P5WACE5V1Z,heat,seal hold temperature,,77.93950,°C,lab_a,lab_f,,,,,,,,,,,,
++r_NT8H53MREC,exploratory,QP-1992,p_P5WACE5V1Z,heat,seal hold temperature,,78.56650,°C,lab_a,lab_f,,,,,,,,,,,,
++r_NT8H53MRED,exploratory,QP-1992,p_P5WACE5V1Z,heat,seal hold temperature,,78.16200,°C,lab_a,lab_f,,,,,,,,,,,,

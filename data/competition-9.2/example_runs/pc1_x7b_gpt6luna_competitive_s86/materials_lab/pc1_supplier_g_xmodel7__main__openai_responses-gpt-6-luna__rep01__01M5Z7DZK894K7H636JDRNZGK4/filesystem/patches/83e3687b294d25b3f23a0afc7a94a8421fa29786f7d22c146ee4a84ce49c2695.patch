@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -1034,3 +1034,27 @@
+ r_4KNPZ0AFC6,qualification,QP-8807,p_M605F69WTZ,strength,edge crush resistance,3,7.29794,kN/m,lab_b,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,2A4,QE8,FJ2,96Y,JE5,6YN
+ r_4KNPZ0AFC7,qualification,QP-8807,p_M605F69WTZ,strength,edge crush resistance,4,7.20983,kN/m,lab_b,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,2A4,QE8,FJ2,96Y,JE5,6YN
+ r_4KNPZ0AFC8,qualification,QP-8807,p_M605F69WTZ,strength,edge crush resistance,5,7.23518,kN/m,lab_b,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,2A4,QE8,FJ2,96Y,JE5,6YN
++r_QWTSQ7YM7A,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,0,78.30925,°C,lab_d,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_QWTSQ7YM7B,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,1,78.48200,°C,lab_d,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_QWTSQ7YM7C,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,2,78.45700,°C,lab_d,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_QWTSQ7YM7D,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,3,78.58925,°C,lab_d,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_QWTSQ7YM7E,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,4,78.72300,°C,lab_d,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_QWTSQ7YM7F,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,5,78.22650,°C,lab_d,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_QWTSQ7YM7G,qualification,QP-8807,p_M605F69WTZ,heat,seal hold temperature,0,78.46700,°C,lab_d,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,2A4,QE8,FJ2,96Y,JE5,6YN
++r_QWTSQ7YM7H,qualification,QP-8807,p_M605F69WTZ,heat,seal hold temperature,1,78.42800,°C,lab_d,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,2A4,QE8,FJ2,96Y,JE5,6YN
++r_QWTSQ7YM7J,qualification,QP-8807,p_M605F69WTZ,heat,seal hold temperature,2,78.51525,°C,lab_d,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,2A4,QE8,FJ2,96Y,JE5,6YN
++r_QWTSQ7YM7K,qualification,QP-8807,p_M605F69WTZ,heat,seal hold temperature,3,78.66475,°C,lab_d,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,2A4,QE8,FJ2,96Y,JE5,6YN
++r_QWTSQ7YM7M,qualification,QP-8807,p_M605F69WTZ,heat,seal hold temperature,4,78.75600,°C,lab_d,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,2A4,QE8,FJ2,96Y,JE5,6YN
++r_QWTSQ7YM7N,qualification,QP-8807,p_M605F69WTZ,heat,seal hold temperature,5,78.21250,°C,lab_d,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,2A4,QE8,FJ2,96Y,JE5,6YN
++r_CR1R6HESGH,qualification,QP-8807,p_M605F69WTX,water,wet strength retained,0,79.6268,%,lab_c,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_CR1R6HESGJ,qualification,QP-8807,p_M605F69WTX,water,wet strength retained,1,79.8236,%,lab_c,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_CR1R6HESGK,qualification,QP-8807,p_M605F69WTX,water,wet strength retained,2,79.9480,%,lab_c,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_CR1R6HESGM,qualification,QP-8807,p_M605F69WTX,water,wet strength retained,3,79.1484,%,lab_c,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_CR1R6HESGN,qualification,QP-8807,p_M605F69WTX,water,wet strength retained,4,79.3660,%,lab_c,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_CR1R6HESGP,qualification,QP-8807,p_M605F69WTX,water,wet strength retained,5,79.3464,%,lab_c,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_2DCWTSSQMV,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,0,78.31650,°C,lab_a,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_2DCWTSSQMW,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,1,78.49525,°C,lab_a,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_2DCWTSSQMX,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,2,78.56725,°C,lab_a,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_2DCWTSSQMY,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,3,78.59025,°C,lab_a,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_2DCWTSSQMZ,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,4,78.65175,°C,lab_a,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN
++r_2DCWTSSQN0,qualification,QP-8807,p_M605F69WTX,heat,seal hold temperature,5,78.16600,°C,lab_a,lab_b,QG7,6TX,P8G,7TW,F8Y,XD8,9VQ,QE8,FJ2,96Y,JE5,6YN

@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++print(x.columns.tolist())
++print(x.shape)
++print(x.head(8).to_string(index=False))
++print('Projects',x['project_id'].value_counts().to_dict() if 'project_id' in x else '')

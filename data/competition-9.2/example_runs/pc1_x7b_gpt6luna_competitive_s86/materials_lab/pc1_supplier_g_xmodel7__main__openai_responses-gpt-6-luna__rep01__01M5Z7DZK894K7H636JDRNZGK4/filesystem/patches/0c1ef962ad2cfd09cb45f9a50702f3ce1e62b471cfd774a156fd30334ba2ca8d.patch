@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd
++r=pd.read_csv('records.csv')
++ids=['p_2X23QE5GP2','p_17K7PB11PJ','p_2X23QE5GP4','p_2X23QE5GNY','p_B6J1NZY6A3','p_17K7PB11PE','p_47KNAGHFYP','p_2X23QE5GNP','p_47KNAGHFYR','p_B6J1NZY6AD']
++x=r[r.prototype_id.isin(ids)].groupby(['prototype_id','test']).agg(n=('value','count'),mean=('value','mean'), lab=('measured_by','first')).reset_index()
++print(x.to_string(index=False))
++print('\npossible recent project protos')
++print(r[r.project!='QP-9259'][['prototype_id','project','test','value','measured_by']].drop_duplicates().to_string(index=False))

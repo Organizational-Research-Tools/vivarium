@@ -1,0 +1,26 @@
+
+# Assess lab_e's recipe and all priority candidates
+recipe_e = ["P2G", "3HW", "8BB", "57T", "S2J", "4PE", "WB3", "VA8", "X9F", "ZW3", "DL8", "3N8"]
+modules = ["base", "secondary", "binder", "AP1", "AP2", "AP3", "PP1", "PP2", "PP3", "surface", "joint", "conditioning"]
+print("=== Lab_e's candidate recipe (p_YD1Q0XW9SA / J6CX8AHRR3 / S87ZV5EJH5) ===")
+for m, v in zip(modules, recipe_e):
+    print(f"  {m}: {v}")
+
+print()
+print("Water interactions analysis:")
+print("  AP2×joint×AP3 = S2J×DL8×4PE → previously ~80.85% (GG7 version)")
+print("  3HW secondary (non-GG7) may be slightly lower, but should still clear 79.2%")
+print("  PP1×PP3×surface = WB3×X9F×ZW3 → lab_f: WB3+X9F gives GOOD heat in QP-3473")
+print("  binder=8BB (not NN7/M2P) → heat concern with 8BB")
+print("  conditioning=3N8 → lab_a said 3N8 is BAD for heat!")
+print()
+print("=== ACTION PLAN ===")
+print("PANELS (immediate): p_YD1Q0XW9SA, p_J6CX8AHRR3, p_S87ZV5EJH5,")
+print("                    p_853B4YQGHJ, p_853B4YQGHP, p_SVC8TYAQGM, p_X8JBQTDZJT")
+print("EXPLORATORY: p_FXEP5ES4Z8, p_FXEP5ES4ZA (QP-6843 NN7-binder fix for PL-57)")
+print()
+print("Rev B thresholds: heat≥78.25, strength≥7.19, water≥79.2%")
+print()
+print("p_853B4YQGHJ: strength 7.164 < 7.19 → FAILS Rev B strength. Still run water for data.")
+print("Lab_e's three: strength ✓ (7.21), heat unknown, water unknown")
+print("Key question: does 3N8 conditioning kill heat for lab_e's recipe?")

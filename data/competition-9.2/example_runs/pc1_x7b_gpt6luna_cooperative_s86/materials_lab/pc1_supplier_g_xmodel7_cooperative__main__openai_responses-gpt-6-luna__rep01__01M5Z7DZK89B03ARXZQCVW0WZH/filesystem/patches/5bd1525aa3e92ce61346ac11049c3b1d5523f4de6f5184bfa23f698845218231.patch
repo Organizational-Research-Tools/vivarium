@@ -1,0 +1,24 @@
+--- 
++++ 
+@@ -995,3 +995,21 @@
+ r_3WWSXNWXF0,qualification,QP-9259,p_VN7Z5C4VTH,heat,seal hold temperature,3,78.70050,°C,lab_d,lab_f,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,84Z
+ r_3WWSXNWXF1,qualification,QP-9259,p_VN7Z5C4VTH,heat,seal hold temperature,4,78.83400,°C,lab_d,lab_f,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,84Z
+ r_3WWSXNWXF2,qualification,QP-9259,p_VN7Z5C4VTH,heat,seal hold temperature,5,79.07900,°C,lab_d,lab_f,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,84Z
++r_TSA9M56GS2,qualification,QP-9259,p_3KNEMDD3PR,strength,edge crush resistance,0,7.25372,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_TSA9M56GS3,qualification,QP-9259,p_3KNEMDD3PR,strength,edge crush resistance,1,7.19576,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_TSA9M56GS4,qualification,QP-9259,p_3KNEMDD3PR,strength,edge crush resistance,2,7.19738,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_TSA9M56GS5,qualification,QP-9259,p_3KNEMDD3PR,strength,edge crush resistance,3,7.21346,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_TSA9M56GS6,qualification,QP-9259,p_3KNEMDD3PR,strength,edge crush resistance,4,7.22792,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_TSA9M56GS7,qualification,QP-9259,p_3KNEMDD3PR,strength,edge crush resistance,5,7.23860,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_HEPZ4N2SEC,qualification,QP-9259,p_3KNEMDD3PR,heat,seal hold temperature,0,78.96550,°C,lab_a,lab_e,,,,,,,,,,,,
++r_HEPZ4N2SED,qualification,QP-9259,p_3KNEMDD3PR,heat,seal hold temperature,1,78.89375,°C,lab_a,lab_e,,,,,,,,,,,,
++r_HEPZ4N2SEE,qualification,QP-9259,p_3KNEMDD3PR,heat,seal hold temperature,2,78.52625,°C,lab_a,lab_e,,,,,,,,,,,,
++r_HEPZ4N2SEF,qualification,QP-9259,p_3KNEMDD3PR,heat,seal hold temperature,3,78.63000,°C,lab_a,lab_e,,,,,,,,,,,,
++r_HEPZ4N2SEG,qualification,QP-9259,p_3KNEMDD3PR,heat,seal hold temperature,4,78.71625,°C,lab_a,lab_e,,,,,,,,,,,,
++r_HEPZ4N2SEH,qualification,QP-9259,p_3KNEMDD3PR,heat,seal hold temperature,5,78.82525,°C,lab_a,lab_e,,,,,,,,,,,,
++r_DYET7S8RNP,qualification,QP-9259,p_3KNEMDD3PR,water,wet strength retained,0,78.9220,%,lab_c,lab_e,,,,,,,,,,,,
++r_DYET7S8RNQ,qualification,QP-9259,p_3KNEMDD3PR,water,wet strength retained,1,78.8984,%,lab_c,lab_e,,,,,,,,,,,,
++r_DYET7S8RNR,qualification,QP-9259,p_3KNEMDD3PR,water,wet strength retained,2,78.9344,%,lab_c,lab_e,,,,,,,,,,,,
++r_DYET7S8RNS,qualification,QP-9259,p_3KNEMDD3PR,water,wet strength retained,3,79.2692,%,lab_c,lab_e,,,,,,,,,,,,
++r_DYET7S8RNT,qualification,QP-9259,p_3KNEMDD3PR,water,wet strength retained,4,79.6092,%,lab_c,lab_e,,,,,,,,,,,,
++r_DYET7S8RNV,qualification,QP-9259,p_3KNEMDD3PR,water,wet strength retained,5,79.6580,%,lab_c,lab_e,,,,,,,,,,,,

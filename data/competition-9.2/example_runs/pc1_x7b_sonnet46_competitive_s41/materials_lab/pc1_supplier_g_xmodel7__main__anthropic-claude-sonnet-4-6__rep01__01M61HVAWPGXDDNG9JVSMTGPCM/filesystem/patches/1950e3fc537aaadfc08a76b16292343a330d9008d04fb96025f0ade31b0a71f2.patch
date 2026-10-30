@@ -1,0 +1,33 @@
+--- 
++++ 
+@@ -0,0 +1,30 @@
++
++import numpy as np
++
++# Final summary of all strength panel results lab_b measured
++results = {
++    "p_0SM1T5W2MZ (QP-3473, GG7, WB3)": [7.25828, 7.27706, 7.28180, 7.21820, 7.23842, 7.24856],
++    "p_5626AZQYBH (QP-3473, YX8, WB3)": [7.22762, 7.25957, 7.25033, 7.19090, 7.19453, 7.22045],
++    "p_P68BNAVWAQ (QP-3473, YX8, 4QB)": [7.20890, 7.21532, 7.23761, 7.17893, 7.18490, 7.20236],
++    "p_P68BNAVWAS (QP-3473, YX8, UP5)": [6.51368, 6.54323, 6.55133, 6.49103, 6.48941, 6.50690],
++    "p_2TK8W7BFC7 (QP-3089, YX8, 4QB)": [7.19513, 7.21109, 7.22060, 7.16363, 7.16114, 7.17995],
++    "p_2TK8W7BFC9 (QP-3089, YX8, UP5)": [7.20779, 7.20923, 7.22129, 7.15940, 7.16900, 7.16969],
++    "p_MM0KRH0PJJ (QP-7212, YX8, 4QB)": [7.22609, 7.23338, 7.25642, 7.19624, 7.21535, 7.21790],
++    "p_MM0KRH0PJM (QP-7212, YX8, UP5)": [6.59555, 6.60707, 6.60374, 6.55220, 6.56312, 6.58430],
++}
++
++threshold = 7.235
++step = 0.03
++
++print("=== COMPLETE lab_b STRENGTH PANEL RECORD ===")
++print(f"{'Prototype':<45} {'Mean':>8} {'Steps vs C':>11} {'Result'}")
++print("-"*75)
++for name, vals in results.items():
++    m = np.mean(vals)
++    diff = (m - threshold) / step
++    result = "✅ PASSES" if m >= threshold else "❌ FAILS"
++    print(f"{name:<45} {m:>8.4f} {diff:>+10.2f}  {result}")
++
++print()
++print(f"Closest non-GG7: p_5626AZQYBH (YX8/WB3) at 7.2240 kN/m, -0.37 steps")
++print(f"GG7 advantage: +{(7.2537 - 7.2240)/step:.2f} steps = the only path that passed")

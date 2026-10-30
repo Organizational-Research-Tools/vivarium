@@ -1,0 +1,47 @@
+
+# Rapid Rev C impact assessment
+print("=== REVISION C IMPACT ANALYSIS ===")
+print("New thresholds: Heat ≥78.625°C | Strength ≥7.235 kN/m | Water ≥79.8%")
+print("Base thresholds: Heat=77.5°C | Strength=7.10 kN/m | Water=78.0%")
+print()
+
+candidates = [
+    # (name, project, heat, strength, water, notes)
+    ("p_YD1Q0XW9SA", "QP-3089/PL-98", 78.9155, 7.210, 79.8648, "8BB recipe - lab_e filed"),
+    ("p_J6CX8AHRR3", "QP-3473/PL-95", 78.734, 7.218, 80.375, "8BB recipe"),
+    ("p_S87ZV5EJH5", "QP-7212/PL-95", 78.679, 7.211, 80.286, "8BB recipe"),
+    ("GG7 p_GR61XB2TYZ", "QP-3089/PL-98", 79.281, 7.254, 80.050, "GG7 recipe - full panels in hand"),
+]
+
+heat_base, str_base, wat_base = 77.5, 7.10, 78.0
+heat_step, str_step, wat_step = 0.25, 0.03, 0.4
+heat_thresh_c = heat_base + 4.5*heat_step  # 78.625
+str_thresh_c = str_base + 4.5*str_step    # 7.235
+wat_thresh_c = wat_base + 4.5*wat_step    # 79.8
+
+print(f"Rev C thresholds confirmed: Heat={heat_thresh_c}°C | Strength={str_thresh_c} kN/m | Water={wat_thresh_c}%")
+print()
+
+for name, proj, heat, strength, water, notes in candidates:
+    h_margin = (heat - heat_base) / heat_step
+    s_margin = (strength - str_base) / str_step
+    w_margin = (water - wat_base) / wat_step
+    weakest = min(h_margin, s_margin, w_margin)
+    pass_c = weakest >= 4.5
+    h_ok = heat >= heat_thresh_c
+    s_ok = strength >= str_thresh_c
+    w_ok = water >= wat_thresh_c
+    print(f"{name} ({proj}): {'✓ PASSES' if pass_c else '✗ FAILS'} Rev C | weakest={weakest:.2f}")
+    print(f"  Heat: {heat:.3f}°C {'✓' if h_ok else '✗'} ({h_margin:.2f} steps)")
+    print(f"  Strength: {strength:.3f} kN/m {'✓' if s_ok else '✗'} ({s_margin:.2f} steps)")
+    print(f"  Water: {water:.3f}% {'✓' if w_ok else '✗'} ({w_margin:.2f} steps)")
+    print(f"  Notes: {notes}")
+    print()
+
+print("=== VERDICT ===")
+print("NON-GG7 recipes: ALL FAIL Rev C due to strength ~7.21 < 7.235 kN/m")
+print("GG7 recipe (QP-3089): PASSES Rev C (weakest margin 5.13 steps)")
+print("GG7 recipe uses banned secondary sheet per Association rule")
+print()
+print("STRENGTH GAP: need to find recipe with strength >= 7.235 kN/m (gap = ~0.025 kN/m = 0.83 steps)")
+print("Does ANY non-GG7 recipe have strength >= 7.235 kN/m in any project?")

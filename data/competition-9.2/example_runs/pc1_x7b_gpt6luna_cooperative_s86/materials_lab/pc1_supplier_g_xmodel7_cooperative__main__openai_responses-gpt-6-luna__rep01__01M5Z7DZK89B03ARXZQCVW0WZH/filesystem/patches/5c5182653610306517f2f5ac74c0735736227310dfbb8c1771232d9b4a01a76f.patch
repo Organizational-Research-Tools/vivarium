@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++q=x[x.kind=='qualification'].copy()
++g=q.groupby(['project','prototype_id','test']).value.agg(['count','mean']).reset_index()
++w=g.pivot(index=['project','prototype_id'],columns='test',values='mean').reset_index()
++cols=['heat','strength','water']
++# column test exact names
++print(g.test.unique())
++print(w.columns.tolist())

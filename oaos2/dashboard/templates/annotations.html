@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% from "_chip.html" import help, howto %}
+{% block title %}annotations — oaos2{% endblock %}
+{% block content %}
+
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem">Annotation lenses &amp; coverage</h1>
+{% call howto() %}
+  <p>Mark up runs while you read them. Your marks are saved in a separate file next to each run's records. They are separate research data, not a cache that can be reconstructed from the trace. The dashboard appends labels and defaults their coder field to “human”; that field does not verify who supplied a judgment. Preserve original coding and document corrections under the study's coding rules.</p>
+  <p><strong>Lenses.</strong> A lens is a category YOU define for marking events while reading — like a highlighter color with a meaning (e.g. 'framing move', 'attention shift'). Once defined, every event page gets a 'Code it' button for it.</p>
+  <p><strong>Arity.</strong> How many events one mark spans: unary = one event, relational = two-plus events that stand in a relation (e.g. 'this volley echoes that one'), group = any set of events.</p>
+{% endcall %}
+
+<div class="grid">
+  <div class="card">
+    <h2>Lenses ({{ schemas|length }})</h2>
+    <table>
+      <thead><tr>
+        <th>{{ help("schema", "The lens's unique name, e.g. attention.v1 — version it so you can refine a lens later without mixing old and new marks") }}</th>
+        <th>{{ help("namespace", "A folder name grouping related lenses; each namespace becomes its own file of marks next to the run") }}</th>
+        <th>arity</th>
+        <th>{{ help("relation", "For relational lenses only: the name of the relation between the linked events, e.g. 'imitates' or 'responds_to'") }}</th>
+        <th>description</th></tr></thead>
+      <tbody>
+      {% for s in schemas %}
+        <tr><td><code>{{ s.label_schema_ref }}</code></td><td>{{ s.namespace }}</td>
+            <td>{{ s.arity }}</td><td>{{ s.relation_kind or "—" }}</td><td>{{ s.description }}</td></tr>
+      {% else %}
+        <tr><td class="dim" colspan="5">none yet — define your first lens below</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    <form method="post" action="/annotations/schema" class="filters" style="margin-top:0.6rem">
+      <input type="text" name="label_schema_ref" placeholder="schema ref (e.g. attention.v1)" required>
+      <input type="text" name="namespace" placeholder="namespace (e.g. attention)" required>
+      <select name="arity">
+        <option value="unary">unary (one event)</option>
+        <option value="relational">relational (≥2 events + relation)</option>
+        <option value="group">group (≥1 events)</option>
+      </select>
+      <input type="text" name="relation_kind" placeholder="relation kind (relational only)">
+      <input type="text" name="description" placeholder="what this lens codes" size="30">
+      <button type="submit">Add lens</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Coverage — runs with codes</h2>
+    <table>
+      <thead><tr><th>run</th><th class="num">links</th><th>namespaces</th></tr></thead>
+      <tbody>
+      {% for cov in coverage %}
+        <tr>
+          <td><a href="/run/{{ cov.row.run_ref }}/annotations"><code>{{ cov.row.run_id }}</code></a></td>
+          <td class="num">{{ cov.n }}</td>
+          <td>{% for ns, n in cov.namespaces.items() %}<code>{{ ns }}</code>×{{ n }} {% endfor %}</td>
+        </tr>
+      {% else %}
+        <tr><td class="dim" colspan="3">no runs coded yet — open any event in the trace explorer and "Code it"</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,5 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+q = df[(df.prototype_id=='p_5XVCC7PF44')]
+print(q.groupby(['test','measured_by']).value.agg(['size','mean']))
+print(q[['record_id','test','measured_by','value']].to_string())

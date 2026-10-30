@@ -1,0 +1,7 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for p in ['p_CEYHT8P45J','p_T2SEB0BAET','p_EGTGJGD3PY']:
+ d=x[x.prototype_id==p]
+ print('\n',p, len(d))
+ if len(d):
+  print(d.groupby(['instrument','kind','measured_by']).agg(n=('value','count'),mean=('value','mean')).to_string())

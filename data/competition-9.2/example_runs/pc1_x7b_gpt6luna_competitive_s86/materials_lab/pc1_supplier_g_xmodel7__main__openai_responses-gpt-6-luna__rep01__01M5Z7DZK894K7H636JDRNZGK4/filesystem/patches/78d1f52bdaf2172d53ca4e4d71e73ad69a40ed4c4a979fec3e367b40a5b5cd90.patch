@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++r=pd.read_csv('records.csv')
++for pr in ['QP-9259','QP-5174','QP-9980','QP-8807','QP-7092','QP-9273','QP-6879']:
++ x=r[r.project==pr]
++ print(pr,x.prototype_id.nunique(), x.groupby(['kind','test']).size().to_dict())
++ print(x.drop_duplicates('prototype_id')[['prototype_id','measured_by','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].to_string(index=False,max_rows=15))

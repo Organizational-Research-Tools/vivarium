@@ -1,0 +1,43 @@
+--- 
++++ 
+@@ -0,0 +1,40 @@
++
++import pandas as pd
++
++df = pd.read_csv('records.csv')
++modules = ['base_sheet', 'secondary_sheet', 'binder_system', 'additive_package_1', 
++           'additive_package_2', 'additive_package_3', 'process_profile_1', 
++           'process_profile_2', 'process_profile_3', 'surface_treatment', 
++           'joint_system', 'conditioning_step']
++
++recipes = df[['prototype_id', 'project'] + modules].drop_duplicates('prototype_id')
++# Check the full recipe for the QP-3089 GG7 candidate
++gg7_3089 = recipes[recipes['prototype_id'] == 'p_YWF2FP1GRX']
++print("=== QP-3089 GG7 winning recipe ===")
++print(gg7_3089[modules].T.to_string())
++
++print()
++gg7_4476 = recipes[recipes['prototype_id'] == 'p_Q15KX5S0ZP']
++print("=== QP-4476 GG7 recipe (water only so far) ===")
++print(gg7_4476[modules].T.to_string())
++
++print()
++print("=== Key observations ===")
++print("QP-3089 GG7 recipe passes all 3 tests:")
++print("  Heat: 79.28°C (thresh 77.5, margin +7.1 steps)")
++print("  Strength: 7.25 kN/m (thresh 7.1, margin +5.1 steps)")
++print("  Water: 80.05% (thresh 78.0, margin +5.1 steps)")
++print()
++print("GG7 adds ~2 steps per test. Without GG7:")
++print("  Heat: ~78.8°C (margin ~5.1 steps) -> still passes")
++print("  Strength: ~7.19 kN/m (margin ~3.1 steps) -> still passes")
++print("  Water: ~79.25% (margin ~3.1 steps) -> still passes")
++print()
++print("Same recipe structure can be registered for QP-3473 (PL-95) and QP-4476 (PL-57)")
++print("to get a non-GG7 path to qualifying all 3 product lines.")
++print()
++print("Secondary sheet choices (non-GG7): YX8, 5BU, 3HW")
++print("Key interactions for secondary sheet:")
++print("  Heat: secondary_sheet x surface_treatment(ZW3) x binder_system(NN7)")
++print("  Strength: conditioning_step(YV2) x base_sheet(P2G) x secondary_sheet")
++print("  Water: NOT directly affected by secondary sheet variant (GG7's effect is flat +2 steps)")

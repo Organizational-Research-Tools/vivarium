@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x.columns.tolist())
+print(x[x.prototype_id.isin(['p_KCVBREJ1G3','p_KCVBREJ1G5','p_KCVBREJ1G9','p_AZKMFQD4VJ','p_AZKMFQD4VM'])].to_string(index=False))

@@ -1,0 +1,38 @@
+
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('records.csv')
+
+# Find all QP-4476 prototypes and their measurements
+pl57 = ['QP-6572','QP-6843','QP-4476']
+modules = ['base_sheet','secondary_sheet','binder_system','additive_package_1',
+           'additive_package_2','additive_package_3','process_profile_1',
+           'process_profile_2','process_profile_3','surface_treatment',
+           'joint_system','conditioning_step']
+
+# Get qualification results per prototype
+qual = df[df['kind']=='qualification'].copy()
+pivot = qual.groupby(['project','prototype_id','instrument'])['value'].mean().unstack('instrument')
+pivot = pivot.reset_index()
+
+# Join recipe info
+recipe_info = df.drop_duplicates('prototype_id')[['prototype_id','project'] + modules]
+pivot = pivot.merge(recipe_info, on=['prototype_id','project'], how='left')
+
+pl57_data = pivot[pivot['project'].isin(pl57)].copy()
+
+# Add pass/fail
+pl57_data['heat_pass'] = pl57_data.get('heat', pd.Series(dtype=float)) >= 77.5
+pl57_data['str_pass'] = pl57_data.get('strength', pd.Series(dtype=float)) >= 7.1
+pl57_data['water_pass'] = pl57_data.get('water', pd.Series(dtype=float)) >= 78.0
+
+print("=== PL-57 PROTOTYPES WITH QUALIFICATION DATA ===")
+cols = ['project','prototype_id','heat','strength','water','heat_pass','str_pass','water_pass',
+        'base_sheet','secondary_sheet','binder_system']
+print(pl57_data[cols].to_string())
+
+print()
+print("=== RECIPES WITH PASSING STRENGTH (>=7.1) ===")
+pass_str = pl57_data[pl57_data['str_pass']==True]
+print(pass_str[['project','prototype_id','heat','strength','water'] + modules].to_string())

@@ -1,0 +1,6 @@
+import pandas as pd
+D=pd.read_csv('records.csv')
+print(D.shape)
+for p in ['QP-6879','QP-9259']:
+ g=D[D.project==p]
+ print('\n',p,g.groupby(['prototype_id','test','kind']).agg(n=('value','size'),mean=('value','mean'),owner=('measured_by','first')).round(4).to_string())

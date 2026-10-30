@@ -1,0 +1,22 @@
+--- 
++++ 
+@@ -532,3 +532,19 @@
+ r_G1E37527K2,qualification,QP-5993,p_9T7PGPYM54,strength,edge crush resistance,3,7.27748,kN/m,lab_b,lab_f,,,,,,,,,,,,
+ r_G1E37527K3,qualification,QP-5993,p_9T7PGPYM54,strength,edge crush resistance,4,7.29386,kN/m,lab_b,lab_f,,,,,,,,,,,,
+ r_G1E37527K4,qualification,QP-5993,p_9T7PGPYM54,strength,edge crush resistance,5,7.29998,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_7FXMQCVYVK,exploratory,QP-7065,p_SB06GFM3PN,heat,seal hold temperature,,67.15400,°C,lab_d,lab_e,7FT,2YJ,QU7,8BE,42D,JN6,5JK,2FG,24J,6XS,YS6,G5Y
++r_7FXMQCVYVM,exploratory,QP-7065,p_SB06GFM3PN,heat,seal hold temperature,,67.23575,°C,lab_d,lab_e,7FT,2YJ,QU7,8BE,42D,JN6,5JK,2FG,24J,6XS,YS6,G5Y
++r_7FXMQCVYVN,exploratory,QP-7065,p_SB06GFM3PN,heat,seal hold temperature,,66.90475,°C,lab_d,lab_e,7FT,2YJ,QU7,8BE,42D,JN6,5JK,2FG,24J,6XS,YS6,G5Y
++r_7FXMQCVYVP,exploratory,QP-7065,p_SB06GFM3PN,heat,seal hold temperature,,66.93000,°C,lab_d,lab_e,7FT,2YJ,QU7,8BE,42D,JN6,5JK,2FG,24J,6XS,YS6,G5Y
++r_YHAFNQB8D1,exploratory,QP-7065,p_SB06GFM3PN,heat,seal hold temperature,,67.35100,°C,lab_d,lab_e,7FT,2YJ,QU7,8BE,42D,JN6,5JK,2FG,24J,6XS,YS6,G5Y
++r_V45CS57B0M,exploratory,QP-3777,p_E05X2XJNTY,strength,edge crush resistance,,7.24856,kN/m,lab_e,lab_b,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_V45CS57B0N,exploratory,QP-5993,p_B0A2AF9B7P,strength,edge crush resistance,,7.36013,kN/m,lab_e,lab_f,,,,,,,,,,,,
++r_V45CS57B0P,exploratory,QP-5993,p_TH5VCJB5JB,strength,edge crush resistance,,7.30625,kN/m,lab_e,lab_f,,,,,,,,,,,,
++r_FSNN886J83,exploratory,QP-5993,p_B0A2AF9B7A,strength,edge crush resistance,,6.61352,kN/m,lab_e,lab_f,,,,,,,,,,,,
++r_FSNN886J84,exploratory,QP-5993,p_B0A2AF9B7E,strength,edge crush resistance,,7.32971,kN/m,lab_e,lab_f,,,,,,,,,,,,
++r_FSNN886J85,exploratory,QP-5993,p_B0A2AF9B7J,strength,edge crush resistance,,7.24373,kN/m,lab_e,lab_f,,,,,,,,,,,,
++r_FSNN886J86,exploratory,QP-5993,p_BKVHDNHTCH,strength,edge crush resistance,,7.35947,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_FSNN886J87,exploratory,QP-5993,p_G8S61Z3JR7,strength,edge crush resistance,,7.35491,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_FSNN886J88,exploratory,QP-5993,p_G8S61Z3JRD,strength,edge crush resistance,,6.71792,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_FSNN886J89,exploratory,QP-5993,p_9T7PGPYM58,strength,edge crush resistance,,7.27388,kN/m,lab_e,lab_f,,,,,,,,,,,,
++r_AFJHVK55T4,exploratory,QP-5993,p_TH5VCJB5J7,strength,edge crush resistance,,6.62588,kN/m,lab_e,lab_f,,,,,,,,,,,,

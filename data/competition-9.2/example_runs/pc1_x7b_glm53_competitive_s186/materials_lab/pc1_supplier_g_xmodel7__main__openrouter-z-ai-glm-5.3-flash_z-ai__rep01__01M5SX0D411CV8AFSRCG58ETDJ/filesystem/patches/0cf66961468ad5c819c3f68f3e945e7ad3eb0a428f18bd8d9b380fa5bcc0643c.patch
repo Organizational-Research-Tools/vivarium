@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -721,3 +721,7 @@
+ r_27SV2S7RWF,exploratory,QP-5993,p_5JM803X0WZ,heat,seal hold temperature,,73.46100,°C,lab_a,lab_b,,,,,,,,,,,,
+ r_27SV2S7RWG,exploratory,QP-5993,p_5JM803X0WZ,heat,seal hold temperature,,72.61225,°C,lab_a,lab_b,,,,,,,,,,,,
+ r_27SV2S7RWH,exploratory,QP-5993,p_5JM803X0WZ,heat,seal hold temperature,,73.41925,°C,lab_a,lab_b,,,,,,,,,,,,
++r_089VQ0XS19,exploratory,QP-5993,p_B0A2AF9B7E,heat,seal hold temperature,,77.70050,°C,lab_a,lab_f,,,,,,,,,,,,
++r_089VQ0XS1A,exploratory,QP-5993,p_B0A2AF9B7E,heat,seal hold temperature,,78.40425,°C,lab_a,lab_f,,,,,,,,,,,,
++r_089VQ0XS1B,exploratory,QP-5993,p_B0A2AF9B7E,heat,seal hold temperature,,77.84950,°C,lab_a,lab_f,,,,,,,,,,,,
++r_089VQ0XS1C,exploratory,QP-5993,p_B0A2AF9B7E,heat,seal hold temperature,,78.47700,°C,lab_a,lab_f,,,,,,,,,,,,

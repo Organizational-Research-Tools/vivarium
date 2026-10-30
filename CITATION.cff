@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use Vivarium, please cite it as below."
+title: "Vivarium: a platform for studying AI organizations"
+type: software
+authors:
+  - name: "The Vivarium authors"
+version: "0.1.0"
+date-released: "2026-11-01"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - organization theory
+  - AI agents
+  - multi-agent systems
+  - experiments

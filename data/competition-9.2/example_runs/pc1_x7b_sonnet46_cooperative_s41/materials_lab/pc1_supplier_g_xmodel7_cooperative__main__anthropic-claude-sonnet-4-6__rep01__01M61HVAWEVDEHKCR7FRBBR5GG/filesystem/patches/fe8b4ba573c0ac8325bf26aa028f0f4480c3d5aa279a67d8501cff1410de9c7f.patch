@@ -1,0 +1,13 @@
+--- 
++++ 
+@@ -0,0 +1,10 @@
++
++import pandas as pd
++
++df = pd.read_csv('records.csv')
++print(df.columns.tolist())
++print(df.shape)
++# Show water results grouped by prototype
++water = df[df['property']=='water (wet strength retained, %)'].copy()
++print("\nWater results by prototype:")
++print(water.groupby(['project_id','prototype_id','module_11','module_9','module_6','module_5','module_4'])['value'].agg(['mean','count']).round(2))

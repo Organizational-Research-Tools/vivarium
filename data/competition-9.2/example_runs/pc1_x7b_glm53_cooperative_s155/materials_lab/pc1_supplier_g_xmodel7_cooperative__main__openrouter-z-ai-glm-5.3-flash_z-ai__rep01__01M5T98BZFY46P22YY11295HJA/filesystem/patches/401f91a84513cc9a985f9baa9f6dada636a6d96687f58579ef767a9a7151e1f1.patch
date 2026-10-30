@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -573,3 +573,9 @@
+ r_NMHQW3NMQP,exploratory,QP-1454,p_QDP2930TBG,water,wet strength retained,,79.3412,%,lab_f,lab_a,,,,,,,,,,,,
+ r_NMHQW3NMQQ,exploratory,QP-1454,p_QDP2930TBJ,water,wet strength retained,,79.3892,%,lab_f,lab_a,,,,,,,,,,,,
+ r_NMHQW3NMQR,exploratory,QP-1454,p_QDP2930TBJ,water,wet strength retained,,79.6424,%,lab_f,lab_a,,,,,,,,,,,,
++r_VC85CYV27G,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,0,78.9536,%,lab_f,lab_a,,,,,,,,,,,,
++r_VC85CYV27H,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,1,79.1016,%,lab_f,lab_a,,,,,,,,,,,,
++r_VC85CYV27J,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,2,79.2136,%,lab_f,lab_a,,,,,,,,,,,,
++r_VC85CYV27K,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,3,78.2988,%,lab_f,lab_a,,,,,,,,,,,,
++r_VC85CYV27M,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,4,78.5816,%,lab_f,lab_a,,,,,,,,,,,,
++r_VC85CYV27N,qualification,QP-1454,p_QDP2930TBJ,water,wet strength retained,5,78.9292,%,lab_f,lab_a,,,,,,,,,,,,

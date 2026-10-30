@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++sub=df[df.prototype_id.isin(['p_GRRDR2MP4W','p_QB1GR2SA65'])]
++print(df.columns.tolist())
++print(sub[['prototype_id','test','value']].head(60) if 'test' in df.columns else sub.head(60))
++# check if my records have composition for these protos
++for c in df.columns:
++    if 'module' in c.lower() or c.startswith(('m','mod')): print(c)

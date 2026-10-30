@@ -1,0 +1,8 @@
+
+import pandas as pd
+df = pd.read_csv('records.csv')
+
+targets = ['p_02A6NY9WNM', 'p_BZB62TCK50', 'p_2058095Z34']
+panels = df[(df['prototype_id'].isin(targets)) & (df['kind'] == 'qualification')]
+panels = panels[['record_id', 'project', 'prototype_id', 'instrument', 'specimen', 'measured_by']].sort_values(['prototype_id', 'instrument', 'specimen'])
+print(panels.to_string())

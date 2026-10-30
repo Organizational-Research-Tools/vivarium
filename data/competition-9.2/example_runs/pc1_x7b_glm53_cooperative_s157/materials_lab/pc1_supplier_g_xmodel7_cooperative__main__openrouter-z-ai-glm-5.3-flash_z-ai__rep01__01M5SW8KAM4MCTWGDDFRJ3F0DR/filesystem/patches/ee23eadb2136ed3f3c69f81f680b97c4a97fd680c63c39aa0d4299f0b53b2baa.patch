@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -0,0 +1,12 @@
++import pandas as pd
++df=pd.read_csv("records.csv")
++q=df[df.kind=='qualification']
++modcols=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++g=q.groupby(['prototype_id','test']).value.agg(['count','mean']).reset_index()
++panels=g[g['count']==6]
++rec=q.drop_duplicates('prototype_id').set_index('prototype_id')[modcols]
++for t in panels.test.unique():
++    s=panels[panels.test==t].sort_values('mean',ascending=False)
++    print("==",t)
++    for _,r in s.iterrows():
++        print(round(r['mean'],2), r['prototype_id'], "|", ",".join(rec.loc[r['prototype_id'],modcols].values))

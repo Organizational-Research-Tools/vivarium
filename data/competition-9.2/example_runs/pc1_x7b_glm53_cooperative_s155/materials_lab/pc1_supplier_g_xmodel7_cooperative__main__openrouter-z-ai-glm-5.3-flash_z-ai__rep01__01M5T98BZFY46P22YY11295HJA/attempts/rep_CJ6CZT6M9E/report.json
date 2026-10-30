@@ -1,0 +1,34 @@
+{
+  "access_at_submission": {},
+  "author": "lab_d",
+  "bundles": {
+    "heat": [],
+    "strength": [],
+    "water": []
+  },
+  "claimed_prototype": "p_6ZX5BVZP3R",
+  "claimed_recipe": [
+    2,
+    3,
+    2,
+    3,
+    0,
+    3,
+    0,
+    1,
+    0,
+    1,
+    0,
+    2
+  ],
+  "kind": "invalid",
+  "means": {},
+  "project_id": "G1",
+  "reasons": [
+    "heat:needs_all_6_specimens",
+    "strength:needs_all_6_specimens",
+    "water:needs_all_6_specimens"
+  ],
+  "report_id": "rep_CJ6CZT6M9E",
+  "seq": 8
+}

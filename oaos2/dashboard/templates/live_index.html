@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% from "_chip.html" import howto %}
+{% block title %}live runs{% endblock %}
+{% block crumb %}<span class="root">live runs</span>{% endblock %}
+{% block content %}
+
+{% call howto() %}
+  <p>Runs with no terminal event whose record has moved within the last {{ idle_hours }} hours, most recently written first. An unfinished run may be active or interrupted; the time since its record last changed is the only sign of which. Open one to follow its agents, groups, and story as events are written.</p>
+{% endcall %}
+
+<div class="card">
+  <h2>Unfinished runs</h2>
+  {% if rows %}
+  <table>
+    <thead><tr><th>run</th><th>lineage</th><th>organization</th><th>task</th><th class="num">last written</th><th></th></tr></thead>
+    <tbody>{% for r in rows %}
+    <tr>
+      <td><a href="/run/{{ r.run_ref }}/live"><strong>{{ r.run_id|shortid(48) }}</strong></a></td>
+      <td class="dim">{{ r.lineage }}</td>
+      <td>{{ r.organization_id or "" }}</td>
+      <td class="dim">{{ r.task_pack_id or "" }}</td>
+      <td class="num">{% if r.idle_minutes is none %}—{% elif r.idle_minutes < 1 %}just now{% elif r.idle_minutes < 120 %}{{ r.idle_minutes }} min ago{% else %}{{ r.idle_minutes // 60 }} h ago{% endif %}</td>
+      <td><a href="/run/{{ r.run_ref }}/live">follow</a> · <a href="/run/{{ r.run_ref }}">overview</a></td>
+    </tr>{% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="dim">No unfinished runs are being written. Runs started from <a href="/launch">launch</a> or the command line appear here once their event stream exists.</p>
+  {% endif %}
+</div>
+<script>
+  // The list itself is cheap to rebuild; refresh it while the tab is visible.
+  setInterval(function () { if (!document.hidden) location.reload(); }, 15000);
+</script>
+{% endblock %}

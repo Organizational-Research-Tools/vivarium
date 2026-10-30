@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.kind=='qualification']; g=q.groupby(['project','prototype_id','test']).value.mean().unstack(); counts=q.groupby(['project','prototype_id','test']).size().unstack(fill_value=0); print(g.to_string());

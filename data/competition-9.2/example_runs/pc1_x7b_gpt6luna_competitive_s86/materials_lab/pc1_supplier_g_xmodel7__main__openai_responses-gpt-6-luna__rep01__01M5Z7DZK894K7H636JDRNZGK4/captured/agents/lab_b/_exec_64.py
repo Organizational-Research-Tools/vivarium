@@ -1,0 +1,1 @@
+r=pd.read_csv('records.csv'); q=r[(r.project.isin(['QP-6879','QP-3617','QP-9273'])) & (r.kind=='qualification')]; s=q.groupby(['project','prototype_id','test']).agg(n=('value','count'),mean=('value','mean'), who=('measured_by','first')).reset_index(); print(s.to_string(index=False))

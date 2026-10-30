@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -0,0 +1,2 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); z=x[x.prototype_id.str.startswith('p_VN7')]; print(z[['prototype_id','instrument','value','measured_by']].to_string(index=False)); print(z.groupby(['prototype_id','instrument']).value.agg(['size','mean']))

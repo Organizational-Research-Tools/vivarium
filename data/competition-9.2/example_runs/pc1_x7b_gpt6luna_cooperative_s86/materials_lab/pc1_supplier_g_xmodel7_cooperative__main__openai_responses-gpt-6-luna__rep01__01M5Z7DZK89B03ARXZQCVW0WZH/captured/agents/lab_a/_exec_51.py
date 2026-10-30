@@ -1,0 +1,9 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.kind.eq('qualification')].groupby(['project','prototype_id','test']).agg(n=('value','count'),mean=('value','mean')).reset_index(); p=q.pivot_table(index=['project','prototype_id'],columns='test',values=['n','mean'],aggfunc='first')
+# Candidates with any 2 tests passing C, list all project target PL53/76
+th={'seal hold temperature':78.625,'edge crush resistance':7.235,'wet strength retained':79.8}
+for (proj,pid),r in p.iterrows():
+ if proj not in ['QP-9259','QP-5174','QP-9980','QP-6879','QP-3617','QP-9273']:continue
+ n=sum(r.get(('n',t),0)==6 for t in th)
+ passed=[t for t in th if r.get(('n',t),0)==6 and r.get(('mean',t),0)>=th[t]]
+ if n>=1: print(proj,pid,'panels',n,'pass',passed, 'means',[round(float(r.get(('mean',t),float('nan'))),4) if r.get(('n',t),0)==6 else None for t in th])

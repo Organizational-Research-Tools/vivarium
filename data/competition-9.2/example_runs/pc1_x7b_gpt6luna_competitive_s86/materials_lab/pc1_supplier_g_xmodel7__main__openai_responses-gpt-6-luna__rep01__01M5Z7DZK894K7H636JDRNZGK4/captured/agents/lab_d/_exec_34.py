@@ -1,0 +1,18 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+k=x.dropna(subset=mods)
+# panels only, per prototype + instrument
+k=k[k.kind=='qualification']
+p=k.groupby(['project','prototype_id','instrument']).value.agg(['mean','count']).reset_index()
+r=k.drop_duplicates('prototype_id').set_index('prototype_id')[mods]
+p=p.join(r,on='prototype_id')
+for proj in p.project.unique():
+ q=p[p.project==proj]; wide=q.pivot(index='prototype_id',columns='instrument',values='mean')
+ if set(['heat','strength','water']).issubset(wide.columns):
+  full=wide.dropna(subset=['heat','strength','water'])
+  if len(full):
+   out=full.copy(); out['weak']=pd.concat([(out.heat-78.25)/.25,(out.strength-7.19)/.03,(out.water-79.2)/.4],axis=1).min(axis=1)
+   out=out.join(r)
+   print('\n',proj, len(out)); print(out.sort_values('weak',ascending=False).head(20).round(4).to_string())
+print('\nQP3617 panels')
+q=p[p.project=='QP-3617'];print(q[['prototype_id','instrument','mean','count']].to_string(index=False))

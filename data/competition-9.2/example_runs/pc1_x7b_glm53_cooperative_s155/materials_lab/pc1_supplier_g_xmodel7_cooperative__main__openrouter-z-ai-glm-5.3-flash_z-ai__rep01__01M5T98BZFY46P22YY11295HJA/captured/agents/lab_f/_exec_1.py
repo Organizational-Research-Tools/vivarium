@@ -1,0 +1,7 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+mods=["base_sheet","secondary_sheet","binder_system","additive_package_1","additive_package_2","additive_package_3","process_profile_1","process_profile_2","process_profile_3","surface_treatment","joint_system","conditioning_step"]
+cols=["prototype_id"]+mods+["test","value"]
+sub=df[df.value.notna()]
+for pid in ["p_CYH337VYW0","p_42YBQVEJ09","p_K0W1521D5Z","p_K9H37C0QVA"]:
+    print(pid); print(sub[sub.prototype_id==pid][cols].drop_duplicates(subset=mods).to_string())

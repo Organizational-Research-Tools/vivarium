@@ -1,0 +1,22 @@
+--- 
++++ 
+@@ -0,0 +1,19 @@
++
++import pandas as pd
++import numpy as np
++
++df = pd.read_csv('records.csv')
++
++# Print all column names
++print("Columns:", df.columns.tolist())
++print()
++
++# Look at all PL-57 prototypes with their full recipes
++pl57_protos = df[df['project'].isin(['QP-6572','QP-6843','QP-4476'])].drop_duplicates('prototype_id')
++module_cols = [c for c in df.columns if c not in ['record_id','prototype_id','project','instrument','kind','value','specimen']]
++print("Module columns:", module_cols)
++print()
++print("PL-57 prototype full recipes:")
++for _, row in pl57_protos.iterrows():
++    recipe = ' / '.join([str(row.get(c,'?')) for c in module_cols if c in row.index])
++    print(f"  {row['prototype_id']}: {row['project']} = {recipe}")

@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd
++p=pd.read_csv('records.csv'); mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++q=p[p.kind.eq('qualification')].groupby(['project','prototype_id','test']).value.mean().unstack('test').reset_index(); meta=p.groupby('prototype_id').first()[mods]; q=q.join(meta,on='prototype_id')
++for pr,g in q.groupby('project'):
++ if pr not in ['QP-3617','QP-6879']:
++  print('\n',pr)
++  for _,r in g.iterrows(): print(r.prototype_id, 'means',*[round(r.get(t,float('nan')),3) for t in ['seal hold temperature','edge crush resistance','wet strength retained']], 'recipe',','.join(str(r[m]) for m in mods))

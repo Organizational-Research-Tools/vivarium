@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -0,0 +1,9 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++# find heat>=78.6 readings with strength>=7.19 on same prototype, and water>=79.6, any project
++g = df[df.kind=='exploratory'].groupby(['prototype_id','test']).agg(n=('value','size'),mn=('value','mean'),mx=('value','max')).reset_index()
++piv = g.pivot_table(index='prototype_id', columns='test', values='mn')
++piv.columns=['heat','strength','water']
++sel = piv[(piv.heat>=78.5)&(piv.strength>=7.18)]
++print(sel.to_string())
++print(df[(df.prototype_id.isin(sel.index))&(df.kind=='exploratory')].groupby('prototype_id')[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].first().apply(lambda r:'|'.join('?' if pd.isna(v) else str(v) for v in r),axis=1).to_string())

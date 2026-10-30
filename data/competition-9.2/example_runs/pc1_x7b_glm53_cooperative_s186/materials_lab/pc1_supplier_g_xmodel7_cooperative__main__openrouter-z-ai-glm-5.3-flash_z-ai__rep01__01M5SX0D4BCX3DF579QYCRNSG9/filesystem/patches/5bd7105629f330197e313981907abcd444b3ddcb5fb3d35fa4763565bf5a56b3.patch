@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -543,3 +543,15 @@
+ r_BK522F504N,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,5,78.11975,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_QACV84FPEC,exploratory,QP-4757,p_16A568VVKX,water,wet strength retained,,70.3648,%,lab_f,lab_d,,,,,,,,,,,,
+ r_QACV84FPED,exploratory,QP-4757,p_16A568VVKX,water,wet strength retained,,70.2908,%,lab_f,lab_d,,,,,,,,,,,,
++r_7FD931F649,exploratory,QP-1992,p_P5WACE5V1N,water,wet strength retained,,70.2096,%,lab_f,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,5JK,9AH,F2C,83B,3Y7,V8F
++r_7FD931F64A,exploratory,QP-1992,p_P5WACE5V1N,water,wet strength retained,,70.8944,%,lab_f,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,5JK,9AH,F2C,83B,3Y7,V8F
++r_7FD931F64B,exploratory,QP-1992,p_P5WACE5V1Q,water,wet strength retained,,80.2784,%,lab_f,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,2FG,F2C,83B,3Y7,V8F
++r_7FD931F64C,exploratory,QP-1992,p_P5WACE5V1Q,water,wet strength retained,,79.9712,%,lab_f,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,2FG,F2C,83B,3Y7,V8F
++r_7FD931F64D,exploratory,QP-1992,p_P5WACE5V1S,water,wet strength retained,,79.1024,%,lab_f,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,4AL,F2C,83B,3Y7,V8F
++r_7FD931F64E,exploratory,QP-1992,p_P5WACE5V1S,water,wet strength retained,,79.2608,%,lab_f,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,4AL,F2C,83B,3Y7,V8F
++r_K5HH9XHRVF,exploratory,QP-1992,p_P5WACE5V1V,water,wet strength retained,,70.2700,%,lab_f,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,84H,3Y7,V8F
++r_K5HH9XHRVG,exploratory,QP-1992,p_P5WACE5V1V,water,wet strength retained,,70.2280,%,lab_f,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,84H,3Y7,V8F
++r_K5HH9XHRVH,exploratory,QP-1992,p_P5WACE5V1X,water,wet strength retained,,79.3444,%,lab_f,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,YS6,V8F
++r_K5HH9XHRVJ,exploratory,QP-1992,p_P5WACE5V1X,water,wet strength retained,,79.5304,%,lab_f,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,YS6,V8F
++r_K5HH9XHRVK,exploratory,QP-1992,p_P5WACE5V1Z,water,wet strength retained,,79.7112,%,lab_f,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_K5HH9XHRVM,exploratory,QP-1992,p_P5WACE5V1Z,water,wet strength retained,,79.8784,%,lab_f,lab_f,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F

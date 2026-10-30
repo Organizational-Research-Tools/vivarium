@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -908,3 +908,15 @@
+ r_1GGVZMW3DN,qualification,QP-3777,p_Z260GPFZBZ,water,wet strength retained,3,79.3808,%,lab_f,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
+ r_1GGVZMW3DP,qualification,QP-3777,p_Z260GPFZBZ,water,wet strength retained,4,79.3844,%,lab_f,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
+ r_1GGVZMW3DQ,qualification,QP-3777,p_Z260GPFZBZ,water,wet strength retained,5,79.7280,%,lab_f,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_SVAR75VWDV,qualification,QP-3777,p_Z260GPFZBZ,strength,edge crush resistance,0,7.26557,kN/m,lab_e,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_SVAR75VWDW,qualification,QP-3777,p_Z260GPFZBZ,strength,edge crush resistance,1,7.26341,kN/m,lab_e,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_SVAR75VWDX,qualification,QP-3777,p_Z260GPFZBZ,strength,edge crush resistance,2,7.28267,kN/m,lab_e,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_SVAR75VWDY,qualification,QP-3777,p_Z260GPFZBZ,strength,edge crush resistance,3,7.27937,kN/m,lab_e,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_SVAR75VWDZ,qualification,QP-3777,p_Z260GPFZBZ,strength,edge crush resistance,4,7.22057,kN/m,lab_e,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_SVAR75VWE0,qualification,QP-3777,p_Z260GPFZBZ,strength,edge crush resistance,5,7.23629,kN/m,lab_e,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_7JE87KPTWN,qualification,QP-3777,p_Z260GPFZBZ,heat,seal hold temperature,0,78.99700,°C,lab_d,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_7JE87KPTWP,qualification,QP-3777,p_Z260GPFZBZ,heat,seal hold temperature,1,78.99100,°C,lab_d,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_7JE87KPTWQ,qualification,QP-3777,p_Z260GPFZBZ,heat,seal hold temperature,2,79.15300,°C,lab_d,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_7JE87KPTWR,qualification,QP-3777,p_Z260GPFZBZ,heat,seal hold temperature,3,79.28900,°C,lab_d,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_7JE87KPTWS,qualification,QP-3777,p_Z260GPFZBZ,heat,seal hold temperature,4,79.18150,°C,lab_d,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA
++r_7JE87KPTWT,qualification,QP-3777,p_Z260GPFZBZ,heat,seal hold temperature,5,78.78750,°C,lab_d,lab_c,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,A6U,9DA

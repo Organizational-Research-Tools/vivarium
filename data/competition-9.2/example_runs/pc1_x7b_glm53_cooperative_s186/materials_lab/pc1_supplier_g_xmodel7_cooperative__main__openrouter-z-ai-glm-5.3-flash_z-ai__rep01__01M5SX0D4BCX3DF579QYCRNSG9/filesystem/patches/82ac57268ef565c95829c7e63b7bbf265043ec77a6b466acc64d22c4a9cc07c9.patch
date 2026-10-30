@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -798,3 +798,5 @@
+ r_R65HPYVKDM,exploratory,QP-1992,p_B7S36KBTRC,heat,seal hold temperature,,78.21550,°C,lab_d,lab_d,V2W,38J,HD9,G7U,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
+ r_R65HPYVKDN,exploratory,QP-1992,p_B7S36KBTRE,heat,seal hold temperature,,78.52525,°C,lab_d,lab_d,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,6XN,A6U,V8F
+ r_R65HPYVKDP,exploratory,QP-1992,p_B7S36KBTRE,heat,seal hold temperature,,78.07700,°C,lab_d,lab_d,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,6XN,A6U,V8F
++r_4HA8HB51GY,exploratory,QP-1992,p_B7S36KBTRA,heat,seal hold temperature,,78.21825,°C,lab_d,lab_d,V2W,38J,HD9,8BE,9KR,Z2E,Q7N,9AH,F2C,83B,A6U,V8F
++r_4HA8HB51GZ,exploratory,QP-1992,p_B7S36KBTRA,heat,seal hold temperature,,78.44600,°C,lab_d,lab_d,V2W,38J,HD9,8BE,9KR,Z2E,Q7N,9AH,F2C,83B,A6U,V8F

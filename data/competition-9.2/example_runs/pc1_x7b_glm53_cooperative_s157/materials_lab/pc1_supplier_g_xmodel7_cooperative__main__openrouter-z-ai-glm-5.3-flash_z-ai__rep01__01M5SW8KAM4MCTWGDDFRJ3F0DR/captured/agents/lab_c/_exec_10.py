@@ -1,0 +1,3 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+print(df[df.record_id.str.startswith('r_BAXQ54KRJ')][['record_id','test','value','measured_by']])

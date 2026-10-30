@@ -1,0 +1,13 @@
+--- 
++++ 
+@@ -0,0 +1,10 @@
++import pandas as pd
++d = pd.read_csv('records.csv')
++# get composition columns for my 7006/4152 prototypes
++cols=['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++for p in ['QP-7006','QP-4152']:
++    s=d[(d.project==p)&(d.strength.notna() if 'strength' in d.columns else True)]
++    s=d[d.project==p]
++    print('==',p)
++    print(s[cols].drop_duplicates().to_string())
++    print(s[['prototype_id','test','value']].to_string())

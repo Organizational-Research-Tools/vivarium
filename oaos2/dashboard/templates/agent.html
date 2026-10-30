@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import help, gh %}
+{% block title %}{{ a.agent }} — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / <a href="/run/{{ run_ref }}/agents">agents</a> / {{ a.agent }}</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "agents") }}
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem"><span class="adot-{{ aslot.get(a.agent, -1) }}"></span> {{ a.agent }} <span class="dim" style="font-weight:400; font-size:14px">· {{ a.packet or "—" }}{% if a.tier %} · {{ a.tier }}{% endif %}{% if a.first_duty %} · first duty <code>{{ a.first_duty }}</code>{% endif %}{% if a.model %} · {{ a.model }}{% endif %}{% if a.retired %} · <span class="sev sev-warning">retired: {{ a.retired }}</span>{% endif %}</span></h1>
+<p style="margin:0 0 0.6rem"><a href="/run/{{ run_ref }}/story?depth=said&agent={{ a.agent }}">read {{ a.agent }}'s story →</a> · <a href="/run/{{ run_ref }}/flow?agent={{ a.agent }}&level=reasoning">every step with tools →</a></p>
+
+<div class="tiles">
+  <div class="tile"><div class="v">{{ a.calls }}</div><div class="k">model calls</div></div>
+  <div class="tile"><div class="v">{{ a.cost_usd|usd }}</div><div class="k">cost</div></div>
+  <div class="tile"><div class="v">{{ a.posts }} / {{ a.notes_out }}</div><div class="k">posts / notes sent</div></div>
+  <div class="tile"><div class="v">{{ a.posts_received }} / {{ a.notes_in }}</div><div class="k">posts / notes received</div></div>
+  <div class="tile"><div class="v">{{ a.submissions }}</div><div class="k">commitments accepted</div></div>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h2>{{ help("What reached this role", "Delivered items: posts by others, notes addressed to it, and the task's exchanges naming it. Delivery is not reading.") }}</h2>
+    <dl class="kv">
+      <dt>posts by others</dt><dd>{{ a.posts_received }}</dd>
+      <dt>notes to it</dt><dd>{{ a.notes_in }}</dd>
+      {% for k, n in a.exchanges_in.items() %}<dt>{{ k }}</dt><dd>{{ n }}</dd>{% endfor %}
+    </dl>
+    {% if inbox %}
+    <h3 style="font-size:13px; margin:0.6rem 0 0.2rem">Notes received</h3>
+    <table><tbody>{% for m in inbox %}{% set p = m.payload or {} %}
+      <tr><td class="num" style="width:4rem"><a href="/run/{{ run_ref }}/event/{{ m.event_id }}">[{{ m.sequence_number }}]</a></td><td style="width:8rem">{{ m.agent_id }}</td><td style="white-space:pre-wrap">{{ p.get("payload_text") or p.get("text") }}</td></tr>
+    {% endfor %}</tbody></table>
+    {% endif %}
+  </div>
+  <div class="card">
+    <h2>{{ help("What this role did", "Counts of recorded acts: posts, notes, exchanges it began, accepted commitments, the task's milestones by kind, and tool calls.") }}</h2>
+    <dl class="kv">
+      <dt>posts</dt><dd>{{ a.posts }}</dd>
+      <dt>notes sent</dt><dd>{{ a.notes_out }}</dd>
+      {% for k, n in a.exchanges_out.items() %}<dt>{{ k }}</dt><dd>{{ n }}</dd>{% endfor %}
+      <dt>commitments accepted</dt><dd>{{ a.submissions }}</dd>
+      {% if a.milestones %}<dt>task milestones</dt><dd>{% for k, n in a.milestones.items() %}{{ n }} {{ k }}{% if not loop.last %} · {% endif %}{% endfor %}</dd>{% endif %}
+      <dt>compactions</dt><dd>{{ a.compactions }}</dd>
+    </dl>
+    <h3 style="font-size:13px; margin:0.6rem 0 0.2rem">Tool calls</h3>
+    <table style="max-width:24rem"><tbody>{% for name, n in a.tool_calls.items() %}<tr><td><code>{{ name }}</code></td><td class="num">{{ n }}</td></tr>{% else %}<tr><td class="dim">none</td></tr>{% endfor %}</tbody></table>
+    {% if outbox %}
+    <h3 style="font-size:13px; margin:0.6rem 0 0.2rem">Notes sent</h3>
+    <table><tbody>{% for m in outbox %}{% set p = m.payload or {} %}
+      <tr><td class="num" style="width:4rem"><a href="/run/{{ run_ref }}/event/{{ m.event_id }}">[{{ m.sequence_number }}]</a></td><td style="width:8rem">→ {{ p.get("to") }}</td><td style="white-space:pre-wrap">{{ p.get("payload_text") or p.get("text") }}</td></tr>
+    {% endfor %}</tbody></table>
+    {% endif %}
+  </div>
+  <div class="card">
+    <h2>{{ help("Grants and instructions", "The board and note actions this role's tool grant names, its other tools, and its archived prompt envelope.") }}</h2>
+    <dl class="kv">
+      <dt>communication grants</dt><dd>{{ a.comm_grants|join(", ") or "—" }}</dd>
+      <dt>tools</dt><dd class="dim">{{ a.tools|join(", ") or "—" }}</dd>
+    </dl>
+    {% if envelope %}<details><summary>what it was told</summary><pre style="white-space:pre-wrap">{{ envelope.system_prompt }}</pre><hr><pre style="white-space:pre-wrap">{{ envelope.initial_user_text }}</pre></details>{% endif %}
+    {% if a.problems %}
+    <h3 style="font-size:13px; margin:0.6rem 0 0.2rem">Problems around this role ({{ a.problems|length }})</h3>
+    {% for pr in a.problems %}<p style="margin:0.15rem 0"><a href="/run/{{ run_ref }}/event/{{ pr.event_id }}">[{{ pr.seq }}]</a> <code>{{ pr.cls }}</code> {{ pr.text }}</p>{% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

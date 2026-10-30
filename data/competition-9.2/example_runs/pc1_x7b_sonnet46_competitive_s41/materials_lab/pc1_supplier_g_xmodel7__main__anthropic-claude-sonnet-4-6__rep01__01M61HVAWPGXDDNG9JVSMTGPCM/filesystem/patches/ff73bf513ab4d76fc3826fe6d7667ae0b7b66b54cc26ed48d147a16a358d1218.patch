@@ -1,0 +1,23 @@
+--- 
++++ 
+@@ -0,0 +1,20 @@
++
++# Verify margins for GG7 recipe under Rev C
++heat_mean = 78.77925
++strength_mean = 7.25351
++water_mean = 81.6468
++
++heat_base = 77.50; heat_step = 0.25
++strength_base = 7.10; strength_step = 0.03
++water_base = 78.00; water_step = 0.40
++
++heat_margin = (heat_mean - heat_base) / heat_step
++strength_margin = (strength_mean - strength_base) / strength_step
++water_margin = (water_mean - water_base) / water_step
++weakest = min(heat_margin, strength_margin, water_margin)
++
++print(f"Heat:     {heat_mean}°C → {heat_margin:.3f} steps (need 4.5) → {'PASS' if heat_margin >= 4.5 else 'FAIL'}")
++print(f"Strength: {strength_mean} kN/m → {strength_margin:.3f} steps (need 4.5) → {'PASS' if strength_margin >= 4.5 else 'FAIL'}")
++print(f"Water:    {water_mean}% → {water_margin:.3f} steps (need 4.5) → {'PASS' if water_margin >= 4.5 else 'FAIL'}")
++print(f"Weakest margin: {weakest:.3f} steps")
++print(f"SUBMITTABLE: {weakest >= 4.5}")

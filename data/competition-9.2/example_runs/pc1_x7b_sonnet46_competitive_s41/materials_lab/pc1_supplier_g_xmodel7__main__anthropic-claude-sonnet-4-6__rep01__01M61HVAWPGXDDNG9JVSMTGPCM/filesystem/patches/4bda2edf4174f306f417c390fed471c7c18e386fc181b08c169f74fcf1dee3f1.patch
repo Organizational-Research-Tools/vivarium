@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -0,0 +1,12 @@
++
++# Tally the strength panel on p_4V8BTTYF7C
++vals = [6.58592, 6.52160, 6.55451, 6.53315, 6.55496, 6.57008]
++mean = sum(vals)/len(vals)
++print(f"p_4V8BTTYF7C QP-4476 strength panel mean: {mean:.5f} kN/m  (threshold 7.1 kN/m)")
++print(f"Gap: {(7.1-mean)/0.03:.1f} steps below threshold")
++print()
++# Current standings
++print("Credits: lab_e=6, lab_d=3, lab_f=3")
++print("PL-95: qualified (QP-3473 margin 4.13, QP-7212 margin 3.94)")
++print("PL-98: qualified (QP-3089 margin 3.11)")
++print("PL-57: NOT qualified — urgent!")

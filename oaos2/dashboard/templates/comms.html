@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import help, gh, howto %}
+{% from "_swimlane.html" import swimlane %}
+{% block title %}comms — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / communication</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "comms") }}
+
+{% call howto() %}
+  <p><strong>Coordination shape.</strong> A timeline of the whole run: each agent gets a horizontal lane, time runs left to right. Ticks are that agent's actions; vertical lines are messages/handoffs crossing between agents; square marks are board posts; diamonds are formal submissions; red dots are problems. Click anything to open it.</p>
+  {% if c.retrievals %}<p><strong>Explicit reads.</strong> How often each agent called read_board or read_notes, and the highest post sequence number a board read returned. Reads are counted, not what was done with them.</p>{% endif %}
+  {% if c.conversations %}<p><strong>Conversations.</strong> Turn-taking group discussions. A volley is one speaking turn. The closure reason matters: mutual_done/agent_done = they finished; a round backstop = the discussion was cut off at the round limit without agreement.</p>{% endif %}
+  {% if c.handoffs %}<p><strong>Handoffs.</strong> One agent formally passing work to another. This is where information gets compressed: what the sender knew vs what the receiver was told. Read them to see what got left out.</p>{% endif %}
+  {% if c.messages %}<p><strong>Relayed messages.</strong> One-way messages produced by a coordination procedure or a role's declared kinds — sent and done, unlike a turn-taking conversation. Agent-initiated notes are listed above.</p>{% endif %}
+{% endcall %}
+
+{% macro who(agent) -%}<span class="adot-{{ aslot.get(agent, -1) }}"></span>{{ agent }}{%- endmacro %}
+{% macro evlink(event_id, seq) -%}<a href="/run/{{ run_ref }}/event/{{ event_id }}">[{{ seq }}]</a>{%- endmacro %}
+
+<div class="card">
+  <h2>Coordination shape — one lane per agent, time →</h2>
+  {{ swimlane(svg, run_ref) }}
+</div>
+
+{% set voluntary = c.board or c.notes or c.retrievals or c.exchanges %}
+{% if voluntary %}
+<div class="grid">
+  <div class="card">
+    <h2>{{ gh("board posts", "Board") }} ({{ c.board|length }})</h2>
+    <p class="dim" style="margin:0 0 0.4rem">Every post is delivered to the other active agents' next turn; explicit reads are recorded separately (right). Neither shows that a post was understood.</p>
+    <table>
+      <tbody>
+      {% for b in c.board %}
+        {% set p = b.payload or {} %}
+        <tr>
+          <td class="num" style="width:4rem"><a href="/run/{{ run_ref }}/event/{{ b.event_id }}">#{{ p.get("seq") }}</a></td>
+          <td style="width:9rem">{{ who(b.agent_id) }} <span class="dim">→ {{ (p.get("recipients") or [])|length }}</span></td>
+          <td style="white-space:pre-wrap">{{ p.get("text") }}</td>
+        </tr>
+      {% else %}<tr><td class="dim">no posts in this run</td></tr>{% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <h2>Explicit reads</h2>
+    <table style="max-width:36rem">
+      <thead><tr><th>agent</th><th class="num">board reads</th><th class="num">last post seen</th><th class="num">note reads</th></tr></thead>
+      <tbody>
+      {% for r in c.retrievals %}
+        <tr><td>{{ who(r.agent) }}</td><td class="num">{{ r.board_reads }}</td><td class="num">{{ "#" ~ r.last_board_seq if r.last_board_seq else "—" }}</td><td class="num">{{ r.note_reads }}</td></tr>
+      {% else %}<tr><td class="dim" colspan="4">nobody retrieved the board or notes</td></tr>{% endfor %}
+      </tbody>
+    </table>
+    <h2 style="margin-top:0.8rem">{{ gh("notes", "Notes") }} ({{ c.notes|length }})</h2>
+    {% for pr in c.note_pairs %}
+    <h3 style="font-size:13px; margin:0.5rem 0 0.2rem">{{ who(pr.pair[0]) }} ↔ {{ who(pr.pair[1]) }} <span class="dim">· {{ pr.notes|length }} note{{ "s" if pr.notes|length != 1 }}</span></h3>
+    <table>
+      <tbody>
+      {% for m in pr.notes %}
+        {% set p = m.payload or {} %}
+        <tr>
+          <td class="num" style="width:4rem">{{ evlink(m.event_id, m.sequence_number) }}</td>
+          <td style="width:11rem">{{ who(m.agent_id) }} → {{ p.get("to") }}</td>
+          <td style="white-space:pre-wrap">{{ p.get("payload_text") or p.get("text") or "" }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}<p class="dim">no notes in this run</p>{% endfor %}
+  </div>
+</div>
+
+{% if c.exchanges %}
+<div class="card">
+  <h2>{{ gh("exchanges", "Exchanges") }} ({{ c.exchanges|length }})</h2>
+  <p class="dim" style="margin:0 0 0.4rem">Directed actions the task registers as exchanges: who acted toward whom, and when. The content of each is on its event page.</p>
+  <details{% if c.exchanges|length <= 40 %} open{% endif %}><summary>{{ c.exchanges|length }} exchange{{ "s" if c.exchanges|length != 1 }}</summary>
+  <div style="overflow-x:auto"><table>
+    <thead><tr><th class="num">seq</th><th>from</th><th>to</th><th>kind</th><th>what</th></tr></thead>
+    <tbody>
+    {% for x in c.exchanges %}
+      <tr><td class="num">{{ evlink(x.event_id, x.seq) }}</td><td>{{ who(x["from"]) }}</td><td>{{ x.to|join(", ") }}</td><td><code>{{ x.kind }}</code></td><td>{{ x.text }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+  </details>
+</div>
+{% endif %}
+
+{% if c.threads %}
+<div class="card">
+  <h2>{{ gh("exchange threads", "Exchange threads") }} ({{ c.threads|length }}) <span class="dim" style="font-weight:400">· derived reading aid</span></h2>
+  <p class="dim" style="margin:0 0 0.4rem">Each post or note, then what every addressee did toward the author afterwards, up to and including that addressee's next message back. Proximity in the record is the only rule: the grouping does not establish that a later act answered the request. Code what each request and reply is with the control under each thread.</p>
+  {% for t in c.threads %}
+  <details style="margin:0.3rem 0; padding-bottom:0.3rem; border-bottom:1px solid var(--hairline)">
+    <summary>{{ evlink(t.request.event_id, t.request.seq) }} {{ who(t.author) }} <span class="dim">{{ t.request.kind }} → {{ t.request.to|join(", ") if t.request.kind == "note" else "board" }}</span>
+      — {{ t.request.text|truncate(140) }}
+      <span class="dim">· {{ t.n_replies }} act{{ "s" if t.n_replies != 1 }} toward the author</span></summary>
+    <div style="white-space:pre-wrap; margin:0.3rem 0 0.4rem 1rem">{{ t.request.text }}</div>
+    {% for r in t.replies %}
+    <div style="margin-left:1rem">
+      <strong>{{ who(r.by) }}</strong>
+      {% if r["items"] %}
+      <table><tbody>
+        {% for i in r["items"] %}
+        <tr><td class="num" style="width:4rem">{{ evlink(i.event_id, i.seq) }}</td><td style="width:9rem"><code>{{ i.kind }}</code></td><td style="white-space:pre-wrap">{{ i.text }}</td></tr>
+        {% endfor %}
+        {% if r.more %}<tr><td colspan="3" class="dim">… and {{ r.more }} more before the next message back</td></tr>{% endif %}
+      </tbody></table>
+      {% else %}<span class="dim">— nothing recorded toward the author before the run ended or the record was cut</span>{% endif %}
+    </div>
+    {% endfor %}
+    {% if schemas %}
+    <form method="post" action="/run/{{ run_ref }}/annotate" class="filters" style="margin:0.4rem 0 0 1rem">
+      <select name="label_schema_ref">
+        {% for s in schemas %}<option value="{{ s.label_schema_ref }}">{{ s.namespace }} / {{ s.label_schema_ref }} ({{ s.arity }})</option>{% endfor %}
+      </select>
+      <input type="text" name="event_ids" value="{{ t.event_ids|join(',') }}" size="40" title="comma-separated event ids: the request and the acts you are coding">
+      <input type="text" name="note" placeholder="note…" size="40">
+      <input type="hidden" name="back" value="/run/{{ run_ref }}/comms">
+      <button type="submit">Code it</button>
+    </form>
+    {% endif %}
+  </details>
+  {% endfor %}
+</div>
+{% endif %}
+{% endif %}
+
+{% if c.conversations %}
+<div class="card">
+  <h2>Conversations ({{ c.conversations|length }})</h2>
+  {% for conv in c.conversations %}
+  <h3 style="font-size:13px; margin:0.6rem 0 0.2rem"><code>{{ conv.id }}</code>
+    <span class="dim">participants: {{ conv.participants|join(", ") or "?" }}
+    {% if conv.closed %} · closed: {{ (conv.closed.payload or {}).get("reason") or "?" }}
+      <a href="/run/{{ run_ref }}/event/{{ conv.closed.event_id }}">◇</a>
+    {% else %} · <span class="flag">never closed</span>{% endif %}</span></h3>
+  <table>
+    <tbody>
+    {% for v in conv.volleys %}
+      <tr>
+        <td class="num" style="width:4rem"><a href="/run/{{ run_ref }}/event/{{ v.event_id }}">{{ v.sequence_number }}</a></td>
+        {% set speaker = (v.payload or {}).get("speaker") or v.agent_id %}
+        <td style="width:9rem">{{ who(speaker) }} <span class="dim">r{{ (v.payload or {}).get("round_index") }}</span></td>
+        <td style="white-space:pre-wrap">{{ (v.payload or {}).get("text") }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="grid">
+  <div class="card">
+    <h2>Handoffs ({{ c.handoffs|length }})</h2>
+    {% for h in c.handoffs %}
+    {% set p = h.payload or {} %}
+    <div style="margin:0.4rem 0; padding-bottom:0.4rem; border-bottom:1px solid var(--hairline)">
+      <a href="/run/{{ run_ref }}/event/{{ h.event_id }}">[{{ h.sequence_number }}]</a>
+      <strong>{{ p.get("from_agent") }} → {{ p.get("to_agent") }}</strong> <span class="dim">({{ p.get("kind") }})</span>
+      {% if p.get("payload_text") %}<div style="white-space:pre-wrap">{{ p.get("payload_text") }}</div>{% endif %}
+      {% if p.get("handoff_delta") %}<div class="dim">delta: narration {{ (p.handoff_delta or {}).get("narration_ref") or "—" }} ↔ formalized {{ (p.handoff_delta or {}).get("formalized_payload_ref") or "—" }}</div>{% endif %}
+    </div>
+    {% else %}<p class="dim">none</p>{% endfor %}
+  </div>
+
+  <div class="card">
+    <h2>Relayed messages ({{ c.messages|length }})</h2>
+    <table>
+      <tbody>
+      {% for m in c.messages %}
+        {% set p = m.payload or {} %}
+        <tr>
+          <td class="num"><a href="/run/{{ run_ref }}/event/{{ m.event_id }}">{{ m.sequence_number }}</a></td>
+          <td>{{ m.agent_id or "·" }} → {{ p.get("to") or "?" }}</td>
+          <td><code>{{ p.get("kind") }}</code></td>
+          <td style="white-space:pre-wrap">{{ p.get("payload_text") or p.get("text") or "" }}</td>
+        </tr>
+      {% else %}<tr><td class="dim">none</td></tr>{% endfor %}
+      </tbody>
+    </table>
+    {% if c.chats %}
+    <h2 style="margin-top:0.8rem">{{ help("Chat threads", "Question-and-answer requests: the asker pauses until answered, declined, ignored, or timed out") }} ({{ c.chats|length }})</h2>
+    {% for t in c.chats %}
+    <p style="margin:0.2rem 0">
+      <a href="/run/{{ run_ref }}/event/{{ t.request.event_id }}">[{{ t.request.sequence_number }}]</a>
+      {{ t.request.agent_id }} asks: {{ (t.request.payload or {}).get("text") or "" }}
+      {% for res in t.resolutions %} → <a href="/run/{{ run_ref }}/event/{{ res.event_id }}"><code>{{ res.event_class }}</code></a>{% endfor %}
+      {% if not t.resolutions %}<span class="flag">unresolved</span>{% endif %}
+    </p>
+    {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+{% endblock %}

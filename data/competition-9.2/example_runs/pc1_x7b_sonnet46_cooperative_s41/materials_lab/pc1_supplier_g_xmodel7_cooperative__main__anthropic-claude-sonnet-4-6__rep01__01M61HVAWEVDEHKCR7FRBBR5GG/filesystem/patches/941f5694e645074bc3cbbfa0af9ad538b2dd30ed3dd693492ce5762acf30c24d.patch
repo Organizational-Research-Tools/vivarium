@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -431,3 +431,27 @@
+ r_MWFJN8KDNH,qualification,QP-4476,p_21XPKFZDE5,water,wet strength retained,3,60.9440,%,lab_c,lab_e,DA9,3HW,8BB,57T,S2J,4PE,WB3,C5Q,X9F,ZW3,DL8,3N8
+ r_MWFJN8KDNJ,qualification,QP-4476,p_21XPKFZDE5,water,wet strength retained,4,60.9928,%,lab_c,lab_e,DA9,3HW,8BB,57T,S2J,4PE,WB3,C5Q,X9F,ZW3,DL8,3N8
+ r_MWFJN8KDNK,qualification,QP-4476,p_21XPKFZDE5,water,wet strength retained,5,61.0976,%,lab_c,lab_e,DA9,3HW,8BB,57T,S2J,4PE,WB3,C5Q,X9F,ZW3,DL8,3N8
++r_FB2JMGW20Z,qualification,QP-3473,p_J6CX8AHRR3,water,wet strength retained,0,80.7108,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_FB2JMGW210,qualification,QP-3473,p_J6CX8AHRR3,water,wet strength retained,1,80.9312,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_FB2JMGW211,qualification,QP-3473,p_J6CX8AHRR3,water,wet strength retained,2,79.9608,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_FB2JMGW212,qualification,QP-3473,p_J6CX8AHRR3,water,wet strength retained,3,79.9120,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_FB2JMGW213,qualification,QP-3473,p_J6CX8AHRR3,water,wet strength retained,4,80.2668,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_FB2JMGW214,qualification,QP-3473,p_J6CX8AHRR3,water,wet strength retained,5,80.4672,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGD,qualification,QP-7212,p_S87ZV5EJH5,water,wet strength retained,0,80.5836,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGE,qualification,QP-7212,p_S87ZV5EJH5,water,wet strength retained,1,80.6044,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGF,qualification,QP-7212,p_S87ZV5EJH5,water,wet strength retained,2,79.7764,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGG,qualification,QP-7212,p_S87ZV5EJH5,water,wet strength retained,3,79.9716,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGH,qualification,QP-7212,p_S87ZV5EJH5,water,wet strength retained,4,80.2832,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGJ,qualification,QP-7212,p_S87ZV5EJH5,water,wet strength retained,5,80.4968,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGK,qualification,QP-3089,p_YD1Q0XW9SA,water,wet strength retained,0,80.0980,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGM,qualification,QP-3089,p_YD1Q0XW9SA,water,wet strength retained,1,80.3312,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGN,qualification,QP-3089,p_YD1Q0XW9SA,water,wet strength retained,2,79.4652,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGP,qualification,QP-3089,p_YD1Q0XW9SA,water,wet strength retained,3,79.5516,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGQ,qualification,QP-3089,p_YD1Q0XW9SA,water,wet strength retained,4,79.7272,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGR,qualification,QP-3089,p_YD1Q0XW9SA,water,wet strength retained,5,80.0156,%,lab_f,lab_e,P2G,3HW,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGS,qualification,QP-4476,p_21XPKFZDE5,water,wet strength retained,0,61.3544,%,lab_f,lab_e,DA9,3HW,8BB,57T,S2J,4PE,WB3,C5Q,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGT,qualification,QP-4476,p_21XPKFZDE5,water,wet strength retained,1,61.6392,%,lab_f,lab_e,DA9,3HW,8BB,57T,S2J,4PE,WB3,C5Q,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGV,qualification,QP-4476,p_21XPKFZDE5,water,wet strength retained,2,60.7588,%,lab_f,lab_e,DA9,3HW,8BB,57T,S2J,4PE,WB3,C5Q,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGW,qualification,QP-4476,p_21XPKFZDE5,water,wet strength retained,3,60.8088,%,lab_f,lab_e,DA9,3HW,8BB,57T,S2J,4PE,WB3,C5Q,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGX,qualification,QP-4476,p_21XPKFZDE5,water,wet strength retained,4,61.0516,%,lab_f,lab_e,DA9,3HW,8BB,57T,S2J,4PE,WB3,C5Q,X9F,ZW3,DL8,3N8
++r_MSG8QCHWGY,qualification,QP-4476,p_21XPKFZDE5,water,wet strength retained,5,61.3184,%,lab_f,lab_e,DA9,3HW,8BB,57T,S2J,4PE,WB3,C5Q,X9F,ZW3,DL8,3N8

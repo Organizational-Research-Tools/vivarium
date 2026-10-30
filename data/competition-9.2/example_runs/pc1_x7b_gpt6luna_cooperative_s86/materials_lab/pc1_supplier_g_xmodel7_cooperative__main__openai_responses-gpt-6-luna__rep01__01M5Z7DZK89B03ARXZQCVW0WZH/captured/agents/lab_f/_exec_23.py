@@ -1,0 +1,7 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); d=x[x.project.eq('QP-9273')]
+mod=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+for pid,g in d.groupby('prototype_id'):
+ props={t: round(g[g.test.eq(t)].value.mean(),4) for t in ['heat','strength','water'] if (g.test==t).any()}
+ row=g.iloc[0]
+ print(pid,props, [row[m] for m in mod])

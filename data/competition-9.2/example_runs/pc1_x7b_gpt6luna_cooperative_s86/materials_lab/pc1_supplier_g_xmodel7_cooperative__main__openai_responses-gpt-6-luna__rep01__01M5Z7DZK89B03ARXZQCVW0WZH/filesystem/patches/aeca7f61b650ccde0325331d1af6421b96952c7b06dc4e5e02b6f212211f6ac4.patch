@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -677,3 +677,15 @@
+ r_C840N58ZYD,qualification,QP-9273,p_Q7PBN356CK,water,wet strength retained,3,58.7576,%,lab_f,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
+ r_C840N58ZYE,qualification,QP-9273,p_Q7PBN356CK,water,wet strength retained,4,58.8544,%,lab_f,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
+ r_C840N58ZYF,qualification,QP-9273,p_Q7PBN356CK,water,wet strength retained,5,58.8076,%,lab_f,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_85BZK1T3HE,qualification,QP-9273,p_Q7PBN356CH,heat,seal hold temperature,0,70.44725,°C,lab_d,lab_f,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_85BZK1T3HF,qualification,QP-9273,p_Q7PBN356CH,heat,seal hold temperature,1,70.44375,°C,lab_d,lab_f,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_85BZK1T3HG,qualification,QP-9273,p_Q7PBN356CH,heat,seal hold temperature,2,70.65425,°C,lab_d,lab_f,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_85BZK1T3HH,qualification,QP-9273,p_Q7PBN356CH,heat,seal hold temperature,3,70.68150,°C,lab_d,lab_f,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_85BZK1T3HJ,qualification,QP-9273,p_Q7PBN356CH,heat,seal hold temperature,4,70.90475,°C,lab_d,lab_f,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_85BZK1T3HK,qualification,QP-9273,p_Q7PBN356CH,heat,seal hold temperature,5,70.51800,°C,lab_d,lab_f,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_85BZK1T3HM,qualification,QP-9273,p_Q7PBN356CK,heat,seal hold temperature,0,71.28750,°C,lab_d,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_85BZK1T3HN,qualification,QP-9273,p_Q7PBN356CK,heat,seal hold temperature,1,71.29150,°C,lab_d,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_85BZK1T3HP,qualification,QP-9273,p_Q7PBN356CK,heat,seal hold temperature,2,71.34550,°C,lab_d,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_85BZK1T3HQ,qualification,QP-9273,p_Q7PBN356CK,heat,seal hold temperature,3,71.32575,°C,lab_d,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_85BZK1T3HR,qualification,QP-9273,p_Q7PBN356CK,heat,seal hold temperature,4,71.39500,°C,lab_d,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_9C38AWBGHW,qualification,QP-9273,p_Q7PBN356CK,heat,seal hold temperature,5,71.21925,°C,lab_d,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2

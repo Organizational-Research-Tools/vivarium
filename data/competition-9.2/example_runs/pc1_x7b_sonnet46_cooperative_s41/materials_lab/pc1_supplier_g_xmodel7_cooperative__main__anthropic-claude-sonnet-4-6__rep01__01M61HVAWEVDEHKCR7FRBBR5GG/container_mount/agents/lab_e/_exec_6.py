@@ -1,0 +1,30 @@
+
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv("records.csv")
+modules = ['base_sheet','secondary_sheet','binder_system','additive_package_1',
+           'additive_package_2','additive_package_3','process_profile_1','process_profile_2',
+           'process_profile_3','surface_treatment','joint_system','conditioning_step']
+
+recipe_info = df[['prototype_id','project'] + modules].drop_duplicates('prototype_id')
+
+# Print ALL known recipes with their prototype IDs
+print("=== ALL KNOWN RECIPES ===")
+for _, row in recipe_info.iterrows():
+    pid = row['prototype_id']
+    proj = row['project']
+    recipe = [row[m] for m in modules]
+    gg7 = ' [GG7]' if row['secondary_sheet']=='GG7' else ''
+    print(f"{pid} ({proj}){gg7}: {recipe}")
+
+print()
+# Focus on GG7 recipes - what are their full recipes?
+gg7_recipes = recipe_info[recipe_info['secondary_sheet']=='GG7']
+print("=== GG7 RECIPES (key to adapt) ===")
+for _, row in gg7_recipes.iterrows():
+    pid = row['prototype_id']
+    proj = row['project']
+    print(f"\n{pid} ({proj}):")
+    for m in modules:
+        print(f"  {m:25s}: {row[m]}")

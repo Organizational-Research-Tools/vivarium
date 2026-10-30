@@ -1,0 +1,29 @@
+
+import numpy as np
+
+results = {
+    'p_02A6NY9WNM': {
+        'project': 'QP-3473', 'pl': 'PL-95',
+        'values': [78.71625, 78.75400, 78.90950, 79.18900, 78.50625, 78.62000],
+        'records': ['r_BRPN576FYK','r_BRPN576FYM','r_BRPN576FYN','r_BRPN576FYP','r_BRPN576FYQ','r_BRPN576FYR']
+    },
+    'p_BZB62TCK50': {
+        'project': 'QP-7212', 'pl': 'PL-95',
+        'values': [78.70450, 78.69625, 78.92500, 78.99500, 78.59700, 78.49975],
+        'records': ['r_BRPN576FYS','r_BRPN576FYT','r_BRPN576FYV','r_BRPN576FYW','r_BRPN576FYX','r_BRPN576FYY']
+    },
+    'p_2058095Z34': {
+        'project': 'QP-3089', 'pl': 'PL-98',
+        'values': [79.32675, 79.22525, 79.45375, 79.48850, 78.96350, 79.20875],
+        'records': ['r_1T50P0BFR6','r_1T50P0BFR7','r_1T50P0BFR8','r_1T50P0BFR9','r_1T50P0BFRA','r_1T50P0BFRB']
+    }
+}
+
+thresh = 77.5
+print("=== LAB_E HEAT PANEL RESULTS — ALL PASS ===")
+for pid, d in results.items():
+    mean = np.mean(d['values'])
+    margin = (mean - thresh) / 0.25
+    print(f"{d['project']} ({d['pl']}) {pid}: mean={mean:.3f}°C  margin={margin:+.1f} steps  ✓ PASS")
+    print(f"  Records: {', '.join(d['records'])}")
+    print()

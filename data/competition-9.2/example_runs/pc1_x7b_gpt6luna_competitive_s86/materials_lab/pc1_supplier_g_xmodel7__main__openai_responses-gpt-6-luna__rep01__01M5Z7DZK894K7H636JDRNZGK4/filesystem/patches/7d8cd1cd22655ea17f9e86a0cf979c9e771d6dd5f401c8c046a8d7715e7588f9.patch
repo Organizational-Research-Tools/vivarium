@@ -1,0 +1,19 @@
+--- 
++++ 
+@@ -1,4 +1,16 @@
+ record_id,kind,project,prototype_id,instrument,test,specimen,value,unit,measured_by,requester,base_sheet,secondary_sheet,binder_system,additive_package_1,additive_package_2,additive_package_3,process_profile_1,process_profile_2,process_profile_3,surface_treatment,joint_system,conditioning_step
++r_ZFC88N6EWY,qualification,QP-9259,p_ZFC88N6EWW,heat,seal hold temperature,0,79.15325,°C,lab_d,lab_d,,,,,,,,,,,,
++r_ZFC88N6EWZ,qualification,QP-9259,p_ZFC88N6EWW,heat,seal hold temperature,1,79.16600,°C,lab_d,lab_d,,,,,,,,,,,,
++r_ZFC88N6EX0,qualification,QP-9259,p_ZFC88N6EWW,heat,seal hold temperature,2,78.93350,°C,lab_d,lab_d,,,,,,,,,,,,
++r_ZFC88N6EX1,qualification,QP-9259,p_ZFC88N6EWW,heat,seal hold temperature,3,78.77850,°C,lab_d,lab_d,,,,,,,,,,,,
++r_ZFC88N6EX2,qualification,QP-9259,p_ZFC88N6EWW,heat,seal hold temperature,4,79.06775,°C,lab_d,lab_d,,,,,,,,,,,,
++r_ZFC88N6EX3,qualification,QP-9259,p_ZFC88N6EWW,heat,seal hold temperature,5,79.08850,°C,lab_d,lab_d,,,,,,,,,,,,
++r_YZTF8EKPRN,qualification,QP-9259,p_ZFC88N6EX7,strength,edge crush resistance,0,7.32458,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_YZTF8EKPRP,qualification,QP-9259,p_ZFC88N6EX7,strength,edge crush resistance,1,7.24925,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_YZTF8EKPRQ,qualification,QP-9259,p_ZFC88N6EX7,strength,edge crush resistance,2,7.28165,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_YZTF8EKPRR,qualification,QP-9259,p_ZFC88N6EX7,strength,edge crush resistance,3,7.27445,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_YZTF8EKPRS,qualification,QP-9259,p_ZFC88N6EX7,strength,edge crush resistance,4,7.28612,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_YZTF8EKPRT,qualification,QP-9259,p_ZFC88N6EX7,strength,edge crush resistance,5,7.28645,kN/m,lab_e,lab_e,,,,,,,,,,,,
+ r_YZTF8EKPS0,qualification,QP-9259,p_YZTF8EKPRY,water,wet strength retained,0,79.6508,%,lab_f,lab_f,H8Z,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
+ r_YZTF8EKPS1,qualification,QP-9259,p_YZTF8EKPRY,water,wet strength retained,1,79.6608,%,lab_f,lab_f,H8Z,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
+ r_YZTF8EKPS2,qualification,QP-9259,p_YZTF8EKPRY,water,wet strength retained,2,79.8968,%,lab_f,lab_f,H8Z,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2

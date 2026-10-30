@@ -1,0 +1,13 @@
+--- 
++++ 
+@@ -0,0 +1,10 @@
++import pandas as pd, numpy as np
++df=pd.read_csv('records.csv')
++mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++known=df.dropna(subset=['base_sheet'])
++g=known.groupby(list(mods)+['test'])['value'].agg(['mean','count']).reset_index()
++# per test target
++tgt={'heat':77.5,'strength':7.1,'water':78.0}
++# print all recipe-level results for panels
++p=known[known.kind=='qualification'].groupby(list(mods)+['test'])['value'].mean().unstack()
++print(p.to_string())

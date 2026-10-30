@@ -1,0 +1,5 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+print(df.columns.tolist())
+s = df[df.prototype_id=='p_E05X2XJNTY']
+print(s.head(3).to_string())

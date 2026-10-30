@@ -1,0 +1,7 @@
+import pandas as pd
+r=pd.read_csv('records.csv'); g=r[r.kind.eq('qualification')].groupby(['project','prototype_id','test']).value.mean().unstack('test'); t={'seal hold temperature':78.625,'edge crush resistance':7.235,'wet strength retained':79.8};
+for proj in r.project.unique():
+ x=g.loc[proj] if proj in g.index.get_level_values(0) else pd.DataFrame()
+ for pid,row in x.iterrows():
+  if row.get('seal hold temperature',-999)>=78.625 and row.get('edge crush resistance',-999)>=7.235:
+   print('H&S PASS',proj,pid,'H',row['seal hold temperature'],'S',row['edge crush resistance'],'W',row.get('wet strength retained'))

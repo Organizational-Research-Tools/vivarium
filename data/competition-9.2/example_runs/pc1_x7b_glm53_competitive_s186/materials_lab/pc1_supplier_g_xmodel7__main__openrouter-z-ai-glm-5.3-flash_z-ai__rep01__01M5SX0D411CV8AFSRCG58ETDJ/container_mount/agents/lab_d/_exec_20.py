@@ -1,0 +1,8 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+sub=df[df.prototype_id=='p_7ZJ7YBKK9E']
+print(sub[['record_id','kind','test','value','measured_by']].to_string())
+print(sub.iloc[0][['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']])
+# heat screens on any Z2E recipe
+z=df[(df.additive_package_3=='Z2E')&(df.test=='seal hold temperature')]
+print(z[['prototype_id','value','measured_by']].to_string())

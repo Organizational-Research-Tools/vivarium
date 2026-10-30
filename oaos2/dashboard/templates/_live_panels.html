@@ -1,0 +1,114 @@
+{# The live page's panels, re-rendered on every poll. No <details> here: a panel is
+   replaced whole, and an expanded item must not close under the reader. #}
+{% macro quiet(s) -%}{% if s is not defined or s is none %}—{% elif s < 90 %}{{ s }} s{% elif s < 5400 %}{{ (s // 60) }} min{% else %}{{ (s // 3600) }} h{% endif %}{%- endmacro %}
+
+<div class="tiles">
+  <div class="tile"><div class="v">{% if s.ended %}ended{% else %}running{% endif %}</div><div class="k">{% if s.ended %}{{ s.ended }}{% else %}no terminal event yet{% endif %}</div></div>
+  <div class="tile"><div class="v">{{ s.n_events }}</div><div class="k">events read · last [{{ s.last_seq }}]</div></div>
+  <div class="tile"><div class="v">{{ quiet(s.written_s) }}</div><div class="k">since the record last changed</div></div>
+  <div class="tile"><div class="v">{{ s.cost_usd|usd }}</div><div class="k">recorded cost so far</div></div>
+</div>
+
+{% set st = s.standings %}
+{% if st %}
+<div class="card" style="margin-bottom:0.75rem">
+  {% if st.kind == "progress" %}
+  <h2>Progress <span class="dim" style="font-weight:400">· collective credits against the threshold</span></h2>
+  {% if st.program %}
+  {% set pct = st.program.pct %}
+  {% else %}
+  {% set pct = (100 * st.credits / (st.threshold or 1)) if st.threshold else 0 %}
+  {% endif %}
+  <div style="background:color-mix(in srgb, var(--ink) 8%, transparent); border-radius:4px; height:18px; max-width:40rem">
+    <div style="width:{{ [pct, 100]|min }}%; height:18px; border-radius:4px; background:var(--good)"></div></div>
+  {% if st.program %}
+  <p style="margin:0.3rem 0">{{ st.program.qualified }} of {{ st.program.target }} {{ st.program.label }}; {{ st.credits }} credit{{ "s" if st.credits != 1 }}</p>
+  {% else %}
+  <p style="margin:0.3rem 0">{{ st.credits }} of {{ st.threshold if st.threshold else "?" }} credits{% if not st.threshold %} <span class="dim">(threshold not recorded by this run)</span>{% endif %}</p>
+  {% endif %}
+  {% else %}
+  <h2>Standings <span class="dim" style="font-weight:400">· credits per lab{% if st.floor %}; succeeding now: the top {{ st.cap }} with at least {{ st.floor }}{% endif %}</span></h2>
+  {% if st.program %}
+  <p style="margin:0.2rem 0 0.4rem">Program: {{ st.program.qualified }} of {{ st.program.target }} {{ st.program.label }}{% if st.program.qualified < st.program.target %} <span class="dim">(below its target nobody succeeds)</span>{% endif %}</p>
+  <div style="background:color-mix(in srgb, var(--ink) 8%, transparent); border-radius:4px; height:10px; max-width:44rem; margin-bottom:0.6rem">
+    <div style="width:{{ st.program.pct }}%; height:10px; border-radius:4px; background:var(--good)"></div></div>
+  {% endif %}
+  <table style="max-width:44rem; width:100%">
+    <tbody>{% for r in st.rows %}
+    <tr>
+      <td style="white-space:nowrap; width:5.5rem"><span class="adot-{{ aslot.get(r.lab, -1) }}"></span><strong{% if r.dismissed %} style="text-decoration:line-through"{% endif %}>{{ r.lab }}</strong></td>
+      <td style="position:relative">
+        <div style="background:color-mix(in srgb, var(--ink) 6%, transparent); height:14px; border-radius:3px; position:relative">
+          <div style="width:{{ r.pct }}%; height:14px; border-radius:3px; background:{{ 'var(--good)' if r.succeeding else 'var(--ink-muted)' }}"></div>
+          {% if st.floor_pct %}<div title="floor" style="position:absolute; left:{{ st.floor_pct }}%; top:-2px; bottom:-2px; border-left:2px dashed var(--serious)"></div>{% endif %}
+        </div></td>
+      <td class="num" style="white-space:nowrap; width:6rem">{{ r.credits }}{% if r.succeeding %} ✓{% endif %}{% if r.dismissed %} dismissed{% endif %}</td>
+    </tr>{% endfor %}</tbody>
+  </table>
+  {% if not st.floor %}<p class="dim" style="font-size:12px">This run did not record its success rule; credits only.</p>{% endif %}
+  {% if st.from_note %}<p class="dim" style="font-size:12px">Rule read from the labs' start note; this run predates recording it with the staging event.</p>{% endif %}
+  {% endif %}
+  {% if st.reports %}
+  <p class="dim" style="margin:0.5rem 0 0.2rem; font-size:12px">credit events</p>
+  <ul style="margin:0; padding-left:1.1rem; font-size:13px">{% for r in st.reports %}
+    <li{% if r.voided or r.lapsed %} style="text-decoration:line-through"{% endif %}>minute {{ r.minute }} · {{ r.project }} · filed by {{ r.submitter }}{% if r.margin is not none %} · margin {{ '%.2f' % r.margin }}{% endif %} · {% for lab, n in r.credits.items() %}{{ lab }} {{ n }}{{ ", " if not loop.last }}{% endfor %}{% if r.voided %} · voided{% if r.voided_minute is defined %} at minute {{ r.voided_minute }}{% endif %}{% endif %}{% if r.lapsed %} · {{ "withdrawn by a specification revision" if r.lapse_reason == "specification" else "displaced" }} at minute {{ r.lapsed_minute }}{% endif %}{% if r.restored %} · restored at the end{% endif %}</li>{% endfor %}
+  </ul>
+  {% else %}<p class="dim" style="margin:0.4rem 0 0">No credit yet.</p>{% endif %}
+</div>
+{% endif %}
+
+<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(540px, 1fr))">
+<div class="card">
+  <h2>Where each agent is{% if s.group_by != "none" %} <span class="dim" style="font-weight:400">· grouped by {{ {"packet": "role packet", "attention": "attention scope"}[s.group_by] }}</span>{% endif %}</h2>
+  <p class="dim" style="margin:0 0 0.3rem; font-size:12px">per agent: state · last act · time since its last event · posts · notes · task milestones · commitments accepted · cost</p>
+  {% for g in s.groups %}
+  {% if s.groups|length > 1 %}<div class="lgroup"><a href="?view={{ view }}&group={{ g.name }}&depth={{ depth }}&by={{ by }}" class="{{ 'on' if g.name == group }}">{{ g.name }}</a> <span class="dim">· {{ g.agents|length }}</span></div>{% endif %}
+  <div style="overflow-x:auto"><table class="lagents">
+    <tbody>{% for a in g.agents %}
+    <tr>
+      <td style="white-space:nowrap"><span class="adot-{{ aslot.get(a.agent, -1) }}"></span><a href="/run/{{ run_ref }}/agent/{{ a.agent }}"><strong>{{ a.agent }}</strong></a></td>
+      <td style="white-space:nowrap"><span class="lstate lstate-{{ a.state|replace(' ', '-') }}">{{ a.state }}</span></td>
+      <td class="dim">{{ a.doing }}{% if a.last_seq is not none %} <span title="last position">[{{ a.last_seq }}]</span>{% endif %}</td>
+      <td class="num dim" style="white-space:nowrap" title="since this agent's last recorded event">{{ quiet(a.quiet_s) }}</td>
+      <td class="num" style="white-space:nowrap" title="posts · notes · the task's milestones (a filed report, a concern) · commitments accepted">{{ a.posts }} · {{ a.notes }} · {{ a.milestones }} · {{ a.submissions }}</td>
+      <td class="num dim">{{ a.cost_usd|usd }}</td>
+      {% if a.problems %}<td class="sev-serious" title="recorded problems">{{ a.problems }}⚠</td>{% else %}<td></td>{% endif %}
+    </tr>{% endfor %}
+    </tbody>
+  </table></div>
+  {% endfor %}
+  {% if s.groups|length > 1 and s.flows %}
+  <h2 style="margin-top:0.8rem">Between groups</h2>
+  <table style="max-width:30rem">
+    <thead><tr><th>from</th><th>to</th><th class="num">directed acts</th></tr></thead>
+    <tbody>{% for f in s.flows %}<tr class="{{ 'dim' if f.within }}"><td>{{ f.from }}</td><td>{{ f.to }}{% if f.within %} <span class="dim">(within)</span>{% endif %}</td><td class="num">{{ f.n }}</td></tr>{% endfor %}</tbody>
+  </table>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>Who dealt with whom <span class="dim" style="font-weight:400">· highlighted: an act in the last {{ recent }} positions</span></h2>
+  {% set g = s.graph %}
+  {% if g.edges %}
+  <svg viewBox="0 0 {{ g.w }} {{ g.h }}" style="width:100%; max-width:{{ g.w }}px; display:block" role="img" aria-label="interaction graph">
+    <defs>
+      <marker id="larr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--ink-2)"/></marker>
+      <marker id="larr-hot" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--serious)"/></marker>
+    </defs>
+    {% for e in g.edges %}
+    <path d="{{ e.path }}" fill="none" stroke="{{ 'var(--serious)' if e.recent else 'var(--ink-2)' }}" stroke-width="{{ e.width }}" stroke-opacity="{{ 0.9 if e.recent else 0.4 }}" marker-end="url(#{{ 'larr-hot' if e.recent else 'larr' }})"><title>{{ e.from }} → {{ e.to }}: {{ e.label }}</title></path>
+    <text x="{{ e.lx }}" y="{{ e.ly }}" font-size="10" fill="var(--ink-2)" text-anchor="middle">{{ e.total }}</text>
+    {% endfor %}
+    {% for n in g.nodes %}
+    {% if n.board %}
+    <rect x="{{ n.x - 26 }}" y="{{ n.y - 12 }}" width="52" height="24" rx="4" fill="var(--s5)" fill-opacity="0.15" stroke="var(--s5)"/>
+    <text x="{{ n.x }}" y="{{ n.y + 4 }}" font-size="11" text-anchor="middle" fill="var(--ink)">board</text>
+    {% else %}
+    <circle cx="{{ n.x }}" cy="{{ n.y }}" r="18" class="adot-{{ aslot.get(n.id, -1) }}" fill="currentColor" fill-opacity="0.9" stroke="var(--hairline)"/>
+    <text x="{{ n.x }}" y="{{ n.y + 30 }}" font-size="11" text-anchor="middle" fill="var(--ink)">{{ n.id }}</text>
+    {% endif %}
+    {% endfor %}
+  </svg>
+  {% else %}<p class="dim">No directed acts between roles recorded yet.</p>{% endif %}
+</div>
+</div>

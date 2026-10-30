@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -687,3 +687,15 @@
+ r_BTWWGW205G,exploratory,QP-5993,p_5JM803X0WV,heat,seal hold temperature,,77.78000,°C,lab_d,lab_b,,,,,,,,,,,,
+ r_BTWWGW205H,exploratory,QP-5993,p_5JM803X0WX,heat,seal hold temperature,,78.45250,°C,lab_d,lab_b,,,,,,,,,,,,
+ r_3MT0YBCB7P,exploratory,QP-5993,p_5JM803X0WZ,heat,seal hold temperature,,72.79775,°C,lab_d,lab_b,,,,,,,,,,,,
++r_8YR9VE85AX,qualification,QP-5993,p_5JM803X0WS,water,wet strength retained,0,78.9216,%,lab_f,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,7UX,G5Y
++r_8YR9VE85AY,qualification,QP-5993,p_5JM803X0WS,water,wet strength retained,1,79.0016,%,lab_f,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,7UX,G5Y
++r_8YR9VE85AZ,qualification,QP-5993,p_5JM803X0WS,water,wet strength retained,2,79.3724,%,lab_f,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,7UX,G5Y
++r_8YR9VE85B0,qualification,QP-5993,p_5JM803X0WS,water,wet strength retained,3,79.6948,%,lab_f,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,7UX,G5Y
++r_8YR9VE85B1,qualification,QP-5993,p_5JM803X0WS,water,wet strength retained,4,79.6172,%,lab_f,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,7UX,G5Y
++r_8YR9VE85B2,qualification,QP-5993,p_5JM803X0WS,water,wet strength retained,5,79.8764,%,lab_f,lab_b,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,7UX,G5Y
++r_BVMEWZDAFP,qualification,QP-3777,p_E05X2XJNTY,heat,seal hold temperature,0,78.81025,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_BVMEWZDAFQ,qualification,QP-3777,p_E05X2XJNTY,heat,seal hold temperature,1,78.83575,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_BVMEWZDAFR,qualification,QP-3777,p_E05X2XJNTY,heat,seal hold temperature,2,78.97775,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_BVMEWZDAFS,qualification,QP-3777,p_E05X2XJNTY,heat,seal hold temperature,3,79.05400,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_BVMEWZDAFT,qualification,QP-3777,p_E05X2XJNTY,heat,seal hold temperature,4,79.09775,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA
++r_BVMEWZDAFV,qualification,QP-3777,p_E05X2XJNTY,heat,seal hold temperature,5,79.30250,°C,lab_d,lab_b,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,A6U,9DA

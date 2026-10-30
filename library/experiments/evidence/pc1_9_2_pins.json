@@ -1,0 +1,44 @@
+{
+ "study": "pc1 9.2",
+ "plan": "library/experiments/plans/pc1_main_9_2_plan.yaml",
+ "plan_sha256_without_launch_fields": "4ff8ceac289da08cc16ca4dc8ac20410fdb676829e16dd3206eb9702df731e4d",
+ "launch_fields": [
+  "frozen_commit",
+  "budget_usd"
+ ],
+ "after_freeze_allowed": [
+  "docs/HISTORY.md",
+  "library/experiments/evidence/pc1_9_2_dispositions.json",
+  "library/experiments/plans/pc1_main_9_2_plan.yaml"
+ ],
+ "files": {
+  "docs/experiments/pc1_prereg_9_2.md": "0ab8a4c997edcab69d7e3a547bbc58e9a1f2482cdee8c12c998adff73c6b8c80",
+  "library/organizations/pc1_supplier_g_xmodel7.yaml": "6a067e53bbabda1f878402abafe22c0b32904bc0ccfa454bb60841ead9bb0eeb",
+  "library/organizations/pc1_supplier_g_xmodel7_cooperative.yaml": "596a16f8b9d3c0e3299c675b0f897bf6a4c4b9996df30800c80d3abc351400ca",
+  "scripts/pc1_readout_x7b.py": "d125f57652eee9df74e141a4cc9ef33182fe0ab8609bc151747f3eaec9371e48",
+  "scripts/pc1_readout.py": "25cbd9dffca50187e95e140dd43d0d987d4c5ba39fdde589069a59a52d8c15b2",
+  "scripts/run_pc1_batch.py": "0885a7680e03fea3bcb9c5c7a012bf2e9266aaa06666fd7d7a1f7bdbadcdf2bc",
+  "scripts/run_materials_lab_smoke.py": "d53c32a23dbd8f287791ecb599f2416c510c0b414793244b8c70fa45bc03c65c",
+  "scripts/pc1_seed_screen.py": "a1cf6ce21bec0f4f524b4fc3ce9853cef7072559db6f5e4f1a0ad761ca4844bf",
+  "library/experiments/evidence/pc1_seed_screen_x7b_20261019.json": "0df45bac55f719e9bc3eff82ce3f914b077000b24f2f6180c8597415426e4dde",
+  "scripts/pc1_coding_screen.py": "5d4cbf9d4b6703aa1845a1c4c83c66c1089c7f02507190c0d8ee5688078ed9c0",
+  "scripts/pc1_process_paths.py": "da6e3da5a0a9e299b848a2d4516d6c972007d9d302d16b18821b7625857e08f9",
+  "scripts/pc1_second_coding_sample.py": "23fc7dfc1fc9d9c6d25a8bd7cb886471e1785411033ca4b56d239ba01d2f70d8",
+  "scripts/pc1_light_code.py": "b495da48bfcfa3523f3580aac581f1e5ac115edc6d4ecdc4f3bcc52b8bb3ed96",
+  "scripts/pc1_pins.py": "42812827a41d59cceb268a0a13f826d4613c56138d1100f403915cd81035ed33",
+  "docs/experiments/pc1_light_coding_brief.md": "4c96861a4cb6989aae85402179d14386a7ce5b955927a81b3085581f2427e9e8",
+  "docs/experiments/pc1_process_coding.md": "9dd8567f4303995a2ba40ad831205a8e29654ec6185c2472fee7ab875404f657",
+  "docs/experiments/pc1_codebook.md": "f3cd2db6da67b0dbc1d8eecd1d2da8231d8f4b9b46b245d7369a13ed6ce7d95c",
+  "oaos2/tasks/plugins/materials_lab/derived.py": "48861e2b5fda6b0eb6943be0cac0e93837ed0bebfe607a1e610b1301341bc329",
+  "oaos2/tasks/plugins/materials_lab/pool.py": "a60fa6d0867ab3460164957a1bb7e150ec4cb8db6e4f8197a21112eeb4b1478e",
+  "oaos2/experiments/runner.py": "2dfdecb61bf6219aae1572c39d6d67efc2604a3cee1f155050b2568c19331f8a",
+  "oaos2/experiments/stop.py": "1aefa363eee3d5f21a11e9ab05ade70acc18860174a3434461a04b0e3a324b12",
+  "oaos2/models/gateway.py": "7a245b33fe028a41b0ec9268badb59c1eff5ecae26504cdf808e92fa7240e7ff",
+  "oaos2/models/adapters/openai.py": "5a05e51a65a19d5113079bddce51c88c7777a6ff081205b4467d4391625ce585",
+  "oaos2/models/adapters/openai_compatible.py": "c00f5ed6dac7d35f59151f0eaccda179327ea217ea36fa5a18bb3f5a9e64bd3e",
+  "oaos2/models/adapters/openai_responses.py": "9967ba707d8f10563a41482ec891d4ff2930f854f0667a41ce477effce2bc660",
+  "oaos2/models/adapters/anthropic.py": "e19615d98187d4f9bb3ef62a28d3619e5791d29deba02cf3dd7b85d5c28cb986",
+  "oaos2/pricing/table.py": "99ff426809241ee4f11e2e3cafbdc117841c153f808278678db8c81f8ee904ed",
+  "oaos2/pricing/ledger.py": "bdf3c1b021a784180e51e7c0a4a7c7b875e8cdc9712c71d62310bf793df108ea"
+ }
+}

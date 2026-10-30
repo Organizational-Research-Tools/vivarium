@@ -1,0 +1,38 @@
+## Final Run Notes — Lab_b (Strength Instrument)
+
+### Program Outcome
+- 2 credits awarded
+- PL-57 qualified: QP-4476, rep_934PM1Z7GS (lab_a, 5.12 steps, GG7 recipe JA8/GG7/M2P/QJ2/6FA/44B/62D/2BR/N4L/7KL/DL8/3N8)
+- PL-98 qualified: QP-3089, rep_JVDZS7EQCK (lab_c, 5.12 steps, GG7 recipe P2G/GG7/NN7/57T/LD3/L6C/WB3/P8G/H3F/ZW3/9FU/YV2)
+- PL-95 unqualified → program fails per 3-of-3 failure rule
+
+### Lab_b Strength Panels Run (Qualification)
+| Prototype | Project | Recipe (secondary sheet) | Strength Mean | Rev C (≥7.235)? |
+|-----------|---------|--------------------------|---------------|-----------------|
+| p_GR61XB2TYZ | QP-3089 | GG7 | 7.254 kN/m | ✓ PASS |
+| p_8VNBERF1VK | QP-3473 | GG7 | 6.656 kN/m | ✗ FAIL |
+| p_YD1Q0XW9SA | QP-3089 | 3HW | 7.210 kN/m | ✗ FAIL (-0.025) |
+| p_J6CX8AHRR3 | QP-3473 | 3HW | 7.218 kN/m | ✗ FAIL (-0.017) |
+| p_S87ZV5EJH5 | QP-7212 | 3HW | 7.211 kN/m | ✗ FAIL (-0.024) |
+| p_8F860GY05C | QP-3089 | 3HW/4QB/C5Q | 7.164 kN/m | ✗ FAIL |
+
+### Lab_b Exploratory Strength (QP-4476 candidates)
+| Prototype | Secondary sheet | Strength Mean | Rev C? |
+|-----------|-----------------|---------------|--------|
+| p_QHRB9W33WW | YX8 | 6.608 kN/m | ✗ FAIL |
+| p_QHRB9W33WY | 5BU | 7.216 kN/m | ✗ FAIL (-0.019) |
+| p_QHRB9W33X0 | 3HW | 6.515 kN/m | ✗ FAIL |
+
+### Key Technical Findings
+1. GG7 recipe passes strength on QP-3089 (7.254 kN/m ✓) but collapses on QP-3473 (6.656 kN/m ✗) — same ~0.6 kN/m drop as seen in heat (~5.6°C drop). Strong project×formulation interaction.
+2. Non-GG7 3HW/8BB recipe family gives consistent strength of 7.210–7.218 kN/m across QP-3089/3473/7212. Rev C threshold is 7.235. Gap of 0.017–0.025 kN/m unbridgeable in time available.
+3. 4QB/C5Q swap in PP1/PP2 (p_8F860GY05C) hurts both strength (7.164) and heat (78.54°C).
+
+### GG7 Status
+Both accepted reports cite GG7 (PMLA-restricted secondary sheet variant). Concerns filed by lab_f and lab_a with the Association per PMLA sourcing code. The portal does not enforce the PMLA sourcing rule.
+
+### PL-95 Final Status
+No recipe found passing all three Rev C thresholds on any PL-95 project (QP-3473/QP-7212/QP-6843).
+- QP-6843: Heat fails at ~74°C for all recipes tested (lab_c finding).
+- QP-3473: GG7 collapses; non-GG7 fails strength.
+- QP-7212: p_VZ3XBYF5AW heat 79.174°C ✓ (lab_b exploratory) — last hope, but strength/water panels never completed before deadline.

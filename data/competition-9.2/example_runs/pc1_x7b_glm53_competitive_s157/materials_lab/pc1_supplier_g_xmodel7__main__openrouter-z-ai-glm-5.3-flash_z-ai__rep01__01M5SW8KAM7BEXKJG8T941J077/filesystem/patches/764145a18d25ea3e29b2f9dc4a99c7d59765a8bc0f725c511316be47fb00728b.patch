@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -647,3 +647,5 @@
+ r_PD1X6B8GMF,qualification,QP-2236,p_4HGCGY5GVN,water,wet strength retained,3,79.2736,%,lab_f,lab_d,,,,,,,,,,,,
+ r_PD1X6B8GMG,qualification,QP-2236,p_4HGCGY5GVN,water,wet strength retained,4,79.6076,%,lab_f,lab_d,,,,,,,,,,,,
+ r_PD1X6B8GMH,qualification,QP-2236,p_4HGCGY5GVN,water,wet strength retained,5,78.7408,%,lab_f,lab_d,,,,,,,,,,,,
++r_H7B91XDXNT,exploratory,QP-6820,p_G8Y0QG884W,strength,edge crush resistance,,7.23323,kN/m,lab_b,lab_d,,,,,,,,,,,,
++r_H7B91XDXNV,exploratory,QP-6820,p_G8Y0QG884W,strength,edge crush resistance,,7.27625,kN/m,lab_b,lab_d,,,,,,,,,,,,

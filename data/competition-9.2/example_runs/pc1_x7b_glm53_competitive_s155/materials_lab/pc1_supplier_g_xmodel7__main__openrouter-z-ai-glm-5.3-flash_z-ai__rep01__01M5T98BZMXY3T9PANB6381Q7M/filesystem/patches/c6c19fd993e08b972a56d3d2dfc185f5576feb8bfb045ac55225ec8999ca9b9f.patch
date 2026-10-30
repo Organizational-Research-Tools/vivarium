@@ -1,0 +1,20 @@
+--- 
++++ 
+@@ -951,3 +951,17 @@
+ r_DKMKMKKV67,qualification,QP-6489,p_FVCMZJEWBX,heat,seal hold temperature,3,78.38375,°C,lab_d,lab_c,H6K,3XR,3VE,M5L,NS4,S3J,3RB,F9B,49R,N4Y,PK9,UZ4
+ r_DKMKMKKV68,qualification,QP-6489,p_FVCMZJEWBX,heat,seal hold temperature,4,78.47950,°C,lab_d,lab_c,H6K,3XR,3VE,M5L,NS4,S3J,3RB,F9B,49R,N4Y,PK9,UZ4
+ r_DKMKMKKV69,qualification,QP-6489,p_FVCMZJEWBX,heat,seal hold temperature,5,78.49025,°C,lab_d,lab_c,H6K,3XR,3VE,M5L,NS4,S3J,3RB,F9B,49R,N4Y,PK9,UZ4
++r_WTJNMSJCQS,qualification,QP-3589,p_BG303V50YM,water,wet strength retained,0,79.3512,%,lab_f,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_WTJNMSJCQT,qualification,QP-3589,p_BG303V50YM,water,wet strength retained,1,79.7804,%,lab_f,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_WTJNMSJCQV,qualification,QP-3589,p_BG303V50YM,water,wet strength retained,2,79.7856,%,lab_f,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_WTJNMSJCQW,qualification,QP-3589,p_BG303V50YM,water,wet strength retained,3,78.9268,%,lab_f,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_WTJNMSJCQX,qualification,QP-3589,p_BG303V50YM,water,wet strength retained,4,79.1676,%,lab_f,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_WTJNMSJCQY,qualification,QP-3589,p_BG303V50YM,water,wet strength retained,5,79.4436,%,lab_f,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_BBKRW44PKB,exploratory,QP-3589,p_BG303V50YM,heat,seal hold temperature,,78.99450,°C,lab_a,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_BBKRW44PKC,exploratory,QP-3589,p_BG303V50YM,heat,seal hold temperature,,78.86325,°C,lab_a,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_XV71J5Z5KC,qualification,QP-3589,p_BG303V50YM,strength,edge crush resistance,0,7.15658,kN/m,lab_b,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_XV71J5Z5KD,qualification,QP-3589,p_BG303V50YM,strength,edge crush resistance,1,7.17269,kN/m,lab_b,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_XV71J5Z5KE,qualification,QP-3589,p_BG303V50YM,strength,edge crush resistance,2,7.19705,kN/m,lab_b,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_XV71J5Z5KF,qualification,QP-3589,p_BG303V50YM,strength,edge crush resistance,3,7.22033,kN/m,lab_b,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_XV71J5Z5KG,qualification,QP-3589,p_BG303V50YM,strength,edge crush resistance,4,7.14551,kN/m,lab_b,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4
++r_XV71J5Z5KH,qualification,QP-3589,p_BG303V50YM,strength,edge crush resistance,5,7.16198,kN/m,lab_b,lab_c,3F4,HJ7,3VE,V5J,4C2,S3J,3RB,F9B,37J,RQ5,8K5,UZ4

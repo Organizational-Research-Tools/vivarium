@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% from "_chip.html" import gh, help, howto %}
+{% block title %}launch — oaos2{% endblock %}
+{% block content %}
+
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem">Launch a run</h1>
+{% call howto() %}
+  <p>Launches spawn the platform's own CLI scripts — the dashboard adds no second runner and inherits every runner gate (confirmatory prereg, per-cell caps, isolation teardown).</p>
+  <p><strong>Offline.</strong> A full rehearsal without spending money: a scripted stand-in plays the model, no containers run, but the real structure, rules, and graders all execute. Use it to check an experiment is wired correctly.</p>
+  <p><strong>Live.</strong> The real thing: paid model calls, agents working in isolated containers. Costs money — hence the typed confirmation and required per-cell spending cap.</p>
+{% endcall %}
+
+{% if msg %}<div class="banner">{{ msg }}</div>{% endif %}
+
+<div class="grid">
+  <div class="card">
+    <h2>Offline (free)</h2>
+    <form method="post" action="/launch" class="filters">
+      <input type="hidden" name="execution" value="offline">
+      <select name="design" title="Which experiment design (from the library) to run">
+        {% for d in designs %}<option value="{{ d.name }}">{{ d.name }} ({{ d.resolved.mode }})</option>{% endfor %}
+      </select>
+      <input type="number" name="reps" placeholder="reps (design default)" min="1" style="width:9rem" title="{{ GLOSSARY['reps'] }}">
+      <button type="submit">Run offline sweep</button>
+    </form>
+    <p class="dim">Offline execution checks wiring with simulated behavior and task evaluators. It does not validate live model capacity or produce confirmatory evidence. Results are saved under this dashboard's runs root.</p>
+  </div>
+
+  <div class="card">
+    <h2>Live (PAID)</h2>
+    <form method="post" action="/launch" class="filters">
+      <input type="hidden" name="execution" value="live">
+      <select name="design" title="Which experiment design (from the library) to run">
+        {% for d in designs %}<option value="{{ d.name }}">{{ d.name }} ({{ d.resolved.mode }})</option>{% endfor %}
+      </select>
+      <input type="number" name="reps" placeholder="reps" min="1" style="width:7rem" title="{{ GLOSSARY['reps'] }}">
+      <input type="number" name="cap_usd" placeholder="cap $/cell (required)" step="0.25" min="0.25" style="width:11rem" required title="{{ GLOSSARY['cap'] }}">
+      <input type="text" name="confirm" placeholder='type "{{ confirm_phrase }}"' size="14" required>
+      <button type="submit">Launch live</button>
+    </form>
+    <p class="dim">Requires the typed phrase, an explicit per-run cap, the local Docker daemon, and provider credentials. Keep the machine awake. Confirmatory runs additionally require a FINAL preregistration and matching calibration evidence for the actual settings; an existing preregistration file is insufficient. Live runs are saved under the repository's <code>runs/</code>.</p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Historical clock-capacity calibration · <code>clock_density</code></h2>
+  <p>This specialized runner was used to calibrate clock and capacity settings for the budget-execution task. It remains available for that machinery; it is not the current study. Consult <a href="/study-records">Study records</a> for the active design and its requirements before reusing it.</p>
+  <pre>PYTHONPATH="$PWD" python scripts/run_clock_density_sweep.py --offline
+PYTHONPATH="$PWD" python scripts/run_clock_density_sweep.py --live --arms solo,vertical,lateral --cap-usd &lt;authorized-cap&gt;</pre>
+  <p class="dim" style="margin-bottom:0">The second command is paid and still requires explicit spend authorization. The dashboard does not invent clock horizons, wave spreads, schedule assets, or authorization on the researcher's behalf.</p>
+</div>
+
+<div class="card">
+  <h2>Launches</h2>
+  {% for l in launches %}
+  <details style="margin:0.4rem 0" {% if loop.first %}open{% endif %}>
+    <summary>
+      <code>{{ l.started }}</code> · {{ l.design }} · {{ l.execution }} ·
+      {% if l.alive %}<span class="sev sev-warning">running (pid {{ l.pid }})</span>{% else %}<span class="sev sev-info">not running — inspect log and run status</span>{% endif %}
+    </summary>
+    <pre style="margin-top:0.4rem">{{ l.log_tail or "(no output yet)" }}</pre>
+  </details>
+  {% else %}
+  <p class="dim">none yet</p>
+  {% endfor %}
+</div>
+
+{% endblock %}

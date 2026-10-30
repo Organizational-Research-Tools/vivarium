@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import help, gh, howto %}
+{% from "_swimlane.html" import swimlane %}
+{% block title %}organization — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / organization</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "organization") }}
+{% call howto() %}
+  <p><strong>Who dealt with whom.</strong> Each arrow counts recorded directed acts from one role to another: private notes, formal handoffs, and the task's registered exchanges such as grants and shares. Posts go to the board in the middle. Counts are what was sent or granted; nothing here shows what was read or understood.</p>
+  <p><strong>What each role may do.</strong> The organization preset as the library holds it now, checked against the run's pinned hash: communication grants (the board and note actions in each role's tool grant), the remaining tools, declared channels, ceilings, and the model. A grant is what was available, not what was used.</p>
+  <p><strong>Who was active when.</strong> One lane per agent, time left to right by event position. Bands are active turns; vertical lines are messages and handoffs; squares are posts; diamonds are submissions; red dots are problems.</p>
+  <p><strong>The treatment as declared.</strong> The run's cell labels and pins: what this run was assigned. Compare with another arm to see the settings and instructions that differ; the study design decides which differences are the treatment.</p>
+{% endcall %}
+
+{% set org = design.organization %}
+
+<div class="card">
+  <h2>Who dealt with whom <span class="dim" style="font-weight:400">· {{ design.cell_label }}</span></h2>
+  {% if g.edges %}
+  <svg viewBox="0 0 {{ g.w }} {{ g.h }}" style="width:100%; max-width:{{ g.w }}px; display:block" role="img" aria-label="interaction graph">
+    <defs><marker id="oarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--ink-2)"/></marker></defs>
+    {% for e in g.edges %}
+    <path d="{{ e.path }}" fill="none" stroke="var(--ink-2)" stroke-width="{{ e.width }}" stroke-opacity="0.55" marker-end="url(#oarr)"><title>{{ e.from }} → {{ e.to }}: {{ e.label }}</title></path>
+    <text x="{{ e.lx }}" y="{{ e.ly }}" font-size="10" fill="var(--ink-2)" text-anchor="middle">{{ e.total }}</text>
+    {% endfor %}
+    {% for n in g.nodes %}
+    {% if n.board %}
+    <rect x="{{ n.x - 26 }}" y="{{ n.y - 12 }}" width="52" height="24" rx="4" fill="var(--s5)" fill-opacity="0.15" stroke="var(--s5)"/>
+    <text x="{{ n.x }}" y="{{ n.y + 4 }}" font-size="11" text-anchor="middle" fill="var(--ink)">board</text>
+    {% else %}
+    <circle cx="{{ n.x }}" cy="{{ n.y }}" r="18" class="adot-{{ aslot.get(n.id, -1) }}" fill="currentColor" fill-opacity="0.9" stroke="var(--hairline)"/>
+    <text x="{{ n.x }}" y="{{ n.y + 30 }}" font-size="11" text-anchor="middle" fill="var(--ink)">{{ n.id }}</text>
+    {% endif %}
+    {% endfor %}
+  </svg>
+  <table style="margin-top:0.4rem; max-width:44rem">
+    <thead><tr><th>from</th><th>to</th><th class="num">acts</th><th>of which</th></tr></thead>
+    <tbody>{% for e in g.edges %}<tr><td>{{ e.from }}</td><td>{{ e.to }}</td><td class="num">{{ e.total }}</td><td class="dim">{{ e.label }}</td></tr>{% endfor %}</tbody>
+  </table>
+  {% else %}<p class="dim">No directed acts between roles were recorded in this run.</p>{% endif %}
+</div>
+
+<div class="card">
+  <h2>What each role may do
+    <span class="dim" style="font-weight:400">· {{ org.source }}{% if org.pin_ok is true %} · <span class="sev sev-info">pinned</span>{% elif org.pin_ok is false %} · <span class="sev sev-warning">changed since this run</span>{% endif %}{% if org.note %} · {{ org.note }}{% endif %}</span></h2>
+  <p class="dim" style="margin:0 0 0.4rem">scheduler {{ org.scheduler or "—" }} · mode {{ org.mode or "—" }}{% if org.contribution_visibility %} · visibility {{ org.contribution_visibility }}{% endif %}{% if org.disclosure %} · disclosure {{ org.disclosure }}{% endif %}</p>
+  {% if m.rows %}
+  <div style="overflow-x:auto"><table>
+    <thead><tr><th>role</th><th>packet</th>{% for gname in m.grants %}<th style="text-align:center">{{ gname }}</th>{% endfor %}<th>other tools</th><th>channels out</th><th class="num">calls/slot</th><th class="num">context</th><th>model</th></tr></thead>
+    <tbody>{% for r in m.rows %}
+      <tr><td><span class="adot-{{ aslot.get(r.role, -1) }}"></span>{{ r.role }}</td><td>{{ r.packet or "—" }}</td>
+        {% for c in r.cells %}<td style="text-align:center">{{ "●" if c else "·" }}</td>{% endfor %}
+        <td class="dim">{{ r.tools|join(", ") or "—" }}</td><td>{{ r.channels_out|join(", ") or "—" }}</td>
+        <td class="num">{{ r.calls or "—" }}</td><td class="num">{{ r.context or "—" }}</td><td>{{ r.model or "—" }}</td></tr>
+    {% endfor %}</tbody>
+  </table></div>
+  {% else %}<p class="dim">The preset is not available in the library; the run's saved instructions below are what remains.</p>{% endif %}
+</div>
+
+<div class="card">
+  <h2>Who was active when</h2>
+  {{ swimlane(svg, run_ref) }}
+</div>
+
+<div class="card">
+  <h2>The treatment as declared</h2>
+  <dl class="kv">
+    {% for k, v in design.cell.items() %}{% if v is not none %}<dt><code>design.cell.{{ k }}</code></dt><dd>{{ v }}</dd>{% endif %}{% endfor %}
+  </dl>
+  <p style="margin:0.4rem 0 0">
+    {% for s in siblings %}<a href="/design/diff?a={{ run_ref }}&b={{ s.run_ref }}">diff vs {{ s.organization_id }} · {{ s.run_id|shortid(24) }}</a>{% if not loop.last %} · {% endif %}{% endfor %}
+    {% if siblings %} · {% endif %}<a href="/run/{{ run_ref }}/design">recorded use, channel by channel, and the schedule classification →</a>
+  </p>
+</div>
+
+<div class="card">
+  <h2>{{ help("What each role was told", "The archived prompt envelopes: system prompt and task text, verbatim, per role") }}</h2>
+  {% for rid, env in design.envelopes.items() %}
+  <details><summary><strong>{{ rid }}</strong> <span class="dim">· {{ env.role_packet }} · {{ env.tier }} · first duty {{ env.commitment }}</span></summary>
+    <pre style="white-space:pre-wrap">{{ env.system_prompt }}</pre><hr><pre style="white-space:pre-wrap">{{ env.initial_user_text }}</pre></details>
+  {% else %}<p class="dim">no prompt envelopes archived</p>{% endfor %}
+</div>
+
+{% endblock %}

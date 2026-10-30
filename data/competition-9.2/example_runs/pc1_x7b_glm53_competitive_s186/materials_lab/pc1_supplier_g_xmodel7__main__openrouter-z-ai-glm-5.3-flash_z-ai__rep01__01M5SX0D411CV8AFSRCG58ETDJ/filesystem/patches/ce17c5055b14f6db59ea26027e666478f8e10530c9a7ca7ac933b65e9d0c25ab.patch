@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -977,3 +977,9 @@
+ r_7DSD9XD487,qualification,QP-5993,p_CY3W6TN2HW,strength,edge crush resistance,3,4.71410,kN/m,lab_b,lab_a,,,,,,,,,,,,
+ r_7DSD9XD488,qualification,QP-5993,p_CY3W6TN2HW,strength,edge crush resistance,4,4.69973,kN/m,lab_b,lab_a,,,,,,,,,,,,
+ r_7DSD9XD489,qualification,QP-5993,p_CY3W6TN2HW,strength,edge crush resistance,5,4.64210,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_QD5QPGAGHW,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,0,6.57554,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_QD5QPGAGHX,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,1,6.61418,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_QD5QPGAGHY,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,2,6.61745,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_QD5QPGAGHZ,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,3,6.62585,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_QD5QPGAGJ0,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,4,6.62816,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_0K505CMAF0,qualification,QP-5993,p_CY3W6TN2HY,strength,edge crush resistance,5,6.57854,kN/m,lab_b,lab_a,,,,,,,,,,,,

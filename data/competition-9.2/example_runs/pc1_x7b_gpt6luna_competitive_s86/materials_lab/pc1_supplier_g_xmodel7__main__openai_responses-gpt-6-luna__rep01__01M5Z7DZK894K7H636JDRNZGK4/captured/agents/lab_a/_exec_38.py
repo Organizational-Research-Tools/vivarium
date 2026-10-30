@@ -1,0 +1,7 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+q=x[x.kind=='qualification'].groupby(['project','prototype_id','test']).agg(mean=('value','mean'),n=('value','count'),by=('measured_by','first')).reset_index()
+p=q.pivot(index=['project','prototype_id'],columns='test',values='mean')
+for _,r in p.iterrows():
+  if (pd.notna(r.get('edge crush resistance')) and r['edge crush resistance']>=7.235) or (pd.notna(r.get('seal hold temperature')) and r['seal hold temperature']>=78.625):
+   print(_,r.to_dict())

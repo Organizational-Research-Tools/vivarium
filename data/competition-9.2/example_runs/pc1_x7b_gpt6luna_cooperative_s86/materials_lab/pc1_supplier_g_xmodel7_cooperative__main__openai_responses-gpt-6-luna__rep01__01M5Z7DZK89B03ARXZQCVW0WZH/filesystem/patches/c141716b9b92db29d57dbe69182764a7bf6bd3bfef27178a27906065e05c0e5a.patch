@@ -1,0 +1,31 @@
+--- 
++++ 
+@@ -791,6 +791,12 @@
+ r_85BZK1T3HQ,qualification,QP-9273,p_Q7PBN356CK,heat,seal hold temperature,3,71.32575,°C,lab_d,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
+ r_85BZK1T3HR,qualification,QP-9273,p_Q7PBN356CK,heat,seal hold temperature,4,71.39500,°C,lab_d,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
+ r_9C38AWBGHW,qualification,QP-9273,p_Q7PBN356CK,heat,seal hold temperature,5,71.21925,°C,lab_d,lab_f,QG7,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,SU2
++r_674TNXXQ40,qualification,QP-9273,p_7YFZXVGKEV,heat,seal hold temperature,0,70.22225,°C,lab_a,lab_a,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,FJ2,UX3,YX4,SU2
++r_NYJBH3X3DA,qualification,QP-9273,p_7YFZXVGKEV,heat,seal hold temperature,1,70.19150,°C,lab_a,lab_a,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,FJ2,UX3,YX4,SU2
++r_NYJBH3X3DB,qualification,QP-9273,p_7YFZXVGKEV,heat,seal hold temperature,2,69.98300,°C,lab_a,lab_a,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,FJ2,UX3,YX4,SU2
++r_NYJBH3X3DC,qualification,QP-9273,p_7YFZXVGKEV,heat,seal hold temperature,3,70.10350,°C,lab_a,lab_a,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,FJ2,UX3,YX4,SU2
++r_NYJBH3X3DD,qualification,QP-9273,p_7YFZXVGKEV,heat,seal hold temperature,4,70.19075,°C,lab_a,lab_a,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,FJ2,UX3,YX4,SU2
++r_NYJBH3X3DE,qualification,QP-9273,p_7YFZXVGKEV,heat,seal hold temperature,5,70.41300,°C,lab_a,lab_a,SQ8,RK7,VQ6,7TW,K3K,4CW,2A4,8KZ,FJ2,UX3,YX4,SU2
+ r_2MGVJZ26BM,qualification,QP-9980,p_5NQ70DDDZW,heat,seal hold temperature,0,78.33700,°C,lab_d,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,4ZD,YT2
+ r_2MGVJZ26BN,qualification,QP-9980,p_5NQ70DDDZW,heat,seal hold temperature,1,77.69025,°C,lab_d,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,4ZD,YT2
+ r_2MGVJZ26BP,qualification,QP-9980,p_5NQ70DDDZW,heat,seal hold temperature,2,77.92350,°C,lab_d,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,4ZD,YT2
+@@ -851,3 +857,15 @@
+ r_P6N8MY1XEC,qualification,QP-9980,p_5NQ70DDDZW,water,wet strength retained,3,81.1660,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,4ZD,YT2
+ r_P6N8MY1XED,qualification,QP-9980,p_5NQ70DDDZW,water,wet strength retained,4,81.2008,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,4ZD,YT2
+ r_P6N8MY1XEE,qualification,QP-9980,p_5NQ70DDDZW,water,wet strength retained,5,80.6856,%,lab_c,lab_d,SQ8,D5U,T5L,57Y,F8Y,7BD,2A4,8KZ,3XM,UX3,4ZD,YT2
++r_8ZN34W6NJM,qualification,QP-3617,p_0Z7742JGRX,strength,edge crush resistance,0,7.14779,kN/m,lab_e,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_8ZN34W6NJN,qualification,QP-3617,p_0Z7742JGRX,strength,edge crush resistance,1,7.16657,kN/m,lab_e,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_8ZN34W6NJP,qualification,QP-3617,p_0Z7742JGRX,strength,edge crush resistance,2,7.16408,kN/m,lab_e,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_8ZN34W6NJQ,qualification,QP-3617,p_0Z7742JGRX,strength,edge crush resistance,3,7.18478,kN/m,lab_e,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_8ZN34W6NJR,qualification,QP-3617,p_0Z7742JGRX,strength,edge crush resistance,4,7.17620,kN/m,lab_e,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_8ZN34W6NJS,qualification,QP-3617,p_0Z7742JGRX,strength,edge crush resistance,5,7.21166,kN/m,lab_e,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_7SQWJ5QXWD,qualification,QP-3617,p_0Z7742JGRX,heat,seal hold temperature,0,74.82075,°C,lab_d,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_7SQWJ5QXWE,qualification,QP-3617,p_0Z7742JGRX,heat,seal hold temperature,1,74.20975,°C,lab_d,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_7SQWJ5QXWF,qualification,QP-3617,p_0Z7742JGRX,heat,seal hold temperature,2,74.14725,°C,lab_d,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_7SQWJ5QXWG,qualification,QP-3617,p_0Z7742JGRX,heat,seal hold temperature,3,74.30725,°C,lab_d,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_7SQWJ5QXWH,qualification,QP-3617,p_0Z7742JGRX,heat,seal hold temperature,4,74.61775,°C,lab_d,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN
++r_7SQWJ5QXWJ,qualification,QP-3617,p_0Z7742JGRX,heat,seal hold temperature,5,74.66625,°C,lab_d,lab_e,QG7,6TX,YC8,7TW,EB7,P2E,H9M,8KZ,3XM,UX3,4ZD,6YN

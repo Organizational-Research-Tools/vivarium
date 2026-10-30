@@ -1,0 +1,6 @@
+import pandas as pd
+d = pd.read_csv('records.csv')
+qp = d[d.project=='QP-1992'] if 'project' in d.columns else d
+print(d.columns.tolist())
+sub = d[d['project_id']=='QP-1992'] if 'project_id' in d.columns else qp
+print(sub.drop_duplicates(subset=[c for c in sub.columns if c.startswith('mod') or 'recipe' in c]).to_string()[:3000])

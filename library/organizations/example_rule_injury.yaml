@@ -1,0 +1,7 @@
+# Worked example (examples/new_study/): a study of the formal rule's stated reason. It is the competition
+# study's competitive arm with one setting changed: the industry association's request names the injury reason
+# (`rule_texts.injury`) instead of the approved-list reason. Nothing else differs; compare_presets.py shows it.
+base: competition_competitive
+preset_id: example_rule_injury
+live_coordination:
+  rule_level: injury

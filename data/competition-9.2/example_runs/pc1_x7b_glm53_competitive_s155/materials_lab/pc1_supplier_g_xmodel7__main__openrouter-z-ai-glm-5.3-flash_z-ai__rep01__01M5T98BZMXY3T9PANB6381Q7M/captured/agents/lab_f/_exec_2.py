@@ -1,0 +1,8 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+w=df[(df.prototype_id=='p_N4RCVZ2GGA')&(df.kind=='qualification')&(df.test.str.contains('wet'))]
+print(w[['record_id','specimen','value','measured_by','requester']].to_string())
+print(w['value'].mean() if len(w) else 'no water panel rows in csv')
+# also all qualification rows for me
+q=df[(df.kind=='qualification')&(df.requester=='lab_f')]
+print(q.groupby(['prototype_id','instrument','test']).agg(n=('value','size'),mean=('value','mean')).to_string())

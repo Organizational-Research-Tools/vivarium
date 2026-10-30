@@ -1,0 +1,5 @@
+import pandas as pd
+r=pd.read_csv('records.csv')
+q=r[(r.project=='QP-5174') & r.prototype_id.isin(['p_JP6EPY2552','p_YQ5AFZNXV6','p_YQ5AFZNXTR','p_YQ5AFZNXTY'])]
+cols=['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+print(q[cols].drop_duplicates().to_string(index=False))

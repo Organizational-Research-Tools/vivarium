@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -323,3 +323,15 @@
+ r_TV5E3WMM3D,qualification,QP-4476,p_4V8BTTYF7C,strength,edge crush resistance,3,6.53315,kN/m,lab_e,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
+ r_TV5E3WMM3E,qualification,QP-4476,p_4V8BTTYF7C,strength,edge crush resistance,4,6.55496,kN/m,lab_e,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
+ r_TV5E3WMM3F,qualification,QP-4476,p_4V8BTTYF7C,strength,edge crush resistance,5,6.57008,kN/m,lab_e,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_JQWRM2EJ5H,qualification,QP-4476,p_4V8BTTYF7C,water,wet strength retained,0,80.4112,%,lab_f,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_JQWRM2EJ5J,qualification,QP-4476,p_4V8BTTYF7C,water,wet strength retained,1,80.3944,%,lab_f,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_JQWRM2EJ5K,qualification,QP-4476,p_4V8BTTYF7C,water,wet strength retained,2,80.6656,%,lab_f,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_JQWRM2EJ5M,qualification,QP-4476,p_4V8BTTYF7C,water,wet strength retained,3,80.7512,%,lab_f,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_JQWRM2EJ5N,qualification,QP-4476,p_4V8BTTYF7C,water,wet strength retained,4,80.9368,%,lab_f,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_JQWRM2EJ5P,qualification,QP-4476,p_4V8BTTYF7C,water,wet strength retained,5,81.0672,%,lab_f,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_M398563HWR,qualification,QP-4476,p_4V8BTTYF7C,strength,edge crush resistance,0,6.57947,kN/m,lab_b,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_M398563HWS,qualification,QP-4476,p_4V8BTTYF7C,strength,edge crush resistance,1,6.53126,kN/m,lab_b,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_M398563HWT,qualification,QP-4476,p_4V8BTTYF7C,strength,edge crush resistance,2,6.53177,kN/m,lab_b,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_M398563HWV,qualification,QP-4476,p_4V8BTTYF7C,strength,edge crush resistance,3,6.55007,kN/m,lab_b,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_M398563HWW,qualification,QP-4476,p_4V8BTTYF7C,strength,edge crush resistance,4,6.56210,kN/m,lab_b,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_M398563HWX,qualification,QP-4476,p_4V8BTTYF7C,strength,edge crush resistance,5,6.56555,kN/m,lab_b,lab_a,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8

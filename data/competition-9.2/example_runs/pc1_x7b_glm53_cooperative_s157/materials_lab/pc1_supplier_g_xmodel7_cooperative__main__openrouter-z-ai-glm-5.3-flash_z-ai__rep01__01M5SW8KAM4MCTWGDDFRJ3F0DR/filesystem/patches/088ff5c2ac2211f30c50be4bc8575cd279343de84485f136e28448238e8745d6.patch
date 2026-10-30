@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -515,3 +515,15 @@
+ r_F0ZZ54GZP1,exploratory,QP-3068,p_AX4B6KHYGJ,heat,seal hold temperature,,78.38350,°C,lab_a,lab_a,8Z2,LB3,Y9V,QE3,6DD,8P4,RF3,5UV,5J9,BX9,G7L,3DC
+ r_F0ZZ54GZP2,exploratory,QP-3068,p_AX4B6KHYGM,heat,seal hold temperature,,77.89300,°C,lab_a,lab_a,8Z2,LB3,Y9V,QE3,E8S,8P4,RF3,5UV,3CV,BX9,G7L,3DC
+ r_F0ZZ54GZP3,exploratory,QP-3068,p_AX4B6KHYGP,heat,seal hold temperature,,78.58075,°C,lab_a,lab_a,8Z2,LB3,Y9V,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,3DC
++r_8QXW66Q83W,exploratory,QP-3068,p_AX4B6KHYGP,strength,edge crush resistance,,6.72836,kN/m,lab_b,lab_a,8Z2,LB3,Y9V,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,3DC
++r_8EDPEA85Y3,exploratory,QP-3068,p_AX4B6KHYGP,strength,edge crush resistance,,6.70037,kN/m,lab_b,lab_a,8Z2,LB3,Y9V,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,3DC
++r_8EDPEA85Y4,exploratory,QP-3068,p_AX4B6KHYGJ,strength,edge crush resistance,,6.71891,kN/m,lab_b,lab_a,8Z2,LB3,Y9V,QE3,6DD,8P4,RF3,5UV,5J9,BX9,G7L,3DC
++r_8EDPEA85Y5,exploratory,QP-3068,p_AX4B6KHYGJ,strength,edge crush resistance,,6.69365,kN/m,lab_b,lab_a,8Z2,LB3,Y9V,QE3,6DD,8P4,RF3,5UV,5J9,BX9,G7L,3DC
++r_8EDPEA85Y6,exploratory,QP-3068,p_DXF185MCAP,strength,edge crush resistance,,6.67910,kN/m,lab_b,lab_a,TL4,LB3,Y9V,QE3,E8S,8P4,RF3,5UV,5J9,BX9,G7L,3DC
++r_8EDPEA85Y7,exploratory,QP-3068,p_DXF185MCAP,strength,edge crush resistance,,6.78974,kN/m,lab_b,lab_a,TL4,LB3,Y9V,QE3,E8S,8P4,RF3,5UV,5J9,BX9,G7L,3DC
++r_B7TGTPEXH7,exploratory,QP-3068,p_AX4B6KHYGP,strength,edge crush resistance,,6.64496,kN/m,lab_e,lab_a,8Z2,LB3,Y9V,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,3DC
++r_B7TGTPEXH8,exploratory,QP-3068,p_AX4B6KHYGP,strength,edge crush resistance,,6.74294,kN/m,lab_e,lab_a,8Z2,LB3,Y9V,QE3,6DD,8P4,RF3,5UV,3CV,BX9,G7L,3DC
++r_B7TGTPEXH9,exploratory,QP-3068,p_AX4B6KHYGJ,strength,edge crush resistance,,6.77075,kN/m,lab_e,lab_a,8Z2,LB3,Y9V,QE3,6DD,8P4,RF3,5UV,5J9,BX9,G7L,3DC
++r_B7TGTPEXHA,exploratory,QP-3068,p_AX4B6KHYGJ,strength,edge crush resistance,,6.67799,kN/m,lab_e,lab_a,8Z2,LB3,Y9V,QE3,6DD,8P4,RF3,5UV,5J9,BX9,G7L,3DC
++r_D288ZG832D,exploratory,QP-3068,p_DXF185MCAP,strength,edge crush resistance,,6.69233,kN/m,lab_e,lab_a,TL4,LB3,Y9V,QE3,E8S,8P4,RF3,5UV,5J9,BX9,G7L,3DC
++r_D288ZG832E,exploratory,QP-3068,p_DXF185MCAP,strength,edge crush resistance,,6.75887,kN/m,lab_e,lab_a,TL4,LB3,Y9V,QE3,E8S,8P4,RF3,5UV,5J9,BX9,G7L,3DC

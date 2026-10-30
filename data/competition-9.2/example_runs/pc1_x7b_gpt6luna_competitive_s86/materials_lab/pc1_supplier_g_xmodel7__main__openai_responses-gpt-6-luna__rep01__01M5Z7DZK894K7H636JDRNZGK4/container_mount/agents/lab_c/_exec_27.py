@@ -1,0 +1,7 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+q=x[x.project=='QP-3617']
+# means by prototype/instrument/test; include all and order by known id
+m=q.groupby(['prototype_id','instrument','test','kind']).value.mean().unstack(['test','kind'])
+# only recent candidates IDs prefix p_...
+print(m.tail(30).to_string())

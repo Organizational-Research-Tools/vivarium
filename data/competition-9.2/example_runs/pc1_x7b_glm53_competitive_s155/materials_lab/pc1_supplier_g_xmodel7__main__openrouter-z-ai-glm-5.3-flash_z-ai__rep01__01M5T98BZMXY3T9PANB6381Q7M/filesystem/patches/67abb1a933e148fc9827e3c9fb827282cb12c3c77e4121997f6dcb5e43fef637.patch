@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -363,3 +363,15 @@
+ r_2T9X9SMWTZ,qualification,QP-6489,p_BF78F59PVH,water,wet strength retained,3,79.9840,%,lab_f,lab_d,,,,,,,,,,,,
+ r_2T9X9SMWV0,qualification,QP-6489,p_BF78F59PVH,water,wet strength retained,4,79.8412,%,lab_f,lab_d,,,,,,,,,,,,
+ r_2T9X9SMWV1,qualification,QP-6489,p_BF78F59PVH,water,wet strength retained,5,79.9512,%,lab_f,lab_d,,,,,,,,,,,,
++r_TQJH87RVM1,qualification,QP-1454,p_0A7VBS65GB,strength,edge crush resistance,0,7.19438,kN/m,lab_e,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_TQJH87RVM2,qualification,QP-1454,p_0A7VBS65GB,strength,edge crush resistance,1,7.20743,kN/m,lab_e,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_TQJH87RVM3,qualification,QP-1454,p_0A7VBS65GB,strength,edge crush resistance,2,7.21958,kN/m,lab_e,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_TQJH87RVM4,qualification,QP-1454,p_0A7VBS65GB,strength,edge crush resistance,3,7.22489,kN/m,lab_e,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_TQJH87RVM5,qualification,QP-1454,p_0A7VBS65GB,strength,edge crush resistance,4,7.23836,kN/m,lab_e,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_TQJH87RVM6,qualification,QP-1454,p_0A7VBS65GB,strength,edge crush resistance,5,7.18136,kN/m,lab_e,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_7T5XSCS30N,qualification,QP-1454,p_0A7VBS65GB,water,wet strength retained,0,80.0688,%,lab_f,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_7GVVPHSNQN,qualification,QP-1454,p_0A7VBS65GB,water,wet strength retained,1,80.4568,%,lab_f,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_7GVVPHSNQP,qualification,QP-1454,p_0A7VBS65GB,water,wet strength retained,2,80.5284,%,lab_f,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_7GVVPHSNQQ,qualification,QP-1454,p_0A7VBS65GB,water,wet strength retained,3,80.6428,%,lab_f,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_7GVVPHSNQR,qualification,QP-1454,p_0A7VBS65GB,water,wet strength retained,4,80.0352,%,lab_f,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_7GVVPHSNQS,qualification,QP-1454,p_0A7VBS65GB,water,wet strength retained,5,79.9480,%,lab_f,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4

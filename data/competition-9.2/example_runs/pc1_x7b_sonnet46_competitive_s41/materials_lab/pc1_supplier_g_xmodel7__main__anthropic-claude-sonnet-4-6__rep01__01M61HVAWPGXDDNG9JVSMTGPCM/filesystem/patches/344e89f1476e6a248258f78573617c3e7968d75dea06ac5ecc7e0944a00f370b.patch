@@ -1,0 +1,34 @@
+--- 
++++ 
+@@ -0,0 +1,31 @@
++
++# Key insight from interactions - for QP-4476 strength analysis:
++# Known interactions affecting STRENGTH:
++# 1. conditioning × base × secondary: 3N8 × JA8 × YX8 → TERRIBLE (6.55 kN/m vs GG7's 7.25)
++# 2. pp1 × add2 × add3: 62D × 6FA × 44B
++# 3. surface × pp3 × add2: 7KL × N4L × 6FA
++# 4. surface × binder × pp2: 7KL × M2P × 2BR (also affects heat, water)
++# 5. add3 × base × pp3: 44B × JA8 × N4L (also affects heat, water)
++
++# For p_4V8BTTYF7C (62D/2BR/N4L/7KL base): str=6.554
++# GG7 version: str=7.254 → gap = 0.700 kN/m = 23.3 steps from GG7 swap ALONE
++
++# Strategy: Can we recover the strength gap by changing conditioning?
++# cond=3N8 gave: 3N8×JA8×YX8 = terrible
++# cond=YV2: YV2×JA8×YX8 = unknown but can't be worse!
++
++# For p_X9WN43AQ4V (lab_d, heat=78.54): str=7.127 (exploratory, 1 read)
++# Gap to threshold: 7.19 - 7.127 = 0.063 kN/m = 2.1 steps
++# This is VERY CLOSE — with noise an exploratory single read could be off by 1-2 steps
++
++# New recipe candidates for QP-4476:
++recipes = [
++    # base/secondary/binder/add1/add2/add3/pp1/pp2/pp3/surface/joint/cond
++    ("cond=YV2, pp1=62D", "JA8/YX8/M2P/QJ2/6FA/44B/62D/2BR/N4L/7KL/DL8/YV2"),
++    ("cond=YV2, pp1=4QB", "JA8/YX8/M2P/QJ2/6FA/44B/4QB/2BR/N4L/7KL/DL8/YV2"),
++    ("pp1=4QB only",      "JA8/YX8/M2P/QJ2/6FA/44B/4QB/2BR/N4L/7KL/DL8/3N8"),
++    ("add2=B3P+pp1=4QB+cond=YV2", "JA8/YX8/M2P/QJ2/B3P/44B/4QB/2BR/N4L/7KL/DL8/YV2"),
++]
++for name, recipe in recipes:
++    parts = recipe.split("/")
++    print(f"{name}: {parts}")

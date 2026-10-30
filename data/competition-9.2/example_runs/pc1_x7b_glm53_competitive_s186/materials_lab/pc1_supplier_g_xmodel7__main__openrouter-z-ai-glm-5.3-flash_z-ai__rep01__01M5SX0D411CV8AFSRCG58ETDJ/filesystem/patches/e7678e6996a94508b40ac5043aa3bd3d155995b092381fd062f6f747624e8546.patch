@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -0,0 +1,4 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++print(df.columns.tolist())
++print(df['project_id'].value_counts() if 'project_id' in df.columns else '')

@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.kind=='qualification']; g=q.groupby(['project','prototype_id','test']).agg(n=('value','count'),m=('value','mean'),by=('measured_by','first')).reset_index(); p=g.pivot(index=['project','prototype_id'],columns='test',values=['n','m','by']); p.columns=['_'.join(c) for c in p.columns];
+for proj in ['QP-6879','QP-3617','QP-9273']:
+ z=p.loc[proj].copy(); print('\n',proj); print(z[(z.get('m_seal hold temperature',pd.Series(index=z.index)).fillna(0)>=78.5) | (z.get('m_wet strength retained',pd.Series(index=z.index)).fillna(0)>=79.8)].to_string())

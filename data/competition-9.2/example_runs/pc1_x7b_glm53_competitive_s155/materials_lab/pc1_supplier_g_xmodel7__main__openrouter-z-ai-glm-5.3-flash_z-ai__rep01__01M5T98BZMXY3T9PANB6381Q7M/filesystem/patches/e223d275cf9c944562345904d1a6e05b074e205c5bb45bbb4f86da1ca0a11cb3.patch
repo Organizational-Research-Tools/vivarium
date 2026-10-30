@@ -1,0 +1,36 @@
+--- 
++++ 
+@@ -679,9 +679,33 @@
+ r_YEH7KEZRKP,qualification,QP-1454,p_N4RCVZ2GGA,strength,edge crush resistance,3,7.28966,kN/m,lab_b,lab_f,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,LW5
+ r_YEH7KEZRKQ,qualification,QP-1454,p_N4RCVZ2GGA,strength,edge crush resistance,4,7.22273,kN/m,lab_b,lab_f,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,LW5
+ r_YEH7KEZRKR,qualification,QP-1454,p_N4RCVZ2GGA,strength,edge crush resistance,5,7.22720,kN/m,lab_b,lab_f,3F4,9AF,DQ9,U4A,NS4,92P,3RB,GL8,49R,RQ5,8K5,LW5
++r_S7DBBPWN63,qualification,QP-6489,p_V5WECMBJZK,heat,seal hold temperature,0,78.70075,°C,lab_a,lab_c,,,,,,,,,,,,
++r_S7DBBPWN64,qualification,QP-6489,p_V5WECMBJZK,heat,seal hold temperature,1,78.87225,°C,lab_a,lab_c,,,,,,,,,,,,
++r_S7DBBPWN65,qualification,QP-6489,p_V5WECMBJZK,heat,seal hold temperature,2,78.89875,°C,lab_a,lab_c,,,,,,,,,,,,
++r_S7DBBPWN66,qualification,QP-6489,p_V5WECMBJZK,heat,seal hold temperature,3,78.41875,°C,lab_a,lab_c,,,,,,,,,,,,
++r_S7DBBPWN67,qualification,QP-6489,p_V5WECMBJZK,heat,seal hold temperature,4,78.52050,°C,lab_a,lab_c,,,,,,,,,,,,
++r_S7DBBPWN68,qualification,QP-6489,p_V5WECMBJZK,heat,seal hold temperature,5,78.80400,°C,lab_a,lab_c,,,,,,,,,,,,
++r_PDQ109V4Q8,qualification,QP-6489,p_V5WECMBJZK,water,wet strength retained,0,80.2616,%,lab_c,lab_c,,,,,,,,,,,,
++r_PDQ109V4Q9,qualification,QP-6489,p_V5WECMBJZK,water,wet strength retained,1,79.6028,%,lab_c,lab_c,,,,,,,,,,,,
++r_PDQ109V4QA,qualification,QP-6489,p_V5WECMBJZK,water,wet strength retained,2,79.8956,%,lab_c,lab_c,,,,,,,,,,,,
++r_PDQ109V4QB,qualification,QP-6489,p_V5WECMBJZK,water,wet strength retained,3,79.7672,%,lab_c,lab_c,,,,,,,,,,,,
++r_PDQ109V4QC,qualification,QP-6489,p_V5WECMBJZK,water,wet strength retained,4,79.8136,%,lab_c,lab_c,,,,,,,,,,,,
++r_PDQ109V4QD,qualification,QP-6489,p_V5WECMBJZK,water,wet strength retained,5,80.2032,%,lab_c,lab_c,,,,,,,,,,,,
+ r_TAFXZKHYWW,qualification,QP-3589,p_F266GFQYD5,water,wet strength retained,0,69.7004,%,lab_f,lab_a,,,,,,,,,,,,
+ r_TAFXZKHYWX,qualification,QP-3589,p_F266GFQYD5,water,wet strength retained,1,69.9016,%,lab_f,lab_a,,,,,,,,,,,,
+ r_TAFXZKHYWY,qualification,QP-3589,p_F266GFQYD5,water,wet strength retained,2,69.1852,%,lab_f,lab_a,,,,,,,,,,,,
+ r_TAFXZKHYWZ,qualification,QP-3589,p_F266GFQYD5,water,wet strength retained,3,69.2268,%,lab_f,lab_a,,,,,,,,,,,,
+ r_TAFXZKHYX0,qualification,QP-3589,p_F266GFQYD5,water,wet strength retained,4,69.4620,%,lab_f,lab_a,,,,,,,,,,,,
+ r_TAFXZKHYX1,qualification,QP-3589,p_F266GFQYD5,water,wet strength retained,5,69.3608,%,lab_f,lab_a,,,,,,,,,,,,
++r_P92NTDCV9A,qualification,QP-6489,p_V5WECMBJZK,strength,edge crush resistance,0,7.19936,kN/m,lab_b,lab_c,,,,,,,,,,,,
++r_P92NTDCV9B,qualification,QP-6489,p_V5WECMBJZK,strength,edge crush resistance,1,7.20491,kN/m,lab_b,lab_c,,,,,,,,,,,,
++r_P92NTDCV9C,qualification,QP-6489,p_V5WECMBJZK,strength,edge crush resistance,2,7.15856,kN/m,lab_b,lab_c,,,,,,,,,,,,
++r_P92NTDCV9D,qualification,QP-6489,p_V5WECMBJZK,strength,edge crush resistance,3,7.17638,kN/m,lab_b,lab_c,,,,,,,,,,,,
++r_P92NTDCV9E,qualification,QP-6489,p_V5WECMBJZK,strength,edge crush resistance,4,7.17449,kN/m,lab_b,lab_c,,,,,,,,,,,,
++r_P92NTDCV9F,qualification,QP-6489,p_V5WECMBJZK,strength,edge crush resistance,5,7.19210,kN/m,lab_b,lab_c,,,,,,,,,,,,
++r_09T3Z6ER6Z,qualification,QP-1454,p_0A7VBS65GB,heat,seal hold temperature,0,66.54925,°C,lab_d,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_09T3Z6ER70,qualification,QP-1454,p_0A7VBS65GB,heat,seal hold temperature,1,66.73650,°C,lab_d,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_09T3Z6ER71,qualification,QP-1454,p_0A7VBS65GB,heat,seal hold temperature,2,66.75975,°C,lab_d,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_09T3Z6ER72,qualification,QP-1454,p_0A7VBS65GB,heat,seal hold temperature,3,66.83875,°C,lab_d,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_09T3Z6ER73,qualification,QP-1454,p_0A7VBS65GB,heat,seal hold temperature,4,66.99725,°C,lab_d,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4
++r_09T3Z6ER74,qualification,QP-1454,p_0A7VBS65GB,heat,seal hold temperature,5,66.97850,°C,lab_d,lab_f,H6K,9AF,6ZC,U4A,NS4,3LL,GY3,F9B,49R,N4Y,8K5,UZ4

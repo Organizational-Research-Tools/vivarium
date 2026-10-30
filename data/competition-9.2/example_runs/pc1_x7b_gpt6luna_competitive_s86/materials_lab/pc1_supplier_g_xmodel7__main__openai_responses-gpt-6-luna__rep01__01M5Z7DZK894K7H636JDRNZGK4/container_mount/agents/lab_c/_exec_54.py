@@ -1,0 +1,6 @@
+import pandas as pd
+r=pd.read_csv('records.csv')
+print(r.columns.tolist())
+print(r.shape)
+print(r[r.project_id=='QP-3617'].shape if 'project_id' in r else r.head())
+print(r.head())

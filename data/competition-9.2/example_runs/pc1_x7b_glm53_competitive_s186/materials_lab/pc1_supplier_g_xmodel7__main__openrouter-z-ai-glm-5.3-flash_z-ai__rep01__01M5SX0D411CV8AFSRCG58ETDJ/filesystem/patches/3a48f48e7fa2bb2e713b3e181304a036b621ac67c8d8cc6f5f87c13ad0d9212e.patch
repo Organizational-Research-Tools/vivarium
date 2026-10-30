@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -0,0 +1,4 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++d = df[df['record_id'].str.startswith(('r_38KSBY','r_FKJPYF','r_G1E375'))]
++print(d[['record_id','project_id','prototype_id','test','value','measured_by']].to_string() if len(d) else "not found", df.columns.tolist())

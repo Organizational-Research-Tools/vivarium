@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -0,0 +1,4 @@
++import pandas as pd
++r=pd.read_csv('records.csv')
++p=r[r.kind=='qualification'].groupby(['project','prototype_id','instrument']).value.mean().unstack()
++print(p.to_string())

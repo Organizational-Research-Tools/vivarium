@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -594,3 +594,15 @@
+ r_RQG2ZRH008,qualification,QP-8807,p_K6ZM59ZMJT,strength,edge crush resistance,3,7.27853,kN/m,lab_e,lab_f,QG7,6TX,P8G,7TW,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
+ r_RQG2ZRH009,qualification,QP-8807,p_K6ZM59ZMJT,strength,edge crush resistance,4,7.22171,kN/m,lab_e,lab_f,QG7,6TX,P8G,7TW,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
+ r_RQG2ZRH00A,qualification,QP-8807,p_K6ZM59ZMJT,strength,edge crush resistance,5,7.23320,kN/m,lab_e,lab_f,QG7,6TX,P8G,7TW,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_17GX4JAAZF,qualification,QP-9273,p_H75E66GD4V,heat,seal hold temperature,0,65.23200,°C,lab_d,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_17GX4JAAZG,qualification,QP-9273,p_H75E66GD4V,heat,seal hold temperature,1,65.25825,°C,lab_d,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_17GX4JAAZH,qualification,QP-9273,p_H75E66GD4V,heat,seal hold temperature,2,65.40525,°C,lab_d,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_17GX4JAAZJ,qualification,QP-9273,p_H75E66GD4V,heat,seal hold temperature,3,65.48575,°C,lab_d,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_17GX4JAAZK,qualification,QP-9273,p_H75E66GD4V,heat,seal hold temperature,4,65.47225,°C,lab_d,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_17GX4JAAZM,qualification,QP-9273,p_H75E66GD4V,heat,seal hold temperature,5,65.20750,°C,lab_d,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_YHQ9B34GCP,qualification,QP-9273,p_H75E66GD4V,water,wet strength retained,0,50.3508,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_YHQ9B34GCQ,qualification,QP-9273,p_H75E66GD4V,water,wet strength retained,1,50.6416,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_YHQ9B34GCR,qualification,QP-9273,p_H75E66GD4V,water,wet strength retained,2,50.7140,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_YHQ9B34GCS,qualification,QP-9273,p_H75E66GD4V,water,wet strength retained,3,50.2964,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_YHQ9B34GCT,qualification,QP-9273,p_H75E66GD4V,water,wet strength retained,4,50.5596,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN
++r_YHQ9B34GCV,qualification,QP-9273,p_H75E66GD4V,water,wet strength retained,5,50.5144,%,lab_f,lab_f,QG7,6TX,T5L,57Y,F8Y,XD8,H9M,QE8,FJ2,96Y,JE5,6YN

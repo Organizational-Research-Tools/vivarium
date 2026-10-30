@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -359,3 +359,15 @@
+ r_HYJ32VTNA0,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,3,78.66375,°C,lab_d,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
+ r_HYJ32VTNA1,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,4,78.66750,°C,lab_d,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
+ r_HYJ32VTNA2,qualification,QP-7065,p_W1VN0R72RM,heat,seal hold temperature,5,78.85925,°C,lab_d,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_ER1TAN7FAD,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,0,80.1448,%,lab_c,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_ER1TAN7FAE,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,1,79.3348,%,lab_c,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_ER1TAN7FAF,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,2,79.3608,%,lab_c,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_ER1TAN7FAG,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,3,79.5912,%,lab_c,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_ER1TAN7FAH,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,4,79.8540,%,lab_c,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_ER1TAN7FAJ,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,5,79.9144,%,lab_c,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_1Y6G1QQZ1V,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,0,80.0796,%,lab_f,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_1Y6G1QQZ1W,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,1,79.2076,%,lab_f,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_1Y6G1QQZ1X,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,2,79.4020,%,lab_f,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_1Y6G1QQZ1Y,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,3,79.5452,%,lab_f,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_1Y6G1QQZ1Z,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,4,79.9700,%,lab_f,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_1Y6G1QQZ20,qualification,QP-7065,p_W1VN0R72RM,water,wet strength retained,5,79.9956,%,lab_f,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F

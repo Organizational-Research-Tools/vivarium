@@ -1,0 +1,1 @@
+print(res.tail(6).to_string())

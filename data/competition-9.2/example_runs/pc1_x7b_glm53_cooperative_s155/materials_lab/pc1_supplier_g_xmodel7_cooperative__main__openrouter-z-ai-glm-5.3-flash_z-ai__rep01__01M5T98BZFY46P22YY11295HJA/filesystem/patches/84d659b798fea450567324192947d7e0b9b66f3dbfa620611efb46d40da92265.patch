@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -545,3 +545,5 @@
+ r_884T52RJMR,exploratory,QP-4503,p_54BW0ADSAX,heat,seal hold temperature,,76.46400,°C,lab_d,lab_d,73S,3S7,E5L,V5J,NS4,S3J,3RB,F9B,49R,RQ5,8K5,UZ4
+ r_6V0EDN0GHR,exploratory,QP-3589,p_B72MJA7MKT,heat,seal hold temperature,,67.56350,°C,lab_d,lab_d,73S,HJ7,E5L,V5J,4C2,3LL,3RB,F9B,49R,RQ5,8K5,4YT
+ r_6V0EDN0GHS,exploratory,QP-3589,p_B72MJA7MKT,heat,seal hold temperature,,67.56125,°C,lab_d,lab_d,73S,HJ7,E5L,V5J,4C2,3LL,3RB,F9B,49R,RQ5,8K5,4YT
++r_ZXCFF5PTDK,exploratory,QP-4503,p_NHMP03RFW8,heat,seal hold temperature,,75.44975,°C,lab_d,lab_c,,,,,,,,,,,,
++r_ZXCFF5PTDM,exploratory,QP-4503,p_NHMP03RFW8,heat,seal hold temperature,,75.61825,°C,lab_d,lab_c,,,,,,,,,,,,

@@ -1,0 +1,10 @@
+
+import pandas as pd
+df = pd.read_csv('records.csv')
+print("Columns:", df.columns.tolist())
+print("\nAll PL-57 projects (QP-4476, QP-6572, QP-6843):")
+pl57 = df[df['project_id'].isin(['QP-4476', 'QP-6572', 'QP-6843'])]
+print(pl57[['record_id','project_id','prototype_id','instrument','kind','mean_value']].to_string())
+print("\nModule columns in dataset:")
+module_cols = [c for c in df.columns if c not in ['record_id','project_id','prototype_id','instrument','kind','mean_value','specimen','value']]
+print(module_cols)

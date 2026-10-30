@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -0,0 +1,12 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++df['mods']=df[mods].apply(lambda r:'|'.join('?' if pd.isna(v) else str(v) for v in r),axis=1)
++g = df.groupby(['prototype_id','mods','test']).agg(n=('value','size'),mn=('value','mean')).reset_index()
++piv = g.pivot_table(index=['prototype_id','mods'], columns='test', values='mn')
++piv = piv[piv.notna().all(axis=1)]
++piv.columns=['heat','strength','water']
++cnt = g.groupby(['prototype_id','mods']).n.apply(lambda s: s).unstack()
++good = piv[(piv.heat>=78.5)&(piv.strength>=7.2)&(piv.water>=79.6)]
++print('GOOD'); print(good.to_string())
++print('near'); print(piv[(piv.heat>=78.3)&(piv.strength>=7.15)&(piv.water>=79.3)].to_string())

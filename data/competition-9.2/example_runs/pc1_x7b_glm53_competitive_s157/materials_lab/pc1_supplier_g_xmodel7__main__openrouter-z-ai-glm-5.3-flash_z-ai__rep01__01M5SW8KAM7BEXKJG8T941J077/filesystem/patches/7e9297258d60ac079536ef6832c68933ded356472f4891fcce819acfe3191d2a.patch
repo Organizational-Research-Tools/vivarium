@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++df = pd.read_csv("records.csv"); df = df[df.kind=="qualification"]
++for pid in ["p_Z47MQWVTGY","p_30J118A5XA","p_4E1HA4K22P","p_2KYH1WB73P","p_VFWRYSM1JN","p_CKXR9NTCFQ"]:
++    r = df[df.prototype_id==pid]
++    mods = ["base_sheet","secondary_sheet","binder_system","additive_package_1","additive_package_2","additive_package_3","process_profile_1","process_profile_2","process_profile_3","surface_treatment","joint_system","conditioning_step"]
++    print(pid, r.iloc[0][mods].tolist(), round(r.value.mean(),2))

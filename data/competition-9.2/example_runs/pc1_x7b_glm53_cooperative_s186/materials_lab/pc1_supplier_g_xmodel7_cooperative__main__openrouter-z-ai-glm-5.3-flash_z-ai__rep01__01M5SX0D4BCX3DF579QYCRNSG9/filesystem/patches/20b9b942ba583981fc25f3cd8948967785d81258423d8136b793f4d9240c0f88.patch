@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -0,0 +1,4 @@
++import pandas as pd
++d=pd.read_csv('records.csv')
++print(d.columns.tolist()); print(len(d))
++print(d['project_id'].value_counts(dropna=False) if 'project_id' in d else '')

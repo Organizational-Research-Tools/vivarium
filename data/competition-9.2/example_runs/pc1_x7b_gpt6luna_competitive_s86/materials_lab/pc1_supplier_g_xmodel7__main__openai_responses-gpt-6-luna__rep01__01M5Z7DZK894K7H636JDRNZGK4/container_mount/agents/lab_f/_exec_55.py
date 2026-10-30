@@ -1,0 +1,6 @@
+x=pd.read_csv('records.csv'); x=x[x.project.isin(['QP-3617','QP-6879','QP-9273'])]; g=x[x.kind=='qualification'].groupby(['project','prototype_id','test']).agg(n=('value','count'),mean=('value','mean'),owner=('measured_by','first')).reset_index(); piv=g.pivot(index=['project','prototype_id'],columns='test',values=['n','mean']);
+for ix,row in piv.iterrows():
+    vals=[]
+    for test,thr in [('seal hold temperature','heat'),('edge crush resistance','strength'),('wet strength retained','water')]:
+        n=row.get(('n',test)); m=row.get(('mean',test)); vals.append((int(n) if pd.notna(n) else 0,round(m,5) if pd.notna(m) else None))
+    if any(n==6 and m is not None for n,m in vals): print(ix, vals)

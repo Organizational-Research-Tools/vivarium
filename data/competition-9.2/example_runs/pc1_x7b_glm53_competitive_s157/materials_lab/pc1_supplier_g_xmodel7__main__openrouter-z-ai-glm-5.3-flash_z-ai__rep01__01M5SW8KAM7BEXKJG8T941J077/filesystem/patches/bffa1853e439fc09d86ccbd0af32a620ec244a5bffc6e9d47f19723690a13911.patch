@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -369,3 +369,12 @@
+ r_T3S9WA3YAS,qualification,QP-1586,p_KV3GM10NKV,heat,seal hold temperature,3,78.72750,°C,lab_d,lab_d,,,,,,,,,,,,
+ r_T3S9WA3YAT,qualification,QP-1586,p_KV3GM10NKV,heat,seal hold temperature,4,78.24825,°C,lab_d,lab_d,,,,,,,,,,,,
+ r_T3S9WA3YAV,qualification,QP-1586,p_KV3GM10NKV,heat,seal hold temperature,5,78.34825,°C,lab_d,lab_d,,,,,,,,,,,,
++r_VKHWET600T,exploratory,QP-5653,p_C9N9H45C3W,water,wet strength retained,,79.2888,%,lab_c,lab_a,,,,,,,,,,,,
++r_VKHWET600V,exploratory,QP-5653,p_C9N9H45C3W,water,wet strength retained,,78.4328,%,lab_c,lab_a,,,,,,,,,,,,
++r_VKHWET600W,exploratory,QP-5653,p_C9N9H45C3W,water,wet strength retained,,78.9612,%,lab_c,lab_a,,,,,,,,,,,,
++r_VKHWET600X,exploratory,QP-5653,p_B45PPFWV3C,water,wet strength retained,,78.8156,%,lab_c,lab_a,,,,,,,,,,,,
++r_VKHWET600Y,exploratory,QP-5653,p_B45PPFWV3C,water,wet strength retained,,78.2440,%,lab_c,lab_a,,,,,,,,,,,,
++r_VKHWET600Z,exploratory,QP-5653,p_B45PPFWV3C,water,wet strength retained,,79.1948,%,lab_c,lab_a,,,,,,,,,,,,
++r_VKHWET6010,exploratory,QP-5653,p_C9N9H45C42,water,wet strength retained,,78.9356,%,lab_c,lab_a,,,,,,,,,,,,
++r_VKHWET6011,exploratory,QP-5653,p_C9N9H45C42,water,wet strength retained,,78.7288,%,lab_c,lab_a,,,,,,,,,,,,
++r_RWP5CJQPBN,exploratory,QP-5653,p_C9N9H45C42,water,wet strength retained,,78.0500,%,lab_c,lab_a,,,,,,,,,,,,

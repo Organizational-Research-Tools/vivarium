@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd, numpy as np
++x=pd.read_csv('records.csv');
++print(x.groupby(['project','test']).agg(n=('value','size'),protos=('prototype_id','nunique'),known=('base_sheet',lambda a:a.notna().sum())).to_string())
++print('All project-prototype summary')
++print(x.groupby(['project','prototype_id','test']).agg(mean=('value','mean'),n=('value','size'),recipe_known=('base_sheet',lambda a:a.notna().any())).reset_index().groupby(['project','test']).agg(mean_val=('mean','mean'), min=('mean','min'),max=('mean','max'),nprotos=('prototype_id','nunique')).to_string())
++print('known recipes/test')
++print(x[x.base_sheet.notna()].groupby(['project','test']).prototype_id.nunique())

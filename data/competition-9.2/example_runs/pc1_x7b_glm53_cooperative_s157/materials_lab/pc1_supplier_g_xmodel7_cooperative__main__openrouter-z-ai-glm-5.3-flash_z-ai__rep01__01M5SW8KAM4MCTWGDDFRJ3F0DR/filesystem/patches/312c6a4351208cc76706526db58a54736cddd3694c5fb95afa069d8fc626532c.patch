@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++qp = df[(df.project=='QP-3068')]
++print(qp[qp.test=='water'][['record_id','kind','prototype_id','value','measured_by','requester']].to_string())
++print(qp.groupby(['prototype_id','test','measured_by']).value.agg(['count','mean']).to_string())

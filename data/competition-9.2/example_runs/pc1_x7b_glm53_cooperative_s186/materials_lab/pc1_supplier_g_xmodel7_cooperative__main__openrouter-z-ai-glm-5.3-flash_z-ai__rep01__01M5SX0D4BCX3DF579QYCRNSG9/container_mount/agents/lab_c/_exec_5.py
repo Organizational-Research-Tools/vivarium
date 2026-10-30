@@ -1,0 +1,8 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+mine = df[df['measured_by'].eq('lab_c')]
+sub = mine[mine['project'].isin(['QP-1992'])]
+print(sub[['record_id','prototype_id','value','kind']].to_string())
+for p in ['p_PVKNKE17RN','p_B7XYFK7HNN','p_41VPVR8BEP','p_C9J7882FRX']:
+    s = df[df['prototype_id']==p]
+    print(p, s[['test','value','kind','measured_by']].to_string() if len(s) else 'not in my records')

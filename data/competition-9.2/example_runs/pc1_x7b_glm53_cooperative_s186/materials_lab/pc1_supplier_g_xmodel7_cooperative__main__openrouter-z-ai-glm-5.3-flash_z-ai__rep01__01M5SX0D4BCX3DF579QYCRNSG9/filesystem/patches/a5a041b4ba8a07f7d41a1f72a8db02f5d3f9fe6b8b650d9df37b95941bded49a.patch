@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -668,3 +668,15 @@
+ r_VR5MJFA4BW,exploratory,QP-1992,p_E16M0W72XT,strength,edge crush resistance,,7.26983,kN/m,lab_e,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,G5Y
+ r_VR5MJFA4BX,exploratory,QP-1992,p_E16M0W72XW,strength,edge crush resistance,,7.25378,kN/m,lab_e,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,V8F
+ r_VR5MJFA4BY,exploratory,QP-1992,p_E16M0W72XW,strength,edge crush resistance,,7.16300,kN/m,lab_e,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,V8F
++r_KHP07V95D9,exploratory,QP-1992,p_E16M0W72XT,water,wet strength retained,,62.5092,%,lab_f,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,G5Y
++r_KHP07V95DA,exploratory,QP-1992,p_E16M0W72XT,water,wet strength retained,,63.0424,%,lab_f,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,G5Y
++r_9RN3V61VPG,exploratory,QP-1992,p_E16M0W72XW,water,wet strength retained,,79.0348,%,lab_f,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,V8F
++r_9RN3V61VPH,exploratory,QP-1992,p_E16M0W72XW,water,wet strength retained,,78.9208,%,lab_f,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,V8F
++r_0DYJKSBS93,exploratory,QP-1992,p_E16M0W72XT,heat,seal hold temperature,,78.61875,°C,lab_d,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,G5Y
++r_T650WA20PR,exploratory,QP-1992,p_E16M0W72XW,heat,seal hold temperature,,77.83325,°C,lab_d,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,V8F
++r_Z28N047FS8,exploratory,QP-1992,p_E16M0W72XT,heat,seal hold temperature,,78.63875,°C,lab_a,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,G5Y
++r_Z0DY4M5PSS,exploratory,QP-1992,p_E16M0W72XT,heat,seal hold temperature,,78.61025,°C,lab_a,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,G5Y
++r_5PT4JRWEZM,exploratory,QP-1992,p_E16M0W72XT,water,wet strength retained,,62.8360,%,lab_c,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,G5Y
++r_5PT4JRWEZN,exploratory,QP-1992,p_E16M0W72XT,water,wet strength retained,,63.6820,%,lab_c,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,G5Y
++r_5PT4JRWEZP,exploratory,QP-1992,p_E16M0W72XT,water,wet strength retained,,62.1004,%,lab_c,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,G5Y
++r_5PT4JRWEZQ,exploratory,QP-1992,p_E16M0W72XT,water,wet strength retained,,63.5516,%,lab_c,lab_e,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,3Y7,G5Y

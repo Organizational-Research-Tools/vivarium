@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -1186,6 +1186,12 @@
+ r_484MTNQ0QW,qualification,QP-9219,p_YJCA9TYHK1,heat,seal hold temperature,3,78.33250,°C,lab_a,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
+ r_484MTNQ0QX,qualification,QP-9219,p_YJCA9TYHK1,heat,seal hold temperature,4,78.50600,°C,lab_a,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
+ r_484MTNQ0QY,qualification,QP-9219,p_YJCA9TYHK1,heat,seal hold temperature,5,78.55025,°C,lab_a,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
++r_D2W0KWT834,qualification,QP-9219,p_YJCA9TYHK1,strength,edge crush resistance,0,7.23563,kN/m,lab_e,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
++r_D2W0KWT835,qualification,QP-9219,p_YJCA9TYHK1,strength,edge crush resistance,1,7.17728,kN/m,lab_e,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
++r_D2W0KWT836,qualification,QP-9219,p_YJCA9TYHK1,strength,edge crush resistance,2,7.17329,kN/m,lab_e,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
++r_D2W0KWT837,qualification,QP-9219,p_YJCA9TYHK1,strength,edge crush resistance,3,7.18067,kN/m,lab_e,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
++r_D2W0KWT838,qualification,QP-9219,p_YJCA9TYHK1,strength,edge crush resistance,4,7.20521,kN/m,lab_e,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
++r_D2W0KWT839,qualification,QP-9219,p_YJCA9TYHK1,strength,edge crush resistance,5,7.21832,kN/m,lab_e,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
+ r_6M723E1QGC,qualification,QP-9219,p_YJCA9TYHK1,strength,edge crush resistance,0,7.24205,kN/m,lab_b,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
+ r_6M723E1QGD,qualification,QP-9219,p_YJCA9TYHK1,strength,edge crush resistance,1,7.15622,kN/m,lab_b,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2
+ r_6M723E1QGE,qualification,QP-9219,p_YJCA9TYHK1,strength,edge crush resistance,2,7.19621,kN/m,lab_b,lab_c,QG7,RK7,P8G,57Y,74N,P2E,9VQ,QE8,FJ2,T6A,4ZD,YT2

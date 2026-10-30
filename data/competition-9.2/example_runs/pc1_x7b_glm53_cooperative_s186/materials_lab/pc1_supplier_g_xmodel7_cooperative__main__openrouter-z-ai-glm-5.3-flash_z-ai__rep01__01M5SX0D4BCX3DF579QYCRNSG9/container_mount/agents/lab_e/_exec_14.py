@@ -1,0 +1,6 @@
+import pandas as pd
+d = pd.read_csv("records.csv")
+print(d.columns.tolist())
+for proj, g in d.groupby("project_id"):
+    hm = g["heat"].max() if "heat" in g else None
+    print(proj, {c: round(g[c].max(),3) for c in ["heat","strength","water"] if c in g.columns})

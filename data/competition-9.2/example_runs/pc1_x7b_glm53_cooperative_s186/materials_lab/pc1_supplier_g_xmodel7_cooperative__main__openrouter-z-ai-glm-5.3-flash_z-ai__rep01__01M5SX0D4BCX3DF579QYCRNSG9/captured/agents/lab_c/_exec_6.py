@@ -1,0 +1,8 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+sub = df[df['prototype_id']=='p_XJPZECBH9Q']
+print(sub.iloc[0])
+# also QP-4757 all records
+print(df[df['project']=='QP-4757'].groupby('prototype_id')[['test','value']].agg({'test':'first','value':'mean'}))
+# and QP-7006/4152 anything
+print(df[df['project'].isin(['QP-7006','QP-4152'])].shape)

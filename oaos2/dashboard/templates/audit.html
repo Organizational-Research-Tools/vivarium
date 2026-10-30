@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import chip, sev_chip, help, gh, howto %}
+{% block title %}audit — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / audit</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "audit") }}
+
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem">Audit — is this trace trustworthy?</h1>
+<p style="margin:0 0 0.5rem">{{ chip(d.record.status, d.record.irregular) }}</p>
+{% call howto() %}
+  <p><strong>Diagnostics.</strong> Automatic checks over this run's record: each finding names a recorded pattern, gives a review priority, and links to supporting events where available; the interpretation may require further inspection.</p>
+  <p><strong>Archive validity.</strong> Saved archive-check results and recorded run endings. Passing these checks does not establish every requirement for usable research evidence.</p>
+  <p><strong>Trouble events.</strong> Every event in this run that signals something going wrong: rule violations, denied tool calls, crashes, blocked messages, container failures. Each links to its exact place in the record.</p>
+  <p><strong>Interventions.</strong> Moments the platform (not the agents) stepped in — retries, timeouts, repairs. Classed by whether they could affect the result: silent_recorded / recorded / treatment_defining.</p>
+  <p><strong>Recording-system health.</strong> Events the record-keeping machinery wrote about ITSELF (queue depth, write latency, restarts) — separate from the experiment, they tell you whether the recorder was under strain.</p>
+{% endcall %}
+
+<div class="card">
+  <h2>Diagnostics ({{ findings|length }})</h2>
+  {% if findings %}
+  <table>
+    <thead><tr><th>{{ help("severity", "How much this finding should worry you — hover each value") }}</th><th>finding</th><th>detail</th><th>{{ help("evidence", "Links (◇) to supporting events. Some checks use saved status or aggregates instead.") }}</th></tr></thead>
+    <tbody>
+    {% for f in findings %}
+      <tr>
+        <td>{{ sev_chip(f.severity) }}</td>
+        <td><strong>{{ f.title }}</strong></td>
+        <td style="max-width:34rem">{{ f.detail }}</td>
+        <td>{% for eid in f.event_ids[:8] %}<a href="/run/{{ run_ref }}/event/{{ eid }}">◇</a> {% endfor %}
+            {% if f.event_ids|length > 8 %}<span class="dim">+{{ f.event_ids|length - 8 }}</span>{% endif %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="dim" style="margin-bottom:0">{% for label, explanation in SEVERITY_HELP.items() %}<strong>{{ label }}</strong>: {{ explanation }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
+  {% else %}<p class="dim">no findings — nothing in this trace pattern-matches a known problem</p>{% endif %}
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <h2>Archive validity</h2>
+    <dl class="kv">
+      {% set ext = (d.manifest or {}).get("extensions") or {} %}
+      {% set clock = ext.get("clock_spec") or ext.get("clock") or {} %}
+      <dt>{{ gh("archive valid") }}</dt><dd>{{ d.run_status.get("archive_valid") if d.run_status else "— (no run_status.json)" }}</dd>
+      <dt>{{ gh("disposition") }}</dt><dd>{{ d.disposition.disposition }}</dd>
+      <dt>{{ gh("terminal record") }}</dt><dd>{{ d.disposition.terminal or "NONE — active or interrupted" }}</dd>
+      {% if d.disposition.terminal_reason %}<dt>terminal reason</dt><dd>{{ d.disposition.terminal_reason }}</dd>{% endif %}
+      <dt>agent failed</dt><dd>{{ "yes" if d.disposition.agent_failed else "no" }}</dd>
+      <dt>{{ gh("outcome closed") }}</dt><dd>{{ "yes" if d.disposition.outcome_closed else "no" }}</dd>
+      <dt>{{ gh("parity regime") }}</dt><dd>{{ d.run_status.get("parity_regime") if d.run_status else "—" }}</dd>
+      <dt>{{ gh("exposure confounded") }}</dt><dd>{{ d.run_status.get("exposure_confounded") if d.run_status else "—" }}</dd>
+      <dt>scored</dt><dd>{{ d.run_status.get("scored") if d.run_status and d.run_status.get("scored") is not none else "legacy / unknown" }}</dd>
+      <dt>clock condition</dt><dd>{{ d.record.clock_label or ext.get("environment_schedule_variant") or "—" }}{% if clock %} · {{ clock.get("rounds_total") }} days · {{ clock.get("calls_per_day") }} calls/role/day{% endif %}</dd>
+      <dt>source</dt><dd>{% if ext.get("source_commit") %}<code>{{ ext.get("source_commit")[:12] }}</code>{% else %}—{% endif %}{% if ext.get("source_dirty") %} <span class="sev sev-warning">dirty worktree</span>{% endif %}</dd>
+      <dt>apparatus</dt><dd>{% if ext.get("apparatus_sha256") %}<code title="{{ ext.get('apparatus_sha256') }}">{{ ext.get("apparatus_sha256")[:20] }}…</code>{% else %}—{% endif %}</dd>
+    </dl>
+  </div>
+
+  <div class="card">
+    <h2>Trouble events ({{ trouble|length }})</h2>
+    {% if trouble %}
+    <table>
+      <thead><tr><th class="num">seq</th><th>class</th><th>agent</th><th>summary</th></tr></thead>
+      <tbody>
+      {% for e, s in trouble %}
+        <tr>
+          <td class="num"><a href="/run/{{ run_ref }}/event/{{ e.event_id }}">{{ e.sequence_number }}</a></td>
+          <td><code>{{ e.event_class }}</code></td>
+          <td>{{ e.agent_id or "·" }}</td>
+          <td>{{ s }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}<p class="dim">none — no violations, denials, or failures in either stream</p>{% endif %}
+  </div>
+
+  <div class="card">
+    <h2>Interventions ({{ interventions|length }})</h2>
+    {% if interventions %}
+    <table>
+      <thead><tr><th class="num">seq</th><th>agent</th><th>kind [validity class]</th></tr></thead>
+      <tbody>
+      {% for e, s in interventions %}
+        <tr>
+          <td class="num"><a href="/run/{{ run_ref }}/event/{{ e.event_id }}">{{ e.sequence_number }}</a></td>
+          <td>{{ e.agent_id or "·" }}</td>
+          <td>{{ s }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}<p class="dim">none recorded</p>{% endif %}
+  </div>
+
+  <div class="card">
+    <h2>{{ help("Cost ledger", "Every model call priced, in order, with the running total — shows WHEN the money went and whether spending pressure built up near the cap") }} — {{ cost_total|usd }}{% if cost_chart and cost_chart.pct_of_cap %} <span class="dim">({{ cost_chart.pct_of_cap|round|int }}% of cap)</span>{% endif %}</h2>
+    {% if cost_chart %}
+    <svg viewBox="0 0 {{ cost_chart.w }} {{ cost_chart.h }}" width="100%" role="img"
+         aria-label="cumulative spend over the run"
+         style="display:block; margin-bottom:0.5rem">
+      <line x1="8" y1="{{ cost_chart.h - 8 }}" x2="{{ cost_chart.w - 8 }}" y2="{{ cost_chart.h - 8 }}"
+            stroke="var(--hairline)" stroke-width="1"/>
+      {% if cost_chart.cap_y is not none %}
+      <line x1="8" y1="{{ cost_chart.cap_y }}" x2="{{ cost_chart.w - 8 }}" y2="{{ cost_chart.cap_y }}"
+            stroke="var(--critical)" stroke-width="1" stroke-dasharray="5 4"/>
+      <text x="{{ cost_chart.w - 10 }}" y="{{ cost_chart.cap_y - 4 }}" text-anchor="end"
+            style="font:11px system-ui; fill:var(--critical)">cap {{ cost_chart.cap|usd }}</text>
+      {% endif %}
+      <polyline points="{{ cost_chart.polyline }}" fill="none"
+                stroke="#2a78d6" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="{{ cost_chart.end.split(',')[0] }}" cy="{{ cost_chart.end.split(',')[1] }}" r="3.5" fill="#2a78d6"/>
+      <text x="{{ cost_chart.end.split(',')[0] }}" y="{{ cost_chart.end.split(',')[1]|float - 8 }}" text-anchor="end"
+            style="font:11px system-ui; fill:var(--ink-2)">{{ cost_chart.total|usd }}</text>
+      {% for b in cost_chart.blocked %}
+      <a href="/run/{{ run_ref }}/event/{{ b.event_id }}">
+        <circle cx="{{ b.x }}" cy="{{ cost_chart.cap_y if cost_chart.cap_y is not none else 12 }}" r="4.5"
+                fill="var(--critical)"><title>[{{ b.seq }}] cost.cap_blocked_dispatch — an agent was cut off here</title></circle>
+      </a>
+      {% endfor %}
+    </svg>
+    {% endif %}
+    {% if cost_rows %}
+    <table>
+      <thead><tr><th class="num">seq</th><th>agent</th><th class="num">cost</th><th class="num">cumulative</th></tr></thead>
+      <tbody>
+      {% for e, c, cum in cost_rows %}
+        <tr>
+          <td class="num"><a href="/run/{{ run_ref }}/event/{{ e.event_id }}">{{ e.sequence_number }}</a></td>
+          <td>{{ e.agent_id or "·" }}</td>
+          <td class="num">${{ "%.4f"|format(c) }}</td>
+          <td class="num">${{ "%.4f"|format(cum) }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}<p class="dim">no cost events found; verify execution mode and usage records</p>{% endif %}
+  </div>
+
+  <div class="card">
+    <h2>Recording-system health</h2>
+    {% if infra %}
+    <table>
+      <tbody>
+      {% for cls, n in infra.items() %}
+        <tr><td><code>{{ cls }}</code></td><td class="num">{{ n }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}<p class="dim">no infrastructure events</p>{% endif %}
+  </div>
+
+</div>
+
+{% endblock %}

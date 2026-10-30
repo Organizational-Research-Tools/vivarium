@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -487,3 +487,9 @@
+ r_0461AX3PD7,exploratory,QP-5653,p_BDEMP3A2S3,water,wet strength retained,,77.9296,%,lab_f,lab_d,,,,,,,,,,,,
+ r_0461AX3PD8,exploratory,QP-5653,p_BDEMP3A2S3,water,wet strength retained,,78.2764,%,lab_f,lab_d,,,,,,,,,,,,
+ r_0461AX3PD9,exploratory,QP-5653,p_BDEMP3A2S3,water,wet strength retained,,77.6616,%,lab_f,lab_d,,,,,,,,,,,,
++r_KPYYR2KASJ,qualification,QP-5653,p_BDEMP3A2S5,water,wet strength retained,0,79.3628,%,lab_f,lab_d,,,,,,,,,,,,
++r_KPYYR2KASK,qualification,QP-5653,p_BDEMP3A2S5,water,wet strength retained,1,79.4020,%,lab_f,lab_d,,,,,,,,,,,,
++r_KPYYR2KASM,qualification,QP-5653,p_BDEMP3A2S5,water,wet strength retained,2,78.8036,%,lab_f,lab_d,,,,,,,,,,,,
++r_KPYYR2KASN,qualification,QP-5653,p_BDEMP3A2S5,water,wet strength retained,3,79.0036,%,lab_f,lab_d,,,,,,,,,,,,
++r_KPYYR2KASP,qualification,QP-5653,p_BDEMP3A2S5,water,wet strength retained,4,78.8200,%,lab_f,lab_d,,,,,,,,,,,,
++r_KPYYR2KASQ,qualification,QP-5653,p_BDEMP3A2S5,water,wet strength retained,5,79.1720,%,lab_f,lab_d,,,,,,,,,,,,

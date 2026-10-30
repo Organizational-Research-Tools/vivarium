@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -0,0 +1,27 @@
++
++# Lab_b water receipts for QP-8265 (p_KJZ5KNC3WG) to share
++qp8265_water = {
++    "receipts": ["r_03J66XEQ4K", "r_03J66XEQ4M", "r_03J66XEQ4N", "r_03J66XEQ4P", "r_03J66XEQ4Q", "r_03J66XEQ4R"],
++    "values": [79.5084, 79.6064, 78.9296, 78.7692, 79.1216, 79.2528]
++}
++mean = sum(qp8265_water["values"]) / 6
++margin = (mean - 78.0) / 0.4
++print(f"QP-8265 water mean: {mean:.3f}% | margin: {margin:.2f} steps | PASSES: {mean >= 78.0}")
++
++# Also note PL-57 situation from exploratory reads
++pl57 = {
++    "p_KAZ5RD12DD (QP-6843, lab_b)": 51.7272,
++    "p_AJDCM7NSKX (QP-6843, lab_e)": 52.1364,
++    "p_AJDCM7NSKZ (QP-6843, lab_e)": 51.3144,
++    "p_PHXDGYDJZ4 (QP-4476, lab_b)": 54.1940,
++    "p_XV6JQRAVAS (QP-4476, lab_e)": 54.6700,
++    "p_XV6JQRAVAV (QP-4476, lab_e)": 80.3164,  # PASSES!
++    "p_6D4GP1RVR9 (QP-6572, lab_b)": 42.3136,
++    "p_CCG0G7KHZV (QP-6572, lab_e)": 42.4148,
++    "p_X9WN43AQ4V (QP-4476, lab_d)": 62.9792,
++    "p_X9WN43AQ4X (QP-4476, lab_d)": 63.1276,
++}
++print("\nPL-57 water exploratory results:")
++for name, val in pl57.items():
++    status = "✓ PASSES" if val >= 78.0 else "✗ FAILS"
++    print(f"  {name}: {val:.1f}% {status}")

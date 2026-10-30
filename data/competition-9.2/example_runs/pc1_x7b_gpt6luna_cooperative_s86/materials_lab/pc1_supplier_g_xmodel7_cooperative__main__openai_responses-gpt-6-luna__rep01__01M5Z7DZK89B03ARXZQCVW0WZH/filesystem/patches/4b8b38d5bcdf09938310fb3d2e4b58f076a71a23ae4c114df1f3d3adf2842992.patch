@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -1468,3 +1468,9 @@
+ r_T76S98PAA4,qualification,QP-9259,p_Q3WNAPKP6D,heat,seal hold temperature,3,67.37800,°C,lab_a,lab_c,,,,,,,,,,,,
+ r_T76S98PAA5,qualification,QP-9259,p_Q3WNAPKP6D,heat,seal hold temperature,4,67.47700,°C,lab_a,lab_c,,,,,,,,,,,,
+ r_T76S98PAA6,qualification,QP-9259,p_Q3WNAPKP6D,heat,seal hold temperature,5,67.06825,°C,lab_a,lab_c,,,,,,,,,,,,
++r_DWDRHW7MMY,qualification,QP-9980,p_TDMFDVT7PX,strength,edge crush resistance,0,7.20977,kN/m,lab_e,lab_a,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,2JH,3XM,96Y,4ZD,84Z
++r_DWDRHW7MMZ,qualification,QP-9980,p_TDMFDVT7PX,strength,edge crush resistance,1,7.21004,kN/m,lab_e,lab_a,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,2JH,3XM,96Y,4ZD,84Z
++r_DWDRHW7MN0,qualification,QP-9980,p_TDMFDVT7PX,strength,edge crush resistance,2,7.18601,kN/m,lab_e,lab_a,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,2JH,3XM,96Y,4ZD,84Z
++r_DWDRHW7MN1,qualification,QP-9980,p_TDMFDVT7PX,strength,edge crush resistance,3,7.16813,kN/m,lab_e,lab_a,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,2JH,3XM,96Y,4ZD,84Z
++r_DWDRHW7MN2,qualification,QP-9980,p_TDMFDVT7PX,strength,edge crush resistance,4,7.17236,kN/m,lab_e,lab_a,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,2JH,3XM,96Y,4ZD,84Z
++r_DWDRHW7MN3,qualification,QP-9980,p_TDMFDVT7PX,strength,edge crush resistance,5,7.19657,kN/m,lab_e,lab_a,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,2JH,3XM,96Y,4ZD,84Z

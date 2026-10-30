@@ -1,0 +1,16 @@
+--- 
++++ 
+@@ -0,0 +1,13 @@
++
++import pandas as pd
++df = pd.read_csv('records.csv')
++print("Columns:", df.columns.tolist())
++print("\nTotal rows:", len(df))
++print("\nProjects in data:", df['project'].unique() if 'project' in df.columns else "no 'project' col")
++pl57_projs = ['QP-4476', 'QP-6572', 'QP-6843']
++for col in ['project', 'project_id']:
++    if col in df.columns:
++        pl57 = df[df[col].isin(pl57_projs)]
++        print(f"\nPL-57 records ({col}):")
++        print(pl57[['record_id', col, 'prototype_id', 'instrument', 'test', 'kind', 'value']].to_string())
++        break

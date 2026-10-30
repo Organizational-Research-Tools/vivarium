@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++for pid in ['p_GR0A2EFAJE','p_0BF2NYFGJA','p_AWSBED7BNA','p_WZVCBVP8PP']:
++    m=df[df.prototype_id==pid]
++    print(pid, m[m.kind=='qualification'][['record_id','test','value']].to_string(), len(m))
++print(df[df.record_id.str.startswith('r_BWM5GYHM')][['record_id','prototype_id','test','value']].to_string())

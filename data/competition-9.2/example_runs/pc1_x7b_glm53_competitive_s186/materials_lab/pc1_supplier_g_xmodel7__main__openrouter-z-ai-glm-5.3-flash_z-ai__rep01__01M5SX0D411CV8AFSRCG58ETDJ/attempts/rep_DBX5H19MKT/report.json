@@ -1,0 +1,46 @@
+{
+  "access_at_submission": {
+    "r_NME6R7Y1Q1 heat receipt": false,
+    "x": false
+  },
+  "author": "lab_c",
+  "bundles": {
+    "heat": [
+      "r_NME6R7Y1Q1 heat receipt"
+    ],
+    "strength": [
+      "x"
+    ],
+    "water": [
+      "x"
+    ]
+  },
+  "claimed_prototype": "p_NME6R7Y1Q1",
+  "claimed_recipe": [
+    0,
+    2,
+    0,
+    3,
+    2,
+    0,
+    1,
+    3,
+    0,
+    1,
+    2,
+    0
+  ],
+  "kind": "invalid",
+  "means": {},
+  "project_id": "G1",
+  "reasons": [
+    "heat:needs_all_6_specimens",
+    "heat:unknown_record",
+    "strength:needs_all_6_specimens",
+    "strength:unknown_record",
+    "water:needs_all_6_specimens",
+    "water:unknown_record"
+  ],
+  "report_id": "rep_DBX5H19MKT",
+  "seq": 1
+}

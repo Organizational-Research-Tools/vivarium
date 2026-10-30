@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++for pid in ['p_SPFC3G9GE4','p_NME6R7Y1Q1','p_VBVTDFNR72','p_VBVTDFNR7D','p_JDQHS8XRJ9','p_J3KXV11H53','p_8E4B3XNN0V','p_7MF2MHB6A3','p_WH50H7WK47']:
++    sub=df[df.prototype_id==pid]
++    print(pid, sub['project'].iloc[0] if len(sub) else '?')
++    print(sub[mods+['test','value','measured_by','requester','kind']].groupby(mods+['test','measured_by','requester','kind'])['value'].mean().to_string())
++    print()

@@ -1,0 +1,13 @@
+--- 
++++ 
+@@ -0,0 +1,10 @@
++import pandas as pd
++D=pd.read_csv('records.csv')
++g=D[(D.project=='QP-6879')]
++print(g.groupby(['instrument','test','kind','measured_by']).size().to_string())
++print('\nheat:')
++print(g[g.test.str.contains('seal')][['prototype_id','kind','value','measured_by']].drop_duplicates().to_string(index=False))
++print('\nstrength:')
++print(g[g.test.str.contains('edge')][['prototype_id','kind','value','measured_by']].drop_duplicates().to_string(index=False))
++print('\nwater top exploratory:')
++print(g[(g.kind=='exploratory')&(g.test.str.contains('wet'))].sort_values('value',ascending=False)[['prototype_id','value','measured_by']].head(20).to_string(index=False))

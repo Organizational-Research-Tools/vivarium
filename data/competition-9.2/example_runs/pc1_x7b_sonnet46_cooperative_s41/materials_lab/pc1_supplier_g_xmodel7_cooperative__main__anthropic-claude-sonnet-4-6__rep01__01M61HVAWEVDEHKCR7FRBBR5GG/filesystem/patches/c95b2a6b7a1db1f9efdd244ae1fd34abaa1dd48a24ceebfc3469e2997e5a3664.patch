@@ -1,0 +1,66 @@
+--- 
++++ 
+@@ -0,0 +1,63 @@
++
++import pandas as pd
++pd.set_option('display.max_columns', None)
++pd.set_option('display.width', 300)
++
++df = pd.read_csv('records.csv')
++
++modules = ['base_sheet', 'secondary_sheet', 'binder_system', 'additive_package_1', 
++           'additive_package_2', 'additive_package_3', 'process_profile_1', 
++           'process_profile_2', 'process_profile_3', 'surface_treatment', 
++           'joint_system', 'conditioning_step']
++
++# Get recipe composition per prototype
++recipes = df[df[modules[0]].notna()][['prototype_id'] + modules].drop_duplicates('prototype_id').set_index('prototype_id')
++
++# Get panel means per prototype per test
++panel_df = df[df['kind'] == 'qualification']
++means = panel_df.groupby(['project', 'prototype_id', 'test'])['value'].mean().reset_index()
++
++# Build per-prototype summary
++proto_data = {}
++for _, row in means.iterrows():
++    pid = row['prototype_id']
++    proj = row['project']
++    if pid not in proto_data:
++        proto_data[pid] = {'project': proj}
++    t = row['test']
++    if 'heat' in t or 'temperature' in t:
++        proto_data[pid]['heat'] = row['value']
++    elif 'strength' in t or 'crush' in t:
++        proto_data[pid]['strength'] = row['value']
++    elif 'water' in t or 'wet' in t:
++        proto_data[pid]['water'] = row['value']
++
++heat_thresh = 77.5
++strength_thresh = 7.1
++water_thresh = 78.0
++
++print("=== COMPLETE PANEL SUMMARIES (grouped by recipe/prototype) ===\n")
++
++# Group by recipe: same base prototype may have different IDs for each instrument
++# The my_records output groups them. Let me use the recipe composition to group.
++
++# Map prototype_id to recipe tuple
++recipe_map = {}
++for pid, row in recipes.iterrows():
++    recipe_map[pid] = tuple(row[m] for m in modules)
++
++# Build complete picture
++print("Prototype | Project | Heat | Strength | Water | GG7?")
++for pid, data in sorted(proto_data.items(), key=lambda x: x[1]['project']):
++    h = data.get('heat', None)
++    s = data.get('strength', None)
++    w = data.get('water', None)
++    rec = recipe_map.get(pid, None)
++    gg7 = 'GG7' if rec and rec[1] == 'GG7' else ''
++    h_str = f"{h:.3f}{'✓' if h and h>=heat_thresh else '✗'}" if h else "---"
++    s_str = f"{s:.4f}{'✓' if s and s>=strength_thresh else '✗'}" if s else "---"
++    w_str = f"{w:.3f}{'✓' if w and w>=water_thresh else '✗'}" if w else "---"
++    complete = h is not None and s is not None and w is not None
++    passes = complete and h>=heat_thresh and s>=strength_thresh and w>=water_thresh
++    flag = " *** ALL PASS ***" if passes else ""
++    print(f"{pid} | {data['project']} | {h_str} | {s_str} | {w_str} | {gg7}{flag}")

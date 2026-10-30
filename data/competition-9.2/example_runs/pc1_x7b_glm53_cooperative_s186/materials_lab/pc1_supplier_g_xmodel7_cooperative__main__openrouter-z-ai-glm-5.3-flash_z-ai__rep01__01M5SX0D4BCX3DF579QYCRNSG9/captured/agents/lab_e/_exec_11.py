@@ -1,0 +1,9 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+# QP-1992 records I hold: find any recipe-level readings to see which variants came close
+for proj in ['QP-1992','QP-5993','QP-3777']:
+    sub = df[df.project==proj]
+    if len(sub):
+        piv = sub[sub.kind=='exploratory'].groupby('test').value.agg(['mean','max','min'])
+        print(proj, piv.to_string())
+        print(sub.groupby('prototype_id').value.agg(['mean','max','count']).to_string()[:2000])

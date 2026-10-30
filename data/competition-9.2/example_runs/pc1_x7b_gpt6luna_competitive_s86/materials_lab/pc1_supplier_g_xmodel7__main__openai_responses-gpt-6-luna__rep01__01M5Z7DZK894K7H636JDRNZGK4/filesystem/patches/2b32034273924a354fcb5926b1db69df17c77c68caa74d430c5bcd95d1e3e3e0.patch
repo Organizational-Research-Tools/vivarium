@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -599,3 +599,15 @@
+ r_68CP5ZAAD4,qualification,QP-9219,p_NBE0SSEEDQ,strength,edge crush resistance,3,7.18067,kN/m,lab_e,lab_f,,,,,,,,,,,,
+ r_68CP5ZAAD5,qualification,QP-9219,p_NBE0SSEEDQ,strength,edge crush resistance,4,7.20521,kN/m,lab_e,lab_f,,,,,,,,,,,,
+ r_68CP5ZAAD6,qualification,QP-9219,p_NBE0SSEEDQ,strength,edge crush resistance,5,7.21832,kN/m,lab_e,lab_f,,,,,,,,,,,,
++r_FW9H7FQHE0,qualification,QP-9219,p_Q0MEGW920C,heat,seal hold temperature,0,77.75725,°C,lab_a,lab_e,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,84Z
++r_FW9H7FQHE1,qualification,QP-9219,p_Q0MEGW920C,heat,seal hold temperature,1,77.73700,°C,lab_a,lab_e,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,84Z
++r_FW9H7FQHE2,qualification,QP-9219,p_Q0MEGW920C,heat,seal hold temperature,2,77.87575,°C,lab_a,lab_e,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,84Z
++r_FW9H7FQHE3,qualification,QP-9219,p_Q0MEGW920C,heat,seal hold temperature,3,77.36700,°C,lab_a,lab_e,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,84Z
++r_FW9H7FQHE4,qualification,QP-9219,p_Q0MEGW920C,heat,seal hold temperature,4,77.54650,°C,lab_a,lab_e,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,84Z
++r_WQVY81DXAN,qualification,QP-9219,p_Q0MEGW920C,heat,seal hold temperature,5,77.51600,°C,lab_a,lab_e,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,84Z
++r_WQVY81DXAP,qualification,QP-9219,p_Q0MEGW920E,heat,seal hold temperature,0,77.76125,°C,lab_a,lab_e,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,YT2
++r_WQVY81DXAQ,qualification,QP-9219,p_Q0MEGW920E,heat,seal hold temperature,1,77.92150,°C,lab_a,lab_e,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,YT2
++r_WQVY81DXAR,qualification,QP-9219,p_Q0MEGW920E,heat,seal hold temperature,2,77.81300,°C,lab_a,lab_e,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,YT2
++r_WQVY81DXAS,qualification,QP-9219,p_Q0MEGW920E,heat,seal hold temperature,3,77.32150,°C,lab_a,lab_e,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,YT2
++r_WQVY81DXAT,qualification,QP-9219,p_Q0MEGW920E,heat,seal hold temperature,4,77.61025,°C,lab_a,lab_e,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,YT2
++r_WQVY81DXAV,qualification,QP-9219,p_Q0MEGW920E,heat,seal hold temperature,5,77.64800,°C,lab_a,lab_e,8GP,RK7,YC8,S7U,EB7,4CW,RZ8,9HJ,3XM,UX3,JE5,YT2

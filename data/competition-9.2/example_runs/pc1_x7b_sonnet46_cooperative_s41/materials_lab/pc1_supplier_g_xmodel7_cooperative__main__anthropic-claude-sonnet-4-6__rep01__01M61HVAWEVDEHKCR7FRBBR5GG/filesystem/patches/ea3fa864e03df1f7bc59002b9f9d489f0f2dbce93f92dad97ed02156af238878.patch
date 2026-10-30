@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -0,0 +1,14 @@
++
++import pandas as pd
++df = pd.read_csv('records.csv')
++print("Columns:", df.columns.tolist())
++print("Total records:", len(df))
++print()
++water = df[df['instrument'] == 'water'].copy()
++print("Water panel records:")
++panels = water[water['kind'] == 'panel']
++print(panels[['record_id','project','prototype_id','value']].to_string())
++print()
++print("Recent water exploratory:")
++expl = water[water['kind'] == 'exploratory']
++print(expl[['record_id','project','prototype_id','value']].tail(20).to_string())

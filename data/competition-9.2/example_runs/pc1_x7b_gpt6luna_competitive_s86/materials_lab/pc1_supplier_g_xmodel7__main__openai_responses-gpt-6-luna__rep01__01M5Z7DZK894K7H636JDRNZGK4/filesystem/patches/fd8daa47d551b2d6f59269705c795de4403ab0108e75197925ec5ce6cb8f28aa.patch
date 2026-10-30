@@ -1,0 +1,13 @@
+--- 
++++ 
+@@ -0,0 +1,10 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); d=x[x.project=='QP-3617'].copy(); mods=list(x.columns[11:23])
++for m in mods:d[m]=d[m].fillna('')
++for rec,g in d.groupby(mods):
++ h=g[g.instrument=='heat']; s=g[g.instrument=='strength']; w=g[g.instrument=='water']
++ def mean(z):return z.value.mean() if len(z) else None
++ hp=h[h.kind=='qualification']; he=h[h.kind=='exploratory']; sp=s[s.kind=='qualification']; se=s[s.kind=='exploratory']; wp=w[w.kind=='qualification']; we=w[w.kind=='exploratory']
++ hm=mean(hp) if len(hp)>=6 else mean(he); sm=mean(sp) if len(sp)>=6 else mean(se); wm=mean(wp) if len(wp)>=6 else mean(we)
++ if hm is not None and hm>78.0 and (sm is not None and sm>7.15) and (wm is not None and wm>79):
++  print(g.prototype_id.iloc[0], 'H',round(hm,4),'S',round(sm,4),len(sp),len(se),'W',round(wm,4),len(wp),len(we),tuple(rec))

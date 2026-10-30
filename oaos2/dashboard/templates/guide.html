@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% from "_chip.html" import chip, result_chip, gh, help, elig_chip, outcome %}
+{% block title %}plain-language guide — Vivarium{% endblock %}
+{% block content %}
+
+<div id="oaos-guide">
+  <h1 class="gtitle">Experiments with organizations of AI agents</h1>
+  <section class="guide-section" data-guide-min="1">
+    <div class="guide-kicker">The archive · refreshed when this page loads</div>
+    {% if rows %}
+    <div class="tiles" role="group" aria-label="Show runs">
+      <button type="button" class="tile gfilter" data-filter="all" aria-pressed="true"><div class="v">{{ rows|length }}</div><div class="k">all runs</div></button>
+      <button type="button" class="tile gfilter" data-filter="running" aria-pressed="false"><div class="v">{{ in_flight_n }}</div><div class="k">still being written</div></button>
+      <button type="button" class="tile gfilter" data-filter="eligible" aria-pressed="false"><div class="v">{{ tiles.eligible }}</div><div class="k">eligible</div></button>
+      <button type="button" class="tile gfilter" data-filter="censored" aria-pressed="false"><div class="v">{{ tiles.censored }}</div><div class="k">censored</div></button>
+      <button type="button" class="tile gfilter" data-filter="current" aria-pressed="false"><div class="v">{{ current_n }}</div><div class="k">current materials</div></button>
+      <div class="tile"><div class="v">{{ lineages|length }}</div><div class="k">lineages</div></div>
+    </div>
+    <div class="card">
+      <div class="gbar">
+        <h2 style="margin:0">Runs <span class="dim" id="gcount" style="font-weight:400"></span></h2>
+        <input id="gsearch" type="search" placeholder="search run, lineage, task…" aria-label="search runs">
+        <a href="/runs" class="dim">open the full runs index →</a>
+      </div>
+      <table class="gtable" id="gtable">
+        <thead><tr>
+          <th data-sort="t" aria-sort="descending">ran<span class="smark"> ▾</span></th>
+          <th data-sort="name">run<span class="smark"></span></th>
+          <th data-sort="state">state<span class="smark"></span></th>
+          <th data-sort="outcome">{{ gh("outcome") }}<span class="smark"></span></th>
+          <th>notes</th>
+        </tr></thead>
+        <tbody>
+        {% for r in recent %}
+        <tr data-t="{{ r.started or 0 }}" data-name="{{ (r.organization_id or r.run_id)|lower }}"
+            data-state="{{ r.status }}" data-outcome="{{ (r.outcome.label if r.outcome else '')|lower }}"
+            data-text="{{ ((r.organization_id or '') ~ ' ' ~ (r.run_id or '') ~ ' ' ~ (r.lineage or '') ~ ' ' ~ (r.task_pack_id or '') ~ ' ' ~ (r.experiment_id or ''))|lower }}"
+            data-running="{{ 1 if r.status == 'incomplete' else 0 }}" data-censored="{{ 1 if r.censored else 0 }}"
+            data-eligible="{{ 1 if (r.eligibility or {}).get('label') in ('eligible', 'in analysis dataset') else 0 }}"
+            data-current="{{ 1 if r.provenance == 'current' else 0 }}">
+          <td class="dim" style="white-space:nowrap">{{ r.started_label or "—" }}</td>
+          <td><a href="/run/{{ r.run_ref }}" title="{{ r.run_id }}"><strong>{{ (r.organization_id or r.run_id|shortid(24))|wbr }}</strong></a>
+            <span class="dim">· <a href="/run/{{ r.run_ref }}/story">story</a>{% if r.mode == "confirmatory" %} · <strong>confirmatory</strong>{% endif %}</span>
+            <div class="gsub dim">{% if r.lineage %}<a class="dim" href="/runs?lineage={{ r.lineage }}" title="list every run in this lineage">{{ r.lineage|wbr }}</a>{% endif %}{% if r.task_pack_id %} · {{ r.task_pack_id }}{% endif %}</div></td>
+          <td style="white-space:nowrap">{{ chip(r.status, r.irregular) }}<br>{{ elig_chip(r.eligibility) }}</td>
+          <td>{{ outcome(r.outcome) }}</td>
+          <td>{% if r.status in ("incomplete", "idle") %}<span class="sev sev-serious">partial record</span>{% elif r.censored %}<span class="sev sev-serious">censored</span>{% elif r.floor_regime %}<span class="sev sev-serious">floor regime</span>{% endif %}{% if r.n_board_posts or r.n_notes %} <span class="dim" title="board posts / notes">{{ r.n_board_posts or 0 }} / {{ r.n_notes or 0 }} msgs</span>{% endif %}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      <p style="margin:0.5rem 0 0"><button type="button" id="gmore">show more</button></p>
+      <p class="dim" style="margin:0.5rem 0 0">Every run under this archive root, whatever its study. The numbers above filter this table; column headings sort it. “Still being written” can mean active or interrupted. Censored means the clock was wound down or an agent failed; the study's analysis rules decide how to treat such runs.</p>
+    </div>
+    <script>
+    (function () {
+      var table = document.getElementById("gtable"), body = table.tBodies[0];
+      var rows = Array.prototype.slice.call(body.rows), shown = 15, filter = "all", query = "";
+      var sortKey = "t", desc = true;
+      function visible(r) {
+        if (filter !== "all" && r.dataset[filter] !== "1") return false;
+        return !query || r.dataset.text.indexOf(query) >= 0 || r.dataset.name.indexOf(query) >= 0;
+      }
+      function draw() {
+        rows.sort(function (a, b) {
+          var x = a.dataset[sortKey], y = b.dataset[sortKey];
+          if (sortKey === "t") { x = +x; y = +y; }
+          return (x < y ? -1 : x > y ? 1 : 0) * (desc ? -1 : 1);
+        });
+        var n = 0, match = 0;
+        rows.forEach(function (r) {
+          body.appendChild(r);
+          var ok = visible(r); if (ok) match++;
+          r.style.display = ok && n < shown ? "" : "none"; if (ok && n < shown) n++;
+        });
+        document.getElementById("gcount").textContent = "· " + Math.min(n, match) + " of " + match + " shown";
+        document.getElementById("gmore").style.display = match > n ? "" : "none";
+      }
+      document.querySelectorAll(".gfilter").forEach(function (b) {
+        b.addEventListener("click", function () {
+          filter = b.dataset.filter; shown = 15;
+          document.querySelectorAll(".gfilter").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+          draw();
+        });
+      });
+      table.querySelectorAll("th[data-sort]").forEach(function (th) {
+        th.style.cursor = "pointer";
+        th.addEventListener("click", function (ev) {
+          if (ev.target.closest(".help")) return;  // the term explains itself; the rest of the heading sorts
+          var key = th.dataset.sort;
+          desc = key === sortKey ? !desc : key === "t";
+          sortKey = key;
+          table.querySelectorAll("th[data-sort]").forEach(function (h) {
+            h.querySelector(".smark").textContent = "";
+            h.removeAttribute("aria-sort");
+          });
+          th.querySelector(".smark").textContent = desc ? " ▾" : " ▴";
+          th.setAttribute("aria-sort", desc ? "descending" : "ascending");
+          draw();
+        });
+      });
+      document.getElementById("gsearch").addEventListener("input", function (e) { query = e.target.value.trim().toLowerCase(); shown = 15; draw(); });
+      document.getElementById("gmore").addEventListener("click", function () { shown += 25; draw(); });
+      draw();
+    })();
+    </script>
+    {% else %}<p class="dim">No runs are indexed under this runs root yet.</p>{% endif %}
+  </section>
+
+  <section class="guide-hero">
+    <div class="guide-kicker">Vivarium in plain language</div>
+    <h2 class="gexplain">How the platform works</h2>
+    <p class="lede">OAOS2 tests how roles, information sharing, and decision authority affect AI agents’ work. Each study declares what to vary and what to hold constant, then records the agents’ actions and results.</p>
+    <div class="guide-depth" role="group" aria-label="Choose reading depth">
+      <button type="button" data-guide-level="1" aria-pressed="true">1 minute · the idea</button>
+      <button type="button" data-guide-level="2" aria-pressed="false">5 minutes · the experiment</button>
+      <button type="button" data-guide-level="3" aria-pressed="false">15 minutes · how to trust it</button>
+    </div>
+  </section>
+
+
+
+  <section class="guide-section" data-guide-min="1">
+    <div class="guide-kicker">The whole platform in four moves</div>
+    <div class="guide-pipeline" aria-label="How an OAOS2 experiment works">
+      <div class="guide-step"><strong>Design</strong><p>Choose task conditions, organizational arrangements, and the controls needed for a fair comparison.</p></div>
+      <div class="guide-step"><strong>Run</strong><p>Give each role controlled information, authority, time, and resources.</p></div>
+      <div class="guide-step"><strong>Record</strong><p>Save model requests, reported responses, actions, files, messages, and submissions.</p></div>
+      <div class="guide-step"><strong>Compare</strong><p>Score the work and inspect the process that produced it.</p></div>
+    </div>
+    <div class="guide-claims">
+      <div class="guide-claim"><div class="guide-kicker">Research question</div><div class="answer">When does organization help?</div></div>
+      <div class="guide-claim"><div class="guide-kicker">What changes</div><div class="answer">Declared task conditions and organizational arrangements</div></div>
+      <div class="guide-claim"><div class="guide-kicker">What stays central</div><div class="answer">A trustworthy record of every run</div></div>
+    </div>
+    <p class="guide-scope"><strong>Scope:</strong> each result concerns the task, models, materials, and resource limits tested. A successful organization in one study may perform differently elsewhere.</p>
+  </section>
+
+  <section class="guide-section" data-guide-min="2">
+    <div class="guide-kicker">The studies</div>
+    <h2>Where each study's status lives</h2>
+    <p>This page does not restate any study. The <a href="/study-records">study records</a> serve the experiment index, preregistrations, and results saved in the repository; <a href="/library">the library</a> shows the designs the engine actually loads; <a href="/runs">the runs table</a> shows what has been run, grouped by lineage. A design in the library is not evidence that its study is ready or authorized.</p>
+    <div class="guide-claims">
+      <div class="guide-claim"><div class="guide-kicker">Task packs</div><div class="answer">{{ packs|join(", ") or "none loaded" }}</div></div>
+      <div class="guide-claim"><div class="guide-kicker">Lineages with runs</div><div class="answer">{{ lineages|length }}</div></div>
+      <div class="guide-claim"><div class="guide-kicker">Designs in the library</div><div class="answer">{{ n_designs }}</div></div>
+    </div>
+  </section>
+
+  <section class="guide-section" data-guide-min="3">
+    <div class="guide-kicker">How the evidence is made trustworthy</div>
+    <h2>Keep observations separate from interpretations</h2>
+    <div class="grid">
+      <div class="card"><h2>Controlled comparison</h2><p>Tasks, organizations, and experiments are declared separately. Automated checks compare supported controls; researchers must also verify that the materials and measurements test the intended idea.</p></div>
+      <div class="card"><h2>Host controls execution</h2><p>The host controls agent actions and sends individual requests to AI services. Containers isolate tool execution; provider credentials stay on the host.</p></div>
+      <div class="card"><h2>Preserved event record</h2><p>One writer orders events. Archive checks look for missing predecessors, cycles, sequence gaps, event loss, and invalid endings. Passing these checks establishes internal consistency, not the truth of every research claim.</p></div>
+      <div class="card"><h2>Rebuildable views</h2><p>Transcripts, tables, and reports use saved events, settings, model responses, and files. Rebuilding with the same evidence and analysis code gives the same output; saved older reports may reflect older code.</p></div>
+      <div class="card"><h2>Accepted submissions</h2><p>Accepted submissions use a controlled host-side path. The task declares their required form and how they complete an outcome. Private scoring materials stay outside participant workspaces; public feedback needs its own disclosure checks.</p></div>
+      <div class="card"><h2>Separate readiness checks</h2><p>Simulated checks, checks with real models, research readiness, and permission to spend are separate. Passing one does not establish the others.</p></div>
+    </div>
+    <p class="guide-scope"><strong>Limits of the record:</strong> an event log cannot by itself establish expertise, sincerity, or sound reasoning. Researchers need separate measures and evidence for those interpretations.</p>
+  </section>
+
+  <section class="guide-section" data-guide-min="1">
+    <div class="guide-kicker">Choose your next view</div>
+    <div class="guide-reader-paths">
+      <a class="card" href="/runs"><strong>Compare runs →</strong><p>Filter by outcome, mode, organization, clock condition, provenance, and model.</p></a>
+      <a class="card" href="/library"><strong>Inspect experiment designs →</strong><p>See the tasks, organizational forms, and experimental factors the engine actually loads.</p></a>
+      <a class="card" href="/annotations"><strong>Study the process →</strong><p>Use the run flow, communication, files, audit, and researcher coding views.</p></a>
+    </div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const root = document.getElementById("oaos-guide");
+  if (!root) return;
+  const buttons = Array.from(root.querySelectorAll("[data-guide-level]"));
+  const sections = Array.from(root.querySelectorAll("[data-guide-min]"));
+  function setLevel(level) {
+    buttons.forEach((button) => {
+      button.setAttribute("aria-pressed", String(Number(button.dataset.guideLevel) === level));
+    });
+    sections.forEach((section) => {
+      section.dataset.guideHidden = String(Number(section.dataset.guideMin) > level);
+    });
+  }
+  buttons.forEach((button) => button.addEventListener("click", () => {
+    setLevel(Number(button.dataset.guideLevel));
+  }));
+  setLevel(1);
+})();
+</script>
+
+{% endblock %}

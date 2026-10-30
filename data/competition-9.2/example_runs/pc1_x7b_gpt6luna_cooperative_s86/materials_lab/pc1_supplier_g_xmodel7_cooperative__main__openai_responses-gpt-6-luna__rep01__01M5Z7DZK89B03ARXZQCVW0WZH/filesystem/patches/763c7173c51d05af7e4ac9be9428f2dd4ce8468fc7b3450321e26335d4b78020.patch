@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -1719,3 +1719,15 @@
+ r_8T8SG9TZAS,qualification,QP-9259,p_5B8A3997NZ,strength,edge crush resistance,3,7.08344,kN/m,lab_e,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,4ZD,SU2
+ r_8T8SG9TZAT,qualification,QP-9259,p_5B8A3997NZ,strength,edge crush resistance,4,7.10633,kN/m,lab_e,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,4ZD,SU2
+ r_8T8SG9TZAV,qualification,QP-9259,p_5B8A3997NZ,strength,edge crush resistance,5,7.10558,kN/m,lab_e,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,4ZD,SU2
++r_TC0PGAYWVK,qualification,QP-9259,p_CHA87BQ7J8,heat,seal hold temperature,0,78.89575,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,JE5,SU2
++r_TC0PGAYWVM,qualification,QP-9259,p_CHA87BQ7J8,heat,seal hold temperature,1,78.98800,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,JE5,SU2
++r_TC0PGAYWVN,qualification,QP-9259,p_CHA87BQ7J8,heat,seal hold temperature,2,78.86675,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,JE5,SU2
++r_TC0PGAYWVP,qualification,QP-9259,p_CHA87BQ7J8,heat,seal hold temperature,3,79.21700,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,JE5,SU2
++r_TC0PGAYWVQ,qualification,QP-9259,p_CHA87BQ7J8,heat,seal hold temperature,4,78.81725,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,JE5,SU2
++r_TC0PGAYWVR,qualification,QP-9259,p_CHA87BQ7J8,heat,seal hold temperature,5,78.63625,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,JE5,SU2
++r_TC0PGAYWVS,qualification,QP-9259,p_5B8A3997NZ,heat,seal hold temperature,0,79.16475,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,4ZD,SU2
++r_TC0PGAYWVT,qualification,QP-9259,p_5B8A3997NZ,heat,seal hold temperature,1,79.16625,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,4ZD,SU2
++r_TC0PGAYWVV,qualification,QP-9259,p_5B8A3997NZ,heat,seal hold temperature,2,78.60600,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,4ZD,SU2
++r_TC0PGAYWVW,qualification,QP-9259,p_5B8A3997NZ,heat,seal hold temperature,3,78.81650,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,4ZD,SU2
++r_TC0PGAYWVX,qualification,QP-9259,p_5B8A3997NZ,heat,seal hold temperature,4,78.84925,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,4ZD,SU2
++r_TC0PGAYWVY,qualification,QP-9259,p_5B8A3997NZ,heat,seal hold temperature,5,79.06725,°C,lab_d,lab_b,QG7,RK7,P8G,57Y,F8Y,4CW,2A4,9HJ,3XM,T6A,4ZD,SU2

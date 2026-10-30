@@ -1,0 +1,8 @@
+import pandas as pd
+r=pd.read_csv('records.csv');
+print('projects:',r.project.value_counts().to_dict())
+for p in ['QP-5174','QP-9980','QP-7092','QP-9273','QP-3617']:
+ d=r[(r.project==p)&(r.kind=='qualification')]
+ print('\n',p,'nproto',d.prototype_id.nunique())
+ print(d.groupby(['prototype_id','test']).value.agg(['mean','count']).to_string())
+ print(d.drop_duplicates('prototype_id')[['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].to_string(index=False))

@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -527,3 +527,15 @@
+ r_EYXT9FSW9K,qualification,QP-3777,p_25SH4G2DQE,water,wet strength retained,3,79.8972,%,lab_f,lab_b,,,,,,,,,,,,
+ r_EYXT9FSW9M,qualification,QP-3777,p_25SH4G2DQE,water,wet strength retained,4,79.3028,%,lab_f,lab_b,,,,,,,,,,,,
+ r_EYXT9FSW9N,qualification,QP-3777,p_25SH4G2DQE,water,wet strength retained,5,79.4124,%,lab_f,lab_b,,,,,,,,,,,,
++r_122ZNKX01Q,exploratory,QP-5993,p_9HYXQ8SKB7,heat,seal hold temperature,,77.73475,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,V7P,83B,A6U,G5Y
++r_122ZNKX01R,exploratory,QP-5993,p_9HYXQ8SKB7,heat,seal hold temperature,,77.75050,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,Z2E,5JK,2FG,V7P,83B,A6U,G5Y
++r_122ZNKX01S,exploratory,QP-5993,p_9HYXQ8SKB9,heat,seal hold temperature,,78.10700,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,Z2E,8KT,2FG,V7P,84H,A6U,G5Y
++r_122ZNKX01T,exploratory,QP-5993,p_9HYXQ8SKB9,heat,seal hold temperature,,78.17425,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,Z2E,8KT,2FG,V7P,84H,A6U,G5Y
++r_122ZNKX01V,exploratory,QP-5993,p_9HYXQ8SKBB,heat,seal hold temperature,,77.83450,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,A6U,G5Y
++r_122ZNKX01W,exploratory,QP-5993,p_9HYXQ8SKBB,heat,seal hold temperature,,78.64775,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,84H,A6U,G5Y
++r_ZHMK0YA6YB,exploratory,QP-5993,p_9HYXQ8SKBD,heat,seal hold temperature,,78.15000,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,A6U,G5Y
++r_ZHMK0YA6YC,exploratory,QP-5993,p_9HYXQ8SKBD,heat,seal hold temperature,,78.69675,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,5JK,2FG,V7P,83B,A6U,G5Y
++r_ZHMK0YA6YD,exploratory,QP-5993,p_9HYXQ8SKBF,heat,seal hold temperature,,78.13200,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,Z2E,8KT,2FG,V7P,83B,A6U,G5Y
++r_ZHMK0YA6YE,exploratory,QP-5993,p_9HYXQ8SKBF,heat,seal hold temperature,,77.91100,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,Z2E,8KT,2FG,V7P,83B,A6U,G5Y
++r_ZHMK0YA6YF,exploratory,QP-5993,p_TAA78MR48P,heat,seal hold temperature,,72.69200,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,8KT,2FG,V7P,83B,A6U,G5Y
++r_ZHMK0YA6YG,exploratory,QP-5993,p_TAA78MR48P,heat,seal hold temperature,,72.43025,°C,lab_a,lab_a,HP9,2YJ,PU3,8BE,9KR,JN6,8KT,2FG,V7P,83B,A6U,G5Y

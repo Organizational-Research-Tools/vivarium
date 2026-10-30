@@ -1,0 +1,4 @@
+--- 
++++ 
+@@ -0,0 +1 @@
++print(res.tail(6).to_string())

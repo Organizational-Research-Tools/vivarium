@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); z=x[(x.project=='QP-3617') & (x.prototype_id.str.startswith(('p_W3C','p_5ZN')))]; print(z.groupby(['prototype_id','kind','test','measured_by']).value.agg(['count','mean']).to_string())

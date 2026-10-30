@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.project=='QP-8807'];
+for pid,g in q.groupby('prototype_id'):
+ print(pid, 'recipe', ' '.join(str(v) for v in g[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].dropna().drop_duplicates().head(1).values[0]) if g[['base_sheet','secondary_sheet','binder_system']].notna().all(axis=1).any() else '', [(t,round(h.value.mean(),5),len(h)) for t,h in g.groupby('test')])

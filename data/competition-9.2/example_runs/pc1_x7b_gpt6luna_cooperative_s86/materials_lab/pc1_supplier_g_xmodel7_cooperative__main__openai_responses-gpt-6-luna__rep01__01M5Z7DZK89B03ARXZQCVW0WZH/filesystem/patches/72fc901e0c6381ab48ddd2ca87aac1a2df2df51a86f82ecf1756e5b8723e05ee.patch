@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -1366,3 +1366,15 @@
+ r_DKDEX3MQRE,qualification,QP-9980,p_4KP4PJ8S22,heat,seal hold temperature,3,72.40025,°C,lab_a,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,9HJ,3XM,96Y,4ZD,YT2
+ r_DKDEX3MQRF,qualification,QP-9980,p_4KP4PJ8S22,heat,seal hold temperature,4,72.54550,°C,lab_a,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,9HJ,3XM,96Y,4ZD,YT2
+ r_DKDEX3MQRG,qualification,QP-9980,p_4KP4PJ8S22,heat,seal hold temperature,5,72.60800,°C,lab_a,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,9HJ,3XM,96Y,4ZD,YT2
++r_KS92YFKGDG,qualification,QP-9980,p_4KP4PJ8S20,water,wet strength retained,0,81.2272,%,lab_c,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_KS92YFKGDH,qualification,QP-9980,p_4KP4PJ8S20,water,wet strength retained,1,80.4552,%,lab_c,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_KS92YFKGDJ,qualification,QP-9980,p_4KP4PJ8S20,water,wet strength retained,2,80.4008,%,lab_c,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_KS92YFKGDK,qualification,QP-9980,p_4KP4PJ8S20,water,wet strength retained,3,80.6292,%,lab_c,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_KS92YFKGDM,qualification,QP-9980,p_4KP4PJ8S20,water,wet strength retained,4,80.8280,%,lab_c,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_KS92YFKGDN,qualification,QP-9980,p_4KP4PJ8S20,water,wet strength retained,5,81.0412,%,lab_c,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,QE8,3XM,96Y,4ZD,YT2
++r_KS92YFKGDP,qualification,QP-9980,p_4KP4PJ8S22,water,wet strength retained,0,81.2968,%,lab_c,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,9HJ,3XM,96Y,4ZD,YT2
++r_KS92YFKGDQ,qualification,QP-9980,p_4KP4PJ8S22,water,wet strength retained,1,80.4604,%,lab_c,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,9HJ,3XM,96Y,4ZD,YT2
++r_KS92YFKGDR,qualification,QP-9980,p_4KP4PJ8S22,water,wet strength retained,2,80.6628,%,lab_c,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,9HJ,3XM,96Y,4ZD,YT2
++r_KS92YFKGDS,qualification,QP-9980,p_4KP4PJ8S22,water,wet strength retained,3,80.6500,%,lab_c,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,9HJ,3XM,96Y,4ZD,YT2
++r_KS92YFKGDT,qualification,QP-9980,p_4KP4PJ8S22,water,wet strength retained,4,80.8496,%,lab_c,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,9HJ,3XM,96Y,4ZD,YT2
++r_KS92YFKGDV,qualification,QP-9980,p_4KP4PJ8S22,water,wet strength retained,5,80.9716,%,lab_c,lab_b,SQ8,D5U,T5L,7TW,F8Y,4CW,2A4,9HJ,3XM,96Y,4ZD,YT2

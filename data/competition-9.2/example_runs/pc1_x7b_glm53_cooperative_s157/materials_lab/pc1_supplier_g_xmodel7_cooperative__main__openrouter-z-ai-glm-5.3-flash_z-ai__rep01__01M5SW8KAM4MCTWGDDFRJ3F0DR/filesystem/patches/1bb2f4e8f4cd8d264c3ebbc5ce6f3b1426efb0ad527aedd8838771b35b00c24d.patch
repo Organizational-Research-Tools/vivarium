@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -0,0 +1,4 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++prot=sorted(set(df['prototype_id'].dropna()))
++print([p for p in prot if 'GP' in p or 'GJ' in p or p.endswith('AP') or 'GG' in p or 'GM' in p or 'VE' in p])

@@ -1,0 +1,39 @@
+--- 
++++ 
+@@ -0,0 +1,36 @@
++
++import pandas as pd
++
++# Summarize the situation clearly
++print("=== SITUATION SUMMARY ===")
++print()
++print("Thresholds: heat ≥77.5°C (step=0.25°C), strength ≥7.1 kN/m (step=0.03), water ≥78% (step=0.4%)")
++print()
++print("CRITICAL FINDINGS:")
++print()
++print("1. QP-3473-A(GG7): PASSES ALL 3 [heat=79.53, str=7.25, water=80.85] but uses GG7 (BANNED)")
++print("   Recipe: P2G/GG7/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8")
++print()
++print("2. QP-3473-B/C: fail water (~73% vs 78% needed) → wrong pp3=N7N + binder=NN7")
++print("3. QP-7212-A/B/C: fail water (~73.4% vs 78% needed) → wrong pp3=N7N")
++print("4. QP-6843-A/B: fail heat (~74.5°C vs 77.5°C needed) → recipe issues")
++print("5. QP-4476-A: fails strength (6.70 vs 7.1 needed)")
++print("6. QP-3089-A: fails strength (6.46 vs 7.1 needed) ")
++print("   QP-3089-B(GG7): str=7.25 (passes!) but GG7 banned")
++print("7. QP-8265-A: fails all three tests badly")
++print("8. QP-6572, QP-8607, QP-7604: NO DATA yet")
++print()
++print("KEY INSIGHT:")
++print("The GG7 recipe A for QP-3473 uses pp3=X9F + binder=8BB → good water")
++print("If we replace GG7 with YX8/3HW/5BU, water would drop ~0.8% but still ~80% → should still pass!")
++print()
++print("Recipe A composition: P2G/[GG7→?]/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8")
++print()
++print("Similarly for QP-3089: recipe B uses GG7/NN7/57T → strength 7.25")
++print("Replace GG7 with YX8: strength drops ~0.06 → ~7.19 → still passes!")
++print()
++print("PLAN: Create non-GG7 variants of the passing recipes")
++print("  - QP-3473: try YX8, 3HW, 5BU as secondary_sheet")
++print("  - QP-3089: try YX8, 3HW as secondary_sheet")
++print("  - QP-7212: try X9F in pp3 + 8BB binder")
++print("  - Need to check unexplored projects QP-6572, QP-8607, QP-7604")

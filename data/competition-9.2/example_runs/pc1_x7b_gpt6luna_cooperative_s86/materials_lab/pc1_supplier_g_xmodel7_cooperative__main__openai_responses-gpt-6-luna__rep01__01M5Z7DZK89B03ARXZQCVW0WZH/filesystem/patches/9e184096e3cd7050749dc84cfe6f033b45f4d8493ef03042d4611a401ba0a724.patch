@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd, os
++p='records.csv'
++print(os.path.exists(p), os.path.getsize(p) if os.path.exists(p) else None)
++if os.path.exists(p):
++ d=pd.read_csv(p); print(d.shape); print(d.head().to_string()); print(d.columns.tolist())

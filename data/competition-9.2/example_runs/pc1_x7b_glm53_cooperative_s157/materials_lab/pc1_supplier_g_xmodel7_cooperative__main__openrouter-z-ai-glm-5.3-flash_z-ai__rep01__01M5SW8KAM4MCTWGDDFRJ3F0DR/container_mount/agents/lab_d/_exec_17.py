@@ -1,0 +1,5 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+print(df.columns.tolist())
+h=df[(df.get('prototype_id')=='p_JP4D3NK6YX')|(df.get('record_id','').str.startswith('r_JP4D3NK6Y',na=False))]
+print(h.to_string())

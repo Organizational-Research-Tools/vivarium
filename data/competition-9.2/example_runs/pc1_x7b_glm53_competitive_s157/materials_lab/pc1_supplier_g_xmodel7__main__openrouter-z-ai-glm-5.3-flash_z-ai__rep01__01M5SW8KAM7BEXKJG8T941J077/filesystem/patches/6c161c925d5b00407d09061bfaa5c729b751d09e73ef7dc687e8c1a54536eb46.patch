@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -476,3 +476,14 @@
+ r_6Q50PHV00Y,exploratory,QP-3068,p_9SM58ZQM05,strength,edge crush resistance,,7.22639,kN/m,lab_b,lab_b,ZY6,LB3,KX7,X2P,Q7S,8P4,RF3,X9Z,G4B,9B8,G7L,9VC
+ r_6Q50PHV00Z,exploratory,QP-3068,p_9SM58ZQM07,strength,edge crush resistance,,6.52916,kN/m,lab_b,lab_b,ZY6,LB3,KX7,X2P,Q7S,8P4,RF3,X9Z,G4B,VR3,G7L,9VC
+ r_6Q50PHV010,exploratory,QP-3068,p_9SM58ZQM09,strength,edge crush resistance,,7.23956,kN/m,lab_b,lab_b,ZY6,LB3,KX7,X2P,Q7S,8P4,RF3,X9Z,G4B,WN7,34U,9VC
++r_ZVWM8NRTQ9,exploratory,QP-3068,p_BS1JDEDRCR,water,wet strength retained,,71.7788,%,lab_f,lab_b,ZY6,LB3,KX7,X2P,Q7S,8P4,RF3,X9Z,G4B,WN7,G7L,3DC
++r_ZVWM8NRTQA,exploratory,QP-3068,p_BS1JDEDRCT,water,wet strength retained,,78.8868,%,lab_f,lab_b,ZY6,LB3,KX7,X2P,Q7S,8P4,RF3,X9Z,G4B,WN7,G7L,W5T
++r_ZVWM8NRTQB,exploratory,QP-3068,p_BS1JDEDRCW,water,wet strength retained,,78.7604,%,lab_f,lab_b,ZY6,LB3,KX7,X2P,Q7S,8P4,RF3,X9Z,A7P,WN7,G7L,9VC
++r_ZVWM8NRTQC,exploratory,QP-3068,p_PPNKRW75EF,water,wet strength retained,,79.1376,%,lab_f,lab_b,ZY6,LB3,KX7,X2P,Q7S,8P4,8Q7,X9Z,G4B,WN7,G7L,9VC
++r_ZVWM8NRTQD,exploratory,QP-3068,p_PPNKRW75EH,water,wet strength retained,,79.1036,%,lab_f,lab_b,ZY6,LB3,KX7,X2P,Q7S,8P4,3JQ,X9Z,G4B,WN7,G7L,9VC
++r_PYB6MNHYSC,exploratory,QP-3068,p_PPNKRW75EK,water,wet strength retained,,79.5040,%,lab_f,lab_b,ZY6,LB3,KX7,X2P,Q7S,29B,RF3,X9Z,G4B,WN7,G7L,9VC
++r_PYB6MNHYSD,exploratory,QP-3068,p_PPNKRW75EN,water,wet strength retained,,80.1664,%,lab_f,lab_b,ZY6,LB3,KX7,X2P,Q7S,6UD,RF3,X9Z,G4B,WN7,G7L,9VC
++r_PYB6MNHYSE,exploratory,QP-3068,p_PPNKRW75EQ,water,wet strength retained,,79.8152,%,lab_f,lab_b,ZY6,LB3,KX7,X2P,E8S,8P4,RF3,X9Z,G4B,WN7,G7L,9VC
++r_PYB6MNHYSF,exploratory,QP-3068,p_PPNKRW75ES,water,wet strength retained,,79.8356,%,lab_f,lab_b,ZY6,LB3,KX7,X2P,6DD,8P4,RF3,X9Z,G4B,WN7,G7L,9VC
++r_PYB6MNHYSG,exploratory,QP-3068,p_PPNKRW75EV,water,wet strength retained,,78.9640,%,lab_f,lab_b,ZY6,LB3,KX7,X2P,RB3,8P4,RF3,X9Z,G4B,WN7,G7L,9VC
++r_PYB6MNHYSH,exploratory,QP-3068,p_PPNKRW75EX,water,wet strength retained,,69.0844,%,lab_f,lab_b,ZY6,LB3,KX7,FZ6,Q7S,8P4,RF3,X9Z,G4B,WN7,G7L,9VC

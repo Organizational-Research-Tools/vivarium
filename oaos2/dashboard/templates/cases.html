@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import help, howto %}
+{% block title %}cases — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / cases</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "cases") }}
+
+{% call howto() %}
+  <p><strong>Cases.</strong> Every item the environment delivered and the organization had to handle: who was notified when, who filed, who disposed, what the fuse was. Scorer verdicts appear only when you switch the lens on.</p>
+  {% if lens %}<p><strong>Committer ∈ notified.</strong> derived lens: whether the role that committed the disposition was among the roles the environment notified — a join of two observables, not a construct.</p>{% endif %}
+{% endcall %}
+
+<div class="card">
+  <h2>Cases ({{ idx.rows|length }})
+    <span class="dim" style="font-weight:400">· index from {{ idx.index_source }}{% for n in idx.notes %} · {{ n }}{% endfor %}
+    · <a href="/run/{{ run_ref }}/casebook.md" target="_blank">casebook.md</a>
+    · {% if lens %}<a href="/run/{{ run_ref }}/cases">hide verdicts</a>{% else %}<a href="/run/{{ run_ref }}/cases?lens=1">show verdicts and the derived lens</a>{% endif %}</span>
+  </h2>
+  {% if not idx.rows %}<p class="dim">No items — this archive has no environment arrivals or case-routed commitments.</p>{% else %}
+  <div style="overflow-x:auto">
+  <table>
+    <thead><tr>
+      <th>item</th><th>kind</th><th class="num">arrived</th><th class="num">fuse</th><th>notified</th>
+      <th>filings (role @ day)</th><th>disposed</th><th class="num">lapses</th><th class="num">bounced</th>
+      {% if lens %}<th>committer ∈ notified</th><th>outcome</th><th>verdict</th><th class="num">lost</th>{% endif %}
+    </tr></thead>
+    <tbody>
+    {% for r in idx.rows %}
+      <tr>
+        <td><a href="/run/{{ run_ref }}/case/{{ r.item_id }}"><code>{{ r.item_id }}</code></a></td>
+        <td>{{ r.kind }}</td>
+        <td class="num">{{ r.arrival_day if r.arrival_day is not none else "—" }}</td>
+        <td class="num">{{ r.deadline_day if r.deadline_day is not none else "—" }}</td>
+        <td>{% for n in r.notified %}<span class="adot-{{ aslot.get(n, -1) }}"></span>{{ n }} {% endfor %}</td>
+        <td>{% for role, day in r.filings %}{{ role }} @{{ day }}{% if not loop.last %}, {% endif %}{% endfor %}</td>
+        <td>{% if r.disposer %}{{ r.disposer }} @{{ r.disposed_day }}{% if r.disposition %} · {{ r.disposition }}{% endif %}{% if r.late %} <span class="sev sev-warning">late</span>{% endif %}{% else %}<span class="dim">—</span>{% endif %}</td>
+        <td class="num">{{ r.lapses or "" }}</td>
+        <td class="num">{{ r.interventions or "" }}</td>
+        {% if lens %}
+        <td>{% if r.committer_in_notified is none %}—{% elif r.committer_in_notified %}yes{% else %}<strong>no</strong>{% endif %}</td>
+        <td>{{ r.score.outcome if r.score else "—" }}</td>
+        <td>{% if r.score %}{{ r.score.verdict or "—" }}{% if r.score.verdict_source %} <span class="dim">({{ r.score.verdict_source }})</span>{% endif %}{% if r.score.verdict == "undetermined" or r.score.verdict_source == "none" %} <span class="sev sev-warning" title="the classifier could not determine the choice — verify by reading">read</span>{% endif %}{% else %}—{% endif %}</td>
+        <td class="num">{{ "%.2f"|format(r.score.lost_benefit) if r.score and r.score.lost_benefit is not none else "" }}</td>
+        {% endif %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+  {% if lens and report_meta.source in ("rendered", "store") %}<p class="dim" style="margin-bottom:0">verdicts from a report re-rendered at HEAD · analysis <code>{{ report_meta.identity }}</code></p>{% endif %}
+  {% endif %}
+</div>
+
+{% endblock %}

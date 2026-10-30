@@ -1,0 +1,61 @@
+--- 
++++ 
+@@ -0,0 +1,58 @@
++
++import numpy as np
++
++# C1-C4 results for combined recipes
++c_results = {
++    # QP-6843 (PL-57)
++    "QP-6843_C1_M2P_QJ2_L6C": [5.95058, 5.91371, 5.92253],
++    "QP-6843_C2_NN7_QJ2_L6C": [5.22206, 5.14172, 5.23259],
++    "QP-6843_C3_M2P_57T_L6C": [5.87300, 5.95856, 5.94563],
++    "QP-6843_C4_M2P_QJ2_44B": [5.91944, 5.90918, 5.90804],
++    # QP-3089 (PL-98)
++    "QP-3089_C1_M2P_QJ2_L6C": [6.52907, 6.54833, 6.50426],
++    "QP-3089_C2_NN7_QJ2_L6C": [5.75594, 5.79584, 5.77565],
++    "QP-3089_C3_M2P_57T_L6C": [6.43655, 6.48824, 6.49478],
++    "QP-3089_C4_M2P_QJ2_44B": [5.89265, 5.83571, 5.85518],
++    # QP-7212 (PL-95)
++    "QP-7212_C1_M2P_QJ2_L6C": [6.57914, 6.54578, 6.56363],
++    "QP-7212_C2_NN7_QJ2_L6C": [6.56621, 6.55598, 6.61118],
++    "QP-7212_C3_M2P_57T_L6C": [6.58820, 6.59327, 6.64541],
++    "QP-7212_C4_M2P_QJ2_44B": [6.53735, 6.63650, 6.65315],
++    # QP-3473 (PL-95)
++    "QP-3473_C1_M2P_QJ2_L6C": [5.91863, 5.95106, 5.91221],
++    "QP-3473_C2_NN7_QJ2_L6C": [5.91740, 5.85839, 5.86097],
++    "QP-3473_C3_M2P_57T_L6C": [5.87870, 5.93174, 5.94203],
++    "QP-3473_C4_M2P_QJ2_44B": [6.64835, 6.66638, 6.61619],
++}
++
++threshold = 7.1
++print("=== C1-C4 STRENGTH vs PRIOR v2 ===\n")
++prior = {"QP-6843": 7.317, "QP-3089": 7.150, "QP-7212": 6.628, "QP-3473": 6.641}
++for k, v in c_results.items():
++    m = np.mean(v)
++    proj = k.split('_')[0]+'_'+k.split('_')[1]
++    status = "PASS ✓" if m >= threshold else "FAIL"
++    print(f"  {k:<38} {m:.3f} {status}")
++
++print("\n=== CRITICAL INSIGHT ===")
++print("""
++v2 recipe (4PE AP3, 57U joint): QP-6843=7.317 ✓  QP-3089=7.150 ✓
++C1 recipe (L6C AP3, 9FU joint): QP-6843=5.927 ✗  QP-3089=6.527 ✗
++
++Removing 4PE(AP3)+57U(joint) CRASHES strength by 1.39 kN/m (QP-6843) and 0.62 kN/m (QP-3089)!
++These "bad for heat" modules are CRITICAL for strength — direct conflict!
++
++STRATEGY: The v2 recipe (with C5Q + bad-heat modules 4PE+57U) must be tested for heat.
++If the C5Q benefit (+12°C) is only partially cancelled by 4PE+57U penalties,
++v2 might still clear the 77.5°C heat threshold.
++
++PRIORITY: Ask lab_a to heat-test QP-6843 v2 (p_6PWNP7BFF0) and QP-3089 v2 (p_853B4YQGHJ) ASAP!
++
++For QP-3473 C4 (44B AP3, 9FU joint): 6.644 — same as v2 (6.641), so 44B=4PE for strength
++""")
++
++print("\n=== PL-95 STRENGTH PROBLEM ===")
++print("QP-7212 BEST: C3/C4 at ~6.62 kN/m — still 16 steps below 7.1 threshold")
++print("QP-3473 BEST: v2/C4 at ~6.64 kN/m — still 15 steps below threshold")
++print("QP-8607 BEST: v3 at ~6.32 kN/m — worst PL-95 project for strength")
++print("\nNeed to find recipe that adds ~0.47 kN/m to QP-7212/QP-3473")

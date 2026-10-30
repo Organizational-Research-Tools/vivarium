@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++g=df.groupby(['prototype_id','instrument','kind'])['value'].agg(['mean','count'])
++pd.set_option('display.max_rows',200)
++print(g.to_string())

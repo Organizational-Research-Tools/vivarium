@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -0,0 +1,9 @@
++import pandas as pd
++r=pd.read_csv('records.csv'); vals={'seal hold temperature':78.625,'edge crush resistance':7.235,'wet strength retained':79.8}; g=r[r.kind.eq('qualification')].groupby(['project','prototype_id','test']).value.agg(['mean','count']).reset_index(); p=g.pivot(index=['project','prototype_id'],columns='test',values='mean'); n=g.pivot(index=['project','prototype_id'],columns='test',values='count'); p=p.rename(columns={'seal hold temperature':'H','edge crush resistance':'S','wet strength retained':'W'}); n=n.rename(columns={'seal hold temperature':'Hn','edge crush resistance':'Sn','wet strength retained':'Wn'}); q=p.join(n).reset_index(); q=q[q.project.isin(['QP-9259','QP-9980','QP-5174','QP-6879','QP-3617','QP-9273'])];
++for proj,df in q.groupby('project'):
++ print('\n',proj)
++ for _,z in df.iterrows():
++  t=[]
++  for col,name,ct in [('H','H','Hn'),('S','S','Sn'),('W','W','Wn')]:
++   if pd.notna(z.get(col)): t.append(f'{name}={z[col]:.4f}({int(z[ct])})')
++  print(z.prototype_id,' '.join(t))

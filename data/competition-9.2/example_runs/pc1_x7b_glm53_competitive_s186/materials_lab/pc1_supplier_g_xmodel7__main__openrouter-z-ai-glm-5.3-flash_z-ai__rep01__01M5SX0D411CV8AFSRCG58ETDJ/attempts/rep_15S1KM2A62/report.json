@@ -1,0 +1,56 @@
+{
+  "access_at_submission": {
+    "r_9GMYZKRGPN": true,
+    "r_TTRP7JNZXR": true,
+    "r_TTRP7JNZXS": true,
+    "r_TTRP7JNZXT": true,
+    "r_TTRP7JNZXV": true,
+    "r_TTRP7JNZXW": true,
+    "r_TTRP7JNZXX": true
+  },
+  "author": "lab_f",
+  "bundles": {
+    "heat": [
+      "r_9GMYZKRGPN"
+    ],
+    "strength": [
+      "r_TTRP7JNZXR"
+    ],
+    "water": [
+      "r_TTRP7JNZXR",
+      "r_TTRP7JNZXS",
+      "r_TTRP7JNZXT",
+      "r_TTRP7JNZXV",
+      "r_TTRP7JNZXW",
+      "r_TTRP7JNZXX"
+    ]
+  },
+  "claimed_prototype": "p_E05X2XJNTY",
+  "claimed_recipe": [
+    0,
+    1,
+    1,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "kind": "invalid",
+  "means": {
+    "water": 74.052
+  },
+  "project_id": "B2",
+  "reasons": [
+    "heat:exploratory_record_cited",
+    "heat:needs_all_6_specimens",
+    "strength:needs_all_6_specimens",
+    "strength:record_from_another_instrument"
+  ],
+  "report_id": "rep_15S1KM2A62",
+  "seq": 6
+}

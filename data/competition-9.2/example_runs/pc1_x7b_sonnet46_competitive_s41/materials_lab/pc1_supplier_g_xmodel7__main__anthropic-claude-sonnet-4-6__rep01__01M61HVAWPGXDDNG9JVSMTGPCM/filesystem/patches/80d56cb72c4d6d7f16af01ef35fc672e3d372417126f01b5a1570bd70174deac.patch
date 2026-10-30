@@ -1,0 +1,49 @@
+--- 
++++ 
+@@ -0,0 +1,46 @@
++
++import pandas as pd
++
++df = pd.read_csv('records.csv')
++
++# Summary of what I know:
++# STRENGTH: passes with ZW3+NN7+VA8 (7.23), 7TJ+T9M+VA8 (7.19), 7TJ+NN7+VA8 (7.18)
++#           fails with 5TZ+NN7+VA8 (6.73), 7KL+NN7+VA8 (6.66)
++# WATER: passes with DA9 base + N4L pp3 (79-79.1%)
++#        fails with P2G base + N7N pp3 (73%)
++# HEAT: DA9+NN7+VA8 recipes tend to pass (78-78.6°C)
++#       JA8/P2G+T9M+YX8 tends to fail (72.7-72.9°C)
++
++# My target recipes for each product line:
++# PL-98 (QP-3089): DA9, 3HW, NN7, QJ2, B3P, 44B, UP5, VA8, N4L, ZW3, DL8, YV2
++#                  (from water-passing recipe, change surface 5TZ->ZW3 to fix strength)
++#                  DA9, 3HW, NN7, QJ2, B3P, 44B, UP5, VA8, N4L, 7TJ, DL8, YV2
++#                  (same but 7TJ surface)
++# PL-57 (QP-4476): same recipe compositions
++# PL-95 (QP-7212): DA9, YX8, NN7, 5FE, LD3, 4PE, 4QB, VA8, N4L, 7TJ, 9FU, 3N8
++#                  (fix P2G->DA9, N7N->N4L to fix water, keep strength-passing surface)
++
++# Module order: base_sheet, secondary_sheet, binder_system, additive_package_1,
++#               additive_package_2, additive_package_3, process_profile_1, process_profile_2,
++#               process_profile_3, surface_treatment, joint_system, conditioning_step
++
++recipes_to_try = {
++    # PL-98 candidates (QP-3089)
++    'QP3089_A': ['DA9','3HW','NN7','QJ2','B3P','44B','UP5','VA8','N4L','ZW3','DL8','YV2'],  # 5TZ->ZW3
++    'QP3089_B': ['DA9','3HW','NN7','QJ2','B3P','44B','UP5','VA8','N4L','7TJ','DL8','YV2'],  # 5TZ->7TJ
++    'QP3089_C': ['DA9','YX8','NN7','QJ2','B3P','44B','UP5','VA8','N4L','ZW3','DL8','YV2'],  # 3HW->YX8, 5TZ->ZW3
++    'QP3089_D': ['DA9','YX8','NN7','QJ2','B3P','44B','UP5','VA8','N4L','7TJ','DL8','YV2'],  # 3HW->YX8, 5TZ->7TJ
++    # PL-57 candidates (QP-4476)
++    'QP4476_A': ['DA9','3HW','NN7','QJ2','B3P','44B','UP5','VA8','N4L','ZW3','DL8','YV2'],  # same recipe
++    'QP4476_B': ['DA9','3HW','NN7','QJ2','B3P','44B','UP5','VA8','N4L','7TJ','DL8','YV2'],  # 7TJ surface
++    'QP4476_C': ['DA9','YX8','NN7','QJ2','B3P','44B','UP5','VA8','N4L','7TJ','DL8','YV2'],  # YX8 secondary
++    # PL-95 candidates (QP-7212)
++    'QP7212_A': ['DA9','YX8','NN7','5FE','LD3','4PE','4QB','VA8','N4L','7TJ','9FU','3N8'],  # P2G->DA9, N7N->N4L
++    'QP7212_B': ['DA9','YX8','NN7','5FE','LD3','4PE','4QB','VA8','N4L','ZW3','9FU','3N8'],  # ZW3 surface
++    'QP7212_C': ['DA9','YX8','NN7','QJ2','B3P','44B','UP5','VA8','N4L','7TJ','DL8','3N8'],  # combine best
++    'QP7212_D': ['DA9','YX8','NN7','R5N','LD3','L6C','4QB','VA8','N4L','ZW3','DL8','3N8'],  # based on XX5NG2R0A5
++    'QP7212_E': ['DA9','YX8','NN7','R5N','LD3','L6C','4QB','VA8','N4L','7TJ','DL8','3N8'],  # 7TJ variant
++}
++
++for name, recipe in recipes_to_try.items():
++    print(f"{name}: {recipe}")

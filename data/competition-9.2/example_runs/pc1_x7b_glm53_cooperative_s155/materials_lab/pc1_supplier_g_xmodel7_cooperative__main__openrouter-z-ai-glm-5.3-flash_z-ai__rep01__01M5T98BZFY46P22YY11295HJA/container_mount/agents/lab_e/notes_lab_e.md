@@ -1,0 +1,11 @@
+# lab_e notes, end-of-session recap
+Credits: 5/5. All three product lines qualified. Open projects QP-3589/8350/4503/1826 judged structurally blocked (water/heat caps) per lab_c/lab_f/lab_a/lab_b sweeps; board pivoted to margin-hedging standing reports as revision insurance.
+
+QP-2342 margin hunt (thinnest standing 0.84, bound by BOTH heat 0.84 and water ~0.84):
+- Standing recipe: H6K,9AF,6ZC,M5L,Y6H,J3Y,3RB,8WN,49R,NP6,8K5,23Y. My p_QB1GR2SA65 = same recipe, strength panel 7.275 (r_V5P09HY5G1..G6). lab_a p_GRRDR2MP4W same recipe: heat 77.71, water 79.53. No gain by refiling.
+- lab_b's p_9JS2853ERS (7J8, W9T, 6FZ variant): water panel 79.815 (margin 1.54), strength panel 7.266. Heat missing. lab_a copies p_BJF6AVTYRP/RR heat reads 77.05/77.21 — likely below 77.5 at panel. NOT an improvement.
+- Workaround for refusals: self-register identical recipe.
+- My older QP-2342 filing (p_JX7F5S9FCK family, 79Y) — stays off table per Association request.
+
+Standing margins: QP-1454 2.75, QP-1466 1.14 (lab_d), QP-6489 1.26, QP-2342 0.84, QP-4586 3.27. Second-thinnest QP-1466 (bound by? — heat likely; LW5→23Y lifted strength there).
+My strength capacity: ~500+ units. Ready to strength-screen any margin-lifter registered+granted.

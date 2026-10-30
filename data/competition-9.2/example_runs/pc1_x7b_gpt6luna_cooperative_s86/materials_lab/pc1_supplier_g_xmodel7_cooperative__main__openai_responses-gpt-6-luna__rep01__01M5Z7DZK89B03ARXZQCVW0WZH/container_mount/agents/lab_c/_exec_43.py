@@ -1,0 +1,13 @@
+import pandas as pd
+r=pd.read_csv('records.csv'); q=r[r.kind.eq('qualification')]
+g=q.groupby(['project','prototype_id','test']).value.mean().unstack('test')
+print(g.columns.tolist())
+for p in ['QP-9259','QP-5174','QP-9980','QP-6879','QP-3617','QP-9273','QP-9219','QP-7092']:
+ print('\n',p)
+ x=g.loc[p].copy() if p in g.index.get_level_values(0) else None
+ if x is None: continue
+ x['mH']=(x.get('seal hold temperature, °C',pd.Series(index=x.index,dtype=float))-78.625)/.25
+ x['mS']=(x.get('edge crush resistance, kN/m',pd.Series(index=x.index,dtype=float))-7.235)/.03
+ x['mW']=(x.get('wet strength retained, %',pd.Series(index=x.index,dtype=float))-79.8)/.4
+ x['minmargin']=x[['mH','mS','mW']].min(axis=1,skipna=False)
+ print(x.sort_values('minmargin',ascending=False).head(10).to_string())

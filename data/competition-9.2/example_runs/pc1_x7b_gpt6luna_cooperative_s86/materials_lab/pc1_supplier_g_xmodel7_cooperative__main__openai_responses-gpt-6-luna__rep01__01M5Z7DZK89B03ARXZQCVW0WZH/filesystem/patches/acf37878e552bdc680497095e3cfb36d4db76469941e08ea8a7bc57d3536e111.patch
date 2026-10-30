@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -239,3 +239,15 @@
+ r_9Z3QR9BW7Q,qualification,QP-3617,p_DYASB52DDN,heat,seal hold temperature,3,78.70725,°C,lab_d,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
+ r_9Z3QR9BW7R,qualification,QP-3617,p_DYASB52DDN,heat,seal hold temperature,4,78.84900,°C,lab_d,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
+ r_9Z3QR9BW7S,qualification,QP-3617,p_DYASB52DDN,heat,seal hold temperature,5,78.34850,°C,lab_d,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_WYFK6B3HT6,qualification,QP-3617,p_DYASB52DDN,water,wet strength retained,0,71.0656,%,lab_f,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_WYFK6B3HT7,qualification,QP-3617,p_DYASB52DDN,water,wet strength retained,1,71.3916,%,lab_f,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_WYFK6B3HT8,qualification,QP-3617,p_DYASB52DDN,water,wet strength retained,2,71.3960,%,lab_f,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_WYFK6B3HT9,qualification,QP-3617,p_DYASB52DDN,water,wet strength retained,3,70.4344,%,lab_f,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_WYFK6B3HTA,qualification,QP-3617,p_DYASB52DDN,water,wet strength retained,4,70.6076,%,lab_f,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_WYFK6B3HTB,qualification,QP-3617,p_DYASB52DDN,water,wet strength retained,5,70.5816,%,lab_f,lab_d,QG7,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_WYFK6B3HTC,qualification,QP-3617,p_DYASB52DDH,water,wet strength retained,0,70.5920,%,lab_f,lab_d,SQ8,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_WYFK6B3HTD,qualification,QP-3617,p_DYASB52DDH,water,wet strength retained,1,70.7972,%,lab_f,lab_d,SQ8,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_WYFK6B3HTE,qualification,QP-3617,p_DYASB52DDH,water,wet strength retained,2,71.0324,%,lab_f,lab_d,SQ8,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_WYFK6B3HTF,qualification,QP-3617,p_DYASB52DDH,water,wet strength retained,3,70.3216,%,lab_f,lab_d,SQ8,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_WYFK6B3HTG,qualification,QP-3617,p_DYASB52DDH,water,wet strength retained,4,70.2812,%,lab_f,lab_d,SQ8,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_WYFK6B3HTH,qualification,QP-3617,p_DYASB52DDH,water,wet strength retained,5,70.6980,%,lab_f,lab_d,SQ8,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z

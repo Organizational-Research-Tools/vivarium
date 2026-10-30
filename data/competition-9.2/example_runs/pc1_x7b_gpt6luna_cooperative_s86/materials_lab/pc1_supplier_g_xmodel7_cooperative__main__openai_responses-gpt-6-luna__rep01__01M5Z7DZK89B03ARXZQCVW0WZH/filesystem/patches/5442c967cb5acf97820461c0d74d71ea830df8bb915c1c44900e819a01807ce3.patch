@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -995,3 +995,15 @@
+ r_PSP1PX5RT2,qualification,QP-5174,p_YQ5AFZNXTY,strength,edge crush resistance,3,6.57194,kN/m,lab_e,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,96Y,YX4,YT2
+ r_PSP1PX5RT3,qualification,QP-5174,p_YQ5AFZNXTY,strength,edge crush resistance,4,6.70898,kN/m,lab_e,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,96Y,YX4,YT2
+ r_PSP1PX5RT4,qualification,QP-5174,p_YQ5AFZNXTY,strength,edge crush resistance,5,6.81848,kN/m,lab_e,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,H9M,2JH,FJ2,96Y,YX4,YT2
++r_QT0Q96QW5W,qualification,QP-5174,p_E50TSAR6GN,strength,edge crush resistance,0,6.98078,kN/m,lab_e,lab_e,QG7,RK7,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,4ZD,YT2
++r_J1670QVR8N,qualification,QP-5174,p_E50TSAR6GN,strength,edge crush resistance,1,7.10705,kN/m,lab_e,lab_e,QG7,RK7,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,4ZD,YT2
++r_J1670QVR8P,qualification,QP-5174,p_E50TSAR6GN,strength,edge crush resistance,2,6.38903,kN/m,lab_e,lab_e,QG7,RK7,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,4ZD,YT2
++r_J1670QVR8Q,qualification,QP-5174,p_E50TSAR6GN,strength,edge crush resistance,3,6.52901,kN/m,lab_e,lab_e,QG7,RK7,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,4ZD,YT2
++r_J1670QVR8R,qualification,QP-5174,p_E50TSAR6GN,strength,edge crush resistance,4,6.62024,kN/m,lab_e,lab_e,QG7,RK7,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,4ZD,YT2
++r_J1670QVR8S,qualification,QP-5174,p_E50TSAR6GN,strength,edge crush resistance,5,6.86933,kN/m,lab_e,lab_e,QG7,RK7,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,4ZD,YT2
++r_J1670QVR8T,qualification,QP-5174,p_E50TSAR6GQ,strength,edge crush resistance,0,5.07983,kN/m,lab_e,lab_e,QG7,RK7,YC8,7TW,K3K,4CW,2A4,2JH,FJ2,UX3,4ZD,YT2
++r_J1670QVR8V,qualification,QP-5174,p_E50TSAR6GQ,strength,edge crush resistance,1,5.22167,kN/m,lab_e,lab_e,QG7,RK7,YC8,7TW,K3K,4CW,2A4,2JH,FJ2,UX3,4ZD,YT2
++r_J1670QVR8W,qualification,QP-5174,p_E50TSAR6GQ,strength,edge crush resistance,2,5.34887,kN/m,lab_e,lab_e,QG7,RK7,YC8,7TW,K3K,4CW,2A4,2JH,FJ2,UX3,4ZD,YT2
++r_J1670QVR8X,qualification,QP-5174,p_E50TSAR6GQ,strength,edge crush resistance,3,5.56976,kN/m,lab_e,lab_e,QG7,RK7,YC8,7TW,K3K,4CW,2A4,2JH,FJ2,UX3,4ZD,YT2
++r_J1670QVR8Y,qualification,QP-5174,p_E50TSAR6GQ,strength,edge crush resistance,4,5.68691,kN/m,lab_e,lab_e,QG7,RK7,YC8,7TW,K3K,4CW,2A4,2JH,FJ2,UX3,4ZD,YT2
++r_J1670QVR8Z,qualification,QP-5174,p_E50TSAR6GQ,strength,edge crush resistance,5,5.81960,kN/m,lab_e,lab_e,QG7,RK7,YC8,7TW,K3K,4CW,2A4,2JH,FJ2,UX3,4ZD,YT2

@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -0,0 +1,2 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); q=x[x.prototype_id=='p_9BPKMPQZK5']; print(len(q),q[['project','prototype_id','record_id','kind','test','value','measured_by']].to_string(index=False));print(q.iloc[:1,11:].to_dict('records'))

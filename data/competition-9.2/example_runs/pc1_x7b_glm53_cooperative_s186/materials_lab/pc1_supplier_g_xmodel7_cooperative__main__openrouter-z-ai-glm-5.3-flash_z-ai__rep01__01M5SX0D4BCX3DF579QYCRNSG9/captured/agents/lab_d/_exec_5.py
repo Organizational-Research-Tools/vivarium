@@ -1,0 +1,18 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+for proj in ['QP-4069','QP-7006','QP-1992','QP-4152','QP-8476','QP-4757']:
+    q=df[df['project']==proj]
+    print('===',proj, len(q))
+    g=q.groupby('prototype_id').agg(n=('value','size'))
+    # mean per prototype per test
+    for pid,sub in q.groupby('prototype_id'):
+        rec = sub[sub['kind']=='qualification']
+        recs = sub[sub['kind']=='qualification']
+        m=sub.groupby('test')['value'].agg(['count','mean'])
+        best={}
+        for t,s2 in sub[sub['kind']=='qualification'].groupby('test'):
+            best[t]=s2['value'].mean()
+        exps={t:round(s2['value'].mean(),2) for t,s2 in sub[sub['kind']!='qualification'].groupby('test')}
+        comp=tuple(sub[mods].dropna(axis=1,how='all').iloc[0].dropna())
+        print(pid, comp, 'QUAL:',{k:round(v,2) for k,v in best.items()}, 'EXP:',exps)

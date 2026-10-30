@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -703,3 +703,6 @@
+ r_NM1W1WSCB3,exploratory,QP-1992,p_AR11NKZ08S,water,wet strength retained,,71.6480,%,lab_c,lab_a,,,,,,,,,,,,
+ r_NM1W1WSCB4,exploratory,QP-1992,p_AR11NKZ08S,water,wet strength retained,,71.3800,%,lab_c,lab_a,,,,,,,,,,,,
+ r_NM1W1WSCB5,exploratory,QP-1992,p_AR11NKZ08S,water,wet strength retained,,71.8288,%,lab_c,lab_a,,,,,,,,,,,,
++r_QKTHV7SZZJ,exploratory,QP-1992,p_RXJZNYYAXF,water,wet strength retained,,80.0948,%,lab_c,lab_c,V2W,38J,HD9,G7U,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_QKTHV7SZZK,exploratory,QP-1992,p_RXJZNYYAXF,water,wet strength retained,,80.2508,%,lab_c,lab_c,V2W,38J,HD9,G7U,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_QKTHV7SZZM,exploratory,QP-1992,p_RXJZNYYAXF,water,wet strength retained,,79.6044,%,lab_c,lab_c,V2W,38J,HD9,G7U,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F

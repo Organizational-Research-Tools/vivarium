@@ -1,0 +1,5 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for p in ['p_MPZWPA24WE','p_MPZWPA24WG','p_MPZWPA24WJ','p_15GMZBJQS2','p_15GMZBJQS4','p_15GMZBJQS6']:
+ z=x[(x.prototype_id==p)&(x.test=='wet strength retained')]
+ print(p, z.value.mean(), len(z))

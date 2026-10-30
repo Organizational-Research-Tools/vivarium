@@ -1,0 +1,11 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+known=df.dropna(subset=mods)
+# mean by prototype & test, join composition
+m=df.groupby(['prototype_id','test']).value.agg(['count','mean']).reset_index()
+mm=m.merge(df.dropna(subset=mods).groupby('prototype_id')[mods].first().reset_index(),on='prototype_id',how='left')
+for t in ['seal hold temperature','edge crush resistance','wet strength retained']:
+    sub=mm[(mm.test==t)]
+    print('====',t)
+    print(sub[(sub['mean']>= (78.25 if 'seal' in t else 7.19 if 'edge' in t else 79.2))].sort_values('mean',ascending=False).head(10).to_string())

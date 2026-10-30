@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -980,3 +980,27 @@
+ r_SA7F5XQ35V,qualification,QP-3777,p_KSA6421JAG,strength,edge crush resistance,3,7.22501,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
+ r_SA7F5XQ35W,qualification,QP-3777,p_KSA6421JAG,strength,edge crush resistance,4,7.23209,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
+ r_SA7F5XQ35X,qualification,QP-3777,p_KSA6421JAG,strength,edge crush resistance,5,7.25663,kN/m,lab_b,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_VHNRV6ZJ07,qualification,QP-3777,p_KSA6421JAE,water,wet strength retained,0,79.1876,%,lab_c,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_VHNRV6ZJ08,qualification,QP-3777,p_KSA6421JAE,water,wet strength retained,1,79.1880,%,lab_c,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_VHNRV6ZJ09,qualification,QP-3777,p_KSA6421JAE,water,wet strength retained,2,79.5748,%,lab_c,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_VHNRV6ZJ0A,qualification,QP-3777,p_KSA6421JAE,water,wet strength retained,3,79.7132,%,lab_c,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_VHNRV6ZJ0B,qualification,QP-3777,p_KSA6421JAE,water,wet strength retained,4,79.5712,%,lab_c,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_VHNRV6ZJ0C,qualification,QP-3777,p_KSA6421JAE,water,wet strength retained,5,79.9956,%,lab_c,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_V7F5Q7KRTG,qualification,QP-3777,p_KSA6421JAG,water,wet strength retained,0,71.2868,%,lab_c,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_V7F5Q7KRTH,qualification,QP-3777,p_KSA6421JAG,water,wet strength retained,1,71.2632,%,lab_c,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_V7F5Q7KRTJ,qualification,QP-3777,p_KSA6421JAG,water,wet strength retained,2,70.7316,%,lab_c,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_V7F5Q7KRTK,qualification,QP-3777,p_KSA6421JAG,water,wet strength retained,3,70.7476,%,lab_c,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_V7F5Q7KRTM,qualification,QP-3777,p_KSA6421JAG,water,wet strength retained,4,70.9460,%,lab_c,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_V7F5Q7KRTN,qualification,QP-3777,p_KSA6421JAG,water,wet strength retained,5,71.0176,%,lab_c,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_TJEGAQYQN4,qualification,QP-3777,p_KSA6421JAE,water,wet strength retained,0,79.0464,%,lab_f,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_TJEGAQYQN5,qualification,QP-3777,p_KSA6421JAE,water,wet strength retained,1,79.2144,%,lab_f,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_TJEGAQYQN6,qualification,QP-3777,p_KSA6421JAE,water,wet strength retained,2,79.4560,%,lab_f,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_TJEGAQYQN7,qualification,QP-3777,p_KSA6421JAE,water,wet strength retained,3,79.7104,%,lab_f,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_TJEGAQYQN8,qualification,QP-3777,p_KSA6421JAE,water,wet strength retained,4,79.8884,%,lab_f,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_TJEGAQYQN9,qualification,QP-3777,p_KSA6421JAE,water,wet strength retained,5,79.9148,%,lab_f,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_TJEGAQYQNA,qualification,QP-3777,p_KSA6421JAG,water,wet strength retained,0,70.9908,%,lab_f,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_TJEGAQYQNB,qualification,QP-3777,p_KSA6421JAG,water,wet strength retained,1,71.3716,%,lab_f,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_TJEGAQYQNC,qualification,QP-3777,p_KSA6421JAG,water,wet strength retained,2,70.6128,%,lab_f,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_TJEGAQYQND,qualification,QP-3777,p_KSA6421JAG,water,wet strength retained,3,70.9436,%,lab_f,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_TJEGAQYQNE,qualification,QP-3777,p_KSA6421JAG,water,wet strength retained,4,71.0096,%,lab_f,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_TJEGAQYQNF,qualification,QP-3777,p_KSA6421JAG,water,wet strength retained,5,71.0644,%,lab_f,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F

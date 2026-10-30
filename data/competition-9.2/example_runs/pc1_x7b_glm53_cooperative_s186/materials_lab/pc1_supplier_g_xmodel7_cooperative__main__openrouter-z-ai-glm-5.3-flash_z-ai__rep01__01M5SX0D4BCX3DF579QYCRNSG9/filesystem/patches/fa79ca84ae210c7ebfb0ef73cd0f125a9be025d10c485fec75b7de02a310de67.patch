@@ -1,0 +1,25 @@
+--- 
++++ 
+@@ -519,6 +519,12 @@
+ r_2ZWMQYZY7B,qualification,QP-5993,p_V3YHHTAXJX,heat,seal hold temperature,3,78.19475,°C,lab_a,lab_b,,,,,,,,,,,,
+ r_2ZWMQYZY7C,qualification,QP-5993,p_V3YHHTAXJX,heat,seal hold temperature,4,78.23175,°C,lab_a,lab_b,,,,,,,,,,,,
+ r_2ZWMQYZY7D,qualification,QP-5993,p_V3YHHTAXJX,heat,seal hold temperature,5,78.39250,°C,lab_a,lab_b,,,,,,,,,,,,
++r_QSWQEK3397,qualification,QP-4069,p_D1SCJCXSMK,strength,edge crush resistance,0,7.21076,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_QSWQEK3398,qualification,QP-4069,p_D1SCJCXSMK,strength,edge crush resistance,1,7.21610,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_QSWQEK3399,qualification,QP-4069,p_D1SCJCXSMK,strength,edge crush resistance,2,7.23074,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_QSWQEK339A,qualification,QP-4069,p_D1SCJCXSMK,strength,edge crush resistance,3,7.24733,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_QSWQEK339B,qualification,QP-4069,p_D1SCJCXSMK,strength,edge crush resistance,4,7.25420,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_QSWQEK339C,qualification,QP-4069,p_D1SCJCXSMK,strength,edge crush resistance,5,7.19831,kN/m,lab_b,lab_b,,,,,,,,,,,,
+ r_EDM81W11AR,exploratory,QP-4069,p_D1SCJCXSMK,heat,seal hold temperature,,78.48200,°C,lab_a,lab_b,,,,,,,,,,,,
+ r_EDM81W11AS,exploratory,QP-4069,p_D1SCJCXSMK,heat,seal hold temperature,,78.27425,°C,lab_a,lab_b,,,,,,,,,,,,
+ r_36ENPZEFDV,qualification,QP-4069,p_D1SCJCXSMK,heat,seal hold temperature,0,78.22525,°C,lab_a,lab_b,,,,,,,,,,,,
+@@ -548,3 +554,9 @@
+ r_MS7G89SZYY,exploratory,QP-1992,p_E16M0W72XW,heat,seal hold temperature,,77.99275,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_MS7G89SZYZ,exploratory,QP-1992,p_E16M0W72XW,heat,seal hold temperature,,77.89450,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_MS7G89SZZ0,exploratory,QP-1992,p_E16M0W72XW,heat,seal hold temperature,,78.10475,°C,lab_a,lab_e,,,,,,,,,,,,
++r_BK522F504G,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,0,78.37075,°C,lab_a,lab_e,,,,,,,,,,,,
++r_BK522F504H,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,1,78.38225,°C,lab_a,lab_e,,,,,,,,,,,,
++r_BK522F504J,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,2,77.85075,°C,lab_a,lab_e,,,,,,,,,,,,
++r_BK522F504K,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,3,77.94000,°C,lab_a,lab_e,,,,,,,,,,,,
++r_BK522F504M,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,4,78.14050,°C,lab_a,lab_e,,,,,,,,,,,,
++r_BK522F504N,qualification,QP-1992,p_E16M0W72XW,heat,seal hold temperature,5,78.11975,°C,lab_a,lab_e,,,,,,,,,,,,

@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -349,3 +349,9 @@
+ r_XD8BB2PPTS,exploratory,QP-3068,p_2V1CHF70SD,strength,edge crush resistance,,7.23500,kN/m,lab_e,lab_a,,,,,,,,,,,,
+ r_XD8BB2PPTT,exploratory,QP-3068,p_2V1CHF70SD,strength,edge crush resistance,,7.26143,kN/m,lab_e,lab_a,,,,,,,,,,,,
+ r_7XH5RK810V,exploratory,QP-3068,p_2V1CHF70SD,strength,edge crush resistance,,7.16378,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_JYRJSTGTBE,qualification,QP-3068,p_2V1CHF70SD,strength,edge crush resistance,0,7.24112,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_JYRJSTGTBF,qualification,QP-3068,p_2V1CHF70SD,strength,edge crush resistance,1,7.17878,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_JYRJSTGTBG,qualification,QP-3068,p_2V1CHF70SD,strength,edge crush resistance,2,7.18748,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_JYRJSTGTBH,qualification,QP-3068,p_2V1CHF70SD,strength,edge crush resistance,3,7.20452,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_JYRJSTGTBJ,qualification,QP-3068,p_2V1CHF70SD,strength,edge crush resistance,4,7.21463,kN/m,lab_e,lab_a,,,,,,,,,,,,
++r_JYRJSTGTBK,qualification,QP-3068,p_2V1CHF70SD,strength,edge crush resistance,5,7.21031,kN/m,lab_e,lab_a,,,,,,,,,,,,

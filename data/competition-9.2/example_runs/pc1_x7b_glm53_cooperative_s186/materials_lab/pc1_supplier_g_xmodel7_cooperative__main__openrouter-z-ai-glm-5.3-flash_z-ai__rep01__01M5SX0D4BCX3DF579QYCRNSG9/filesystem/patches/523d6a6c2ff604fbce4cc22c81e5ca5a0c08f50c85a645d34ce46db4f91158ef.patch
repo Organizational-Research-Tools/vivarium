@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++d = pd.read_csv("records.csv")
++e = d[d.kind=="exploratory"]
++for proj,g in e.groupby("project"):
++    print(proj, {t: round(g[g.test==t].value.max(),3) for t in ["heat","strength","water"]})

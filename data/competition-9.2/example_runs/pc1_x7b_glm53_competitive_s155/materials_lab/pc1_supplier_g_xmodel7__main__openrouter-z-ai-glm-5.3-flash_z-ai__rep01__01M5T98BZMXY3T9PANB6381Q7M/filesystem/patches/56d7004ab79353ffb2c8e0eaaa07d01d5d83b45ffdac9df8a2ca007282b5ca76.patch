@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -0,0 +1,9 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++s = df[(df.test=='strength')&(df.value>=7.19)]
++print(len(s))
++# group exploratory strength by recipe
++e = df[(df.test=='strength')&(df.kind=='exploratory')&(df.value>=7.19)].copy()
++g = e.groupby('prototype_id').agg(n=('value','size'), mn=('value','mean'), req=('requester','first'), meas=('measured_by','first'))
++g['mods'] = e.groupby('prototype_id')[['base_sheet','process_profile_3','binder_system','additive_package_2','conditioning_step','joint_system','surface_treatment']].first().apply(lambda r: ','.join(str(x) for x in r), axis=1)
++print(g.to_string())

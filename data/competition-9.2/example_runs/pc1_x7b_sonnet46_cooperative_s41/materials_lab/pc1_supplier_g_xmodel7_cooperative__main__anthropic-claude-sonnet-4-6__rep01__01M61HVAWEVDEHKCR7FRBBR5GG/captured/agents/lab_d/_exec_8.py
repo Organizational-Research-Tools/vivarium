@@ -1,0 +1,33 @@
+
+# Key finding: GG7 -> 3HW drops heat by ~23 steps in QP-4476
+# p_ZAY4PYBDS7 (JA8, 3HW, M2P, QJ2, 6FA, 44B, 62D, 2BR, N4L, 7KL, DL8, 3N8) -> heat = 73.06°C ✗
+# But p_HMKH05YVY1 (DA9, 3HW, M2P, R5N, LD3, QJ4, UP5, C5Q, X9F, ZW3, 4GD, G8Q) -> heat = 78.30°C ✓
+
+# The critical difference: PP2 = 2BR (in ZAY4) vs PP2 = C5Q (in HMKH05YVY1)
+# C5Q is the key driver to compensate for losing GG7's heat contribution
+
+# Problem: HMKH05YVY1 fails strength = 6.69 kN/m (needs 7.10)
+# The GG7 recipe (JA8, GG7, M2P, QJ2, 6FA, 44B, 62D, 2BR, N4L, 7KL, DL8, 3N8) gave strength=7.25
+
+# Strategy: Combine heat-boost modules (C5Q for PP2) with strength-boost modules (JA8 base, QJ2, 6FA, 44B, 62D, N4L, 7KL, DL8)
+# New recipe: JA8, 3HW, M2P, QJ2, 6FA, 44B, 62D, C5Q, N4L, 7KL, DL8, 3N8
+# = original GG7 recipe BUT replacing GG7->3HW AND 2BR->C5Q
+
+print("Proposed new recipe (all projects):")
+new_recipe = ['JA8', '3HW', 'M2P', 'QJ2', '6FA', '44B', '62D', 'C5Q', 'N4L', '7KL', 'DL8', '3N8']
+print(new_recipe)
+print()
+print("Evidence:")
+print("  HMKH05YVY1 (DA9,3HW,...,C5Q,...): heat=78.30✓, strength=6.69✗, water=78.88✓")
+print("  GG7 recipe  (JA8,GG7,...,2BR,...): heat=78.78✓, strength=7.25✓, water=81.65✓")
+print("  ZAY4 recipe (JA8,3HW,...,2BR,...): heat=73.06✗  <-- just measured!")
+print()
+print("Key change needed: PP2 must = C5Q (not 2BR) when secondary_sheet = 3HW")
+print("Combining JA8 base (good for strength) + C5Q (compensates for GG7 heat loss)")
+print("+ all the other strong-for-strength modules from the GG7 recipe")
+print()
+print("Risk: Changing PP2 from 2BR to C5Q may affect strength (interaction: surface×binder×PP2)")
+print("But JA8+M2P+7KL+QJ2+44B+DL8 modules from the GG7 recipe should maintain strength")
+print()
+print("NOTE: My 9 recently created prototypes all use 2BR, they will all fail heat!")
+print("Need to create 9 more with C5Q for PP2")

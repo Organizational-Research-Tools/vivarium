@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv');
+for pid,g in x[x.project=='QP-9980'].groupby('prototype_id'):
+ row=g.iloc[0]; recipe='/'.join(str(row[c]) for c in x.columns[10:22]); vals=g.pivot_table(index='prototype_id',columns='test',values='value',aggfunc='mean').iloc[0]; print(pid,recipe,{k:round(v,4) for k,v in vals.items()})

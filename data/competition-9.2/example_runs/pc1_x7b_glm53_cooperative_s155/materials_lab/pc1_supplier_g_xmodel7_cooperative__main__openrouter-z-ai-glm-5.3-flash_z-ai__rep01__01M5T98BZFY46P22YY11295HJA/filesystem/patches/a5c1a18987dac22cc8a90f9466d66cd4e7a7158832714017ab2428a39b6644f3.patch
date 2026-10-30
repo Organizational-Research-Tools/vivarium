@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -613,3 +613,14 @@
+ r_Z4Q499MWY6,exploratory,QP-2342,p_PSG59ZNNC0,heat,seal hold temperature,,78.34450,°C,lab_a,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,23Y
+ r_9ZXRBPNYGY,exploratory,QP-2342,p_PSG59ZNNC0,heat,seal hold temperature,,78.48700,°C,lab_d,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,23Y
+ r_9ZXRBPNYGZ,exploratory,QP-2342,p_PSG59ZNNC0,heat,seal hold temperature,,78.37975,°C,lab_d,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,23Y
++r_R52NZV235T,exploratory,QP-2342,p_PSG59ZNNC0,water,wet strength retained,,79.0580,%,lab_c,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,23Y
++r_R52NZV235V,exploratory,QP-2342,p_PSG59ZNNC0,water,wet strength retained,,79.7816,%,lab_c,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,23Y
++r_T13RY1TRA3,exploratory,QP-6489,p_F08ZZEE267,strength,edge crush resistance,,7.20062,kN/m,lab_e,lab_e,3F4,HJ7,6ZC,V5J,NS4,J3Y,3RB,F9B,37J,N4Y,PK9,4YT
++r_T13RY1TRA4,exploratory,QP-6489,p_F08ZZEE267,strength,edge crush resistance,,7.17050,kN/m,lab_e,lab_e,3F4,HJ7,6ZC,V5J,NS4,J3Y,3RB,F9B,37J,N4Y,PK9,4YT
++r_T13RY1TRA5,exploratory,QP-6489,p_F08ZZEE267,strength,edge crush resistance,,7.27688,kN/m,lab_e,lab_e,3F4,HJ7,6ZC,V5J,NS4,J3Y,3RB,F9B,37J,N4Y,PK9,4YT
++r_T13RY1TRA6,exploratory,QP-6489,p_7EQCYS545E,strength,edge crush resistance,,7.11347,kN/m,lab_e,lab_e,3F4,HJ7,DQ9,V5J,NS4,3LL,3RB,F9B,37J,N4Y,PK9,4YT
++r_X90T20D4D9,exploratory,QP-6489,p_7EQCYS545E,strength,edge crush resistance,,7.14752,kN/m,lab_e,lab_e,3F4,HJ7,DQ9,V5J,NS4,3LL,3RB,F9B,37J,N4Y,PK9,4YT
++r_X90T20D4DA,exploratory,QP-6489,p_7EQCYS545E,strength,edge crush resistance,,7.18457,kN/m,lab_e,lab_e,3F4,HJ7,DQ9,V5J,NS4,3LL,3RB,F9B,37J,N4Y,PK9,4YT
++r_X90T20D4DB,exploratory,QP-6489,p_C4WKEC66VP,strength,edge crush resistance,,7.14737,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,NS4,3LL,3RB,F9B,37J,N4Y,PK9,4YT
++r_X90T20D4DC,exploratory,QP-6489,p_C4WKEC66VP,strength,edge crush resistance,,7.09313,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,NS4,3LL,3RB,F9B,37J,N4Y,PK9,4YT
++r_X90T20D4DD,exploratory,QP-6489,p_C4WKEC66VP,strength,edge crush resistance,,7.16954,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,NS4,3LL,3RB,F9B,37J,N4Y,PK9,4YT

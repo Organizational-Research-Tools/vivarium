@@ -1,0 +1,10 @@
+
+import pandas as pd
+df = pd.read_csv('records.csv')
+print("Columns:", list(df.columns))
+print("Projects:", df['project_id'].unique() if 'project_id' in df.columns else "N/A")
+# Look for strength records on QP-3473, QP-7212, QP-3089
+if 'instrument' in df.columns:
+    strength = df[df['instrument']=='strength']
+    print("\nStrength records count:", len(strength))
+    print(strength[['project_id','prototype_id','value']].to_string() if len(strength) < 50 else strength[['project_id','prototype_id','value']].head(30).to_string())

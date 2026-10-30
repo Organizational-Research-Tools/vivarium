@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -0,0 +1,9 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++print('rows',len(x),'prototypes',x.prototype_id.nunique(),'projects',x.project.value_counts().to_dict())
++for t,g in x.groupby('test'):
++ print('\n',t,'rows',len(g),'prototypes',g.prototype_id.nunique())
++ s=g.groupby('prototype_id').agg(mean=('value','mean'), project=('project','first'), base=('base_sheet','first'))
++ print(s.sort_values('mean',ascending=False).head(15).to_string())
++print('\nprototypes by project')
++print(x.groupby('project').prototype_id.nunique())

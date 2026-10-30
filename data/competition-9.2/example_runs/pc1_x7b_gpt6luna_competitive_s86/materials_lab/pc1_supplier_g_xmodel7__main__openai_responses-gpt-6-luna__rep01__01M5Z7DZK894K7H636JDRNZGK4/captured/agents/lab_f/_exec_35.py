@@ -1,0 +1,5 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for p in ['p_K6ZM59ZMJM','p_K6ZM59ZMJT','p_4J2PHZ8BF9','p_T2SEB0BAET']:
+ d=x[x.prototype_id==p]
+ print(p, d[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].drop_duplicates().to_string(index=False))

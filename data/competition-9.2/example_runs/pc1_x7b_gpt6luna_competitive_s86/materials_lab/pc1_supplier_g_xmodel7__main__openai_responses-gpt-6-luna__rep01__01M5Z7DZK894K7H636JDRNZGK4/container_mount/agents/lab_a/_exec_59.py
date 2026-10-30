@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x[x.prototype_id.str.contains('3SZ9SPMFY6')].to_string(index=False)); print(x[x.prototype_id.str.contains('7S365TH6Y2')].groupby(['kind','test','measured_by']).value.agg(['count','mean']).to_string())

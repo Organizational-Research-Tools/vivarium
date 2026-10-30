@@ -1,0 +1,21 @@
+--- 
++++ 
+@@ -286,9 +286,18 @@
+ r_7W6Z1AZ4FE,qualification,QP-8864,p_5XVCC7PF44,heat,seal hold temperature,3,78.53000,°C,lab_d,lab_c,,,,,,,,,,,,
+ r_7W6Z1AZ4FF,qualification,QP-8864,p_5XVCC7PF44,heat,seal hold temperature,4,78.75650,°C,lab_d,lab_c,,,,,,,,,,,,
+ r_7W6Z1AZ4FG,qualification,QP-8864,p_5XVCC7PF44,heat,seal hold temperature,5,78.73250,°C,lab_d,lab_c,,,,,,,,,,,,
++r_AH1K2R1JB9,qualification,QP-8864,p_5XVCC7PF44,water,wet strength retained,0,79.6388,%,lab_c,lab_c,,,,,,,,,,,,
++r_AH1K2R1JBA,qualification,QP-8864,p_5XVCC7PF44,water,wet strength retained,1,79.6352,%,lab_c,lab_c,,,,,,,,,,,,
++r_AH1K2R1JBB,qualification,QP-8864,p_5XVCC7PF44,water,wet strength retained,2,79.9096,%,lab_c,lab_c,,,,,,,,,,,,
++r_AH1K2R1JBC,qualification,QP-8864,p_5XVCC7PF44,water,wet strength retained,3,79.9740,%,lab_c,lab_c,,,,,,,,,,,,
++r_AH1K2R1JBD,qualification,QP-8864,p_5XVCC7PF44,water,wet strength retained,4,80.3632,%,lab_c,lab_c,,,,,,,,,,,,
++r_AH1K2R1JBE,qualification,QP-8864,p_5XVCC7PF44,water,wet strength retained,5,80.2680,%,lab_c,lab_c,,,,,,,,,,,,
+ r_6WV0GS7HKN,qualification,QP-8864,p_5XVCC7PF3G,strength,edge crush resistance,0,7.19744,kN/m,lab_e,lab_c,,,,,,,,,,,,
+ r_6WV0GS7HKP,qualification,QP-8864,p_5XVCC7PF3G,strength,edge crush resistance,1,7.20182,kN/m,lab_e,lab_c,,,,,,,,,,,,
+ r_6WV0GS7HKQ,qualification,QP-8864,p_5XVCC7PF3G,strength,edge crush resistance,2,7.13966,kN/m,lab_e,lab_c,,,,,,,,,,,,
+ r_6WV0GS7HKR,qualification,QP-8864,p_5XVCC7PF3G,strength,edge crush resistance,3,7.15820,kN/m,lab_e,lab_c,,,,,,,,,,,,
+ r_6WV0GS7HKS,qualification,QP-8864,p_5XVCC7PF3G,strength,edge crush resistance,4,7.17854,kN/m,lab_e,lab_c,,,,,,,,,,,,
+ r_6WV0GS7HKT,qualification,QP-8864,p_5XVCC7PF3G,strength,edge crush resistance,5,7.17272,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_K9N4F80HSA,exploratory,QP-5066,p_0NEZ7FTS26,strength,edge crush resistance,,7.03853,kN/m,lab_e,lab_b,,,,,,,,,,,,
++r_K9N4F80HSB,exploratory,QP-5066,p_0NEZ7FTS26,strength,edge crush resistance,,7.07366,kN/m,lab_e,lab_b,,,,,,,,,,,,
++r_K9N4F80HSC,exploratory,QP-5066,p_0NEZ7FTS26,strength,edge crush resistance,,7.11302,kN/m,lab_e,lab_b,,,,,,,,,,,,

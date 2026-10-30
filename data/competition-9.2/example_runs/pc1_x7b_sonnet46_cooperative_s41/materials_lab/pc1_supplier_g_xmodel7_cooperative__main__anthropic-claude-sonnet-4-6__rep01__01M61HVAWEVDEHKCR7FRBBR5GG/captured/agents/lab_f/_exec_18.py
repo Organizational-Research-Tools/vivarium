@@ -1,0 +1,36 @@
+
+import pandas as pd
+df = pd.read_csv('records.csv')
+
+# Find all water records for QP-3089 that are qualification panels
+qp3089_water = df[(df['project_id'] == 'QP-3089') & 
+                   (df['instrument'] == 'water') & 
+                   (df['kind'] == 'qualification')]
+print("QP-3089 water qualification records:")
+print(qp3089_water[['record_id', 'prototype_id', 'value', 'kind']].to_string())
+print()
+
+# Find heat records for QP-3089 qualification
+qp3089_heat = df[(df['project_id'] == 'QP-3089') & 
+                  (df['instrument'] == 'heat') & 
+                  (df['kind'] == 'qualification')]
+print("QP-3089 heat qualification records:")
+print(qp3089_heat[['record_id', 'prototype_id', 'value', 'kind']].to_string())
+print()
+
+# Find strength records for QP-3089 qualification
+qp3089_str = df[(df['project_id'] == 'QP-3089') & 
+                 (df['instrument'] == 'strength') & 
+                 (df['kind'] == 'qualification')]
+print("QP-3089 strength qualification records:")
+print(qp3089_str[['record_id', 'prototype_id', 'value', 'kind']].to_string())
+print()
+
+# Check PL-95 projects
+for proj in ['QP-3473', 'QP-7212', 'QP-8607']:
+    water = df[(df['project_id'] == proj) & (df['instrument'] == 'water') & (df['kind'] == 'qualification')]
+    if len(water) > 0:
+        print(f"{proj} water qual records:")
+        print(water[['record_id', 'prototype_id', 'value']].to_string())
+        print(f"  Mean: {water['value'].mean():.4f}")
+        print()

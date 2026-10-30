@@ -1,0 +1,63 @@
+{# One status chip: glyph (status color) + label (ink) + irregular flag.
+   Every chip explains itself on hover (plain-language, from the glossary). #}
+{# The run's state: whether it ran to its end. A scorer's verdict is not a run state
+   (there is no pass/fail across experiments): passed, failed_score and unscored all
+   read "completed"; the task's outcome and the run's eligibility have their own labels. #}
+{% macro chip(status, irregular=false, note="") -%}
+  {%- set shown = "completed" if status in ("passed", "failed_score", "unscored") else status -%}
+  {%- set role, glyph = STATUS_CHIP.get(shown, ("muted", "?")) -%}
+  <span class="chip chip-{{ role }} help" title="{{ STATUS_HELP.get(shown, '') }}"><span class="glyph">{{ glyph }}</span>{{ shown|replace("_", " ") }}{% if irregular %} <span class="flag" title="irregular: something crashed during this run (an agent or the run itself)">⚠</span>{% endif %}</span>
+{%- endmacro %}
+
+{# Provenance chip: compare the saved material references with the library.
+   Hover shows the run-specific reasons when known, else the general definition. #}
+{% macro prov_chip(p, reasons=[], tags=[]) -%}
+  {%- set role, glyph = PROVENANCE_CHIP.get(p, ("neutral", "?")) -%}
+  <span class="chip chip-{{ role }} help" title="{{ PROVENANCE_HELP.get(p, '') }}{% if reasons %} — {{ reasons|join('; ') }}{% endif %}"><span class="glyph">{{ glyph }}</span>{{ p|replace("_", " ") }}</span>
+  {%- for t in tags %} <span class="sev sev-info help" title="{{ PROVENANCE_HELP.get(t, '') }}">{{ t }}</span>{% endfor %}
+{%- endmacro %}
+
+{# Diagnostics severity chip — hover says what the tier means for trust. #}
+{% macro sev_chip(severity) -%}
+  <span class="sev sev-{{ severity }} help" title="{{ SEVERITY_HELP.get(severity, '') }}">{{ severity }}</span>
+{%- endmacro %}
+
+{# Plain-language hover help: dotted-underline term, explanation on hover. #}
+{% macro help(term, text) -%}
+  <span class="help" title="{{ text }}">{{ term }}</span>
+{%- endmacro %}
+
+{# Glossary-backed help: the text comes from oaos2/dashboard/glossary.py, so the
+   same term is explained the same way everywhere. `label` overrides the shown text. #}
+{% macro gh(term, label=None) -%}
+  <span class="help" title="{{ GLOSSARY.get(term, '') }}">{{ label if label is not none else term }}</span>
+{%- endmacro %}
+
+{# Exploratory runs: the scorer's verdict shown muted as a task result, not a study
+   outcome. Non-verdict statuses (incomplete, stalled, …) keep the ordinary chip. #}
+{% macro result_chip(status, irregular=false, note="") -%}
+  {%- if status in ("passed", "failed_score") -%}
+  <span class="chip chip-muted help" title="{{ GLOSSARY.get('task result', '') }} — {{ STATUS_HELP.get(status, '') }}{% if note %} {{ note }}{% endif %}"><span class="glyph">{{ "✓" if status == "passed" else "✕" }}</span>result{% if irregular %} <span class="flag" title="irregular: something crashed during this run (an agent or the run itself)">⚠</span>{% endif %}</span>
+  {%- else -%}{{ chip(status, irregular, note) }}{%- endif -%}
+{%- endmacro %}
+
+{# One reading panel per page: the page-level explanations and caveats live here, closed
+   by default, so hovers stay one line. Open state is remembered across pages (base.html). #}
+{% macro howto(title="How to read this page") -%}
+<details class="howto"><summary>{{ title }}</summary><div class="howto-body">{{ caller() }}</div></details>
+{%- endmacro %}
+
+{# Eligibility: whether the run can enter results — the platform's completion criteria
+   and the task's own, or a saved analysis dataset's membership when there is one. A flag
+   (⚑) marks a condition the study's registered rules decide, such as a refusal ending. #}
+{% macro elig_chip(e) -%}
+  {%- if e -%}
+  {%- set role = {"eligible": "good", "in analysis dataset": "good", "in progress": "muted"}.get(e.label, "warning") -%}
+  <span class="chip chip-{{ role }} help" title="{{ GLOSSARY.get('eligibility', '') }}{% if e.reasons %} — {{ e.reasons|join('; ') }}{% endif %}{% if e.notes %} — flagged: {{ e.notes|join('; ') }}{% endif %}{% if e.source %} ({{ e.source }}){% endif %}">{{ e.label }}{% if e.notes %} ⚑{% endif %}</span>
+  {%- endif -%}
+{%- endmacro %}
+
+{# The task's central outcome for one run, in its own terms. #}
+{% macro outcome(o) -%}
+  {%- if o -%}<span class="help" title="{{ GLOSSARY.get('outcome', '') }}{% if o.detail %} — {{ o.detail }}{% endif %}">{{ o.label }}</span>{% if o.scorer %} <span class="dim" title="the task scorer's own verdict, beside the task's outcome">· scorer: {{ o.scorer }}</span>{% endif %}{%- else -%}<span class="dim">—</span>{%- endif -%}
+{%- endmacro %}

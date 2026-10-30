@@ -1,0 +1,4 @@
+import pandas as pd
+r=pd.read_csv('records.csv'); m=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']; x=r[r.kind.eq('qualification')].groupby(['project','prototype_id','test']).value.mean().unstack('test').reset_index(); rec=r.drop_duplicates('prototype_id')[['project','prototype_id']+m]; x=x.merge(rec,on=['project','prototype_id']); col='wet strength retained'; x=x[x[col]>=79.8].copy();
+for _, row in x.iterrows():
+ print(row['project'],row['prototype_id'], 'W',round(row[col],4),'H',row.get('seal hold temperature'),'S',row.get('edge crush resistance'),'recipe','/'.join(str(row[c]) for c in m))

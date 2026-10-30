@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++q=df[df['prototype_id'].isin(['p_8QV6JFVW6M','p_8QV6JFVW6P','p_8QV6JFVW6A','p_8QV6JFVW6E','p_8QV6JFVW6J'])]
++print(q.groupby('prototype_id').apply(lambda s: pd.Series({
++ 'comp': tuple(s[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].dropna(axis=1,how='all').iloc[0].dropna()),
++ 'tests': {t: round(g.value.mean(),2) for t,g in s.groupby('test')}
++}), include_groups=False))
++print(df[df.prototype_id=='p_D1SCJCXSMK'][['test','kind','value','measured_by']].to_string())

@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -0,0 +1,9 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++q=df[df['kind']=='qualification']
++g=q.groupby(['project','prototype_id','test'])['value'].mean().unstack()
++# revision C bars: heat 78.625, strength 7.235, water 79.8
++g['meets']=(g['seal hold temperature']>=78.625)&(g['edge crush resistance']>=7.235)&(g['wet strength retained']>=79.8)
++print(g[g.notna().all(axis=1)].to_string())
++# near misses: panels missing one test only; list all qual panels
++print(q.groupby(['project','prototype_id','test'])['value'].mean().unstack().to_string())

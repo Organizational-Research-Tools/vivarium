@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+z=x[x.project.eq('QP-9219')].groupby('prototype_id').agg({'base_sheet':'first','secondary_sheet':'first','binder_system':'first','additive_package_1':'first','additive_package_2':'first','additive_package_3':'first','process_profile_1':'first','process_profile_2':'first','process_profile_3':'first','surface_treatment':'first','joint_system':'first','conditioning_step':'first'})
+print(z.to_string())

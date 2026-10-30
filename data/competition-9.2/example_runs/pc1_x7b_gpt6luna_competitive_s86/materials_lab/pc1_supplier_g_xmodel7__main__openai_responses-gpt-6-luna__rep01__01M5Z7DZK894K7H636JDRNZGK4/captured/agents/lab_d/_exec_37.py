@@ -1,0 +1,8 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for proj in ['QP-3617','QP-6879','QP-9273']:
+ y=x[x.project.eq(proj)].copy()
+ print('\n',proj, y.shape, y.kind.value_counts().to_dict())
+ # group by prototype/test and mean
+ z=y.groupby(['prototype_id','test','kind','measured_by']).agg(mean=('value','mean'),n=('value','size')).reset_index()
+ print(z.sort_values(['test','mean'],ascending=[True,False]).to_string(index=False))

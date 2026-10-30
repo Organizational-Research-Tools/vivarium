@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -832,3 +832,4 @@
+ r_XFFFTSQX5X,exploratory,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,,78.49050,°C,lab_d,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y
+ r_ZP59E5VVG7,exploratory,QP-5993,p_CWRMK2CFRR,heat,seal hold temperature,,61.92100,°C,lab_d,lab_c,HP9,2YJ,PU3,8BE,9KR,2CK,5JK,2FG,V7P,84H,YS6,G5Y
+ r_ZP59E5VVG8,exploratory,QP-5993,p_CWRMK2CFRR,heat,seal hold temperature,,62.51550,°C,lab_d,lab_c,HP9,2YJ,PU3,8BE,9KR,2CK,5JK,2FG,V7P,84H,YS6,G5Y
++r_PGVBR8C3QS,exploratory,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,,78.15000,°C,lab_a,lab_c,HP9,2YJ,PU3,Q3H,9KR,JN6,5JK,2FG,V7P,84H,YS6,G5Y

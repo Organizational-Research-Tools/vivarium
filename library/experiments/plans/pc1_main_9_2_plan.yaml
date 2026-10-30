@@ -1,0 +1,74 @@
+# PC1 main study on 9.2 (x7b): the launch plan read by scripts/run_pc1_batch.py and scripts/pc1_readout_x7b.py.
+# FINAL with docs/experiments/pc1_prereg_9_2.md (October 21, 2026), pinned in library/experiments/evidence/
+# pc1_9_2_pins.json. Not permission to spend: every launch needs the PI's authorization in the conversation.
+#
+# Seeds: the eligible seeds of scripts/pc1_seed_screen.py over 41-400
+# (library/experiments/evidence/pc1_seed_screen_x7b_20261019.json: 291 of 360), in numerical order; GLM-5.3-Flash takes
+# the first 150, gpt-6-luna (high effort) the first 60, Claude Sonnet 4.6 the first 8 (the PI, October 21).
+# Seed 16 (the x7b check of October 18), seeds 4-40 and seeds 226-240 (calibration and model checks) are not used. Caps
+# are the guard's accepted minimums of October 21 (GLM $6 is refused by rounding).
+study: pc1
+stage: main_9_2
+series: pc1                      # runs/<series>/<experiment>
+frozen_commit: 7d63a96d2cdb495e7e76437dbea4cdb9655cd2e7  # the freeze (a launch field): the batch then launches only from this commit
+                                 # or a later one that changes only the launch fields, HISTORY and the dispositions
+pins: library/experiments/evidence/pc1_9_2_pins.json  # the freeze's sha256 manifest (scripts/pc1_pins.py), checked
+                                 # before every launch
+preregistration_ref: docs/experiments/pc1_prereg_9_2.md  # must declare STATUS: FINAL before --go; every run's
+                                 # manifest records it and its sha256 (the runs stay in pilot mode; October 21, 2026)
+dispositions: library/experiments/evidence/pc1_9_2_dispositions.json  # the PI's rulings on review and stopped runs
+                                 # (count, rerun, missing); read by the batch and the readout; none yet
+budget_usd: null                 # the batch's spending ceiling, the total the PI authorizes for the launch; --go refuses
+                                 # without it. Caps sum to $3,500 (300 x $7, 120 x $5, 16 x $50) against about $1.2-1.8k
+                                 # expected, so a stop near the end means the next pair's caps no longer fit.
+order_seed: 20261019             # fixes the order of seeds
+max_concurrency: 4               # runs at a time; a pair needs two free slots
+experiment_template: "pc1_x7b_{model}_{arm}_s{seed}"
+# No interim look (the PI, October 21, 2026): every model runs its full seed list.
+second_coding_seed: 20261021        # draws the 20% second-coding sample (scripts/pc1_second_coding_sample.py)
+# Coders (the PI, October 21, 2026; preregistration §6), run by scripts/pc1_light_code.py after the runs, outside
+# the batch ceiling: first openai_responses/gpt-5.6-terra --reasoning-budget 4000; second (the 20% sample)
+# anthropic/claude-sonnet-4-6 --reasoning-budget 4000.
+coders:
+  first: {model: openai_responses/gpt-5.6-terra, reasoning_budget: 4000}
+  second: {model: anthropic/claude-sonnet-4-6, reasoning_budget: 4000}
+arms:
+  competitive: pc1_supplier_g_xmodel7
+  cooperative: pc1_supplier_g_xmodel7_cooperative
+# --guard-rate (October 21, 2026, the PI): each model's cap-guard rate is frozen at the highest spend per lab-minute
+# observed in its finished runs up to that day (GLM $0.0161, gpt-6-luna $0.0097, Sonnet 4.6 $0.1135), rounded up, so
+# the guard's minimum cannot rise as the study's own runs accumulate and refuse a launch mid-study. Minimums at these
+# rates and the caps below: about $6.7, $3.9 and $45.6.
+common_args: ["--rule-level", "approved_list", "--calls", "1500", "--series", "pc1"]
+revisions_min: [20, 33]
+deadline_min: 50
+models:
+  - tag: glm53
+    model_ref: openrouter/z-ai/glm-5.3-flash@z-ai
+    args: ["--reasoning-budget", "1000", "--cap", "7", "--guard-rate", "0.017"]
+    pooled: true                 # the compared model of the primary test
+    role: primary
+    seeds: [41, 42, 45, 46, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 63, 64, 65, 68, 69, 70, 72, 73,
+           74, 76, 77, 80, 81, 84, 85, 86, 88, 89, 91, 92, 93, 94, 95, 97, 98, 99, 102, 103, 104, 105, 107, 108,
+           109, 110, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130,
+           131, 132, 133, 134, 135, 136, 137, 138, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 153, 154,
+           155, 156, 157, 158, 160, 161, 162, 163, 164, 165, 166, 167, 168, 170, 171, 172, 173, 176, 177, 178, 180,
+           181, 182, 183, 184, 185, 186, 187, 191, 192, 193, 194, 195, 196, 197, 199, 200, 201, 202, 203, 204, 205,
+           206, 208, 209, 210, 211, 212, 213, 215, 216, 218, 219, 220, 222, 223, 224, 225]
+    seeds_run_before: []
+  - tag: gpt6luna
+    model_ref: openai_responses/gpt-6-luna
+    args: ["--reasoning-budget", "16384", "--cap", "5", "--guard-rate", "0.010"]   # high effort (the battery of October 20)
+    pooled: false                # a second confirmatory test of its own (prereg §5), not pooled with GLM
+    role: secondary
+    seeds: [41, 42, 45, 46, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 63, 64, 65, 68, 69, 70, 72, 73,
+           74, 76, 77, 80, 81, 84, 85, 86, 88, 89, 91, 92, 93, 94, 95, 97, 98, 99, 102, 103, 104, 105, 107, 108,
+           109, 110, 112, 113, 114, 115, 116, 117, 118, 119]
+    seeds_run_before: []
+  - tag: sonnet46
+    model_ref: anthropic/claude-sonnet-4-6
+    args: ["--reasoning-budget", "8000", "--cap", "50", "--guard-rate", "0.114"]
+    pooled: false                # the anchor: reported descriptively
+    role: descriptive
+    seeds: [41, 42, 45, 46, 48, 49, 50, 51]   # 8 pairs (the PI, October 21)
+    seeds_run_before: []

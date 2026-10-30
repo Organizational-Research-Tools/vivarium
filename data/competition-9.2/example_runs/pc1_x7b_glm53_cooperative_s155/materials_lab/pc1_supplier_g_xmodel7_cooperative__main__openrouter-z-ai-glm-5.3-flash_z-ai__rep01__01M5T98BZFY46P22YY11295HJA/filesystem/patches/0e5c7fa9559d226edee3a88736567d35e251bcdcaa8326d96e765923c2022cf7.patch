@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -557,3 +557,4 @@
+ r_BWM5GYHMKJ,qualification,QP-1466,p_GR0A2EFAJE,heat,seal hold temperature,3,78.42550,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_BWM5GYHMKK,qualification,QP-1466,p_GR0A2EFAJE,heat,seal hold temperature,4,78.59925,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_BWM5GYHMKM,qualification,QP-1466,p_GR0A2EFAJE,heat,seal hold temperature,5,77.98175,°C,lab_a,lab_a,,,,,,,,,,,,
++r_H5GG9TBG6K,exploratory,QP-3589,p_S9DYR9GX6N,strength,edge crush resistance,,7.22504,kN/m,lab_e,lab_e,3F4,HJ7,E5L,V5J,4C2,3LL,3RB,GL8,37J,RQ5,8K5,LW5

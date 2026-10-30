@@ -1,0 +1,64 @@
+--- 
++++ 
+@@ -0,0 +1,61 @@
++
++# Analyze the setup
++modules = [
++    ("base sheet", ["JA8", "P2G", "DA9", "U8H"]),
++    ("secondary sheet", ["3HW", "GG7", "5BU", "YX8"]),  # GG7 banned
++    ("binder system", ["8BB", "M2P", "NN7", "T9M"]),
++    ("additive package 1", ["5FE", "R5N", "57T", "QJ2"]),
++    ("additive package 2", ["6FA", "B3P", "S2J", "LD3"]),
++    ("additive package 3", ["L6C", "4PE", "QJ4", "44B"]),
++    ("process profile 1", ["4QB", "62D", "UP5", "WB3"]),
++    ("process profile 2", ["P8G", "C5Q", "VA8", "2BR"]),
++    ("process profile 3", ["N7N", "X9F", "H3F", "N4L"]),
++    ("surface treatment", ["ZW3", "5TZ", "7KL", "7TJ"]),
++    ("joint system", ["9FU", "57U", "DL8", "4GD"]),
++    ("conditioning step", ["YV2", "6JZ", "3N8", "G8Q"]),
++]
++
++thresholds = {
++    "heat": 77.5,   # °C, step = 0.25°C
++    "strength": 7.1, # kN/m, step = 0.03 kN/m
++    "water": 78.0,   # %, step = 0.4%
++}
++
++# GG7 adds ~2 steps to each test: heat +0.5°C, strength +0.06 kN/m, water +0.8%
++# But it's banned, so don't use it
++
++# Projects by product line
++projects = {
++    "PL-57": ["QP-6572", "QP-6843", "QP-4476"],
++    "PL-95": ["QP-7212", "QP-3473", "QP-8607"],
++    "PL-98": ["QP-3089", "QP-8265", "QP-7604"],
++}
++
++print("Product lines and projects:")
++for pl, projs in projects.items():
++    print(f"  {pl}: {projs}")
++
++print("\nModules (index, name, variants):")
++for i, (name, variants) in enumerate(modules):
++    print(f"  {i}: {name}: {variants}")
++
++print("\nThresholds:", thresholds)
++print("\nSteps: heat=0.25°C, strength=0.03 kN/m, water=0.4%")
++
++# Let me design a base recipe - avoiding GG7
++# I'll use index 0 variants for everything except secondary sheet (use index 0 = 3HW)
++base_recipe = ["JA8", "3HW", "8BB", "5FE", "6FA", "L6C", "4QB", "P8G", "N7N", "ZW3", "9FU", "YV2"]
++print("\nBase recipe:", base_recipe)
++
++# For variety, let's create a few different recipes to test different interaction combinations
++# Recipe variants to explore
++recipes_to_test = [
++    ["JA8", "3HW", "8BB", "5FE", "6FA", "L6C", "4QB", "P8G", "N7N", "ZW3", "9FU", "YV2"],  # all-first
++    ["P2G", "5BU", "M2P", "R5N", "B3P", "4PE", "62D", "C5Q", "X9F", "5TZ", "57U", "6JZ"],  # all-second (no GG7)
++    ["DA9", "YX8", "NN7", "57T", "S2J", "QJ4", "UP5", "VA8", "H3F", "7KL", "DL8", "3N8"],  # all-third
++    ["U8H", "3HW", "T9M", "QJ2", "LD3", "44B", "WB3", "2BR", "N4L", "7TJ", "4GD", "G8Q"],  # all-fourth mix
++]
++
++print("\nRecipes to test:")
++for i, r in enumerate(recipes_to_test):
++    print(f"  Recipe {i}: {r}")

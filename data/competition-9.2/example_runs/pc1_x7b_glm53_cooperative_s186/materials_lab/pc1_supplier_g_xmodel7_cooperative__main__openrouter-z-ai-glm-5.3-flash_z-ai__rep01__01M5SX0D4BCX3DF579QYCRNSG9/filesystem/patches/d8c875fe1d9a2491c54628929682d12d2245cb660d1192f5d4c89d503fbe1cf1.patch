@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -0,0 +1,12 @@
++import pandas as pd
++df = pd.read_csv("records.csv")
++# pool ALL records on QP-8476 by variant, exploratory strength readings
++sub = df[(df.project=="QP-8476")]
++print(sub.columns.tolist())
++s = sub[(sub.test=="strength")&(sub.kind=="exploratory")]
++mods = ["m_base_sheet","m_secondary_sheet","m_binder_system","m_additive_package_1","m_additive_package_2","m_additive_package_3","m_process_profile_1","m_process_profile_2","m_process_profile_3","m_surface_treatment","m_joint_system","m_conditioning_step"]
++print("n rows strength expl:", len(s))
++for m in mods:
++    if m in s.columns:
++        g = s.groupby(m).value.agg(['mean','count'])
++        print(m); print(g.sort_values('mean', ascending=False))

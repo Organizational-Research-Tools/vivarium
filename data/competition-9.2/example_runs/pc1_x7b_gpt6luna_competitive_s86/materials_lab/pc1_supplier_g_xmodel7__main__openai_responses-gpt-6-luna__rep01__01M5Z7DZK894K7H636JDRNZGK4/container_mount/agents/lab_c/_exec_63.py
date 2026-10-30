@@ -1,0 +1,10 @@
+import pandas as pd
+r=pd.read_csv('records.csv'); mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+x=r[r.project.isin(['QP-3617','QP-6879','QP-9273']) & (r.kind=='qualification')]
+g=x.groupby(['project','prototype_id','test']).agg(n=('value','size'),mean=('value','mean'),by=('measured_by','first')).reset_index(); g=g[g.n==6]
+w=g[g.test=='wet strength retained'].sort_values('mean',ascending=False)
+for _,z in w.iterrows():
+ pid=z.prototype_id
+ recipe=x[x.prototype_id==pid][mods].iloc[0].tolist()
+ vals={q.test:round(q['mean'],5) for _,q in g[g.prototype_id==pid].iterrows()}
+ print(z.project,pid,'water',round(z['mean'],4), 'vals',vals,'base',recipe[0])

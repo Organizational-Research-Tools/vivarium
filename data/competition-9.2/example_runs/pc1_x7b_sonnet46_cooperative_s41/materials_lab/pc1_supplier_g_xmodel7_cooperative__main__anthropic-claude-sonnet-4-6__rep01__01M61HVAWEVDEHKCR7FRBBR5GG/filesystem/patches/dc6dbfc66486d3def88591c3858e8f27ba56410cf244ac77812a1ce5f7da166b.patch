@@ -1,0 +1,33 @@
+--- 
++++ 
+@@ -0,0 +1,30 @@
++
++import numpy as np
++
++# p_21XPKFZDE5 water
++vals = [61.5652, 61.4964, 60.8352, 60.9440, 60.9928, 61.0976]
++print(f"p_21XPKFZDE5 (QP-4476, PL-57): mean={np.mean(vals):.2f}% — CATASTROPHIC FAIL (threshold 79.2%)")
++print("QP-4476 is completely unsalvageable for water regardless of recipe. Abort PL-57 via QP-4476.")
++print()
++print("=== PL-57 ONLY VIABLE PATH: QP-6843 ===")
++print("Old QP-6843 recipe (8BB, 9FU, L6C, H3F PP3): water 79.00% — fails Rev B by 0.5 steps")
++print("My NN7 fix p_FXEP5ES4Z8: exploratory ~78.9% — likely still fails")
++print("My NN7 fix p_FXEP5ES4ZA: exploratory ~79.4% — borderline")
++print()
++print("NEW APPROACH — Adapt lab_e's high-water recipe for QP-6843:")
++print("  Lab_e uses: S2J×DL8×4PE (water combo) + WB3 PP1 + X9F PP3 + ZW3 surface")
++print("  That gives ~80.4% water in QP-3473 (5.94 steps above base)")
++print("  For QP-6843, use NN7 binder (not 8BB) + C5Q PP2 + YV2 conditioning (not 3N8)")
++print("  Recipe: P2G | 3HW | NN7 | 57T | S2J | 4PE | WB3 | C5Q | X9F | ZW3 | DL8 | YV2")
++print()
++print("Advantages vs old QP-6843 recipe:")
++print("  - DL8 joint vs 9FU: S2J×DL8×4PE better water combo than S2J×9FU×L6C")
++print("  - NN7 binder vs 8BB: better heat per lab_a")
++print("  - WB3 PP1 vs 4QB: lab_f found WB3+X9F = good heat AND water")
++print("  - X9F PP3 vs H3F: consistent with high-water recipes across projects")
++print("  - YV2 conditioning vs 3N8/6JZ: avoids 3N8 heat penalty")
++print()
++print("Heat interactions for new recipe:")
++print("  secondary×surface×binder: 3HW×ZW3×NN7 — NN7 good for heat")
++print("  AP1×PP2×conditioning: 57T×C5Q×YV2 — C5Q good for heat")
++print("  PP1×PP3×surface: WB3×X9F×ZW3 — lab_f confirmed good for heat in QP-3473")

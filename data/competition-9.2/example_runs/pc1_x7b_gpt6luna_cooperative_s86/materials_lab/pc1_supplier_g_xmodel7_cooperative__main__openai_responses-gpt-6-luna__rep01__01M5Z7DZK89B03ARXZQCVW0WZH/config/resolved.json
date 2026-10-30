@@ -1,0 +1,76 @@
+{
+  "cache_policy_fingerprint": "dfd8d9228b9fd1159de8fe57d5f83a9c00f0fa6a55036d221a92c4a80d7af94b:c28dc33c84961b3b9f489f306bb512a8693dcbb86c089726829ce9ea720eaec4",
+  "cap_output_tokens": null,
+  "cap_usd": 5.0,
+  "context_budget": null,
+  "decomposed_contract": false,
+  "difficulty": "main",
+  "evaluator": "materials_lab.credit_score",
+  "final_reserve_tokens": 0,
+  "max_model_calls": 1500,
+  "model_heterogeneous": false,
+  "model_ref": "openai_responses/gpt-6-luna",
+  "n_agents": 6,
+  "organization": "pc1_supplier_g_xmodel7_cooperative",
+  "outcome_contract": "materials_lab_materials_qualification",
+  "parity_basis": "usd",
+  "parity_regime": null,
+  "reasoning_budget": 16384,
+  "reasoning_interleaved": true,
+  "reasoning_kind": "thinking",
+  "reference_sha256": null,
+  "resolved_sweep_sha256": null,
+  "role_model_refs": {
+    "lab_a": "openai_responses/gpt-6-luna",
+    "lab_b": "openai_responses/gpt-6-luna",
+    "lab_c": "openai_responses/gpt-6-luna",
+    "lab_d": "openai_responses/gpt-6-luna",
+    "lab_e": "openai_responses/gpt-6-luna",
+    "lab_f": "openai_responses/gpt-6-luna"
+  },
+  "roles": [
+    {
+      "plays": [
+        "lab_a"
+      ],
+      "role_id": "lab_a",
+      "specialized": false
+    },
+    {
+      "plays": [
+        "lab_b"
+      ],
+      "role_id": "lab_b",
+      "specialized": false
+    },
+    {
+      "plays": [
+        "lab_c"
+      ],
+      "role_id": "lab_c",
+      "specialized": false
+    },
+    {
+      "plays": [
+        "lab_d"
+      ],
+      "role_id": "lab_d",
+      "specialized": false
+    },
+    {
+      "plays": [
+        "lab_e"
+      ],
+      "role_id": "lab_e",
+      "specialized": false
+    },
+    {
+      "plays": [
+        "lab_f"
+      ],
+      "role_id": "lab_f",
+      "specialized": false
+    }
+  ],
+  "task_pack_id": "materials_lab"
+}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}arm diff — oaos2{% endblock %}
+{% block crumb %}<span class="root">design / diff</span>{% endblock %}
+{% block content %}
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem">Compare available design records</h1>
+<p class="dim" style="margin:0 0 0.6rem">a = <a href="/run/{{ a }}/design">{{ a|shortid(60) }}</a> · b = <a href="/run/{{ b }}/design">{{ b|shortid(60) }}</a></p>
+
+<p class="dim">This comparison includes selected saved settings, selected fields from the current organization presets, and initial prompt text. Empty differences mean those displayed fields match, not that the original setups were identical. Check each run’s Design page for missing records and preset-hash mismatches.</p>
+
+<div class="card"><h2>Cell factors</h2>{% if diff.cell %}<pre>{{ diff.cell }}</pre>{% else %}<p class="dim">no differences in displayed fields</p>{% endif %}</div>
+<div class="card"><h2>Organization (roles, channels, rights, ceilings)</h2>{% if diff.organization %}<pre>{{ diff.organization }}</pre>{% else %}<p class="dim">no differences in displayed fields</p>{% endif %}</div>
+<div class="card">
+  <h2>Prompt envelopes</h2>
+  {% if diff.identical_envelopes %}<p class="dim">matching initial prompt text for: {{ diff.identical_envelopes|join(", ") }}</p>{% endif %}
+  {% for rid, text in diff.envelopes.items() %}{% if text %}
+  <details open><summary><strong>{{ rid }}</strong></summary><pre style="white-space:pre-wrap">{{ text }}</pre></details>
+  {% endif %}{% endfor %}
+</div>
+
+{% endblock %}

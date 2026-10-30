@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -833,3 +833,5 @@
+ r_YX7FZFW0AD,qualification,QP-1992,p_P5WACE5V1Z,strength,edge crush resistance,3,7.23869,kN/m,lab_b,lab_f,,,,,,,,,,,,
+ r_YX7FZFW0AE,qualification,QP-1992,p_P5WACE5V1Z,strength,edge crush resistance,4,7.17308,kN/m,lab_b,lab_f,,,,,,,,,,,,
+ r_YX7FZFW0AF,qualification,QP-1992,p_P5WACE5V1Z,strength,edge crush resistance,5,7.19336,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_FGTN6DGYF4,exploratory,QP-1992,p_3Z4RHGH09X,heat,seal hold temperature,,78.18975,°C,lab_d,lab_b,V2W,38J,HD9,8BE,9KR,JN6,8KT,9AH,F2C,83B,A6U,V8F
++r_FGTN6DGYF5,exploratory,QP-1992,p_3Z4RHGH09X,heat,seal hold temperature,,77.83800,°C,lab_d,lab_b,V2W,38J,HD9,8BE,9KR,JN6,8KT,9AH,F2C,83B,A6U,V8F

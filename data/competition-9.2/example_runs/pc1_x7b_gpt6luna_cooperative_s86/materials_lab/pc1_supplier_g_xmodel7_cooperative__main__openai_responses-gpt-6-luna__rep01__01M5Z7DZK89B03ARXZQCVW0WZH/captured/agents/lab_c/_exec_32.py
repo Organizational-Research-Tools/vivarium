@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x.columns.tolist())
+print(x[x['project_id']=='QP-9980'].groupby(['prototype_id','instrument','kind']).size())

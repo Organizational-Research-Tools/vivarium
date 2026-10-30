@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -0,0 +1,2 @@
++import pandas as pd
++r=pd.read_csv('records.csv'); q=r[(r.project.isin(['QP-6879','QP-3617','QP-9273'])) & (r.kind=='qualification')]; p=q.pivot_table(index=['project','prototype_id'],columns='test',values='value',aggfunc=['count','mean']); print(p.to_string())

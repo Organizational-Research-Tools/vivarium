@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -715,3 +715,9 @@
+ r_XFFFTSQX5X,exploratory,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,,78.49050,°C,lab_d,lab_c,,,,,,,,,,,,
+ r_ZP59E5VVG7,exploratory,QP-5993,p_CWRMK2CFRR,heat,seal hold temperature,,61.92100,°C,lab_d,lab_c,,,,,,,,,,,,
+ r_ZP59E5VVG8,exploratory,QP-5993,p_CWRMK2CFRR,heat,seal hold temperature,,62.51550,°C,lab_d,lab_c,,,,,,,,,,,,
++r_0RR2EYC2NZ,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,0,78.64475,°C,lab_d,lab_c,,,,,,,,,,,,
++r_0RR2EYC2P0,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,1,78.12475,°C,lab_d,lab_c,,,,,,,,,,,,
++r_0RR2EYC2P1,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,2,78.19300,°C,lab_d,lab_c,,,,,,,,,,,,
++r_0RR2EYC2P2,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,3,78.27050,°C,lab_d,lab_c,,,,,,,,,,,,
++r_0RR2EYC2P3,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,4,78.44625,°C,lab_d,lab_c,,,,,,,,,,,,
++r_0RR2EYC2P4,qualification,QP-5993,p_CWRMK2CFRP,heat,seal hold temperature,5,78.54975,°C,lab_d,lab_c,,,,,,,,,,,,

@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -643,3 +643,5 @@
+ r_2VZ1DDMETB,qualification,QP-1992,p_3Z4RHGH09S,strength,edge crush resistance,3,7.22999,kN/m,lab_b,lab_b,,,,,,,,,,,,
+ r_2VZ1DDMETC,qualification,QP-1992,p_3Z4RHGH09S,strength,edge crush resistance,4,7.16642,kN/m,lab_b,lab_b,,,,,,,,,,,,
+ r_2VZ1DDMETD,qualification,QP-1992,p_3Z4RHGH09S,strength,edge crush resistance,5,7.17323,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_8MT66VZQ82,exploratory,QP-1992,p_GWSEYXYWZH,water,wet strength retained,,63.3700,%,lab_f,lab_f,HP9,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_RWVDKY32WR,exploratory,QP-1992,p_GWSEYXYWZH,water,wet strength retained,,62.1680,%,lab_f,lab_f,HP9,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F

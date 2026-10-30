@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -451,9 +451,9 @@
+ r_MYK0YHXJQ9,exploratory,QP-4476,p_QHRB9W33WW,heat,seal hold temperature,,77.91175,°C,lab_a,lab_f,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
+ r_K3EPDPA9H8,exploratory,QP-4476,p_QHRB9W33WW,heat,seal hold temperature,,78.20100,°C,lab_a,lab_f,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
+ r_K3EPDPA9H9,exploratory,QP-4476,p_QHRB9W33WW,heat,seal hold temperature,,78.22525,°C,lab_a,lab_f,JA8,YX8,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
+-r_K3EPDPA9HA,exploratory,QP-4476,p_QHRB9W33WY,heat,seal hold temperature,,72.93100,°C,lab_a,lab_f,,,,,,,,,,,,
+-r_K3EPDPA9HB,exploratory,QP-4476,p_QHRB9W33WY,heat,seal hold temperature,,72.51900,°C,lab_a,lab_f,,,,,,,,,,,,
+-r_K3EPDPA9HC,exploratory,QP-4476,p_QHRB9W33WY,heat,seal hold temperature,,72.64625,°C,lab_a,lab_f,,,,,,,,,,,,
+-r_K3EPDPA9HD,exploratory,QP-4476,p_QHRB9W33X0,heat,seal hold temperature,,72.78325,°C,lab_a,lab_f,,,,,,,,,,,,
+-r_QMC42N2PHR,exploratory,QP-4476,p_QHRB9W33X0,heat,seal hold temperature,,73.51425,°C,lab_a,lab_f,,,,,,,,,,,,
+-r_QMC42N2PHS,exploratory,QP-4476,p_QHRB9W33X0,heat,seal hold temperature,,72.69000,°C,lab_a,lab_f,,,,,,,,,,,,
++r_K3EPDPA9HA,exploratory,QP-4476,p_QHRB9W33WY,heat,seal hold temperature,,72.93100,°C,lab_a,lab_f,JA8,5BU,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_K3EPDPA9HB,exploratory,QP-4476,p_QHRB9W33WY,heat,seal hold temperature,,72.51900,°C,lab_a,lab_f,JA8,5BU,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_K3EPDPA9HC,exploratory,QP-4476,p_QHRB9W33WY,heat,seal hold temperature,,72.64625,°C,lab_a,lab_f,JA8,5BU,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_K3EPDPA9HD,exploratory,QP-4476,p_QHRB9W33X0,heat,seal hold temperature,,72.78325,°C,lab_a,lab_f,JA8,3HW,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_QMC42N2PHR,exploratory,QP-4476,p_QHRB9W33X0,heat,seal hold temperature,,73.51425,°C,lab_a,lab_f,JA8,3HW,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8
++r_QMC42N2PHS,exploratory,QP-4476,p_QHRB9W33X0,heat,seal hold temperature,,72.69000,°C,lab_a,lab_f,JA8,3HW,M2P,QJ2,6FA,44B,62D,2BR,N4L,7KL,DL8,3N8

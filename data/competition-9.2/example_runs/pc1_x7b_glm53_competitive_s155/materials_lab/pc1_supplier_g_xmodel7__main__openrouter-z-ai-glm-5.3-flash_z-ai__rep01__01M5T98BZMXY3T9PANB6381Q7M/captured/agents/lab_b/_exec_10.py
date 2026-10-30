@@ -1,0 +1,10 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+for pid in ['p_ZJC86DH7B1']:
+    sub = df[(df.prototype_id==pid)]
+    for t in sub.test.unique():
+        q = sub[(sub.test==t)&(sub.kind=='qualification')]
+        if len(q)>=6: print(pid,t,'PANEL',q.value.mean(),'by',sorted(set(q.measured_by)))
+        else:
+            print(pid,t,'screens n=',len(sub[(sub.test==t)]), sub[(sub.test==t)].value.mean())
+    print(sub[['record_id','test','value','kind','measured_by']].to_string())

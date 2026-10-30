@@ -1,0 +1,48 @@
+--- 
++++ 
+@@ -0,0 +1,45 @@
++
++import numpy as np
++
++panels2 = {
++    'p_J6CX8AHRR3 (QP-3473, lab_e)': [78.67250, 78.80275, 78.71800, 79.15800, 78.54050, 78.51375],
++    'p_J6CX8AHRR5 (QP-3473, lab_e)': [78.75025, 78.96775, 78.96875, 79.12800, 78.49150, 78.77275],
++    'p_VPVZP301DH (QP-3089, lab_b)': [78.28000, 78.44325, 78.36625, 78.54050, 78.54550, 78.00100],
++    'p_VPVZP301DN (QP-3089, lab_b)': [78.39225, 78.59925, 78.47300, 78.77600, 78.77925, 78.29525],
++    'p_VPVZP301DQ (QP-3089, lab_b)': [78.10900, 78.21975, 78.35425, 78.48875, 78.62575, 77.96650],
++    'p_580QSJBKVQ (QP-7212, lab_b)': [78.45700, 78.58625, 78.75675, 78.79225, 78.83925, 78.37550],
++    'p_5C89S5B8FP (QP-7212, lab_c)': [77.83225, 77.93875, 78.08475, 78.11875, 78.20925, 78.37425],
++}
++
++print("=== SECOND BATCH HEAT PANEL RESULTS ===")
++for name, vals in panels2.items():
++    mean = np.mean(vals)
++    status = "✓ PASS" if mean >= 77.5 else "✗ FAIL"
++    print(f"  {name}: mean={mean:.3f}°C {status}")
++
++print()
++print("=== KEY INSIGHT: WHAT LAB_C AND LAB_E CREATED ===")
++print("Lab_c (WATER lab) created p_5C89S5B8FP (QP-7212) — heat 78.093°C ✓")
++print("  If lab_c designed this for water, it LIKELY passes water too!")
++print("  Need strength (lab_b/lab_e) to check.")
++print()
++print("Lab_e (STRENGTH lab) created p_J6CX8AHRR3 (QP-3473) — heat 78.735°C ✓")
++print("  If lab_e designed this for strength, it LIKELY passes strength ≥7.10!")
++print("  Water is the unknown — old QP-3473 recipes gave 73% (fails).")
++print()
++print("=== MY OWN QP-3089 RECIPES (from my_records): ALL FAIL STRENGTH ===")
++print("  p_3GQVECBNN0: heat 78.213 ✓, strength 6.731 ✗, water 79.140 ✓")
++print("  p_WHEF2Y6912: heat 78.181 ✓, strength 6.727 ✗, water 79.089 ✓")
++print("  p_SWSSAS3F5F: heat 78.123 ✓, strength 6.720 ✗, water 78.997 ✓")
++print("  → My QP-3089 recipes pass heat and water but FAIL strength (~6.73 vs 7.10 needed)")
++print()
++print("=== MY OWN QP-3473 RECIPE: FAILS WATER ===")
++print("  p_GR7RQAX57V: heat 78.079 ✓, strength 7.229 ✓, water 73.073 ✗")
++print("  → QP-3473 needs different recipe to pass water (lab_f said X9F may help)")
++print()
++print("=== CRITICAL PATH TO 3 CREDITS ===")
++print("  PL-95/QP-3473: p_J6CX8AHRR3 has heat ✓, need strength+water panels")
++print("  PL-95/QP-7212: p_5C89S5B8FP has heat ✓, need strength+water panels")
++print("  PL-98/QP-3089: need prototype passing ALL THREE (heat✓, strength UNKNOWN for b's J/P)")
++print("  PL-98/QP-8265: need strength+water panels on p_X8JBQTDZJT")
++print("  PL-57: STILL CRITICAL — no solution found yet")

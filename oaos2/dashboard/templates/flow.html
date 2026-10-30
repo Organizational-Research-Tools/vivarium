@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import sev_chip %}
+{% block title %}flow — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / flow</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "flow") }}
+
+<style>
+  /* Reading layout: one literary column; kind carried by a left border + label,
+     text always in ink (dataviz rule: text wears text tokens). */
+  .flow { max-width: 52rem; }
+  .fi { border-left: 3px solid var(--hairline); padding: 0.15rem 0 0.15rem 0.8rem; margin: 0.45rem 0; }
+  .fi .t { font-size: 12px; color: var(--ink-2); }
+  .fi .t a { color: var(--ink-muted); }
+  .fi .body { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .fi-thinking { border-left-color: #4a3aa7; }
+  .fi-say { border-left-color: #2a78d6; }
+  .fi-tool { border-left-color: #1baf7a; }
+  .fi-volley, .fi-message, .fi-chat, .fi-handoff, .fi-filing, .fi-stage, .fi-exchange { border-left-color: #eda100; }
+  .fi-arrival { border-left-color: #2a78d6; background: color-mix(in srgb, #2a78d6 5%, transparent); }
+  .fi-observed { border-left-color: #8a8880; }
+  .fi-constraint, .fi-intervention { border-left-color: #c98500; background: color-mix(in srgb, #c98500 6%, transparent); }
+  .fi-arrival > .t, .fi-filing > .t, .fi-intervention > .t, .fi-constraint > .t { font-weight: 650; color: var(--ink); }
+  .dayhead { margin: 1.6rem 0 0.3rem; padding: 0.25rem 0; border-top: 2px solid var(--ink); font-size: 14px; font-weight: 650; }
+  .dayhead .dim { font-weight: 400; }
+  .fi-commit, .fi-outcome, .fi-evaluation, .fi-milestone { border-left-color: var(--ink); }
+  .fi-problem { border-left-color: var(--critical);
+                background: color-mix(in srgb, var(--critical) 6%, transparent); }
+  .fi-lifecycle, .fi-other { border-left-color: var(--hairline); }
+  .fi-commit > .t, .fi-outcome > .t, .fi-handoff > .t, .fi-milestone > .t { font-weight: 650; color: var(--ink); }
+  .fi-problem > .t { font-weight: 650; color: var(--critical); }
+  @media (prefers-color-scheme: dark) {
+    .fi-thinking { border-left-color: #9085e9; }
+    .fi-say { border-left-color: #3987e5; }
+    .fi-tool { border-left-color: #199e70; }
+    .fi-volley, .fi-message, .fi-chat, .fi-handoff { border-left-color: #c98500; }
+  }
+  .turnhead { margin: 1.1rem 0 0.2rem; font-size: 12px; font-weight: 650; color: var(--ink-2);
+              text-transform: none; border-bottom: 1px solid var(--hairline); padding-bottom: 0.15rem; }
+  .zoom a { padding: 0.15rem 0.55rem; border: 1px solid var(--border); border-radius: 99px; }
+  .zoom a.on { font-weight: 650; border-color: var(--ink-2); }
+</style>
+
+<div class="card sticky">
+  <form class="filters" method="get">
+    <span class="zoom" title="cumulative zoom: decisions = only the moves that changed the organization's state (commits, handoffs, closures); dialogue adds everything said; reasoning adds retained reasoning text and tool steps; everything adds the rest. Problems are shown at every level.">
+      {% for lv in levels %}
+      <a class="{{ 'on' if lv == level }}" href="{{ request.url.include_query_params(level=lv, page=1) }}">{{ lv }}</a>
+      {% endfor %}
+    </span>
+    <select name="agent" onchange="this.form.submit()">
+      <option value="">agent: all</option>
+      {% for a in agents %}<option value="{{ a }}" {% if agent == a %}selected{% endif %}>{{ a }}</option>{% endfor %}
+    </select>
+    {% if days %}
+    <select name="day" onchange="this.form.submit()" title="one logical day (from clock.round); 'all' pages through the run day by day">
+      <option value="">day: all</option>
+      {% for d in days %}<option value="{{ d }}" {% if day == d %}selected{% endif %}>day {{ d }}{% if d == 0 %} (setup){% endif %}</option>{% endfor %}
+    </select>
+    {% endif %}
+    <input type="hidden" name="level" value="{{ level }}">
+    <noscript><button type="submit">Go</button></noscript>
+    <span class="dim" style="margin-left:auto">{{ n_items }} steps · problems always shown
+      {% if n_pages > 1 %} · {% if paged_by_day %}day {{ page_day }} · page {{ page }}/{{ n_pages }}{% else %}page {{ page }}/{{ n_pages }}{% endif %}
+      {% if page > 1 %}<a href="{{ request.url.include_query_params(page=page-1) }}">←</a>{% endif %}
+      {% if page < n_pages %}<a href="{{ request.url.include_query_params(page=page+1) }}">→</a>{% endif %}
+      {% endif %}</span>
+  </form>
+</div>
+
+{% if minimap.ticks %}
+<div class="mmap help" style="margin:0.4rem 0"
+     title="The whole run in one strip, left to right. Every tick is a step at this zoom level; tall red = problems, tall black = decisions. Click anywhere to jump there — across pages too. The shaded window is what you're reading now.">
+  {% set on_page = minimap.ticks|selectattr("page", "equalto", page)|list %}
+  {% if on_page %}
+  <span class="mm-window" style="left:{{ on_page|map(attribute='pct')|min }}%; width:{{ (on_page|map(attribute='pct')|max) - (on_page|map(attribute='pct')|min) + 0.3 }}%"></span>
+  {% endif %}
+  {% for t in minimap.ticks %}
+  <a class="mm-{{ t.kind }}" style="left:{{ t.pct }}%"
+     href="{{ request.url.include_query_params(page=t.page) }}#e{{ t.event_id }}" title="[{{ t.seq }}] {{ t.kind }}"></a>
+  {% endfor %}
+</div>
+{% endif %}
+
+<p class="legend" style="margin:0.2rem 0 0.6rem">
+  <span><span class="sw-dot" style="background:#2a78d6; opacity:0.6"></span><span class="help" title="A notice arrived for a role from the environment schedule — what the day was about">arrival</span></span>
+  <span><span class="sw-dot" style="background:#eda100"></span><span class="help" title="A filing broadcast to several recipients, shown once with its recipient list">filing</span></span>
+  <span><span class="sw-dot" style="background:#c98500"></span><span class="help" title="A constraint bit or the platform stepped in: context compaction, a bounced submission">constraint / intervention</span></span>
+  <span><span class="sw-dot" style="background:#4a3aa7"></span><span class="help" title="Retained text labeled as private reasoning before acting. This is model output, not complete access to its internal computation.">thinking</span></span>
+  <span><span class="sw-dot" style="background:#2a78d6"></span><span class="help" title="What the agent actually said, word for word">said</span></span>
+  <span><span class="sw-dot" style="background:#1baf7a"></span><span class="help" title="A tool the agent used, with its real output">tool</span></span>
+  <span><span class="sw-dot" style="background:#eda100"></span><span class="help" title="Communication between agents: discussion turns, messages, work handoffs">talk</span></span>
+  <span><span class="sw-dot" style="background:var(--ink)"></span><span class="help" title="A formal move that changed the organization's state: a submission, a closure">decision</span></span>
+  <span><span class="sw-dot" style="background:#d03b3b"></span><span class="help" title="Something went wrong here — shown at every zoom level, never hidden">problem</span></span>
+</p>
+
+{% if findings %}
+<div class="card">
+  <h2>Problem moments</h2>
+  {% for f, anchor, on_page in findings %}
+  <p style="margin:0.15rem 0">{{ sev_chip(f.severity) }} <strong>{{ f.title }}</strong>
+    {% if anchor %}{% if on_page %}<a href="#e{{ anchor }}">↓ jump to it</a>{% else %}<a href="/run/{{ run_ref }}/event/{{ anchor }}">open event</a> <span class="dim">(not on this page/agent cut)</span>{% endif %}{% endif %}
+    {% if f.detail %}<span class="dim">— {{ f.detail }}</span>{% endif %}</p>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="flow">
+{% set ns = namespace(last_day=None) %}
+{% for g in groups %}
+  {% if g.day is not none and g.day != ns.last_day %}
+  {% set ns.last_day = g.day %}
+  <div class="dayhead" id="day{{ g.day }}">Day {{ g.day }}{% if g.day == 0 %} <span class="dim">· setup, before the first round</span>{% endif %} <a class="dim" href="{{ request.url.include_query_params(day=g.day, page=1) }}" style="font-weight:400">only this day</a></div>
+  {% endif %}
+  <div class="turnhead"><span class="adot-{{ agent_slot.get(g.agent, -1) }}"></span>{{ g.agent }}{% if g.turn %} · <a href="/run/{{ run_ref }}/trace?view=full&turn={{ g.turn }}" style="color:var(--ink-muted)">{{ g.turn }}</a>{% endif %}</div>
+  {% for item in g["items"] %}
+  {% set e = item.e %}
+  <div class="fi fi-{{ item.kind }}" id="e{{ e.event_id }}">
+    <div class="t">
+      <a href="/run/{{ run_ref }}/event/{{ e.event_id }}">[{{ e.sequence_number }}]</a>
+      {{ item.title }}
+      {% if item.finding %} · {{ sev_chip(item.finding.severity) }} {{ item.finding.title }}{% endif %}
+      {% if item.kind == "filing" and item.n > 1 %}<span class="dim" title="{{ item.n }} handoff events collapsed into this filing">×{{ item.n }}</span>{% endif %}
+    </div>
+    {% if item.text %}<div class="body">{{ item.text }}{% if item.folded %} <a class="dim" href="/run/{{ run_ref }}/item/{{ e.event_id }}" target="_blank" title="the full content, as plain text">… show all ({{ item.folded|length }} more chars) ↗</a>{% elif level == "decisions" and item.kind in ("commit", "filing", "handoff", "arrival") %} <a class="dim" href="/run/{{ run_ref }}/item/{{ e.event_id }}" target="_blank" title="the full content, as plain text">full ↗</a>{% endif %}</div>{% endif %}
+  </div>
+  {% endfor %}
+{% else %}
+  <div class="card"><p class="dim">nothing at this level{% if agent %} for {{ agent }}{% endif %}.</p></div>
+{% endfor %}
+</div>
+
+{% if n_pages > 1 %}
+<p>
+  {% if page > 1 %}<a href="{{ request.url.include_query_params(page=page-1) }}">← prev</a>{% endif %}
+  <span class="dim">{% if paged_by_day %}day {{ page_day }} · page {{ page }} / {{ n_pages }} (one page per day){% else %}page {{ page }} / {{ n_pages }} (breaks between turns, never inside one){% endif %}</span>
+  {% if page < n_pages %}<a href="{{ request.url.include_query_params(page=page+1) }}">next →</a>{% endif %}
+</p>
+{% endif %}
+
+{% endblock %}

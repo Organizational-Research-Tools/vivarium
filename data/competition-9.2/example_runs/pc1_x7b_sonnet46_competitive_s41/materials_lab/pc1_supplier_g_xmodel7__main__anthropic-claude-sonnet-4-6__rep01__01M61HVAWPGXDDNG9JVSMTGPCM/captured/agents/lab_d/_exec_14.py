@@ -1,0 +1,25 @@
+
+import pandas as pd
+df = pd.read_csv('records.csv')
+
+module_cols = ['base_sheet','secondary_sheet','binder_system','additive_package_1',
+               'additive_package_2','additive_package_3','process_profile_1',
+               'process_profile_2','process_profile_3','surface_treatment',
+               'joint_system','conditioning_step']
+
+# Focus on QP-4476
+pl57 = df[df['project'] == 'QP-4476'].copy()
+
+# Compute per-prototype summary
+proto_summary = pl57.groupby(['prototype_id','test']).agg(
+    mean_val=('value','mean'),
+    n=('value','count')
+).unstack('test').reset_index()
+proto_summary.columns = ['prototype_id','n_heat','n_strength','n_water','mean_heat','mean_strength','mean_water']
+print("QP-4476 per-prototype summary:")
+print(proto_summary.to_string())
+
+# Show recipe for each prototype
+print("\nRecipes for QP-4476 prototypes (first row per prototype):")
+recipes = pl57.drop_duplicates('prototype_id')[['prototype_id'] + module_cols]
+print(recipes.to_string())

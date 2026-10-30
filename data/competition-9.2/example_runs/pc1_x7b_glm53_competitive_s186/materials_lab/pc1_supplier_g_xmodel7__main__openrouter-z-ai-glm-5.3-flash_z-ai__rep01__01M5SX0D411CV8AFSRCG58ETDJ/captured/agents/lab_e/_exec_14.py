@@ -1,0 +1,6 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+p = df[df.prototype_id=='p_E05X2XJNTY']
+print(p.groupby(['instrument','measured_by'])['value'].agg(['mean','count']))
+print(p[p.instrument=='water'][['record_id','specimen','value','measured_by']])
+print(p[p.instrument=='strength'][['record_id','specimen','value','measured_by']])

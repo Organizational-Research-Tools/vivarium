@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++D=pd.read_csv('records.csv'); g=D[(D.project=='QP-6879')&(D.prototype_id=='p_HDGZMBDKP9')&(D.kind=='qualification')]
++print(g.groupby('test').value.mean())
++print(g[g.test=='seal hold temperature'][['specimen','value']].to_string(index=False))
++print(g[g.test=='edge crush resistance'].value.mean())

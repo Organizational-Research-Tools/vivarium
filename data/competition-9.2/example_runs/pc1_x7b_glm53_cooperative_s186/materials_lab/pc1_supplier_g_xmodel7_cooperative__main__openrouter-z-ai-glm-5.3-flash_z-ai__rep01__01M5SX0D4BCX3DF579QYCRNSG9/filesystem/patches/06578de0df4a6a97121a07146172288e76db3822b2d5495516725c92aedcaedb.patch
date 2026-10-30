@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -0,0 +1,12 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++cols=['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++for proj in ['QP-4069','QP-4757','QP-5993']:
++    q=df[df.project==proj]
++    g=q.groupby('prototype_id').agg(**{'heat':('value', lambda s: s[q.loc[s.index,'test']=='seal hold temperature'].mean()),
++        }).reset_index()
++    piv = q.pivot_table(index='prototype_id', columns='test', values='value', aggfunc='mean')
++    piv=piv.join(q[cols].drop_duplicates().set_index('prototype_id'))
++    piv = piv.rename(columns={'seal hold temperature':'heat','edge crush resistance':'strength','wet strength retained':'water'})
++    print('===',proj)
++    print(piv.round(2).to_string())

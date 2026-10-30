@@ -1,0 +1,7 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+m=df[df['prototype_id']=='p_MHYGPBWR1V']
+print(m[['record_id','kind','project','instrument','test','specimen','value','measured_by','requester']].to_string())
+# also any strength/heat panels on QP-3068
+q=df[df['project']=='QP-3068']
+print(q[q['kind']=='qualification'][['record_id','prototype_id','test','value','measured_by','requester']].to_string())

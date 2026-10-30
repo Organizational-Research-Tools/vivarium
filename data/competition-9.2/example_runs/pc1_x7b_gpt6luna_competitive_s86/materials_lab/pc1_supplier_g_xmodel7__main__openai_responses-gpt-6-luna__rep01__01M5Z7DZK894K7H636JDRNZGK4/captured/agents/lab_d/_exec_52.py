@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); x['value']=pd.to_numeric(x.value); q=x[(x.project=='QP-3617')&(x.kind=='qualification')].groupby(['prototype_id','test']).value.agg(['count','mean']).reset_index();print(q.to_string(index=False))

@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -0,0 +1,27 @@
++import pandas as pd, numpy as np
++df=pd.read_csv('records.csv')
++mods=list(df.columns[11:23])
++q=df[df.kind=='qualification'].copy()
++# add lab_d's two heat baselines if present
++means=q.groupby('prototype_id')['value'].mean()
++recipes=df.drop_duplicates('prototype_id')[['project','prototype_id']+mods].set_index('prototype_id')
++X=recipes.join(means.rename('y')).dropna(subset=['y'])
++Z=pd.get_dummies(X[mods].astype(str),columns=mods)
++y=X['y']
++from sklearn.linear_model import LinearRegression, Ridge
++m=Ridge(alpha=1.0).fit(Z.astype(float),y)
++print(len(y), m.score(Z.astype(float),y))
++variants={'base_sheet':['3F4','H6K','73S','SM9'],'secondary_sheet':['9AF','3XR','HJ7','3S7'],'binder_system':['6ZC','3VE','E5L','DQ9'],'additive_package_1':['M5L','U4A','3VM','V5J'],'additive_package_2':['NS4','Y6H','4C2','7J8'],'additive_package_3':['3LL','J3Y','92P','S3J'],'process_profile_1':['3RB','PG2','24L','GY3'],'process_profile_2':['F9B','GL8','79Y','8WN'],'process_profile_3':['49R','37J','W9T','84A'],'surface_treatment':['N4Y','RQ5','NP6','6FZ'],'joint_system':['8K5','8M7','7PP','PK9'],'conditioning_step':['UZ4','4YT','LW5','23Y']}
++base2={k:v[1] for k,v in variants.items()}
++x=pd.DataFrame([{k:base2[k] for k in mods}])
++zx=pd.get_dummies(x[mods].astype(str),columns=mods).reindex(columns=Z.columns,fill_value=0)
++print('baseline2 pred:',m.predict(zx.astype(float)))
++# effect of each variant vs base2 on water
++rows=[]
++for k,v in variants.items():
++    for var in v:
++        xx={kk:base2[kk] for kk in mods}; xx[k]=var
++        x1=pd.DataFrame([xx]); z1=pd.get_dummies(x1[mods].astype(str),columns=mods).reindex(columns=Z.columns,fill_value=0)
++        rows.append((k,var,m.predict(z1.astype(float))[0]))
++r=pd.DataFrame(rows,columns=['module','variant','pred'])
++print(r.sort_values('pred',ascending=False).head(20).to_string())

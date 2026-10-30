@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -729,3 +729,15 @@
+ r_Z5GQWBVA7S,qualification,QP-2342,p_FYHSR9Y1B5,heat,seal hold temperature,3,78.31075,°C,lab_a,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
+ r_Z5GQWBVA7T,qualification,QP-2342,p_FYHSR9Y1B5,heat,seal hold temperature,4,78.41900,°C,lab_a,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
+ r_Z5GQWBVA7V,qualification,QP-2342,p_FYHSR9Y1B5,heat,seal hold temperature,5,78.54075,°C,lab_a,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
++r_8A5JKH0HE1,qualification,QP-2342,p_FYHSR9Y1B5,water,wet strength retained,0,79.4780,%,lab_c,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
++r_8A5JKH0HE2,qualification,QP-2342,p_FYHSR9Y1B5,water,wet strength retained,1,79.6996,%,lab_c,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
++r_8A5JKH0HE3,qualification,QP-2342,p_FYHSR9Y1B5,water,wet strength retained,2,79.9816,%,lab_c,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
++r_8A5JKH0HE4,qualification,QP-2342,p_FYHSR9Y1B5,water,wet strength retained,3,79.9936,%,lab_c,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
++r_8A5JKH0HE5,qualification,QP-2342,p_FYHSR9Y1B5,water,wet strength retained,4,80.2844,%,lab_c,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
++r_8A5JKH0HE6,qualification,QP-2342,p_FYHSR9Y1B5,water,wet strength retained,5,79.4612,%,lab_c,lab_e,SM9,3S7,3VE,U4A,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
++r_SA3QHYREMY,qualification,QP-2342,p_FYHSR9Y1B7,heat,seal hold temperature,0,78.64925,°C,lab_a,lab_e,SM9,3S7,3VE,3VM,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
++r_SA3QHYREMZ,qualification,QP-2342,p_FYHSR9Y1B7,heat,seal hold temperature,1,77.98175,°C,lab_a,lab_e,SM9,3S7,3VE,3VM,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
++r_SA3QHYREN0,qualification,QP-2342,p_FYHSR9Y1B7,heat,seal hold temperature,2,78.08125,°C,lab_a,lab_e,SM9,3S7,3VE,3VM,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
++r_SA3QHYREN1,qualification,QP-2342,p_FYHSR9Y1B7,heat,seal hold temperature,3,78.15175,°C,lab_a,lab_e,SM9,3S7,3VE,3VM,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
++r_SA3QHYREN2,qualification,QP-2342,p_FYHSR9Y1B7,heat,seal hold temperature,4,78.37250,°C,lab_a,lab_e,SM9,3S7,3VE,3VM,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5
++r_SA3QHYREN3,qualification,QP-2342,p_FYHSR9Y1B7,heat,seal hold temperature,5,78.35500,°C,lab_a,lab_e,SM9,3S7,3VE,3VM,7J8,92P,GY3,8WN,W9T,NP6,PK9,LW5

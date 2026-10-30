@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -933,3 +933,27 @@
+ r_6B2E8V1N8Y,exploratory,QP-3617,p_ZG7GNCT5AW,water,wet strength retained,,79.7452,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,96Y,4ZD,SU2
+ r_6B2E8V1N8Z,exploratory,QP-3617,p_ZG7GNCT5AY,water,wet strength retained,,71.6640,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,T6A,4ZD,SU2
+ r_6B2E8V1N90,exploratory,QP-3617,p_ZG7GNCT5B0,water,wet strength retained,,80.0296,%,lab_c,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,L2J,4ZD,SU2
++r_VZP77VDWT1,exploratory,QP-3617,p_RTT858W8T1,strength,edge crush resistance,,6.56174,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,62B,SU2
++r_VZP77VDWT2,exploratory,QP-3617,p_RTT858W8T3,strength,edge crush resistance,,6.55208,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,96Y,62B,SU2
++r_VZP77VDWT3,exploratory,QP-3617,p_RTT858W8T5,strength,edge crush resistance,,5.94074,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,T6A,62B,SU2
++r_VZP77VDWT4,exploratory,QP-3617,p_RTT858W8T7,strength,edge crush resistance,,6.53696,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,L2J,62B,SU2
++r_1AAE1JK18P,exploratory,QP-3617,p_RTT858W8T9,strength,edge crush resistance,,6.56909,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,JE5,SU2
++r_1AAE1JK18Q,exploratory,QP-3617,p_RTT858W8TB,strength,edge crush resistance,,6.58364,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,96Y,JE5,SU2
++r_1AAE1JK18R,exploratory,QP-3617,p_RTT858W8TD,strength,edge crush resistance,,5.88323,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,T6A,JE5,SU2
++r_1AAE1JK18S,exploratory,QP-3617,p_RTT858W8TF,strength,edge crush resistance,,6.55781,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,L2J,JE5,SU2
++r_1AAE1JK18T,exploratory,QP-3617,p_ZG7GNCT5AT,strength,edge crush resistance,,6.53180,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,4ZD,SU2
++r_1AAE1JK18V,exploratory,QP-3617,p_ZG7GNCT5AW,strength,edge crush resistance,,6.56768,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,96Y,4ZD,SU2
++r_1AAE1JK18W,exploratory,QP-3617,p_ZG7GNCT5AY,strength,edge crush resistance,,5.88923,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,T6A,4ZD,SU2
++r_1AAE1JK18X,exploratory,QP-3617,p_ZG7GNCT5B0,strength,edge crush resistance,,6.54917,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,L2J,4ZD,SU2
++r_F16TRYWSWS,exploratory,QP-3617,p_RTT858W8T1,heat,seal hold temperature,,72.65600,°C,lab_a,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,62B,SU2
++r_F16TRYWSWT,exploratory,QP-3617,p_RTT858W8T3,heat,seal hold temperature,,73.15675,°C,lab_a,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,96Y,62B,SU2
++r_YY53C91DD0,exploratory,QP-3617,p_RTT858W8T5,heat,seal hold temperature,,61.73350,°C,lab_a,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,T6A,62B,SU2
++r_YY53C91DD1,exploratory,QP-3617,p_RTT858W8T7,heat,seal hold temperature,,67.76500,°C,lab_a,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,L2J,62B,SU2
++r_YY53C91DD2,exploratory,QP-3617,p_RTT858W8T9,heat,seal hold temperature,,77.79325,°C,lab_a,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,JE5,SU2
++r_YY53C91DD3,exploratory,QP-3617,p_RTT858W8TB,heat,seal hold temperature,,78.22750,°C,lab_a,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,96Y,JE5,SU2
++r_YY53C91DD4,exploratory,QP-3617,p_RTT858W8TD,heat,seal hold temperature,,66.72100,°C,lab_a,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,T6A,JE5,SU2
++r_YY53C91DD5,exploratory,QP-3617,p_RTT858W8TF,heat,seal hold temperature,,72.80050,°C,lab_a,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,L2J,JE5,SU2
++r_YY53C91DD6,exploratory,QP-3617,p_ZG7GNCT5AT,heat,seal hold temperature,,78.41575,°C,lab_a,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,4ZD,SU2
++r_YY53C91DD7,exploratory,QP-3617,p_ZG7GNCT5AW,heat,seal hold temperature,,77.61200,°C,lab_a,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,96Y,4ZD,SU2
++r_YY53C91DD8,exploratory,QP-3617,p_ZG7GNCT5AY,heat,seal hold temperature,,67.18875,°C,lab_a,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,T6A,4ZD,SU2
++r_YY53C91DD9,exploratory,QP-3617,p_ZG7GNCT5B0,heat,seal hold temperature,,73.43225,°C,lab_a,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,L2J,4ZD,SU2

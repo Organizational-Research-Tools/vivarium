@@ -1,0 +1,5 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for proj in ['QP-5174','QP-9273','QP-7092']:
+ d=x[x.project.eq(proj)]
+ print(proj,d.prototype_id.nunique(),d.groupby(['prototype_id','test']).value.agg(['mean','count']).to_string())

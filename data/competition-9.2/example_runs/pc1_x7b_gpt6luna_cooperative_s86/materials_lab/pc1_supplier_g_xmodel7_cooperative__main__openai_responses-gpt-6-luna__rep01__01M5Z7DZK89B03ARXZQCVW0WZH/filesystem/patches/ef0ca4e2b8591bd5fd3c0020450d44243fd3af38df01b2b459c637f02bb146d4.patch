@@ -1,0 +1,5 @@
+--- 
++++ 
+@@ -0,0 +1,2 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); print(x.project.unique()[:10]); print(x.test.unique()); print(x[x.prototype_id=='p_3KNEMDD3PR'].head())

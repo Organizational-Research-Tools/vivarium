@@ -1,0 +1,64 @@
+--- 
++++ 
+@@ -0,0 +1,61 @@
++
++# Rev B analysis summary
++# New thresholds: heat ≥ 78.25°C, strength ≥ 7.19 kN/m, water ≥ 79.20%
++# Steps from base: heat 0.25°C, strength 0.03 kN/m, water 0.4%
++
++print("=== SPEC REVISION B IMPACT ANALYSIS ===")
++print("New thresholds: heat≥78.25, strength≥7.19, water≥79.20")
++print()
++
++# p_4V8BTTYF7C (JA8/YX8/M2P/QJ2/6FA/44B/62D/2BR/N4L/7KL/DL8/3N8)
++print("p_4V8BTTYF7C (JA8/YX8/M2P recipe):")
++print(f"  Heat: 78.19°C → margin {(78.19-77.5)/0.25:.2f} steps from base → FAILS Rev B (need 3.0 steps, threshold 78.25)")
++print(f"  Strength: 6.554 kN/m → margin {(6.554-7.10)/0.03:.2f} steps → FAILS badly")
++print(f"  Water: 80.70% → margin {(80.70-78.0)/0.4:.2f} steps → PASSES")
++
++print()
++print("JA8/GG7/M2P recipe (BANNED - GG7):")
++print(f"  Heat: 78.78°C → {(78.78-77.5)/0.25:.2f} steps ✓")
++print(f"  Strength: 7.25 kN/m → {(7.25-7.10)/0.03:.2f} steps ✓")
++print(f"  Water: 81.65% → {(81.65-78.0)/0.4:.2f} steps ✓")
++
++print()
++print("Key interaction involving pp1 (HEAT):")
++print("  surface_treatment × process_profile_1 × process_profile_3: affects HEAT")
++print("  Lab_b claims pp1 doesn't appear in heat interactions — THIS IS WRONG!")
++print("  Changing pp1 (62D→4QB) WILL change heat performance!")
++print()
++
++# Lab_b QP-8265 submission
++print("QP-8265 p_KJZ5KNC3WG:")
++print(f"  Strength: 7.16 kN/m → {(7.16-7.10)/0.03:.2f} steps → FAILS Rev B (need 3.0 steps)")
++print("  Submission REJECTED under Rev B.")
++
++print()
++print("=== STRATEGY FOR PL-57 ===")
++print("Starting recipe: JA8/YX8/M2P/QJ2/6FA/44B/62D/2BR/N4L/7KL/DL8/3N8")
++print("Problems: heat 78.19 (need 78.25+), strength 6.554 (need 7.19+)")
++print("Water: 80.70% OK (interaction: add2=6FA × joint=DL8 × add3=44B)")
++print()
++print("Key interactions affecting heat:")
++print("  1. surface × pp1 × pp3: 7KL × 62D × N4L")
++print("  2. secondary × surface × binder: YX8 × 7KL × M2P")
++print("  3. surface × binder × pp2: 7KL × M2P × 2BR")
++print()
++print("Key interactions affecting strength:")
++print("  1. cond × base × secondary: 3N8 × JA8 × YX8 (BAD — GG7 interaction missing)")
++print("  2. surface × pp3 × add2: 7KL × N4L × 6FA")
++print("  3. pp1 × add2 × add3: pp1 × 6FA × 44B")
++print("  4. add3 × base × pp3: 44B × JA8 × N4L")
++print()
++print("Candidates to test (keep add2=6FA, add3=44B, joint=DL8 for water safety):")
++candidates = [
++    ("A", "JA8","YX8","M2P","QJ2","6FA","44B","4QB","2BR","N4L","7KL","DL8","3N8","pp1→4QB; may change heat AND strength"),
++    ("B", "JA8","YX8","M2P","QJ2","6FA","44B","62D","2BR","N4L","ZW3","DL8","3N8","surface→ZW3; changes heat+str+water"),
++    ("C", "JA8","YX8","M2P","QJ2","6FA","44B","4QB","2BR","N4L","ZW3","DL8","3N8","pp1→4QB + surface→ZW3"),
++    ("D", "JA8","YX8","8BB","QJ2","6FA","44B","WB3","VA8","N4L","ZW3","DL8","3N8","8BB binder+WB3+VA8+ZW3"),
++    ("E", "JA8","YX8","8BB","QJ2","6FA","44B","4QB","VA8","N4L","ZW3","DL8","3N8","8BB+4QB+VA8+ZW3"),
++    ("F", "JA8","YX8","M2P","QJ2","6FA","44B","4QB","VA8","N4L","ZW3","DL8","3N8","pp1→4QB+pp2→VA8+surface→ZW3"),
++]
++for c in candidates:
++    print(f"  {c[0]}: {'/'.join(c[1:13])} — {c[13]}")

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import help, gh, howto %}
+{% block title %}{{ label|lower }} — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / {{ label|lower }}</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "work") }}
+
+{% call howto() %}
+  <p>The task's own account of what the run worked on, computed by the pack's registered analysis code from the saved trace. Column meanings are the pack's; the study's analysis rules decide what any of it means.</p>
+{% endcall %}
+
+<p class="dim" style="margin:0.4rem 0">{% if rmeta.source in ("rendered", "store") %}report re-rendered at HEAD · analysis <code>{{ rmeta.identity }}</code>{% if rmeta.superseded_file %} · the saved <code>derived/{{ rmeta.superseded_file }}</code> predates {{ rmeta.stale_keys|join(", ") }} and is left as it is{% endif %}{% elif rmeta.source == "file" %}saved report from <code>derived/{{ rmeta.filename }}</code>{% if rmeta.stale_keys %} · <span class="sev sev-warning">it predates {{ rmeta.stale_keys|join(", ") }}, which could not be rendered from this run's materials</span>{% endif %}{% endif %}</p>
+
+{% for sec in sections %}
+<div class="card">
+  <h2>{{ sec.title }}</h2>
+  {% if sec.note %}<p class="dim" style="margin:0 0 0.4rem">{{ sec.note }}</p>{% endif %}
+  {% if sec.rows is defined %}
+  <div style="overflow-x:auto"><table>
+    <thead><tr>{% for c in sec.columns %}<th>{{ c }}</th>{% endfor %}</tr></thead>
+    <tbody>{% for row in sec.rows %}<tr>{% for v in row %}<td>{{ v if v is not none else "—" }}</td>{% endfor %}</tr>{% else %}<tr><td class="dim" colspan="{{ sec.columns|length }}">none</td></tr>{% endfor %}</tbody>
+  </table></div>
+  {% else %}
+  <dl class="kv">{% for k, v in sec.kv %}<dt>{{ k }}</dt><dd style="white-space:pre-wrap">{{ v }}</dd>{% else %}<dd class="dim">none</dd>{% endfor %}</dl>
+  {% endif %}
+</div>
+{% else %}
+<div class="card"><p class="dim">This task pack registers no work view for this run.</p></div>
+{% endfor %}
+
+{% endblock %}

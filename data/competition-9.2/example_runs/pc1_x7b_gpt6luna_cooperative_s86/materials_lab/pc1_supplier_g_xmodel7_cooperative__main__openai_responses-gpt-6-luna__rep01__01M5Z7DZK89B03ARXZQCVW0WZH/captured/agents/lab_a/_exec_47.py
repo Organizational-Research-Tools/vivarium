@@ -1,0 +1,4 @@
+import pandas as pd
+r=pd.read_csv('records.csv')
+x=r[r.project.eq('QP-3617')].drop_duplicates('prototype_id')
+print(x[['prototype_id','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].tail(30).to_string(index=False))

@@ -1,0 +1,16 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+# candidates with known composition
+k=df.dropna(subset=['base_sheet'])
+q=k[k.project=='QP-5993']
+# group by composition
+g=q.groupby(mods).agg(nheat=('value', lambda x: (q.loc[x.index].test=='seal hold temperature').sum()))
+# print distinct recipes with heat mean
+he=q[q.test=='seal hold temperature']
+tab=he.groupby(mods).agg(n=('value','count'),hmean=('value','mean'))
+st=q[q.test=='edge crush resistance'].groupby(mods).agg(n=('value','count'),smean=('value','mean'))
+wa=q[q.test=='wet strength retained'].groupby(mods).agg(n=('value','count'),wmean=('value','mean'))
+print(tab.sort_values('hmean',ascending=False).to_string())
+print(st.sort_values('smean',ascending=False).to_string())
+print(wa.sort_values('wmean',ascending=False).to_string())

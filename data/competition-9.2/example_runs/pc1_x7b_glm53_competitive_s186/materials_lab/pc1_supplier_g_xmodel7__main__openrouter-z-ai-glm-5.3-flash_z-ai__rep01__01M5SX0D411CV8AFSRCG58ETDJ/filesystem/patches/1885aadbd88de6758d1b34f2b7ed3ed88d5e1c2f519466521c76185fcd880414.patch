@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -956,3 +956,15 @@
+ r_P3BGAJXC0Q,qualification,QP-3777,p_S5C3TCY7F6,strength,edge crush resistance,5,7.23413,kN/m,lab_e,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,6XN,7UX,9DA
+ r_CQ3AS3VWT0,exploratory,QP-3777,p_KSA6421JAE,heat,seal hold temperature,,79.24075,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
+ r_TS431RCTZD,exploratory,QP-3777,p_KSA6421JAG,heat,seal hold temperature,,79.44525,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_NNK3ZR93ER,qualification,QP-3777,p_KSA6421JAE,heat,seal hold temperature,0,79.26275,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_NNK3ZR93ES,qualification,QP-3777,p_KSA6421JAE,heat,seal hold temperature,1,79.10950,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_NNK3ZR93ET,qualification,QP-3777,p_KSA6421JAE,heat,seal hold temperature,2,78.62075,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_NNK3ZR93EV,qualification,QP-3777,p_KSA6421JAE,heat,seal hold temperature,3,78.86675,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_NNK3ZR93EW,qualification,QP-3777,p_KSA6421JAE,heat,seal hold temperature,4,78.92275,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_NNK3ZR93EX,qualification,QP-3777,p_KSA6421JAE,heat,seal hold temperature,5,78.98650,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,3Y7,9DA
++r_NNK3ZR93EY,qualification,QP-3777,p_KSA6421JAG,heat,seal hold temperature,0,78.97350,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_NNK3ZR93EZ,qualification,QP-3777,p_KSA6421JAG,heat,seal hold temperature,1,79.01575,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_NNK3ZR93F0,qualification,QP-3777,p_KSA6421JAG,heat,seal hold temperature,2,79.23425,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_NNK3ZR93F1,qualification,QP-3777,p_KSA6421JAG,heat,seal hold temperature,3,79.30075,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_NNK3ZR93F2,qualification,QP-3777,p_KSA6421JAG,heat,seal hold temperature,4,78.75000,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F
++r_NNK3ZR93F3,qualification,QP-3777,p_KSA6421JAG,heat,seal hold temperature,5,78.82325,°C,lab_a,lab_a,HP9,T3M,PU3,TE2,42D,Z2E,V9D,4AL,V7P,83B,7UX,V8F

@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x.columns.tolist()); print(x.shape); print(x[x.project_id.isin(['QP-9273','QP-5174','QP-7092'])].groupby(['project_id','prototype_id','instrument']).agg(n=('value','size'),mean=('value','mean'), owner=('owner','first')).to_string())

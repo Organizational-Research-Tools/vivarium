@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++print(df[df.record_id.isin(['r_JP4D3NK6YM','r_JP4D3NK6YS'])].to_string())
++h=df[(df.test=='seal hold temperature')&(df.kind=='qualification')]
++g=h.groupby(['project','prototype_id'])['value'].mean()
++print(g[g>78.4].to_string())
++print(df[df.prototype_id.str.contains('P2FZ2|GM7DHPGB5W')][['record_id','kind','project','prototype_id','test','value','measured_by']].to_string())

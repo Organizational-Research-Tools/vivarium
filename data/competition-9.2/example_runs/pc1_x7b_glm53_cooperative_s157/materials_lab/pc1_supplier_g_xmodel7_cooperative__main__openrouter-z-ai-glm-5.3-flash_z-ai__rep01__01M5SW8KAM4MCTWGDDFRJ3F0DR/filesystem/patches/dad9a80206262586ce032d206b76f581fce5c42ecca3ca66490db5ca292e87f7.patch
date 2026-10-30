@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++sub = df[df.prototype_id.isin(['p_C9SMW2XES8','p_4V8V03KF07','p_GM7DHPGB5H','p_C9SMW2XES8'])]
++print(sub[['record_id','kind','project','prototype_id','test','measured_by','value']].to_string())
++# also look for any 27X panels on QP-3068: p_YGT9NNJ46M etc.
++sub2 = df[(df.binder_system=='27X')]
++print(sub2[['record_id','kind','project','prototype_id','test','measured_by','value']].to_string())

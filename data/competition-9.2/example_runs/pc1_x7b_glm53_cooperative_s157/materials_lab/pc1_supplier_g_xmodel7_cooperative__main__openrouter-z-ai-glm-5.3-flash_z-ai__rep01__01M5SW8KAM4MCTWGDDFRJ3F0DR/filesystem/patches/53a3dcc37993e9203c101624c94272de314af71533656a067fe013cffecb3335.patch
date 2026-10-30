@@ -1,0 +1,22 @@
+--- 
++++ 
+@@ -562,3 +562,19 @@
+ r_ETKXSVJF80,exploratory,QP-6820,p_0SFWV492V6,heat,seal hold temperature,,78.54800,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_ETKXSVJF81,exploratory,QP-6820,p_TS3TQG4Q8Q,heat,seal hold temperature,,77.99150,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_00HZC8XVBM,exploratory,QP-6820,p_TS3TQG4Q8Q,heat,seal hold temperature,,77.73400,°C,lab_a,lab_a,,,,,,,,,,,,
++r_SCZ75N6A2K,exploratory,QP-3068,p_YM23HABVE5,strength,edge crush resistance,,6.03755,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_SCZ75N6A2M,exploratory,QP-3068,p_YM23HABVE5,strength,edge crush resistance,,5.96591,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_SCZ75N6A2N,exploratory,QP-3068,p_YM23HABVE7,strength,edge crush resistance,,6.69119,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_SCZ75N6A2P,exploratory,QP-3068,p_YM23HABVE7,strength,edge crush resistance,,6.77303,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_ZAWC9F6Q6G,exploratory,QP-3068,p_YM23HABVE9,strength,edge crush resistance,,6.71552,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_ZAWC9F6Q6H,exploratory,QP-3068,p_YM23HABVE9,strength,edge crush resistance,,6.70457,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_ZAWC9F6Q6J,exploratory,QP-3068,p_94B583XC0R,strength,edge crush resistance,,6.00995,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_ZAWC9F6Q6K,exploratory,QP-3068,p_94B583XC0R,strength,edge crush resistance,,5.99312,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_ZAWC9F6Q6M,exploratory,QP-3068,p_94B583XC0T,strength,edge crush resistance,,5.20001,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_ZAWC9F6Q6N,exploratory,QP-3068,p_94B583XC0T,strength,edge crush resistance,,5.22464,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_ZAWC9F6Q6P,exploratory,QP-3068,p_94B583XC0W,strength,edge crush resistance,,7.20878,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_ZAWC9F6Q6Q,exploratory,QP-3068,p_94B583XC0W,strength,edge crush resistance,,7.31213,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_ZAWC9F6Q6R,exploratory,QP-3068,p_94B583XC0Y,strength,edge crush resistance,,6.57266,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_ZAWC9F6Q6S,exploratory,QP-3068,p_94B583XC0Y,strength,edge crush resistance,,6.57698,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_ZAWC9F6Q6T,exploratory,QP-3068,p_94B583XC10,strength,edge crush resistance,,5.79923,kN/m,lab_b,lab_a,,,,,,,,,,,,
++r_ZAWC9F6Q6V,exploratory,QP-3068,p_94B583XC10,strength,edge crush resistance,,5.85356,kN/m,lab_b,lab_a,,,,,,,,,,,,

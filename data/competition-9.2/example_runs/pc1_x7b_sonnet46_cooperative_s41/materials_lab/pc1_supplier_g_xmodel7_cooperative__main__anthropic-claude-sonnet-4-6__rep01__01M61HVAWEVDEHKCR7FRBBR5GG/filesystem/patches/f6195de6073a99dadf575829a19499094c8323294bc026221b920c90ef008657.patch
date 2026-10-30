@@ -1,0 +1,78 @@
+--- 
++++ 
+@@ -0,0 +1,75 @@
++
++# Analyze water readings - identify candidates passing water threshold
++results = {
++    # QP-3089 (threshold 78%)
++    'p_K41ZXGCTRR': ('QP-3089', 72.184),
++    'p_B2SSVVHTKY': ('QP-3089', 72.378),
++    'p_B2SSVVHTM0': ('QP-3089', 62.789),
++    'p_B2SSVVHTM2': ('QP-3089', 71.824),
++    'p_B2SSVVHTM4': ('QP-3089', 63.230),
++    'p_B2SSVVHTM6': ('QP-3089', 63.008),
++    'p_B2SSVVHTM8': ('QP-3089', 53.482),
++    'p_B2SSVVHTMA': ('QP-3089', 62.517),
++    'p_5ZPYV6MTWB': ('QP-3089', 71.291),
++    'p_853B4YQGHJ': ('QP-3089', 79.693),  # PASSES!
++    'p_853B4YQGHM': ('QP-3089', 79.514),  # PASSES! + strength 7.21 kN/m ✓
++    'p_853B4YQGHP': ('QP-3089', 78.032),  # PASSES! (barely)
++    # QP-6572 (PL-57, threshold TBD)
++    'p_WG8VQJ9ABW': ('QP-6572', 51.289),
++    'p_WG8VQJ9ABY': ('QP-6572', 60.310),
++    'p_WG8VQJ9AC0': ('QP-6572', 60.721),
++    'p_WG8VQJ9AC2': ('QP-6572', 51.683),
++    'p_WG8VQJ9AC4': ('QP-6572', 60.161),
++    'p_WG8VQJ9AC6': ('QP-6572', 60.529),
++    'p_WG8VQJ9AC8': ('QP-6572', 69.095),
++    'p_H083ZDPV9S': ('QP-6572', 68.099),
++    'p_GCXZZ91WJ2': ('QP-6572', 51.636),
++    'p_GCXZZ91WJ4': ('QP-6572', 75.648),  # Best QP-6572
++    'p_GCXZZ91WJ6': ('QP-6572', 52.756),
++    'p_GCXZZ91WJ8': ('QP-6572', 75.672),  # Best QP-6572
++    # QP-7212 (PL-95, threshold 78%)
++    'p_W9G77JZ67G': ('QP-7212', 63.289),
++    'p_W9G77JZ67J': ('QP-7212', 63.799),
++    'p_W9G77JZ67M': ('QP-7212', 63.496),
++    'p_W9G77JZ67P': ('QP-7212', 63.380),
++    'p_SZ2FSA260W': ('QP-7212', 63.735),
++    'p_SZ2FSA260Y': ('QP-7212', 63.199),
++    'p_SZ2FSA2610': ('QP-7212', 64.096),
++    'p_SZ2FSA2612': ('QP-7212', 63.703),
++    'p_SVC8TYAQGJ': ('QP-7212', 63.555),
++    'p_SVC8TYAQGM': ('QP-7212', 71.714),
++    'p_SVC8TYAQGP': ('QP-7212', 80.540),  # PASSES! + lab_b
++    'p_SVC8TYAQGR': ('QP-7212', 70.262),
++    # QP-6843 (PL-57, threshold TBD)
++    'p_6PWNP7BFEY': ('QP-6843', 62.676),
++    'p_6PWNP7BFF0': ('QP-6843', 70.334),
++    'p_6PWNP7BFF2': ('QP-6843', 63.290),
++    'p_6PWNP7BFF4': ('QP-6843', 70.886),
++    'p_47ZQZMDNXM': ('QP-6843', 46.001),
++    'p_47ZQZMDNXP': ('QP-6843', 44.617),
++    'p_47ZQZMDNXR': ('QP-6843', 53.799),
++    'p_47ZQZMDNXT': ('QP-6843', 62.411),
++    # QP-8265 (PL-98, threshold 78%)
++    'p_X8JBQTDZJM': ('QP-8265', 71.475),
++    'p_X8JBQTDZJP': ('QP-8265', 70.857),
++    'p_X8JBQTDZJR': ('QP-8265', 71.559),
++    'p_X8JBQTDZJT': ('QP-8265', 79.732),  # PASSES!
++}
++
++thresholds_78 = ['QP-3089', 'QP-7212', 'QP-8265', 'QP-3473']
++
++print("=== PASSING WATER (≥78% for PL-95/98 projects) ===")
++for pid, (proj, val) in sorted(results.items(), key=lambda x: -x[1][1]):
++    if proj in thresholds_78 and val >= 78.0:
++        margin = (val - 78.0) / 0.4
++        print(f"  {pid} ({proj}): {val:.2f}% → margin +{margin:.1f} steps")
++
++print("\n=== BEST WATER FOR QP-6572 AND QP-6843 (PL-57, threshold unknown) ===")
++for pid, (proj, val) in sorted(results.items(), key=lambda x: -x[1][1]):
++    if proj in ['QP-6572', 'QP-6843']:
++        print(f"  {pid} ({proj}): {val:.2f}%")
++
++print("\n=== SUMMARY BY PROJECT ===")
++for proj in ['QP-3089', 'QP-7212', 'QP-8265', 'QP-6572', 'QP-6843']:
++    vals = [v for p,(pr,v) in results.items() if pr==proj]
++    print(f"  {proj}: max={max(vals):.2f}%, mean={sum(vals)/len(vals):.2f}%, min={min(vals):.2f}%")

@@ -1,0 +1,10 @@
+
+import pandas as pd
+
+df = pd.read_csv('records.csv')
+water = df[df['test']=='water (wet strength retained, %)'].copy()
+print("Water results by prototype (key modules: joint, PP3, AP3, AP2, AP1, PP2, conditioning):")
+grp = water.groupby(['project','prototype_id','joint_system','process_profile_3',
+                     'additive_package_3','additive_package_2','additive_package_1',
+                     'process_profile_2','conditioning_step'])['value'].agg(['mean','count']).round(2)
+print(grp.to_string())

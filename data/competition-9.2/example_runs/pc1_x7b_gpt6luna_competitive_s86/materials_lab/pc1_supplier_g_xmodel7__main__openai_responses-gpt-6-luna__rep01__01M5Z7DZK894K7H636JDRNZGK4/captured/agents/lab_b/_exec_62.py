@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); q=x[x.kind=='qualification']; g=q.groupby(['project','prototype_id','test']).agg(mean=('value','mean'),n=('value','count')).reset_index(); p=g.pivot(index=['project','prototype_id'],columns='test',values='mean');
+for project in p.index.get_level_values(0).unique():
+ print('\n',project); d=p.loc[project]; print(d.sort_values('edge crush resistance',ascending=False).head(15).to_string())

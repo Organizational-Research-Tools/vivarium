@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -0,0 +1,14 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++mods = ['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++s = df[(df['test']=='strength')&(df['project']=='QP-8476')].dropna(subset=mods)
++print(s.shape)
++print(s[['base_sheet','secondary_sheet','binder_system']].drop_duplicates().head())
++bvec = dict(base_sheet='V2W', secondary_sheet='2YJ', binder_system='PU3', additive_package_1='G7U',
++            additive_package_2='9KR', additive_package_3='Z2E', process_profile_1='5JK',
++            process_profile_2='2FG', process_profile_3='V7P', surface_treatment='6XN',
++            joint_system='YS6', conditioning_step='9DA')
++mask = pd.Series(True, index=s.index)
++for m,v in bvec.items():
++    mask &= (s[m]==v)
++print('mask', mask.sum())

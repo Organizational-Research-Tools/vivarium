@@ -1,0 +1,45 @@
+
+import numpy as np
+
+# New heat panel results
+results = {
+    'p_PP541T0ZWM': {'project': 'QP-6572', 'recipe': 'P2G/YX8/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8',
+                     'values': [65.48075, 65.50075, 65.63900, 65.48925, 65.39050, 65.54325]},
+    'p_4V8BTTYF7C': {'project': 'QP-4476', 'recipe': 'JA8/YX8/M2P/QJ2/6FA/44B/62D/2BR/N4L/7KL/DL8/3N8',
+                     'values': [78.26000, 78.43875, 77.93625, 78.07425, 78.20800, 78.22425]},
+    'p_M682BRP589': {'project': 'QP-8607', 'recipe': 'P2G/YX8/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8',
+                     'values': [69.90425, 71.90750, 72.95850, 73.96850, 68.02300, 69.01625]},
+    'p_ADWCDGGTQK': {'project': 'QP-3473', 'recipe': 'JA8/YX8/M2P/QJ2/6FA/44B/62D/2BR/N4L/7KL/DL8/3N8',
+                     'values': [73.35700, 73.38550, 73.04500, 73.15375, 73.10100, 73.26875]},
+    'p_D0EW7DSQ39': {'project': 'QP-7604', 'recipe': 'P2G/YX8/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8',
+                     'values': [75.43425, 77.40400, 78.40575, 79.35250, 73.59750, 74.40400]},
+    'p_69GJVE46G1': {'project': 'QP-8265', 'recipe': 'JA8/YX8/M2P/QJ2/6FA/44B/62D/2BR/N4L/7KL/DL8/3N8',
+                     'values': [73.17200, 73.34575, 72.64300, 72.72175, 72.85400, 72.98450]},
+}
+
+thresh = 77.5
+print("=== HEAT PANEL RESULTS ===")
+for pid, d in results.items():
+    mean = np.mean(d['values'])
+    status = 'PASS' if mean >= thresh else 'FAIL'
+    margin = (mean - thresh) / 0.25
+    print(f"{d['project']:8s} {pid}: mean={mean:.3f}°C  margin={margin:+.1f} steps  → {status}")
+
+print()
+print("KEY INSIGHT: Same recipe gives VERY different heat for different projects!")
+print()
+print("P2G/YX8 recipe across projects:")
+print(f"  QP-6572: {np.mean(results['p_PP541T0ZWM']['values']):.2f}°C")
+print(f"  QP-8607: {np.mean(results['p_M682BRP589']['values']):.2f}°C")  
+print(f"  QP-7604: {np.mean(results['p_D0EW7DSQ39']['values']):.2f}°C")
+print()
+print("JA8/YX8 recipe across projects:")
+print(f"  QP-4476: {np.mean(results['p_4V8BTTYF7C']['values']):.2f}°C  ← PASSES")
+print(f"  QP-3473: {np.mean(results['p_ADWCDGGTQK']['values']):.2f}°C")
+print(f"  QP-8265: {np.mean(results['p_69GJVE46G1']['values']):.2f}°C")
+
+# Estimate project-specific offsets relative to QP-4476 (JA8/YX8)
+print()
+print("Project offsets (relative to same recipe in QP-4476):")
+print(f"  QP-3473 vs QP-4476 (JA8/YX8): {np.mean(results['p_ADWCDGGTQK']['values']) - np.mean(results['p_4V8BTTYF7C']['values']):.2f}°C")
+print(f"  QP-8265 vs QP-4476 (JA8/YX8): {np.mean(results['p_69GJVE46G1']['values']) - np.mean(results['p_4V8BTTYF7C']['values']):.2f}°C")

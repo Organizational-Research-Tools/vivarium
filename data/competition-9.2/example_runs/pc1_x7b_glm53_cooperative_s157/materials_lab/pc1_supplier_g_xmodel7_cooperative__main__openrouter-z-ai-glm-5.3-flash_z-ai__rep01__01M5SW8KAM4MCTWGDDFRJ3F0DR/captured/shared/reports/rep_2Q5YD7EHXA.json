@@ -1,0 +1,146 @@
+{
+  "author": "lab_f",
+  "bundles": {
+    "heat": [
+      {
+        "executing_owner": "lab_d",
+        "instrument": "heat",
+        "receipt": "r_JP4D3NK6YZ",
+        "specimen": 0,
+        "value": "79.53550 \u00b0C"
+      },
+      {
+        "executing_owner": "lab_d",
+        "instrument": "heat",
+        "receipt": "r_JP4D3NK6Z0",
+        "specimen": 1,
+        "value": "79.50675 \u00b0C"
+      },
+      {
+        "executing_owner": "lab_d",
+        "instrument": "heat",
+        "receipt": "r_JP4D3NK6Z1",
+        "specimen": 2,
+        "value": "79.00400 \u00b0C"
+      },
+      {
+        "executing_owner": "lab_d",
+        "instrument": "heat",
+        "receipt": "r_JP4D3NK6Z2",
+        "specimen": 3,
+        "value": "79.04100 \u00b0C"
+      },
+      {
+        "executing_owner": "lab_d",
+        "instrument": "heat",
+        "receipt": "r_JP4D3NK6Z3",
+        "specimen": 4,
+        "value": "79.19950 \u00b0C"
+      },
+      {
+        "executing_owner": "lab_d",
+        "instrument": "heat",
+        "receipt": "r_JP4D3NK6Z4",
+        "specimen": 5,
+        "value": "79.40075 \u00b0C"
+      }
+    ],
+    "strength": [
+      {
+        "executing_owner": "lab_e",
+        "instrument": "strength",
+        "receipt": "r_YGT9NNJ46B",
+        "specimen": 0,
+        "value": "7.29923 kN/m"
+      },
+      {
+        "executing_owner": "lab_e",
+        "instrument": "strength",
+        "receipt": "r_YGT9NNJ46C",
+        "specimen": 1,
+        "value": "7.24316 kN/m"
+      },
+      {
+        "executing_owner": "lab_e",
+        "instrument": "strength",
+        "receipt": "r_YGT9NNJ46D",
+        "specimen": 2,
+        "value": "7.26932 kN/m"
+      },
+      {
+        "executing_owner": "lab_e",
+        "instrument": "strength",
+        "receipt": "r_YGT9NNJ46E",
+        "specimen": 3,
+        "value": "7.28990 kN/m"
+      },
+      {
+        "executing_owner": "lab_e",
+        "instrument": "strength",
+        "receipt": "r_YGT9NNJ46F",
+        "specimen": 4,
+        "value": "7.29587 kN/m"
+      },
+      {
+        "executing_owner": "lab_e",
+        "instrument": "strength",
+        "receipt": "r_YGT9NNJ46G",
+        "specimen": 5,
+        "value": "7.30502 kN/m"
+      }
+    ],
+    "water": [
+      {
+        "executing_owner": "lab_f",
+        "instrument": "water",
+        "receipt": "r_YGT9NNJ46P",
+        "specimen": 0,
+        "value": "79.6060 %"
+      },
+      {
+        "executing_owner": "lab_f",
+        "instrument": "water",
+        "receipt": "r_YGT9NNJ46Q",
+        "specimen": 1,
+        "value": "79.9508 %"
+      },
+      {
+        "executing_owner": "lab_f",
+        "instrument": "water",
+        "receipt": "r_YGT9NNJ46R",
+        "specimen": 2,
+        "value": "80.1380 %"
+      },
+      {
+        "executing_owner": "lab_f",
+        "instrument": "water",
+        "receipt": "r_YGT9NNJ46S",
+        "specimen": 3,
+        "value": "80.0096 %"
+      },
+      {
+        "executing_owner": "lab_f",
+        "instrument": "water",
+        "receipt": "r_YGT9NNJ46T",
+        "specimen": 4,
+        "value": "80.0664 %"
+      },
+      {
+        "executing_owner": "lab_f",
+        "instrument": "water",
+        "receipt": "r_YGT9NNJ46V",
+        "specimen": 5,
+        "value": "80.5292 %"
+      }
+    ]
+  },
+  "claimed_composition": "[8Z2, YH6, 27X, X2P, 6DD, 8P4, 2WG, LR4, A7P, BX9, G7L, W5T]",
+  "credit": "awarded",
+  "means": {
+    "heat": "79.28125 \u00b0C",
+    "strength": "7.28375 kN/m",
+    "water": "80.0500 %"
+  },
+  "project": "QP-3068",
+  "report_id": "rep_2Q5YD7EHXA"
+}

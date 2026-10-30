@@ -1,0 +1,103 @@
+
+# Compute heat margins for all QP-3089 prototypes I have panels for
+# Base thresholds: heat base = 77.5°C (step 0.25), strength base = 7.1 kN/m (step 0.03), water base = 78.0% (step 0.4)
+# Rev C requires 4.5 steps above base on each
+
+heat_base = 77.5
+heat_step = 0.25
+heat_req = 78.625  # = 77.5 + 4.5*0.25
+
+strength_base = 7.1
+strength_step = 0.03
+strength_req = 7.235  # = 7.1 + 4.5*0.03
+
+water_base = 78.0
+water_step = 0.4
+water_req = 79.8  # = 78.0 + 4.5*0.4
+
+prototypes = {
+    "p_57M2N73XBG": {
+        "recipe": "DA9/3HW/NN7/QJ2/B3P/44B/UP5/VA8/N4L/ZW3/DL8/YV2",
+        "heat_mean": 78.2995,
+        "strength_exploratory": 7.417,
+        "water_mean": None
+    },
+    "p_57M2N73XBJ": {
+        "recipe": "DA9/3HW/NN7/QJ2/B3P/44B/UP5/VA8/N4L/7TJ/DL8/YV2",
+        "heat_mean": 78.223,
+        "strength_exploratory": 7.424,
+        "water_mean": None
+    },
+    "p_57M2N73XBM": {
+        "recipe": "DA9/YX8/NN7/QJ2/B3P/44B/UP5/VA8/N4L/ZW3/DL8/YV2",
+        "heat_mean": 78.6618,
+        "strength_exploratory": 6.709,
+        "water_mean": None
+    },
+    "p_57M2N73XBP": {
+        "recipe": "DA9/YX8/NN7/QJ2/B3P/44B/UP5/VA8/N4L/7TJ/DL8/YV2",
+        "heat_mean": 78.5853,
+        "strength_exploratory": 6.732,
+        "water_mean": None
+    },
+    "p_2058095Z34": {
+        "recipe": "P2G/YX8/8BB/57T/S2J/4PE/WB3/VA8/X9F/ZW3/DL8/3N8",
+        "heat_mean": 79.27775,
+        "strength_mean": 7.19333,
+        "water_mean": 79.6444
+    },
+    "p_2058095Z36": {
+        "recipe": "UNKNOWN (lab_e)",
+        "heat_mean": 79.2817,  # mean of 6 specimens
+        "strength_mean": None,
+        "water_mean": None
+    },
+    "p_TT7GNA1YZS": {
+        "recipe": "UNKNOWN (lab_c)",
+        "heat_mean": (78.86150+78.98925+79.11750+79.13850+78.63775+78.74850)/6,
+        "strength_mean": 7.209,
+        "water_mean": None
+    },
+}
+
+# Compute heat means for p_57M2N73XBG and XBJ from panel
+panel_G = [78.34375, 78.34650, 78.32850, 78.66625, 78.02375, 78.08825]
+panel_J = [78.46875, 78.00600, 78.14450, 78.18025, 78.13850, 78.40000]
+panel_M = [78.59325, 78.83425, 78.67525, 78.84350, 78.41875, 78.60550]
+panel_P = [78.80250, 78.41650, 78.45625, 78.46475, 78.61775, 78.75375]
+panel_Z36 = [78.85125, 79.06100, 79.16950, 79.16600, 79.22200, 79.35225]
+
+import numpy as np
+prototypes["p_57M2N73XBG"]["heat_mean"] = np.mean(panel_G)
+prototypes["p_57M2N73XBJ"]["heat_mean"] = np.mean(panel_J)
+prototypes["p_57M2N73XBM"]["heat_mean"] = np.mean(panel_M)
+prototypes["p_57M2N73XBP"]["heat_mean"] = np.mean(panel_P)
+prototypes["p_2058095Z36"]["heat_mean"] = np.mean(panel_Z36)
+
+print(f"{'Prototype':<18} {'Heat mean':>10} {'Heat steps':>10} {'Heat pass':>9} {'Str steps':>9} {'Str pass':>8}")
+print("-"*70)
+for pid, d in prototypes.items():
+    hm = d["heat_mean"]
+    hs = (hm - heat_base) / heat_step if hm else None
+    hp = "✓" if (hs and hs >= 4.5) else "✗"
+    
+    sm = d.get("strength_mean") or d.get("strength_exploratory")
+    ss = (sm - strength_base) / strength_step if sm else None
+    sp = "✓" if (ss and ss >= 4.5) else ("✗" if ss else "?")
+    
+    wm = d.get("water_mean")
+    ws = (wm - water_base) / water_step if wm else None
+    wp = "✓" if (ws and ws >= 4.5) else ("✗" if ws else "?")
+    
+    print(f"{pid:<18} {hm:>10.3f} {hs:>10.2f} {hp:>9} {ss if ss else '?':>9} {sp:>8}  water={ws:.2f}✓" if ws and ws>=4.5 else
+          f"{pid:<18} {hm:>10.3f} {hs:>10.2f} {hp:>9} {ss if ss else '?':>9} {sp:>8}  water={ws:.2f}✗" if ws else
+          f"{pid:<18} {hm:>10.3f} {hs:>10.2f} {hp:>9} {ss if ss else '?':>9} {sp:>8}  water=?")
+    
+print()
+print(f"Rev C thresholds: heat≥{heat_req}°C ({4.5} steps), strength≥{strength_req} kN/m, water≥{water_req}%")
+print()
+print("KEY FINDING:")
+print(f"p_57M2N73XBG: DA9/3HW/NN7 recipe - heat FAILS ({np.mean(panel_G):.3f}°C = {(np.mean(panel_G)-heat_base)/heat_step:.2f} steps)")
+print(f"p_57M2N73XBJ: DA9/3HW/NN7 recipe - heat FAILS ({np.mean(panel_J):.3f}°C = {(np.mean(panel_J)-heat_base)/heat_step:.2f} steps)")
+print(f"p_57M2N73XBM: DA9/YX8/NN7 recipe - heat PASSES ({np.mean(panel_M):.3f}°C = {(np.mean(panel_M)-heat_base)/heat_step:.2f} steps) but strength FAILS (6.709)")
+print(f"p_2058095Z36: lab_e recipe  - heat PASSES ({np.mean(panel_Z36):.3f}°C = {(np.mean(panel_Z36)-heat_base)/heat_step:.2f} steps) - need strength/water!")

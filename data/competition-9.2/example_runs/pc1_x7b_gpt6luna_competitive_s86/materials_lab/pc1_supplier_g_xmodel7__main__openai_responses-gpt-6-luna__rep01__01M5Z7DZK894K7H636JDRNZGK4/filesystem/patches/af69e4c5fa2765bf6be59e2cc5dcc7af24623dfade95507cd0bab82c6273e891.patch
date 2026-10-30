@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++x=pd.read_csv('records.csv'); ids=['p_NBE0SSEEDQ','p_K6ZM59ZMJM','p_QRQN72G1F8','p_ZFC88N6EWW','p_H6M64FVH7B','p_MVYDTC3AAJ']
++for i in ids:
++ a=x[x.prototype_id==i]
++ print('\n',i,a[['project','kind','test','value','measured_by','requester','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].to_string(index=False))

@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++
++# p_P68BNAVWAQ panel mean
++vals = [7.20890, 7.21532, 7.23761, 7.17893, 7.18490, 7.20236]
++mean = sum(vals)/6
++print(f"p_P68BNAVWAQ panel mean: {mean:.4f} kN/m  diff vs 7.235: {mean-7.235:+.4f} ({(mean-7.235)/0.03:+.2f} steps) {'PASSES' if mean>=7.235 else 'FAILS'}")

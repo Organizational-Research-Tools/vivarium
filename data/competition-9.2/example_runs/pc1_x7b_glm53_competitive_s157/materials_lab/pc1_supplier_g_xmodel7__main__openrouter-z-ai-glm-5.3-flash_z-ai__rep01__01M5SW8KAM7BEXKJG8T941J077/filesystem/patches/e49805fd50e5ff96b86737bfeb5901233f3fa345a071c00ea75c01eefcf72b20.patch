@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -0,0 +1,7 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++print(len(df))
++q = df[(df.binder_system=='QE3')]
++print(q.prototype_id.unique()[:50])
++# also 99X could be suffix of prototype id
++print(sorted({p[-6:] for p in df.prototype_id.dropna().unique()})[:60])

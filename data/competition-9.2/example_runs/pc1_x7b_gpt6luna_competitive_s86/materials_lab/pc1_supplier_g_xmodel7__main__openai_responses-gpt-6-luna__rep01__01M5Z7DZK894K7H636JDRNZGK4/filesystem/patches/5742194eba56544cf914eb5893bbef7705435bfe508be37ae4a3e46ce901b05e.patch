@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -0,0 +1,4 @@
++import pandas as pd
++D=pd.read_csv('records.csv')
++g=D[D.prototype_id.isin(['p_7CHZ5Y38J7','p_YBRQHA8KPH'])]
++print(g.groupby(['prototype_id','instrument']).value.agg(['mean','std','count']))

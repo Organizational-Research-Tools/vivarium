@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -388,3 +388,15 @@
+ r_915RFVXS3W,qualification,QP-2342,p_CVRBJPNCZD,heat,seal hold temperature,3,77.56350,°C,lab_a,lab_a,H6K,9AF,6ZC,M5L,7J8,J3Y,3RB,8WN,W9T,RQ5,8M7,23Y
+ r_915RFVXS3X,qualification,QP-2342,p_CVRBJPNCZD,heat,seal hold temperature,4,77.03800,°C,lab_a,lab_a,H6K,9AF,6ZC,M5L,7J8,J3Y,3RB,8WN,W9T,RQ5,8M7,23Y
+ r_915RFVXS3Y,qualification,QP-2342,p_CVRBJPNCZD,heat,seal hold temperature,5,77.16000,°C,lab_a,lab_a,H6K,9AF,6ZC,M5L,7J8,J3Y,3RB,8WN,W9T,RQ5,8M7,23Y
++r_TBK0JXR3ET,qualification,QP-2342,p_GRRDR2MP4W,water,wet strength retained,0,79.8992,%,lab_c,lab_a,H6K,9AF,6ZC,M5L,Y6H,J3Y,3RB,8WN,49R,NP6,8K5,23Y
++r_TBK0JXR3EV,qualification,QP-2342,p_GRRDR2MP4W,water,wet strength retained,1,79.9688,%,lab_c,lab_a,H6K,9AF,6ZC,M5L,Y6H,J3Y,3RB,8WN,49R,NP6,8K5,23Y
++r_TBK0JXR3EW,qualification,QP-2342,p_GRRDR2MP4W,water,wet strength retained,2,78.9600,%,lab_c,lab_a,H6K,9AF,6ZC,M5L,Y6H,J3Y,3RB,8WN,49R,NP6,8K5,23Y
++r_TBK0JXR3EX,qualification,QP-2342,p_GRRDR2MP4W,water,wet strength retained,3,79.2280,%,lab_c,lab_a,H6K,9AF,6ZC,M5L,Y6H,J3Y,3RB,8WN,49R,NP6,8K5,23Y
++r_TBK0JXR3EY,qualification,QP-2342,p_GRRDR2MP4W,water,wet strength retained,4,79.5392,%,lab_c,lab_a,H6K,9AF,6ZC,M5L,Y6H,J3Y,3RB,8WN,49R,NP6,8K5,23Y
++r_TBK0JXR3EZ,qualification,QP-2342,p_GRRDR2MP4W,water,wet strength retained,5,79.6136,%,lab_c,lab_a,H6K,9AF,6ZC,M5L,Y6H,J3Y,3RB,8WN,49R,NP6,8K5,23Y
++r_TBK0JXR3F0,qualification,QP-2342,p_SMN29C0NWH,water,wet strength retained,0,79.4152,%,lab_c,lab_a,H6K,9AF,6ZC,M5L,7J8,J3Y,3RB,8WN,49R,NP6,8K5,23Y
++r_TBK0JXR3F1,qualification,QP-2342,p_SMN29C0NWH,water,wet strength retained,1,79.6484,%,lab_c,lab_a,H6K,9AF,6ZC,M5L,7J8,J3Y,3RB,8WN,49R,NP6,8K5,23Y
++r_TBK0JXR3F2,qualification,QP-2342,p_SMN29C0NWH,water,wet strength retained,2,78.9612,%,lab_c,lab_a,H6K,9AF,6ZC,M5L,7J8,J3Y,3RB,8WN,49R,NP6,8K5,23Y
++r_TBK0JXR3F3,qualification,QP-2342,p_SMN29C0NWH,water,wet strength retained,3,79.1256,%,lab_c,lab_a,H6K,9AF,6ZC,M5L,7J8,J3Y,3RB,8WN,49R,NP6,8K5,23Y
++r_TBK0JXR3F4,qualification,QP-2342,p_SMN29C0NWH,water,wet strength retained,4,79.1688,%,lab_c,lab_a,H6K,9AF,6ZC,M5L,7J8,J3Y,3RB,8WN,49R,NP6,8K5,23Y
++r_TBK0JXR3F5,qualification,QP-2342,p_SMN29C0NWH,water,wet strength retained,5,79.3416,%,lab_c,lab_a,H6K,9AF,6ZC,M5L,7J8,J3Y,3RB,8WN,49R,NP6,8K5,23Y

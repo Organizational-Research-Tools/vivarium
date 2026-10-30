@@ -1,0 +1,82 @@
+
+# Analyze all results
+print("=== TARGETED PROTOTYPE STRENGTH RESULTS ===")
+targeted_results = [
+    ('QP-3473', 'p_J6CX8AHRR3', 'GG7→3HW winner', ['P2G','3HW','8BB','57T','S2J','4PE','WB3','VA8','X9F','ZW3','DL8','3N8'], 7.18457),
+    ('QP-3473', 'p_J6CX8AHRR5', 'GG7→5BU winner', ['P2G','5BU','8BB','57T','S2J','4PE','WB3','VA8','X9F','ZW3','DL8','3N8'], 7.21262),
+    ('QP-7212', 'p_S87ZV5EJH5', 'GG7→3HW winner', ['P2G','3HW','8BB','57T','S2J','4PE','WB3','VA8','X9F','ZW3','DL8','3N8'], 7.26593),
+    ('QP-7604', 'p_7AG4536EJQ', 'GG7→3HW winner', ['P2G','3HW','8BB','57T','S2J','4PE','WB3','VA8','X9F','ZW3','DL8','3N8'], 6.91202),
+    ('QP-3089', 'p_YD1Q0XW9S8', 'GG7-adapted NN7', ['P2G','3HW','NN7','57T','LD3','L6C','WB3','P8G','H3F','ZW3','9FU','YV2'], 6.48854),
+    ('QP-3089', 'p_YD1Q0XW9SA', 'GG7→3HW winner', ['P2G','3HW','8BB','57T','S2J','4PE','WB3','VA8','X9F','ZW3','DL8','3N8'], 7.16606),
+    ('QP-8265', 'p_JN5ABZQH8S', 'GG7→3HW winner', ['P2G','3HW','8BB','57T','S2J','4PE','WB3','VA8','X9F','ZW3','DL8','3N8'], 7.13684),
+    ('QP-6572', 'p_T79TZ1Q3JT', 'GG7→3HW winner', ['P2G','3HW','8BB','57T','S2J','4PE','WB3','VA8','X9F','ZW3','DL8','3N8'], 5.59091),
+    ('QP-6572', 'p_T79TZ1Q3JW', 'hybrid NN7+C5Q', ['DA9','3HW','NN7','R5N','S2J','4PE','WB3','C5Q','X9F','ZW3','DL8','3N8'], 6.45557),
+    ('QP-6572', 'p_T79TZ1Q3JY', 'hybrid 8BB+C5Q', ['DA9','3HW','8BB','57T','S2J','4PE','WB3','C5Q','X9F','ZW3','DL8','3N8'], 6.30356),
+    ('QP-6843', 'p_QEPQYC26EE', 'GG7→3HW winner', ['P2G','3HW','8BB','57T','S2J','4PE','WB3','VA8','X9F','ZW3','DL8','3N8'], 5.82953),
+    ('QP-6843', 'p_QEPQYC26EG', 'VA8→C5Q hybrid', ['P2G','3HW','8BB','57T','S2J','4PE','WB3','C5Q','X9F','ZW3','DL8','3N8'], 6.62063),
+    ('QP-4476', 'p_21XPKFZDE3', 'GG7→3HW winner', ['P2G','3HW','8BB','57T','S2J','4PE','WB3','VA8','X9F','ZW3','DL8','3N8'], 5.15297),
+    ('QP-4476', 'p_21XPKFZDE5', 'hybrid 8BB+C5Q', ['DA9','3HW','8BB','57T','S2J','4PE','WB3','C5Q','X9F','ZW3','DL8','3N8'], 5.95433),
+]
+
+strength_threshold = 7.10
+for proj, pid, desc, recipe, strength in targeted_results:
+    status = '✓' if strength >= strength_threshold else f'✗ ({(strength-strength_threshold)/0.03:+.1f} steps)'
+    print(f"{proj} {pid[:14]}: {strength:.3f} kN/m {status} [{desc}]")
+
+print()
+print("=== PL-57 STRENGTH DEEP DIVE (ALL QP-6572 EXPLORATORY) ===")
+qp6572_results = [
+    ('p_BPTS43N4BH', ['JA8','3HW','8BB','5FE','6FA','L6C','4QB','P8G','N7N','ZW3','9FU','YV2'], 4.875),
+    ('p_BPTS43N4BK', ['P2G','5BU','M2P','R5N','B3P','4PE','62D','C5Q','X9F','5TZ','57U','6JZ'], 6.318),
+    ('p_BPTS43N4BN', ['DA9','YX8','NN7','57T','S2J','QJ4','UP5','VA8','H3F','7KL','DL8','3N8'], 5.657),
+    ('p_3PHV14GHBT', ['JA8','5BU','T9M','QJ2','LD3','44B','WB3','VA8','H3F','7TJ','4GD','G8Q'], 7.058),  # BEST!
+    ('p_3PHV14GHBW', ['U8H','3HW','NN7','5FE','S2J','QJ4','4QB','C5Q','N7N','7KL','9FU','3N8'], 4.947),
+    ('p_3PHV14GHBY', ['DA9','YX8','8BB','R5N','6FA','L6C','62D','2BR','X9F','ZW3','57U','6JZ'], 5.658),
+    ('p_3PHV14GHC0', ['P2G','5BU','M2P','57T','B3P','4PE','UP5','P8G','N4L','5TZ','DL8','YV2'], 3.786),
+    ('p_3PHV14GHC2', ['JA8','YX8','NN7','5FE','LD3','QJ4','62D','VA8','N7N','7TJ','57U','G8Q'], 6.413),
+    ('p_3PHV14GHC4', ['U8H','5BU','T9M','R5N','6FA','44B','UP5','C5Q','H3F','ZW3','DL8','6JZ'], 5.775),
+    ('p_3PHV14GHC6', ['DA9','3HW','8BB','QJ2','B3P','L6C','WB3','2BR','X9F','5TZ','9FU','3N8'], 4.300),
+    ('p_3PHV14GHC8', ['P2G','YX8','M2P','57T','S2J','4PE','4QB','P8G','N4L','7KL','4GD','YV2'], 3.616),
+]
+for pid, recipe, strength in qp6572_results:
+    status = '✓' if strength >= 7.10 else f'✗ ({(strength-7.10)/0.03:+.1f} steps)'
+    print(f"  {pid[:14]}: {strength:.3f} {status} base={recipe[0]} sec={recipe[1]} binder={recipe[2]} pp1={recipe[6]} pp2={recipe[7]} pp3={recipe[8]}")
+
+print()
+print("=== KEY INSIGHT: PL-57 strength problem ===")
+print("Best QP-6572 recipe: JA8/5BU/T9M/QJ2/LD3/44B/WB3/VA8/H3F/7TJ/4GD/G8Q → 7.06 kN/m")
+print("BUT: T9M binder → bad heat (lab_a), H3F pp3 → unknown water, VA8 → good heat in QP-3473")
+print()
+print("Prior QP-6843 winner (strength 7.20): P2G/3HW/8BB/57T/S2J/L6C/4QB/2BR/H3F/ZW3/9FU/YV2")
+print("  BUT: 2BR pp2 → heat 74.50°C (fails badly!)")
+print()
+print("TARGET NEW RECIPES for QP-6843/QP-6572/QP-4476:")
+print("Swap 2BR→VA8 or C5Q, H3F→X9F (for water) in the strength-passing QP-6843 recipe:")
+print("  R1: P2G/3HW/8BB/57T/S2J/L6C/4QB/VA8/X9F/ZW3/9FU/YV2  (2BR→VA8, H3F→X9F)")
+print("  R2: P2G/3HW/8BB/57T/S2J/L6C/4QB/C5Q/X9F/ZW3/9FU/YV2  (2BR→C5Q, H3F→X9F)")
+print("  R3: P2G/3HW/8BB/57T/S2J/L6C/4QB/VA8/H3F/ZW3/9FU/YV2  (2BR→VA8, keep H3F)")
+
+print()
+print("=== QP-3089 EXPLORATORY TOP PERFORMERS ===")
+qp3089_results = [
+    ('p_B5YVE0HPFX', ['JA8','3HW','8BB','5FE','6FA','L6C','4QB','P8G','N7N','ZW3','9FU','YV2'], 7.305),
+    ('p_B5YVE0HPFZ', ['P2G','5BU','M2P','R5N','B3P','4PE','62D','C5Q','X9F','5TZ','57U','6JZ'], 7.124),
+    ('p_B5YVE0HPG1', ['DA9','YX8','NN7','57T','S2J','QJ4','UP5','VA8','H3F','7KL','DL8','3N8'], 7.174),
+    ('p_B5YVE0HPG5', ['JA8','5BU','T9M','QJ2','LD3','44B','WB3','VA8','H3F','7TJ','4GD','G8Q'], 7.288),
+    ('p_B5YVE0HPG7', ['U8H','3HW','NN7','5FE','S2J','QJ4','4QB','C5Q','N7N','7KL','9FU','3N8'], 7.222),
+    ('p_B5YVE0HPGF', ['U8H','5BU','T9M','R5N','6FA','44B','UP5','C5Q','H3F','ZW3','DL8','6JZ'], 7.217),
+    ('p_YD1Q0XW9SA', ['P2G','3HW','8BB','57T','S2J','4PE','WB3','VA8','X9F','ZW3','DL8','3N8'], 7.166),
+]
+for pid, recipe, strength in qp3089_results:
+    status = '✓' if strength >= 7.10 else '✗'
+    print(f"  {pid[:14]}: {strength:.3f} {status} base={recipe[0]} sec={recipe[1]} binder={recipe[2]} pp2={recipe[7]} pp3={recipe[8]} surf={recipe[9]}")
+
+print()
+print("=== IMMEDIATE ACTION PLAN ===")
+print("HIGH PRIORITY:")
+print("1. Run strength PANELS on: p_J6CX8AHRR3 (QP-3473), p_S87ZV5EJH5 (QP-7212), p_YD1Q0XW9SA (QP-3089)")
+print("2. Ask heat labs to prioritize these + QP-8265 p_JN5ABZQH8S")
+print("3. Create new PL-57 recipes based on prior passing recipe + fix heat/water")
+print()
+print("QP-6843 already has: strength 7.204 with 4QB/2BR/H3F/L6C/S2J")
+print("Need: swap 2BR→heat-passing pp2, H3F→X9F or test water of H3F")

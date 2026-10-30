@@ -1,0 +1,1 @@
+print(g.loc['QP-9259'].to_string()); print('\n9980'); print(g.loc['QP-9980'].to_string())

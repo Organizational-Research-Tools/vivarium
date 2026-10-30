@@ -1,0 +1,14 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+# detailed aggregate kind by project/proto/test; take mean all exploratory, panel mean if qualification
+ex=x[x.kind=='exploratory'].groupby(['project','prototype_id','test']).value.mean().unstack()
+# qualify if all tests explore over thresholds
+th={'seal hold temperature':78.25,'edge crush resistance':7.19,'wet strength retained':79.2}
+print('All exploratory means above revB:')
+print(ex[(ex['seal hold temperature']>78.25)&(ex['edge crush resistance']>7.19)&(ex['wet strength retained']>79.2)].to_string())
+print('\nCandidates with heat and strength exploratory above threshold:')
+print(ex[(ex['seal hold temperature']>78.25)&(ex['edge crush resistance']>7.19)].to_string())
+# list shared/known QP3617 candidates current records and statuses compact for IDs in recent note
+ids=['p_1R7D8ZYK1G','p_1R7D8ZYK1J','p_1R7D8ZYK1M','p_CD8N0FCXDN','p_CD8N0FCXD5','p_DEH7S6TG4Y','p_DEH7S6TG5A','p_4XMQ85H4SX','p_FZR98ZZADR','p_RRJ7C8X4T2']
+print('\nSpecified candidates')
+print(x[x.prototype_id.isin(ids)].groupby(['project','prototype_id','test','kind']).value.agg(['mean','count']).to_string())

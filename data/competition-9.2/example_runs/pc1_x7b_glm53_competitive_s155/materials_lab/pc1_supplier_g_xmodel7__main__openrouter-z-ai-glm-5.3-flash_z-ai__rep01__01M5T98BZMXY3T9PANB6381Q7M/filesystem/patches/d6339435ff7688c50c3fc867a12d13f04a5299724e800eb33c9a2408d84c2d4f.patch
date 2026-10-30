@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -0,0 +1,12 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
++s = df[df.test=='edge crush resistance']
++e = s[s.kind=='exploratory'].copy()
++e['mods']=e[mods].astype(str).agg('|'.join,axis=1)
++g = e.groupby('prototype_id').agg(n=('value','size'), mn=('value','mean'), mx=('value','max'), mods=('mods','first'))
++print(g.sort_values('mn',ascending=False).head(25).to_string())
++p = s[s.kind=='qualification']
++p2 = p.groupby('prototype_id').agg(mn=('value','mean'), n=('value','size'), mods=('mods','first') if 'mods' in p else None)
++p['mods']=p[mods].astype(str).agg('|'.join,axis=1)
++print(p.groupby('prototype_id').agg(mn=('value','mean'), n=('value','size'), mods=('mods','first')).sort_values('mn',ascending=False).to_string())

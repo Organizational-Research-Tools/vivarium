@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -275,3 +275,15 @@
+ r_VRGFWMWGHQ,qualification,QP-6843,p_S91612HV2G,water,wet strength retained,3,52.0420,%,lab_f,lab_f,P2G,YX8,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
+ r_VRGFWMWGHR,qualification,QP-6843,p_S91612HV2G,water,wet strength retained,4,52.0540,%,lab_f,lab_f,P2G,YX8,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
+ r_VRGFWMWGHS,qualification,QP-6843,p_S91612HV2G,water,wet strength retained,5,52.4016,%,lab_f,lab_f,P2G,YX8,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_JQWRM2EJ5H,qualification,QP-4476,p_4V8BTTYF7C,water,wet strength retained,0,80.4112,%,lab_f,lab_a,,,,,,,,,,,,
++r_JQWRM2EJ5J,qualification,QP-4476,p_4V8BTTYF7C,water,wet strength retained,1,80.3944,%,lab_f,lab_a,,,,,,,,,,,,
++r_JQWRM2EJ5K,qualification,QP-4476,p_4V8BTTYF7C,water,wet strength retained,2,80.6656,%,lab_f,lab_a,,,,,,,,,,,,
++r_JQWRM2EJ5M,qualification,QP-4476,p_4V8BTTYF7C,water,wet strength retained,3,80.7512,%,lab_f,lab_a,,,,,,,,,,,,
++r_JQWRM2EJ5N,qualification,QP-4476,p_4V8BTTYF7C,water,wet strength retained,4,80.9368,%,lab_f,lab_a,,,,,,,,,,,,
++r_JQWRM2EJ5P,qualification,QP-4476,p_4V8BTTYF7C,water,wet strength retained,5,81.0672,%,lab_f,lab_a,,,,,,,,,,,,
++r_DTHTFTYJK9,qualification,QP-8265,p_KJZ5KNC3WG,water,wet strength retained,0,79.5720,%,lab_f,lab_b,P2G,YX8,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_DTHTFTYJKA,qualification,QP-8265,p_KJZ5KNC3WG,water,wet strength retained,1,79.4548,%,lab_f,lab_b,P2G,YX8,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_DTHTFTYJKB,qualification,QP-8265,p_KJZ5KNC3WG,water,wet strength retained,2,78.8336,%,lab_f,lab_b,P2G,YX8,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_DTHTFTYJKC,qualification,QP-8265,p_KJZ5KNC3WG,water,wet strength retained,3,78.9728,%,lab_f,lab_b,P2G,YX8,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_DTHTFTYJKD,qualification,QP-8265,p_KJZ5KNC3WG,water,wet strength retained,4,79.0252,%,lab_f,lab_b,P2G,YX8,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8
++r_DTHTFTYJKE,qualification,QP-8265,p_KJZ5KNC3WG,water,wet strength retained,5,79.3296,%,lab_f,lab_b,P2G,YX8,8BB,57T,S2J,4PE,WB3,VA8,X9F,ZW3,DL8,3N8

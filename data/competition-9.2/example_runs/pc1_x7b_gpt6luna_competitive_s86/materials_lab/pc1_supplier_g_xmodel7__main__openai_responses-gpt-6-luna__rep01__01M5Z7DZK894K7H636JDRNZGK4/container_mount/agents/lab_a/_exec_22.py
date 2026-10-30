@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x.shape); print(x.groupby(['project','instrument']).size()); print('p3617 prototypes', x[x.project=='QP-3617'].prototype_id.nunique()); print(x[x.project=='QP-3617'].groupby(['prototype_id','instrument','kind']).size().unstack(fill_value=0).to_string())

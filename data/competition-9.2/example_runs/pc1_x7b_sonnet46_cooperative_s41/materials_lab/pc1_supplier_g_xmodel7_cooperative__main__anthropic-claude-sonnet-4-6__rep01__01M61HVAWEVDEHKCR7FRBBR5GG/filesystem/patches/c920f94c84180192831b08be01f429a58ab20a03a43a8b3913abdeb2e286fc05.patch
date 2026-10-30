@@ -1,0 +1,30 @@
+--- 
++++ 
+@@ -787,3 +787,27 @@
+ r_TEKMM5M9BJ,exploratory,QP-7212,p_580QSJBKVS,water,wet strength retained,,78.7968,%,lab_f,lab_b,P2G,5BU,NN7,QJ2,B3P,L6C,62D,C5Q,X9F,5TZ,9FU,YV2
+ r_TEKMM5M9BK,exploratory,QP-7212,p_580QSJBKVV,water,wet strength retained,,70.7928,%,lab_f,lab_b,P2G,5BU,M2P,57T,B3P,L6C,62D,C5Q,X9F,5TZ,9FU,YV2
+ r_TEKMM5M9BM,exploratory,QP-7212,p_580QSJBKVX,water,wet strength retained,,77.9996,%,lab_f,lab_b,P2G,5BU,M2P,QJ2,B3P,44B,62D,C5Q,X9F,5TZ,9FU,YV2
++r_15H6284AAC,qualification,QP-3089,p_8F860GY05C,water,wet strength retained,0,81.4452,%,lab_c,lab_b,P2G,3HW,8BB,57T,S2J,4PE,4QB,C5Q,X9F,5TZ,DL8,3N8
++r_15H6284AAD,qualification,QP-3089,p_8F860GY05C,water,wet strength retained,1,80.2616,%,lab_c,lab_b,P2G,3HW,8BB,57T,S2J,4PE,4QB,C5Q,X9F,5TZ,DL8,3N8
++r_15H6284AAE,qualification,QP-3089,p_8F860GY05C,water,wet strength retained,2,80.5236,%,lab_c,lab_b,P2G,3HW,8BB,57T,S2J,4PE,4QB,C5Q,X9F,5TZ,DL8,3N8
++r_15H6284AAF,qualification,QP-3089,p_8F860GY05C,water,wet strength retained,3,80.8532,%,lab_c,lab_b,P2G,3HW,8BB,57T,S2J,4PE,4QB,C5Q,X9F,5TZ,DL8,3N8
++r_15H6284AAG,qualification,QP-3089,p_8F860GY05C,water,wet strength retained,4,81.0056,%,lab_c,lab_b,P2G,3HW,8BB,57T,S2J,4PE,4QB,C5Q,X9F,5TZ,DL8,3N8
++r_15H6284AAH,qualification,QP-3089,p_8F860GY05C,water,wet strength retained,5,81.0588,%,lab_c,lab_b,P2G,3HW,8BB,57T,S2J,4PE,4QB,C5Q,X9F,5TZ,DL8,3N8
++r_15H6284AAJ,qualification,QP-3089,p_ME2Y94BVSY,water,wet strength retained,0,81.1888,%,lab_c,lab_b,P2G,3HW,8BB,57T,S2J,4PE,4QB,C5Q,X9F,5TZ,DL8,YV2
++r_15H6284AAK,qualification,QP-3089,p_ME2Y94BVSY,water,wet strength retained,1,80.5136,%,lab_c,lab_b,P2G,3HW,8BB,57T,S2J,4PE,4QB,C5Q,X9F,5TZ,DL8,YV2
++r_15H6284AAM,qualification,QP-3089,p_ME2Y94BVSY,water,wet strength retained,2,80.6196,%,lab_c,lab_b,P2G,3HW,8BB,57T,S2J,4PE,4QB,C5Q,X9F,5TZ,DL8,YV2
++r_15H6284AAN,qualification,QP-3089,p_ME2Y94BVSY,water,wet strength retained,3,80.9068,%,lab_c,lab_b,P2G,3HW,8BB,57T,S2J,4PE,4QB,C5Q,X9F,5TZ,DL8,YV2
++r_15H6284AAP,qualification,QP-3089,p_ME2Y94BVSY,water,wet strength retained,4,80.7528,%,lab_c,lab_b,P2G,3HW,8BB,57T,S2J,4PE,4QB,C5Q,X9F,5TZ,DL8,YV2
++r_15H6284AAQ,qualification,QP-3089,p_ME2Y94BVSY,water,wet strength retained,5,81.0128,%,lab_c,lab_b,P2G,3HW,8BB,57T,S2J,4PE,4QB,C5Q,X9F,5TZ,DL8,YV2
++r_QYKNNDRFXJ,qualification,QP-3089,p_GR61XB2TYZ,strength,edge crush resistance,0,7.22609,kN/m,lab_b,lab_d,P2G,GG7,NN7,57T,LD3,L6C,WB3,P8G,H3F,ZW3,9FU,YV2
++r_QYKNNDRFXK,qualification,QP-3089,p_GR61XB2TYZ,strength,edge crush resistance,1,7.23965,kN/m,lab_b,lab_d,P2G,GG7,NN7,57T,LD3,L6C,WB3,P8G,H3F,ZW3,9FU,YV2
++r_QYKNNDRFXM,qualification,QP-3089,p_GR61XB2TYZ,strength,edge crush resistance,2,7.25882,kN/m,lab_b,lab_d,P2G,GG7,NN7,57T,LD3,L6C,WB3,P8G,H3F,ZW3,9FU,YV2
++r_QYKNNDRFXN,qualification,QP-3089,p_GR61XB2TYZ,strength,edge crush resistance,3,7.27325,kN/m,lab_b,lab_d,P2G,GG7,NN7,57T,LD3,L6C,WB3,P8G,H3F,ZW3,9FU,YV2
++r_QYKNNDRFXP,qualification,QP-3089,p_GR61XB2TYZ,strength,edge crush resistance,4,7.30076,kN/m,lab_b,lab_d,P2G,GG7,NN7,57T,LD3,L6C,WB3,P8G,H3F,ZW3,9FU,YV2
++r_QYKNNDRFXQ,qualification,QP-3089,p_GR61XB2TYZ,strength,edge crush resistance,5,7.22393,kN/m,lab_b,lab_d,P2G,GG7,NN7,57T,LD3,L6C,WB3,P8G,H3F,ZW3,9FU,YV2
++r_QYKNNDRFXR,qualification,QP-3473,p_8VNBERF1VK,strength,edge crush resistance,0,6.64571,kN/m,lab_b,lab_d,P2G,GG7,NN7,57T,LD3,L6C,WB3,P8G,H3F,ZW3,9FU,YV2
++r_QYKNNDRFXS,qualification,QP-3473,p_8VNBERF1VK,strength,edge crush resistance,1,6.66116,kN/m,lab_b,lab_d,P2G,GG7,NN7,57T,LD3,L6C,WB3,P8G,H3F,ZW3,9FU,YV2
++r_QYKNNDRFXT,qualification,QP-3473,p_8VNBERF1VK,strength,edge crush resistance,2,6.66371,kN/m,lab_b,lab_d,P2G,GG7,NN7,57T,LD3,L6C,WB3,P8G,H3F,ZW3,9FU,YV2
++r_QYKNNDRFXV,qualification,QP-3473,p_8VNBERF1VK,strength,edge crush resistance,3,6.66680,kN/m,lab_b,lab_d,P2G,GG7,NN7,57T,LD3,L6C,WB3,P8G,H3F,ZW3,9FU,YV2
++r_QYKNNDRFXW,qualification,QP-3473,p_8VNBERF1VK,strength,edge crush resistance,4,6.68210,kN/m,lab_b,lab_d,P2G,GG7,NN7,57T,LD3,L6C,WB3,P8G,H3F,ZW3,9FU,YV2
++r_QYKNNDRFXX,qualification,QP-3473,p_8VNBERF1VK,strength,edge crush resistance,5,6.61472,kN/m,lab_b,lab_d,P2G,GG7,NN7,57T,LD3,L6C,WB3,P8G,H3F,ZW3,9FU,YV2

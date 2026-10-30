@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++for pid in ['p_TAJ3JW4AR2','p_GX1KFQW9VY']:
++    sub=df[df.prototype_id==pid]
++    print(pid, sub.groupby('test').agg(n=('value','size'),mn=('value','mean')).to_string())

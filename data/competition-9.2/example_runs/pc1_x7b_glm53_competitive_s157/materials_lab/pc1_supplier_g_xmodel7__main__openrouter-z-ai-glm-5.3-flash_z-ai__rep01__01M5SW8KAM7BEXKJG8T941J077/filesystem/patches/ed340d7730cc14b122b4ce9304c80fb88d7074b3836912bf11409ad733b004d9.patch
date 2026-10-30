@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -483,3 +483,7 @@
+ r_T3S9WA3YAS,qualification,QP-1586,p_KV3GM10NKV,heat,seal hold temperature,3,78.72750,°C,lab_d,lab_d,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T
+ r_T3S9WA3YAT,qualification,QP-1586,p_KV3GM10NKV,heat,seal hold temperature,4,78.24825,°C,lab_d,lab_d,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T
+ r_T3S9WA3YAV,qualification,QP-1586,p_KV3GM10NKV,heat,seal hold temperature,5,78.34825,°C,lab_d,lab_d,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T
++r_SPF4XYHR8H,exploratory,QP-1586,p_KV3GM10NKV,strength,edge crush resistance,,7.23671,kN/m,lab_e,lab_d,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T
++r_SPF4XYHR8J,exploratory,QP-1586,p_KV3GM10NKV,strength,edge crush resistance,,7.27502,kN/m,lab_e,lab_d,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T
++r_SPF4XYHR8K,exploratory,QP-1586,p_KV3GM10NKV,strength,edge crush resistance,,7.16969,kN/m,lab_e,lab_d,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T
++r_SPF4XYHR8M,exploratory,QP-1586,p_KV3GM10NKV,strength,edge crush resistance,,7.18139,kN/m,lab_e,lab_d,NF2,YH6,KX7,X2P,E8S,29B,8Q7,T8R,A7P,9B8,FA3,W5T

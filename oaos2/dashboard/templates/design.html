@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% from "_runnav.html" import runnav %}
+{% from "_chip.html" import help, gh, howto %}
+{% block title %}design — {{ run_ref }}{% endblock %}
+{% block crumb %}<span class="root" title="{{ run_ref }}"><a href="/run/{{ run_ref }}">run {{ run_ref.rsplit("/", 1)[-1]|shortid }}</a> / design</span>{% endblock %}
+{% block content %}
+
+{{ runnav(run_ref, "design") }}
+{% call howto() %}
+  <p><strong>Saved settings and recorded use.</strong> Available run settings, saved role instructions, notice classifications, and recorded use of channels and rights. The organization panel reads the current library and shows whether it matches the saved hash; missing or changed settings limit reconstruction.</p>
+  <p><strong>Recorded use.</strong> Where the treatment was exercised, as against merely available: each declared channel with the handoffs, posts, or notes it actually carried and the first time it was used; each role's dispositions committed against those it was allowed to commit. A post goes to the board, which every other active agent receives.</p>
+  <p><strong>Schedule classification.</strong> Researcher-side classifications from the saved schedule, including notices that may never have been delivered. Check delivery events for actual exposure; these classifications are withheld from agents.</p>
+{% endcall %}
+
+{% set d = design %}
+{% set org = d.organization %}
+
+<div class="card">
+  <h2>Saved settings and recorded use · <span class="dim" style="font-weight:400">{{ d.cell_label }}</span></h2>
+  <div class="grid">
+    <dl class="kv">
+      {% for k, v in d.cell.items() %}{% if v is not none %}<dt><code>design.cell.{{ k }}</code></dt><dd>{{ v }}</dd>{% endif %}{% endfor %}
+    </dl>
+    <div>
+      <p style="margin:0 0 0.4rem"><strong>Compare with another arm.</strong> Compare saved instructions and available organization settings. The differences may include materials, model, or capacity changes as well as the intended treatment; use the study design to decide which comparisons are valid.</p>
+      {% for s in siblings %}<p style="margin:0.15rem 0"><a href="/design/diff?a={{ run_ref }}&b={{ s.run_ref }}">diff vs {{ s.organization_id }} · {{ s.difficulty }} · {{ s.run_id|shortid(28) }}</a></p>{% endfor %}
+      <form method="get" action="/design/diff" class="filters" style="margin-top:0.3rem">
+        <input type="hidden" name="a" value="{{ run_ref }}">
+        <input type="text" name="b" placeholder="other run ref (path under runs/)" size="48">
+        <button type="submit">diff</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>{{ help("Organization", "Roles, channels, rights, and ceilings as the library holds the preset now, checked against the run's pinned organization hash") }} · <span class="dim" style="font-weight:400">{{ org.source }}{% if org.pin_ok is true %} · <span class="sev sev-info">pinned</span>{% elif org.pin_ok is false %} · <span class="sev sev-warning">changed since this run</span>{% endif %}{% if org.note %} · {{ org.note }}{% endif %}</span></h2>
+  <p class="dim" style="margin:0 0 0.4rem">scheduler {{ org.scheduler or "—" }} · mode {{ org.mode or "—" }} · visibility {{ org.contribution_visibility or "—" }}{% if org.disclosure %} · disclosure {{ org.disclosure }}{% endif %}</p>
+  {% if org.roles %}
+  <div style="overflow-x:auto"><table>
+    <thead><tr><th>role</th><th>packet</th><th>channels out</th><th>{{ gh("communication grants") }}</th><th>accepts handoffs from</th><th>{{ help("declared review authority", "Recorded role metadata; no general review action currently enforces this field. Particular task contracts may separately require a review.") }}</th><th class="num">calls/slot</th><th class="num">context</th></tr></thead>
+    <tbody>{% for rid, r in org.roles.items() %}
+      <tr><td><span class="adot-{{ aslot.get(rid, -1) }}"></span>{{ rid }}</td><td>{{ r.role_packet or "—" }}</td>
+          <td>{{ r.channels_out|join(", ") or "—" }}</td><td>{{ r.comm_grants|join(", ") or "—" }}</td><td>{{ r.may_accept_handoffs_from|join(", ") or "—" }}</td>
+          <td>{{ r.review_authority_over|join(", ") or "—" }}</td><td class="num">{{ r.max_calls_per_slot or "—" }}</td><td class="num">{{ r.context_budget_tokens or "—" }}</td></tr>
+    {% endfor %}</tbody>
+  </table></div>
+  {% endif %}
+</div>
+
+<div class="card">
+  <h2>Recorded use</h2>
+  <p class="dim" style="margin:0 0 0.4rem">channels declared {{ real.n_declared }} · used {{ real.n_used }}{% if real.undeclared_used %} · <span class="sev sev-warning">routes without a matching available declaration: {{ real.undeclared_used|length }}</span>{% endif %}
+    · dispositions by a notified role {{ real.locus.committer_in_notified }} · by a non-notified role {{ real.locus.committer_not_notified }} · undisposed {{ real.locus.undisposed }}</p>
+  <p class="dim">A missing or changed library preset can leave a recorded route without a matching declaration. This comparison alone does not establish a permission violation.</p>
+  <div class="grid">
+    <div style="overflow-x:auto"><table>
+      <thead><tr><th>channel</th><th>kind</th><th>declared</th><th class="num">carried</th><th>first exercised</th></tr></thead>
+      <tbody>{% for c in real.channels %}
+        <tr><td>{{ c.from }} → {{ c.to }}</td><td>{{ c.kind }}</td><td>{{ "yes" if c.declared else "NO" }}</td><td class="num">{{ c.used or "" }}</td>
+            <td>{% if c.first_event_id %}<a href="/run/{{ run_ref }}/event/{{ c.first_event_id }}">[{{ c.first_seq }}]</a>{% else %}<span class="dim">never</span>{% endif %}</td></tr>
+      {% endfor %}</tbody>
+    </table></div>
+    <div style="overflow-x:auto"><table>
+      <thead><tr><th>role</th><th class="num">calls</th><th class="num">filings</th><th class="num">dispositions</th><th class="num">allowed on</th><th class="num">handoffs out / in</th><th class="num">{{ gh("board posts", "posts") }}</th><th class="num">{{ gh("notes", "notes out / in") }}</th><th class="num">board / note reads</th><th class="num">compactions</th></tr></thead>
+      <tbody>{% for rid, r in real.roles.items() %}
+        <tr><td>{{ rid }}</td><td class="num">{{ r.calls }}</td><td class="num">{{ r.filings }}</td><td class="num">{{ r.dispositions }}</td><td class="num">{{ r.dispositions_allowed }}</td><td class="num">{{ r.handoffs_out }} / {{ r.handoffs_in }}</td><td class="num">{{ r.posts or "" }}</td><td class="num">{% if r.notes_out or r.notes_in %}{{ r.notes_out }} / {{ r.notes_in }}{% endif %}</td><td class="num">{% if r.board_reads or r.note_reads %}{{ r.board_reads }} / {{ r.note_reads }}{% endif %}</td><td class="num">{{ r.compactions or "" }}</td></tr>
+      {% endfor %}</tbody>
+    </table></div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>{{ help("What each role was told", "The archived prompt envelopes: system prompt and task text, verbatim, per role") }}</h2>
+  {% for rid, env in d.envelopes.items() %}
+  <details><summary><strong>{{ rid }}</strong> <span class="dim">· {{ env.role_packet }} · {{ env.tier }} · first duty {{ env.commitment }}</span></summary>
+    <pre style="white-space:pre-wrap">{{ env.system_prompt }}</pre><hr><pre style="white-space:pre-wrap">{{ env.initial_user_text }}</pre></details>
+  {% else %}<p class="dim">no prompt envelopes archived</p>{% endfor %}
+</div>
+
+<div class="card">
+  <h2>Schedule classification ({{ d.packets|length }})</h2>
+  {% if d.packets %}
+  <div style="overflow-x:auto"><table>
+    <thead><tr><th>packet</th><th>wave</th><th>targets</th><th>case</th><th>coverage</th><th>rule</th><th>shell</th><th class="num">arrival</th><th class="num">deadline</th></tr></thead>
+    <tbody>{% for pid, p in d.packets.items() %}{% set cl = p.classification %}
+      <tr><td><code>{{ pid }}</code></td><td>{{ p.wave }}</td><td>{{ p.targets|join(", ") }}</td><td>{% if p.case_id %}<a href="/run/{{ run_ref }}/case/{{ p.case_id }}">{{ p.case_id }}</a>{% endif %}</td>
+          <td>{{ cl.get("rule_coverage") or "—" }}</td><td>{{ cl.get("rule_ref") or "—" }}</td>
+          <td>{% if cl.get("shell") %}{{ cl.shell.get("shell_id") }} · {{ cl.shell.get("type") }} · {{ cl.shell.get("magnitude") }}{% endif %}</td>
+          <td class="num">{{ cl.get("arrival_round") if cl.get("arrival_round") is not none else "—" }}</td><td class="num">{{ cl.get("response_deadline_round") if cl.get("response_deadline_round") is not none else "—" }}</td></tr>
+    {% endfor %}</tbody>
+  </table></div>
+  {% else %}<p class="dim">no run-local schedule</p>{% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,4 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); cols=list(x.columns[11:]);
+for (p,proto),g in x.groupby(['project','prototype_id']):
+ if p=='QP-8807': print(proto,dict(zip(cols,g.iloc[0][cols])))

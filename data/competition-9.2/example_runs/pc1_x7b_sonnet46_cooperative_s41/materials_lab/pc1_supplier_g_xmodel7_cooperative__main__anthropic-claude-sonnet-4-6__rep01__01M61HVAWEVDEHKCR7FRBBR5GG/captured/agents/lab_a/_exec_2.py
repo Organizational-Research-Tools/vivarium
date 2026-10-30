@@ -1,0 +1,35 @@
+
+import pandas as pd
+import numpy as np
+
+# Analyze the heat readings
+data = {
+    'prototype': ['p_WG8VQJ9ABW', 'p_WG8VQJ9ABY', 'p_WG8VQJ9AC0', 'p_WG8VQJ9AC2',
+                  'p_WG8VQJ9AC4', 'p_WG8VQJ9AC6', 'p_WG8VQJ9AC8', 'p_H083ZDPV9S'],
+    'surface_tx': ['ZW3', '5TZ', '7KL', '7TJ', 'ZW3', '5TZ', '7KL', '7TJ'],
+    'pp1': ['4QB']*4 + ['UP5']*4,
+    'pp3': ['N7N']*4 + ['H3F']*4,
+    'pp2': ['P8G']*4 + ['VA8']*4,
+    'means': [
+        np.mean([65.52325, 65.76900, 65.97200]),
+        np.mean([66.53875, 66.34450, 66.40750]),
+        np.mean([65.64100, 66.32575, 66.58075]),
+        np.mean([60.19825, 59.73225, 59.91750]),
+        np.mean([61.21325, 60.73825, 61.00125]),
+        np.mean([66.09100, 65.66050, 66.28850]),
+        np.mean([61.95450, 62.02425, 61.50575]),
+        np.mean([66.93825, 66.60825, 66.62075]),
+    ]
+}
+df = pd.DataFrame(data)
+df['gap_from_threshold'] = df['means'] - 77.5
+df['gap_steps'] = df['gap_from_threshold'] / 0.25
+
+print("Heat exploratory results (threshold = 77.5°C):")
+print(df[['prototype', 'surface_tx', 'pp1', 'pp3', 'means', 'gap_from_threshold', 'gap_steps']].to_string())
+print(f"\nBest so far: {df.loc[df['means'].idxmax(), 'prototype']} = {df['means'].max():.3f}°C")
+print(f"Worst: {df.loc[df['means'].idxmin(), 'prototype']} = {df['means'].min():.3f}°C")
+print(f"\nGap from threshold: {df['means'].max() - 77.5:.2f}°C ({(df['means'].max() - 77.5)/0.25:.1f} steps)")
+print("\nNeed to find combinations that add ~10+ °C!")
+print("Key finding: 7TJ surface treatment HURTS with N7N, but HELPS with H3F")
+print("Interaction: surface_treatment × process_profile_1 × process_profile_3 affects heat")

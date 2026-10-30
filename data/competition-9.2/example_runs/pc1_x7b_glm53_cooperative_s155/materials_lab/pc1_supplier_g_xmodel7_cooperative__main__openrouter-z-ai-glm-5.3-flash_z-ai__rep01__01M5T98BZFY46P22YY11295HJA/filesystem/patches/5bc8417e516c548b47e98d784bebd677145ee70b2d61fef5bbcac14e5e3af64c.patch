@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -687,3 +687,6 @@
+ r_669A3PBDPW,exploratory,QP-2342,p_9JS2853ESD,water,wet strength retained,,71.7904,%,lab_c,lab_b,H6K,HJ7,6ZC,M5L,7J8,J3Y,3RB,8WN,W9T,NP6,8M7,23Y
+ r_669A3PBDPX,exploratory,QP-2342,p_9JS2853ERZ,water,wet strength retained,,79.4908,%,lab_c,lab_b,H6K,9AF,6ZC,M5L,7J8,J3Y,3RB,8WN,37J,NP6,8M7,23Y
+ r_669A3PBDPY,exploratory,QP-2342,p_9JS2853ERZ,water,wet strength retained,,80.0676,%,lab_c,lab_b,H6K,9AF,6ZC,M5L,7J8,J3Y,3RB,8WN,37J,NP6,8M7,23Y
++r_VYMQBPPRW4,exploratory,QP-2342,p_9JS2853ESQ,strength,edge crush resistance,,7.22846,kN/m,lab_e,lab_b,H6K,9AF,6ZC,M5L,7J8,S3J,3RB,8WN,W9T,NP6,8M7,23Y
++r_613M6RFBB4,exploratory,QP-2342,p_9JS2853ESQ,heat,seal hold temperature,,77.82025,°C,lab_d,lab_b,H6K,9AF,6ZC,M5L,7J8,S3J,3RB,8WN,W9T,NP6,8M7,23Y
++r_613M6RFBB5,exploratory,QP-2342,p_9JS2853ESQ,heat,seal hold temperature,,77.72525,°C,lab_d,lab_b,H6K,9AF,6ZC,M5L,7J8,S3J,3RB,8WN,W9T,NP6,8M7,23Y

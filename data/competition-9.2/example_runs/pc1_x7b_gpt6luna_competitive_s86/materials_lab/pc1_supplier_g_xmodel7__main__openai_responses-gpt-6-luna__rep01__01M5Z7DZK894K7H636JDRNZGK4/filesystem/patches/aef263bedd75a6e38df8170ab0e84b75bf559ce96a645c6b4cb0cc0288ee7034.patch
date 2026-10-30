@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -794,3 +794,6 @@
+ r_MR68G4T778,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,3,80.4440,%,lab_c,lab_c,,,,,,,,,,,,
+ r_MR68G4T779,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,4,80.4020,%,lab_c,lab_c,,,,,,,,,,,,
+ r_MR68G4T77A,qualification,QP-6879,p_SNNF91F2XD,water,wet strength retained,5,80.7776,%,lab_c,lab_c,,,,,,,,,,,,
++r_H74KZQNPC3,exploratory,QP-6879,p_SNNF91F2XB,heat,seal hold temperature,,77.75300,°C,lab_a,lab_c,,,,,,,,,,,,
++r_H74KZQNPC4,exploratory,QP-6879,p_S5W8G1Y5NY,heat,seal hold temperature,,72.54900,°C,lab_a,lab_c,,,,,,,,,,,,
++r_H74KZQNPC5,exploratory,QP-3617,p_H6M64FVH6V,heat,seal hold temperature,,73.64150,°C,lab_a,lab_c,,,,,,,,,,,,

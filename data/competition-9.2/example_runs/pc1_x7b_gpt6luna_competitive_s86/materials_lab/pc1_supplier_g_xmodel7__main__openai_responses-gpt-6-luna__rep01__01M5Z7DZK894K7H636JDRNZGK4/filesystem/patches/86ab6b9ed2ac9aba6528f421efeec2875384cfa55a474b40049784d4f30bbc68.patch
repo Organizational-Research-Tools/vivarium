@@ -1,0 +1,15 @@
+--- 
++++ 
+@@ -643,6 +643,12 @@
+ r_X2AVD8NV9K,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,3,79.6252,%,lab_c,lab_c,,,,,,,,,,,,
+ r_X2AVD8NV9M,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,4,78.7292,%,lab_c,lab_c,,,,,,,,,,,,
+ r_X2AVD8NV9N,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,5,78.6524,%,lab_c,lab_c,,,,,,,,,,,,
++r_2ZXYGTXY9T,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,0,7.24874,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_2ZXYGTXY9V,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,1,7.26287,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_2ZXYGTXY9W,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,2,7.28552,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_2ZXYGTXY9X,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,3,7.29350,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_2ZXYGTXY9Y,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,4,7.29713,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_2ZXYGTXY9Z,qualification,QP-3617,p_H6M64FVH6V,strength,edge crush resistance,5,7.23140,kN/m,lab_e,lab_c,,,,,,,,,,,,
+ r_2SE4XQGXD7,qualification,QP-9273,p_AZ5VDQBF40,strength,edge crush resistance,0,6.97445,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,YX4,SU2
+ r_2SE4XQGXD8,qualification,QP-9273,p_AZ5VDQBF40,strength,edge crush resistance,1,6.93494,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,YX4,SU2
+ r_2SE4XQGXD9,qualification,QP-9273,p_AZ5VDQBF40,strength,edge crush resistance,2,6.94724,kN/m,lab_e,lab_a,8GP,RK7,VQ6,7TW,K3K,XD8,2A4,9HJ,FJ2,UX3,YX4,SU2

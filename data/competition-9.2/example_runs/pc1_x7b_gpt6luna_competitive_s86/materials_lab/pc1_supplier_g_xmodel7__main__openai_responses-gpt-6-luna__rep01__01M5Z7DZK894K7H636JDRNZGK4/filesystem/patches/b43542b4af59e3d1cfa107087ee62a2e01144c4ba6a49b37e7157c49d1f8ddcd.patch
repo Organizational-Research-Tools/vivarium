@@ -1,0 +1,21 @@
+--- 
++++ 
+@@ -925,6 +925,18 @@
+ r_RQG2ZRH008,qualification,QP-8807,p_K6ZM59ZMJT,strength,edge crush resistance,3,7.27853,kN/m,lab_e,lab_f,,,,,,,,,,,,
+ r_RQG2ZRH009,qualification,QP-8807,p_K6ZM59ZMJT,strength,edge crush resistance,4,7.22171,kN/m,lab_e,lab_f,,,,,,,,,,,,
+ r_RQG2ZRH00A,qualification,QP-8807,p_K6ZM59ZMJT,strength,edge crush resistance,5,7.23320,kN/m,lab_e,lab_f,,,,,,,,,,,,
++r_CHXDAX17S7,qualification,QP-3617,p_H6M64FVH7B,heat,seal hold temperature,0,78.63275,°C,lab_a,lab_c,,,,,,,,,,,,
++r_CHXDAX17S8,qualification,QP-3617,p_H6M64FVH7B,heat,seal hold temperature,1,78.64000,°C,lab_a,lab_c,,,,,,,,,,,,
++r_CHXDAX17S9,qualification,QP-3617,p_H6M64FVH7B,heat,seal hold temperature,2,78.82775,°C,lab_a,lab_c,,,,,,,,,,,,
++r_CHXDAX17SA,qualification,QP-3617,p_H6M64FVH7B,heat,seal hold temperature,3,78.87525,°C,lab_a,lab_c,,,,,,,,,,,,
++r_CHXDAX17SB,qualification,QP-3617,p_H6M64FVH7B,heat,seal hold temperature,4,78.30150,°C,lab_a,lab_c,,,,,,,,,,,,
++r_CHXDAX17SC,qualification,QP-3617,p_H6M64FVH7B,heat,seal hold temperature,5,78.46825,°C,lab_a,lab_c,,,,,,,,,,,,
++r_X2AVD8NV9G,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,0,79.0664,%,lab_c,lab_c,,,,,,,,,,,,
++r_X2AVD8NV9H,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,1,78.9972,%,lab_c,lab_c,,,,,,,,,,,,
++r_X2AVD8NV9J,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,2,79.2344,%,lab_c,lab_c,,,,,,,,,,,,
++r_X2AVD8NV9K,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,3,79.6252,%,lab_c,lab_c,,,,,,,,,,,,
++r_X2AVD8NV9M,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,4,78.7292,%,lab_c,lab_c,,,,,,,,,,,,
++r_X2AVD8NV9N,qualification,QP-3617,p_W3C23XARDY,water,wet strength retained,5,78.6524,%,lab_c,lab_c,,,,,,,,,,,,
+ r_2ZXYGTXY9E,qualification,QP-3617,p_W3C23XARDY,strength,edge crush resistance,0,7.22438,kN/m,lab_e,lab_c,,,,,,,,,,,,
+ r_2ZXYGTXY9F,qualification,QP-3617,p_W3C23XARDY,strength,edge crush resistance,1,7.22969,kN/m,lab_e,lab_c,,,,,,,,,,,,
+ r_2ZXYGTXY9G,qualification,QP-3617,p_W3C23XARDY,strength,edge crush resistance,2,7.25885,kN/m,lab_e,lab_c,,,,,,,,,,,,

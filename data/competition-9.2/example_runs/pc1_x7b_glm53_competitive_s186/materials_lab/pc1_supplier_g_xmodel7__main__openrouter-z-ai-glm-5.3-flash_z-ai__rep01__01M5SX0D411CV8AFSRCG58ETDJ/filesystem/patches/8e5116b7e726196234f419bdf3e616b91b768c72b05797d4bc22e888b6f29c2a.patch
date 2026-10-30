@@ -1,0 +1,21 @@
+--- 
++++ 
+@@ -23,6 +23,18 @@
+ r_NME6R7Y1Q6,qualification,QP-4069,p_NME6R7Y1Q1,heat,seal hold temperature,3,78.77000,°C,lab_a,lab_a,HP9,2YJ,HD9,Q3H,42D,Z2E,Q7N,9AH,V7P,83B,YS6,2JU
+ r_NME6R7Y1Q7,qualification,QP-4069,p_NME6R7Y1Q1,heat,seal hold temperature,4,78.88650,°C,lab_a,lab_a,HP9,2YJ,HD9,Q3H,42D,Z2E,Q7N,9AH,V7P,83B,YS6,2JU
+ r_NME6R7Y1Q8,qualification,QP-4069,p_NME6R7Y1Q1,heat,seal hold temperature,5,78.90625,°C,lab_a,lab_a,HP9,2YJ,HD9,Q3H,42D,Z2E,Q7N,9AH,V7P,83B,YS6,2JU
++r_VBVTDFNR74,qualification,QP-4069,p_VBVTDFNR72,strength,edge crush resistance,0,7.35665,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_VBVTDFNR75,qualification,QP-4069,p_VBVTDFNR72,strength,edge crush resistance,1,7.36670,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_VBVTDFNR76,qualification,QP-4069,p_VBVTDFNR72,strength,edge crush resistance,2,7.32041,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_VBVTDFNR77,qualification,QP-4069,p_VBVTDFNR72,strength,edge crush resistance,3,7.31840,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_VBVTDFNR78,qualification,QP-4069,p_VBVTDFNR72,strength,edge crush resistance,4,7.34774,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_VBVTDFNR79,qualification,QP-4069,p_VBVTDFNR72,strength,edge crush resistance,5,7.35260,kN/m,lab_b,lab_b,,,,,,,,,,,,
++r_VBVTDFNR7F,qualification,QP-4069,p_VBVTDFNR7D,water,wet strength retained,0,80.3340,%,lab_c,lab_c,,,,,,,,,,,,
++r_VBVTDFNR7G,qualification,QP-4069,p_VBVTDFNR7D,water,wet strength retained,1,79.5888,%,lab_c,lab_c,,,,,,,,,,,,
++r_VBVTDFNR7H,qualification,QP-4069,p_VBVTDFNR7D,water,wet strength retained,2,79.7908,%,lab_c,lab_c,,,,,,,,,,,,
++r_VBVTDFNR7J,qualification,QP-4069,p_VBVTDFNR7D,water,wet strength retained,3,80.1504,%,lab_c,lab_c,,,,,,,,,,,,
++r_VBVTDFNR7K,qualification,QP-4069,p_VBVTDFNR7D,water,wet strength retained,4,80.0840,%,lab_c,lab_c,,,,,,,,,,,,
++r_VBVTDFNR7M,qualification,QP-4069,p_VBVTDFNR7D,water,wet strength retained,5,80.3520,%,lab_c,lab_c,,,,,,,,,,,,
+ r_AWYPX1BYYZ,qualification,QP-7065,p_VBVTDFNR7R,heat,seal hold temperature,0,78.00700,°C,lab_a,lab_a,L7A,38J,HD9,G7U,42D,JN6,Q7N,2FG,24J,6XS,YS6,G5Y
+ r_AWYPX1BYZ0,qualification,QP-7065,p_VBVTDFNR7R,heat,seal hold temperature,1,77.98200,°C,lab_a,lab_a,L7A,38J,HD9,G7U,42D,JN6,Q7N,2FG,24J,6XS,YS6,G5Y
+ r_AWYPX1BYZ1,qualification,QP-7065,p_VBVTDFNR7R,heat,seal hold temperature,2,77.53375,°C,lab_a,lab_a,L7A,38J,HD9,G7U,42D,JN6,Q7N,2FG,24J,6XS,YS6,G5Y

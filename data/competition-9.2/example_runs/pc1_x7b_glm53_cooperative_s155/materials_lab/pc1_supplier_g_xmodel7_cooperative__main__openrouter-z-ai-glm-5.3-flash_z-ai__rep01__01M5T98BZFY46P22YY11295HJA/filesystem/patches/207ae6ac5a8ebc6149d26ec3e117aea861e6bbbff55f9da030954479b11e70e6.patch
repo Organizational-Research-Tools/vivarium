@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -590,3 +590,4 @@
+ r_EDB1BPZKH4,exploratory,QP-1466,p_QHMA9WGC80,heat,seal hold temperature,,67.51975,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_EDB1BPZKH5,exploratory,QP-1466,p_QHMA9WGC82,heat,seal hold temperature,,67.75300,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_EDB1BPZKH6,exploratory,QP-1466,p_QHMA9WGC84,heat,seal hold temperature,,73.19050,°C,lab_a,lab_e,,,,,,,,,,,,
++r_DA2E2JMSGH,exploratory,QP-1466,p_NXWW60NMKQ,heat,seal hold temperature,,78.40150,°C,lab_a,lab_c,,,,,,,,,,,,

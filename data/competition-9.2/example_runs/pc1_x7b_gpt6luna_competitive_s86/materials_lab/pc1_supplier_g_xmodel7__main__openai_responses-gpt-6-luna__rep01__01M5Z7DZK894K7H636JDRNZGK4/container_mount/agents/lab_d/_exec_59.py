@@ -1,0 +1,1 @@
+q=x[x.project=='QP-8807']; g=q[q.kind=='qualification'].groupby(['prototype_id','test']).agg(n=('value','size'),mean=('value','mean'),owner=('measured_by','first')).reset_index(); print(g.to_string(index=False))

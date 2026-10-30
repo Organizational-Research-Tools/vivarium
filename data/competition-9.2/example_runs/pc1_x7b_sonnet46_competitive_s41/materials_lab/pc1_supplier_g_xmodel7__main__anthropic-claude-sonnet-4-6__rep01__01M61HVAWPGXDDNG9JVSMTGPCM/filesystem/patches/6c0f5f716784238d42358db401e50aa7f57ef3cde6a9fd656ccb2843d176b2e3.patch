@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -0,0 +1,5 @@
++import pandas as pd
++df = pd.read_csv('records.csv')
++# Focus on key prototypes
++key = df[df['prototype_id'].isin(['p_P68BNAVWAQ','p_P68BNAVWAS','p_P68BNAVWAV','p_02A6NY9WNR','p_2TK8W7BFC7','p_2TK8W7BFC9','p_MM0KRH0PJJ','p_MM0KRH0PJM'])]
++print(key[['record_id','prototype_id','kind','test','value','measured_by']].to_string())

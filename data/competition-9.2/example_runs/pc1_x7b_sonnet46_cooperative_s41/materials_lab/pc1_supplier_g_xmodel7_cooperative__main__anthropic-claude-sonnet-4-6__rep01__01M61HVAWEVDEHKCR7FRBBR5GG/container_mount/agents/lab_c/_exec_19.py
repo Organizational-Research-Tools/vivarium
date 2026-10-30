@@ -1,0 +1,9 @@
+
+import pandas as pd
+df = pd.read_csv('records.csv')
+print(df.columns.tolist())
+print(df.shape)
+# Look for GG7 recipes and their details
+gg7 = df[df.apply(lambda r: r.astype(str).str.contains('GG7', case=False).any(), axis=1)]
+print(f"\nGG7 rows: {len(gg7)}")
+print(gg7[['prototype_id','project_id','instrument','kind','value']].drop_duplicates('prototype_id').head(20))

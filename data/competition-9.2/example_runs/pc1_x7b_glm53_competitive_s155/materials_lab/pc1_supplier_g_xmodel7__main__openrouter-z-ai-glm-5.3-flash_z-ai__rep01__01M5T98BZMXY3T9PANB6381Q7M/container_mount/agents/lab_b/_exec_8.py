@@ -1,0 +1,10 @@
+import pandas as pd
+df = pd.read_csv('records.csv')
+for pid in ['p_ZJC86DH7B1','p_TTDYP4QB2A','p_F266GFQYD5','p_23J6ZM4DWH','p_X7PGATRH2A']:
+    sub=df[df.prototype_id==pid]
+    print(pid, sub.project.unique(), sub.measured_by.unique(), sub.requester.unique(),
+          sub[sub.test=='edge crush resistance'].value.mean(), sub[['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].dropna(how='all').head(1).to_dict('records'))
+# heat & water for p_T63FK4QRMZ
+for pid in ['p_T63FK4QRMZ','p_P217N1V4Q1']:
+    sub=df[(df.prototype_id==pid)]
+    print(pid, sub.groupby('test').agg(n=('value','size'),mn=('value','mean'),mx=('value','max')).to_string())

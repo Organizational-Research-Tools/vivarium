@@ -1,0 +1,3 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+print(x[(x.prototype_id=='p_62M20S6MVN')&(x.instrument=='heat')][['record_id','value']].to_string(index=False))

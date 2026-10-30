@@ -1,0 +1,6 @@
+import pandas as pd
+x=pd.read_csv('records.csv')
+for pid in ['p_K7XF099AZ8','p_X8EXSRWA9E','p_MV7HWR04AQ','p_5ZQGWA1F16']:
+ y=x[x.prototype_id==pid]
+ print('\n',pid,len(y),y.groupby(['project','test','measured_by']).value.agg(['mean','count']).to_string())
+ if len(y): print(y.iloc[0][['project','base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']].to_dict())

@@ -1,0 +1,347 @@
+{
+ "glm53": {
+  "knowing_use": {
+   "per_arm": {
+    "competitive": 21,
+    "cooperative": 14
+   },
+   "test": {
+    "pairs": 150,
+    "arm0": 20,
+    "arm1": 13,
+    "ties": 117,
+    "p_two_sided": 0.296206368599087,
+    "arm0_share_ci95": [
+     0.4214,
+     0.7709
+    ]
+   }
+  },
+  "accepted": {
+   "per_arm": {
+    "competitive": 27,
+    "cooperative": 19
+   },
+   "test": {
+    "pairs": 150,
+    "arm0": 26,
+    "arm1": 18,
+    "ties": 106,
+    "p_two_sided": 0.2912152365458951,
+    "arm0_share_ci95": [
+     0.4325,
+     0.7366
+    ]
+   }
+  }
+ },
+ "gpt6luna": {
+  "knowing_use": {
+   "per_arm": {
+    "competitive": 6,
+    "cooperative": 2
+   },
+   "test": {
+    "pairs": 60,
+    "arm0": 6,
+    "arm1": 2,
+    "ties": 52,
+    "p_two_sided": 0.2890625,
+    "arm0_share_ci95": [
+     0.3491,
+     0.9681
+    ]
+   }
+  },
+  "accepted": {
+   "per_arm": {
+    "competitive": 7,
+    "cooperative": 3
+   },
+   "test": {
+    "pairs": 60,
+    "arm0": 7,
+    "arm1": 3,
+    "ties": 50,
+    "p_two_sided": 0.34375,
+    "arm0_share_ci95": [
+     0.3475,
+     0.9333
+    ]
+   }
+  }
+ },
+ "sonnet46": {
+  "knowing_use": {
+   "per_arm": {
+    "competitive": 7,
+    "cooperative": 7
+   },
+   "test": {
+    "pairs": 8,
+    "arm0": 1,
+    "arm1": 1,
+    "ties": 6,
+    "p_two_sided": 1.0,
+    "arm0_share_ci95": [
+     0.0126,
+     0.9874
+    ]
+   }
+  },
+  "accepted": {
+   "per_arm": {
+    "competitive": 7,
+    "cooperative": 7
+   },
+   "test": {
+    "pairs": 8,
+    "arm0": 1,
+    "arm1": 1,
+    "ties": 6,
+    "p_two_sided": 1.0,
+    "arm0_share_ci95": [
+     0.0126,
+     0.9874
+    ]
+   }
+  }
+ },
+ "broad_pinned": {
+  "runs_with_reading": {
+   "glm53": 145,
+   "gpt6luna": 9,
+   "sonnet46": 1
+  },
+  "rate_by_arm": {
+   "glm53": {
+    "runs_with_reading_by_arm": {
+     "competitive": 77,
+     "cooperative": 68
+    },
+    "paired_test_more_readings": {
+     "pairs": 150,
+     "arm0": 42,
+     "arm1": 33,
+     "ties": 75,
+     "p_two_sided": 0.3556992390814875,
+     "arm0_share_ci95": [
+      0.4406,
+      0.6745
+     ]
+    },
+    "first_use_by_reading": {
+     "with_reading": {
+      "runs": 145,
+      "use": 27,
+      "median_first_use_censored": 50.001158932844795
+     },
+     "without_reading": {
+      "runs": 155,
+      "use": 21,
+      "median_first_use_censored": 50.00119083722432
+     }
+    }
+   },
+   "gpt6luna": {
+    "runs_with_reading_by_arm": {
+     "competitive": 5,
+     "cooperative": 4
+    },
+    "paired_test_more_readings": {
+     "pairs": 60,
+     "arm0": 5,
+     "arm1": 4,
+     "ties": 51,
+     "p_two_sided": 1.0,
+     "arm0_share_ci95": [
+      0.212,
+      0.863
+     ]
+    },
+    "first_use_by_reading": {
+     "with_reading": {
+      "runs": 9,
+      "use": 3,
+      "median_first_use_censored": 50.001063632965085
+     },
+     "without_reading": {
+      "runs": 111,
+      "use": 7,
+      "median_first_use_censored": 50.00132468144099
+     }
+    }
+   },
+   "sonnet46": {
+    "runs_with_reading_by_arm": {
+     "competitive": 1,
+     "cooperative": 0
+    },
+    "paired_test_more_readings": {
+     "pairs": 8,
+     "arm0": 1,
+     "arm1": 0,
+     "ties": 7,
+     "p_two_sided": 1.0,
+     "arm0_share_ci95": [
+      0.025,
+      1.0
+     ]
+    },
+    "first_use_by_reading": {
+     "with_reading": {
+      "runs": 1,
+      "use": 1,
+      "median_first_use_censored": 40.45381722052892
+     },
+     "without_reading": {
+      "runs": 15,
+      "use": 13,
+      "median_first_use_censored": 40.73881375392278
+     }
+    }
+   }
+  },
+  "robustness_H1": {
+   "glm53": {
+    "pairs": 45,
+    "arm0": 10,
+    "arm1": 4,
+    "ties": 31,
+    "p_two_sided": 0.1795654296875,
+    "arm0_share_ci95": [
+     0.419,
+     0.9161
+    ]
+   },
+   "gpt6luna": {
+    "pairs": 53,
+    "arm0": 6,
+    "arm1": 2,
+    "ties": 45,
+    "p_two_sided": 0.2890625,
+    "arm0_share_ci95": [
+     0.3491,
+     0.9681
+    ]
+   }
+  }
+ },
+ "narrow_pinned": {
+  "runs_with_reading": {
+   "glm53": 115,
+   "gpt6luna": 5,
+   "sonnet46": 0
+  },
+  "rate_by_arm": {
+   "glm53": {
+    "runs_with_reading_by_arm": {
+     "competitive": 61,
+     "cooperative": 54
+    },
+    "paired_test_more_readings": {
+     "pairs": 150,
+     "arm0": 40,
+     "arm1": 33,
+     "ties": 77,
+     "p_two_sided": 0.4827885568440213,
+     "arm0_share_ci95": [
+      0.427,
+      0.6648
+     ]
+    },
+    "first_use_by_reading": {
+     "with_reading": {
+      "runs": 115,
+      "use": 21,
+      "median_first_use_censored": 50.00118315219879
+     },
+     "without_reading": {
+      "runs": 185,
+      "use": 27,
+      "median_first_use_censored": 50.00118048588435
+     }
+    }
+   },
+   "gpt6luna": {
+    "runs_with_reading_by_arm": {
+     "competitive": 3,
+     "cooperative": 2
+    },
+    "paired_test_more_readings": {
+     "pairs": 60,
+     "arm0": 3,
+     "arm1": 2,
+     "ties": 55,
+     "p_two_sided": 1.0,
+     "arm0_share_ci95": [
+      0.1466,
+      0.9473
+     ]
+    },
+    "first_use_by_reading": {
+     "with_reading": {
+      "runs": 5,
+      "use": 2,
+      "median_first_use_censored": 50.001063632965085
+     },
+     "without_reading": {
+      "runs": 115,
+      "use": 8,
+      "median_first_use_censored": 50.00132468144099
+     }
+    }
+   },
+   "sonnet46": {
+    "runs_with_reading_by_arm": {
+     "competitive": 0,
+     "cooperative": 0
+    },
+    "paired_test_more_readings": {
+     "pairs": 8,
+     "arm0": 0,
+     "arm1": 0,
+     "ties": 8,
+     "p_two_sided": null,
+     "arm0_share_ci95": null
+    },
+    "first_use_by_reading": {
+     "with_reading": {
+      "runs": 0,
+      "use": 0,
+      "median_first_use_censored": null
+     },
+     "without_reading": {
+      "runs": 16,
+      "use": 14,
+      "median_first_use_censored": 40.59631548722585
+     }
+    }
+   }
+  },
+  "robustness_H1": {
+   "glm53": {
+    "pairs": 62,
+    "arm0": 15,
+    "arm1": 6,
+    "ties": 41,
+    "p_two_sided": 0.0783538818359375,
+    "arm0_share_ci95": [
+     0.4782,
+     0.8872
+    ]
+   },
+   "gpt6luna": {
+    "pairs": 55,
+    "arm0": 6,
+    "arm1": 2,
+    "ties": 47,
+    "p_two_sided": 0.2890625,
+    "arm0_share_ci95": [
+     0.3491,
+     0.9681
+    ]
+   }
+  }
+ }
+}

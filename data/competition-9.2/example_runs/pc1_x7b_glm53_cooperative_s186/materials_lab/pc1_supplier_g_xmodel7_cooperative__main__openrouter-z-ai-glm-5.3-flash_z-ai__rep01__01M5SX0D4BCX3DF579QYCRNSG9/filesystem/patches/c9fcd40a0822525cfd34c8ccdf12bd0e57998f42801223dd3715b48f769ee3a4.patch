@@ -1,0 +1,17 @@
+--- 
++++ 
+@@ -706,3 +706,14 @@
+ r_QKTHV7SZZJ,exploratory,QP-1992,p_RXJZNYYAXF,water,wet strength retained,,80.0948,%,lab_c,lab_c,V2W,38J,HD9,G7U,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
+ r_QKTHV7SZZK,exploratory,QP-1992,p_RXJZNYYAXF,water,wet strength retained,,80.2508,%,lab_c,lab_c,V2W,38J,HD9,G7U,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
+ r_QKTHV7SZZM,exploratory,QP-1992,p_RXJZNYYAXF,water,wet strength retained,,79.6044,%,lab_c,lab_c,V2W,38J,HD9,G7U,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_PQ85AV3NP5,exploratory,QP-1992,p_RXJZNYYAXD,heat,seal hold temperature,,78.50925,°C,lab_a,lab_c,V2W,38J,HD9,8BE,9KR,Z2E,Q7N,9AH,F2C,83B,A6U,V8F
++r_04V1MN9PQ0,exploratory,QP-1992,p_RXJZNYYAXD,heat,seal hold temperature,,78.08000,°C,lab_a,lab_c,V2W,38J,HD9,8BE,9KR,Z2E,Q7N,9AH,F2C,83B,A6U,V8F
++r_04V1MN9PQ1,exploratory,QP-1992,p_RXJZNYYAXF,heat,seal hold temperature,,78.16600,°C,lab_a,lab_c,V2W,38J,HD9,G7U,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_04V1MN9PQ2,exploratory,QP-1992,p_RXJZNYYAXF,heat,seal hold temperature,,78.58025,°C,lab_a,lab_c,V2W,38J,HD9,G7U,9KR,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_04V1MN9PQ3,exploratory,QP-1992,p_RXJZNYYAXH,heat,seal hold temperature,,78.19375,°C,lab_a,lab_c,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,G5Y
++r_04V1MN9PQ4,exploratory,QP-1992,p_RXJZNYYAXH,heat,seal hold temperature,,78.56800,°C,lab_a,lab_c,V2W,38J,HD9,8BE,9KR,Z2E,8KT,9AH,F2C,83B,A6U,G5Y
++r_04V1MN9PQ5,exploratory,QP-1992,p_RXJZNYYAXK,heat,seal hold temperature,,71.96325,°C,lab_a,lab_c,V2W,38J,HD9,8BE,WJ7,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_KDH1BNKA6S,exploratory,QP-1992,p_RXJZNYYAXK,heat,seal hold temperature,,72.65100,°C,lab_a,lab_c,V2W,38J,HD9,8BE,WJ7,Z2E,8KT,9AH,F2C,83B,A6U,V8F
++r_Z6VTYBQDDS,exploratory,QP-1992,p_RXJZNYYAXD,water,wet strength retained,,70.2704,%,lab_c,lab_c,V2W,38J,HD9,8BE,9KR,Z2E,Q7N,9AH,F2C,83B,A6U,V8F
++r_Z6VTYBQDDT,exploratory,QP-1992,p_RXJZNYYAXD,water,wet strength retained,,70.6984,%,lab_c,lab_c,V2W,38J,HD9,8BE,9KR,Z2E,Q7N,9AH,F2C,83B,A6U,V8F
++r_Z6VTYBQDDV,exploratory,QP-1992,p_RXJZNYYAXD,water,wet strength retained,,70.3156,%,lab_c,lab_c,V2W,38J,HD9,8BE,9KR,Z2E,Q7N,9AH,F2C,83B,A6U,V8F

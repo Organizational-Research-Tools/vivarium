@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -665,3 +665,15 @@
+ r_KZX3H6951A,qualification,QP-6879,p_1179R7XVPM,water,wet strength retained,3,71.0444,%,lab_f,lab_a,SQ8,RK7,VQ6,7TW,K3K,4CW,H9M,QE8,FJ2,UX3,YX4,SU2
+ r_KZX3H6951B,qualification,QP-6879,p_1179R7XVPM,water,wet strength retained,4,70.9756,%,lab_f,lab_a,SQ8,RK7,VQ6,7TW,K3K,4CW,H9M,QE8,FJ2,UX3,YX4,SU2
+ r_KZX3H6951C,qualification,QP-6879,p_1179R7XVPM,water,wet strength retained,5,71.3772,%,lab_f,lab_a,SQ8,RK7,VQ6,7TW,K3K,4CW,H9M,QE8,FJ2,UX3,YX4,SU2
++r_AD5ADMPJEN,qualification,QP-8807,p_NQYNDKZ3CG,strength,edge crush resistance,0,7.23758,kN/m,lab_e,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_AD5ADMPJEP,qualification,QP-8807,p_NQYNDKZ3CG,strength,edge crush resistance,1,7.23773,kN/m,lab_e,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_AD5ADMPJEQ,qualification,QP-8807,p_NQYNDKZ3CG,strength,edge crush resistance,2,7.26683,kN/m,lab_e,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_AD5ADMPJER,qualification,QP-8807,p_NQYNDKZ3CG,strength,edge crush resistance,3,7.28300,kN/m,lab_e,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_AD5ADMPJES,qualification,QP-8807,p_NQYNDKZ3CG,strength,edge crush resistance,4,7.21028,kN/m,lab_e,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_AD5ADMPJET,qualification,QP-8807,p_NQYNDKZ3CG,strength,edge crush resistance,5,7.24532,kN/m,lab_e,lab_f,QG7,6TX,P8G,57Y,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_BF41SEABAS,qualification,QP-8807,p_NQYNDKZ3CJ,strength,edge crush resistance,0,7.26884,kN/m,lab_e,lab_f,QG7,6TX,VQ6,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_BF41SEABAT,qualification,QP-8807,p_NQYNDKZ3CJ,strength,edge crush resistance,1,7.27688,kN/m,lab_e,lab_f,QG7,6TX,VQ6,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_BF41SEABAV,qualification,QP-8807,p_NQYNDKZ3CJ,strength,edge crush resistance,2,7.28363,kN/m,lab_e,lab_f,QG7,6TX,VQ6,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_BF41SEABAW,qualification,QP-8807,p_NQYNDKZ3CJ,strength,edge crush resistance,3,7.28300,kN/m,lab_e,lab_f,QG7,6TX,VQ6,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_BF41SEABAX,qualification,QP-8807,p_NQYNDKZ3CJ,strength,edge crush resistance,4,7.23038,kN/m,lab_e,lab_f,QG7,6TX,VQ6,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN
++r_BF41SEABAY,qualification,QP-8807,p_NQYNDKZ3CJ,strength,edge crush resistance,5,7.23611,kN/m,lab_e,lab_f,QG7,6TX,VQ6,7TW,F8Y,XD8,H9M,8KZ,FJ2,96Y,JE5,6YN

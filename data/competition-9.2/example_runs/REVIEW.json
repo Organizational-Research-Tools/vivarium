@@ -1,0 +1,177 @@
+{
+ "credential_scan": [
+  "matches: 0"
+ ],
+ "runs": {
+  "pc1_x7b_glm53_competitive_s155": {
+   "barred_terms": {},
+   "personal_data": {},
+   "raw_folders": 0,
+   "real_world_names": {},
+   "reasoning_text_left": 0,
+   "roles": {
+    "lab_a": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_b": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_c": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_d": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_e": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_f": "openrouter/z-ai/glm-5.3-flash@z-ai"
+   },
+   "text_files_screened": 155,
+   "where": {}
+  },
+  "pc1_x7b_glm53_competitive_s157": {
+   "barred_terms": {},
+   "personal_data": {},
+   "raw_folders": 0,
+   "real_world_names": {},
+   "reasoning_text_left": 0,
+   "roles": {
+    "lab_a": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_b": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_c": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_d": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_e": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_f": "openrouter/z-ai/glm-5.3-flash@z-ai"
+   },
+   "text_files_screened": 129,
+   "where": {}
+  },
+  "pc1_x7b_glm53_competitive_s186": {
+   "barred_terms": {},
+   "personal_data": {},
+   "raw_folders": 0,
+   "real_world_names": {},
+   "reasoning_text_left": 0,
+   "roles": {
+    "lab_a": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_b": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_c": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_d": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_e": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_f": "openrouter/z-ai/glm-5.3-flash@z-ai"
+   },
+   "text_files_screened": 251,
+   "where": {}
+  },
+  "pc1_x7b_glm53_cooperative_s155": {
+   "barred_terms": {},
+   "personal_data": {},
+   "raw_folders": 0,
+   "real_world_names": {},
+   "reasoning_text_left": 0,
+   "roles": {
+    "lab_a": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_b": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_c": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_d": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_e": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_f": "openrouter/z-ai/glm-5.3-flash@z-ai"
+   },
+   "text_files_screened": 218,
+   "where": {}
+  },
+  "pc1_x7b_glm53_cooperative_s157": {
+   "barred_terms": {},
+   "personal_data": {},
+   "raw_folders": 0,
+   "real_world_names": {},
+   "reasoning_text_left": 0,
+   "roles": {
+    "lab_a": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_b": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_c": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_d": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_e": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_f": "openrouter/z-ai/glm-5.3-flash@z-ai"
+   },
+   "text_files_screened": 246,
+   "where": {}
+  },
+  "pc1_x7b_glm53_cooperative_s186": {
+   "barred_terms": {},
+   "personal_data": {},
+   "raw_folders": 0,
+   "real_world_names": {},
+   "reasoning_text_left": 0,
+   "roles": {
+    "lab_a": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_b": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_c": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_d": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_e": "openrouter/z-ai/glm-5.3-flash@z-ai",
+    "lab_f": "openrouter/z-ai/glm-5.3-flash@z-ai"
+   },
+   "text_files_screened": 227,
+   "where": {}
+  },
+  "pc1_x7b_gpt6luna_competitive_s86": {
+   "barred_terms": {},
+   "personal_data": {},
+   "raw_folders": 0,
+   "real_world_names": {},
+   "reasoning_text_left": 0,
+   "roles": {
+    "lab_a": "openai_responses/gpt-6-luna",
+    "lab_b": "openai_responses/gpt-6-luna",
+    "lab_c": "openai_responses/gpt-6-luna",
+    "lab_d": "openai_responses/gpt-6-luna",
+    "lab_e": "openai_responses/gpt-6-luna",
+    "lab_f": "openai_responses/gpt-6-luna"
+   },
+   "text_files_screened": 853,
+   "where": {}
+  },
+  "pc1_x7b_gpt6luna_cooperative_s86": {
+   "barred_terms": {},
+   "personal_data": {},
+   "raw_folders": 0,
+   "real_world_names": {},
+   "reasoning_text_left": 0,
+   "roles": {
+    "lab_a": "openai_responses/gpt-6-luna",
+    "lab_b": "openai_responses/gpt-6-luna",
+    "lab_c": "openai_responses/gpt-6-luna",
+    "lab_d": "openai_responses/gpt-6-luna",
+    "lab_e": "openai_responses/gpt-6-luna",
+    "lab_f": "openai_responses/gpt-6-luna"
+   },
+   "text_files_screened": 803,
+   "where": {}
+  },
+  "pc1_x7b_sonnet46_competitive_s41": {
+   "barred_terms": {},
+   "personal_data": {},
+   "raw_folders": 0,
+   "real_world_names": {},
+   "reasoning_text_left": 0,
+   "roles": {
+    "lab_a": "anthropic/claude-sonnet-4-6",
+    "lab_b": "anthropic/claude-sonnet-4-6",
+    "lab_c": "anthropic/claude-sonnet-4-6",
+    "lab_d": "anthropic/claude-sonnet-4-6",
+    "lab_e": "anthropic/claude-sonnet-4-6",
+    "lab_f": "anthropic/claude-sonnet-4-6"
+   },
+   "text_files_screened": 297,
+   "where": {}
+  },
+  "pc1_x7b_sonnet46_cooperative_s41": {
+   "barred_terms": {},
+   "personal_data": {},
+   "raw_folders": 0,
+   "real_world_names": {},
+   "reasoning_text_left": 0,
+   "roles": {
+    "lab_a": "anthropic/claude-sonnet-4-6",
+    "lab_b": "anthropic/claude-sonnet-4-6",
+    "lab_c": "anthropic/claude-sonnet-4-6",
+    "lab_d": "anthropic/claude-sonnet-4-6",
+    "lab_e": "anthropic/claude-sonnet-4-6",
+    "lab_f": "anthropic/claude-sonnet-4-6"
+   },
+   "text_files_screened": 303,
+   "where": {}
+  }
+ }
+}

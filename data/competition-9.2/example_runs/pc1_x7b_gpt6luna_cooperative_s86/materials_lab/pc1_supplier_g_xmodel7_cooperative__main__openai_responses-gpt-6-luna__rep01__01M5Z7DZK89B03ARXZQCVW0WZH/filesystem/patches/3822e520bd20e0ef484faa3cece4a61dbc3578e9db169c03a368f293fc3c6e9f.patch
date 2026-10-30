@@ -1,0 +1,21 @@
+--- 
++++ 
+@@ -227,12 +227,12 @@
+ r_K8QD98QJCW,qualification,QP-9259,p_AWPY5ZV668,strength,edge crush resistance,3,7.22213,kN/m,lab_b,lab_b,SQ8,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
+ r_K8QD98QJCX,qualification,QP-9259,p_AWPY5ZV668,strength,edge crush resistance,4,7.23671,kN/m,lab_b,lab_b,SQ8,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
+ r_K8QD98QJCY,qualification,QP-9259,p_AWPY5ZV668,strength,edge crush resistance,5,7.23626,kN/m,lab_b,lab_b,SQ8,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
+-r_ESJ3N119WN,qualification,QP-9259,p_174NHB75ES,water,wet strength retained,0,80.8364,%,lab_f,lab_a,,,,,,,,,,,,
+-r_ESJ3N119WP,qualification,QP-9259,p_174NHB75ES,water,wet strength retained,1,81.1292,%,lab_f,lab_a,,,,,,,,,,,,
+-r_ESJ3N119WQ,qualification,QP-9259,p_174NHB75ES,water,wet strength retained,2,81.3968,%,lab_f,lab_a,,,,,,,,,,,,
+-r_ESJ3N119WR,qualification,QP-9259,p_174NHB75ES,water,wet strength retained,3,80.2136,%,lab_f,lab_a,,,,,,,,,,,,
+-r_ESJ3N119WS,qualification,QP-9259,p_174NHB75ES,water,wet strength retained,4,80.6576,%,lab_f,lab_a,,,,,,,,,,,,
+-r_ESJ3N119WT,qualification,QP-9259,p_174NHB75ES,water,wet strength retained,5,80.9144,%,lab_f,lab_a,,,,,,,,,,,,
++r_ESJ3N119WN,qualification,QP-9259,p_174NHB75ES,water,wet strength retained,0,80.8364,%,lab_f,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_ESJ3N119WP,qualification,QP-9259,p_174NHB75ES,water,wet strength retained,1,81.1292,%,lab_f,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_ESJ3N119WQ,qualification,QP-9259,p_174NHB75ES,water,wet strength retained,2,81.3968,%,lab_f,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_ESJ3N119WR,qualification,QP-9259,p_174NHB75ES,water,wet strength retained,3,80.2136,%,lab_f,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_ESJ3N119WS,qualification,QP-9259,p_174NHB75ES,water,wet strength retained,4,80.6576,%,lab_f,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
++r_ESJ3N119WT,qualification,QP-9259,p_174NHB75ES,water,wet strength retained,5,80.9144,%,lab_f,lab_a,8GP,D5U,YC8,7TW,K3K,4CW,2A4,8KZ,3XM,96Y,JE5,84Z
+ r_TGFRS5QHCF,qualification,QP-9259,p_174NHB75EX,water,wet strength retained,0,71.9340,%,lab_f,lab_a,,,,,,,,,,,,
+ r_TGFRS5QHCG,qualification,QP-9259,p_174NHB75EX,water,wet strength retained,1,72.2036,%,lab_f,lab_a,,,,,,,,,,,,
+ r_TGFRS5QHCH,qualification,QP-9259,p_174NHB75EX,water,wet strength retained,2,72.1396,%,lab_f,lab_a,,,,,,,,,,,,

@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -441,3 +441,7 @@
+ r_CR3MNK4MTA,qualification,QP-5653,p_C9N9H45C3W,heat,seal hold temperature,3,79.39300,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_CR3MNK4MTB,qualification,QP-5653,p_C9N9H45C3W,heat,seal hold temperature,4,78.96225,°C,lab_a,lab_a,,,,,,,,,,,,
+ r_CR3MNK4MTC,qualification,QP-5653,p_C9N9H45C3W,heat,seal hold temperature,5,78.93525,°C,lab_a,lab_a,,,,,,,,,,,,
++r_B2H23RX8AM,exploratory,QP-5653,p_GKYT9SC1F0,strength,edge crush resistance,,7.09664,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_B2H23RX8AN,exploratory,QP-5653,p_GKYT9SC1F0,strength,edge crush resistance,,7.10132,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_B2H23RX8AP,exploratory,QP-5653,p_GKYT9SC1F0,strength,edge crush resistance,,7.17278,kN/m,lab_e,lab_d,,,,,,,,,,,,
++r_B2H23RX8AQ,exploratory,QP-5653,p_GKYT9SC1F0,strength,edge crush resistance,,7.07732,kN/m,lab_e,lab_d,,,,,,,,,,,,

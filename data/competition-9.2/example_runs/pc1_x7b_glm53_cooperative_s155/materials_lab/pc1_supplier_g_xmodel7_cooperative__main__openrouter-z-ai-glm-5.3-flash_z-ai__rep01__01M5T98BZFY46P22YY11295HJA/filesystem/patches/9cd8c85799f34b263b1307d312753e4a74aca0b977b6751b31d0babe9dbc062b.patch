@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -0,0 +1,6 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++e=df[df.kind=='exploratory']
++w=e[e.test=='water'].groupby(['project','prototype_id']).value.agg(['mean','count'])
++w=w[w['count']>=2].sort_values('mean',ascending=False).head(25)
++print(w)

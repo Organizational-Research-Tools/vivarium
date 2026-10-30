@@ -1,0 +1,54 @@
+--- 
++++ 
+@@ -1235,3 +1235,51 @@
+ r_3Q779PVC7R,qualification,QP-7092,p_HY5E4PSAVH,strength,edge crush resistance,3,7.36646,kN/m,lab_b,lab_b,SQ8,5AC,P8G,QG6,EB7,P2E,2A4,2JH,FJ2,T6A,62B,SU2
+ r_3Q779PVC7S,qualification,QP-7092,p_HY5E4PSAVH,strength,edge crush resistance,4,6.61895,kN/m,lab_b,lab_b,SQ8,5AC,P8G,QG6,EB7,P2E,2A4,2JH,FJ2,T6A,62B,SU2
+ r_3Q779PVC7T,qualification,QP-7092,p_HY5E4PSAVH,strength,edge crush resistance,5,6.72629,kN/m,lab_b,lab_b,SQ8,5AC,P8G,QG6,EB7,P2E,2A4,2JH,FJ2,T6A,62B,SU2
++r_FSRVBKDR0Z,qualification,QP-7092,p_7FN1NX365Y,strength,edge crush resistance,0,6.88607,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,K3K,4CW,2A4,2JH,FJ2,96Y,JE5,SU2
++r_FSRVBKDR10,qualification,QP-7092,p_7FN1NX365Y,strength,edge crush resistance,1,7.10726,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,K3K,4CW,2A4,2JH,FJ2,96Y,JE5,SU2
++r_FSRVBKDR11,qualification,QP-7092,p_7FN1NX365Y,strength,edge crush resistance,2,7.23572,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,K3K,4CW,2A4,2JH,FJ2,96Y,JE5,SU2
++r_FSRVBKDR12,qualification,QP-7092,p_7FN1NX365Y,strength,edge crush resistance,3,7.35395,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,K3K,4CW,2A4,2JH,FJ2,96Y,JE5,SU2
++r_FSRVBKDR13,qualification,QP-7092,p_7FN1NX365Y,strength,edge crush resistance,4,6.62510,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,K3K,4CW,2A4,2JH,FJ2,96Y,JE5,SU2
++r_FSRVBKDR14,qualification,QP-7092,p_7FN1NX365Y,strength,edge crush resistance,5,6.76658,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,K3K,4CW,2A4,2JH,FJ2,96Y,JE5,SU2
++r_FSRVBKDR15,qualification,QP-7092,p_7FN1NX3660,strength,edge crush resistance,0,6.55385,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,F8Y,XD8,2A4,2JH,FJ2,UX3,JE5,SU2
++r_FSRVBKDR16,qualification,QP-7092,p_7FN1NX3660,strength,edge crush resistance,1,6.68519,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,F8Y,XD8,2A4,2JH,FJ2,UX3,JE5,SU2
++r_FSRVBKDR17,qualification,QP-7092,p_7FN1NX3660,strength,edge crush resistance,2,5.95916,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,F8Y,XD8,2A4,2JH,FJ2,UX3,JE5,SU2
++r_FSRVBKDR18,qualification,QP-7092,p_7FN1NX3660,strength,edge crush resistance,3,6.10193,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,F8Y,XD8,2A4,2JH,FJ2,UX3,JE5,SU2
++r_FSRVBKDR19,qualification,QP-7092,p_7FN1NX3660,strength,edge crush resistance,4,6.19826,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,F8Y,XD8,2A4,2JH,FJ2,UX3,JE5,SU2
++r_FSRVBKDR1A,qualification,QP-7092,p_7FN1NX3660,strength,edge crush resistance,5,6.44393,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,F8Y,XD8,2A4,2JH,FJ2,UX3,JE5,SU2
++r_FSRVBKDR1B,qualification,QP-7092,p_7FN1NX3662,strength,edge crush resistance,0,7.33316,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,74N,7BD,2A4,2JH,FJ2,L2J,JE5,SU2
++r_FSRVBKDR1C,qualification,QP-7092,p_7FN1NX3662,strength,edge crush resistance,1,6.62807,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,74N,7BD,2A4,2JH,FJ2,L2J,JE5,SU2
++r_FSRVBKDR1D,qualification,QP-7092,p_7FN1NX3662,strength,edge crush resistance,2,6.72755,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,74N,7BD,2A4,2JH,FJ2,L2J,JE5,SU2
++r_FSRVBKDR1E,qualification,QP-7092,p_7FN1NX3662,strength,edge crush resistance,3,6.87404,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,74N,7BD,2A4,2JH,FJ2,L2J,JE5,SU2
++r_FSRVBKDR1F,qualification,QP-7092,p_7FN1NX3662,strength,edge crush resistance,4,7.08236,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,74N,7BD,2A4,2JH,FJ2,L2J,JE5,SU2
++r_FSRVBKDR1G,qualification,QP-7092,p_7FN1NX3662,strength,edge crush resistance,5,7.22240,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,74N,7BD,2A4,2JH,FJ2,L2J,JE5,SU2
++r_HD94PGF9C4,qualification,QP-7092,p_7FN1NX3664,strength,edge crush resistance,0,7.25075,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,EB7,4CW,2A4,2JH,FJ2,UX3,JE5,SU2
++r_HD94PGF9C5,qualification,QP-7092,p_7FN1NX3664,strength,edge crush resistance,1,7.36676,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,EB7,4CW,2A4,2JH,FJ2,UX3,JE5,SU2
++r_HD94PGF9C6,qualification,QP-7092,p_7FN1NX3664,strength,edge crush resistance,2,6.63338,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,EB7,4CW,2A4,2JH,FJ2,UX3,JE5,SU2
++r_HD94PGF9C7,qualification,QP-7092,p_7FN1NX3664,strength,edge crush resistance,3,6.78050,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,EB7,4CW,2A4,2JH,FJ2,UX3,JE5,SU2
++r_HD94PGF9C8,qualification,QP-7092,p_7FN1NX3664,strength,edge crush resistance,4,6.88622,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,EB7,4CW,2A4,2JH,FJ2,UX3,JE5,SU2
++r_HD94PGF9C9,qualification,QP-7092,p_7FN1NX3664,strength,edge crush resistance,5,7.11755,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,EB7,4CW,2A4,2JH,FJ2,UX3,JE5,SU2
++r_HD94PGF9CA,qualification,QP-7092,p_7FN1NX3666,strength,edge crush resistance,0,6.23675,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,EB7,XD8,2A4,2JH,FJ2,96Y,JE5,SU2
++r_HD94PGF9CB,qualification,QP-7092,p_7FN1NX3666,strength,edge crush resistance,1,6.47231,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,EB7,XD8,2A4,2JH,FJ2,96Y,JE5,SU2
++r_HD94PGF9CC,qualification,QP-7092,p_7FN1NX3666,strength,edge crush resistance,2,6.60335,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,EB7,XD8,2A4,2JH,FJ2,96Y,JE5,SU2
++r_HD94PGF9CD,qualification,QP-7092,p_7FN1NX3666,strength,edge crush resistance,3,6.70883,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,EB7,XD8,2A4,2JH,FJ2,96Y,JE5,SU2
++r_HD94PGF9CE,qualification,QP-7092,p_7FN1NX3666,strength,edge crush resistance,4,5.98559,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,EB7,XD8,2A4,2JH,FJ2,96Y,JE5,SU2
++r_HD94PGF9CF,qualification,QP-7092,p_7FN1NX3666,strength,edge crush resistance,5,6.10901,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,EB7,XD8,2A4,2JH,FJ2,96Y,JE5,SU2
++r_HD94PGF9CG,qualification,QP-7092,p_7FN1NX3668,strength,edge crush resistance,0,7.35701,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,F8Y,4CW,2A4,2JH,FJ2,L2J,JE5,SU2
++r_HD94PGF9CH,qualification,QP-7092,p_7FN1NX3668,strength,edge crush resistance,1,6.63137,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,F8Y,4CW,2A4,2JH,FJ2,L2J,JE5,SU2
++r_HD94PGF9CJ,qualification,QP-7092,p_7FN1NX3668,strength,edge crush resistance,2,6.75563,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,F8Y,4CW,2A4,2JH,FJ2,L2J,JE5,SU2
++r_HD94PGF9CK,qualification,QP-7092,p_7FN1NX3668,strength,edge crush resistance,3,6.87407,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,F8Y,4CW,2A4,2JH,FJ2,L2J,JE5,SU2
++r_HD94PGF9CM,qualification,QP-7092,p_7FN1NX3668,strength,edge crush resistance,4,7.11902,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,F8Y,4CW,2A4,2JH,FJ2,L2J,JE5,SU2
++r_HD94PGF9CN,qualification,QP-7092,p_7FN1NX3668,strength,edge crush resistance,5,7.23614,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,F8Y,4CW,2A4,2JH,FJ2,L2J,JE5,SU2
++r_HD94PGF9CP,qualification,QP-7092,p_7FN1NX366A,strength,edge crush resistance,0,6.87635,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,K3K,P2E,2A4,2JH,FJ2,96Y,JE5,SU2
++r_HD94PGF9CQ,qualification,QP-7092,p_7FN1NX366A,strength,edge crush resistance,1,7.09046,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,K3K,P2E,2A4,2JH,FJ2,96Y,JE5,SU2
++r_HD94PGF9CR,qualification,QP-7092,p_7FN1NX366A,strength,edge crush resistance,2,7.22222,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,K3K,P2E,2A4,2JH,FJ2,96Y,JE5,SU2
++r_HD94PGF9CS,qualification,QP-7092,p_7FN1NX366A,strength,edge crush resistance,3,7.35098,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,K3K,P2E,2A4,2JH,FJ2,96Y,JE5,SU2
++r_HD94PGF9CT,qualification,QP-7092,p_7FN1NX366A,strength,edge crush resistance,4,6.61988,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,K3K,P2E,2A4,2JH,FJ2,96Y,JE5,SU2
++r_HD94PGF9CV,qualification,QP-7092,p_7FN1NX366A,strength,edge crush resistance,5,6.74657,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,K3K,P2E,2A4,2JH,FJ2,96Y,JE5,SU2
++r_HD94PGF9CW,qualification,QP-7092,p_7FN1NX366C,strength,edge crush resistance,0,5.83091,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,74N,XD8,2A4,2JH,FJ2,T6A,JE5,SU2
++r_HD94PGF9CX,qualification,QP-7092,p_7FN1NX366C,strength,edge crush resistance,1,5.95451,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,74N,XD8,2A4,2JH,FJ2,T6A,JE5,SU2
++r_HD94PGF9CY,qualification,QP-7092,p_7FN1NX366C,strength,edge crush resistance,2,6.08930,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,74N,XD8,2A4,2JH,FJ2,T6A,JE5,SU2
++r_HD94PGF9CZ,qualification,QP-7092,p_7FN1NX366C,strength,edge crush resistance,3,5.37251,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,74N,XD8,2A4,2JH,FJ2,T6A,JE5,SU2
++r_HD94PGF9D0,qualification,QP-7092,p_7FN1NX366C,strength,edge crush resistance,4,5.49164,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,74N,XD8,2A4,2JH,FJ2,T6A,JE5,SU2
++r_HD94PGF9D1,qualification,QP-7092,p_7FN1NX366C,strength,edge crush resistance,5,5.60093,kN/m,lab_b,lab_b,SQ8,5AC,P8G,7TW,74N,XD8,2A4,2JH,FJ2,T6A,JE5,SU2

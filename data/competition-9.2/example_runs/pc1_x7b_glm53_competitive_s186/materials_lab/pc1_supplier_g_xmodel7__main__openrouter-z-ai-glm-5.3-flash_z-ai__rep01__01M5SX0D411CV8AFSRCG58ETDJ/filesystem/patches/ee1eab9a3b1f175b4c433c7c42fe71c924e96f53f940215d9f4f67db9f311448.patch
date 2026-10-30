@@ -1,0 +1,7 @@
+--- 
++++ 
+@@ -0,0 +1,4 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++print(df.columns.tolist())
++print(df[df.prototype_id=='p_NME6R7Y1Q1'].to_string() if 'prototype_id' in df.columns else '')

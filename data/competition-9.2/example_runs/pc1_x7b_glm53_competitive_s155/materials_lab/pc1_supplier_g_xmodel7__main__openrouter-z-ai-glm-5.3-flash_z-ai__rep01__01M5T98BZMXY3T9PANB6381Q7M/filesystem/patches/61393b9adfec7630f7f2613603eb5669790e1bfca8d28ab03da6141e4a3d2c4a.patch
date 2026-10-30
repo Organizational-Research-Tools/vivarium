@@ -1,0 +1,9 @@
+--- 
++++ 
+@@ -515,3 +515,6 @@
+ r_GR56BWSGTA,qualification,QP-3589,p_TTDYP4QB2A,strength,edge crush resistance,3,7.23086,kN/m,lab_e,lab_c,,,,,,,,,,,,
+ r_GR56BWSGTB,qualification,QP-3589,p_TTDYP4QB2A,strength,edge crush resistance,4,7.17083,kN/m,lab_e,lab_c,,,,,,,,,,,,
+ r_GR56BWSGTC,qualification,QP-3589,p_TTDYP4QB2A,strength,edge crush resistance,5,7.19840,kN/m,lab_e,lab_c,,,,,,,,,,,,
++r_3094J58VSS,exploratory,QP-1454,p_5J4R9PGAKV,strength,edge crush resistance,,6.02315,kN/m,lab_e,lab_f,,,,,,,,,,,,
++r_3094J58VST,exploratory,QP-1454,p_5J4R9PGAKV,strength,edge crush resistance,,5.99270,kN/m,lab_e,lab_f,,,,,,,,,,,,
++r_3094J58VSV,exploratory,QP-1454,p_5J4R9PGAKV,strength,edge crush resistance,,6.01736,kN/m,lab_e,lab_f,,,,,,,,,,,,

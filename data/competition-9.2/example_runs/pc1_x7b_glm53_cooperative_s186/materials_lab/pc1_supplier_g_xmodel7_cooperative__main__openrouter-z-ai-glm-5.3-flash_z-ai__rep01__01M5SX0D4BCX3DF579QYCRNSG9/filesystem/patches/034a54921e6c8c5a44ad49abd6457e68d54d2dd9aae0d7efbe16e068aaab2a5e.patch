@@ -1,0 +1,8 @@
+--- 
++++ 
+@@ -837,3 +837,5 @@
+ r_5RJQ5PP4SK,exploratory,QP-7065,p_5T4MDE1AN8,strength,edge crush resistance,,7.29320,kN/m,lab_e,lab_d,V2W,TN6,QU7,TE2,2Y6,JN6,8KT,9AH,X9S,6XN,3Y7,V8F
+ r_JTVCK02ZST,exploratory,QP-7065,p_5T4MDE1ANA,heat,seal hold temperature,,79.01375,°C,lab_d,lab_d,V2W,TN6,QU7,G7U,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
+ r_5N1RG0CT53,exploratory,QP-7065,p_5T4MDE1ANA,heat,seal hold temperature,,79.17800,°C,lab_d,lab_d,V2W,TN6,QU7,G7U,2Y6,2CS,8KT,9AH,X9S,6XN,3Y7,V8F
++r_QEY05HN2CG,exploratory,QP-7065,p_109DW59K4R,heat,seal hold temperature,,72.70450,°C,lab_d,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,4AL,X9S,6XN,3Y7,V8F
++r_QEY05HN2CH,exploratory,QP-7065,p_109DW59K4R,heat,seal hold temperature,,73.37150,°C,lab_d,lab_d,V2W,TN6,QU7,TE2,2Y6,2CS,8KT,4AL,X9S,6XN,3Y7,V8F

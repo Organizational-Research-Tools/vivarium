@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x.test.unique()); print(x.project.unique()); print(x[x.project=='QP-6879'].groupby(['prototype_id','test','kind']).value.agg(['mean','count']).round(5).to_string())

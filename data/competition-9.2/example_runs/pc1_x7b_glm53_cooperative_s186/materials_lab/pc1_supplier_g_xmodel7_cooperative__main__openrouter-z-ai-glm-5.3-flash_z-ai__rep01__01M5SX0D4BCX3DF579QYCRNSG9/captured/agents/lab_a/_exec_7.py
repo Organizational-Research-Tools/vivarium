@@ -1,0 +1,4 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+p=df[df.prototype_id.isin(['p_A2B8KB6SJC','p_A2B8KB6SJT']) & (df.kind=='qualification')]
+print(p[['record_id','test','specimen','value','measured_by','requester']].to_string())

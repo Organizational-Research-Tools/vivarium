@@ -1,0 +1,21 @@
+--- 
++++ 
+@@ -929,6 +929,18 @@
+ r_TCGXX0HKTW,qualification,QP-9259,p_9BVQ5SMM6C,water,wet strength retained,3,79.4504,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,SU2
+ r_TCGXX0HKTX,qualification,QP-9259,p_9BVQ5SMM6C,water,wet strength retained,4,79.5380,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,SU2
+ r_TCGXX0HKTY,qualification,QP-9259,p_9BVQ5SMM6C,water,wet strength retained,5,78.7800,%,lab_c,lab_c,QG7,5AC,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,4ZD,SU2
++r_TSA9M56GS2,qualification,QP-9259,p_3KNEMDD3PR,strength,edge crush resistance,0,7.25372,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_TSA9M56GS3,qualification,QP-9259,p_3KNEMDD3PR,strength,edge crush resistance,1,7.19576,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_TSA9M56GS4,qualification,QP-9259,p_3KNEMDD3PR,strength,edge crush resistance,2,7.19738,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_TSA9M56GS5,qualification,QP-9259,p_3KNEMDD3PR,strength,edge crush resistance,3,7.21346,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_TSA9M56GS6,qualification,QP-9259,p_3KNEMDD3PR,strength,edge crush resistance,4,7.22792,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_TSA9M56GS7,qualification,QP-9259,p_3KNEMDD3PR,strength,edge crush resistance,5,7.23860,kN/m,lab_e,lab_e,,,,,,,,,,,,
++r_HEPZ4N2SEC,qualification,QP-9259,p_3KNEMDD3PR,heat,seal hold temperature,0,78.96550,°C,lab_a,lab_e,,,,,,,,,,,,
++r_HEPZ4N2SED,qualification,QP-9259,p_3KNEMDD3PR,heat,seal hold temperature,1,78.89375,°C,lab_a,lab_e,,,,,,,,,,,,
++r_HEPZ4N2SEE,qualification,QP-9259,p_3KNEMDD3PR,heat,seal hold temperature,2,78.52625,°C,lab_a,lab_e,,,,,,,,,,,,
++r_HEPZ4N2SEF,qualification,QP-9259,p_3KNEMDD3PR,heat,seal hold temperature,3,78.63000,°C,lab_a,lab_e,,,,,,,,,,,,
++r_HEPZ4N2SEG,qualification,QP-9259,p_3KNEMDD3PR,heat,seal hold temperature,4,78.71625,°C,lab_a,lab_e,,,,,,,,,,,,
++r_HEPZ4N2SEH,qualification,QP-9259,p_3KNEMDD3PR,heat,seal hold temperature,5,78.82525,°C,lab_a,lab_e,,,,,,,,,,,,
+ r_1TTVC2Z9BR,qualification,QP-9259,p_D696T2GG1E,water,wet strength retained,0,69.4052,%,lab_c,lab_f,QG7,5AC,P8G,QG6,74N,P2E,2A4,2JH,FJ2,UX3,YX4,SU2
+ r_1TTVC2Z9BS,qualification,QP-9259,p_D696T2GG1E,water,wet strength retained,1,69.7900,%,lab_c,lab_f,QG7,5AC,P8G,QG6,74N,P2E,2A4,2JH,FJ2,UX3,YX4,SU2
+ r_1TTVC2Z9BT,qualification,QP-9259,p_D696T2GG1E,water,wet strength retained,2,69.9492,%,lab_c,lab_f,QG7,5AC,P8G,QG6,74N,P2E,2A4,2JH,FJ2,UX3,YX4,SU2

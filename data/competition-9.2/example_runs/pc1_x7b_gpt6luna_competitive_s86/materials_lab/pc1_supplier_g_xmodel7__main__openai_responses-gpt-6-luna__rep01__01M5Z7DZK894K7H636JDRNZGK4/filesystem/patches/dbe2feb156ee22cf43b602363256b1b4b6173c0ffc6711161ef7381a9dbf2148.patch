@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++x=pd.read_csv('records.csv')
++for pid,g in x[x.project=='QP-8807'].groupby('prototype_id'):
++ print('\n',pid)
++ for inst,gg in g.groupby('instrument'):
++  for kind,kk in gg.groupby('kind'):
++   if kind=='qualification' and len(kk)==6: print(inst,kind,kk.value.mean(),kk.measured_by.iloc[0])
++   elif kind=='exploratory': print(inst,kind,kk.value.mean(),kk.measured_by.iloc[0],len(kk))

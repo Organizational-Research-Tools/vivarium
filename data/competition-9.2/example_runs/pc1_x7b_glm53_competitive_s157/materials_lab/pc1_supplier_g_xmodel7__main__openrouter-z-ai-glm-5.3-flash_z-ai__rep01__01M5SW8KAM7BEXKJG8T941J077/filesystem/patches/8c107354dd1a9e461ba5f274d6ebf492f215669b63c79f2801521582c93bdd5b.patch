@@ -1,0 +1,20 @@
+--- 
++++ 
+@@ -276,3 +276,17 @@
+ r_BEDAKVB7Z6,exploratory,QP-5066,p_0GD19TNGTN,water,wet strength retained,,59.5256,%,lab_c,lab_c,ZY6,LB3,93H,X2P,Q7S,5B8,8Q7,X9Z,G4B,WN7,34U,W5T
+ r_BEDAKVB7Z7,exploratory,QP-5066,p_E25YWQ46K1,water,wet strength retained,,42.1696,%,lab_c,lab_c,ZY6,LB3,Y9V,Y7L,Q7S,5B8,RF3,X9Z,G4B,WN7,34U,7MP
+ r_35WPQ8JR0D,exploratory,QP-5066,p_4GDGQG6XPF,heat,seal hold temperature,,77.22675,°C,lab_d,lab_c,ZY6,N2L,KX7,X2P,RB3,8P4,RF3,LR4,A7P,BX9,FA3,3DC
++r_MHVWWCP0ER,exploratory,QP-5066,p_4GDGQG6XPF,strength,edge crush resistance,,6.21239,kN/m,lab_e,lab_c,ZY6,N2L,KX7,X2P,RB3,8P4,RF3,LR4,A7P,BX9,FA3,3DC
++r_M79HNZN9BW,exploratory,QP-5066,p_4GDGQG6XPF,strength,edge crush resistance,,6.21938,kN/m,lab_e,lab_c,ZY6,N2L,KX7,X2P,RB3,8P4,RF3,LR4,A7P,BX9,FA3,3DC
++r_M79HNZN9BX,exploratory,QP-5066,p_4GDGQG6XPF,strength,edge crush resistance,,6.25721,kN/m,lab_e,lab_c,ZY6,N2L,KX7,X2P,RB3,8P4,RF3,LR4,A7P,BX9,FA3,3DC
++r_M79HNZN9BY,exploratory,QP-5066,p_4GDGQG6XPF,strength,edge crush resistance,,6.19751,kN/m,lab_e,lab_c,ZY6,N2L,KX7,X2P,RB3,8P4,RF3,LR4,A7P,BX9,FA3,3DC
++r_1M1XH553R5,exploratory,QP-5066,p_4GDGQG6XPF,strength,edge crush resistance,,6.15221,kN/m,lab_b,lab_c,ZY6,N2L,KX7,X2P,RB3,8P4,RF3,LR4,A7P,BX9,FA3,3DC
++r_1M1XH553R6,exploratory,QP-5066,p_4GDGQG6XPF,strength,edge crush resistance,,6.21731,kN/m,lab_b,lab_c,ZY6,N2L,KX7,X2P,RB3,8P4,RF3,LR4,A7P,BX9,FA3,3DC
++r_1M1XH553R7,exploratory,QP-5066,p_4GDGQG6XPF,strength,edge crush resistance,,6.26558,kN/m,lab_b,lab_c,ZY6,N2L,KX7,X2P,RB3,8P4,RF3,LR4,A7P,BX9,FA3,3DC
++r_1M1XH553R8,exploratory,QP-5066,p_4GDGQG6XPF,strength,edge crush resistance,,6.15629,kN/m,lab_b,lab_c,ZY6,N2L,KX7,X2P,RB3,8P4,RF3,LR4,A7P,BX9,FA3,3DC
++r_51D13SD4KC,exploratory,QP-5653,p_2NQTN03YPS,water,wet strength retained,,69.1764,%,lab_c,lab_e,,,,,,,,,,,,
++r_51D13SD4KD,exploratory,QP-5653,p_2NQTN03YPS,water,wet strength retained,,69.1332,%,lab_c,lab_e,,,,,,,,,,,,
++r_51D13SD4KE,exploratory,QP-5653,p_2NQTN03YPS,water,wet strength retained,,69.0676,%,lab_c,lab_e,,,,,,,,,,,,
++r_51D13SD4KF,exploratory,QP-5653,p_6NTE330ZS1,water,wet strength retained,,72.5264,%,lab_c,lab_e,,,,,,,,,,,,
++r_51D13SD4KG,exploratory,QP-5653,p_6NTE330ZS1,water,wet strength retained,,71.1168,%,lab_c,lab_e,,,,,,,,,,,,
++r_51D13SD4KH,exploratory,QP-5653,p_6NTE330ZS1,water,wet strength retained,,71.7356,%,lab_c,lab_e,,,,,,,,,,,,

@@ -1,0 +1,4 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+print(df.columns.tolist()); print(df['prototype_id'].nunique() if 'prototype_id' in df.columns else '')
+print(df[df['property']=='heat'].groupby('prototype_id')['value'].agg(['mean','count']).sort_values('mean',ascending=False).head(10))

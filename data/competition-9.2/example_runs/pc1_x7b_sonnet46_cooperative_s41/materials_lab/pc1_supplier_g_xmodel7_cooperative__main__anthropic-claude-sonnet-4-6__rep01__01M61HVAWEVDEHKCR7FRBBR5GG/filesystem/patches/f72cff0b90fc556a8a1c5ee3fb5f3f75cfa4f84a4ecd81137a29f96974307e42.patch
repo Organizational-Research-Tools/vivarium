@@ -1,0 +1,62 @@
+--- 
++++ 
+@@ -0,0 +1,59 @@
++
++# Summarize the key information
++modules = [
++    ("base sheet", ["JA8", "P2G", "DA9", "U8H"]),
++    ("secondary sheet", ["3HW", "GG7", "5BU", "YX8"]),  # GG7 flagged
++    ("binder system", ["8BB", "M2P", "NN7", "T9M"]),
++    ("additive package 1", ["5FE", "R5N", "57T", "QJ2"]),
++    ("additive package 2", ["6FA", "B3P", "S2J", "LD3"]),
++    ("additive package 3", ["L6C", "4PE", "QJ4", "44B"]),
++    ("process profile 1", ["4QB", "62D", "UP5", "WB3"]),
++    ("process profile 2", ["P8G", "C5Q", "VA8", "2BR"]),
++    ("process profile 3", ["N7N", "X9F", "H3F", "N4L"]),
++    ("surface treatment", ["ZW3", "5TZ", "7KL", "7TJ"]),
++    ("joint system", ["9FU", "57U", "DL8", "4GD"]),
++    ("conditioning step", ["YV2", "6JZ", "3N8", "G8Q"]),
++]
++
++thresholds = {
++    "heat": 77.50,   # °C, step = 0.25°C
++    "strength": 7.10,  # kN/m, step = 0.03 kN/m
++    "water": 78.0,   # %, step = 0.4%
++}
++
++projects = {
++    "PL-57": ["QP-6572", "QP-6843", "QP-4476"],
++    "PL-95": ["QP-7212", "QP-3473", "QP-8607"],
++    "PL-98": ["QP-3089", "QP-8265", "QP-7604"],
++}
++
++print("=== MODULES ===")
++for i, (name, variants) in enumerate(modules):
++    print(f"  {i+1}. {name}: {variants}")
++
++print("\n=== THRESHOLDS ===")
++for test, val in thresholds.items():
++    print(f"  {test}: >= {val}")
++
++print("\n=== PROJECTS ===")
++for pl, projs in projects.items():
++    print(f"  {pl}: {projs}")
++
++print("\n=== INTERACTIONS (strength-relevant) ===")
++interactions = [
++    ("conditioning step × base sheet × secondary sheet", ["strength"]),
++    ("additive package 3 × base sheet × process profile 3", ["heat", "strength", "water"]),
++    ("surface treatment × process profile 3 × additive package 2", ["strength"]),
++    ("surface treatment × binder system × process profile 2", ["heat", "strength", "water"]),
++    ("process profile 1 × additive package 2 × additive package 3", ["strength"]),
++    ("base sheet × conditioning step × joint system", ["heat", "strength", "water"]),
++]
++for interaction, tests in interactions:
++    print(f"  {interaction}: {tests}")
++
++print("\n=== STRATEGY ===")
++print("- Need 1 qualified project per product line (min 3 credits)")
++print("- I do STRENGTH; need heat from lab_a/lab_d; water from lab_c/lab_f")
++print("- Avoid GG7 (Association request) - but note it adds ~2 steps to all tests")
++print("- Start: create diverse prototypes for 1 project per product line")
++print("- Explore, then qualify best recipes")

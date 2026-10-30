@@ -1,0 +1,11 @@
+--- 
++++ 
+@@ -0,0 +1,8 @@
++import pandas as pd
++df=pd.read_csv('records.csv')
++e=df[(df['kind']=='exploratory')&(df['project'].isin(['QP-6820','QP-5653','QP-2236','QP-3068','QP-5066','QP-2347']))]
++g=e.groupby(['project','prototype_id','test'])['value'].agg(['mean','count']).reset_index()
++w=g[(g['test']=='wet strength retained')&(g['mean']>=79.0)]
++print(w.to_string())
++print(g[g['test']=='edge crush resistance'].sort_values('mean',ascending=False).head(12).to_string())
++print(g[g['test']=='seal hold temperature'].sort_values('mean',ascending=False).head(12).to_string())

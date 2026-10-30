@@ -1,0 +1,6 @@
+import pandas as pd
+d = pd.read_csv('records.csv')
+for p in ['QP-7006','QP-4152','QP-4757']:
+    s = d[d.project==p]
+    print('==',p)
+    print(s[['prototype_id','instrument','test','value','measured_by','base_sheet','binder_system','process_profile_2','joint_system','conditioning_step']].to_string())

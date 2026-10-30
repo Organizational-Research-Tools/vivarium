@@ -1,0 +1,2 @@
+import pandas as pd
+x=pd.read_csv('records.csv'); print(x[x.record_id.str.startswith(('r_ZFC','r_YZTF'))].to_string(index=False))

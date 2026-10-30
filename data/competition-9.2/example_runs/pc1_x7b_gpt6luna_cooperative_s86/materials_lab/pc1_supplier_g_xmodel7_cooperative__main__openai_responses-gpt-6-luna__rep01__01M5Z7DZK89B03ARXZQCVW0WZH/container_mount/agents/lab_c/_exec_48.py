@@ -1,0 +1,5 @@
+import pandas as pd
+r=pd.read_csv('records.csv')
+cols=[c for c in r.columns if c.startswith(('base_','secondary_','binder_','additive_','process_','surface_','joint_','conditioning_'))]
+for p in ['p_Z398MDW5ST','p_Z398MDW5SP','p_Z398MDW5SR','p_5WCK5KFXKY','p_5WCK5KFXM0']:
+ d=r[r.prototype_id.eq(p)].drop_duplicates('prototype_id'); print(p, d[cols].values.tolist())

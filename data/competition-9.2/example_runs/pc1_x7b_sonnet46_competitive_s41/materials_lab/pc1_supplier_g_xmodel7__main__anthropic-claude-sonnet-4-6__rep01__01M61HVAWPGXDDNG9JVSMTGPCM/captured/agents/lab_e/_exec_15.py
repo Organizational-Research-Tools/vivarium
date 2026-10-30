@@ -1,0 +1,16 @@
+
+import pandas as pd
+df = pd.read_csv('records.csv')
+# Find p_XV6JQRAVAV and p_XV6JQRAVAS
+mask = df['prototype_id'].isin(['p_XV6JQRAVAV', 'p_XV6JQRAVAS'])
+sub = df[mask][['prototype_id','project','instrument','value','module_01','module_02','module_03','module_04',
+                'module_05','module_06','module_07','module_08','module_09','module_10','module_11','module_12']].drop_duplicates()
+print(sub.to_string())
+print()
+# Also check new prototypes
+new_ids = ['p_8NVJHKV1KT','p_8NVJHKV1KW','p_8NVJHKV1KY','p_8NVJHKV1M0']
+print("\nNew prototypes modules:")
+mask2 = df['prototype_id'].isin(new_ids)
+sub2 = df[mask2][['prototype_id','module_01','module_02','module_03','module_04','module_05','module_06',
+                   'module_07','module_08','module_09','module_10','module_11','module_12']].drop_duplicates()
+print(sub2.to_string())

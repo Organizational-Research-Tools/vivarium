@@ -1,0 +1,5 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+q=df[(df.kind=='qualification')&(df.prototype_id=='p_J6ANSK2QP0')]
+print(q[['record_id','test','specimen','value','measured_by']].sort_values(['test','specimen']).to_string())
+for t,g in q.groupby('test'): print(t, g.value.mean().round(3))

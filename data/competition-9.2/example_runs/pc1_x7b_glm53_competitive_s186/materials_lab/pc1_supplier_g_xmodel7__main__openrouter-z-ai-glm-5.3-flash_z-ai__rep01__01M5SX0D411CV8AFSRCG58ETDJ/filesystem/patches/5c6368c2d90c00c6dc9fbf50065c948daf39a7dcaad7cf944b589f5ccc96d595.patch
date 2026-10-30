@@ -1,0 +1,12 @@
+--- 
++++ 
+@@ -682,3 +682,9 @@
+ r_FHQNVX0KBS,exploratory,QP-5993,p_9T7PGPYM54,strength,edge crush resistance,,7.25570,kN/m,lab_b,lab_f,,,,,,,,,,,,
+ r_MCAZN314AH,exploratory,QP-5993,p_9T7PGPYM54,strength,edge crush resistance,,7.28228,kN/m,lab_b,lab_f,,,,,,,,,,,,
+ r_VF75CP6E6E,exploratory,QP-5993,p_9T7PGPYM54,strength,edge crush resistance,,7.25177,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_G1E37527JZ,qualification,QP-5993,p_9T7PGPYM54,strength,edge crush resistance,0,7.31783,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_G1E37527K0,qualification,QP-5993,p_9T7PGPYM54,strength,edge crush resistance,1,7.32632,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_G1E37527K1,qualification,QP-5993,p_9T7PGPYM54,strength,edge crush resistance,2,7.28333,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_G1E37527K2,qualification,QP-5993,p_9T7PGPYM54,strength,edge crush resistance,3,7.27748,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_G1E37527K3,qualification,QP-5993,p_9T7PGPYM54,strength,edge crush resistance,4,7.29386,kN/m,lab_b,lab_f,,,,,,,,,,,,
++r_G1E37527K4,qualification,QP-5993,p_9T7PGPYM54,strength,edge crush resistance,5,7.29998,kN/m,lab_b,lab_f,,,,,,,,,,,,

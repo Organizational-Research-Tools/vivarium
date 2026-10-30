@@ -1,0 +1,18 @@
+import pandas as pd
+df=pd.read_csv('records.csv')
+# aggregate exploratory means per prototype with full recipe known
+rec=[]
+for p,d in df.dropna(subset=['base_sheet']).groupby('prototype_id'):
+    r={'proto':p,'project':d.project.iloc[0],'req':d.requester.iloc[0]}
+    for t,k in [('seal hold temperature','heat'),('edge crush resistance','str'),('wet strength retained','water')]:
+        x=d[d.test==t].value
+        r[k]=round(x.mean(),2) if len(x) else None
+    mods=['base_sheet','secondary_sheet','binder_system','additive_package_1','additive_package_2','additive_package_3','process_profile_1','process_profile_2','process_profile_3','surface_treatment','joint_system','conditioning_step']
+    r['recipe']=tuple(d[mods].iloc[0]) if d[mods].notna().all().all() else None
+    rec.append(r)
+R=pd.DataFrame(rec)
+pd.set_option('display.width',260)
+# QP-1454/1466/6489/2342 are PL-36/64 projects with many recipes; find near-qualifiers
+for proj in ['QP-1454','QP-1466','QP-6489','QP-2342','QP-8350','QP-1826','QP-3589','QP-4503']:
+    s=R[(R.project==proj)&R.water.notna()&(R.water>=78.0)].sort_values('water',ascending=False)
+    print(proj); print(s[['proto','heat','str','water','req','recipe']].head(8).to_string()); print()

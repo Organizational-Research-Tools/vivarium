@@ -1,0 +1,10 @@
+--- 
++++ 
+@@ -565,3 +565,7 @@
+ r_CZW2R35Z4F,exploratory,QP-2342,p_9JS2853ESQ,water,wet strength retained,,80.8128,%,lab_f,lab_b,,,,,,,,,,,,
+ r_CZW2R35Z4G,exploratory,QP-2342,p_9JS2853ES3,water,wet strength retained,,78.9988,%,lab_f,lab_b,,,,,,,,,,,,
+ r_CZW2R35Z4H,exploratory,QP-2342,p_9JS2853ES3,water,wet strength retained,,79.3468,%,lab_f,lab_b,,,,,,,,,,,,
++r_02H2D6300S,exploratory,QP-1454,p_2XSDC22S4G,water,wet strength retained,,68.9464,%,lab_f,lab_f,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,7PP,LW5
++r_02H2D6300T,exploratory,QP-1454,p_2XSDC22S4G,water,wet strength retained,,69.4884,%,lab_f,lab_f,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,7PP,LW5
++r_02H2D6300V,exploratory,QP-1454,p_2XSDC22S4J,water,wet strength retained,,79.0336,%,lab_f,lab_f,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4
++r_02H2D6300W,exploratory,QP-1454,p_2XSDC22S4J,water,wet strength retained,,79.7048,%,lab_f,lab_f,73S,3S7,E5L,V5J,NS4,S3J,3RB,GL8,49R,RQ5,8K5,UZ4

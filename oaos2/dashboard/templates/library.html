@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% from "_chip.html" import help, gh, howto %}
+{% block title %}library — oaos2{% endblock %}
+{% block content %}
+
+
+<h1 style="font-size:18px; margin:0.5rem 0 0.25rem">Library — config as data</h1>
+{% call howto() %}
+  <p>Each card summarizes settings read by the platform loaders. The ignored-key list covers top-level experiment and organization keys and role keys; it is not a complete audit of nested settings or runtime enforcement. A loaded field can still describe an unimplemented control. Consult the limits document for capability status.</p>
+  <p><strong>Differs from the base in.</strong> Every organization or role field whose loaded value differs from the family's base preset; blank means identical to the base as the loaders read it.</p>
+  <p><strong>Contract profiles.</strong> The deliverable structures this task supports: e.g. single_results (one agent submits), orchestrated (analyst reports feed an orchestrator), deliberated (committee agrees on an interpretation first).</p>
+{% endcall %}
+
+{% macro factor_value(v) -%}
+  {%- if v is mapping and v.get("name") %}{{ v.get("name") }}{% elif v is mapping %}{{ v|tojson }}{% else %}{{ v }}{% endif -%}
+{%- endmacro %}
+<div class="card">
+  <h2>Experiments ({{ lib.experiments|length }})</h2>
+  <p class="dim" style="margin:0 0 0.4rem">One row per design; open a row for its factors. Cells = one run setting per combination of factor values, before replications.</p>
+  <div style="overflow-x:auto"><table>
+    <thead><tr><th>design</th><th>{{ gh("task pack") }}</th><th>{{ gh("mode") }}</th><th class="num">{{ help("cells", "The number of factor-value combinations the design expands to, before replications") }}</th><th class="num">{{ gh("replications") }}</th><th>{{ gh("parity regime") }}</th><th></th></tr></thead>
+    <tbody>
+    {% for e in lib.experiments %}
+      {% if e.error %}
+      <tr><td><code>{{ e.name }}</code></td><td colspan="5" class="flag">loader error: {{ e.error }}</td><td><a href="/library/edit?f={{ e.path }}">edit</a></td></tr>
+      {% else %}
+      {% set ns = namespace(cells=1) %}{% for k, v in e.resolved.factors.items() %}{% set ns.cells = ns.cells * (v|length if v else 1) %}{% endfor %}
+      <tr>
+        <td><details><summary><code>{{ e.name }}</code></summary>
+          <dl class="kv" style="margin-top:0.3rem">
+            {% for k, v in e.resolved.factors.items() %}<dt><code>{{ k }}</code></dt><dd>{% for x in v %}{{ factor_value(x) }}{% if not loop.last %}, {% endif %}{% endfor %}</dd>{% endfor %}
+            {% if e.resolved.preregistration_ref %}<dt>prereg</dt><dd><code>{{ e.resolved.preregistration_ref }}</code></dd>{% endif %}
+            {% if e.ignored_keys %}<dt class="flag">{{ gh("ignored keys") }}</dt><dd class="flag">{{ e.ignored_keys|join(", ") }}</dd>{% endif %}
+          </dl></details></td>
+        <td>{{ e.resolved.task_pack }}</td><td>{{ e.resolved.mode }}</td>
+        <td class="num">{{ ns.cells }}</td><td class="num">{{ e.resolved.replications }}</td>
+        <td>{{ e.resolved.parity_policy.basis }} · {{ e.resolved.parity_policy.regime }}{% if e.resolved.parity_policy.cap_usd is not none %} · {{ e.resolved.parity_policy.cap_usd|usd }}{% endif %}{% if e.resolved.parity_policy.cap_tokens is not none %} · {{ e.resolved.parity_policy.cap_tokens }} tok{% endif %}</td>
+        <td><a href="/library/edit?f={{ e.path }}">edit</a></td>
+      </tr>
+      {% endif %}
+    {% endfor %}
+    </tbody>
+  </table></div>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h2>Organizations ({{ lib.organizations|length }} presets in {{ families|length }} families)</h2>
+    <p class="dim" style="margin:0 0 0.4rem">Presets that declare the same roles are one family: the shortest name is the base, and each variant is described by what it changes against the base. Same shape is a reading aid, not a claim that the variants are comparable conditions.</p>
+    {% for f in families %}
+    <details style="margin:0.3rem 0; padding-bottom:0.3rem; border-bottom:1px solid var(--hairline)">
+      <summary><strong>{{ f.label }}</strong> <span class="dim">· {{ f.members|length }} preset{{ "s" if f.members|length != 1 }}{% if f.roles %} · {{ f.n_agents }} agent(s) · roles {{ f.roles|join(", ") }}{% endif %}</span></summary>
+      <table style="margin-top:0.3rem">
+        <thead><tr><th>preset</th><th>differs from the base in</th><th></th></tr></thead>
+        <tbody>
+        {% for o in f.members %}
+        <tr>
+          <td><code>{{ o.name }}</code>{% if o.is_base %} <span class="dim">· base</span>{% endif %}{% if o.error %} <span class="flag">loader error: {{ o.error }}</span>{% endif %}</td>
+          <td>{% if o.is_base %}<span class="dim">—</span>{% elif o.diffs %}{% for d in o.diffs %}<div><code>{{ d }}</code></div>{% endfor %}{% elif not o.error %}<span class="dim">identical to the base in every loaded field</span>{% endif %}</td>
+          <td style="white-space:nowrap"><a href="/library/edit?f={{ o.path }}">edit</a></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% set base = (f.members|selectattr("is_base")|list|first) %}
+      {% if base and base.resolved %}
+      <details style="margin:0.3rem 0 0 1rem"><summary class="dim">the base preset in full</summary>
+        <div class="dim">{{ gh("scheduler") }} {{ base.resolved.scheduler }} · {{ gh("committer binding", "committer") }} {{ base.resolved.committer_binding }}{% if base.resolved.live_coordination %} · {{ gh("live coordination", "live_coordination") }} {{ base.resolved.live_coordination }}{% endif %}</div>
+        {% if base.resolved.tools is not none %}<div class="dim">organization tool ceiling: {{ base.resolved.tools|join(", ") }}</div>{% endif %}
+        {% if base.resolved.topology %}<div class="dim">declared topology: {% for c in base.resolved.topology %}<code>{{ c.from_role }}→{{ c.to_role }}</code> [{{ c.kinds|join(",") }}]{% if not loop.last %}; {% endif %}{% endfor %}</div>{% endif %}
+        {% for r in base.resolved.roles %}
+        <div style="padding-left:1rem">— <code>{{ r.role_id }}</code> ×{{ r.plays|length }} · {{ gh("attention") }} {{ r.attention }}{% if r.tools %} · tools {{ r.tools|join(", ") }}{% endif %}{% if r.context_budget_tokens %} · {{ gh("context budget", "ctx") }} {{ r.context_budget_tokens }}{% endif %}{% if r.max_calls_per_slot %} · {{ gh("slot ceiling") }} {{ r.max_calls_per_slot }}{% endif %}{% if r.model_ref %} · model {{ r.model_ref }}{% endif %}</div>
+        {% if r.comm_kinds or r.out_of_scope_areas or r.decision_rights or r.packet_scopes %}<div class="dim" style="padding-left:2rem">{% if r.comm_kinds %}sends {{ r.comm_kinds|join(", ") }}{% endif %}{% if r.packet_scopes %} · additional notice scopes: {{ r.packet_scopes|join(", ") }}{% endif %}{% if r.out_of_scope_areas %} · out of scope {{ r.out_of_scope_areas|join(", ") }}{% endif %}{% if r.decision_rights %} · rights {{ r.decision_rights }}{% endif %}</div>{% endif %}
+        {% endfor %}
+        {% if base.ignored_keys %}<div class="flag">{{ gh("ignored keys") }} (outside the listed loader fields): {{ base.ignored_keys|join(", ") }}</div>{% endif %}
+      </details>
+      {% endif %}
+    </details>
+    {% endfor %}
+  </div>
+
+  <div class="card">
+    <h2>Task packs</h2>
+    {% for t in lib.tasks %}
+    <div style="margin:0.5rem 0; padding-bottom:0.5rem; border-bottom:1px solid var(--hairline)">
+      <strong><code>{{ t.name }}</code></strong> · <a href="/library/edit?f={{ t.path }}">edit manifest</a>
+      {% if t.error %}<div class="flag">loader error: {{ t.error }}</div>
+      {% else %}
+      <dl class="kv" style="margin-top:0.3rem">
+        <dt>{{ gh("evaluators") }}</dt><dd>{{ t.resolved.evaluators|join(", ") }}</dd>
+        <dt>{{ gh("tiers") }}</dt><dd>{{ t.resolved.tiers|join(", ") or "—" }}</dd>
+        <dt>contract profiles</dt><dd>{{ t.resolved.profiles|join(", ") or "—" }}</dd>
+        {% if t.resolved.clock %}
+        <dt>{{ gh("logical clock") }}</dt><dd>{{ t.resolved.clock.rounds_total }} days · {{ t.resolved.clock.calls_per_day }} calls/role/day · megabatch {{ t.resolved.clock.megabatch }} · profiles {{ t.resolved.clock.profiles|join(", ") }}</dd>
+        <dt>{{ gh("schedule variant") }}s</dt><dd>{{ t.resolved.schedule_variants|join(", ") or "canonical only" }}</dd>
+        {% endif %}
+        {% if t.resolved.environment_driver %}<dt>environment driver</dt><dd><code>{{ t.resolved.environment_driver }}</code> · tiers {{ t.resolved.schedule_tiers|join(", ") }}</dd>{% endif %}
+        {% if t.resolved.offline_solver %}<dt>offline solver</dt><dd><code>{{ t.resolved.offline_solver }}</code></dd>{% endif %}
+      </dl>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

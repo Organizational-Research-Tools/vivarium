@@ -1,0 +1,18 @@
+--- 
++++ 
+@@ -820,3 +820,15 @@
+ r_WFXFAXB6CP,qualification,QP-5174,p_JP6EPY2552,heat,seal hold temperature,3,75.42600,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
+ r_WFXFAXB6CQ,qualification,QP-5174,p_JP6EPY2552,heat,seal hold temperature,4,76.47475,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
+ r_WFXFAXB6CR,qualification,QP-5174,p_JP6EPY2552,heat,seal hold temperature,5,78.37575,°C,lab_a,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_VV3845KP4S,qualification,QP-5174,p_JP6EPY2552,water,wet strength retained,0,69.8616,%,lab_c,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_VV3845KP4T,qualification,QP-5174,p_JP6EPY2552,water,wet strength retained,1,71.4624,%,lab_c,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_VV3845KP4V,qualification,QP-5174,p_JP6EPY2552,water,wet strength retained,2,72.9436,%,lab_c,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_VV3845KP4W,qualification,QP-5174,p_JP6EPY2552,water,wet strength retained,3,76.2912,%,lab_c,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_VV3845KP4X,qualification,QP-5174,p_JP6EPY2552,water,wet strength retained,4,77.8628,%,lab_c,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_VV3845KP4Y,qualification,QP-5174,p_JP6EPY2552,water,wet strength retained,5,79.5000,%,lab_c,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_XPTHNY1F3T,qualification,QP-5174,p_JP6EPY2552,strength,edge crush resistance,0,7.27664,kN/m,lab_e,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_XPTHNY1F3V,qualification,QP-5174,p_JP6EPY2552,strength,edge crush resistance,1,6.53459,kN/m,lab_e,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_XPTHNY1F3W,qualification,QP-5174,p_JP6EPY2552,strength,edge crush resistance,2,6.67241,kN/m,lab_e,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_XPTHNY1F3X,qualification,QP-5174,p_JP6EPY2552,strength,edge crush resistance,3,6.79310,kN/m,lab_e,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_XPTHNY1F3Y,qualification,QP-5174,p_JP6EPY2552,strength,edge crush resistance,4,7.03451,kN/m,lab_e,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
++r_XPTHNY1F3Z,qualification,QP-5174,p_JP6EPY2552,strength,edge crush resistance,5,7.14287,kN/m,lab_e,lab_a,QG7,RK7,P8G,QG6,K3K,P2E,2A4,2JH,FJ2,UX3,YX4,YT2
