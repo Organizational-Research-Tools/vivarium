@@ -1,0 +1,975 @@
+{
+ "M000": {
+  "run": "pc1_x7b_glm53_competitive_s104",
+  "lab": "lab_e",
+  "seq": 14651,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M001": {
+  "run": "pc1_x7b_glm53_competitive_s81",
+  "lab": "lab_a",
+  "seq": 15340,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M002": {
+  "run": "pc1_x7b_glm53_cooperative_s192",
+  "lab": "lab_c",
+  "seq": 16472,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M003": {
+  "run": "pc1_x7b_glm53_competitive_s197",
+  "lab": "lab_b",
+  "seq": 18126,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M004": {
+  "run": "pc1_x7b_glm53_cooperative_s218",
+  "lab": "lab_c",
+  "seq": 20795,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M005": {
+  "run": "pc1_x7b_glm53_competitive_s193",
+  "lab": "lab_f",
+  "seq": 15204,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M006": {
+  "run": "pc1_x7b_glm53_cooperative_s220",
+  "lab": "lab_d",
+  "seq": 15301,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M007": {
+  "run": "pc1_x7b_glm53_cooperative_s157",
+  "lab": "lab_b",
+  "seq": 10582,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M008": {
+  "run": "pc1_x7b_glm53_cooperative_s177",
+  "lab": "lab_d",
+  "seq": 11143,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M009": {
+  "run": "pc1_x7b_glm53_cooperative_s223",
+  "lab": "lab_b",
+  "seq": 15964,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M010": {
+  "run": "pc1_x7b_glm53_cooperative_s157",
+  "lab": "lab_d",
+  "seq": 10237,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M011": {
+  "run": "pc1_x7b_glm53_competitive_s93",
+  "lab": "lab_b",
+  "seq": 14382,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M012": {
+  "run": "pc1_x7b_glm53_cooperative_s218",
+  "lab": "lab_a",
+  "seq": 20622,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M013": {
+  "run": "pc1_x7b_glm53_competitive_s93",
+  "lab": "lab_c",
+  "seq": 14252,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M014": {
+  "run": "pc1_x7b_glm53_competitive_s157",
+  "lab": "lab_c",
+  "seq": 12918,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M015": {
+  "run": "pc1_x7b_glm53_competitive_s215_b",
+  "lab": "lab_b",
+  "seq": 13808,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M016": {
+  "run": "pc1_x7b_glm53_cooperative_s223",
+  "lab": "lab_e",
+  "seq": 14094,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M017": {
+  "run": "pc1_x7b_glm53_competitive_s81",
+  "lab": "lab_e",
+  "seq": 15324,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M018": {
+  "run": "pc1_x7b_glm53_competitive_s124",
+  "lab": "lab_f",
+  "seq": 9351,
+  "arm": "competitive",
+  "kind": "decided before others filed"
+ },
+ "M019": {
+  "run": "pc1_x7b_glm53_competitive_s107",
+  "lab": "lab_b",
+  "seq": 14609,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M020": {
+  "run": "pc1_x7b_glm53_cooperative_s223",
+  "lab": "lab_a",
+  "seq": 14348,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M021": {
+  "run": "pc1_x7b_glm53_competitive_s199",
+  "lab": "lab_f",
+  "seq": 14474,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M022": {
+  "run": "pc1_x7b_glm53_cooperative_s63",
+  "lab": "lab_f",
+  "seq": 13595,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M023": {
+  "run": "pc1_x7b_glm53_competitive_s170",
+  "lab": "lab_c",
+  "seq": 14425,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M024": {
+  "run": "pc1_x7b_glm53_competitive_s93",
+  "lab": "lab_d",
+  "seq": 15261,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M025": {
+  "run": "pc1_x7b_glm53_cooperative_s157",
+  "lab": "lab_c",
+  "seq": 10145,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M026": {
+  "run": "pc1_x7b_glm53_competitive_s80",
+  "lab": "lab_f",
+  "seq": 18274,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M027": {
+  "run": "pc1_x7b_glm53_cooperative_s63",
+  "lab": "lab_e",
+  "seq": 13610,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M028": {
+  "run": "pc1_x7b_glm53_competitive_s199",
+  "lab": "lab_b",
+  "seq": 15014,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M029": {
+  "run": "pc1_x7b_glm53_competitive_s80",
+  "lab": "lab_d",
+  "seq": 16556,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M030": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "lab": "lab_f",
+  "seq": 10063,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M031": {
+  "run": "pc1_x7b_glm53_competitive_s93",
+  "lab": "lab_a",
+  "seq": 13955,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M032": {
+  "run": "pc1_x7b_glm53_cooperative_s133",
+  "lab": "lab_f",
+  "seq": 10664,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M033": {
+  "run": "pc1_x7b_glm53_cooperative_s142",
+  "lab": "lab_b",
+  "seq": 12938,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M034": {
+  "run": "pc1_x7b_glm53_cooperative_s63",
+  "lab": "lab_c",
+  "seq": 13631,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M035": {
+  "run": "pc1_x7b_glm53_cooperative_s220",
+  "lab": "lab_a",
+  "seq": 15204,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M036": {
+  "run": "pc1_x7b_glm53_competitive_s104",
+  "lab": "lab_c",
+  "seq": 14110,
+  "arm": "competitive",
+  "kind": "decided before others filed"
+ },
+ "M037": {
+  "run": "pc1_x7b_glm53_competitive_s107",
+  "lab": "lab_d",
+  "seq": 15051,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M038": {
+  "run": "pc1_x7b_glm53_cooperative_s142",
+  "lab": "lab_e",
+  "seq": 13238,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M039": {
+  "run": "pc1_x7b_glm53_competitive_s80",
+  "lab": "lab_e",
+  "seq": 18037,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M040": {
+  "run": "pc1_x7b_glm53_cooperative_s220",
+  "lab": "lab_b",
+  "seq": 16195,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M041": {
+  "run": "pc1_x7b_glm53_competitive_s199",
+  "lab": "lab_e",
+  "seq": 14596,
+  "arm": "competitive",
+  "kind": "decided before others filed"
+ },
+ "M042": {
+  "run": "pc1_x7b_glm53_cooperative_s119",
+  "lab": "lab_e",
+  "seq": 14136,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M043": {
+  "run": "pc1_x7b_glm53_competitive_s170",
+  "lab": "lab_e",
+  "seq": 13890,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M044": {
+  "run": "pc1_x7b_glm53_competitive_s107",
+  "lab": "lab_a",
+  "seq": 14686,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M045": {
+  "run": "pc1_x7b_glm53_competitive_s193",
+  "lab": "lab_b",
+  "seq": 17199,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M046": {
+  "run": "pc1_x7b_glm53_competitive_s215_b",
+  "lab": "lab_c",
+  "seq": 11577,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M047": {
+  "run": "pc1_x7b_glm53_cooperative_s208",
+  "lab": "lab_b",
+  "seq": 9923,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M048": {
+  "run": "pc1_x7b_glm53_competitive_s115",
+  "lab": "lab_a",
+  "seq": 12486,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M049": {
+  "run": "pc1_x7b_glm53_cooperative_s63",
+  "lab": "lab_b",
+  "seq": 15356,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M050": {
+  "run": "pc1_x7b_glm53_competitive_s197",
+  "lab": "lab_d",
+  "seq": 15778,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M051": {
+  "run": "pc1_x7b_glm53_cooperative_s223",
+  "lab": "lab_d",
+  "seq": 16342,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M052": {
+  "run": "pc1_x7b_glm53_competitive_s185",
+  "lab": "lab_a",
+  "seq": 16719,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M053": {
+  "run": "pc1_x7b_glm53_cooperative_s218",
+  "lab": "lab_b",
+  "seq": 20632,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M054": {
+  "run": "pc1_x7b_glm53_cooperative_s192",
+  "lab": "lab_b",
+  "seq": 14721,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M055": {
+  "run": "pc1_x7b_glm53_competitive_s123",
+  "lab": "lab_f",
+  "seq": 13067,
+  "arm": "competitive",
+  "kind": "decided before others filed"
+ },
+ "M056": {
+  "run": "pc1_x7b_glm53_cooperative_s218",
+  "lab": "lab_d",
+  "seq": 23068,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M057": {
+  "run": "pc1_x7b_glm53_cooperative_s177",
+  "lab": "lab_e",
+  "seq": 11510,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M058": {
+  "run": "pc1_x7b_glm53_cooperative_s220",
+  "lab": "lab_f",
+  "seq": 15650,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M059": {
+  "run": "pc1_x7b_glm53_cooperative_s146",
+  "lab": "lab_e",
+  "seq": 15957,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M060": {
+  "run": "pc1_x7b_glm53_cooperative_s192",
+  "lab": "lab_f",
+  "seq": 15432,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M061": {
+  "run": "pc1_x7b_glm53_competitive_s193",
+  "lab": "lab_a",
+  "seq": 15151,
+  "arm": "competitive",
+  "kind": "decided before others filed"
+ },
+ "M062": {
+  "run": "pc1_x7b_glm53_competitive_s193",
+  "lab": "lab_c",
+  "seq": 15106,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M063": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "lab": "lab_d",
+  "seq": 10131,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M064": {
+  "run": "pc1_x7b_glm53_cooperative_s142",
+  "lab": "lab_f",
+  "seq": 13087,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M065": {
+  "run": "pc1_x7b_glm53_cooperative_s223",
+  "lab": "lab_f",
+  "seq": 14337,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M066": {
+  "run": "pc1_x7b_glm53_competitive_s104",
+  "lab": "lab_d",
+  "seq": 14181,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M067": {
+  "run": "pc1_x7b_glm53_competitive_s123",
+  "lab": "lab_c",
+  "seq": 13156,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M068": {
+  "run": "pc1_x7b_glm53_competitive_s185",
+  "lab": "lab_f",
+  "seq": 16597,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M069": {
+  "run": "pc1_x7b_glm53_competitive_s80",
+  "lab": "lab_b",
+  "seq": 18368,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M070": {
+  "run": "pc1_x7b_glm53_competitive_s170",
+  "lab": "lab_a",
+  "seq": 13858,
+  "arm": "competitive",
+  "kind": "decided before others filed"
+ },
+ "M071": {
+  "run": "pc1_x7b_glm53_cooperative_s223",
+  "lab": "lab_c",
+  "seq": 14251,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M072": {
+  "run": "pc1_x7b_glm53_competitive_s170",
+  "lab": "lab_f",
+  "seq": 14831,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M073": {
+  "run": "pc1_x7b_glm53_cooperative_s142",
+  "lab": "lab_c",
+  "seq": 13647,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M074": {
+  "run": "pc1_x7b_glm53_competitive_s124",
+  "lab": "lab_d",
+  "seq": 12791,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M075": {
+  "run": "pc1_x7b_glm53_competitive_s124",
+  "lab": "lab_e",
+  "seq": 11376,
+  "arm": "competitive",
+  "kind": "decided before others filed"
+ },
+ "M076": {
+  "run": "pc1_x7b_glm53_competitive_s170",
+  "lab": "lab_d",
+  "seq": 14389,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M077": {
+  "run": "pc1_x7b_glm53_cooperative_s192",
+  "lab": "lab_d",
+  "seq": 14616,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M078": {
+  "run": "pc1_x7b_glm53_cooperative_s142",
+  "lab": "lab_d",
+  "seq": 15068,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M079": {
+  "run": "pc1_x7b_glm53_cooperative_s208",
+  "lab": "lab_d",
+  "seq": 9789,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M080": {
+  "run": "pc1_x7b_glm53_competitive_s193",
+  "lab": "lab_e",
+  "seq": 16623,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M081": {
+  "run": "pc1_x7b_glm53_competitive_s123",
+  "lab": "lab_e",
+  "seq": 13028,
+  "arm": "competitive",
+  "kind": "decided before others filed"
+ },
+ "M082": {
+  "run": "pc1_x7b_glm53_competitive_s215_b",
+  "lab": "lab_a",
+  "seq": 14163,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M083": {
+  "run": "pc1_x7b_glm53_cooperative_s192",
+  "lab": "lab_a",
+  "seq": 14832,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M084": {
+  "run": "pc1_x7b_glm53_cooperative_s208",
+  "lab": "lab_e",
+  "seq": 8204,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M085": {
+  "run": "pc1_x7b_glm53_competitive_s185",
+  "lab": "lab_c",
+  "seq": 19080,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M086": {
+  "run": "pc1_x7b_glm53_cooperative_s131",
+  "lab": "lab_b",
+  "seq": 1966,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M087": {
+  "run": "pc1_x7b_glm53_competitive_s81",
+  "lab": "lab_c",
+  "seq": 15581,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M088": {
+  "run": "pc1_x7b_glm53_competitive_s124",
+  "lab": "lab_c",
+  "seq": 9526,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M089": {
+  "run": "pc1_x7b_glm53_cooperative_s157",
+  "lab": "lab_a",
+  "seq": 10247,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M090": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "lab": "lab_e",
+  "seq": 9500,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M091": {
+  "run": "pc1_x7b_glm53_cooperative_s133",
+  "lab": "lab_e",
+  "seq": 1263,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M092": {
+  "run": "pc1_x7b_glm53_competitive_s201",
+  "lab": "lab_b",
+  "seq": 8820,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M093": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "lab": "lab_a",
+  "seq": 9785,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M094": {
+  "run": "pc1_x7b_glm53_cooperative_s192",
+  "lab": "lab_e",
+  "seq": 14882,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M095": {
+  "run": "pc1_x7b_glm53_competitive_s215_b",
+  "lab": "lab_e",
+  "seq": 11540,
+  "arm": "competitive",
+  "kind": "decided before others filed"
+ },
+ "M096": {
+  "run": "pc1_x7b_glm53_competitive_s197",
+  "lab": "lab_c",
+  "seq": 17587,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M097": {
+  "run": "pc1_x7b_glm53_competitive_s81",
+  "lab": "lab_b",
+  "seq": 15942,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M098": {
+  "run": "pc1_x7b_glm53_competitive_s51",
+  "lab": "lab_f",
+  "seq": 21621,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M099": {
+  "run": "pc1_x7b_glm53_cooperative_s55",
+  "lab": "lab_b",
+  "seq": 9403,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M100": {
+  "run": "pc1_x7b_glm53_competitive_s97",
+  "lab": "lab_e",
+  "seq": 8820,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M101": {
+  "run": "pc1_x7b_glm53_competitive_s165",
+  "lab": "lab_c",
+  "seq": 17852,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M102": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "lab": "lab_b",
+  "seq": 9433,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M103": {
+  "run": "pc1_x7b_glm53_competitive_s107",
+  "lab": "lab_e",
+  "seq": 14842,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M104": {
+  "run": "pc1_x7b_glm53_competitive_s123",
+  "lab": "lab_d",
+  "seq": 12918,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M105": {
+  "run": "pc1_x7b_glm53_competitive_s185",
+  "lab": "lab_e",
+  "seq": 17902,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M106": {
+  "run": "pc1_x7b_glm53_cooperative_s63",
+  "lab": "lab_d",
+  "seq": 13782,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M107": {
+  "run": "pc1_x7b_glm53_cooperative_s177",
+  "lab": "lab_f",
+  "seq": 11179,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M108": {
+  "run": "pc1_x7b_glm53_competitive_s199",
+  "lab": "lab_c",
+  "seq": 14522,
+  "arm": "competitive",
+  "kind": "decided before others filed"
+ },
+ "M109": {
+  "run": "pc1_x7b_glm53_cooperative_s142",
+  "lab": "lab_a",
+  "seq": 14931,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M110": {
+  "run": "pc1_x7b_glm53_competitive_s201",
+  "lab": "lab_a",
+  "seq": 8437,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M111": {
+  "run": "pc1_x7b_glm53_cooperative_s177",
+  "lab": "lab_a",
+  "seq": 11396,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M112": {
+  "run": "pc1_x7b_glm53_competitive_s170",
+  "lab": "lab_b",
+  "seq": 14215,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M113": {
+  "run": "pc1_x7b_glm53_competitive_s215_b",
+  "lab": "lab_f",
+  "seq": 11984,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M114": {
+  "run": "pc1_x7b_glm53_competitive_s84",
+  "lab": "lab_b",
+  "seq": 18747,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M115": {
+  "run": "pc1_x7b_glm53_cooperative_s218",
+  "lab": "lab_e",
+  "seq": 20676,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M116": {
+  "run": "pc1_x7b_glm53_cooperative_s63",
+  "lab": "lab_a",
+  "seq": 15228,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M117": {
+  "run": "pc1_x7b_glm53_competitive_s185",
+  "lab": "lab_b",
+  "seq": 15267,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M118": {
+  "run": "pc1_x7b_glm53_competitive_s193",
+  "lab": "lab_d",
+  "seq": 16826,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M119": {
+  "run": "pc1_x7b_glm53_competitive_s107",
+  "lab": "lab_f",
+  "seq": 13443,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M120": {
+  "run": "pc1_x7b_glm53_competitive_s93",
+  "lab": "lab_e",
+  "seq": 16447,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M121": {
+  "run": "pc1_x7b_glm53_cooperative_s220",
+  "lab": "lab_e",
+  "seq": 15257,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M122": {
+  "run": "pc1_x7b_glm53_cooperative_s157",
+  "lab": "lab_f",
+  "seq": 10086,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M123": {
+  "run": "pc1_x7b_glm53_cooperative_s208",
+  "lab": "lab_f",
+  "seq": 10277,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M124": {
+  "run": "pc1_x7b_glm53_competitive_s84",
+  "lab": "lab_f",
+  "seq": 16886,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M125": {
+  "run": "pc1_x7b_glm53_cooperative_s177",
+  "lab": "lab_b",
+  "seq": 11366,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M126": {
+  "run": "pc1_x7b_glm53_cooperative_s218",
+  "lab": "lab_f",
+  "seq": 20775,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M127": {
+  "run": "pc1_x7b_glm53_competitive_s180",
+  "lab": "lab_a",
+  "seq": 5954,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M128": {
+  "run": "pc1_x7b_glm53_competitive_s197",
+  "lab": "lab_f",
+  "seq": 19177,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M129": {
+  "run": "pc1_x7b_glm53_competitive_s215_b",
+  "lab": "lab_d",
+  "seq": 11599,
+  "arm": "competitive",
+  "kind": "decided before others filed"
+ },
+ "M130": {
+  "run": "pc1_x7b_glm53_cooperative_s220",
+  "lab": "lab_c",
+  "seq": 14679,
+  "arm": "cooperative",
+  "kind": "decided before others filed"
+ },
+ "M131": {
+  "run": "pc1_x7b_glm53_competitive_s52",
+  "lab": "lab_a",
+  "seq": 13166,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M132": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "lab": "lab_c",
+  "seq": 9320,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M133": {
+  "run": "pc1_x7b_glm53_competitive_s123",
+  "lab": "lab_b",
+  "seq": 15527,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ },
+ "M134": {
+  "run": "pc1_x7b_glm53_cooperative_s54",
+  "lab": "lab_e",
+  "seq": 15650,
+  "arm": "cooperative",
+  "kind": "first user"
+ },
+ "M135": {
+  "run": "pc1_x7b_glm53_competitive_s149",
+  "lab": "lab_d",
+  "seq": 12249,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M136": {
+  "run": "pc1_x7b_glm53_cooperative_s157",
+  "lab": "lab_e",
+  "seq": 10282,
+  "arm": "cooperative",
+  "kind": "after another lab filed"
+ },
+ "M137": {
+  "run": "pc1_x7b_glm53_competitive_s50",
+  "lab": "lab_c",
+  "seq": 1561,
+  "arm": "competitive",
+  "kind": "first user"
+ },
+ "M138": {
+  "run": "pc1_x7b_glm53_competitive_s93",
+  "lab": "lab_f",
+  "seq": 14427,
+  "arm": "competitive",
+  "kind": "after another lab filed"
+ }
+}

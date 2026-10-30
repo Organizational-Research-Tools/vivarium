@@ -1,0 +1,476 @@
+{
+ "L000": {
+  "run": "pc1_x7b_glm53_cooperative_s177",
+  "lab": "lab_e",
+  "seq": 11510,
+  "arm": "cooperative"
+ },
+ "L001": {
+  "run": "pc1_x7b_glm53_cooperative_s142",
+  "lab": "lab_d",
+  "seq": 15068,
+  "arm": "cooperative"
+ },
+ "L002": {
+  "run": "pc1_x7b_glm53_competitive_s93",
+  "lab": "lab_b",
+  "seq": 14382,
+  "arm": "competitive"
+ },
+ "L003": {
+  "run": "pc1_x7b_glm53_competitive_s107",
+  "lab": "lab_d",
+  "seq": 15051,
+  "arm": "competitive"
+ },
+ "L004": {
+  "run": "pc1_x7b_glm53_competitive_s93",
+  "lab": "lab_e",
+  "seq": 16447,
+  "arm": "competitive"
+ },
+ "L005": {
+  "run": "pc1_x7b_glm53_competitive_s81",
+  "lab": "lab_b",
+  "seq": 15942,
+  "arm": "competitive"
+ },
+ "L006": {
+  "run": "pc1_x7b_glm53_competitive_s80",
+  "lab": "lab_b",
+  "seq": 18368,
+  "arm": "competitive"
+ },
+ "L007": {
+  "run": "pc1_x7b_glm53_cooperative_s142",
+  "lab": "lab_e",
+  "seq": 13238,
+  "arm": "cooperative"
+ },
+ "L008": {
+  "run": "pc1_x7b_glm53_cooperative_s157",
+  "lab": "lab_a",
+  "seq": 10247,
+  "arm": "cooperative"
+ },
+ "L009": {
+  "run": "pc1_x7b_glm53_competitive_s197",
+  "lab": "lab_b",
+  "seq": 18126,
+  "arm": "competitive"
+ },
+ "L010": {
+  "run": "pc1_x7b_glm53_competitive_s107",
+  "lab": "lab_b",
+  "seq": 14609,
+  "arm": "competitive"
+ },
+ "L011": {
+  "run": "pc1_x7b_glm53_competitive_s197",
+  "lab": "lab_f",
+  "seq": 19177,
+  "arm": "competitive"
+ },
+ "L012": {
+  "run": "pc1_x7b_glm53_cooperative_s142",
+  "lab": "lab_c",
+  "seq": 13647,
+  "arm": "cooperative"
+ },
+ "L013": {
+  "run": "pc1_x7b_glm53_competitive_s84",
+  "lab": "lab_b",
+  "seq": 18747,
+  "arm": "competitive"
+ },
+ "L014": {
+  "run": "pc1_x7b_glm53_competitive_s107",
+  "lab": "lab_e",
+  "seq": 14842,
+  "arm": "competitive"
+ },
+ "L015": {
+  "run": "pc1_x7b_glm53_competitive_s170",
+  "lab": "lab_d",
+  "seq": 14389,
+  "arm": "competitive"
+ },
+ "L016": {
+  "run": "pc1_x7b_glm53_cooperative_s133",
+  "lab": "lab_f",
+  "seq": 10664,
+  "arm": "cooperative"
+ },
+ "L017": {
+  "run": "pc1_x7b_glm53_competitive_s199",
+  "lab": "lab_b",
+  "seq": 15014,
+  "arm": "competitive"
+ },
+ "L018": {
+  "run": "pc1_x7b_glm53_competitive_s170",
+  "lab": "lab_b",
+  "seq": 14215,
+  "arm": "competitive"
+ },
+ "L019": {
+  "run": "pc1_x7b_glm53_cooperative_s192",
+  "lab": "lab_a",
+  "seq": 14832,
+  "arm": "cooperative"
+ },
+ "L020": {
+  "run": "pc1_x7b_glm53_competitive_s107",
+  "lab": "lab_a",
+  "seq": 14686,
+  "arm": "competitive"
+ },
+ "L021": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "lab": "lab_c",
+  "seq": 9320,
+  "arm": "competitive"
+ },
+ "L022": {
+  "run": "pc1_x7b_glm53_cooperative_s63",
+  "lab": "lab_d",
+  "seq": 13782,
+  "arm": "cooperative"
+ },
+ "L023": {
+  "run": "pc1_x7b_glm53_competitive_s104",
+  "lab": "lab_e",
+  "seq": 14651,
+  "arm": "competitive"
+ },
+ "L024": {
+  "run": "pc1_x7b_glm53_cooperative_s177",
+  "lab": "lab_a",
+  "seq": 11396,
+  "arm": "cooperative"
+ },
+ "L025": {
+  "run": "pc1_x7b_glm53_competitive_s93",
+  "lab": "lab_c",
+  "seq": 14252,
+  "arm": "competitive"
+ },
+ "L026": {
+  "run": "pc1_x7b_glm53_cooperative_s192",
+  "lab": "lab_e",
+  "seq": 14882,
+  "arm": "cooperative"
+ },
+ "L027": {
+  "run": "pc1_x7b_glm53_cooperative_s192",
+  "lab": "lab_c",
+  "seq": 16472,
+  "arm": "cooperative"
+ },
+ "L028": {
+  "run": "pc1_x7b_glm53_competitive_s185",
+  "lab": "lab_e",
+  "seq": 17902,
+  "arm": "competitive"
+ },
+ "L029": {
+  "run": "pc1_x7b_glm53_competitive_s81",
+  "lab": "lab_a",
+  "seq": 15340,
+  "arm": "competitive"
+ },
+ "L030": {
+  "run": "pc1_x7b_glm53_cooperative_s220",
+  "lab": "lab_f",
+  "seq": 15650,
+  "arm": "cooperative"
+ },
+ "L031": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "lab": "lab_e",
+  "seq": 9500,
+  "arm": "competitive"
+ },
+ "L032": {
+  "run": "pc1_x7b_glm53_cooperative_s223",
+  "lab": "lab_d",
+  "seq": 16342,
+  "arm": "cooperative"
+ },
+ "L033": {
+  "run": "pc1_x7b_glm53_competitive_s170",
+  "lab": "lab_c",
+  "seq": 14425,
+  "arm": "competitive"
+ },
+ "L034": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "lab": "lab_a",
+  "seq": 9785,
+  "arm": "competitive"
+ },
+ "L035": {
+  "run": "pc1_x7b_glm53_cooperative_s208",
+  "lab": "lab_b",
+  "seq": 9923,
+  "arm": "cooperative"
+ },
+ "L036": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "lab": "lab_b",
+  "seq": 9433,
+  "arm": "competitive"
+ },
+ "L037": {
+  "run": "pc1_x7b_glm53_competitive_s185",
+  "lab": "lab_a",
+  "seq": 16719,
+  "arm": "competitive"
+ },
+ "L038": {
+  "run": "pc1_x7b_glm53_competitive_s81",
+  "lab": "lab_e",
+  "seq": 15324,
+  "arm": "competitive"
+ },
+ "L039": {
+  "run": "pc1_x7b_glm53_competitive_s193",
+  "lab": "lab_b",
+  "seq": 17199,
+  "arm": "competitive"
+ },
+ "L040": {
+  "run": "pc1_x7b_glm53_cooperative_s218",
+  "lab": "lab_d",
+  "seq": 23068,
+  "arm": "cooperative"
+ },
+ "L041": {
+  "run": "pc1_x7b_glm53_cooperative_s63",
+  "lab": "lab_b",
+  "seq": 15356,
+  "arm": "cooperative"
+ },
+ "L042": {
+  "run": "pc1_x7b_glm53_competitive_s124",
+  "lab": "lab_d",
+  "seq": 12791,
+  "arm": "competitive"
+ },
+ "L043": {
+  "run": "pc1_x7b_glm53_competitive_s215_b",
+  "lab": "lab_a",
+  "seq": 14163,
+  "arm": "competitive"
+ },
+ "L044": {
+  "run": "pc1_x7b_glm53_cooperative_s208",
+  "lab": "lab_d",
+  "seq": 9789,
+  "arm": "cooperative"
+ },
+ "L045": {
+  "run": "pc1_x7b_glm53_competitive_s93",
+  "lab": "lab_f",
+  "seq": 14427,
+  "arm": "competitive"
+ },
+ "L046": {
+  "run": "pc1_x7b_glm53_cooperative_s157",
+  "lab": "lab_d",
+  "seq": 10237,
+  "arm": "cooperative"
+ },
+ "L047": {
+  "run": "pc1_x7b_glm53_competitive_s201",
+  "lab": "lab_b",
+  "seq": 8820,
+  "arm": "competitive"
+ },
+ "L048": {
+  "run": "pc1_x7b_glm53_cooperative_s63",
+  "lab": "lab_a",
+  "seq": 15228,
+  "arm": "cooperative"
+ },
+ "L049": {
+  "run": "pc1_x7b_glm53_competitive_s180",
+  "lab": "lab_a",
+  "seq": 5954,
+  "arm": "competitive"
+ },
+ "L050": {
+  "run": "pc1_x7b_glm53_cooperative_s192",
+  "lab": "lab_f",
+  "seq": 15432,
+  "arm": "cooperative"
+ },
+ "L051": {
+  "run": "pc1_x7b_glm53_competitive_s81",
+  "lab": "lab_c",
+  "seq": 15581,
+  "arm": "competitive"
+ },
+ "L052": {
+  "run": "pc1_x7b_glm53_competitive_s193",
+  "lab": "lab_f",
+  "seq": 15204,
+  "arm": "competitive"
+ },
+ "L053": {
+  "run": "pc1_x7b_glm53_competitive_s123",
+  "lab": "lab_b",
+  "seq": 15527,
+  "arm": "competitive"
+ },
+ "L054": {
+  "run": "pc1_x7b_glm53_competitive_s185",
+  "lab": "lab_f",
+  "seq": 16597,
+  "arm": "competitive"
+ },
+ "L055": {
+  "run": "pc1_x7b_glm53_cooperative_s142",
+  "lab": "lab_a",
+  "seq": 14931,
+  "arm": "cooperative"
+ },
+ "L056": {
+  "run": "pc1_x7b_glm53_competitive_s123",
+  "lab": "lab_c",
+  "seq": 13156,
+  "arm": "competitive"
+ },
+ "L057": {
+  "run": "pc1_x7b_glm53_cooperative_s157",
+  "lab": "lab_e",
+  "seq": 10282,
+  "arm": "cooperative"
+ },
+ "L058": {
+  "run": "pc1_x7b_glm53_cooperative_s177",
+  "lab": "lab_b",
+  "seq": 11366,
+  "arm": "cooperative"
+ },
+ "L059": {
+  "run": "pc1_x7b_glm53_competitive_s80",
+  "lab": "lab_f",
+  "seq": 18274,
+  "arm": "competitive"
+ },
+ "L060": {
+  "run": "pc1_x7b_glm53_cooperative_s220",
+  "lab": "lab_b",
+  "seq": 16195,
+  "arm": "cooperative"
+ },
+ "L061": {
+  "run": "pc1_x7b_glm53_cooperative_s220",
+  "lab": "lab_e",
+  "seq": 15257,
+  "arm": "cooperative"
+ },
+ "L062": {
+  "run": "pc1_x7b_glm53_competitive_s185",
+  "lab": "lab_c",
+  "seq": 19080,
+  "arm": "competitive"
+ },
+ "L063": {
+  "run": "pc1_x7b_glm53_competitive_s193",
+  "lab": "lab_d",
+  "seq": 16826,
+  "arm": "competitive"
+ },
+ "L064": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "lab": "lab_f",
+  "seq": 10063,
+  "arm": "competitive"
+ },
+ "L065": {
+  "run": "pc1_x7b_glm53_cooperative_s220",
+  "lab": "lab_a",
+  "seq": 15204,
+  "arm": "cooperative"
+ },
+ "L066": {
+  "run": "pc1_x7b_glm53_competitive_s193",
+  "lab": "lab_e",
+  "seq": 16623,
+  "arm": "competitive"
+ },
+ "L067": {
+  "run": "pc1_x7b_glm53_competitive_s215_b",
+  "lab": "lab_b",
+  "seq": 13808,
+  "arm": "competitive"
+ },
+ "L068": {
+  "run": "pc1_x7b_glm53_competitive_s215_b",
+  "lab": "lab_f",
+  "seq": 11984,
+  "arm": "competitive"
+ },
+ "L069": {
+  "run": "pc1_x7b_glm53_competitive_s170",
+  "lab": "lab_f",
+  "seq": 14831,
+  "arm": "competitive"
+ },
+ "L070": {
+  "run": "pc1_x7b_glm53_cooperative_s157",
+  "lab": "lab_b",
+  "seq": 10582,
+  "arm": "cooperative"
+ },
+ "L071": {
+  "run": "pc1_x7b_glm53_cooperative_s223",
+  "lab": "lab_b",
+  "seq": 15964,
+  "arm": "cooperative"
+ },
+ "L072": {
+  "run": "pc1_x7b_glm53_competitive_s197",
+  "lab": "lab_c",
+  "seq": 17587,
+  "arm": "competitive"
+ },
+ "L073": {
+  "run": "pc1_x7b_glm53_competitive_s80",
+  "lab": "lab_e",
+  "seq": 18037,
+  "arm": "competitive"
+ },
+ "L074": {
+  "run": "pc1_x7b_glm53_cooperative_s157",
+  "lab": "lab_f",
+  "seq": 10086,
+  "arm": "cooperative"
+ },
+ "L075": {
+  "run": "pc1_x7b_glm53_competitive_s93",
+  "lab": "lab_d",
+  "seq": 15261,
+  "arm": "competitive"
+ },
+ "L076": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "lab": "lab_d",
+  "seq": 10131,
+  "arm": "competitive"
+ },
+ "L077": {
+  "run": "pc1_x7b_glm53_cooperative_s157",
+  "lab": "lab_c",
+  "seq": 10145,
+  "arm": "cooperative"
+ },
+ "L078": {
+  "run": "pc1_x7b_glm53_cooperative_s208",
+  "lab": "lab_f",
+  "seq": 10277,
+  "arm": "cooperative"
+ }
+}

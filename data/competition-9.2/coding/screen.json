@@ -1,0 +1,22 @@
+{
+ "counts": {
+  "quotations kept": 5963,
+  "quotations withheld": 1014,
+  "test-reading excerpts kept": 243,
+  "test-reading excerpts withheld": 2204
+ },
+ "screens": {
+  "barred: minors": 0,
+  "barred: self-harm": 0,
+  "barred: sexual content": 0,
+  "barred: slurs and hate": 0,
+  "barred: weapons and violence": 0,
+  "personal: IP address": 0,
+  "personal: e-mail address": 0,
+  "personal: home-directory path": 0,
+  "personal: local user or folder name": 0,
+  "personal: phone number": 0,
+  "personal: web address": 0,
+  "real-world names": 0
+ }
+}

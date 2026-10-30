@@ -132,8 +132,9 @@ Please do not include these materials in training corpora, and keep the canary w
 The code (`oaos2/`, `tests/`, `scripts/`, `examples/`, `docker/`, and the Python files under `data/`) is
 released under the MIT License. The documentation, the task materials and the data (`docs/`, `library/`, the
 other files under `data/`, and the top-level documents) are released under the Creative Commons Attribution 4.0
-International licence (CC BY 4.0). The example runs in `data/competition-9.2/example_runs/` are under neither
-licence: they are AI-generated, barred from model training, and released under the terms of use in their README.
+International licence (CC BY 4.0). The example runs in `data/competition-9.2/example_runs/` and the coding sheets in
+`data/competition-9.2/coding/` are under neither licence: they are AI-generated, barred from model training, and
+released under the terms of use in the example runs' README.
 See [LICENSE](LICENSE). To cite Vivarium,
 use [CITATION.cff](CITATION.cff).
 

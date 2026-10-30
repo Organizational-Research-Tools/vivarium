@@ -27,5 +27,8 @@ the archives and is not recomputed.
 
 The scripts in `study_scripts/` run in the study's own tree with the run archives; they import other scripts of
 that tree and are kept here as the record of the computation, not to run on this repository.
-`pc1_licence_second_code.py` calls a model and is paid; it refuses without `--go`. The coder agreement and the
-exploratory readings need the coding sheets, which are not released.
+`pc1_licence_second_code.py` calls a model and is paid; it refuses without `--go`.
+
+`coding_figures.py` recomputes the coder agreement and the exploratory tables from `../coding/` and `../runs.csv`.
+`--check coding_figures.json` compares them with `../coding/agreement.json` exactly and with the figures as the results
+page gives them, at the page's rounding.

@@ -1,0 +1,2661 @@
+{
+ "agreement": {
+  "glm53": {
+   "decided": {
+    "labs": 252,
+    "share": 0.948,
+    "kappa": 0.758
+   },
+   "licence": {
+    "labs": 252,
+    "share": 0.758,
+    "kappa": 0.062
+   },
+   "objection": {
+    "labs": 252,
+    "share": 0.992,
+    "kappa": 0.924
+   },
+   "path": {
+    "labs": 252,
+    "share": 0.925,
+    "kappa": 0.66
+   }
+  },
+  "all": {
+   "decided": {
+    "labs": 396,
+    "share": 0.927,
+    "kappa": 0.682
+   },
+   "licence": {
+    "labs": 396,
+    "share": 0.77,
+    "kappa": 0.073
+   },
+   "objection": {
+    "labs": 396,
+    "share": 0.99,
+    "kappa": 0.915
+   },
+   "path": {
+    "labs": 396,
+    "share": 0.907,
+    "kappa": 0.611
+   }
+  },
+  "gpt6luna": {
+   "decided": {
+    "labs": 121,
+    "share": 0.926,
+    "kappa": 0.159
+   },
+   "licence": {
+    "labs": 121,
+    "share": 0.81,
+    "kappa": 0.0
+   },
+   "objection": {
+    "labs": 121,
+    "share": 1.0,
+    "kappa": 1.0
+   },
+   "path": {
+    "labs": 121,
+    "share": 0.926,
+    "kappa": 0.167
+   }
+  },
+  "sonnet46": {
+   "decided": {
+    "labs": 23,
+    "share": 0.696,
+    "kappa": 0.265
+   },
+   "licence": {
+    "labs": 23,
+    "share": 0.696,
+    "kappa": 0.258
+   },
+   "objection": {
+    "labs": 23,
+    "share": 0.913,
+    "kappa": 0.747
+   },
+   "path": {
+    "labs": 23,
+    "share": 0.609,
+    "kappa": 0.378
+   }
+  }
+ },
+ "not_compared": [
+  "pc1_x7b_glm53_competitive_s124:lab_b",
+  "pc1_x7b_glm53_competitive_s181:lab_f",
+  "pc1_x7b_glm53_competitive_s53:lab_a",
+  "pc1_x7b_glm53_cooperative_s112:lab_b",
+  "pc1_x7b_glm53_cooperative_s119:lab_f",
+  "pc1_x7b_glm53_cooperative_s180:lab_c",
+  "pc1_x7b_gpt6luna_competitive_s46:lab_a",
+  "pc1_x7b_gpt6luna_competitive_s46:lab_e",
+  "pc1_x7b_gpt6luna_competitive_s68:lab_b",
+  "pc1_x7b_gpt6luna_competitive_s68:lab_f",
+  "pc1_x7b_gpt6luna_competitive_s72:lab_a",
+  "pc1_x7b_gpt6luna_competitive_s72:lab_b",
+  "pc1_x7b_gpt6luna_competitive_s72:lab_f",
+  "pc1_x7b_gpt6luna_competitive_s92:lab_d",
+  "pc1_x7b_gpt6luna_competitive_s92:lab_f",
+  "pc1_x7b_gpt6luna_competitive_s94:lab_a",
+  "pc1_x7b_gpt6luna_cooperative_s115:lab_b",
+  "pc1_x7b_gpt6luna_cooperative_s119:lab_f",
+  "pc1_x7b_gpt6luna_cooperative_s46:lab_a",
+  "pc1_x7b_gpt6luna_cooperative_s60:lab_a",
+  "pc1_x7b_gpt6luna_cooperative_s60:lab_d",
+  "pc1_x7b_gpt6luna_cooperative_s80:lab_e",
+  "pc1_x7b_gpt6luna_cooperative_s95:lab_a",
+  "pc1_x7b_sonnet46_cooperative_s48:lab_d"
+ ],
+ "disagreements": [
+  {
+   "run": "pc1_x7b_glm53_competitive_s110",
+   "lab": "lab_c",
+   "fields": [
+    "licence",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "I"
+   },
+   "second": {
+    "decided": true,
+    "licence": true,
+    "objection": false,
+    "path": "P3",
+    "E": "I"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s110",
+   "lab": "lab_d",
+   "fields": [
+    "decided",
+    "licence",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "I"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s112",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s124",
+   "lab": "lab_a",
+   "fields": [
+    "objection"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": false,
+    "licence": false,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s124",
+   "lab": "lab_c",
+   "fields": [
+    "licence",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "F"
+   },
+   "second": {
+    "decided": true,
+    "licence": true,
+    "objection": false,
+    "path": "P3",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s124",
+   "lab": "lab_d",
+   "fields": [
+    "licence",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": true,
+    "objection": false,
+    "path": "P3",
+    "E": "I"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "I"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s145",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s145",
+   "lab": "lab_f",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s146",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s166",
+   "lab": "lab_b",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s166",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s166",
+   "lab": "lab_e",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s166",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s181",
+   "lab": "lab_b",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s181",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s185",
+   "lab": "lab_c",
+   "fields": [
+    "licence",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "I"
+   },
+   "second": {
+    "decided": true,
+    "licence": true,
+    "objection": false,
+    "path": "P3",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s204",
+   "lab": "lab_a",
+   "fields": [
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "F"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s204",
+   "lab": "lab_d",
+   "fields": [
+    "licence",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "F"
+   },
+   "second": {
+    "decided": true,
+    "licence": true,
+    "objection": false,
+    "path": "P3",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s216",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s216",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s216",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s224",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s225",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s225",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s225",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s52",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s53",
+   "lab": "lab_b",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s53",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s54",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_competitive_s60",
+   "lab": "lab_b",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s103",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s103",
+   "lab": "lab_c",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "I"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s103",
+   "lab": "lab_f",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s112",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s113",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s117",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s117",
+   "lab": "lab_e",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s119",
+   "lab": "lab_b",
+   "fields": [
+    "objection"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s119",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s120",
+   "lab": "lab_b",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s120",
+   "lab": "lab_e",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s121",
+   "lab": "lab_b",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s121",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s121",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s127",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s127",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s131",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s131",
+   "lab": "lab_e",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "I"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s133",
+   "lab": "lab_b",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s133",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s133",
+   "lab": "lab_f",
+   "fields": [
+    "decided",
+    "licence",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "I"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s148",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s149",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s149",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s149",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s149",
+   "lab": "lab_e",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s158_b",
+   "lab": "lab_e",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s166",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s166",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s166",
+   "lab": "lab_e",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s166",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s180",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s180",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s180",
+   "lab": "lab_e",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s191",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s191",
+   "lab": "lab_b",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s191",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s191",
+   "lab": "lab_e",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s215_b",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s41",
+   "lab": "lab_b",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s51",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s51",
+   "lab": "lab_b",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s55",
+   "lab": "lab_b",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   },
+   "second": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s55",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_glm53_cooperative_s70",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s109",
+   "lab": "lab_e",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s114",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s114",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s49",
+   "lab": "lab_e",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s53",
+   "lab": "lab_b",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s53",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s53",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s53",
+   "lab": "lab_e",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s53",
+   "lab": "lab_f",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s68",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s68",
+   "lab": "lab_e",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s70",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s72",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s92",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s92",
+   "lab": "lab_e",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "F"
+   },
+   "second": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_competitive_s94",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s102",
+   "lab": "lab_b",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s102",
+   "lab": "lab_f",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s115",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s119",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s46",
+   "lab": "lab_c",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s46",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s46",
+   "lab": "lab_e",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s60",
+   "lab": "lab_c",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s64",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s64",
+   "lab": "lab_b",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s64",
+   "lab": "lab_e",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s80",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s88",
+   "lab": "lab_d",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": true,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s95",
+   "lab": "lab_d",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s95",
+   "lab": "lab_e",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P4",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_gpt6luna_cooperative_s99",
+   "lab": "lab_c",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_sonnet46_competitive_s48",
+   "lab": "lab_c",
+   "fields": [
+    "decided",
+    "licence",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "I"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_sonnet46_competitive_s48",
+   "lab": "lab_d",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_sonnet46_competitive_s49",
+   "lab": "lab_a",
+   "fields": [
+    "licence"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": false,
+    "licence": true,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_sonnet46_competitive_s49",
+   "lab": "lab_b",
+   "fields": [
+    "licence",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "I"
+   },
+   "second": {
+    "decided": true,
+    "licence": true,
+    "objection": false,
+    "path": "P3",
+    "E": "I"
+   }
+  },
+  {
+   "run": "pc1_x7b_sonnet46_competitive_s49",
+   "lab": "lab_e",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "I"
+   },
+   "second": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_sonnet46_competitive_s49",
+   "lab": "lab_f",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "I"
+   },
+   "second": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_sonnet46_cooperative_s48",
+   "lab": "lab_a",
+   "fields": [
+    "decided",
+    "licence",
+    "objection",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "-"
+   },
+   "second": {
+    "decided": true,
+    "licence": true,
+    "objection": true,
+    "path": "P3",
+    "E": "I"
+   }
+  },
+  {
+   "run": "pc1_x7b_sonnet46_cooperative_s48",
+   "lab": "lab_c",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": true,
+    "path": "P2",
+    "E": "I"
+   },
+   "second": {
+    "decided": false,
+    "licence": false,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   }
+  },
+  {
+   "run": "pc1_x7b_sonnet46_cooperative_s48",
+   "lab": "lab_e",
+   "fields": [
+    "decided",
+    "licence",
+    "path"
+   ],
+   "first": {
+    "decided": false,
+    "licence": false,
+    "objection": true,
+    "path": "P1",
+    "E": "D"
+   },
+   "second": {
+    "decided": true,
+    "licence": true,
+    "objection": true,
+    "path": "P3",
+    "E": "I"
+   }
+  },
+  {
+   "run": "pc1_x7b_sonnet46_cooperative_s48",
+   "lab": "lab_f",
+   "fields": [
+    "objection"
+   ],
+   "first": {
+    "decided": true,
+    "licence": true,
+    "objection": false,
+    "path": "P3",
+    "E": "I"
+   },
+   "second": {
+    "decided": true,
+    "licence": true,
+    "objection": true,
+    "path": "P3",
+    "E": "I"
+   }
+  },
+  {
+   "run": "pc1_x7b_sonnet46_cooperative_s49",
+   "lab": "lab_b",
+   "fields": [
+    "licence",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "F"
+   },
+   "second": {
+    "decided": true,
+    "licence": true,
+    "objection": false,
+    "path": "P3",
+    "E": "F"
+   }
+  },
+  {
+   "run": "pc1_x7b_sonnet46_cooperative_s49",
+   "lab": "lab_f",
+   "fields": [
+    "decided",
+    "path"
+   ],
+   "first": {
+    "decided": true,
+    "licence": false,
+    "objection": false,
+    "path": "P2",
+    "E": "I"
+   },
+   "second": {
+    "decided": false,
+    "licence": false,
+    "objection": false,
+    "path": "P1",
+    "E": "D"
+   }
+  }
+ ]
+}

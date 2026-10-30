@@ -1,12 +1,13 @@
 # The competition study's main study: derived data
 
 The data needed to reproduce the study's preregistered results, without the run archives. Every file here
-is derived from the archives by the study's own readers, and none of them carries model output.
+is derived from the archives by the study's own readers, and none of them carries model output. The exception is
+`coding/`, which holds quotations from the runs.
 
 | File | Contents |
 |---|---|
 | `runs.csv` | One row per planned cell of the main study's plan (model x arm x seed): 436 cells, each with a counted run |
-| `coding/` | The process coding (not released; see its README) |
+| `coding/` | The coding sheets, AI-generated and under their own terms, not an open licence ([README](coding/README.md)) |
 | `analysis/` | The script that recomputes every preregistered test from `runs.csv`, the study's readout output, and the study's own scripts ([README](analysis/README.md)) |
 
 ## `runs.csv`
@@ -55,7 +56,7 @@ before the run's first use, which the robustness check leaves out); `test_readin
 `test_reading_narrow_pinned` and their `_before_first_use` (the same, counting only the coded hits of the screen
 built into the frozen readers, the analysis the study's deviation of October 22 named); `test_reading_screen_labs`,
 `test_reading_screen_statements`, `test_reading_screen_first_minute` (what the screen that selected passages for
-this coding found; the passages themselves are not released).
+this coding found; the passages themselves are mostly reasoning text and are withheld, see [coding/](coding/README.md)).
 
 **Record-based counts** (descriptive): `n_restricted_reports` (restricted reports filed), `accepted` and
 `standing_at_end` (one was accepted, one stood at the end), `timing` (the first use before, between or after the

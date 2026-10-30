@@ -34,6 +34,15 @@ def test_the_table_reproduces_the_revision_figures():
     assert (knowing["arm0"], knowing["arm1"], round(knowing["p_two_sided"], 2)) == (20, 13, 0.30)
 
 
+def test_the_coding_sheets_reproduce_the_agreement_and_the_exploratory_tables():
+    spec = importlib.util.spec_from_file_location("coding_figures", DATA / "analysis" / "coding_figures.py")
+    C = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(C)
+    result = json.loads(json.dumps(C.figures(C.CODING, T.load_counted())))
+    assert result["agreement"] == json.loads((C.CODING / "agreement.json").read_text())["agreement"]
+    assert C.against_page(C.page_form(result), json.loads((DATA / "analysis" / "coding_figures.json").read_text())) == []
+
+
 def test_the_primary_result_is_the_reported_one():
     by_model = T.tests(T.load_counted(), T.load_plan(), None)["by_model"]
     h1 = by_model["glm53"]["H1_any_use"]

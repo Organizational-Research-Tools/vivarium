@@ -13,8 +13,14 @@ frozen files keep.
 **Derived data** ([data/competition-9.2/](data/competition-9.2/README.md)). One row per counted run
 (`runs.csv`: seed, arm, model, the fault and rerun dispositions, cost, the preregistered outcomes and the
 test reading), the study's readout output, and the script that recomputes every preregistered test from the
-table. They are derived from the run archives and carry no model output. The process-coding sheets are not
-released.
+table. They are derived from the run archives and carry no model output.
+
+**Coding sheets.** The two coders' sheets, the readings of warrants, objections and motives, and the test reading's
+frozen lists, in [data/competition-9.2/coding/](data/competition-9.2/coding/README.md). They are AI-generated: the
+codes come from the coder models and the quotations from the studied models, both named in that README. They are
+under neither open licence, the example runs' terms of use apply, and they must not be used for model training. A
+quotation is kept only if it appears in the run's record without the providers' reasoning text; the others, and
+the coders' notes and the passages they read, are withheld.
 
 **Example runs.** Ten complete runs, both arms of five seeds across the three models, in
 [data/competition-9.2/example_runs/](data/competition-9.2/example_runs/README.md), to open in the dashboard and
@@ -51,8 +57,20 @@ uv run python data/competition-9.2/analysis/preregistered_tests.py --t1 broad --
 
 The check shows that the released table reproduces the readout's arithmetic; it does not show that the table
 was extracted correctly from the archives, which are not released. The example runs let a reader compare a few
-rows with the runs themselves. The coder agreement and the exploratory readings need the coding sheets and are
-not reproducible from the released data; their scripts are in `data/competition-9.2/analysis/study_scripts/`.
+rows with the runs themselves.
+
+The coder agreement and the exploratory tables reproduce from the coding sheets and `runs.csv`, with 0 differences
+from `agreement.json` and from the figures as the results page gives them:
+
+```bash
+uv run python data/competition-9.2/analysis/coding_figures.py --check data/competition-9.2/analysis/coding_figures.json
+```
+
+This recomputes share and kappa, the warrants, reasons and motives by arm, the filings and objection given use, and
+the frozen lists against the table. Agreement on objection and the path class rests on
+`coding/agreement_inputs.csv`, computed from the archives by the study's script, because those two need the run's events;
+the agreement on decided and licence citation is checked against the sheets themselves. The passages the coders read are
+withheld, so a reader can recount their codes but cannot recode most of their evidence.
 
 The derived data were built from the run archives by the study's readers, running on the code the main
 study ran from: commit `7d63a96d` of the project's repository. Every run records that code's source

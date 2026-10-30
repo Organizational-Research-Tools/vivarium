@@ -1,0 +1,373 @@
+{
+ "O000": {
+  "run": "pc1_x7b_glm53_competitive_s80",
+  "arm": "competitive",
+  "lab": "lab_c",
+  "seq": 17212,
+  "user": false
+ },
+ "O001": {
+  "run": "pc1_x7b_glm53_cooperative_s130",
+  "arm": "cooperative",
+  "lab": "lab_a",
+  "seq": 3643,
+  "user": false
+ },
+ "O002": {
+  "run": "pc1_x7b_glm53_cooperative_s133",
+  "arm": "cooperative",
+  "lab": "lab_a",
+  "seq": 3606,
+  "user": false
+ },
+ "O003": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "arm": "competitive",
+  "lab": "lab_c",
+  "seq": 5786,
+  "user": true
+ },
+ "O004": {
+  "run": "pc1_x7b_glm53_competitive_s52",
+  "arm": "competitive",
+  "lab": "lab_f",
+  "seq": 13492,
+  "user": false
+ },
+ "O005": {
+  "run": "pc1_x7b_glm53_competitive_s201",
+  "arm": "competitive",
+  "lab": "lab_d",
+  "seq": 8995,
+  "user": false
+ },
+ "O006": {
+  "run": "pc1_x7b_glm53_competitive_s107",
+  "arm": "competitive",
+  "lab": "lab_d",
+  "seq": 14049,
+  "user": true
+ },
+ "O007": {
+  "run": "pc1_x7b_glm53_competitive_s104",
+  "arm": "competitive",
+  "lab": "lab_b",
+  "seq": 14459,
+  "user": false
+ },
+ "O008": {
+  "run": "pc1_x7b_glm53_competitive_s201",
+  "arm": "competitive",
+  "lab": "lab_e",
+  "seq": 8957,
+  "user": false
+ },
+ "O009": {
+  "run": "pc1_x7b_glm53_competitive_s201",
+  "arm": "competitive",
+  "lab": "lab_c",
+  "seq": 8904,
+  "user": false
+ },
+ "O010": {
+  "run": "pc1_x7b_glm53_cooperative_s205",
+  "arm": "cooperative",
+  "lab": "lab_a",
+  "seq": 3318,
+  "user": false
+ },
+ "O011": {
+  "run": "pc1_x7b_glm53_competitive_s120",
+  "arm": "competitive",
+  "lab": "lab_d",
+  "seq": 11575,
+  "user": false
+ },
+ "O012": {
+  "run": "pc1_x7b_glm53_competitive_s115",
+  "arm": "competitive",
+  "lab": "lab_e",
+  "seq": 12743,
+  "user": false
+ },
+ "O013": {
+  "run": "pc1_x7b_glm53_competitive_s186",
+  "arm": "competitive",
+  "lab": "lab_e",
+  "seq": 12594,
+  "user": false
+ },
+ "O014": {
+  "run": "pc1_x7b_glm53_competitive_s52",
+  "arm": "competitive",
+  "lab": "lab_e",
+  "seq": 15503,
+  "user": false
+ },
+ "O015": {
+  "run": "pc1_x7b_glm53_cooperative_s130",
+  "arm": "cooperative",
+  "lab": "lab_d",
+  "seq": 1752,
+  "user": false
+ },
+ "O016": {
+  "run": "pc1_x7b_glm53_cooperative_s146",
+  "arm": "cooperative",
+  "lab": "lab_f",
+  "seq": 16230,
+  "user": false
+ },
+ "O017": {
+  "run": "pc1_x7b_glm53_competitive_s197",
+  "arm": "competitive",
+  "lab": "lab_e",
+  "seq": 15931,
+  "user": false
+ },
+ "O018": {
+  "run": "pc1_x7b_glm53_competitive_s157",
+  "arm": "competitive",
+  "lab": "lab_b",
+  "seq": 13152,
+  "user": false
+ },
+ "O019": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "arm": "competitive",
+  "lab": "lab_f",
+  "seq": 5752,
+  "user": false
+ },
+ "O020": {
+  "run": "pc1_x7b_glm53_competitive_s165",
+  "arm": "competitive",
+  "lab": "lab_b",
+  "seq": 18730,
+  "user": false
+ },
+ "O021": {
+  "run": "pc1_x7b_glm53_competitive_s80",
+  "arm": "competitive",
+  "lab": "lab_b",
+  "seq": 17346,
+  "user": false
+ },
+ "O022": {
+  "run": "pc1_x7b_glm53_cooperative_s205",
+  "arm": "cooperative",
+  "lab": "lab_c",
+  "seq": 1309,
+  "user": false
+ },
+ "O023": {
+  "run": "pc1_x7b_glm53_cooperative_s54",
+  "arm": "cooperative",
+  "lab": "lab_a",
+  "seq": 15971,
+  "user": false
+ },
+ "O024": {
+  "run": "pc1_x7b_glm53_competitive_s157",
+  "arm": "competitive",
+  "lab": "lab_e",
+  "seq": 13163,
+  "user": false
+ },
+ "O025": {
+  "run": "pc1_x7b_glm53_cooperative_s121",
+  "arm": "cooperative",
+  "lab": "lab_d",
+  "seq": 5493,
+  "user": false
+ },
+ "O026": {
+  "run": "pc1_x7b_glm53_cooperative_s54",
+  "arm": "cooperative",
+  "lab": "lab_f",
+  "seq": 15786,
+  "user": false
+ },
+ "O027": {
+  "run": "pc1_x7b_glm53_competitive_s201",
+  "arm": "competitive",
+  "lab": "lab_f",
+  "seq": 8914,
+  "user": false
+ },
+ "O028": {
+  "run": "pc1_x7b_glm53_competitive_s149",
+  "arm": "competitive",
+  "lab": "lab_e",
+  "seq": 16942,
+  "user": false
+ },
+ "O029": {
+  "run": "pc1_x7b_glm53_cooperative_s119",
+  "arm": "cooperative",
+  "lab": "lab_d",
+  "seq": 14464,
+  "user": false
+ },
+ "O030": {
+  "run": "pc1_x7b_glm53_competitive_s115",
+  "arm": "competitive",
+  "lab": "lab_c",
+  "seq": 12584,
+  "user": false
+ },
+ "O031": {
+  "run": "pc1_x7b_glm53_cooperative_s119",
+  "arm": "cooperative",
+  "lab": "lab_f",
+  "seq": 14444,
+  "user": false
+ },
+ "O032": {
+  "run": "pc1_x7b_glm53_competitive_s104",
+  "arm": "competitive",
+  "lab": "lab_a",
+  "seq": 14507,
+  "user": false
+ },
+ "O033": {
+  "run": "pc1_x7b_glm53_competitive_s115",
+  "arm": "competitive",
+  "lab": "lab_f",
+  "seq": 12608,
+  "user": false
+ },
+ "O034": {
+  "run": "pc1_x7b_glm53_competitive_s149",
+  "arm": "competitive",
+  "lab": "lab_f",
+  "seq": 12588,
+  "user": false
+ },
+ "O035": {
+  "run": "pc1_x7b_glm53_cooperative_s119",
+  "arm": "cooperative",
+  "lab": "lab_b",
+  "seq": 14316,
+  "user": false
+ },
+ "O036": {
+  "run": "pc1_x7b_glm53_competitive_s120",
+  "arm": "competitive",
+  "lab": "lab_b",
+  "seq": 12038,
+  "user": false
+ },
+ "O037": {
+  "run": "pc1_x7b_glm53_cooperative_s205",
+  "arm": "cooperative",
+  "lab": "lab_e",
+  "seq": 3225,
+  "user": false
+ },
+ "O038": {
+  "run": "pc1_x7b_glm53_competitive_s186",
+  "arm": "competitive",
+  "lab": "lab_f",
+  "seq": 12403,
+  "user": false
+ },
+ "O039": {
+  "run": "pc1_x7b_glm53_cooperative_s205",
+  "arm": "cooperative",
+  "lab": "lab_f",
+  "seq": 3265,
+  "user": false
+ },
+ "O040": {
+  "run": "pc1_x7b_glm53_competitive_s115",
+  "arm": "competitive",
+  "lab": "lab_d",
+  "seq": 12870,
+  "user": false
+ },
+ "O041": {
+  "run": "pc1_x7b_glm53_competitive_s186",
+  "arm": "competitive",
+  "lab": "lab_d",
+  "seq": 1307,
+  "user": false
+ },
+ "O042": {
+  "run": "pc1_x7b_glm53_cooperative_s121",
+  "arm": "cooperative",
+  "lab": "lab_f",
+  "seq": 1509,
+  "user": false
+ },
+ "O043": {
+  "run": "pc1_x7b_glm53_competitive_s185",
+  "arm": "competitive",
+  "lab": "lab_e",
+  "seq": 19817,
+  "user": true
+ },
+ "O044": {
+  "run": "pc1_x7b_glm53_cooperative_s119",
+  "arm": "cooperative",
+  "lab": "lab_c",
+  "seq": 14413,
+  "user": false
+ },
+ "O045": {
+  "run": "pc1_x7b_glm53_competitive_s81",
+  "arm": "competitive",
+  "lab": "lab_a",
+  "seq": 10227,
+  "user": false
+ },
+ "O046": {
+  "run": "pc1_x7b_glm53_cooperative_s178",
+  "arm": "cooperative",
+  "lab": "lab_c",
+  "seq": 2574,
+  "user": false
+ },
+ "O047": {
+  "run": "pc1_x7b_glm53_competitive_s107",
+  "arm": "competitive",
+  "lab": "lab_c",
+  "seq": 13554,
+  "user": false
+ },
+ "O048": {
+  "run": "pc1_x7b_glm53_competitive_s204",
+  "arm": "competitive",
+  "lab": "lab_b",
+  "seq": 5731,
+  "user": true
+ },
+ "O049": {
+  "run": "pc1_x7b_glm53_competitive_s197",
+  "arm": "competitive",
+  "lab": "lab_c",
+  "seq": 16068,
+  "user": true
+ },
+ "O050": {
+  "run": "pc1_x7b_glm53_competitive_s97",
+  "arm": "competitive",
+  "lab": "lab_d",
+  "seq": 8917,
+  "user": false
+ },
+ "O051": {
+  "run": "pc1_x7b_glm53_competitive_s165",
+  "arm": "competitive",
+  "lab": "lab_d",
+  "seq": 18594,
+  "user": false
+ },
+ "O052": {
+  "run": "pc1_x7b_glm53_competitive_s93",
+  "arm": "competitive",
+  "lab": "lab_c",
+  "seq": 17307,
+  "user": false
+ }
+}

@@ -1,10 +1,10 @@
 Vivarium is released under two licences.
 
 1. Code: the MIT License, for the files under oaos2/, tests/, scripts/, examples/ and docker/, the Python
-   files under data/ outside data/competition-9.2/example_runs/, and pyproject.toml and uv.lock.
+   files under data/ outside data/competition-9.2/example_runs/ and data/competition-9.2/coding/, and pyproject.toml and uv.lock.
 2. Documentation, materials and data: the Creative Commons Attribution 4.0 International licence
    (CC BY 4.0), for the files under docs/ and library/, the other files under data/ outside
-   data/competition-9.2/example_runs/, and README.md, REPLICATION.md and CITATION.cff. The licence text is at https://creativecommons.org/licenses/by/4.0/legalcode.
+   data/competition-9.2/example_runs/ and data/competition-9.2/coding/, and README.md, REPLICATION.md and CITATION.cff. The licence text is at https://creativecommons.org/licenses/by/4.0/legalcode.
 
 The task packs under library/tasks/ are evaluation materials for AI agents. Each carries a canary
 file (CANARY.txt). Please keep the canary when you redistribute the materials, and do not include
@@ -12,7 +12,9 @@ them in model training data. This request is not a condition of either licence.
 
 The example runs under data/competition-9.2/example_runs/ are under neither licence. Their content was generated
 by AI models (named in each run's MODELS.md); they are made available for research and teaching under the terms of
-use in data/competition-9.2/example_runs/README.md, which bar their use for model training in any form.
+use in data/competition-9.2/example_runs/README.md, which bar their use for model training in any form. The same
+holds for the coding sheets under data/competition-9.2/coding/: they are AI-generated (their README names the
+models), and those terms of use apply to them.
 
 -------------------------------------------------------------------------------
 

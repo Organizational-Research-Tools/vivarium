@@ -1,0 +1,189 @@
+{
+ "warrants": {
+  "passages": 79,
+  "agree": 55,
+  "kappa": 0.48,
+  "by_arm": {
+   "competitive": {
+    "passages": 48,
+    "first": {
+     "L": 4,
+     "N": 29,
+     "R": 7,
+     "U": 1,
+     "V": 7
+    },
+    "second": {
+     "L": 4,
+     "N": 32,
+     "R": 5,
+     "U": 6,
+     "V": 1
+    }
+   },
+   "cooperative": {
+    "passages": 31,
+    "first": {
+     "L": 3,
+     "N": 18,
+     "V": 10
+    },
+    "second": {
+     "N": 17,
+     "U": 2,
+     "V": 12
+    }
+   }
+  }
+ },
+ "objection_reasons": {
+  "passages": 53,
+  "agree": 46,
+  "kappa": 0.69,
+  "by_arm": {
+   "competitive": {
+    "passages": 36,
+    "first": {
+     "B": 15,
+     "N": 20,
+     "U": 1
+    },
+    "second": {
+     "B": 9,
+     "N": 26,
+     "U": 1
+    }
+   },
+   "cooperative": {
+    "passages": 17,
+    "first": {
+     "N": 16,
+     "U": 1
+    },
+    "second": {
+     "N": 15,
+     "U": 2
+    }
+   }
+  }
+ },
+ "motives": {
+  "passages": 139,
+  "agree": 85,
+  "kappa": 0.38
+ },
+ "agreement": {
+  "glm53": {
+   "labs": 252,
+   "share": [
+    0.95,
+    0.99,
+    0.76,
+    0.93
+   ],
+   "kappa": [
+    0.76,
+    0.92,
+    0.06,
+    0.66
+   ]
+  },
+  "gpt6luna": {
+   "labs": 121,
+   "share": [
+    0.93,
+    1.0,
+    0.81,
+    0.93
+   ],
+   "kappa": [
+    0.16,
+    1.0,
+    0.0,
+    0.17
+   ]
+  },
+  "sonnet46": {
+   "labs": 23,
+   "share": [
+    0.7,
+    0.91,
+    0.7,
+    0.61
+   ],
+   "kappa": [
+    0.27,
+    0.75,
+    0.26,
+    0.38
+   ]
+  }
+ },
+ "filings_and_objection": {
+  "glm53": {
+   "filings": {
+    "competitive": 120,
+    "cooperative": 62
+   },
+   "filings_wilcoxon_p": 0.19,
+   "runs_with_use": {
+    "competitive": 28,
+    "cooperative": 20
+   },
+   "runs_with_objection": {
+    "competitive": 17,
+    "cooperative": 8
+   },
+   "objection_fisher_p": 0.24,
+   "objecting_labs_per_run_with_use": {
+    "competitive": 1.3,
+    "cooperative": 0.85
+   },
+   "median_minutes_to_first_objection": {
+    "competitive": 0.6,
+    "cooperative": 0.6
+   }
+  },
+  "gpt6luna": {
+   "filings": {
+    "competitive": 8,
+    "cooperative": 5
+   },
+   "runs_with_use": {
+    "competitive": 7,
+    "cooperative": 3
+   },
+   "runs_with_objection": {
+    "competitive": 7,
+    "cooperative": 3
+   }
+  }
+ },
+ "inputs_differing_from_sheets": 0,
+ "test_reading": {
+  "broad": {
+   "frozen_list_by_model": {
+    "glm53": 166,
+    "gpt6luna": 11,
+    "sonnet46": 1
+   },
+   "table_by_model": {
+    "glm53": 166,
+    "gpt6luna": 11,
+    "sonnet46": 1
+   }
+  },
+  "narrow": {
+   "frozen_list_by_model": {
+    "glm53": 134,
+    "gpt6luna": 6,
+    "sonnet46": 0
+   },
+   "table_by_model": {
+    "glm53": 134,
+    "gpt6luna": 6,
+    "sonnet46": 0
+   }
+  }
+ }
+}
